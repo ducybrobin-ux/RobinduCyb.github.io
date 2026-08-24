@@ -127,10 +127,26 @@ une seule base de code, N sites publiés.
 
 ## 4. Conversion depuis le format actuel
 
-Correspondances directes : `balise→station(+mission énigme)`, `découverte→character`,
-`guide→pedagogy.competencies`, `thème→edition.themes`,
-`enigmes.{facile|moyen|difficile}→mission.difficultyLevels`,
-`indice/saviez→hints`, `quiz→mission.type:quiz`.
+Convertisseur : `tools/convert-packs.mjs` (implémenté dans
+[`packages/content-schema`](../packages/content-schema/)). Conversion **pure et
+déterministe**, contrôlée par une vérification de couverture (aucune entité
+perdue) puis validation structurelle. CI : `node tools/convert-packs.mjs --check`.
 
-Le convertisseur (étape ROADMAP #2) doit garantir l'aller-retour sans perte sur
-les 6 packs existants — c'est le test de non-régression fondateur.
+| Format actuel (`jdpbc-pack`) | `ducyb-parcours` v1 |
+|---|---|
+| `pack.{id,nom,description,theme,ages}` | racine `{id,title,description,theme}`, `audience.{minAge,maxAge}` |
+| `balise` | `station` (+ `discoveryId` vers le personnage) |
+| `balise.enigmes.{facile\|moyen\|difficile}` | `mission.type:"enigme"` → `difficultyLevels[niveau]` |
+| `enigme.{text,reponses[],ages[]}` | `{text, answers[], ages[]}` |
+| `enigme.indice` / `enigme.saviez` | `hint` / `knowMore` |
+| `découverte` | `character` (+ mission `type:"quiz"`) |
+| `quiz[]{q,options[],reponse}` | `questions[]{q,options[],answer}` |
+| `pedagogie.{ages,duree_min,objectif,programme}` | `pedagogy.{ages,dureeMin,objectif,programme}` |
+| `notion-guide` | `pedagogy.competencies[]` (+ objectifs agrégés) |
+| `chant{tempo,notes[]}`, `audioFile` | conservés tels quels sur `character` (universalisation ultérieure) |
+| `thème` (content/themes/) | non converti en v1 — partagé entre parcours, deviendra `edition.themes` |
+
+Rétro-références ajoutées à la conversion : `station.missions[]` ↔
+`mission.stationId`, `character` ↔ `mission.characterId`.
+Sorties versionnées dans `content/ducyb-parcours/<id>.json` (4 packs convertis,
+zéro perte vérifiée en CI).

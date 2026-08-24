@@ -27,8 +27,11 @@ jobs:
           done
           exit $fail
 
-      - name: Synchronisation content/ ↔ js/data.js
+      - name: Synchronisation content/ → js/data.js
         run: node tools/build-data.mjs --check
+
+      - name: Conversion ducyb-parcours à jour
+        run: node tools/convert-packs.mjs --check
 
       - name: JSON valides
         run: |

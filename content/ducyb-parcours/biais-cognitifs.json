@@ -1,0 +1,1464 @@
+{
+  "$format": "ducyb-parcours",
+  "$version": 1,
+  "id": "biais-cognitifs",
+  "title": "Biais cognitifs",
+  "metadata": {
+    "author": "",
+    "organization": "",
+    "language": "fr",
+    "license": "",
+    "createdAt": "2026-08-24",
+    "updatedAt": "2026-08-24",
+    "source": {
+      "format": "jdpbc-pack",
+      "version": 1
+    }
+  },
+  "description": "Huit découvertes du sentier (un biais par balise), dix notions complémentaires et leurs énigmes.",
+  "theme": "neurosciences & pièges mentaux",
+  "audience": {
+    "minAge": 6,
+    "maxAge": 99
+  },
+  "duration": null,
+  "pedagogy": {
+    "objectives": [
+      "Reconnaître la dette invisible créée par un cadeau et choisir librement",
+      "Comprendre que chaque tirage aléatoire est indépendant des précédents",
+      "Tester une coïncidence avant d'y voir un motif réel",
+      "Estimer ses risques avec une marge de sécurité au lieu d'un optimisme aveugle",
+      "Reformuler fidèlement l'argument d'autrui avant de le discuter",
+      "Réévaluer les options existantes comme si le choix se faisait aujourd'hui",
+      "Distinguer la familiarité d'une chose de sa qualité réelle",
+      "Distinguer ce qui relève de l'habileté de ce qui relève du hasard",
+      "Protéger la parole dissidente pour garder une décision collective lucide",
+      "Remettre les derniers événements dans leur contexte global",
+      "Chercher activement ce qui pourrait contredire une opinion avant de la croire",
+      "Reconnaître l'influence du premier chiffre reçu et recalculer avec ses propres repères",
+      "Distinguer ce qui est facile à se rappeler de ce qui est réellement fréquent",
+      "Mesurer ses progrès pour évaluer son niveau réel et accueillir les retours",
+      "Décider d'après les gains futurs possibles, sans se laisser enfermer par le passé",
+      "Évaluer chaque qualité séparément avant de juger un ensemble",
+      "Vérifier source et preuve avant de croire une information répétée",
+      "Exiger des descriptions précises et vérifiables plutôt que des phrases universelles"
+    ],
+    "skills": [],
+    "competencies": [
+      {
+        "id": "reciprocite",
+        "nom": "Biais de réciprocité",
+        "description": "Recevoir un petit cadeau crée une dette invisible : on dit alors oui à de grosses demandes.",
+        "emoji": "🤝",
+        "objectif": "Reconnaître la dette invisible créée par un cadeau et choisir librement",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "C'est la technique du « échantillon gratuit ».",
+          "Offrir d'abord, demander ensuite : ça marche trop bien."
+        ]
+      },
+      {
+        "id": "joueur",
+        "nom": "Erreur du joueur",
+        "description": "Croire que « ça doit bien tomber maintenant » après une série de pile, alors que les chances n'ont pas bougé.",
+        "emoji": "🎲",
+        "objectif": "Comprendre que chaque tirage aléatoire est indépendant des précédents",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "La pièce n'a pas de mémoire.",
+          "Les casinos adorent cette erreur."
+        ]
+      },
+      {
+        "id": "apophenie",
+        "nom": "Apophénie",
+        "description": "Voir des formes ou des liens là où il n'y en a pas : visages dans les nuages, « coïncidences » partout.",
+        "emoji": "👀",
+        "objectif": "Tester une coïncidence avant d'y voir un motif réel",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Pareidolie : voir un visage dans une prise électrique.",
+          "Notre cerveau détecteur de motifs, parfois trop zélé."
+        ]
+      },
+      {
+        "id": "optimisme",
+        "nom": "Biais d'optimisme",
+        "description": "« Ça n'arrivera qu'aux autres. » On sous-estime ses risques et on surestime ses chances.",
+        "emoji": "🌈",
+        "objectif": "Estimer ses risques avec une marge de sécurité au lieu d'un optimisme aveugle",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "La plupart des conducteurs se disent « au-dessus de la moyenne ».",
+          "Les projets dépassent toujours leur délai prévu : loi de Hofstadter."
+        ]
+      },
+      {
+        "id": "paille",
+        "nom": "Homme de paille",
+        "description": "Déformer l'argument de l'autre pour le réfuter plus facilement, puis attaquer cette version affaiblie.",
+        "emoji": "🎯",
+        "objectif": "Reformuler fidèlement l'argument d'autrui avant de le discuter",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Classique des débats en ligne.",
+          "Contre-pied : l'homme d'acier — reformuler au plus juste."
+        ]
+      },
+      {
+        "id": "statuquo",
+        "nom": "Biais du statu quo",
+        "description": "Préférer ce qui existe déjà, par simple habitude, même quand une meilleure option est disponible.",
+        "emoji": "🛋️",
+        "objectif": "Réévaluer les options existantes comme si le choix se faisait aujourd'hui",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Le « fait comme d'habitude » qui coûte cher.",
+          "Tester : « Si je découvrais tout aujourd'hui, je choisirais quoi ? »"
+        ]
+      },
+      {
+        "id": "exposition",
+        "nom": "Simple exposition",
+        "description": "À force d'être vu ou entendu, quelque chose nous plaît davantage — sans aucune autre raison.",
+        "emoji": "💿",
+        "objectif": "Distinguer la familiarité d'une chose de sa qualité réelle",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Pourquoi les pubs passent en boucle.",
+          "Une chanson « moyenne » devient favorite après quelques écoutes."
+        ]
+      },
+      {
+        "id": "controle",
+        "nom": "Illusion de contrôle",
+        "description": "Croire qu'on maîtrise des événements purement aléatoires : lancer fort les dés pour faire un six !",
+        "emoji": "🎮",
+        "objectif": "Distinguer ce qui relève de l'habileté de ce qui relève du hasard",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Les loteries vendent le choix des numéros comme un pouvoir.",
+          "Souffler sur les dés ne change pas les probabilités."
+        ]
+      },
+      {
+        "id": "groupe",
+        "nom": "Pensée de groupe",
+        "description": "Dans un groupe soudé, l'envie d'être d'accord écrase le doute : personne n'ose dire « attention ».",
+        "emoji": "🐑",
+        "objectif": "Protéger la parole dissidente pour garder une décision collective lucide",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Décisions célèbres ratées faute de contradiction.",
+          "Une voix discordante améliore la décision collective."
+        ]
+      },
+      {
+        "id": "recence",
+        "nom": "Biais de récence",
+        "description": "Donner trop de poids aux derniers événements : la dernière réponse d'un élève colore toute sa note.",
+        "emoji": "⏱️",
+        "objectif": "Remettre les derniers événements dans leur contexte global",
+        "ages": [
+          6,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Après un accident médiatisé, tous les risques semblent imminents.",
+          "Tenir un journal aide à se souvenir de tout, pas juste de la fin."
+        ]
+      }
+    ],
+    "evaluation": []
+  },
+  "game": {
+    "mode": "courses",
+    "scoring": {
+      "starsPerStation": 3,
+      "timeBonus": true
+    },
+    "rules": {
+      "order": "libre"
+    }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": null,
+    "trail": []
+  },
+  "stations": [
+    {
+      "id": "B1",
+      "label": "La cabane à idées",
+      "code": "JDP-B1",
+      "discoveryId": "confirmation",
+      "x": 74,
+      "y": 452,
+      "lat": 50.7258178,
+      "lng": 3.1329639,
+      "radius": null,
+      "missions": [
+        "B1-enigme"
+      ]
+    },
+    {
+      "id": "B2",
+      "label": "Le quai des ancres",
+      "code": "JDP-B2",
+      "discoveryId": "ancrage",
+      "x": 148,
+      "y": 400,
+      "lat": 48.8567,
+      "lng": 2.3523,
+      "radius": null,
+      "missions": [
+        "B2-enigme"
+      ]
+    },
+    {
+      "id": "B3",
+      "label": "L'écran géant",
+      "code": "JDP-B3",
+      "discoveryId": "disponibilite",
+      "x": 238,
+      "y": 292,
+      "lat": 48.8565,
+      "lng": 2.3521,
+      "radius": null,
+      "missions": [
+        "B3-enigme"
+      ]
+    },
+    {
+      "id": "B4",
+      "label": "La grande montagne russe",
+      "code": "JDP-B4",
+      "discoveryId": "dunning",
+      "x": 320,
+      "y": 320,
+      "lat": 48.8568,
+      "lng": 2.3524,
+      "radius": null,
+      "missions": [
+        "B4-enigme"
+      ]
+    },
+    {
+      "id": "B5",
+      "label": "Le puits aux pièces",
+      "code": "JDP-B5",
+      "discoveryId": "cout",
+      "x": 406,
+      "y": 448,
+      "lat": 48.8564,
+      "lng": 2.352,
+      "radius": null,
+      "missions": [
+        "B5-enigme"
+      ]
+    },
+    {
+      "id": "B6",
+      "label": "Le jardin lumineux",
+      "code": "JDP-B6",
+      "discoveryId": "halo",
+      "x": 388,
+      "y": 396,
+      "lat": 48.8569,
+      "lng": 2.3525,
+      "radius": null,
+      "missions": [
+        "B6-enigme"
+      ]
+    },
+    {
+      "id": "B7",
+      "label": "L'écho sans fin",
+      "code": "JDP-B7",
+      "discoveryId": "verite",
+      "x": 320,
+      "y": 500,
+      "lat": 48.857,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "B7-enigme"
+      ]
+    },
+    {
+      "id": "B8",
+      "label": "La roulotte du devin",
+      "code": "JDP-B8",
+      "discoveryId": "barnum",
+      "x": 148,
+      "y": 560,
+      "lat": 48.8571,
+      "lng": 2.3527,
+      "radius": null,
+      "missions": [
+        "B8-enigme"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "B1-enigme",
+      "type": "enigme",
+      "stationId": "B1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je ne vois que les preuves qui me donnent raison, et je ferme les yeux sur les autres. Quel biais suis-je ?",
+          "answers": [
+            "confirmation",
+            "biais de confirmation",
+            "le biais de confirmation",
+            "biais de confirmations"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom parle de « confirmer » une idée déjà en place.",
+          "knowMore": "Peter Wason l'a démontré avec une suite de nombres : presque personne n'osait tester une hypothèse qui pouvait la détruire."
+        },
+        "moyen": {
+          "text": "Quand tu cherches des arguments, je ne te montre que ceux qui flattent ton opinion. Ton idée a toujours raison avec moi. Qui suis-je ?",
+          "answers": [
+            "confirmation",
+            "biais de confirmation",
+            "le biais de confirmation"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Je porte le nom d'un accord : « oui, oui, c'est confirmé ! »",
+          "knowMore": "Les réseaux sociaux montrent surtout des contenus qui nous ressemblent : notre biais adore s'y nourrir."
+        },
+        "difficile": {
+          "text": "Née dans les laboratoires de Peter Wason en 1960, je fais tester les hypothèses dans un seul sens : celui qui arrange mon propriétaire. Quel biais suis-je ?",
+          "answers": [
+            "confirmation",
+            "biais de confirmation",
+            "le biais de confirmation"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Chercher à confirmer plutôt qu'à infirmer : me voilà.",
+          "knowMore": "Le meilleur réflexe scientifique : essayer de se tromper. Une hypothèse qui survit à tous les tests gagne notre confiance."
+        }
+      }
+    },
+    {
+      "id": "B2-enigme",
+      "type": "enigme",
+      "stationId": "B2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Le premier nombre que tu entends me devient une chaîne : tes estimations restent accrochées dessus. Quel effet suis-je ?",
+          "answers": [
+            "ancrage",
+            "effet d ancrage",
+            "l effet d ancrage",
+            "effet d'ancrage",
+            "l'effet d'ancrage"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom vient du gros objet lourd qui empêche le bateau de bouger.",
+          "knowMore": "Même un nombre tiré au sort sous vos yeux influence ensuite vos estimations : l'ancre tient bon."
+        },
+        "moyen": {
+          "text": "« Barré à 100 €, aujourd'hui 39 € ! » Grâce à moi, 100 € est resté dans ta tête et l'affaire te paraît imbattable. Qui suis-je ?",
+          "answers": [
+            "ancrage",
+            "effet d ancrage",
+            "l effet d ancrage",
+            "effet d'ancrage",
+            "l'effet d'ancrage"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Le prix barré sert de… point de départ à ton jugement.",
+          "knowMore": "Kahneman et Tversky ont montré qu'une roue de loterie truquée changeait les estimations des participants, experts compris."
+        },
+        "difficile": {
+          "text": "Amiral des premiers chiffres, je mouille devant ta pensée : tout ce qui suit se mesure à ma chaîne, même quand je suis absurde. Nommez-moi.",
+          "answers": [
+            "ancrage",
+            "effet d ancrage",
+            "l effet d ancrage",
+            "effet d'ancrage",
+            "l'effet d'ancrage"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Tversky & Kahneman, 1974 : la première valeur capture l'estimation.",
+          "knowMore": "En négociation, celui qui annonce le premier prix pose souvent l'ancre : connaître l'effet permet de le contrer."
+        }
+      }
+    },
+    {
+      "id": "B3-enigme",
+      "type": "enigme",
+      "stationId": "B3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Ce que tu vois souvent aux infos te semble arriver tout le temps. Je juge la fréquence par la facilité de s'en souvenir. Quel biais suis-je ?",
+          "answers": [
+            "disponibilite",
+            "biais de disponibilite",
+            "le biais de disponibilite",
+            "disponibilité",
+            "biais de disponibilité",
+            "le biais de disponibilité"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom parle de ce qui est facilement « disponible » dans ta mémoire.",
+          "knowMore": "Après un accident d'avion médiatisé, beaucoup ont peur de voler… alors que la route reste bien plus risquée."
+        },
+        "moyen": {
+          "text": "Images choc, titres fracassants : je transforme les souvenirs faciles en statistiques imaginaires. Qui suis-je ?",
+          "answers": [
+            "disponibilite",
+            "biais de disponibilite",
+            "le biais de disponibilite",
+            "disponibilité",
+            "biais de disponibilité",
+            "le biais de disponibilité"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Facile à retrouver en mémoire ≠ fréquent dans la réalité.",
+          "knowMore": "Tversky et Kahneman (1973) : on estime la fréquence d'un mot selon la vitesse à laquelle on retrouve des exemples."
+        },
+        "difficile": {
+          "text": "Archiviste paresseux, je classe « fréquent » ce qui remonte vite à la surface, et « rare » ce que la mémoire peine à retrouver. Mon nom ?",
+          "answers": [
+            "disponibilite",
+            "biais de disponibilite",
+            "le biais de disponibilite",
+            "disponibilité",
+            "biais de disponibilité",
+            "le biais de disponibilité"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Heuristique de… : la mémoire comme raccourci de jugement.",
+          "knowMore": "L'antidote : demander les chiffres. Les vraies statistiques corrigent les impressions créées par les médias."
+        }
+      }
+    },
+    {
+      "id": "B4-enigme",
+      "type": "enigme",
+      "stationId": "B4",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Plus on débute, plus on se croit fort ; plus on apprend, plus on voit ses lacunes. Quel effet suis-je ?",
+          "answers": [
+            "dunning kruger",
+            "effet dunning kruger",
+            "l effet dunning kruger",
+            "dunning-kruger",
+            "effet dunning-kruger",
+            "kruger dunning"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom est composé de deux noms de chercheurs.",
+          "knowMore": "Chez les étudiants testés, les moins bons résultats s'accompagnaient des estimations les plus élevées."
+        },
+        "moyen": {
+          "text": "Je suis la bosse de confiance du débutant : elle monte vite, puis redescend à mesure que la vraie compétence apparaît. Qui suis-je ?",
+          "answers": [
+            "dunning kruger",
+            "effet dunning kruger",
+            "l effet dunning kruger",
+            "dunning-kruger",
+            "effet dunning-kruger"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Deux psychologues de Cornell, Kruger et Dunning, m'ont décrit en 1999.",
+          "knowMore": "Courbe célèbre : la « vallée de la mort » arrive quand on réalise enfin tout ce qu'il reste à apprendre."
+        },
+        "difficile": {
+          "text": "Double incompétence : celle qui échoue, et celle qui ne permet pas de voir l'échec. Mes deux pères portent des noms de chercheurs. Qui suis-je ?",
+          "answers": [
+            "dunning kruger",
+            "effet dunning kruger",
+            "l effet dunning kruger",
+            "dunning-kruger",
+            "effet dunning-kruger"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Il faut être un minimum compétent pour mesurer son incompétence.",
+          "knowMore": "L'humilité épistémique — savoir qu'on peut se tromper — est la marque des vrais experts."
+        }
+      }
+    },
+    {
+      "id": "B5-enigme",
+      "type": "enigme",
+      "stationId": "B5",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Tu continues un jeu ennuyeux juste parce que tu as déjà payé. L'argent perdu te pousse à en perdre plus. Quel sophisme suis-je ?",
+          "answers": [
+            "cout irrecuperable",
+            "coût irrécupérable",
+            "le coût irrécupérable",
+            "sophisme du coût irrécupérable",
+            "sunk cost"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom parle d'une dépense qui ne reviendra jamais.",
+          "knowMore": "Restez jusqu'au bout d'un film nul « puisque le billet est payé » : classique ! Le billet ne reviendra pas pour autant."
+        },
+        "moyen": {
+          "text": "« J'ai déjà investi tant de temps, je ne peux pas arrêter maintenant ! » Je transforme le passé en prison. Qui suis-je ?",
+          "answers": [
+            "cout irrecuperable",
+            "coût irrécupérable",
+            "le coût irrécupérable",
+            "sophisme du coût irrécupérable",
+            "sunk cost"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Seuls les gains futurs devraient compter dans une décision.",
+          "knowMore": "Le projet Concorde a été poursuivi des années « à cause des milliards déjà dépensés » : le sophisme porte aussi son nom."
+        },
+        "difficile": {
+          "text": "Comptable de l'impossible, j'exige qu'on paye deux fois la même erreur sous prétexte qu'elle a déjà coûté. Les économistes m'appellent sunk cost. Mon nom français ?",
+          "answers": [
+            "cout irrecuperable",
+            "coût irrécupérable",
+            "le coût irrécupérable",
+            "sophisme du coût irrécupérable"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Irrécupérable : ce qui est perdu ne se récupère pas.",
+          "knowMore": "La bonne question : « En partant de maintenant, quelle est la meilleure option ? » Le passé n'a pas de vote."
+        }
+      }
+    },
+    {
+      "id": "B6-enigme",
+      "type": "enigme",
+      "stationId": "B6",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Une seule qualité illumine tout : « Il est sympa, donc intelligent et honnête ! » Quel effet suis-je ?",
+          "answers": [
+            "halo",
+            "effet halo",
+            "l effet halo",
+            "effet de halo"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom est le cercle de lumière que les peintres mettent autour des saints.",
+          "knowMore": "Edward Thorndike l'a observé en 1920 : une bonne note d'un officier entraînait toutes les autres."
+        },
+        "moyen": {
+          "text": "Une star sourit à la télé et voilà qu'on croit que son produit est génial. Sa lumière colorie tout ce qu'elle touche. Qui suis-je ?",
+          "answers": [
+            "halo",
+            "effet halo",
+            "l effet halo",
+            "effet de halo"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "La publicité exploite la renommée : c'est mon royaume.",
+          "knowMore": "À l'inverse, le « horn effect » (effet corne) : un seul défaut, et tout le dossier devient sombre."
+        },
+        "difficile": {
+          "text": "Auréole trompeuse, je fais déborder une vertu sur toutes les autres : jugez-moi en 1920 chez les officiers de Thorndike. Mon nom ?",
+          "answers": [
+            "halo",
+            "effet halo",
+            "l effet halo",
+            "effet de halo"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Un rayon de lumière qui aveugle le jugement.",
+          "knowMore": "Antidote : noter chaque critère séparément, avant de se faire une opinion globale."
+        }
+      }
+    },
+    {
+      "id": "B7-enigme",
+      "type": "enigme",
+      "stationId": "B7",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Répétée dix fois, une fausse information finit par paraître vraie. Quelle illusion suis-je ?",
+          "answers": [
+            "illusion de la verite",
+            "l illusion de la verite",
+            "verite illusoire",
+            "illusion de vérité",
+            "la illusion de la vérité",
+            "vérité illusoire"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom associe « illusion » et une grande mot à 5 lettres : la vérité.",
+          "knowMore": "Hasher, Goldstein et Toppino (1977) ont montré que la répétition suffit à créer un sentiment de vérité."
+        },
+        "moyen": {
+          "text": "Je ne suis ni preuve ni source : je ne suis qu'une répétition. Et pourtant, plus on m'entend, plus on me croit. Qui suis-je ?",
+          "answers": [
+            "illusion de la verite",
+            "l illusion de la verite",
+            "verite illusoire",
+            "illusion de vérité",
+            "vérité illusoire"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Les rumeurs prospèrent grâce à moi.",
+          "knowMore": "Le réflexe : vérifier la source et la date avant de partager. Une répétition n'est pas une preuve."
+        },
+        "difficile": {
+          "text": "Sœur jumelle du mensonge, je gagne ma force à chaque écho. Trois chercheurs de 1977 m'ont donnée un nom. Lequel ?",
+          "answers": [
+            "illusion de la verite",
+            "verite illusoire",
+            "illusory truth"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Illusory truth effect en anglais.",
+          "knowMore": "Même des gens avertis retombent dans le panneau : la familiarité agit avant la réflexion."
+        }
+      }
+    },
+    {
+      "id": "B8-enigme",
+      "type": "enigme",
+      "stationId": "B8",
+      "difficultyLevels": {
+        "facile": {
+          "text": "« Tu as besoin que les autres t'estiment, mais tu doutes de toi parfois. » Ça te ressemble ? À moi aussi ! Quel effet suis-je ?",
+          "answers": [
+            "barnum",
+            "effet barnum",
+            "l effet barnum",
+            "forer",
+            "effet forer"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Mon nom vient du directeur de cirque P.T. Barnum : un spectacle pour tous !",
+          "knowMore": "En 1949, Bertram Forer a donné le même portrait astrologique à toute sa classe : note moyenne de vérité, 4/5 !"
+        },
+        "moyen": {
+          "text": "Horoscopes et faux tests me servent de scène : mes phrases floues semblent faites sur mesure… pour tout le monde. Qui suis-je ?",
+          "answers": [
+            "barnum",
+            "effet barnum",
+            "l effet barnum",
+            "forer",
+            "effet forer"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Une description vague qui convient à presque tout le monde.",
+          "knowMore": "Test Barnum : si la phrase marcherait pour n'importe qui, elle ne décrit personne en particulier."
+        },
+        "difficile": {
+          "text": "Charlatan des généralités, je peins des portraits universels que chacun prend pour son reflet. Mon second nom est celui du psychologue de 1949. Qui suis-je ?",
+          "answers": [
+            "barnum",
+            "forer",
+            "effet barnum",
+            "effet forer"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Deux noms possibles : un cirque et un psychologue.",
+          "knowMore": "L'antidote : exiger de la précision. Une vraie description personnelle comporte des détails vérifiables."
+        }
+      }
+    },
+    {
+      "id": "confirmation-quiz",
+      "type": "quiz",
+      "characterId": "confirmation",
+      "questions": [
+        {
+          "q": "Que fait le biais de confirmation ?",
+          "options": [
+            "Il ne retient que les preuves qui nous donnent raison",
+            "Il rend myope",
+            "Il traduit les langues"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Quel est le meilleur antidote ?",
+          "options": [
+            "Chercher ce qui pourrait nous contredire",
+            "Répéter plus fort son opinion",
+            "Fermer les yeux"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "ancrage-quiz",
+      "type": "quiz",
+      "characterId": "ancrage",
+      "questions": [
+        {
+          "q": "Qu'est-ce qu'une « ancre » dans notre tête ?",
+          "options": [
+            "La première information reçue, qui influence toute la suite",
+            "Un bijou",
+            "Une chanson qui reste dans la tête"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "« Barré à 100 €, vendu 39 € » joue sur…",
+          "options": [
+            "L'effet d'ancrage",
+            "La météo",
+            "Notre faim"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "disponibilite-quiz",
+      "type": "quiz",
+      "characterId": "disponibilite",
+      "questions": [
+        {
+          "q": "Pourquoi craint-on parfois l'avion plus que la voiture ?",
+          "options": [
+            "Les accidents d'avion sont très médiatisés, donc faciles à se rappeler",
+            "L'avion va moins vite",
+            "Parce qu'on y est assis longtemps"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Quel est l'antidote du biais de disponibilité ?",
+          "options": [
+            "Regarder les statistiques",
+            "Regarder plus la télé",
+            "Oublier vite"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "dunning-quiz",
+      "type": "quiz",
+      "characterId": "dunning",
+      "questions": [
+        {
+          "q": "Que fait souvent un grand débutant, selon cet effet ?",
+          "options": [
+            "Il se surestime car il ne voit pas encore ses lacunes",
+            "Il devient champion tout de suite",
+            "Il n'apprend jamais rien"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Comment progresse-t-on malgré cet effet ?",
+          "options": [
+            "En s'entraînant et en écoutant les retours",
+            "En évitant de pratiquer",
+            "En se comparant aux débutants"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "cout-quiz",
+      "type": "quiz",
+      "characterId": "cout",
+      "questions": [
+        {
+          "q": "Le film est nul mais tu restes « parce que le billet est payé ». C'est…",
+          "options": [
+            "Le sophisme du coût irrécupérable",
+            "Un bon calcul",
+            "De la patience"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Que faut-il prendre en compte pour bien décider ?",
+          "options": [
+            "Seulement ce qui peut encore arriver",
+            "Tout ce qu'on a déjà dépensé",
+            "Ce que les autres pensent"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "halo-quiz",
+      "type": "quiz",
+      "characterId": "halo",
+      "questions": [
+        {
+          "q": "On trouve quelqu'un sympathique, alors on le croit aussi intelligent. C'est…",
+          "options": [
+            "L'effet halo",
+            "Un superpouvoir",
+            "De la télépathie"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Comment éviter l'effet halo ?",
+          "options": [
+            "Évaluer chaque qualité séparément",
+            "Ne regarder qu'un seul détail",
+            "Suivre la foule"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "verite-quiz",
+      "type": "quiz",
+      "characterId": "verite",
+      "questions": [
+        {
+          "q": "Une info répétée dix fois paraît…",
+          "options": [
+            "Plus vraie, même si elle est fausse",
+            "Toujours fausse",
+            "Plus longue"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Quel est le meilleur réflexe face à une info surprenante ?",
+          "options": [
+            "Vérifier la source",
+            "La partager tout de suite",
+            "La répéter encore"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "barnum-quiz",
+      "type": "quiz",
+      "characterId": "barnum",
+      "questions": [
+        {
+          "q": "Un horoscope décrit « ta personnalité unique ». En fait, il…",
+          "options": [
+            "Décrit tout le monde avec des phrases floues",
+            "Lit vraiment dans ton esprit",
+            "Connaît ton avenir"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Comment reconnaître un effet Barnum ?",
+          "options": [
+            "Une description vague qui conviendrait à presque tout le monde",
+            "Des chiffres précis et vérifiables",
+            "Une recette de cuisine"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "confirmation",
+      "nom": "Biais de confirmation",
+      "latin": "Confirmation bias · Wason, 1960",
+      "emoji": "🔍",
+      "couleur": "#2e6fb3",
+      "categorie": "diurne",
+      "taille": "Antidote : chercher ce qui te contredit",
+      "img": "",
+      "anecdotes": [
+        "Notre cerveau adore avoir raison : il collectionne les preuves qui lui plaisent et jette les autres.",
+        "Sur les réseaux sociaux, on voit surtout les messages qui confirment ce qu'on pense déjà : le biais adore ça !",
+        "Pour le contrer, pose-toi la question : « Qu'est-ce qui pourrait prouver que j'ai tort ? »"
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Chercher activement ce qui pourrait contredire une opinion avant de la croire",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 90,
+        "notes": [
+          {
+            "f": 880,
+            "fEnd": 880,
+            "d": 0.12,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 880,
+            "fEnd": 880,
+            "d": 0.12,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 1100,
+            "fEnd": 1100,
+            "d": 0.1,
+            "g": 0.3,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "ancrage",
+      "nom": "Effet d'ancrage",
+      "latin": "Anchoring effect · Tversky & Kahneman, 1974",
+      "emoji": "⚓",
+      "couleur": "#5a4fcf",
+      "categorie": "diurne",
+      "taille": "Antidote : comparer avec tes propres repères",
+      "img": "",
+      "anecdotes": [
+        "Le premier nombre entendu devient une ancre : notre estimation reste collée dessus, même si elle est absurde.",
+        "« Au lieu de 100 €, seulement 39 € ! » : le prix barré est une ancre qui donne l'impression d'une bonne affaire.",
+        "Même les experts se font piéger : une roue de loterie truquée a suffi à fausser leurs estimations en labo."
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Reconnaître l'influence du premier chiffre reçu et recalculer avec ses propres repères",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 45,
+        "notes": [
+          {
+            "f": 220,
+            "fEnd": 220,
+            "d": 0.3,
+            "g": 0.15,
+            "type": "sine",
+            "v": 0.55
+          },
+          {
+            "f": 330,
+            "fEnd": 440,
+            "d": 0.25,
+            "g": 0.5,
+            "type": "sine",
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "disponibilite",
+      "nom": "Biais de disponibilité",
+      "latin": "Availability heuristic · Tversky & Kahneman, 1973",
+      "emoji": "📺",
+      "couleur": "#c2452e",
+      "categorie": "diurne",
+      "taille": "Antidote : chercher les vrais chiffres",
+      "img": "",
+      "anecdotes": [
+        "Ce qui revient souvent à la télé ou dans les discussions semble plus fréquent qu'il ne l'est vraiment.",
+        "On craint parfois l'avion plus que la voiture, parce que les accidents d'avion marquent les mémoires.",
+        "Astuce : avant de juger « c'est plein d'accidents », demande-toi « ai-je des chiffres ou juste des souvenirs ? »"
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Distinguer ce qui est facile à se rappeler de ce qui est réellement fréquent",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 160,
+        "notes": [
+          {
+            "f": 1200,
+            "fEnd": 1400,
+            "d": 0.07,
+            "g": 0.04,
+            "type": "square",
+            "v": 0.4
+          },
+          {
+            "f": 1500,
+            "fEnd": 1300,
+            "d": 0.07,
+            "g": 0.04,
+            "type": "square",
+            "v": 0.4
+          },
+          {
+            "f": 1800,
+            "fEnd": 1600,
+            "d": 0.09,
+            "g": 0.35,
+            "type": "square",
+            "v": 0.38
+          }
+        ]
+      }
+    },
+    {
+      "id": "dunning",
+      "nom": "Effet Dunning-Kruger",
+      "latin": "Dunning-Kruger effect · Kruger & Dunning, 1999",
+      "emoji": "🎢",
+      "couleur": "#d98e04",
+      "categorie": "diurne",
+      "taille": "Antidote : s'entraîner et demander des avis",
+      "img": "",
+      "anecdotes": [
+        "Débutants, on se croit souvent très fort ; en progressant, on découvre enfin l'étendue de ce qu'on ignore.",
+        "Les chercheurs ont testé des étudiants : les moins bons s'estimaient au-dessus de la moyenne !",
+        "La vraie compétence commence quand on sait mesurer ce qu'on ne sait pas encore."
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Mesurer ses progrès pour évaluer son niveau réel et accueillir les retours",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 70,
+        "notes": [
+          {
+            "f": 520,
+            "fEnd": 900,
+            "d": 0.18,
+            "g": 0.06,
+            "type": "triangle",
+            "v": 0.5
+          },
+          {
+            "f": 900,
+            "fEnd": 1300,
+            "d": 0.16,
+            "g": 0.06,
+            "type": "triangle",
+            "v": 0.5
+          },
+          {
+            "f": 1300,
+            "fEnd": 600,
+            "d": 0.22,
+            "g": 0.55,
+            "type": "triangle",
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "cout",
+      "nom": "Sophisme du coût irrécupérable",
+      "latin": "Sunk cost fallacy · Arkes & Blumer, 1985",
+      "emoji": "🕳️",
+      "couleur": "#6b4a8a",
+      "categorie": "diurne",
+      "taille": "Antidote : raisonner sur l'avenir, pas le passé",
+      "img": "",
+      "anecdotes": [
+        "Rester jusqu'au bout d'un film ennuyeux « puisque le billet est payé » : l'argent dépensé ne reviendra pas !",
+        "Continuer simplement parce qu'on a déjà beaucoup investi, c'est jeter bon argent après mauvais.",
+        "La bonne question : « En partant de maintenant, qu'est-ce qui est le mieux pour la suite ? »"
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Décider d'après les gains futurs possibles, sans se laisser enfermer par le passé",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 40,
+        "notes": [
+          {
+            "f": 700,
+            "fEnd": 480,
+            "d": 0.3,
+            "g": 0.2,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 600,
+            "fEnd": 400,
+            "d": 0.3,
+            "g": 0.2,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 500,
+            "fEnd": 300,
+            "d": 0.35,
+            "g": 0.6,
+            "type": "sine",
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "halo",
+      "nom": "Effet halo",
+      "latin": "Halo effect · Thorndike, 1920",
+      "emoji": "😇",
+      "couleur": "#0f9b8e",
+      "categorie": "diurne",
+      "taille": "Antidote : juger chaque point séparément",
+      "img": "",
+      "anecdotes": [
+        "Une seule qualité illumine tout le reste : on trouve quelqu'un « sympa », et voilà qu'on le croit intelligent et honnête.",
+        "Edward Thorndike l'a observé chez des officiers notés par leurs supérieurs : une bonne note entraînait toutes les autres.",
+        "La publicité l'utilise beaucoup : une star souriante prête son « halo » au produit."
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Évaluer chaque qualité séparément avant de juger un ensemble",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 80,
+        "notes": [
+          {
+            "f": 523,
+            "fEnd": 523,
+            "d": 0.14,
+            "g": 0.05,
+            "type": "sine",
+            "v": 0.45
+          },
+          {
+            "f": 659,
+            "fEnd": 659,
+            "d": 0.14,
+            "g": 0.05,
+            "type": "sine",
+            "v": 0.45
+          },
+          {
+            "f": 784,
+            "fEnd": 784,
+            "d": 0.2,
+            "g": 0.45,
+            "type": "sine",
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "verite",
+      "nom": "Illusion de la vérité",
+      "latin": "Illusory truth effect · Hasher, Goldstein & Toppino, 1977",
+      "emoji": "🔁",
+      "couleur": "#3d4a6b",
+      "categorie": "nocturne",
+      "taille": "Antidote : vérifier la source",
+      "img": "",
+      "anecdotes": [
+        "Plus une information est répétée, plus elle paraît vraie — même si elle est fausse !",
+        "Les rumeurs et la désinformation exploitent cette répétition pour s'installer dans nos têtes.",
+        "Avant de croire, demande-toi : « Qui le dit ? Où est la preuve ? » Une répétition n'est pas une preuve."
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Vérifier source et preuve avant de croire une information répétée",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 60,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.14,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.14,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.14,
+            "g": 0.9,
+            "type": "sine",
+            "v": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "barnum",
+      "nom": "Effet Barnum",
+      "latin": "Barnum (Forer) effect · Forer, 1949",
+      "emoji": "🔮",
+      "couleur": "#7a3b8f",
+      "categorie": "nocturne",
+      "taille": "Antidote : demander une description précise",
+      "img": "",
+      "anecdotes": [
+        "« Tu es parfois timide, mais très sociable avec ceux que tu aimes » : ça te ressemble ? Ça ressemble à tout le monde !",
+        "Les horoscopes et faux tests de personnalité utilisent des phrases floues valables pour presque tous.",
+        "Bertram Forer a donné exactement le même « portrait » à tous ses étudiants : ils y ont cru à 4/5 !"
+      ],
+      "pedagogy": {
+        "ages": [
+          6,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Exiger des descriptions précises et vérifiables plutôt que des phrases universelles",
+        "programme": [
+          "cycle 3",
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 50,
+        "notes": [
+          {
+            "f": 600,
+            "fEnd": 750,
+            "d": 0.35,
+            "g": 0.15,
+            "type": "sawtooth",
+            "v": 0.32
+          },
+          {
+            "f": 700,
+            "fEnd": 550,
+            "d": 0.35,
+            "g": 0.6,
+            "type": "sawtooth",
+            "v": 0.3
+          }
+        ]
+      }
+    }
+  ],
+  "media": [],
+  "rewards": [],
+  "debriefing": {
+    "participantQuestions": [],
+    "facilitatorReport": [],
+    "skillsObserved": []
+  }
+}

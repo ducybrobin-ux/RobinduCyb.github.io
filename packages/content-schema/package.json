@@ -1,0 +1,11 @@
+{
+  "name": "@ducyb/content-schema",
+  "version": "0.1.0",
+  "description": "Chargement/validation du contenu historique jdpbc-pack, conversion vers et validation du format universel ducyb-parcours v1. Zéro dépendance.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "AGPL-3.0"
+}

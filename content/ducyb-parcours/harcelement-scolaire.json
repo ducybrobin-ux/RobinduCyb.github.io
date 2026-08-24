@@ -1,0 +1,832 @@
+{
+  "$format": "ducyb-parcours",
+  "$version": 1,
+  "id": "harcelement-scolaire",
+  "title": "Harcèlement scolaire",
+  "metadata": {
+    "author": "",
+    "organization": "",
+    "language": "fr",
+    "license": "",
+    "createdAt": "2026-08-24",
+    "updatedAt": "2026-08-24",
+    "source": {
+      "format": "jdpbc-pack",
+      "version": 1
+    }
+  },
+  "description": "Six découvertes pour comprendre le harcèlement et apprendre les bons réflexes (témoigner, protéger, alerter), quatre notions de repères et six balises sobres. Module destiné aux interventions en milieu scolaire.",
+  "theme": "climat scolaire et entraide",
+  "audience": {
+    "minAge": 9,
+    "maxAge": 99
+  },
+  "duration": null,
+  "pedagogy": {
+    "objectives": [
+      "Mémoriser le 3018 et savoir à quoi il sert",
+      "Trouver sa manière concrète d'aider sans prendre de risque inutile",
+      "Lister les adultes vers qui tourner si une première demande reste sans effet",
+      "Connaître l'essentiel du cadre légal et du programme pHARe",
+      "Comprendre que le silence protège l'agresseur et qu'en parler est la première étape pour agir",
+      "Découvrir l'effet spectateur et oser réagir plutôt que d'attendre que quelqu'un d'autre agisse",
+      "Distinguer une dispute ponctuelle du harcèlement (violences répétées et rapport de force déséquilibré)",
+      "Appliquer les bons réflexes face à des contenus humiliants en ligne : capture, blocage, signalement",
+      "Refuser l'idée que la victime serait « responsable » de ce qu'elle subit à cause d'une différence",
+      "Identifier le rôle décisif des défenseurs et s'entraîner à occuper ce rôle sans s'exposer"
+    ],
+    "skills": [],
+    "competencies": [
+      {
+        "id": "num3018",
+        "nom": "Le 3018",
+        "description": "Le 3018 est le numéro national contre les violences numériques : harcèlement sur les réseaux, menaces, images diffusées sans accord. Gratuit, confidentiel, avec accompagnement par appel ou tchat.",
+        "emoji": "🆘",
+        "objectif": "Mémoriser le 3018 et savoir à quoi il sert",
+        "ages": [
+          9,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ],
+        "anecdotes": [
+          "Ouvert 7 jours sur 7 (hors nuit profonde), il est aussi joignable par tchat et application.",
+          "Les équipes peuvent accompagner les démarches de signalement aux plateformes."
+        ]
+      },
+      {
+        "id": "phares",
+        "nom": "Être un phare",
+        "description": "On peut aider sans affronter : rester aux côtés de la personne visée, ne pas rire des mêmes blagues, partir chercher un adulte, proposer de marcher avec elle. Un allié rend le groupe plus sûr.",
+        "emoji": "🤝",
+        "objectif": "Trouver sa manière concrète d'aider sans prendre de risque inutile",
+        "ages": [
+          9,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ],
+        "anecdotes": [
+          "S'asseoir près de l'élève isolé à la cantine est déjà un acte de protection.",
+          "Alerter un adulte n'est pas « balancer » : c'est protéger deux fois (la victime… et le harceleur de lui-même)."
+        ]
+      },
+      {
+        "id": "adultes-confiance",
+        "nom": "Les adultes de confiance",
+        "description": "Professeur principal, CPE, infirmier·ère scolaire·e, assistant·e social·e, directeur·rice, famille : plusieurs portes peuvent s'ouvrir. Si l'une reste fermée, frapper à une autre — et mémoriser le 3018.",
+        "emoji": "🗣️",
+        "objectif": "Lister les adultes vers qui tourner si une première demande reste sans effet",
+        "ages": [
+          9,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ],
+        "anecdotes": [
+          "Écrire ce qui se passe (dates, lieux, messages) aide l'adulte à comprendre vite.",
+          "Chaque établissement a un référent harcèlement : demander son nom fait partie des bons réflexes."
+        ]
+      },
+      {
+        "id": "loi",
+        "nom": "La loi te protège",
+        "description": "Le harcèlement scolaire est un délit puni par la loi, y compris en ligne. Depuis la loi du 2 mars 2022, les écoles et collèges déploient le programme pHARe : sensibilisation, élèves ambassadeurs, équipe dédiée.",
+        "emoji": "⚖️",
+        "objectif": "Connaître l'essentiel du cadre légal et du programme pHARe",
+        "ages": [
+          9,
+          99
+        ],
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ],
+        "anecdotes": [
+          "Des peines de prison existent pour le harcèlement, aggravées quand la victime est mineure.",
+          "Les délégués ambassadeurs pHARe sont des élèves formés : on peut leur parler."
+        ]
+      }
+    ],
+    "evaluation": []
+  },
+  "game": {
+    "mode": "courses",
+    "scoring": {
+      "starsPerStation": 3,
+      "timeBonus": true
+    },
+    "rules": {
+      "order": "libre"
+    }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": null,
+    "trail": []
+  },
+  "stations": [
+    {
+      "id": "HS1",
+      "label": "Le mur des mots",
+      "code": "JDP-HS1",
+      "discoveryId": "silence",
+      "x": 74,
+      "y": 452,
+      "lat": 50.7258178,
+      "lng": 3.1329639,
+      "radius": null,
+      "missions": [
+        "HS1-enigme"
+      ]
+    },
+    {
+      "id": "HS2",
+      "label": "La cour des regards",
+      "code": "JDP-HS2",
+      "discoveryId": "spectateur",
+      "x": 148,
+      "y": 400,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "HS2-enigme"
+      ]
+    },
+    {
+      "id": "HS3",
+      "label": "L'écho qui revient",
+      "code": "JDP-HS3",
+      "discoveryId": "repetition",
+      "x": 238,
+      "y": 292,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "HS3-enigme"
+      ]
+    },
+    {
+      "id": "HS4",
+      "label": "L'écran sans porte",
+      "code": "JDP-HS4",
+      "discoveryId": "cyber",
+      "x": 320,
+      "y": 320,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "HS4-enigme"
+      ]
+    },
+    {
+      "id": "HS5",
+      "label": "Le miroir trompeur",
+      "code": "JDP-HS5",
+      "discoveryId": "difference",
+      "x": 388,
+      "y": 396,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "HS5-enigme"
+      ]
+    },
+    {
+      "id": "HS6",
+      "label": "La ronde des alliés",
+      "code": "JDP-HS6",
+      "discoveryId": "defenseur",
+      "x": 330,
+      "y": 556,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "HS6-enigme"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "HS1-enigme",
+      "type": "enigme",
+      "stationId": "HS1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je grandis quand on me laisse seule : je sépare un élève du reste du groupe. Qui suis-je ?",
+          "answers": [
+            "silence",
+            "le silence",
+            "briser le silence"
+          ],
+          "ages": [
+            9,
+            11
+          ],
+          "hint": "Ce qui se passe quand personne ne dit rien.",
+          "knowMore": "Freinet disait qu'un problème dit à voix haute est déjà à moitié résolu."
+        },
+        "moyen": {
+          "text": "Je suis l'alliée invisible du harceleur : sans moi, sa moquerie ne prendrait jamais. Qui suis-je ?",
+          "answers": [
+            "le silence",
+            "silence"
+          ],
+          "ages": [
+            12,
+            13
+          ],
+          "hint": "Pensez à ce qui remplace la parole des témoins.",
+          "knowMore": "Environ un élève sur dix subit du harcèlement pendant sa scolarité."
+        },
+        "difficile": {
+          "text": "Psychologues de 1968, j'ai un effet qui porte mon nom : plus nous sommes nombreux à regarder, moins nous agissons. Quel effet ?",
+          "answers": [
+            "effet spectateur",
+            "l'effet spectateur",
+            "spectateur"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Darley et Latané ont fait des expériences sur la fumée qui rentre dans une salle.",
+          "knowMore": "Un seul témoin qui agit entraîne souvent les autres à suivre."
+        }
+      }
+    },
+    {
+      "id": "HS2-enigme",
+      "type": "enigme",
+      "stationId": "HS2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Nous sommes beaucoup à voir, mais peu à agir : notre regard peut aider ou laisser seul. Qui sommes-nous ?",
+          "answers": [
+            "spectateurs",
+            "les spectateurs"
+          ],
+          "ages": [
+            9,
+            11
+          ],
+          "hint": "Ceux qui regardent la scène.",
+          "knowMore": "Regarder autrement, c'est déjà commencer à agir."
+        },
+        "moyen": {
+          "text": "Je suis celui ou celle qui voit tout, n'approuve rien, mais attend que « quelqu'un » fasse quelque chose. Qui suis-je ?",
+          "answers": [
+            "spectateur",
+            "temoin passif",
+            "le spectateur"
+          ],
+          "ages": [
+            12,
+            13
+          ],
+          "hint": "Il y en a toujours plusieurs autour d'une scène.",
+          "knowMore": "La majorité silencieuse peut devenir une majorité protectrice."
+        },
+        "difficile": {
+          "text": "Selon Salmivalli, je suis un rôle parmi d'autres dans le groupe : ni harceleur, ni souffre-douleur, mais décisif. Lequel ?",
+          "answers": [
+            "defenseur",
+            "défenseur",
+            "les defenseurs"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Celle ou celui qui soutient la victime.",
+          "knowMore": "Les classes où les défenseurs sont actifs voient le harcèlement chuter."
+        }
+      }
+    },
+    {
+      "id": "HS3-enigme",
+      "type": "enigme",
+      "stationId": "HS3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Une fois, ça passe ; mille fois, ça blesse : je transforme une moquerie en peur permanente. Qui suis-je ?",
+          "answers": [
+            "repetition",
+            "répétition",
+            "la repetition"
+          ],
+          "ages": [
+            9,
+            11
+          ],
+          "hint": "Ce qui revient encore et encore.",
+          "knowMore": "Une dispute ponctuelle n'est pas du harcèlement."
+        },
+        "moyen": {
+          "text": "Pour qualifier le harcèlement, je dois être présente : les actes se reproduisent et la peur s'installe. Qui suis-je ?",
+          "answers": [
+            "la repetition",
+            "repetition"
+          ],
+          "ages": [
+            12,
+            13
+          ],
+          "hint": "Critère officiel avec l'intention de nuire et l'asymétrie.",
+          "knowMore": "Les trois critères : répétition, intention de nuire, rapport de force déséquilibré."
+        },
+        "difficile": {
+          "text": "Juridiquement, je fais passer une insulte isolée au statut de harcèlement : actes renouvelés et domination. De quel critère parle-t-on ?",
+          "answers": [
+            "repetition",
+            "la repetition des actes"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Littéralement : faire encore.",
+          "knowMore": "C'est aussi valable pour les messages en ligne republiés sans fin."
+        }
+      }
+    },
+    {
+      "id": "HS4-enigme",
+      "type": "enigme",
+      "stationId": "HS4",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je suis un harcèlement qui te suit jusque dans ta poche, jour et nuit. Qui suis-je ?",
+          "answers": [
+            "cyberharcellement",
+            "le cyberharcèlement",
+            "cyber harcèlement"
+          ],
+          "ages": [
+            9,
+            11
+          ],
+          "hint": "« Cyber » + harcèlement.",
+          "knowMore": "Le premier réflexe : capture d'écran, puis blocage."
+        },
+        "moyen": {
+          "text": "Capture, blocage, signalement : trois gestes qui me désarment. Et un numéro gratuit veille sur toi. Lequel ?",
+          "answers": [
+            "3018",
+            "le 3018"
+          ],
+          "ages": [
+            12,
+            13
+          ],
+          "hint": "Trois chiffres : trois, zéro, un, huit.",
+          "knowMore": "Le 3018 est national, gratuit et confidentiel."
+        },
+        "difficile": {
+          "text": "Tokunaga m'a définie en 2010 : des actes intentionnels, répétés, via les technologies. Mon nom complet ?",
+          "answers": [
+            "cyberharcellement",
+            "cyberbullying",
+            "le cyberharcèlement"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "En anglais comme en français, le préfixe vient du réseau.",
+          "knowMore": "Les captures d'écran servent de preuves pour les signalements."
+        }
+      }
+    },
+    {
+      "id": "HS5-enigme",
+      "type": "enigme",
+      "stationId": "HS5",
+      "difficultyLevels": {
+        "facile": {
+          "text": "On me reproche d'être différent·e, mais c'est moi le vrai problème : la moquerie, pas mes lunettes ! Qu'est-ce qui pose problème ?",
+          "answers": [
+            "moquerie",
+            "les moqueries",
+            "harcèlement",
+            "l'agression"
+          ],
+          "ages": [
+            9,
+            11
+          ],
+          "hint": "Ce que fait le harceleur, pas ce que la victime porte.",
+          "knowMore": "Personne ne « demande » jamais d'être ciblé."
+        },
+        "moyen": {
+          "text": "Goffman m'a nommée en 1963 : l'attribut que le groupe choisit pour rabaisser quelqu'un. Qui suis-je ?",
+          "answers": [
+            "stigmate",
+            "le stigmate",
+            "stigmatisation"
+          ],
+          "ages": [
+            12,
+            13
+          ],
+          "hint": "Trois syllabes, une marque sociale.",
+          "knowMore": "Toute différence peut servir de prétexte : elle n'en est jamais la cause."
+        },
+        "difficile": {
+          "text": "Je suis le raisonnement faux qui rend la victime responsable de ce qu'elle subit. Comment s'appelle ce mécanisme ?",
+          "answers": [
+            "culpabilisation de la victime",
+            "blame the victim",
+            "victim blaming"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "On accuse celle qui souffre au lieu de celle qui frappe.",
+          "knowMore": "Retourner le regard : c'est l'agresseur qui doit changer."
+        }
+      }
+    },
+    {
+      "id": "HS6-enigme",
+      "type": "enigme",
+      "stationId": "HS6",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je marche à côté de celui qui est seul et je vais chercher un adulte : sans me battre, je protège. Qui suis-je ?",
+          "answers": [
+            "defenseur",
+            "un defenseur",
+            "allié",
+            "allie"
+          ],
+          "ages": [
+            9,
+            11
+          ],
+          "hint": "Celui qui soutient la victime.",
+          "knowMore": "Soutenir, alerter, ne pas relayer : trois gestes de défenseur."
+        },
+        "moyen": {
+          "text": "Salmivalli m'a étudiée : dans le groupe, je suis le rôle qui fait reculer le harcèlement quand j'ose agir. Lequel ?",
+          "answers": [
+            "defenseur",
+            "défenseur"
+          ],
+          "ages": [
+            12,
+            13
+          ],
+          "hint": "Contraire de « spectateur passif ».",
+          "knowMore": "Il y a presque toujours plus de témoins que de harceleurs."
+        },
+        "difficile": {
+          "text": "Programme national déployé depuis la loi de 2022 dans les collèges : élèves ambassadeurs, équipe ressource… Son acronyme ?",
+          "answers": [
+            "phare",
+            "pHARe"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Comme un grand signal lumineux en mer.",
+          "knowMore": "Chaque établissement a aussi un référent harcèlement."
+        }
+      }
+    },
+    {
+      "id": "silence-quiz",
+      "type": "quiz",
+      "characterId": "silence",
+      "questions": [
+        {
+          "q": "Quand un camarade semble isolé et moqué chaque jour, la pire réaction est…",
+          "options": [
+            "Faire comme si de rien n'était",
+            "En parler à un adulte",
+            "Lui montrer qu'on est de son côté"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Parler du harcèlement que l'on subit, c'est…",
+          "options": [
+            "Un pas courageux pour que cela cesse",
+            "Se donner en spectacle",
+            "Interdit par le règlement"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "spectateur-quiz",
+      "type": "quiz",
+      "characterId": "spectateur",
+      "questions": [
+        {
+          "q": "Plus il y a de spectateurs autour d'une agression, plus chacun…",
+          "options": [
+            "Attend que quelqu'un d'autre réagisse",
+            "Réagit très vite",
+            "Prend des photos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Un bon réflexe de témoin, c'est…",
+          "options": [
+            "Soutenir la victime et alerter un adulte",
+            "Filmer pour rigoler",
+            "Relayer la moquerie"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "repetition-quiz",
+      "type": "quiz",
+      "characterId": "repetition",
+      "questions": [
+        {
+          "q": "Le harcèlement se distingue d'une simple dispute parce qu'il…",
+          "options": [
+            "Se répète et installe une domination",
+            "Arrive une seule fois",
+            "Se passe seulement en classe"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Dans une situation de harcèlement, les forces en présence sont…",
+          "options": [
+            "Déséquilibrées",
+            "Toujours égales",
+            "Du côté de la victime"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "cyber-quiz",
+      "type": "quiz",
+      "characterId": "cyber",
+      "questions": [
+        {
+          "q": "Face à un message humiliant reçu sur un téléphone, le premier réflexe est…",
+          "options": [
+            "Garder une capture d'écran puis bloquer",
+            "Supprimer tout immédiatement",
+            "Répondre par des insultes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Le numéro gratuit pour signaler les violences numériques est…",
+          "options": [
+            "3018",
+            "15",
+            "0800 000 000"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "difference-quiz",
+      "type": "quiz",
+      "characterId": "difference",
+      "questions": [
+        {
+          "q": "Si un élève est moqué pour ses lunettes, le vrai problème c'est…",
+          "options": [
+            "Les moqueries, pas les lunettes",
+            "Les lunettes",
+            "Sa classe"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Face à la différence, la meilleure attitude est…",
+          "options": [
+            "Respecter : elle fait la richesse du groupe",
+            "Se joindre aux moqueurs",
+            "Éviter la personne visée"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "defenseur-quiz",
+      "type": "quiz",
+      "characterId": "defenseur",
+      "questions": [
+        {
+          "q": "Être un défenseur, c'est surtout…",
+          "options": [
+            "Soutenir la victime et alerter",
+            "Se battre avec le harceleur",
+            "Ignorer complètement"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Dans une classe où les élèves réagissent, le harcèlement…",
+          "options": [
+            "Recule fortement",
+            "Double",
+            "Ne change jamais"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "silence",
+      "nom": "Briser le silence",
+      "latin": "Omerta · la loi du silence",
+      "emoji": "🤐",
+      "couleur": "#444a6b",
+      "categorie": "diurne",
+      "taille": "Réflexe : en parler, toujours, à quelqu'un",
+      "img": "",
+      "anecdotes": [
+        "Le harcèlement touche environ un élève sur dix au cours de sa scolarité : ce n'est ni une fatalité ni une « histoire d'enfants ».",
+        "Quand la situation est dite à un adulte, elle peut s'arrêter : la parole est le premier geste de protection.",
+        "Se taire n'est pas être neutre : sans témoins qui parlent, la situation dure."
+      ],
+      "pedagogy": {
+        "ages": [
+          9,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Comprendre que le silence protège l'agresseur et qu'en parler est la première étape pour agir",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      }
+    },
+    {
+      "id": "spectateur",
+      "nom": "Les spectateurs",
+      "latin": "Effet spectateur · Darley & Latané, 1968",
+      "emoji": "👀",
+      "couleur": "#2e6fb3",
+      "categorie": "diurne",
+      "taille": "Réflexe : un témoin qui agit change tout",
+      "img": "",
+      "anecdotes": [
+        "En 1968, deux psychologues ont montré que plus il y a de témoins devant un problème, plus chacun attend que « quelqu'un » agisse.",
+        "La plupart des élèves témoins se sentent mal : ils ne sont pas d'accord, mais n'osent pas bouger.",
+        "Un seul mot d'un témoin (« viens avec nous », « arrêtez », aller prévenir un adulte) peut faire basculer la situation."
+      ],
+      "pedagogy": {
+        "ages": [
+          9,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Découvrir l'effet spectateur et oser réagir plutôt que d'attendre que quelqu'un d'autre agisse",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      }
+    },
+    {
+      "id": "repetition",
+      "nom": "La répétition",
+      "latin": "Repetitio · critère clé de définition",
+      "emoji": "🔁",
+      "couleur": "#c2452e",
+      "categorie": "nocturne",
+      "taille": "Repère : répété + domination = harcèlement",
+      "img": "",
+      "anecdotes": [
+        "Une dispute entre amis, même violente, n'est pas du harcèlement : le harcèlement se répète et installe la peur.",
+        "Les critères officiels : des actes répétés, une intention de nuire, un rapport de force déséquilibré.",
+        "Chaque nouvelle moquerie blesse autant que la première : la répétition empêche de se reconstruire."
+      ],
+      "pedagogy": {
+        "ages": [
+          9,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Distinguer une dispute ponctuelle du harcèlement (violences répétées et rapport de force déséquilibré)",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      }
+    },
+    {
+      "id": "cyber",
+      "nom": "Le cyberharcèlement",
+      "latin": "Cyberbullying · Tokunaga, 2010",
+      "emoji": "📱",
+      "couleur": "#7a3b8f",
+      "categorie": "nocturne",
+      "taille": "Réflexe : capturer, bloquer, signaler (3018)",
+      "img": "",
+      "anecdotes": [
+        "Sur un écran, la moquerie suit la victime jusque chez elle : le harcèlement n'a plus d'horaires.",
+        "Rien ne disparaît vraiment en ligne : faire une capture d'écran avant de bloquer aide à prouver.",
+        "Le 3018 est le numéro national gratuit contre les violences numériques : appel ou tchat, confidentiel."
+      ],
+      "pedagogy": {
+        "ages": [
+          9,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Appliquer les bons réflexes face à des contenus humiliants en ligne : capture, blocage, signalement",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      }
+    },
+    {
+      "id": "difference",
+      "nom": "Le prétexte de la différence",
+      "latin": "Stigmate · Goffman, 1963",
+      "emoji": "🏷️",
+      "couleur": "#d97b1f",
+      "categorie": "diurne",
+      "taille": "Repère : le problème n'est pas la différence",
+      "img": "",
+      "anecdotes": [
+        "N'importe quelle caractéristique peut servir de prétexte : lunettes, accent, taille, vêtements, résultats…",
+        "Le sociologue Goffman appelait « stigmate » l'attribut que le groupe choisit pour rabaisser quelqu'un.",
+        "Personne ne « demande » jamais d'être ciblé : c'est l'agresseur qui choisit d'agresser, jamais la différence qui provoque."
+      ],
+      "pedagogy": {
+        "ages": [
+          9,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Refuser l'idée que la victime serait « responsable » de ce qu'elle subit à cause d'une différence",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      }
+    },
+    {
+      "id": "defenseur",
+      "nom": "Les défenseurs",
+      "latin": "Défenseur · Salmivalli, 1996",
+      "emoji": "🛡️",
+      "couleur": "#0f9b8e",
+      "categorie": "diurne",
+      "taille": "Réflexe : soutenir, alerter, ne pas relayer",
+      "img": "",
+      "anecdotes": [
+        "La psychologue Salmivalli a montré que le harcèlement est un phénomène de groupe : harceleurs, témoins, défenseurs… chacun a un rôle.",
+        "Il y a presque toujours plus de témoins que de harceleurs : leur attitude décide si la situation continue ou s'arrête.",
+        "Être défenseur ne veut pas dire se battre : soutenir la personne, partir chercher un adulte, refuser de relayer."
+      ],
+      "pedagogy": {
+        "ages": [
+          9,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Identifier le rôle décisif des défenseurs et s'entraîner à occuper ce rôle sans s'exposer",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      }
+    }
+  ],
+  "media": [],
+  "rewards": [],
+  "debriefing": {
+    "participantQuestions": [],
+    "facilitatorReport": [],
+    "skillsObserved": []
+  }
+}

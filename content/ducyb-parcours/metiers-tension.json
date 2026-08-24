@@ -1,0 +1,1059 @@
+{
+  "$format": "ducyb-parcours",
+  "$version": 1,
+  "id": "metiers-tension",
+  "title": "Métiers en tension",
+  "metadata": {
+    "author": "",
+    "organization": "",
+    "language": "fr",
+    "license": "",
+    "createdAt": "2026-08-24",
+    "updatedAt": "2026-08-24",
+    "source": {
+      "format": "jdpbc-pack",
+      "version": 1
+    }
+  },
+  "description": "Huit découvertes de familles de métiers où les entreprises recrutent fortement (bâtiment, soin, alimentation, transport, réparation, agriculture, industrie), quatre notions pour comprendre l'orientation et huit balises enquêtes. Conçu pour le cycle 4 et la 3e.",
+  "theme": "orientation et découvertes des métiers",
+  "audience": {
+    "minAge": 10,
+    "maxAge": 15
+  },
+  "duration": null,
+  "pedagogy": {
+    "objectives": [
+      "Expliquer ce que « métier en tension » signifie pour un projet d'orientation",
+      "Connaître le principe de l'apprentissage et l'âge où l'on peut commencer",
+      "Préparer activement sa séquence d'observation de 3e",
+      "Identifier les qualités professionnelles attendues et comment les montrer dès le collège",
+      "Découvrir des métiers du bâtiment très recherchés et leurs voies d'accès courtes",
+      "Identifier les métiers du soin en pénurie et la durée réelle de leurs formations",
+      "Comprendre pourquoi l'aide à domicile recrute autant et ce que fait concrètement le métier",
+      "Repérer les métiers de bouche recherchés et le rôle central de l'apprentissage",
+      "Découvrir pourquoi transport et logistique manquent de bras et comment on y entre",
+      "Montrer que la réparation manque de techniciens et que l'électronique a transformé le métier",
+      "Faire connaître les métiers agricoles en pénurie de repreneurs et leur modernité",
+      "Découvrir les métiers techniques de l'industrie qui recrutent malgré les idées reçues"
+    ],
+    "skills": [],
+    "competencies": [
+      {
+        "id": "tension-definition",
+        "nom": "« Métier en tension » ?",
+        "description": "Chaque année, l'État publie la liste des métiers où les entreprises peinent à recruter : moins de candidats que d'offres. Bâtiment, soin, alimentation, transport, agriculture y figurent souvent. Être « en tension » veut dire une chose simple : celui ou celle qui se forme a le choix.",
+        "emoji": "📊",
+        "objectif": "Expliquer ce que « métier en tension » signifie pour un projet d'orientation",
+        "ages": [
+          10,
+          15
+        ],
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ],
+        "anecdotes": [
+          "Tension ne veut pas dire métier impossible : au contraire, plusieurs offres pour un seul candidat.",
+          "La liste change avec l'économie : elle est publique et consultable sur le site de France Travail."
+        ]
+      },
+      {
+        "id": "apprentissage",
+        "nom": "L'apprentissage",
+        "description": "Signer un contrat avec un employeur : on suit des cours ET on est payé en entreprise. Possible dès 15 ans (et même 14 ans en prépa-apprentissage). CAP en 1 ou 2 ans, bac pro en 3 ans… et cela continue jusqu'aux études supérieures.",
+        "emoji": "🎓",
+        "objectif": "Connaître le principe de l'apprentissage et l'âge où l'on peut commencer",
+        "ages": [
+          10,
+          15
+        ],
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ],
+        "anecdotes": [
+          "Le maître d'apprentissage est un mentor qui transmet le métier pour de vrai, geste par geste.",
+          "Beaucoup de contrats débouchent directement sur un emploi durable à la fin."
+        ]
+      },
+      {
+        "id": "stage-3e",
+        "nom": "La séquence d'observation",
+        "description": "En classe de 3e, une semaine pour observer un métier de l'intérieur : atelier, garage, ferme, hôpital, mairie… On choisit, on téléphone, on écrit. C'est le meilleur test grandeur nature avant un choix d'orientation — et les métiers en tension accueillent volontiers.",
+        "emoji": "🧭",
+        "objectif": "Préparer activement sa séquence d'observation de 3e",
+        "ages": [
+          10,
+          15
+        ],
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ],
+        "anecdotes": [
+          "Un appel poli ou un passage sur place fonctionne mieux qu'un courriel impersonnel.",
+          "Observer les gestes d'un professionnel pendant une journée vaut dix pages de documentation."
+        ]
+      },
+      {
+        "id": "soft-skills",
+        "nom": "Les qualités qui comptent",
+        "description": "Ponctualité, soin du travail, esprit d'équipe, respect des règles de sécurité : ce que les employeurs regardent avant même le diplôme. Et cela se montre dès le stage ou l'apprentissage : arriver à l'heure, poser des questions, ranger son poste.",
+        "emoji": "🛠️",
+        "objectif": "Identifier les qualités professionnelles attendues et comment les montrer dès le collège",
+        "ages": [
+          10,
+          15
+        ],
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ],
+        "anecdotes": [
+          "Poser une question quand on ne sait pas est une qualité professionnelle, pas une faiblesse.",
+          "Un apprenti recommandé par son maître de stage trouve presque toujours la suite de son parcours."
+        ]
+      }
+    ],
+    "evaluation": []
+  },
+  "game": {
+    "mode": "courses",
+    "scoring": {
+      "starsPerStation": 3,
+      "timeBonus": true
+    },
+    "rules": {
+      "order": "libre"
+    }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": null,
+    "trail": []
+  },
+  "stations": [
+    {
+      "id": "MT1",
+      "label": "La grue du chantier",
+      "code": "JDP-MT1",
+      "discoveryId": "btp",
+      "x": 110,
+      "y": 430,
+      "lat": 50.7258178,
+      "lng": 3.1329639,
+      "radius": null,
+      "missions": [
+        "MT1-enigme"
+      ]
+    },
+    {
+      "id": "MT2",
+      "label": "La blouse blanche",
+      "code": "JDP-MT2",
+      "discoveryId": "sante",
+      "x": 176,
+      "y": 372,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT2-enigme"
+      ]
+    },
+    {
+      "id": "MT3",
+      "label": "La clé du voisin",
+      "code": "JDP-MT3",
+      "discoveryId": "aide-a-domicile",
+      "x": 240,
+      "y": 330,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT3-enigme"
+      ]
+    },
+    {
+      "id": "MT4",
+      "label": "La fournaise gourmande",
+      "code": "JDP-MT4",
+      "discoveryId": "restauration",
+      "x": 300,
+      "y": 306,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT4-enigme"
+      ]
+    },
+    {
+      "id": "MT5",
+      "label": "L'autoroute du fret",
+      "code": "JDP-MT5",
+      "discoveryId": "transport",
+      "x": 352,
+      "y": 344,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT5-enigme"
+      ]
+    },
+    {
+      "id": "MT6",
+      "label": "Le pont élévateur",
+      "code": "JDP-MT6",
+      "discoveryId": "mecanique",
+      "x": 384,
+      "y": 402,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT6-enigme"
+      ]
+    },
+    {
+      "id": "MT7",
+      "label": "La moisson dorée",
+      "code": "JDP-MT7",
+      "discoveryId": "agriculture",
+      "x": 392,
+      "y": 470,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT7-enigme"
+      ]
+    },
+    {
+      "id": "MT8",
+      "label": "La salle des machines",
+      "code": "JDP-MT8",
+      "discoveryId": "numerique-industrie",
+      "x": 340,
+      "y": 520,
+      "lat": 48.8566,
+      "lng": 2.3526,
+      "radius": null,
+      "missions": [
+        "MT8-enigme"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "MT1-enigme",
+      "type": "enigme",
+      "stationId": "MT1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je monte haut dans le ciel des chantiers et je soulève tout. Qui suis-je ?",
+          "answers": [
+            "grue",
+            "la grue"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Elle tourne au sommet des tours.",
+          "knowMore": "Les soudeurs et couvreurs font partie des profils les plus cherchés."
+        },
+        "moyen": {
+          "text": "Je suis une famille de métiers où l'on bâtit : maçon, plombier, soudeur… Qui suis-je ?",
+          "answers": [
+            "btp",
+            "batiment",
+            "le bâtiment"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "Trois lettres, tout un secteur.",
+          "knowMore": "Un CAP en 2 ans suffit pour entrer sur un chantier."
+        },
+        "difficile": {
+          "text": "Plombier-chauffagiste, couvreur, soudeur : nous sommes des métiers dits « en » quoi ?",
+          "answers": [
+            "tension",
+            "en tension"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Comme une corde qu'on tire trop fort.",
+          "knowMore": "Les chantiers ne se délocalisent pas : ils sont près de chez toi."
+        }
+      }
+    },
+    {
+      "id": "MT2-enigme",
+      "type": "enigme",
+      "stationId": "MT2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je prends ta température et je veille sur toi à l'hôpital. Qui suis-je ?",
+          "answers": [
+            "aide-soignant",
+            "infirmiere",
+            "soignant",
+            "l'infirmière"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Quelqu'un qui porte une blouse.",
+          "knowMore": "La formation d'aide-soignant dure environ un an."
+        },
+        "moyen": {
+          "text": "Nous soignons à l'hôpital, en maison de retraite et à domicile : nous manquons partout. Qui sommes-nous ?",
+          "answers": [
+            "soignants",
+            "les soignants",
+            "infirmiers"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "Ceux qui prennent soin.",
+          "knowMore": "Soigner, c'est aussi écouter : la relation compte autant que le geste."
+        },
+        "difficile": {
+          "text": "Diplôme d'État en poche après environ un an, j'accompagne au quotidien personnes âgées et malades. Qui suis-je ?",
+          "answers": [
+            "aide-soignant",
+            "aide-soignante"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Deux mots : l'aide et le soin.",
+          "knowMore": "Hôpitaux et EHPAD recrutent en continu depuis des années."
+        }
+      }
+    },
+    {
+      "id": "MT3-enigme",
+      "type": "enigme",
+      "stationId": "MT3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "J'entre chez les gens pour apporter des repas et un peu de soleil. Qui suis-je ?",
+          "answers": [
+            "aide a domicile",
+            "aide à domicile",
+            "aide-a-domicile"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Le métier se passe chez les autres.",
+          "knowMore": "C'est l'un des secteurs qui embauchent le plus en France."
+        },
+        "moyen": {
+          "text": "Courses, repas, compagnie : je permets aux personnes âgées de rester chez elles. Quel est mon métier ?",
+          "answers": [
+            "aide a domicile",
+            "aide à domicile"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "Le contraire de la maison de retraite.",
+          "knowMore": "Le diplôme d'État s'obtient en un an, souvent financé par l'employeur."
+        },
+        "difficile": {
+          "text": "Je suis un besoin de société croissant : rester chez soi en vieillissant. Ce souhait porte le nom de…",
+          "answers": [
+            "maintien a domicile",
+            "maintien à domicile"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "On « maintient » la personne dans son lieu de vie.",
+          "knowMore": "Aucun bac nécessaire pour démarrer dans ce métier de lien."
+        }
+      }
+    },
+    {
+      "id": "MT4-enigme",
+      "type": "enigme",
+      "stationId": "MT4",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je me lève avant le soleil pour que le pain soit chaud à votre réveil. Qui suis-je ?",
+          "answers": [
+            "boulanger",
+            "le boulanger"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Il travaille près du four.",
+          "knowMore": "Le CAP boulanger se prépare en apprentissage."
+        },
+        "moyen": {
+          "text": "Cuisinier, boulanger, boucher : notre famille donne du goût au monde mais manque de mains. Qui sommes-nous ?",
+          "answers": [
+            "restauration",
+            "metiers de bouche",
+            "métiers de bouche"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "On dit de nous que nous sommes « de bouche ».",
+          "knowMore": "Cuisiner peut mener jusqu'aux paquebots et palaces."
+        },
+        "difficile": {
+          "text": "Je suis la voie de formation où l'on apprend la cuisine payé en restaurant. Comment s'appelle-t-elle ?",
+          "answers": [
+            "apprentissage",
+            "l'apprentissage"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Contrat avec employeur + centre de formation.",
+          "knowMore": "Possible dès 15 ans (14 en prépa-apprentissage)."
+        }
+      }
+    },
+    {
+      "id": "MT5-enigme",
+      "type": "enigme",
+      "stationId": "MT5",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Sans moi, aucune console ni chaussure n'arrive en magasin. Je roule jour et nuit. Qui suis-je ?",
+          "answers": [
+            "camion",
+            "le camion",
+            "conducteur routier"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Il traverse les autoroutes.",
+          "knowMore": "Conducteurs routiers et caristes manquent partout en France."
+        },
+        "moyen": {
+          "text": "Entrepôts, palettes, transpalettes : je fais circuler les marchandises du port à ta porte. Quel secteur suis-je ?",
+          "answers": [
+            "logistique",
+            "transport",
+            "transport et logistique"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "On y pilote des flux.",
+          "knowMore": "La logistique moderne utilise radios et robots."
+        },
+        "difficile": {
+          "text": "Permis spécial, carte conducteur, FIMO ou FCO : ces titres ouvrent la route aux…",
+          "answers": [
+            "conducteurs routiers",
+            "routiers"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Ils dorment parfois loin de chez eux.",
+          "knowMore": "Quelques mois de formation suffisent après l'âge requis."
+        }
+      }
+    },
+    {
+      "id": "MT6-enigme",
+      "type": "enigme",
+      "stationId": "MT6",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je soulève les voitures pour réparer ce qui grince dessous. Qui suis-je ?",
+          "answers": [
+            "pont eleveateur",
+            "pont élévateur"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Il monte, la voiture grimpe dessus.",
+          "knowMore": "Il manque de mécaniciens formés pour tout réparer."
+        },
+        "moyen": {
+          "text": "Moteurs, freins, carrosseries : je redonne vie aux véhicules. Quelle famille de métiers suis-je ?",
+          "answers": [
+            "mecanique",
+            "mécanique",
+            "reparation",
+            "réparation"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "Chez le garagiste.",
+          "knowMore": "CAP maintenance en 2 ans, souvent en apprentissage."
+        },
+        "difficile": {
+          "text": "Batteries, capteurs, logiciels : la voiture électrique exige des mécaniciens à l'aise avec…",
+          "answers": [
+            "electronique",
+            "l'électronique"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Ce n'est plus seulement la clef à molette.",
+          "knowMore": "Les ateliers cherchent des profils doublement compétents."
+        }
+      }
+    },
+    {
+      "id": "MT7-enigme",
+      "type": "enigme",
+      "stationId": "MT7",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je pousse sous le soleil et je nourris tout le village. Qui suis-je ?",
+          "answers": [
+            "ble",
+            "blé",
+            "moisson",
+            "la moisson"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Dorée à la fin de l'été.",
+          "knowMore": "Beaucoup d'exploitations cherchent un repreneur."
+        },
+        "moyen": {
+          "text": "Tracteurs GPS, serres connectées, agroécologie : mon métier n'a plus rien d'archaïque. Qui suis-je ?",
+          "answers": [
+            "agriculteur",
+            "agricultrice",
+            "agriculture"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "Il nourrit la population.",
+          "knowMore": "CAPa et bac pro agricoles mènent à l'installation."
+        },
+        "difficile": {
+          "text": "Sans repreneur, des exploitations disparaissent : on appelle cette personne tant attendue le ou la…",
+          "answers": [
+            "repreneur",
+            "repreneuse"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Celui ou celle qui prend la suite.",
+          "knowMore": "Des aides publiques existent pour s'installer jeune."
+        }
+      }
+    },
+    {
+      "id": "MT8-enigme",
+      "type": "enigme",
+      "stationId": "MT8",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Quand je m'arrête, toute l'usine attend : on m'appelle à la moindre étincelle. Qui suis-je ?",
+          "answers": [
+            "robot",
+            "le robot",
+            "machine"
+          ],
+          "ages": [
+            11,
+            12
+          ],
+          "hint": "Il travaille sur la ligne de production.",
+          "knowMore": "Le technicien de maintenance est son médecin attitré."
+        },
+        "moyen": {
+          "text": "Robots, froid industriel, lignes automatisées : je répare pour que tout tourne. Quel métier suis-je ?",
+          "answers": [
+            "technicien de maintenance",
+            "maintenance"
+          ],
+          "ages": [
+            13,
+            14
+          ],
+          "hint": "Deux mots : technique et entretien.",
+          "knowMore": "Bac pro ou BTS mènent vite à un emploi stable."
+        },
+        "difficile": {
+          "text": "Je maîtrise froid et climatisation : mon savoir-faire est si rare que je ne chôme jamais. Qui suis-je ?",
+          "answers": [
+            "frigoriste",
+            "le frigoriste"
+          ],
+          "ages": [
+            15,
+            17
+          ],
+          "hint": "Du latin « frigus », le froid.",
+          "knowMore": "Sa liste d'attente de clients ne se vide jamais."
+        }
+      }
+    },
+    {
+      "id": "btp-quiz",
+      "type": "quiz",
+      "characterId": "btp",
+      "questions": [
+        {
+          "q": "Une voie rapide pour devenir plombier ou soudeur, c'est…",
+          "options": [
+            "Le CAP en apprentissage",
+            "Dix ans d'université",
+            "Attendre une offre miracle"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Les chantiers de bâtiment se trouvent…",
+          "options": [
+            "Près de chez toi, partout en France",
+            "Seulement à Paris",
+            "Seulement à l'étranger"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "sante-quiz",
+      "type": "quiz",
+      "characterId": "sante",
+      "questions": [
+        {
+          "q": "La formation d'aide-soignant dure environ…",
+          "options": [
+            "Un an après la 3e",
+            "Trois jours",
+            "Dix ans"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "On a besoin de soignants…",
+          "options": [
+            "À l'hôpital comme à domicile",
+            "Seulement la nuit",
+            "Seulement dans les grandes villes"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "aide-a-domicile-quiz",
+      "type": "quiz",
+      "characterId": "aide-a-domicile",
+      "questions": [
+        {
+          "q": "L'aide à domicile consiste surtout à…",
+          "options": [
+            "Venir en aide aux personnes chez elles",
+            "Nettoyer des bureaux vides",
+            "Vendre des services en ligne"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Ce secteur recrute massivement parce que la population…",
+          "options": [
+            "Vieillit et veut rester chez elle",
+            "Diminue",
+            "Voyage davantage"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "restauration-quiz",
+      "type": "quiz",
+      "characterId": "restauration",
+      "questions": [
+        {
+          "q": "Le métier de boulanger s'apprend surtout…",
+          "options": [
+            "En apprentissage derrière le fournil",
+            "En regardant des vidéos",
+            "Par hasard"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Avec un CAP de cuisine, tu peux travailler…",
+          "options": [
+            "Au restaurant, à la cantine, à l'hôpital…",
+            "Seulement dans un restaurant étoilé",
+            "Seulement chez toi"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "transport-quiz",
+      "type": "quiz",
+      "characterId": "transport",
+      "questions": [
+        {
+          "q": "Pour conduire un camion, il faut…",
+          "options": [
+            "Un permis spécial et une formation courte",
+            "Juste le permis voiture",
+            "Rien de spécial"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "La logistique, c'est tout ce qui permet…",
+          "options": [
+            "Que les marchandises arrivent au bon endroit",
+            "De travailler sans collègues",
+            "D'éviter les colis"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "mecanique-quiz",
+      "type": "quiz",
+      "characterId": "mecanique",
+      "questions": [
+        {
+          "q": "Les véhicules actuels demandent des mécaniciens…",
+          "options": [
+            "À l'aise avec l'électronique",
+            "Qui refusent les ordinateurs",
+            "Sans outils"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Une voie d'entrée classique en mécanique est…",
+          "options": [
+            "Un CAP en apprentissage chez un garage",
+            "Une loterie",
+            "Attendre d'être majeur"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "agriculture-quiz",
+      "type": "quiz",
+      "characterId": "agriculture",
+      "questions": [
+        {
+          "q": "Beaucoup de fermes cherchent quelqu'un pour…",
+          "options": [
+            "Prendre la relève",
+            "Fermer définitivement",
+            "Tout importer de loin"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "L'agriculture moderne utilise…",
+          "options": [
+            "GPS, capteurs et serres connectées",
+            "Seulement des chevaux",
+            "Aucune technologie"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "numerique-industrie-quiz",
+      "type": "quiz",
+      "characterId": "numerique-industrie",
+      "questions": [
+        {
+          "q": "Quand un robot d'usine tombe en panne, on appelle…",
+          "options": [
+            "Un technicien de maintenance",
+            "Un magicien",
+            "Un avocat"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Le frigoriste travaille sur…",
+          "options": [
+            "Le froid et la climatisation",
+            "Les congés payés",
+            "Uniquement les frigos de cinéma"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "btp",
+      "nom": "Le bâtiment",
+      "latin": "Soudeur · maçon · plombier",
+      "emoji": "🏗️",
+      "couleur": "#d97b1f",
+      "categorie": "diurne",
+      "taille": "Piste : un CAP en 2 ans et les chantiers t'attendent",
+      "img": "",
+      "anecdotes": [
+        "Soudeurs, couvreurs, plombiers-chauffagistes figurent chaque année parmi les métiers où les recruteurs cherchent le plus de bras.",
+        "Un CAP se prépare en 2 ans, souvent en apprentissage : on touche déjà un salaire.",
+        "On construit partout en France : les chantiers ne se délocalisent pas."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Découvrir des métiers du bâtiment très recherchés et leurs voies d'accès courtes",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "sante",
+      "nom": "Le soin",
+      "latin": "Infirmier · aide-soignant",
+      "emoji": "💉",
+      "couleur": "#0f9b8e",
+      "categorie": "nocturne",
+      "taille": "Piste : soigner, un métier de mains et de cœur",
+      "img": "",
+      "anecdotes": [
+        "Infirmières et aides-soignants sont recherchés partout : hôpitaux, maisons de retraite, soins à domicile.",
+        "La formation d'aide-soignant dure environ un an après la 3e et débouche sur un diplôme d'État.",
+        "Soigner, c'est de la technique ET beaucoup de relation humaine : aucun moment ne ressemble au précédent."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Identifier les métiers du soin en pénurie et la durée réelle de leurs formations",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "aide-a-domicile",
+      "nom": "L'aide à domicile",
+      "latin": "Aide à domicile · assistant·e maternel·le",
+      "emoji": "🏠",
+      "couleur": "#2e6fb3",
+      "categorie": "diurne",
+      "taille": "Piste : un secteur qui recrute sans arrêt",
+      "img": "",
+      "anecdotes": [
+        "Aider les personnes âgées ou en situation de handicap chez elles : l'un des secteurs qui embauchent le plus en France.",
+        "Repas, soins légers, compagnie, courses : c'est un métier de lien social autant que de geste technique.",
+        "Pas besoin du bac pour démarrer : un diplôme d'État s'obtient en un an, souvent financé par l'employeur."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Comprendre pourquoi l'aide à domicile recrute autant et ce que fait concrètement le métier",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "restauration",
+      "nom": "Restauration & alimentation",
+      "latin": "Cuisinier · boulanger · boucher",
+      "emoji": "🍽️",
+      "couleur": "#c2452e",
+      "categorie": "diurne",
+      "taille": "Piste : des métiers qui se goûtent jeune",
+      "img": "",
+      "anecdotes": [
+        "Cuisiniers, boulangers, bouchers, pâtissiers : des métiers en tension car il faut former vite face aux départs.",
+        "Le CAP boulanger se prépare en apprentissage, lever tôt compris — mais pain chaud à la clé !",
+        "Cuisiner peut faire voyager : hôtels, cantines, restaurants étoilés, paquebots."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Repérer les métiers de bouche recherchés et le rôle central de l'apprentissage",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "transport",
+      "nom": "Transport & logistique",
+      "latin": "Conducteur routier · cariste",
+      "emoji": "🚚",
+      "couleur": "#444a6b",
+      "categorie": "nocturne",
+      "taille": "Piste : quelques mois de formation et la route est à toi",
+      "img": "",
+      "anecdotes": [
+        "Sans camions ni entrepôts, rien n'arrive en magasin : conducteurs routiers et caristes manquent partout.",
+        "Permis poids lourd et carte conducteur se préparent en quelques mois après l'âge requis.",
+        "La logistique moderne, c'est aussi piloter des flux, des radios d'entrepôt et des robots."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Découvrir pourquoi transport et logistique manquent de bras et comment on y entre",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "mecanique",
+      "nom": "Mécanique & réparation",
+      "latin": "Mécanicien · carrossier",
+      "emoji": "🔧",
+      "couleur": "#5a4fcf",
+      "categorie": "diurne",
+      "taille": "Piste : réparer, un savoir qui ne vieillit pas",
+      "img": "",
+      "anecdotes": [
+        "Voitures, motos, tracteurs : trop peu de mécaniciens formés pour tout réparer.",
+        "Le CAP de maintenance se prépare en 2 ans, souvent en apprentissage chez un garagiste.",
+        "Véhicules électriques et connectés : les ateliers cherchent des profils à l'aise avec l'électronique."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Montrer que la réparation manque de techniciens et que l'électronique a transformé le métier",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "agriculture",
+      "nom": "L'agriculture",
+      "latin": "Agriculteur · maraîcher · viticulteur",
+      "emoji": "🌾",
+      "couleur": "#7a3b8f",
+      "categorie": "diurne",
+      "taille": "Piste : des fermes entières cherchent une relève",
+      "img": "",
+      "anecdotes": [
+        "Producteurs de légumes, éleveurs, viticulteurs : beaucoup partent à la retraite sans trouver de repreneur.",
+        "Tracteurs avec GPS, serres connectées, agroécologie : l'agriculture est high-tech.",
+        "CAPa ou bac pro agricole, puis installation possible avec des aides à la reprise."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Faire connaître les métiers agricoles en pénurie de repreneurs et leur modernité",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    },
+    {
+      "id": "numerique-industrie",
+      "nom": "Industrie & maintenance",
+      "latin": "Technicien de maintenance · frigoriste",
+      "emoji": "💻",
+      "couleur": "#0c6e8f",
+      "categorie": "nocturne",
+      "taille": "Piste : des formations courtes vers des métiers solides",
+      "img": "",
+      "anecdotes": [
+        "Usines automatisées : il faut des techniciens de maintenance pour garder robots et lignes en marche.",
+        "Les frigoristes (froid et climatisation) sont si recherchés que leur savoir-faire ne chôme jamais.",
+        "Bac pro, CAP ou BTS : des parcours courts mènent à des emplois stables et bien payés."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          15
+        ],
+        "dureeMin": 8,
+        "objectif": "Découvrir les métiers techniques de l'industrie qui recrutent malgré les idées reçues",
+        "programme": [
+          "cycle 4",
+          "orientation 3e"
+        ]
+      }
+    }
+  ],
+  "media": [],
+  "rewards": [],
+  "debriefing": {
+    "participantQuestions": [],
+    "facilitatorReport": [],
+    "skillsObserved": []
+  }
+}

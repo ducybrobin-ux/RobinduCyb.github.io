@@ -3,6 +3,17 @@
 Historique DUCYB (moteur universel) puis héritage Multi JDP.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — versionnement sémantique.
 
+## [DUCYB 0.2.0] — 2026-08-24
+
+### Ajouté
+- **`packages/content-schema`** (zéro dépendance) : règles de validation du contenu historique extraites de `tools/build-data.mjs` (source de vérité unique), convertisseur déterministe vers `ducyb-parcours` v1 avec vérification de couverture, validateur structurel du format universel
+- CLI `tools/convert-packs.mjs` : conversion des 4 packs → `content/ducyb-parcours/*.json`, mode `--check`
+- Étape CI « Conversion ducyb-parcours à jour »
+
+### Modifié
+- `tools/build-data.mjs` consomme `@ducyb/content-schema` (−138 lignes, sortie byte-identique vérifiée)
+- docs/DATA_MODEL.md : table de correspondance réelle du convertisseur
+
 ## [DUCYB 0.1.0] — 2026-08-24
 
 ### Ajouté
