@@ -1,0 +1,14 @@
+# Node / build
+node_modules/
+dist/
+*.log
+
+# Données locales sensibles ou volatiles
+data/validations.json
+data/finishes.json
+data/admin-data.json
+*.local.json
+
+# OS
+Thumbs.db
+.DS_Store
