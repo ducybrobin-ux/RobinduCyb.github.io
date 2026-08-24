@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Des peines de prison existent pour le harcèlement, aggravées quand la victime est mineure.",
+    "Les délégués ambassadeurs pHARe sont des élèves formés : on peut leur parler."
+  ],
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Connaître l'essentiel du cadre légal et du programme pHARe",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "loi",
+  "nom": "La loi te protège",
+  "latin": "Lex · loi du 2 mars 2022",
+  "emoji": "⚖️",
+  "couleur": "#0f9b8e",
+  "taille": "Repère : harceler est un délit",
+  "description": "Le harcèlement scolaire est un délit puni par la loi, y compris en ligne. Depuis la loi du 2 mars 2022, les écoles et collèges déploient le programme pHARe : sensibilisation, élèves ambassadeurs, équipe dédiée."
+}

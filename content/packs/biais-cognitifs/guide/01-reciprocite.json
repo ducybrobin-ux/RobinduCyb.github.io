@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "reciprocite",
+  "nom": "Biais de réciprocité",
+  "latin": "Reciprocity norm · Cialdini",
+  "emoji": "🤝",
+  "couleur": "#b05f2a",
+  "categorie": "diurne",
+  "taille": "Antidote : accepter sans se sentir redevable",
+  "img": "",
+  "description": "Recevoir un petit cadeau crée une dette invisible : on dit alors oui à de grosses demandes.",
+  "anecdotes": [
+    "C'est la technique du « échantillon gratuit ».",
+    "Offrir d'abord, demander ensuite : ça marche trop bien."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Reconnaître la dette invisible créée par un cadeau et choisir librement",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

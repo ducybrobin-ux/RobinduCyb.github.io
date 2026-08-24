@@ -1,0 +1,55 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "HS3",
+  "bird": "repetition",
+  "code": "JDP-HS3",
+  "label": "L'écho qui revient",
+  "x": 238,
+  "y": 292,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Une fois, ça passe ; mille fois, ça blesse : je transforme une moquerie en peur permanente. Qui suis-je ?",
+      "reponses": [
+        "repetition",
+        "répétition",
+        "la repetition"
+      ],
+      "indice": "Ce qui revient encore et encore.",
+      "saviez": "Une dispute ponctuelle n'est pas du harcèlement.",
+      "ages": [
+        9,
+        11
+      ]
+    },
+    "moyen": {
+      "text": "Pour qualifier le harcèlement, je dois être présente : les actes se reproduisent et la peur s'installe. Qui suis-je ?",
+      "reponses": [
+        "la repetition",
+        "repetition"
+      ],
+      "indice": "Critère officiel avec l'intention de nuire et l'asymétrie.",
+      "saviez": "Les trois critères : répétition, intention de nuire, rapport de force déséquilibré.",
+      "ages": [
+        12,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Juridiquement, je fais passer une insulte isolée au statut de harcèlement : actes renouvelés et domination. De quel critère parle-t-on ?",
+      "reponses": [
+        "repetition",
+        "la repetition des actes"
+      ],
+      "indice": "Littéralement : faire encore.",
+      "saviez": "C'est aussi valable pour les messages en ligne republiés sans fin.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

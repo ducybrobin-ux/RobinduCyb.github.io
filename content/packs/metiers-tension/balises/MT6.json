@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT6",
+  "bird": "mecanique",
+  "code": "JDP-MT6",
+  "label": "Le pont élévateur",
+  "x": 384,
+  "y": 402,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je soulève les voitures pour réparer ce qui grince dessous. Qui suis-je ?",
+      "reponses": [
+        "pont eleveateur",
+        "pont élévateur"
+      ],
+      "indice": "Il monte, la voiture grimpe dessus.",
+      "saviez": "Il manque de mécaniciens formés pour tout réparer.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Moteurs, freins, carrosseries : je redonne vie aux véhicules. Quelle famille de métiers suis-je ?",
+      "reponses": [
+        "mecanique",
+        "mécanique",
+        "reparation",
+        "réparation"
+      ],
+      "indice": "Chez le garagiste.",
+      "saviez": "CAP maintenance en 2 ans, souvent en apprentissage.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Batteries, capteurs, logiciels : la voiture électrique exige des mécaniciens à l'aise avec…",
+      "reponses": [
+        "electronique",
+        "l'électronique"
+      ],
+      "indice": "Ce n'est plus seulement la clef à molette.",
+      "saviez": "Les ateliers cherchent des profils doublement compétents.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

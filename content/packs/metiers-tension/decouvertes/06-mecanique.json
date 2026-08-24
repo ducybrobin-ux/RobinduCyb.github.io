@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Montrer que la réparation manque de techniciens et que l'électronique a transformé le métier",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "mecanique",
+  "nom": "Mécanique & réparation",
+  "latin": "Mécanicien · carrossier",
+  "emoji": "🔧",
+  "couleur": "#5a4fcf",
+  "categorie": "diurne",
+  "taille": "Piste : réparer, un savoir qui ne vieillit pas",
+  "anecdotes": [
+    "Voitures, motos, tracteurs : trop peu de mécaniciens formés pour tout réparer.",
+    "Le CAP de maintenance se prépare en 2 ans, souvent en apprentissage chez un garagiste.",
+    "Véhicules électriques et connectés : les ateliers cherchent des profils à l'aise avec l'électronique."
+  ],
+  "quiz": [
+    {
+      "q": "Les véhicules actuels demandent des mécaniciens…",
+      "options": [
+        "À l'aise avec l'électronique",
+        "Qui refusent les ordinateurs",
+        "Sans outils"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Une voie d'entrée classique en mécanique est…",
+      "options": [
+        "Un CAP en apprentissage chez un garage",
+        "Une loterie",
+        "Attendre d'être majeur"
+      ],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B8",
+  "bird": "barnum",
+  "code": "JDP-B8",
+  "x": 148,
+  "y": 560,
+  "lat": 48.8571,
+  "lng": 2.3527,
+  "label": "La roulotte du devin",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "« Tu as besoin que les autres t'estiment, mais tu doutes de toi parfois. » Ça te ressemble ? À moi aussi ! Quel effet suis-je ?",
+      "reponses": [
+        "barnum",
+        "effet barnum",
+        "l effet barnum",
+        "forer",
+        "effet forer"
+      ],
+      "indice": "Mon nom vient du directeur de cirque P.T. Barnum : un spectacle pour tous !",
+      "saviez": "En 1949, Bertram Forer a donné le même portrait astrologique à toute sa classe : note moyenne de vérité, 4/5 !",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "Horoscopes et faux tests me servent de scène : mes phrases floues semblent faites sur mesure… pour tout le monde. Qui suis-je ?",
+      "reponses": [
+        "barnum",
+        "effet barnum",
+        "l effet barnum",
+        "forer",
+        "effet forer"
+      ],
+      "indice": "Une description vague qui convient à presque tout le monde.",
+      "saviez": "Test Barnum : si la phrase marcherait pour n'importe qui, elle ne décrit personne en particulier.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Charlatan des généralités, je peins des portraits universels que chacun prend pour son reflet. Mon second nom est celui du psychologue de 1949. Qui suis-je ?",
+      "reponses": [
+        "barnum",
+        "forer",
+        "effet barnum",
+        "effet forer"
+      ],
+      "indice": "Deux noms possibles : un cirque et un psychologue.",
+      "saviez": "L'antidote : exiger de la précision. Une vraie description personnelle comporte des détails vérifiables.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

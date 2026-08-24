@@ -1,0 +1,64 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C7",
+  "bird": "journee-dehors",
+  "code": "JDP-C7",
+  "label": "La salle sans murs",
+  "x": 193,
+  "y": 507,
+  "lat": 50.6314652,
+  "lng": 3.0558846,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Ma salle n'a ni plafond ni murs : les feuilles servent de cahier et le vent de messager. Où apprend-on ainsi ?",
+      "reponses": [
+        "dehors",
+        "en exterieur",
+        "à l'extérieur",
+        "exterieur",
+        "la nature",
+        "nature",
+        "en pleine air",
+        "plein air"
+      ],
+      "indice": "Levez les yeux : le plafond est bleu (ou gris).",
+      "saviez": "La Journée Éducation du Dehors réunit chaque année un peu plus d'une centaine de participant·es à Lille.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Forest schools au nord, classes vertes au sud : je désigne toutes les pratiques où l'on apprend hors des murs. Qui suis-je ?",
+      "reponses": [
+        "l'education du dehors",
+        "education du dehors",
+        "education dehors",
+        "l education du dehors"
+      ],
+      "indice": "Trois mots : éducation … du …",
+      "saviez": "Apprendre dehors mobilise le corps : on retient mieux quand on bouge, touche et explore.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Organisée à Lille par les CEMÉA NPDC, cette journée annuelle rassemble plus de cent professionnels de l'enfance autour du jeu et de la nature. Son nom ?",
+      "reponses": [
+        "journee education du dehors",
+        "la journee education du dehors",
+        "journee de l education du dehors",
+        "journée éducation du dehors"
+      ],
+      "indice": "Elle célèbre un lieu : le « dehors ».",
+      "saviez": "Les forest schools scandinaves inspirent directement les pratiques françaises d'éducation du dehors.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

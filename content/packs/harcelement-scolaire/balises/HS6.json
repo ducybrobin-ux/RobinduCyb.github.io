@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "HS6",
+  "bird": "defenseur",
+  "code": "JDP-HS6",
+  "label": "La ronde des alliés",
+  "x": 330,
+  "y": 556,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je marche à côté de celui qui est seul et je vais chercher un adulte : sans me battre, je protège. Qui suis-je ?",
+      "reponses": [
+        "defenseur",
+        "un defenseur",
+        "allié",
+        "allie"
+      ],
+      "indice": "Celui qui soutient la victime.",
+      "saviez": "Soutenir, alerter, ne pas relayer : trois gestes de défenseur.",
+      "ages": [
+        9,
+        11
+      ]
+    },
+    "moyen": {
+      "text": "Salmivalli m'a étudiée : dans le groupe, je suis le rôle qui fait reculer le harcèlement quand j'ose agir. Lequel ?",
+      "reponses": [
+        "defenseur",
+        "défenseur"
+      ],
+      "indice": "Contraire de « spectateur passif ».",
+      "saviez": "Il y a presque toujours plus de témoins que de harceleurs.",
+      "ages": [
+        12,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Programme national déployé depuis la loi de 2022 dans les collèges : élèves ambassadeurs, équipe ressource… Son acronyme ?",
+      "reponses": [
+        "phare",
+        "pHARe"
+      ],
+      "indice": "Comme un grand signal lumineux en mer.",
+      "saviez": "Chaque établissement a aussi un référent harcèlement.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

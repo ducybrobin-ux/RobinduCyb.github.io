@@ -1,0 +1,52 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Relier coopération pédagogique et ouverture européenne",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "id": "erasmus",
+  "nom": "Erasmus+",
+  "latin": "Mobilité européenne · accueil à Lille, 2026",
+  "emoji": "🇪🇺",
+  "couleur": "#0c6e8f",
+  "categorie": "diurne",
+  "taille": "Repère : voyager pour apprendre, accueillir pour transmettre",
+  "anecdotes": [
+    "En juin 2026, les CEMÉA Nord-Pas-de-Calais ont accueilli une délégation italienne : huit enseignantes des écoles Margherita Fasolo.",
+    "Erasmus+ finance des mobilités pour que les pratiques pédagogiques circulent entre pays.",
+    "Observer une classe d'ailleurs oblige à s'interroger sur ses propres habitudes."
+  ],
+  "quiz": [
+    {
+      "q": "Erasmus+, c'est un programme européen qui permet…",
+      "options": [
+        "De se former et d'observer ailleurs",
+        "De partir en vacances",
+        "De financer uniquement les universités"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "En 2026, les CEMÉA NPDC ont accueilli des enseignantes venues de…",
+      "options": [
+        "Italie",
+        "Portugal",
+        "Suède"
+      ],
+      "reponse": 0
+    }
+  ]
+}

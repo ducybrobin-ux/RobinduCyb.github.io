@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "nocturne",
+  "anecdotes": [
+    "Un appel poli ou un passage sur place fonctionne mieux qu'un courriel impersonnel.",
+    "Observer les gestes d'un professionnel pendant une journée vaut dix pages de documentation."
+  ],
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Préparer activement sa séquence d'observation de 3e",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "stage-3e",
+  "nom": "La séquence d'observation",
+  "latin": "Semaine découverte · classe de 3e",
+  "emoji": "🧭",
+  "couleur": "#2e6fb3",
+  "taille": "Piste : oser demander",
+  "description": "En classe de 3e, une semaine pour observer un métier de l'intérieur : atelier, garage, ferme, hôpital, mairie… On choisit, on téléphone, on écrit. C'est le meilleur test grandeur nature avant un choix d'orientation — et les métiers en tension accueillent volontiers."
+}

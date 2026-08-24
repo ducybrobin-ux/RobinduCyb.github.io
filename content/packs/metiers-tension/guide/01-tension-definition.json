@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Tension ne veut pas dire métier impossible : au contraire, plusieurs offres pour un seul candidat.",
+    "La liste change avec l'économie : elle est publique et consultable sur le site de France Travail."
+  ],
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Expliquer ce que « métier en tension » signifie pour un projet d'orientation",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "tension-definition",
+  "nom": "« Métier en tension » ?",
+  "latin": "Liste annuelle · DARES & France Travail",
+  "emoji": "📊",
+  "couleur": "#0c6e8f",
+  "taille": "Repère : pénurie = opportunités",
+  "description": "Chaque année, l'État publie la liste des métiers où les entreprises peinent à recruter : moins de candidats que d'offres. Bâtiment, soin, alimentation, transport, agriculture y figurent souvent. Être « en tension » veut dire une chose simple : celui ou celle qui se forme a le choix."
+}

@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "groupe",
+  "nom": "Pensée de groupe",
+  "latin": "Groupthink · Janis, 1972",
+  "emoji": "🐑",
+  "couleur": "#6a7a3a",
+  "categorie": "nocturne",
+  "taille": "Antidote : garder un avocat du diable",
+  "img": "",
+  "description": "Dans un groupe soudé, l'envie d'être d'accord écrase le doute : personne n'ose dire « attention ».",
+  "anecdotes": [
+    "Décisions célèbres ratées faute de contradiction.",
+    "Une voix discordante améliore la décision collective."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Protéger la parole dissidente pour garder une décision collective lucide",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

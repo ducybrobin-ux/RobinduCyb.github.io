@@ -1,0 +1,58 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C2",
+  "bird": "methode-active",
+  "code": "JDP-C2",
+  "label": "L'atelier des mains",
+  "x": 331,
+  "y": 138,
+  "lat": 50.6314952,
+  "lng": 3.0559003,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "On ne m'apprend pas en écoutant seulement : il faut me toucher, me tester, me rater puis me réussir. Comment appelle-t-on cette façon d'apprendre ?",
+      "reponses": [
+        "methode active",
+        "methodes actives",
+        "apprendre en faisant",
+        "education active"
+      ],
+      "indice": "Mes mains ! Le corps participe.",
+      "saviez": "Les CEMÉA ont été créés en 1937 précisément pour entraîner aux méthodes d'éducation ACTIVE.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Je suis l'inverse du cours magistral pur : ici on expérimente, on cherche, on prouve. Mon nom ?",
+      "reponses": [
+        "methode active",
+        "pedagogie active",
+        "l education active"
+      ],
+      "indice": "Adjectif opposé à « passif ».",
+      "saviez": "Faire soi-même multiplie la mémorisation : c'est prouvé par les recherches en sciences cognitives.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Créés en 1937 pour former les cadres des colonies et des mouvements de jeunesse, ces centres portent mon nom dans leur intitulé. Lesquels ?",
+      "reponses": [
+        "cemea",
+        "les cemea",
+        "centres d entrainement aux methodes d education active"
+      ],
+      "indice": "Quatre lettres majuscules.",
+      "saviez": "Les CEMÉA forment toujours aujourd'hui animateurs, éducateurs et enseignants, en France et à l'international.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

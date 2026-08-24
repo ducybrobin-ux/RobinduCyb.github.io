@@ -1,0 +1,23 @@
+{
+  "id": "espace",
+  "nom": "Espace",
+  "emoji": "🚀",
+  "description": "Cosmos profond, nébuleuses et constellations.",
+  "meta": "#0d1030",
+  "fond": "radial-gradient(1000px 520px at 75% -5%, rgba(129, 106, 255, 0.22), transparent 60%), radial-gradient(800px 420px at 10% 110%, rgba(64, 156, 255, 0.16), transparent 55%)",
+  "vars": {
+    "--bg": "#0a0e26",
+    "--bg-soft": "#101636",
+    "--card": "#171f47",
+    "--card-soft": "#1f2a58",
+    "--ink": "#ecf0ff",
+    "--text-muted": "#b7c1ea",
+    "--primary": "#6f8cff",
+    "--primary-dark": "#4c66d9",
+    "--gold": "#ffd76e",
+    "--err": "#ff8080",
+    "--ok": "#7ee2a8",
+    "--line": "#303c72",
+    "--shadow": "0 6px 24px rgba(0, 0, 10, 0.55)"
+  }
+}

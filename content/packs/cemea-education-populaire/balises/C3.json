@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C3",
+  "bird": "expression",
+  "code": "JDP-C3",
+  "label": "La scène ouverte",
+  "x": 393,
+  "y": 225,
+  "lat": 50.631502,
+  "lng": 3.0559154,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Écris, dessine, dis : ici ta parole vaut sans note ni sanction. Comment nomme-t-on cette liberté de s'exprimer ?",
+      "reponses": [
+        "expression libre",
+        "l expression libre",
+        "expression"
+      ],
+      "indice": "Libre comme l'oiseau — mais c'est ta voix qui s'envole.",
+      "saviez": "Le journal de classe imprimait les textes des élèves pour de vrais lecteurs : parents, correspondants, autres classes.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "On rejoue une dispute devant vous, puis on arrête tout : à vous de changer le cours de l'histoire. Quelle technique suis-je ?",
+      "reponses": [
+        "theatre forum",
+        "theatre-forum",
+        "le theatre forum"
+      ],
+      "indice": "Augusto Boal l'appelait aussi « théâtre des opprimés ».",
+      "saviez": "Le théâtre-forum est utilisé pour travailler citoyenneté, harcèlement, égalité : on répète à agir autrement.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "De Freinet à Boal, je suis le fil rouge : faire entendre celles et ceux qu'on n'écoute jamais. En deux mots ?",
+      "reponses": [
+        "expression libre",
+        "libre expression"
+      ],
+      "indice": "Deux mots : un verbe nominalisé + un adjectif.",
+      "saviez": "Prendre la parole en public figure parmi les compétences psychosociales recommandées par l'OMS.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Comprendre que le silence protège l'agresseur et qu'en parler est la première étape pour agir",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "silence",
+  "nom": "Briser le silence",
+  "latin": "Omerta · la loi du silence",
+  "emoji": "🤐",
+  "couleur": "#444a6b",
+  "categorie": "diurne",
+  "taille": "Réflexe : en parler, toujours, à quelqu'un",
+  "anecdotes": [
+    "Le harcèlement touche environ un élève sur dix au cours de sa scolarité : ce n'est ni une fatalité ni une « histoire d'enfants ».",
+    "Quand la situation est dite à un adulte, elle peut s'arrêter : la parole est le premier geste de protection.",
+    "Se taire n'est pas être neutre : sans témoins qui parlent, la situation dure."
+  ],
+  "quiz": [
+    {
+      "q": "Quand un camarade semble isolé et moqué chaque jour, la pire réaction est…",
+      "options": [
+        "Faire comme si de rien n'était",
+        "En parler à un adulte",
+        "Lui montrer qu'on est de son côté"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Parler du harcèlement que l'on subit, c'est…",
+      "options": [
+        "Un pas courageux pour que cela cesse",
+        "Se donner en spectacle",
+        "Interdit par le règlement"
+      ],
+      "reponse": 0
+    }
+  ]
+}

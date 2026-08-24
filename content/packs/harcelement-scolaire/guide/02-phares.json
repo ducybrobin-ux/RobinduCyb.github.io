@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "S'asseoir près de l'élève isolé à la cantine est déjà un acte de protection.",
+    "Alerter un adulte n'est pas « balancer » : c'est protéger deux fois (la victime… et le harceleur de lui-même)."
+  ],
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Trouver sa manière concrète d'aider sans prendre de risque inutile",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "phares",
+  "nom": "Être un phare",
+  "latin": "Allié · celui qui éclaire",
+  "emoji": "🤝",
+  "couleur": "#2e6fb3",
+  "taille": "Réflexe : soutenir sans s'exposer",
+  "description": "On peut aider sans affronter : rester aux côtés de la personne visée, ne pas rire des mêmes blagues, partir chercher un adulte, proposer de marcher avec elle. Un allié rend le groupe plus sûr."
+}

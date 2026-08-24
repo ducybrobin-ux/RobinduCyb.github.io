@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "HS2",
+  "bird": "spectateur",
+  "code": "JDP-HS2",
+  "label": "La cour des regards",
+  "x": 148,
+  "y": 400,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Nous sommes beaucoup à voir, mais peu à agir : notre regard peut aider ou laisser seul. Qui sommes-nous ?",
+      "reponses": [
+        "spectateurs",
+        "les spectateurs"
+      ],
+      "indice": "Ceux qui regardent la scène.",
+      "saviez": "Regarder autrement, c'est déjà commencer à agir.",
+      "ages": [
+        9,
+        11
+      ]
+    },
+    "moyen": {
+      "text": "Je suis celui ou celle qui voit tout, n'approuve rien, mais attend que « quelqu'un » fasse quelque chose. Qui suis-je ?",
+      "reponses": [
+        "spectateur",
+        "temoin passif",
+        "le spectateur"
+      ],
+      "indice": "Il y en a toujours plusieurs autour d'une scène.",
+      "saviez": "La majorité silencieuse peut devenir une majorité protectrice.",
+      "ages": [
+        12,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Selon Salmivalli, je suis un rôle parmi d'autres dans le groupe : ni harceleur, ni souffre-douleur, mais décisif. Lequel ?",
+      "reponses": [
+        "defenseur",
+        "défenseur",
+        "les defenseurs"
+      ],
+      "indice": "Celle ou celui qui soutient la victime.",
+      "saviez": "Les classes où les défenseurs sont actifs voient le harcèlement chuter.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

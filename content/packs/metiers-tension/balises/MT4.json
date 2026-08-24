@@ -1,0 +1,55 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT4",
+  "bird": "restauration",
+  "code": "JDP-MT4",
+  "label": "La fournaise gourmande",
+  "x": 300,
+  "y": 306,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je me lève avant le soleil pour que le pain soit chaud à votre réveil. Qui suis-je ?",
+      "reponses": [
+        "boulanger",
+        "le boulanger"
+      ],
+      "indice": "Il travaille près du four.",
+      "saviez": "Le CAP boulanger se prépare en apprentissage.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Cuisinier, boulanger, boucher : notre famille donne du goût au monde mais manque de mains. Qui sommes-nous ?",
+      "reponses": [
+        "restauration",
+        "metiers de bouche",
+        "métiers de bouche"
+      ],
+      "indice": "On dit de nous que nous sommes « de bouche ».",
+      "saviez": "Cuisiner peut mener jusqu'aux paquebots et palaces.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Je suis la voie de formation où l'on apprend la cuisine payé en restaurant. Comment s'appelle-t-elle ?",
+      "reponses": [
+        "apprentissage",
+        "l'apprentissage"
+      ],
+      "indice": "Contrat avec employeur + centre de formation.",
+      "saviez": "Possible dès 15 ans (14 en prépa-apprentissage).",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

@@ -1,12 +1,18 @@
-# Node / build
+# Données runtime du serveur (générées au premier lancement)
+data/
+admin-data.json
+
+# Binaires / journaux
+*.log
+*.exe
+cloudflared.err.log
+
+# Sorties QR locales
+qrcodes/
+
+# Node / build (DUCYB)
 node_modules/
 dist/
-*.log
-
-# Données locales sensibles ou volatiles
-data/validations.json
-data/finishes.json
-data/admin-data.json
 *.local.json
 
 # OS

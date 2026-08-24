@@ -1,0 +1,59 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C4",
+  "bird": "emancipation",
+  "code": "JDP-C4",
+  "label": "Le conseil des libres",
+  "x": 406,
+  "y": 339,
+  "lat": 50.6314986,
+  "lng": 3.0559328,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Grâce à moi, tu comprends mieux le monde et tu décides toi-même au lieu de subir. Que deviens-tu ainsi ?",
+      "reponses": [
+        "emancipe",
+        "émancipé",
+        "emancipee",
+        "plus libre",
+        "autonome"
+      ],
+      "indice": "Presque « mancipé »… mais débarrassé des chaînes de l'ignorance.",
+      "saviez": "« Émanciper » vient du droit romain : affranchir un enfant de l'autorité du père.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Lire un contrat, vérifier une info, argumenter calmement : ces savoirs-là rendent difficile à duper. Quel but poursuit l'éducation populaire à travers eux ?",
+      "reponses": [
+        "l emancipation",
+        "emancipation",
+        "rendre libre"
+      ],
+      "indice": "C'est le titre même de cette découverte.",
+      "saviez": "Condorcet proposait dès 1792 une instruction publique gratuite et égale pour toutes et tous.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Ni dressage ni remplissage : je suis le projet qui traverse de Condorcet aux CEMÉA — former des esprits libres capables de transformer leur monde. Un mot ?",
+      "reponses": [
+        "emancipation",
+        "l emancipation",
+        "emanciper"
+      ],
+      "indice": "Sept syllabes… presque une révolution.",
+      "saviez": "Pour l'éducation populaire, on n'apprend pas seulement pour l'école, mais pour agir dans la société.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

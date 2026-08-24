@@ -1,0 +1,61 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B6",
+  "bird": "halo",
+  "code": "JDP-B6",
+  "x": 388,
+  "y": 396,
+  "lat": 48.8569,
+  "lng": 2.3525,
+  "label": "Le jardin lumineux",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Une seule qualité illumine tout : « Il est sympa, donc intelligent et honnête ! » Quel effet suis-je ?",
+      "reponses": [
+        "halo",
+        "effet halo",
+        "l effet halo",
+        "effet de halo"
+      ],
+      "indice": "Mon nom est le cercle de lumière que les peintres mettent autour des saints.",
+      "saviez": "Edward Thorndike l'a observé en 1920 : une bonne note d'un officier entraînait toutes les autres.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "Une star sourit à la télé et voilà qu'on croit que son produit est génial. Sa lumière colorie tout ce qu'elle touche. Qui suis-je ?",
+      "reponses": [
+        "halo",
+        "effet halo",
+        "l effet halo",
+        "effet de halo"
+      ],
+      "indice": "La publicité exploite la renommée : c'est mon royaume.",
+      "saviez": "À l'inverse, le « horn effect » (effet corne) : un seul défaut, et tout le dossier devient sombre.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Auréole trompeuse, je fais déborder une vertu sur toutes les autres : jugez-moi en 1920 chez les officiers de Thorndike. Mon nom ?",
+      "reponses": [
+        "halo",
+        "effet halo",
+        "l effet halo",
+        "effet de halo"
+      ],
+      "indice": "Un rayon de lumière qui aveugle le jugement.",
+      "saviez": "Antidote : noter chaque critère séparément, avant de se faire une opinion globale.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

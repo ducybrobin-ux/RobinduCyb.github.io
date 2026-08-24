@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Comprendre pourquoi l'aide à domicile recrute autant et ce que fait concrètement le métier",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "aide-a-domicile",
+  "nom": "L'aide à domicile",
+  "latin": "Aide à domicile · assistant·e maternel·le",
+  "emoji": "🏠",
+  "couleur": "#2e6fb3",
+  "categorie": "diurne",
+  "taille": "Piste : un secteur qui recrute sans arrêt",
+  "anecdotes": [
+    "Aider les personnes âgées ou en situation de handicap chez elles : l'un des secteurs qui embauchent le plus en France.",
+    "Repas, soins légers, compagnie, courses : c'est un métier de lien social autant que de geste technique.",
+    "Pas besoin du bac pour démarrer : un diplôme d'État s'obtient en un an, souvent financé par l'employeur."
+  ],
+  "quiz": [
+    {
+      "q": "L'aide à domicile consiste surtout à…",
+      "options": [
+        "Venir en aide aux personnes chez elles",
+        "Nettoyer des bureaux vides",
+        "Vendre des services en ligne"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Ce secteur recrute massivement parce que la population…",
+      "options": [
+        "Vieillit et veut rester chez elle",
+        "Diminue",
+        "Voyage davantage"
+      ],
+      "reponse": 0
+    }
+  ]
+}

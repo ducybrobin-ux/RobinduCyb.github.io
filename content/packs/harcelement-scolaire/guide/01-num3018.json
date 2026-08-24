@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Ouvert 7 jours sur 7 (hors nuit profonde), il est aussi joignable par tchat et application.",
+    "Les équipes peuvent accompagner les démarches de signalement aux plateformes."
+  ],
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Mémoriser le 3018 et savoir à quoi il sert",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "num3018",
+  "nom": "Le 3018",
+  "latin": "Numéro national · violences numériques",
+  "emoji": "🆘",
+  "couleur": "#c2452e",
+  "taille": "Réflexe : 3018, gratuit et confidentiel",
+  "description": "Le 3018 est le numéro national contre les violences numériques : harcèlement sur les réseaux, menaces, images diffusées sans accord. Gratuit, confidentiel, avec accompagnement par appel ou tchat."
+}

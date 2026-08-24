@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Pour beaucoup d'enfants, la première colo reste un souvenir fondateur.",
+    "Les séjours suivent une réglementation stricte (encadrement, projet pédagogique)."
+  ],
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Relier vacances et apprentissages informels",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "colos",
+  "nom": "Vacances apprenantes",
+  "latin": "Accueil collectif de mineurs",
+  "emoji": "🏕️",
+  "couleur": "#d98e04",
+  "taille": "Idée : partir loin, grandir beaucoup",
+  "description": "Colos et séjours « vacances apprenantes » mêlent jeu, découverte et renforcement des acquis : on y pratique les méthodes actives sans même s'en rendre compte. Encadrées par des équipes formées aux pédagogies de l'engagement."
+}

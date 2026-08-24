@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Utiliser le jeu comme espace d'essai et de réflexion",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "jeu-role",
+  "nom": "Jouer pour apprendre",
+  "latin": "Mises en situation · CEMÉA",
+  "emoji": "🎭",
+  "couleur": "#7a3b8f",
+  "categorie": "nocturne",
+  "taille": "Réflexe : essayer des rôles avant de vivre les situations",
+  "anecdotes": [
+    "Jouer un entretien, un débat ou un conflit permet de s'entraîner sans risque avant la vraie vie.",
+    "Théâtre, expositions ouvertes à toutes et tous, veillées : la culture vit au cœur des actions des CEMÉA, comme les vernissages de Lille.",
+    "Après le jeu, le débriefing compte autant que la partie : qu'ai-je ressenti ? Qu'ai-je appris ?"
+  ],
+  "quiz": [
+    {
+      "q": "Le jeu de rôle pédagogique sert à…",
+      "options": [
+        "S'entraîner à des situations réelles sans risque",
+        "Perdre du temps",
+        "Éliminer les plus faibles"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Après un jeu d'apprentissage, l'étape importante est…",
+      "options": [
+        "Le débriefing : ce qu'on a ressenti et appris",
+        "Range vite les chaises",
+        "Aucune"
+      ],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B2",
+  "bird": "ancrage",
+  "code": "JDP-B2",
+  "x": 148,
+  "y": 400,
+  "lat": 48.8567,
+  "lng": 2.3523,
+  "label": "Le quai des ancres",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Le premier nombre que tu entends me devient une chaîne : tes estimations restent accrochées dessus. Quel effet suis-je ?",
+      "reponses": [
+        "ancrage",
+        "effet d ancrage",
+        "l effet d ancrage",
+        "effet d'ancrage",
+        "l'effet d'ancrage"
+      ],
+      "indice": "Mon nom vient du gros objet lourd qui empêche le bateau de bouger.",
+      "saviez": "Même un nombre tiré au sort sous vos yeux influence ensuite vos estimations : l'ancre tient bon.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "« Barré à 100 €, aujourd'hui 39 € ! » Grâce à moi, 100 € est resté dans ta tête et l'affaire te paraît imbattable. Qui suis-je ?",
+      "reponses": [
+        "ancrage",
+        "effet d ancrage",
+        "l effet d ancrage",
+        "effet d'ancrage",
+        "l'effet d'ancrage"
+      ],
+      "indice": "Le prix barré sert de… point de départ à ton jugement.",
+      "saviez": "Kahneman et Tversky ont montré qu'une roue de loterie truquée changeait les estimations des participants, experts compris.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Amiral des premiers chiffres, je mouille devant ta pensée : tout ce qui suit se mesure à ma chaîne, même quand je suis absurde. Nommez-moi.",
+      "reponses": [
+        "ancrage",
+        "effet d ancrage",
+        "l effet d ancrage",
+        "effet d'ancrage",
+        "l'effet d'ancrage"
+      ],
+      "indice": "Tversky & Kahneman, 1974 : la première valeur capture l'estimation.",
+      "saviez": "En négociation, celui qui annonce le premier prix pose souvent l'ancre : connaître l'effet permet de le contrer.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

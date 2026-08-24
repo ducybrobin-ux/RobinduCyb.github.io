@@ -1,0 +1,63 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B5",
+  "bird": "cout",
+  "code": "JDP-B5",
+  "x": 406,
+  "y": 448,
+  "lat": 48.8564,
+  "lng": 2.352,
+  "label": "Le puits aux pièces",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Tu continues un jeu ennuyeux juste parce que tu as déjà payé. L'argent perdu te pousse à en perdre plus. Quel sophisme suis-je ?",
+      "reponses": [
+        "cout irrecuperable",
+        "coût irrécupérable",
+        "le coût irrécupérable",
+        "sophisme du coût irrécupérable",
+        "sunk cost"
+      ],
+      "indice": "Mon nom parle d'une dépense qui ne reviendra jamais.",
+      "saviez": "Restez jusqu'au bout d'un film nul « puisque le billet est payé » : classique ! Le billet ne reviendra pas pour autant.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "« J'ai déjà investi tant de temps, je ne peux pas arrêter maintenant ! » Je transforme le passé en prison. Qui suis-je ?",
+      "reponses": [
+        "cout irrecuperable",
+        "coût irrécupérable",
+        "le coût irrécupérable",
+        "sophisme du coût irrécupérable",
+        "sunk cost"
+      ],
+      "indice": "Seuls les gains futurs devraient compter dans une décision.",
+      "saviez": "Le projet Concorde a été poursuivi des années « à cause des milliards déjà dépensés » : le sophisme porte aussi son nom.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Comptable de l'impossible, j'exige qu'on paye deux fois la même erreur sous prétexte qu'elle a déjà coûté. Les économistes m'appellent sunk cost. Mon nom français ?",
+      "reponses": [
+        "cout irrecuperable",
+        "coût irrécupérable",
+        "le coût irrécupérable",
+        "sophisme du coût irrécupérable"
+      ],
+      "indice": "Irrécupérable : ce qui est perdu ne se récupère pas.",
+      "saviez": "La bonne question : « En partant de maintenant, quelle est la meilleure option ? » Le passé n'a pas de vote.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

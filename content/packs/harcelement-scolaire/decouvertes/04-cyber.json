@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Appliquer les bons réflexes face à des contenus humiliants en ligne : capture, blocage, signalement",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "cyber",
+  "nom": "Le cyberharcèlement",
+  "latin": "Cyberbullying · Tokunaga, 2010",
+  "emoji": "📱",
+  "couleur": "#7a3b8f",
+  "categorie": "nocturne",
+  "taille": "Réflexe : capturer, bloquer, signaler (3018)",
+  "anecdotes": [
+    "Sur un écran, la moquerie suit la victime jusque chez elle : le harcèlement n'a plus d'horaires.",
+    "Rien ne disparaît vraiment en ligne : faire une capture d'écran avant de bloquer aide à prouver.",
+    "Le 3018 est le numéro national gratuit contre les violences numériques : appel ou tchat, confidentiel."
+  ],
+  "quiz": [
+    {
+      "q": "Face à un message humiliant reçu sur un téléphone, le premier réflexe est…",
+      "options": [
+        "Garder une capture d'écran puis bloquer",
+        "Supprimer tout immédiatement",
+        "Répondre par des insultes"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Le numéro gratuit pour signaler les violences numériques est…",
+      "options": [
+        "3018",
+        "15",
+        "0800 000 000"
+      ],
+      "reponse": 0
+    }
+  ]
+}

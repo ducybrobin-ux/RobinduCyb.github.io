@@ -1,0 +1,58 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "HS5",
+  "bird": "difference",
+  "code": "JDP-HS5",
+  "label": "Le miroir trompeur",
+  "x": 388,
+  "y": 396,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "On me reproche d'être différent·e, mais c'est moi le vrai problème : la moquerie, pas mes lunettes ! Qu'est-ce qui pose problème ?",
+      "reponses": [
+        "moquerie",
+        "les moqueries",
+        "harcèlement",
+        "l'agression"
+      ],
+      "indice": "Ce que fait le harceleur, pas ce que la victime porte.",
+      "saviez": "Personne ne « demande » jamais d'être ciblé.",
+      "ages": [
+        9,
+        11
+      ]
+    },
+    "moyen": {
+      "text": "Goffman m'a nommée en 1963 : l'attribut que le groupe choisit pour rabaisser quelqu'un. Qui suis-je ?",
+      "reponses": [
+        "stigmate",
+        "le stigmate",
+        "stigmatisation"
+      ],
+      "indice": "Trois syllabes, une marque sociale.",
+      "saviez": "Toute différence peut servir de prétexte : elle n'en est jamais la cause.",
+      "ages": [
+        12,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Je suis le raisonnement faux qui rend la victime responsable de ce qu'elle subit. Comment s'appelle ce mécanisme ?",
+      "reponses": [
+        "culpabilisation de la victime",
+        "blame the victim",
+        "victim blaming"
+      ],
+      "indice": "On accuse celle qui souffre au lieu de celle qui frappe.",
+      "saviez": "Retourner le regard : c'est l'agresseur qui doit changer.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

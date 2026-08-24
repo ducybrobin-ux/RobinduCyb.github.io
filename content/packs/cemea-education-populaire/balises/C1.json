@@ -1,0 +1,58 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C1",
+  "bird": "cooperation",
+  "code": "JDP-C1",
+  "label": "Le cercle d'entraide",
+  "x": 240,
+  "y": 105,
+  "lat": 50.7258178,
+  "lng": 3.1329639,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Ici, personne ne gagne seul : on avance en tirant tous dans le même sens. Quel principe suis-je ?",
+      "reponses": [
+        "cooperation",
+        "la cooperation",
+        "coopérer",
+        "cooperer"
+      ],
+      "indice": "Mon nom commence comme « opérer »… mais ensemble.",
+      "saviez": "Freinet appelait cela la « classe coopérative » : les élèves gèrent leur journal, leurs responsabilités, leur budget.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Je transforme un groupe d'élèves en équipe : tutorat, conseils, projets communs. La victoire de l'un devient celle de tous. Qui suis-je ?",
+      "reponses": [
+        "cooperation",
+        "pedagogie cooperative",
+        "la pedagogie cooperative"
+      ],
+      "indice": "On m'oppose souvent à la compétition.",
+      "saviez": "Expliquer à un pair oblige à organiser sa pensée : c'est pourquoi le tutorat profite aussi à celui qui explique.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Instituée par un maître d'école du Bar-sur-Loup, je remplace la rangée silencieuse par un atelier solidaire. Mon nom complet ?",
+      "reponses": [
+        "pedagogie cooperative freinet",
+        "la pedagogie cooperativa",
+        "cooperation"
+      ],
+      "indice": "Pensez à Célestin Freinet et à son École moderne.",
+      "saviez": "Le conseil de coopérative existe encore aujourd'hui dans de nombreuses classes françaises.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

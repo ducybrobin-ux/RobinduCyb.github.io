@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "HS1",
+  "bird": "silence",
+  "code": "JDP-HS1",
+  "label": "Le mur des mots",
+  "x": 74,
+  "y": 452,
+  "lat": 50.7258178,
+  "lng": 3.1329639,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je grandis quand on me laisse seule : je sépare un élève du reste du groupe. Qui suis-je ?",
+      "reponses": [
+        "silence",
+        "le silence",
+        "briser le silence"
+      ],
+      "indice": "Ce qui se passe quand personne ne dit rien.",
+      "saviez": "Freinet disait qu'un problème dit à voix haute est déjà à moitié résolu.",
+      "ages": [
+        9,
+        11
+      ]
+    },
+    "moyen": {
+      "text": "Je suis l'alliée invisible du harceleur : sans moi, sa moquerie ne prendrait jamais. Qui suis-je ?",
+      "reponses": [
+        "le silence",
+        "silence"
+      ],
+      "indice": "Pensez à ce qui remplace la parole des témoins.",
+      "saviez": "Environ un élève sur dix subit du harcèlement pendant sa scolarité.",
+      "ages": [
+        12,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Psychologues de 1968, j'ai un effet qui porte mon nom : plus nous sommes nombreux à regarder, moins nous agissons. Quel effet ?",
+      "reponses": [
+        "effet spectateur",
+        "l'effet spectateur",
+        "spectateur"
+      ],
+      "indice": "Darley et Latané ont fait des expériences sur la fumée qui rentre dans une salle.",
+      "saviez": "Un seul témoin qui agit entraîne souvent les autres à suivre.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax:
+    name: Syntaxe des modules JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Vérifier js/*.js
+        run: |
+          fail=0
+          for f in js/*.js; do
+            if ! node --check "$f"; then
+              echo "::error file=$f::Erreur de syntaxe"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Synchronisation content/ ↔ js/data.js
+        run: node tools/build-data.mjs --check
+
+      - name: JSON valides
+        run: |
+          fail=0
+          for f in manifest.json; do
+            if ! node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))"; then
+              echo "::error file=$f::JSON invalide"
+              fail=1
+            fi
+          done
+          exit $fail

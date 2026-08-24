@@ -1,0 +1,55 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT8",
+  "bird": "numerique-industrie",
+  "code": "JDP-MT8",
+  "label": "La salle des machines",
+  "x": 340,
+  "y": 520,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Quand je m'arrête, toute l'usine attend : on m'appelle à la moindre étincelle. Qui suis-je ?",
+      "reponses": [
+        "robot",
+        "le robot",
+        "machine"
+      ],
+      "indice": "Il travaille sur la ligne de production.",
+      "saviez": "Le technicien de maintenance est son médecin attitré.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Robots, froid industriel, lignes automatisées : je répare pour que tout tourne. Quel métier suis-je ?",
+      "reponses": [
+        "technicien de maintenance",
+        "maintenance"
+      ],
+      "indice": "Deux mots : technique et entretien.",
+      "saviez": "Bac pro ou BTS mènent vite à un emploi stable.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Je maîtrise froid et climatisation : mon savoir-faire est si rare que je ne chôme jamais. Qui suis-je ?",
+      "reponses": [
+        "frigoriste",
+        "le frigoriste"
+      ],
+      "indice": "Du latin « frigus », le froid.",
+      "saviez": "Sa liste d'attente de clients ne se vide jamais.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

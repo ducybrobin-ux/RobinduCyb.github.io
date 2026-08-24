@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Le maître d'apprentissage est un mentor qui transmet le métier pour de vrai, geste par geste.",
+    "Beaucoup de contrats débouchent directement sur un emploi durable à la fin."
+  ],
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Connaître le principe de l'apprentissage et l'âge où l'on peut commencer",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "apprentissage",
+  "nom": "L'apprentissage",
+  "latin": "Apprendre en travaillant",
+  "emoji": "🎓",
+  "couleur": "#d97b1f",
+  "taille": "Piste : gagner en apprenant",
+  "description": "Signer un contrat avec un employeur : on suit des cours ET on est payé en entreprise. Possible dès 15 ans (et même 14 ans en prépa-apprentissage). CAP en 1 ou 2 ans, bac pro en 3 ans… et cela continue jusqu'aux études supérieures."
+}

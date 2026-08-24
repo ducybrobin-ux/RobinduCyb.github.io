@@ -1,0 +1,23 @@
+{
+  "id": "defaut",
+  "nom": "Nuit étoilée",
+  "emoji": "🌙",
+  "description": "L'ambiance d'origine : nuit bleutée sous les étoiles.",
+  "meta": "#101822",
+  "fond": null,
+  "vars": {
+    "--bg": "#101822",
+    "--bg-soft": "#15202c",
+    "--card": "#1b2735",
+    "--card-soft": "#22303f",
+    "--ink": "#e8f0f5",
+    "--text-muted": "#b9c8d4",
+    "--primary": "#2fb97c",
+    "--primary-dark": "#1d8a5b",
+    "--gold": "#ffce3d",
+    "--err": "#ff7878",
+    "--ok": "#5fd68f",
+    "--line": "#33465a",
+    "--shadow": "0 6px 22px rgba(0, 0, 0, 0.45)"
+  }
+}

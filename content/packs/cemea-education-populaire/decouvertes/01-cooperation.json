@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Identifier des situations où coopérer fait mieux apprendre que rivaliser",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "cooperation",
+  "nom": "Coopération",
+  "latin": "Pédagogie coopérative · Freinet, 1924",
+  "emoji": "🤝",
+  "couleur": "#0f9b8e",
+  "categorie": "diurne",
+  "taille": "Réflexe : chercher ce qui fait avancer tout le groupe",
+  "anecdotes": [
+    "En coopération, chacun apporte un morceau de la réussite : personne n'est « nul », chacun est utile.",
+    "Le tutorat entre pairs : expliquer à un camarade est l'un des meilleurs moyens d'apprendre soi-même.",
+    "La coopération traverse les frontières : en juin 2026, les CEMÉA Nord-Pas-de-Calais ont accueilli huit enseignantes italiennes dans le cadre d'un projet Erasmus+."
+  ],
+  "quiz": [
+    {
+      "q": "Dans une pédagogie coopérative, on apprend surtout…",
+      "options": [
+        "En travaillant ensemble et en s'entraidant",
+        "Chacun seul dans son coin",
+        "En compétition permanente"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Expliquer une notion à un camarade, c'est…",
+      "options": [
+        "Un excellent moyen de mieux la comprendre soi-même",
+        "Perdre son temps",
+        "Interdit pendant la classe"
+      ],
+      "reponse": 0
+    }
+  ]
+}

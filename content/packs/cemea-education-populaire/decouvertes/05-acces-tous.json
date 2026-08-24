@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Repérer les inégalités d'accès à la culture et imaginer des solutions",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "acces-tous",
+  "nom": "Pour toutes et tous",
+  "latin": "Loisirs populaires · Léo Lagrange, 1936",
+  "emoji": "🌍",
+  "couleur": "#c2452e",
+  "categorie": "diurne",
+  "taille": "Réflexe : se demander qui manque à l'appel",
+  "anecdotes": [
+    "Avec les congés payés de 1936, Léo Lagrange invente les loisirs encadrés pour celles et ceux qui n'en avaient jamais eu.",
+    "À Lille, les locaux des CEMÉA Nord-Pas-de-Calais sont pensés pour l'accessibilité de toutes et tous : l'accueil commence par la porte.",
+    "Une question clé de l'éducation populaire : qui n'a pas accès ? Comment ouvrir la porte ?"
+  ],
+  "quiz": [
+    {
+      "q": "En 1936, avec les congés payés, Léo Lagrange développe…",
+      "options": [
+        "Les loisirs populaires encadrés pour toutes et tous",
+        "Les vacances réservées aux riches",
+        "L'école le samedi"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "La démocratie culturelle veut dire que la culture est…",
+      "options": [
+        "Un droit pour chacun",
+        "Une marchandise rare",
+        "Réservée aux experts"
+      ],
+      "reponse": 0
+    }
+  ]
+}

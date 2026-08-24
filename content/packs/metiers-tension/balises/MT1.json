@@ -1,0 +1,55 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT1",
+  "bird": "btp",
+  "code": "JDP-MT1",
+  "label": "La grue du chantier",
+  "x": 110,
+  "y": 430,
+  "lat": 50.7258178,
+  "lng": 3.1329639,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je monte haut dans le ciel des chantiers et je soulève tout. Qui suis-je ?",
+      "reponses": [
+        "grue",
+        "la grue"
+      ],
+      "indice": "Elle tourne au sommet des tours.",
+      "saviez": "Les soudeurs et couvreurs font partie des profils les plus cherchés.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Je suis une famille de métiers où l'on bâtit : maçon, plombier, soudeur… Qui suis-je ?",
+      "reponses": [
+        "btp",
+        "batiment",
+        "le bâtiment"
+      ],
+      "indice": "Trois lettres, tout un secteur.",
+      "saviez": "Un CAP en 2 ans suffit pour entrer sur un chantier.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Plombier-chauffagiste, couvreur, soudeur : nous sommes des métiers dits « en » quoi ?",
+      "reponses": [
+        "tension",
+        "en tension"
+      ],
+      "indice": "Comme une corde qu'on tire trop fort.",
+      "saviez": "Les chantiers ne se délocalisent pas : ils sont près de chez toi.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "nocturne",
+  "anecdotes": [
+    "Écrire ce qui se passe (dates, lieux, messages) aide l'adulte à comprendre vite.",
+    "Chaque établissement a un référent harcèlement : demander son nom fait partie des bons réflexes."
+  ],
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Lister les adultes vers qui tourner si une première demande reste sans effet",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "adultes-confiance",
+  "nom": "Les adultes de confiance",
+  "latin": "Confidere · avoir confiance",
+  "emoji": "🗣️",
+  "couleur": "#444a6b",
+  "taille": "Réflexe : dire, redire, jusqu'à être entendu",
+  "description": "Professeur principal, CPE, infirmier·ère scolaire·e, assistant·e social·e, directeur·rice, famille : plusieurs portes peuvent s'ouvrir. Si l'une reste fermée, frapper à une autre — et mémoriser le 3018."
+}

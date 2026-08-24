@@ -1,0 +1,57 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT2",
+  "bird": "sante",
+  "code": "JDP-MT2",
+  "label": "La blouse blanche",
+  "x": 176,
+  "y": 372,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je prends ta température et je veille sur toi à l'hôpital. Qui suis-je ?",
+      "reponses": [
+        "aide-soignant",
+        "infirmiere",
+        "soignant",
+        "l'infirmière"
+      ],
+      "indice": "Quelqu'un qui porte une blouse.",
+      "saviez": "La formation d'aide-soignant dure environ un an.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Nous soignons à l'hôpital, en maison de retraite et à domicile : nous manquons partout. Qui sommes-nous ?",
+      "reponses": [
+        "soignants",
+        "les soignants",
+        "infirmiers"
+      ],
+      "indice": "Ceux qui prennent soin.",
+      "saviez": "Soigner, c'est aussi écouter : la relation compte autant que le geste.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Diplôme d'État en poche après environ un an, j'accompagne au quotidien personnes âgées et malades. Qui suis-je ?",
+      "reponses": [
+        "aide-soignant",
+        "aide-soignante"
+      ],
+      "indice": "Deux mots : l'aide et le soin.",
+      "saviez": "Hôpitaux et EHPAD recrutent en continu depuis des années.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

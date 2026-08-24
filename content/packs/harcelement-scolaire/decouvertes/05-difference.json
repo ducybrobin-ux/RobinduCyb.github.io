@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Refuser l'idée que la victime serait « responsable » de ce qu'elle subit à cause d'une différence",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "difference",
+  "nom": "Le prétexte de la différence",
+  "latin": "Stigmate · Goffman, 1963",
+  "emoji": "🏷️",
+  "couleur": "#d97b1f",
+  "categorie": "diurne",
+  "taille": "Repère : le problème n'est pas la différence",
+  "anecdotes": [
+    "N'importe quelle caractéristique peut servir de prétexte : lunettes, accent, taille, vêtements, résultats…",
+    "Le sociologue Goffman appelait « stigmate » l'attribut que le groupe choisit pour rabaisser quelqu'un.",
+    "Personne ne « demande » jamais d'être ciblé : c'est l'agresseur qui choisit d'agresser, jamais la différence qui provoque."
+  ],
+  "quiz": [
+    {
+      "q": "Si un élève est moqué pour ses lunettes, le vrai problème c'est…",
+      "options": [
+        "Les moqueries, pas les lunettes",
+        "Les lunettes",
+        "Sa classe"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Face à la différence, la meilleure attitude est…",
+      "options": [
+        "Respecter : elle fait la richesse du groupe",
+        "Se joindre aux moqueurs",
+        "Éviter la personne visée"
+      ],
+      "reponse": 0
+    }
+  ]
+}

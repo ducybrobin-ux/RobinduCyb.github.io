@@ -1,0 +1,64 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C10",
+  "bird": "ess",
+  "code": "JDP-C10",
+  "label": "La monnaie du sens",
+  "x": 87,
+  "y": 225,
+  "lat": 50.6315014,
+  "lng": 3.0558671,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Ici, l'argent gagné retourne dans le projet, pas dans les poches d'actionnaires. Comment appelle-t-on cette économie ?",
+      "reponses": [
+        "l'economie sociale et solidaire",
+        "economie sociale et solidaire",
+        "ess",
+        "l ess",
+        "l'ess",
+        "economie solidaire"
+      ],
+      "indice": "Trois initiales : E-S-S.",
+      "saviez": "Les CEMÉA relèvent à la fois de l'utilité publique et de l'économie sociale et solidaire.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Coopératives, associations, mutuelles : mon principe est simple, une personne = une voix. Quel secteur suis-je ?",
+      "reponses": [
+        "l'economie sociale et solidaire",
+        "economie sociale et solidaire",
+        "ess",
+        "l ess",
+        "l'ess"
+      ],
+      "indice": "On la surnomme souvent par trois lettres.",
+      "saviez": "Dans une coopérative, ce sont les sociétaires qui votent, pas les actionnaires majoritaires.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Association reconnue d'utilité publique ET entreprise de l'ESS, le mouvement CEMÉA s'appuie sur un réseau décentralisé. Sur quoi repose sa gouvernance ?",
+      "reponses": [
+        "une personne une voix",
+        "1 personne 1 voix",
+        "une personne egale une voix",
+        "une personne = une voix",
+        "une tete regionale par territoire"
+      ],
+      "indice": "Pensez au suffrage… coopératif.",
+      "saviez": "Chaque tête régionale CEMÉA adapte les formations aux besoins de son territoire.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "dunning",
+  "nom": "Effet Dunning-Kruger",
+  "latin": "Dunning-Kruger effect · Kruger & Dunning, 1999",
+  "emoji": "🎢",
+  "couleur": "#d98e04",
+  "categorie": "diurne",
+  "taille": "Antidote : s'entraîner et demander des avis",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Débutants, on se croit souvent très fort ; en progressant, on découvre enfin l'étendue de ce qu'on ignore.",
+    "Les chercheurs ont testé des étudiants : les moins bons s'estimaient au-dessus de la moyenne !",
+    "La vraie compétence commence quand on sait mesurer ce qu'on ne sait pas encore."
+  ],
+  "chant": {
+    "tempo": 70,
+    "notes": [
+      {
+        "f": 520,
+        "fEnd": 900,
+        "d": 0.18,
+        "g": 0.06,
+        "type": "triangle",
+        "v": 0.5
+      },
+      {
+        "f": 900,
+        "fEnd": 1300,
+        "d": 0.16,
+        "g": 0.06,
+        "type": "triangle",
+        "v": 0.5
+      },
+      {
+        "f": 1300,
+        "fEnd": 600,
+        "d": 0.22,
+        "g": 0.55,
+        "type": "triangle",
+        "v": 0.45
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Mesurer ses progrès pour évaluer son niveau réel et accueillir les retours",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Que fait souvent un grand débutant, selon cet effet ?",
+      "options": [
+        "Il se surestime car il ne voit pas encore ses lacunes",
+        "Il devient champion tout de suite",
+        "Il n'apprend jamais rien"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Comment progresse-t-on malgré cet effet ?",
+      "options": [
+        "En s'entraînant et en écoutant les retours",
+        "En évitant de pratiquer",
+        "En se comparant aux débutants"
+      ],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Repérer les métiers de bouche recherchés et le rôle central de l'apprentissage",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "restauration",
+  "nom": "Restauration & alimentation",
+  "latin": "Cuisinier · boulanger · boucher",
+  "emoji": "🍽️",
+  "couleur": "#c2452e",
+  "categorie": "diurne",
+  "taille": "Piste : des métiers qui se goûtent jeune",
+  "anecdotes": [
+    "Cuisiniers, boulangers, bouchers, pâtissiers : des métiers en tension car il faut former vite face aux départs.",
+    "Le CAP boulanger se prépare en apprentissage, lever tôt compris — mais pain chaud à la clé !",
+    "Cuisiner peut faire voyager : hôtels, cantines, restaurants étoilés, paquebots."
+  ],
+  "quiz": [
+    {
+      "q": "Le métier de boulanger s'apprend surtout…",
+      "options": [
+        "En apprentissage derrière le fournil",
+        "En regardant des vidéos",
+        "Par hasard"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Avec un CAP de cuisine, tu peux travailler…",
+      "options": [
+        "Au restaurant, à la cantine, à l'hôpital…",
+        "Seulement dans un restaurant étoilé",
+        "Seulement chez toi"
+      ],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "confirmation",
+  "nom": "Biais de confirmation",
+  "latin": "Confirmation bias · Wason, 1960",
+  "emoji": "🔍",
+  "couleur": "#2e6fb3",
+  "categorie": "diurne",
+  "taille": "Antidote : chercher ce qui te contredit",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Notre cerveau adore avoir raison : il collectionne les preuves qui lui plaisent et jette les autres.",
+    "Sur les réseaux sociaux, on voit surtout les messages qui confirment ce qu'on pense déjà : le biais adore ça !",
+    "Pour le contrer, pose-toi la question : « Qu'est-ce qui pourrait prouver que j'ai tort ? »"
+  ],
+  "chant": {
+    "tempo": 90,
+    "notes": [
+      {
+        "f": 880,
+        "fEnd": 880,
+        "d": 0.12,
+        "g": 0.08,
+        "type": "sine",
+        "v": 0.5
+      },
+      {
+        "f": 880,
+        "fEnd": 880,
+        "d": 0.12,
+        "g": 0.08,
+        "type": "sine",
+        "v": 0.5
+      },
+      {
+        "f": 1100,
+        "fEnd": 1100,
+        "d": 0.1,
+        "g": 0.3,
+        "type": "sine",
+        "v": 0.4
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Chercher activement ce qui pourrait contredire une opinion avant de la croire",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Que fait le biais de confirmation ?",
+      "options": [
+        "Il ne retient que les preuves qui nous donnent raison",
+        "Il rend myope",
+        "Il traduit les langues"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Quel est le meilleur antidote ?",
+      "options": [
+        "Chercher ce qui pourrait nous contredire",
+        "Répéter plus fort son opinion",
+        "Fermer les yeux"
+      ],
+      "reponse": 0
+    }
+  ]
+}

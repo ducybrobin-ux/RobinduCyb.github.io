@@ -1,0 +1,80 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "disponibilite",
+  "nom": "Biais de disponibilité",
+  "latin": "Availability heuristic · Tversky & Kahneman, 1973",
+  "emoji": "📺",
+  "couleur": "#c2452e",
+  "categorie": "diurne",
+  "taille": "Antidote : chercher les vrais chiffres",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Ce qui revient souvent à la télé ou dans les discussions semble plus fréquent qu'il ne l'est vraiment.",
+    "On craint parfois l'avion plus que la voiture, parce que les accidents d'avion marquent les mémoires.",
+    "Astuce : avant de juger « c'est plein d'accidents », demande-toi « ai-je des chiffres ou juste des souvenirs ? »"
+  ],
+  "chant": {
+    "tempo": 160,
+    "notes": [
+      {
+        "f": 1200,
+        "fEnd": 1400,
+        "d": 0.07,
+        "g": 0.04,
+        "type": "square",
+        "v": 0.4
+      },
+      {
+        "f": 1500,
+        "fEnd": 1300,
+        "d": 0.07,
+        "g": 0.04,
+        "type": "square",
+        "v": 0.4
+      },
+      {
+        "f": 1800,
+        "fEnd": 1600,
+        "d": 0.09,
+        "g": 0.35,
+        "type": "square",
+        "v": 0.38
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Distinguer ce qui est facile à se rappeler de ce qui est réellement fréquent",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Pourquoi craint-on parfois l'avion plus que la voiture ?",
+      "options": [
+        "Les accidents d'avion sont très médiatisés, donc faciles à se rappeler",
+        "L'avion va moins vite",
+        "Parce qu'on y est assis longtemps"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Quel est l'antidote du biais de disponibilité ?",
+      "options": [
+        "Regarder les statistiques",
+        "Regarder plus la télé",
+        "Oublier vite"
+      ],
+      "reponse": 0
+    }
+  ]
+}

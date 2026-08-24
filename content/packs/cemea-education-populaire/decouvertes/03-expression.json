@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Oser s'exprimer devant le groupe et écouter la parole des autres",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "expression",
+  "nom": "Expression libre",
+  "latin": "Textes libres & théâtre-forum · Boal, 1971",
+  "emoji": "🗣️",
+  "couleur": "#d97b1f",
+  "categorie": "diurne",
+  "taille": "Réflexe : donner la parole à celles et ceux qui ne la prennent pas",
+  "anecdotes": [
+    "Texte libre, journal de classe… aujourd'hui, les jeunes publient aussi sur Yakamédia, le média des CEMÉA : toujours de vrais lecteurs pour leur parole.",
+    "Le théâtre-forum joue une situation puis demande au public de changer la fin : s'entraîner à agir.",
+    "Parler devant les autres s'apprend aussi : c'est une compétence, pas un don."
+  ],
+  "quiz": [
+    {
+      "q": "Le théâtre-forum consiste à…",
+      "options": [
+        "Rejouer une scène et proposer d'autres issues",
+        "Regarder une pièce en silence",
+        "Réciter des vers"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Publier les textes libres des élèves sert à…",
+      "options": [
+        "Leur donner de vrais lecteurs et de la confiance",
+        "Les corriger sans pitié",
+        "Remplir le bureau du directeur"
+      ],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "exposition",
+  "nom": "Simple exposition",
+  "latin": "Mere exposure effect · Zajonc, 1968",
+  "emoji": "💿",
+  "couleur": "#7a5c9a",
+  "categorie": "diurne",
+  "taille": "Antidote : juger la chose, pas sa familiarité",
+  "img": "",
+  "description": "À force d'être vu ou entendu, quelque chose nous plaît davantage — sans aucune autre raison.",
+  "anecdotes": [
+    "Pourquoi les pubs passent en boucle.",
+    "Une chanson « moyenne » devient favorite après quelques écoutes."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Distinguer la familiarité d'une chose de sa qualité réelle",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

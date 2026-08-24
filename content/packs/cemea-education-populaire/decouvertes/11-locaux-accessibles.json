@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Identifier les conditions concrètes d'un accueil accessible à tous",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "locaux-accessibles",
+  "nom": "Accueillir tout·es",
+  "latin": "Locaux accessibles · rue Ernest Deconynck, Lille",
+  "emoji": "♿",
+  "couleur": "#444a6b",
+  "categorie": "diurne",
+  "taille": "Repère : chacun·e a sa place autour du feu",
+  "anecdotes": [
+    "Les locaux lillois des CEMÉA Nord-Pas-de-Calais sont pensés pour être accessibles à toutes et tous.",
+    "L'accessibilité n'est pas une option : c'est une condition de la démocratie culturelle.",
+    "Bien accueillir commence par des portes larges, des consignes claires et du temps."
+  ],
+  "quiz": [
+    {
+      "q": "Un lieu « accessible » est un lieu que peuvent utiliser…",
+      "options": [
+        "Tout le monde, y compris en situation de handicap",
+        "Seules les personnes valides",
+        "Uniquement sur rendez-vous"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Pour l'éducation populaire, l'accueil de toutes et tous est…",
+      "options": [
+        "Un principe fondateur",
+        "Un détail pratique",
+        "Une contrainte légale seulement"
+      ],
+      "reponse": 0
+    }
+  ]
+}

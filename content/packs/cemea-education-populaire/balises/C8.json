@@ -1,0 +1,59 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C8",
+  "bird": "erasmus",
+  "code": "JDP-C8",
+  "label": "Le pont de l'Europe",
+  "x": 113,
+  "y": 444,
+  "lat": 50.6314701,
+  "lng": 3.0558641,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Huit maîtresses italiennes ont traversé la mer pour découvrir comment on fait la classe à la française. Quel programme européen paie le voyage ?",
+      "reponses": [
+        "erasmus",
+        "erasmus+",
+        "erasmus plus",
+        "le programme erasmus"
+      ],
+      "indice": "Ce prénom grec est devenu LE mot des échanges d'étudiants.",
+      "saviez": "En juin 2026, les CEMÉA NPDC accueillaient huit enseignantes des écoles Margherita Fasolo (Italie).",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Je finance les mobilités des apprentis, des élèves et des enseignants pour que les savoirs voyagent en Europe. Je suis…",
+      "reponses": [
+        "erasmus+",
+        "erasmus plus",
+        "erasmus"
+      ],
+      "indice": "Ajoutez un « + » au nom le plus connu d'Europe.",
+      "saviez": "Observer une classe étrangère oblige à repenser ses propres routines pédagogiques.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Juin 2026, Lille : une délégation italienne découvre la pédagogie active grâce aux CEMÉA NPDC. Quelles écoles représentait-elle ?",
+      "reponses": [
+        "ecoles margherita fasolo",
+        "les ecoles margherita fasolo",
+        "margherita fasolo",
+        "ecole margherita fasolo"
+      ],
+      "indice": "Un prénom et un nom : Margherita …",
+      "saviez": "Les mobilités Erasmus+ concernent aussi bien les élèves que les professionnel·les de l'éducation.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

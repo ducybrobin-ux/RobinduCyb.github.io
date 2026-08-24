@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "statuquo",
+  "nom": "Biais du statu quo",
+  "latin": "Status quo bias · Samuelson & Zeckhauser, 1988",
+  "emoji": "🛋️",
+  "couleur": "#4a5a6a",
+  "categorie": "diurne",
+  "taille": "Antidote : imaginer qu'on choisit aujourd'hui",
+  "img": "",
+  "description": "Préférer ce qui existe déjà, par simple habitude, même quand une meilleure option est disponible.",
+  "anecdotes": [
+    "Le « fait comme d'habitude » qui coûte cher.",
+    "Tester : « Si je découvrais tout aujourd'hui, je choisirais quoi ? »"
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Réévaluer les options existantes comme si le choix se faisait aujourd'hui",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

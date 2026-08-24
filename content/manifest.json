@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "packs": [
+    { "id": "biais-cognitifs", "actif": true },
+    { "id": "cemea-education-populaire", "actif": true },
+    { "id": "harcelement-scolaire", "actif": false },
+    { "id": "metiers-tension", "actif": false }
+  ]
+}

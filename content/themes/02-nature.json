@@ -1,0 +1,23 @@
+{
+  "id": "nature",
+  "nom": "Nature",
+  "emoji": "🌿",
+  "description": "Sous-bois vert et mousse, pour les sentiers en forêt.",
+  "meta": "#122b18",
+  "fond": "radial-gradient(1200px 600px at 80% -10%, rgba(67, 196, 99, 0.14), transparent 60%), radial-gradient(900px 500px at -10% 100%, rgba(255, 210, 61, 0.08), transparent 55%)",
+  "vars": {
+    "--bg": "#0d2013",
+    "--bg-soft": "#122b1a",
+    "--card": "#173524",
+    "--card-soft": "#1d4029",
+    "--ink": "#eaf6ec",
+    "--text-muted": "#b2cfba",
+    "--primary": "#43c463",
+    "--primary-dark": "#2b9a48",
+    "--gold": "#ffd23d",
+    "--err": "#ff7878",
+    "--ok": "#71dd8f",
+    "--line": "#2c5038",
+    "--shadow": "0 6px 22px rgba(0, 0, 0, 0.45)"
+  }
+}

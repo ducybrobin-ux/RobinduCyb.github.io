@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "HS4",
+  "bird": "cyber",
+  "code": "JDP-HS4",
+  "label": "L'écran sans porte",
+  "x": 320,
+  "y": 320,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je suis un harcèlement qui te suit jusque dans ta poche, jour et nuit. Qui suis-je ?",
+      "reponses": [
+        "cyberharcellement",
+        "le cyberharcèlement",
+        "cyber harcèlement"
+      ],
+      "indice": "« Cyber » + harcèlement.",
+      "saviez": "Le premier réflexe : capture d'écran, puis blocage.",
+      "ages": [
+        9,
+        11
+      ]
+    },
+    "moyen": {
+      "text": "Capture, blocage, signalement : trois gestes qui me désarment. Et un numéro gratuit veille sur toi. Lequel ?",
+      "reponses": [
+        "3018",
+        "le 3018"
+      ],
+      "indice": "Trois chiffres : trois, zéro, un, huit.",
+      "saviez": "Le 3018 est national, gratuit et confidentiel.",
+      "ages": [
+        12,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Tokunaga m'a définie en 2010 : des actes intentionnels, répétés, via les technologies. Mon nom complet ?",
+      "reponses": [
+        "cyberharcellement",
+        "cyberbullying",
+        "le cyberharcèlement"
+      ],
+      "indice": "En anglais comme en français, le préfixe vient du réseau.",
+      "saviez": "Les captures d'écran servent de preuves pour les signalements.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

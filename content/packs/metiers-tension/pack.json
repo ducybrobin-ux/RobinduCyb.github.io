@@ -1,0 +1,11 @@
+{
+  "id": "metiers-tension",
+  "nom": "Métiers en tension",
+  "theme": "orientation et découvertes des métiers",
+  "description": "Huit découvertes de familles de métiers où les entreprises recrutent fortement (bâtiment, soin, alimentation, transport, réparation, agriculture, industrie), quatre notions pour comprendre l'orientation et huit balises enquêtes. Conçu pour le cycle 4 et la 3e.",
+  "version": 1,
+  "ages": [
+    10,
+    15
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "cout",
+  "nom": "Sophisme du coût irrécupérable",
+  "latin": "Sunk cost fallacy · Arkes & Blumer, 1985",
+  "emoji": "🕳️",
+  "couleur": "#6b4a8a",
+  "categorie": "diurne",
+  "taille": "Antidote : raisonner sur l'avenir, pas le passé",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Rester jusqu'au bout d'un film ennuyeux « puisque le billet est payé » : l'argent dépensé ne reviendra pas !",
+    "Continuer simplement parce qu'on a déjà beaucoup investi, c'est jeter bon argent après mauvais.",
+    "La bonne question : « En partant de maintenant, qu'est-ce qui est le mieux pour la suite ? »"
+  ],
+  "chant": {
+    "tempo": 40,
+    "notes": [
+      {
+        "f": 700,
+        "fEnd": 480,
+        "d": 0.3,
+        "g": 0.2,
+        "type": "sine",
+        "v": 0.5
+      },
+      {
+        "f": 600,
+        "fEnd": 400,
+        "d": 0.3,
+        "g": 0.2,
+        "type": "sine",
+        "v": 0.5
+      },
+      {
+        "f": 500,
+        "fEnd": 300,
+        "d": 0.35,
+        "g": 0.6,
+        "type": "sine",
+        "v": 0.45
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Décider d'après les gains futurs possibles, sans se laisser enfermer par le passé",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Le film est nul mais tu restes « parce que le billet est payé ». C'est…",
+      "options": [
+        "Le sophisme du coût irrécupérable",
+        "Un bon calcul",
+        "De la patience"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Que faut-il prendre en compte pour bien décider ?",
+      "options": [
+        "Seulement ce qui peut encore arriver",
+        "Tout ce qu'on a déjà dépensé",
+        "Ce que les autres pensent"
+      ],
+      "reponse": 0
+    }
+  ]
+}

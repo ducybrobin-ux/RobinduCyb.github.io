@@ -1,0 +1,58 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C9",
+  "bird": "yakamedia",
+  "code": "JDP-C9",
+  "label": "La voix des jeunes",
+  "x": 74,
+  "y": 339,
+  "lat": 50.6314852,
+  "lng": 3.0558591,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Journal, radio, vidéo : ici, ce sont les jeunes qui tiennent la plume et le micro. Comment s'appelle leur média ?",
+      "reponses": [
+        "yakamedia",
+        "yaka media",
+        "yak"
+      ],
+      "indice": "Ça commence comme « Y a ka »… comprendre : il y a quoi !",
+      "saviez": "Yakamédia publie des contenus créés par et pour les jeunes, accompagnés par les CEMÉA.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Née en 1955 sous forme de revue, je donne la parole aux enfants depuis bientôt un siècle de médias. Mon petit nom ?",
+      "reponses": [
+        "yak",
+        "la revue yak",
+        "revue yak"
+      ],
+      "indice": "Trois lettres, ça veut dire « il y a quoi ? ».",
+      "saviez": "Faire son journal apprend à vérifier, hiérarchiser et raconter : le socle de l'esprit critique.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Plateforme des CEMÉA dédiée aux médias jeunesse, je prolonge une revue pionnière créée en 1955. Mon nom complet ?",
+      "reponses": [
+        "yakamedia",
+        "yaka media",
+        "yakamedia cemea",
+        "la plateforme yakamedia"
+      ],
+      "indice": "Yak + média.",
+      "saviez": "En 1955, laisser les enfants écrire leur propre revue était une vraie révolution culturelle.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

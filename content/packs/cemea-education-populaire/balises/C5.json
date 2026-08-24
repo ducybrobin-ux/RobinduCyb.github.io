@@ -1,0 +1,58 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C5",
+  "bird": "acces-tous",
+  "code": "JDP-C5",
+  "label": "La grande porte ouverte",
+  "x": 367,
+  "y": 444,
+  "lat": 50.6314833,
+  "lng": 3.0559315,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Depuis 1936, les vacances ne sont plus un privilège : elles deviennent un droit pour toutes et tous. Qui a organisé ces premiers loisirs populaires ?",
+      "reponses": [
+        "leo lagrange",
+        "lagrange"
+      ],
+      "indice": "Prénom d'un lion, nom d'un mathématicien célèbre.",
+      "saviez": "Léo Lagrange fut sous-secrétaire d'État aux Sports et à l'Organisation des Loisirs dès 1936.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Colos, MJC, bibliothèques de quartier : je veille à ce que la culture ne soit pas une marchandise de luxe. Comment appelle-t-on cet idéal ?",
+      "reponses": [
+        "democratie culturelle",
+        "la democratie culturelle",
+        "acces pour tous",
+        "culture pour tous"
+      ],
+      "indice": "Démocratie… mais côté culture.",
+      "saviez": "Les colonies de vacances ont accueilli des millions d'enfants depuis les années 1930.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Ma question rituelle : « Qui n'est pas venu ? Pourquoi ? Comment rouvrir la porte ? » Je suis la boussole de toute action d'éducation populaire. Quel principe ?",
+      "reponses": [
+        "acces de tous",
+        "l acces de tous a la culture",
+        "pour toutes et tous",
+        "democratie culturelle"
+      ],
+      "indice": "Cette découverte s'intitule « Pour … et … ».",
+      "saviez": "Ce souci d'accès irrigue aussi les politiques publiques : tarif réduit, transport solidaire, matériel prêté.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

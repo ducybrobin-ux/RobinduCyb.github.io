@@ -1,0 +1,80 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "halo",
+  "nom": "Effet halo",
+  "latin": "Halo effect · Thorndike, 1920",
+  "emoji": "😇",
+  "couleur": "#0f9b8e",
+  "categorie": "diurne",
+  "taille": "Antidote : juger chaque point séparément",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Une seule qualité illumine tout le reste : on trouve quelqu'un « sympa », et voilà qu'on le croit intelligent et honnête.",
+    "Edward Thorndike l'a observé chez des officiers notés par leurs supérieurs : une bonne note entraînait toutes les autres.",
+    "La publicité l'utilise beaucoup : une star souriante prête son « halo » au produit."
+  ],
+  "chant": {
+    "tempo": 80,
+    "notes": [
+      {
+        "f": 523,
+        "fEnd": 523,
+        "d": 0.14,
+        "g": 0.05,
+        "type": "sine",
+        "v": 0.45
+      },
+      {
+        "f": 659,
+        "fEnd": 659,
+        "d": 0.14,
+        "g": 0.05,
+        "type": "sine",
+        "v": 0.45
+      },
+      {
+        "f": 784,
+        "fEnd": 784,
+        "d": 0.2,
+        "g": 0.45,
+        "type": "sine",
+        "v": 0.45
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Évaluer chaque qualité séparément avant de juger un ensemble",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "On trouve quelqu'un sympathique, alors on le croit aussi intelligent. C'est…",
+      "options": [
+        "L'effet halo",
+        "Un superpouvoir",
+        "De la télépathie"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Comment éviter l'effet halo ?",
+      "options": [
+        "Évaluer chaque qualité séparément",
+        "Ne regarder qu'un seul détail",
+        "Suivre la foule"
+      ],
+      "reponse": 0
+    }
+  ]
+}

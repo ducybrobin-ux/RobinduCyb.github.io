@@ -1,0 +1,55 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT3",
+  "bird": "aide-a-domicile",
+  "code": "JDP-MT3",
+  "label": "La clé du voisin",
+  "x": 240,
+  "y": 330,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "J'entre chez les gens pour apporter des repas et un peu de soleil. Qui suis-je ?",
+      "reponses": [
+        "aide a domicile",
+        "aide à domicile",
+        "aide-a-domicile"
+      ],
+      "indice": "Le métier se passe chez les autres.",
+      "saviez": "C'est l'un des secteurs qui embauchent le plus en France.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Courses, repas, compagnie : je permets aux personnes âgées de rester chez elles. Quel est mon métier ?",
+      "reponses": [
+        "aide a domicile",
+        "aide à domicile"
+      ],
+      "indice": "Le contraire de la maison de retraite.",
+      "saviez": "Le diplôme d'État s'obtient en un an, souvent financé par l'employeur.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Je suis un besoin de société croissant : rester chez soi en vieillissant. Ce souhait porte le nom de…",
+      "reponses": [
+        "maintien a domicile",
+        "maintien à domicile"
+      ],
+      "indice": "On « maintient » la personne dans son lieu de vie.",
+      "saviez": "Aucun bac nécessaire pour démarrer dans ce métier de lien.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

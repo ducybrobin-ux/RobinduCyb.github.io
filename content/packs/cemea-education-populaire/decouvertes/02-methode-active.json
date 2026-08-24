@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Comprendre que l'expérience directe ancre durablement les savoirs",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "methode-active",
+  "nom": "Apprendre en faisant",
+  "latin": "Éducation active · CEMÉA, 1937",
+  "emoji": "✋",
+  "couleur": "#2e6fb3",
+  "categorie": "diurne",
+  "taille": "Réflexe : essayer, se tromper, recommencer",
+  "anecdotes": [
+    "Fondés en 1937, les CEMÉA (Centres d'entraînement aux méthodes d'éducation active) forment animateurs et éducateurs en pratiquant, pas en récitant.",
+    "Chaque année, la Journée de l'Éducation du Dehors organisée par le secteur École réunit à Lille une centaine d'enseignant·es, éducateur·rice·s et chercheur·se·s.",
+    "L'erreur y est une étape normale de l'apprentissage, pas une faute à punir."
+  ],
+  "quiz": [
+    {
+      "q": "Une « méthode active », c'est apprendre…",
+      "options": [
+        "En faisant soi-même, par l'expérience",
+        "En écoutant sans bouger",
+        "En récitant par cœur uniquement"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Dans les centres d'entraînement (CEMÉA), on forme…",
+      "options": [
+        "Des animateurs et des éducateurs, en pratiquant",
+        "Seulement des professeurs",
+        "Des sportifs de haut niveau"
+      ],
+      "reponse": 0
+    }
+  ]
+}

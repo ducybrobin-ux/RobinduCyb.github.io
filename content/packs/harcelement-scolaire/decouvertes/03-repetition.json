@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Distinguer une dispute ponctuelle du harcèlement (violences répétées et rapport de force déséquilibré)",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "repetition",
+  "nom": "La répétition",
+  "latin": "Repetitio · critère clé de définition",
+  "emoji": "🔁",
+  "couleur": "#c2452e",
+  "categorie": "nocturne",
+  "taille": "Repère : répété + domination = harcèlement",
+  "anecdotes": [
+    "Une dispute entre amis, même violente, n'est pas du harcèlement : le harcèlement se répète et installe la peur.",
+    "Les critères officiels : des actes répétés, une intention de nuire, un rapport de force déséquilibré.",
+    "Chaque nouvelle moquerie blesse autant que la première : la répétition empêche de se reconstruire."
+  ],
+  "quiz": [
+    {
+      "q": "Le harcèlement se distingue d'une simple dispute parce qu'il…",
+      "options": [
+        "Se répète et installe une domination",
+        "Arrive une seule fois",
+        "Se passe seulement en classe"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Dans une situation de harcèlement, les forces en présence sont…",
+      "options": [
+        "Déséquilibrées",
+        "Toujours égales",
+        "Du côté de la victime"
+      ],
+      "reponse": 0
+    }
+  ]
+}

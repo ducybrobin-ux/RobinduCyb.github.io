@@ -1,0 +1,11 @@
+{
+  "id": "harcelement-scolaire",
+  "nom": "Harcèlement scolaire",
+  "theme": "climat scolaire et entraide",
+  "description": "Six découvertes pour comprendre le harcèlement et apprendre les bons réflexes (témoigner, protéger, alerter), quatre notions de repères et six balises sobres. Module destiné aux interventions en milieu scolaire.",
+  "version": 1,
+  "ages": [
+    9,
+    99
+  ]
+}

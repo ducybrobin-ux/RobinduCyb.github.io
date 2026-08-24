@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Relier apprentissages et capacité d'agir sur sa vie",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "emancipation",
+  "nom": "Émancipation",
+  "latin": "Instruction pour tous · Condorcet, 1792",
+  "emoji": "⚖️",
+  "couleur": "#5a4fcf",
+  "categorie": "nocturne",
+  "taille": "Réflexe : comprendre le monde pour pouvoir le transformer",
+  "anecdotes": [
+    "L'éducation populaire vise l'émancipation : devenir libre par la compréhension, pas subir les décisions des autres.",
+    "Condorcet rêvait dès 1792 d'une instruction vraiment universelle et gratuite.",
+    "Les CEMÉA sont aussi une entreprise de l'économie sociale et solidaire et un terrain d'expérimentation : une autre économie mise au service de l'éducation."
+  ],
+  "quiz": [
+    {
+      "q": "S'émanciper par la connaissance, c'est…",
+      "options": [
+        "Devenir plus libre de penser et d'agir",
+        "Mémoriser sans comprendre",
+        "Suivre sans discuter"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Qui rêvait d'une instruction universelle dès 1792 ?",
+      "options": [
+        "Condorcet",
+        "Napoléon",
+        "Jules Ferry"
+      ],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B3",
+  "bird": "disponibilite",
+  "code": "JDP-B3",
+  "x": 238,
+  "y": 292,
+  "lat": 48.8565,
+  "lng": 2.3521,
+  "label": "L'écran géant",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Ce que tu vois souvent aux infos te semble arriver tout le temps. Je juge la fréquence par la facilité de s'en souvenir. Quel biais suis-je ?",
+      "reponses": [
+        "disponibilite",
+        "biais de disponibilite",
+        "le biais de disponibilite",
+        "disponibilité",
+        "biais de disponibilité",
+        "le biais de disponibilité"
+      ],
+      "indice": "Mon nom parle de ce qui est facilement « disponible » dans ta mémoire.",
+      "saviez": "Après un accident d'avion médiatisé, beaucoup ont peur de voler… alors que la route reste bien plus risquée.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "Images choc, titres fracassants : je transforme les souvenirs faciles en statistiques imaginaires. Qui suis-je ?",
+      "reponses": [
+        "disponibilite",
+        "biais de disponibilite",
+        "le biais de disponibilite",
+        "disponibilité",
+        "biais de disponibilité",
+        "le biais de disponibilité"
+      ],
+      "indice": "Facile à retrouver en mémoire ≠ fréquent dans la réalité.",
+      "saviez": "Tversky et Kahneman (1973) : on estime la fréquence d'un mot selon la vitesse à laquelle on retrouve des exemples.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Archiviste paresseux, je classe « fréquent » ce qui remonte vite à la surface, et « rare » ce que la mémoire peine à retrouver. Mon nom ?",
+      "reponses": [
+        "disponibilite",
+        "biais de disponibilite",
+        "le biais de disponibilite",
+        "disponibilité",
+        "biais de disponibilité",
+        "le biais de disponibilité"
+      ],
+      "indice": "Heuristique de… : la mémoire comme raccourci de jugement.",
+      "saviez": "L'antidote : demander les chiffres. Les vraies statistiques corrigent les impressions créées par les médias.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

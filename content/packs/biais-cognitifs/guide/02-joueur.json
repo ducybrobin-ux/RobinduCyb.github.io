@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "joueur",
+  "nom": "Erreur du joueur",
+  "latin": "Gambler's fallacy",
+  "emoji": "🎲",
+  "couleur": "#2a6e5a",
+  "categorie": "diurne",
+  "taille": "Antidote : chaque tirage est indépendant",
+  "img": "",
+  "description": "Croire que « ça doit bien tomber maintenant » après une série de pile, alors que les chances n'ont pas bougé.",
+  "anecdotes": [
+    "La pièce n'a pas de mémoire.",
+    "Les casinos adorent cette erreur."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Comprendre que chaque tirage aléatoire est indépendant des précédents",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

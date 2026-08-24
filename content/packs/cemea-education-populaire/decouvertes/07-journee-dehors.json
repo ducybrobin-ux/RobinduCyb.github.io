@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Expliquer en quoi apprendre dehors change la façon d'apprendre",
+    "programme": [
+      "cycle 2",
+      "cycle 3"
+    ]
+  },
+  "id": "journee-dehors",
+  "nom": "Éducation du Dehors",
+  "latin": "Journée Éducation du Dehors · Lille",
+  "emoji": "🌳",
+  "couleur": "#2e8f5a",
+  "categorie": "diurne",
+  "taille": "Repère : dehors, on apprend avec tout son corps",
+  "anecdotes": [
+    "Chaque année, la Journée Éducation du Dehors réunit plus d'une centaine de participant·es à Lille, animée par les CEMÉA Nord-Pas-de-Calais.",
+    "Apprendre dehors stimule l'attention, la motricité et la mémoire : le corps fait partie de la leçon.",
+    "L'éducation du dehors relie les « forest schools » nordiques à la pédagogie nouvelle née en France."
+  ],
+  "quiz": [
+    {
+      "q": "Apprendre dehors, c'est…",
+      "options": [
+        "Utiliser le lieu et le corps comme supports d'apprentissage",
+        "Une simple récréation prolongée",
+        "Réservé aux maternelles"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "La Journée Éducation du Dehors de Lille rassemble…",
+      "options": [
+        "Des professionnel·les, des familles et des curieux",
+        "Uniquement des élus",
+        "Personne : elle est virtuelle"
+      ],
+      "reponse": 0
+    }
+  ]
+}

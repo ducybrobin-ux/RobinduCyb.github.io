@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "paille",
+  "nom": "Homme de paille",
+  "latin": "Straw man fallacy",
+  "emoji": "🎯",
+  "couleur": "#8a3b3b",
+  "categorie": "diurne",
+  "taille": "Antidote : reformuler l'argument d'autrui",
+  "img": "",
+  "description": "Déformer l'argument de l'autre pour le réfuter plus facilement, puis attaquer cette version affaiblie.",
+  "anecdotes": [
+    "Classique des débats en ligne.",
+    "Contre-pied : l'homme d'acier — reformuler au plus juste."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Reformuler fidèlement l'argument d'autrui avant de le discuter",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

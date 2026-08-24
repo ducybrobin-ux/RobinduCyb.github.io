@@ -1,0 +1,65 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B4",
+  "bird": "dunning",
+  "code": "JDP-B4",
+  "x": 320,
+  "y": 320,
+  "lat": 48.8568,
+  "lng": 2.3524,
+  "label": "La grande montagne russe",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Plus on débute, plus on se croit fort ; plus on apprend, plus on voit ses lacunes. Quel effet suis-je ?",
+      "reponses": [
+        "dunning kruger",
+        "effet dunning kruger",
+        "l effet dunning kruger",
+        "dunning-kruger",
+        "effet dunning-kruger",
+        "kruger dunning"
+      ],
+      "indice": "Mon nom est composé de deux noms de chercheurs.",
+      "saviez": "Chez les étudiants testés, les moins bons résultats s'accompagnaient des estimations les plus élevées.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "Je suis la bosse de confiance du débutant : elle monte vite, puis redescend à mesure que la vraie compétence apparaît. Qui suis-je ?",
+      "reponses": [
+        "dunning kruger",
+        "effet dunning kruger",
+        "l effet dunning kruger",
+        "dunning-kruger",
+        "effet dunning-kruger"
+      ],
+      "indice": "Deux psychologues de Cornell, Kruger et Dunning, m'ont décrit en 1999.",
+      "saviez": "Courbe célèbre : la « vallée de la mort » arrive quand on réalise enfin tout ce qu'il reste à apprendre.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Double incompétence : celle qui échoue, et celle qui ne permet pas de voir l'échec. Mes deux pères portent des noms de chercheurs. Qui suis-je ?",
+      "reponses": [
+        "dunning kruger",
+        "effet dunning kruger",
+        "l effet dunning kruger",
+        "dunning-kruger",
+        "effet dunning-kruger"
+      ],
+      "indice": "Il faut être un minimum compétent pour mesurer son incompétence.",
+      "saviez": "L'humilité épistémique — savoir qu'on peut se tromper — est la marque des vrais experts.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

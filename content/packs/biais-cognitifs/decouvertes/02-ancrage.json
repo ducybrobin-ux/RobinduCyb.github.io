@@ -1,0 +1,72 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "ancrage",
+  "nom": "Effet d'ancrage",
+  "latin": "Anchoring effect · Tversky & Kahneman, 1974",
+  "emoji": "⚓",
+  "couleur": "#5a4fcf",
+  "categorie": "diurne",
+  "taille": "Antidote : comparer avec tes propres repères",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Le premier nombre entendu devient une ancre : notre estimation reste collée dessus, même si elle est absurde.",
+    "« Au lieu de 100 €, seulement 39 € ! » : le prix barré est une ancre qui donne l'impression d'une bonne affaire.",
+    "Même les experts se font piéger : une roue de loterie truquée a suffi à fausser leurs estimations en labo."
+  ],
+  "chant": {
+    "tempo": 45,
+    "notes": [
+      {
+        "f": 220,
+        "fEnd": 220,
+        "d": 0.3,
+        "g": 0.15,
+        "type": "sine",
+        "v": 0.55
+      },
+      {
+        "f": 330,
+        "fEnd": 440,
+        "d": 0.25,
+        "g": 0.5,
+        "type": "sine",
+        "v": 0.45
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Reconnaître l'influence du premier chiffre reçu et recalculer avec ses propres repères",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Qu'est-ce qu'une « ancre » dans notre tête ?",
+      "options": [
+        "La première information reçue, qui influence toute la suite",
+        "Un bijou",
+        "Une chanson qui reste dans la tête"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "« Barré à 100 €, vendu 39 € » joue sur…",
+      "options": [
+        "L'effet d'ancrage",
+        "La météo",
+        "Notre faim"
+      ],
+      "reponse": 0
+    }
+  ]
+}

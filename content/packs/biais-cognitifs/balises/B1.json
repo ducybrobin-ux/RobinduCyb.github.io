@@ -1,0 +1,59 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B1",
+  "bird": "confirmation",
+  "code": "JDP-B1",
+  "x": 74,
+  "y": 452,
+  "lat": 50.7258178,
+  "lng": 3.1329639,
+  "label": "La cabane à idées",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je ne vois que les preuves qui me donnent raison, et je ferme les yeux sur les autres. Quel biais suis-je ?",
+      "reponses": [
+        "confirmation",
+        "biais de confirmation",
+        "le biais de confirmation",
+        "biais de confirmations"
+      ],
+      "indice": "Mon nom parle de « confirmer » une idée déjà en place.",
+      "saviez": "Peter Wason l'a démontré avec une suite de nombres : presque personne n'osait tester une hypothèse qui pouvait la détruire.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "Quand tu cherches des arguments, je ne te montre que ceux qui flattent ton opinion. Ton idée a toujours raison avec moi. Qui suis-je ?",
+      "reponses": [
+        "confirmation",
+        "biais de confirmation",
+        "le biais de confirmation"
+      ],
+      "indice": "Je porte le nom d'un accord : « oui, oui, c'est confirmé ! »",
+      "saviez": "Les réseaux sociaux montrent surtout des contenus qui nous ressemblent : notre biais adore s'y nourrir.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Née dans les laboratoires de Peter Wason en 1960, je fais tester les hypothèses dans un seul sens : celui qui arrange mon propriétaire. Quel biais suis-je ?",
+      "reponses": [
+        "confirmation",
+        "biais de confirmation",
+        "le biais de confirmation"
+      ],
+      "indice": "Chercher à confirmer plutôt qu'à infirmer : me voilà.",
+      "saviez": "Le meilleur réflexe scientifique : essayer de se tromper. Une hypothèse qui survit à tous les tests gagne notre confiance.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

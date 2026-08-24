@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Découvrir pourquoi transport et logistique manquent de bras et comment on y entre",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "transport",
+  "nom": "Transport & logistique",
+  "latin": "Conducteur routier · cariste",
+  "emoji": "🚚",
+  "couleur": "#444a6b",
+  "categorie": "nocturne",
+  "taille": "Piste : quelques mois de formation et la route est à toi",
+  "anecdotes": [
+    "Sans camions ni entrepôts, rien n'arrive en magasin : conducteurs routiers et caristes manquent partout.",
+    "Permis poids lourd et carte conducteur se préparent en quelques mois après l'âge requis.",
+    "La logistique moderne, c'est aussi piloter des flux, des radios d'entrepôt et des robots."
+  ],
+  "quiz": [
+    {
+      "q": "Pour conduire un camion, il faut…",
+      "options": [
+        "Un permis spécial et une formation courte",
+        "Juste le permis voiture",
+        "Rien de spécial"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "La logistique, c'est tout ce qui permet…",
+      "options": [
+        "Que les marchandises arrivent au bon endroit",
+        "De travailler sans collègues",
+        "D'éviter les colis"
+      ],
+      "reponse": 0
+    }
+  ]
+}

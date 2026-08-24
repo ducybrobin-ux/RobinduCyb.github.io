@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Découvrir les métiers techniques de l'industrie qui recrutent malgré les idées reçues",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "numerique-industrie",
+  "nom": "Industrie & maintenance",
+  "latin": "Technicien de maintenance · frigoriste",
+  "emoji": "💻",
+  "couleur": "#0c6e8f",
+  "categorie": "nocturne",
+  "taille": "Piste : des formations courtes vers des métiers solides",
+  "anecdotes": [
+    "Usines automatisées : il faut des techniciens de maintenance pour garder robots et lignes en marche.",
+    "Les frigoristes (froid et climatisation) sont si recherchés que leur savoir-faire ne chôme jamais.",
+    "Bac pro, CAP ou BTS : des parcours courts mènent à des emplois stables et bien payés."
+  ],
+  "quiz": [
+    {
+      "q": "Quand un robot d'usine tombe en panne, on appelle…",
+      "options": [
+        "Un technicien de maintenance",
+        "Un magicien",
+        "Un avocat"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Le frigoriste travaille sur…",
+      "options": [
+        "Le froid et la climatisation",
+        "Les congés payés",
+        "Uniquement les frigos de cinéma"
+      ],
+      "reponse": 0
+    }
+  ]
+}

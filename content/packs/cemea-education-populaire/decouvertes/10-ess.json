@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Comprendre ce qu'est une entreprise de l'ESS et son utilité sociale",
+    "programme": [
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "id": "ess",
+  "nom": "Économie sociale",
+  "latin": "ESS & utilité publique · mouvement CEMÉA",
+  "emoji": "🤲",
+  "couleur": "#7a3b8f",
+  "categorie": "nocturne",
+  "taille": "Repère : les bénéfices servent le projet, pas l'inverse",
+  "anecdotes": [
+    "Les CEMÉA sont une association reconnue d'utilité publique ET une entreprise de l'économie sociale et solidaire.",
+    "Dans l'ESS, ce ne sont pas les actionnaires qui décident mais les sociétaires : une personne = une voix.",
+    "Le réseau CEMÉA est décentralisé : chaque tête régionale agit au plus près de son territoire."
+  ],
+  "quiz": [
+    {
+      "q": "Dans une coopérative de l'ESS, la règle de vote est…",
+      "options": [
+        "Une personne = une voix",
+        "Un euro = une voix",
+        "Seuls les fondateurs votent"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "« Reconnue d'utilité publique » signifie que l'association…",
+      "options": [
+        "Poursuit un intérêt général reconnu par l'État",
+        "Est gérée par l'État",
+        "Ne paie aucun impôt"
+      ],
+      "reponse": 0
+    }
+  ]
+}

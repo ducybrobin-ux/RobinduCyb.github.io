@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "controle",
+  "nom": "Illusion de contrôle",
+  "latin": "Illusion of control · Langer, 1975",
+  "emoji": "🎮",
+  "couleur": "#2a5a8a",
+  "categorie": "diurne",
+  "taille": "Antidote : distinguer habileté et hasard",
+  "img": "",
+  "description": "Croire qu'on maîtrise des événements purement aléatoires : lancer fort les dés pour faire un six !",
+  "anecdotes": [
+    "Les loteries vendent le choix des numéros comme un pouvoir.",
+    "Souffler sur les dés ne change pas les probabilités."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Distinguer ce qui relève de l'habileté de ce qui relève du hasard",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

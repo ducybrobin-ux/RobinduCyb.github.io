@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "« Les Ceméa » : Centres d'entraînement aux méthodes d'éducation active.",
+    "Reconnus nationalement d'utilité publique, les CEMÉA fêtent leurs 89 ans en 2026.",
+    "Le réseau est décentralisé : une association nationale tête de réseau et des associations régionales, en métropole comme en outre-mer."
+  ],
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Situer l'éducation populaire dans son contexte historique",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "histoire",
+  "nom": "Repères historiques",
+  "latin": "1936-1937 · le tournant populaire",
+  "emoji": "📜",
+  "couleur": "#3d4a6b",
+  "taille": "Repère : congés payés → éducation pour tous",
+  "description": "1936 : congés payés et front populaire. 1937 : naissance des CEMÉA. Puis Peuple et Culture, les MJC, les maisons de jeunes : tout un mouvement pour l'accès de tous à l'éducation et à la culture."
+}

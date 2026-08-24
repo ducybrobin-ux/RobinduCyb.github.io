@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "recence",
+  "nom": "Biais de récence",
+  "latin": "Recency bias",
+  "emoji": "⏱️",
+  "couleur": "#8a6a2a",
+  "categorie": "diurne",
+  "taille": "Antidote : regagner la vue d'ensemble",
+  "img": "",
+  "description": "Donner trop de poids aux derniers événements : la dernière réponse d'un élève colore toute sa note.",
+  "anecdotes": [
+    "Après un accident médiatisé, tous les risques semblent imminents.",
+    "Tenir un journal aide à se souvenir de tout, pas juste de la fin."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Remettre les derniers événements dans leur contexte global",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

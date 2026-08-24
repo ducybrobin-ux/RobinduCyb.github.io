@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Découvrir la presse jeune et l'expression médiatique des enfants",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "yakamedia",
+  "nom": "Yakamédia",
+  "latin": "Média jeunesse des CEMÉA · revue Yak, 1955",
+  "emoji": "🎙️",
+  "couleur": "#d97b1f",
+  "categorie": "diurne",
+  "taille": "Réflexe : s'exprimer, créer et publier librement",
+  "anecdotes": [
+    "Yakamédia est la plateforme média des CEMÉA : des contenus créés par et pour les jeunes.",
+    "Dès 1955, la revue Yak donnait la parole aux enfants — une révolution à l'époque.",
+    "Fabriquer un journal développe l'esprit critique, l'écriture et la coopération."
+  ],
+  "quiz": [
+    {
+      "q": "Qui écrit et choisit les contenus de Yakamédia ?",
+      "options": [
+        "Les jeunes, accompagnés par des journalistes",
+        "Uniquement des adultes",
+        "Un algorithme"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "La revue Yak a été créée par les CEMÉA en…",
+      "options": [
+        "1955",
+        "1989",
+        "2005"
+      ],
+      "reponse": 0
+    }
+  ]
+}

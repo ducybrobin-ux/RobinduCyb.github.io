@@ -1,0 +1,23 @@
+{
+  "id": "futuriste",
+  "nom": "Futuriste",
+  "emoji": "⚡",
+  "description": "Néons cyan et magenta sur asphalte nocturne.",
+  "meta": "#08131c",
+  "fond": "radial-gradient(900px 480px at 85% -10%, rgba(0, 229, 255, 0.16), transparent 60%), radial-gradient(700px 400px at 0% 105%, rgba(255, 45, 170, 0.13), transparent 55%)",
+  "vars": {
+    "--bg": "#071119",
+    "--bg-soft": "#0b1926",
+    "--card": "#0f2334",
+    "--card-soft": "#142d42",
+    "--ink": "#e6faff",
+    "--text-muted": "#9fc9da",
+    "--primary": "#00e5ff",
+    "--primary-dark": "#00a8bd",
+    "--gold": "#ffe066",
+    "--err": "#ff5d7a",
+    "--ok": "#3dffc0",
+    "--line": "#1d4058",
+    "--shadow": "0 6px 24px rgba(0, 20, 30, 0.6)"
+  }
+}

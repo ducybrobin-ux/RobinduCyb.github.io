@@ -1,0 +1,72 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "barnum",
+  "nom": "Effet Barnum",
+  "latin": "Barnum (Forer) effect · Forer, 1949",
+  "emoji": "🔮",
+  "couleur": "#7a3b8f",
+  "categorie": "nocturne",
+  "taille": "Antidote : demander une description précise",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "« Tu es parfois timide, mais très sociable avec ceux que tu aimes » : ça te ressemble ? Ça ressemble à tout le monde !",
+    "Les horoscopes et faux tests de personnalité utilisent des phrases floues valables pour presque tous.",
+    "Bertram Forer a donné exactement le même « portrait » à tous ses étudiants : ils y ont cru à 4/5 !"
+  ],
+  "chant": {
+    "tempo": 50,
+    "notes": [
+      {
+        "f": 600,
+        "fEnd": 750,
+        "d": 0.35,
+        "g": 0.15,
+        "type": "sawtooth",
+        "v": 0.32
+      },
+      {
+        "f": 700,
+        "fEnd": 550,
+        "d": 0.35,
+        "g": 0.6,
+        "type": "sawtooth",
+        "v": 0.3
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Exiger des descriptions précises et vérifiables plutôt que des phrases universelles",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Un horoscope décrit « ta personnalité unique ». En fait, il…",
+      "options": [
+        "Décrit tout le monde avec des phrases floues",
+        "Lit vraiment dans ton esprit",
+        "Connaît ton avenir"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Comment reconnaître un effet Barnum ?",
+      "options": [
+        "Une description vague qui conviendrait à presque tout le monde",
+        "Des chiffres précis et vérifiables",
+        "Une recette de cuisine"
+      ],
+      "reponse": 0
+    }
+  ]
+}

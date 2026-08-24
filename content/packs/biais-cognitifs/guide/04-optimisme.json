@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "optimisme",
+  "nom": "Biais d'optimisme",
+  "latin": "Optimism bias · Weinstein, 1980",
+  "emoji": "🌈",
+  "couleur": "#d97b1f",
+  "categorie": "diurne",
+  "taille": "Antidote : prévoir une marge de sécurité",
+  "img": "",
+  "description": "« Ça n'arrivera qu'aux autres. » On sous-estime ses risques et on surestime ses chances.",
+  "anecdotes": [
+    "La plupart des conducteurs se disent « au-dessus de la moyenne ».",
+    "Les projets dépassent toujours leur délai prévu : loi de Hofstadter."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Estimer ses risques avec une marge de sécurité au lieu d'un optimisme aveugle",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B7",
+  "bird": "verite",
+  "code": "JDP-B7",
+  "x": 320,
+  "y": 500,
+  "lat": 48.857,
+  "lng": 2.3526,
+  "label": "L'écho sans fin",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Répétée dix fois, une fausse information finit par paraître vraie. Quelle illusion suis-je ?",
+      "reponses": [
+        "illusion de la verite",
+        "l illusion de la verite",
+        "verite illusoire",
+        "illusion de vérité",
+        "la illusion de la vérité",
+        "vérité illusoire"
+      ],
+      "indice": "Mon nom associe « illusion » et une grande mot à 5 lettres : la vérité.",
+      "saviez": "Hasher, Goldstein et Toppino (1977) ont montré que la répétition suffit à créer un sentiment de vérité.",
+      "ages": [
+        6,
+        9
+      ]
+    },
+    "moyen": {
+      "text": "Je ne suis ni preuve ni source : je ne suis qu'une répétition. Et pourtant, plus on m'entend, plus on me croit. Qui suis-je ?",
+      "reponses": [
+        "illusion de la verite",
+        "l illusion de la verite",
+        "verite illusoire",
+        "illusion de vérité",
+        "vérité illusoire"
+      ],
+      "indice": "Les rumeurs prospèrent grâce à moi.",
+      "saviez": "Le réflexe : vérifier la source et la date avant de partager. Une répétition n'est pas une preuve.",
+      "ages": [
+        10,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Sœur jumelle du mensonge, je gagne ma force à chaque écho. Trois chercheurs de 1977 m'ont donnée un nom. Lequel ?",
+      "reponses": [
+        "illusion de la verite",
+        "verite illusoire",
+        "illusory truth"
+      ],
+      "indice": "Illusory truth effect en anglais.",
+      "saviez": "Même des gens avertis retombent dans le panneau : la familiarité agit avant la réflexion.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  },
+  "enigme": null
+}

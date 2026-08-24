@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "apophenie",
+  "nom": "Apophénie",
+  "latin": "Apophenia · Conrad, 1958",
+  "emoji": "👀",
+  "couleur": "#5c5c8a",
+  "categorie": "nocturne",
+  "taille": "Antidote : tester avant de croire",
+  "img": "",
+  "description": "Voir des formes ou des liens là où il n'y en a pas : visages dans les nuages, « coïncidences » partout.",
+  "anecdotes": [
+    "Pareidolie : voir un visage dans une prise électrique.",
+    "Notre cerveau détecteur de motifs, parfois trop zélé."
+  ],
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Tester une coïncidence avant d'y voir un motif réel",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  }
+}

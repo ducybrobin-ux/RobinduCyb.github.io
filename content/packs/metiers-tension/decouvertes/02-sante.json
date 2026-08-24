@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Identifier les métiers du soin en pénurie et la durée réelle de leurs formations",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "sante",
+  "nom": "Le soin",
+  "latin": "Infirmier · aide-soignant",
+  "emoji": "💉",
+  "couleur": "#0f9b8e",
+  "categorie": "nocturne",
+  "taille": "Piste : soigner, un métier de mains et de cœur",
+  "anecdotes": [
+    "Infirmières et aides-soignants sont recherchés partout : hôpitaux, maisons de retraite, soins à domicile.",
+    "La formation d'aide-soignant dure environ un an après la 3e et débouche sur un diplôme d'État.",
+    "Soigner, c'est de la technique ET beaucoup de relation humaine : aucun moment ne ressemble au précédent."
+  ],
+  "quiz": [
+    {
+      "q": "La formation d'aide-soignant dure environ…",
+      "options": [
+        "Un an après la 3e",
+        "Trois jours",
+        "Dix ans"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "On a besoin de soignants…",
+      "options": [
+        "À l'hôpital comme à domicile",
+        "Seulement la nuit",
+        "Seulement dans les grandes villes"
+      ],
+      "reponse": 0
+    }
+  ]
+}

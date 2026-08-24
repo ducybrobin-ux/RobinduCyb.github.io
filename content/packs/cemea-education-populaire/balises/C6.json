@@ -1,0 +1,59 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C6",
+  "bird": "jeu-role",
+  "code": "JDP-C6",
+  "label": "Le terrain des possibles",
+  "x": 287,
+  "y": 507,
+  "lat": 50.6314782,
+  "lng": 3.0559141,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je te fais vivre un entretien ou un débat… pour de faux ! Demain, tu sauras le faire pour de vrai. Que pratique-t-on ici ?",
+      "reponses": [
+        "jeu de role",
+        "le jeu de role",
+        "mise en situation"
+      ],
+      "indice": "On endosse un personnage, comme au théâtre.",
+      "saviez": "Les pilotes s'entraînent sur simulateur : c'est le même principe pour les situations humaines.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Avant, je joue ; après, j'analyse : qu'ai-je ressenti, décidé, appris ? Comment s'appelle cette phase essentielle ?",
+      "reponses": [
+        "debriefing",
+        "le debriefing",
+        "debrief",
+        "retour d experience"
+      ],
+      "indice": "Mot anglais adopté en formation…",
+      "saviez": "Sans débriefing, le jeu reste un divertissement ; avec lui, il devient apprentissage.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Simuler pour ne pas subir : je suis la méthode signature des formations CEMÉA, où l'on éprouve les situations avant de les vivre. De quelle méthode parle-t-on ?",
+      "reponses": [
+        "mises en situation",
+        "mise en situation",
+        "jeux de role",
+        "simulation"
+      ],
+      "indice": "Pluriel conseillé : on n'éprouve jamais qu'une seule fois.",
+      "saviez": "Ces mises en situation préparent aux métiers de l'animation, du social et de l'éducation spécialisée.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

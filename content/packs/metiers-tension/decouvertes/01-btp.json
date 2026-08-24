@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Découvrir des métiers du bâtiment très recherchés et leurs voies d'accès courtes",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "btp",
+  "nom": "Le bâtiment",
+  "latin": "Soudeur · maçon · plombier",
+  "emoji": "🏗️",
+  "couleur": "#d97b1f",
+  "categorie": "diurne",
+  "taille": "Piste : un CAP en 2 ans et les chantiers t'attendent",
+  "anecdotes": [
+    "Soudeurs, couvreurs, plombiers-chauffagistes figurent chaque année parmi les métiers où les recruteurs cherchent le plus de bras.",
+    "Un CAP se prépare en 2 ans, souvent en apprentissage : on touche déjà un salaire.",
+    "On construit partout en France : les chantiers ne se délocalisent pas."
+  ],
+  "quiz": [
+    {
+      "q": "Une voie rapide pour devenir plombier ou soudeur, c'est…",
+      "options": [
+        "Le CAP en apprentissage",
+        "Dix ans d'université",
+        "Attendre une offre miracle"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Les chantiers de bâtiment se trouvent…",
+      "options": [
+        "Près de chez toi, partout en France",
+        "Seulement à Paris",
+        "Seulement à l'étranger"
+      ],
+      "reponse": 0
+    }
+  ]
+}

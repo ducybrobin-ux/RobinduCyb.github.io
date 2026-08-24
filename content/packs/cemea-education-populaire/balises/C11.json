@@ -1,0 +1,61 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "C11",
+  "bird": "locaux-accessibles",
+  "code": "JDP-C11",
+  "label": "La porte large",
+  "x": 149,
+  "y": 138,
+  "lat": 50.6315107,
+  "lng": 3.0558901,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Mes portes sont larges, mes couloirs sans marches : ici, tout le monde peut entrer et apprendre. De quoi parle-t-on ?",
+      "reponses": [
+        "l'accessibilite",
+        "accessibilite",
+        "accessibilité",
+        "un lieu accessible",
+        "locaux accessibles"
+      ],
+      "indice": "Le mot vient de « accéder » : pouvoir entrer.",
+      "saviez": "Les locaux lillois des CEMÉA NPDC sont conçus pour être accessibles à toutes et tous.",
+      "ages": [
+        8,
+        10
+      ]
+    },
+    "moyen": {
+      "text": "Rampes, signalétique claire, temps adapté : je désigne l'ensemble des conditions qui permettent à chacun de participer. Suis-je ?",
+      "reponses": [
+        "l'accessibilite",
+        "accessibilite",
+        "accessibilite universelle",
+        "l accessibilite"
+      ],
+      "indice": "Universelle, même.",
+      "saviez": "L'accessibilité est une condition de la démocratie culturelle défendue par l'éducation populaire.",
+      "ages": [
+        11,
+        13
+      ]
+    },
+    "difficile": {
+      "text": "Siège des CEMÉA Nord-Pas-de-Calais, ce lieu lillois illustre leur principe d'accueil inconditionnel. Dans quelle rue se trouve-t-il ?",
+      "reponses": [
+        "rue ernest deconynck",
+        "ernest deconynck",
+        "11 rue ernest deconynck",
+        "rue deconynck"
+      ],
+      "indice": "Un prénom et un nom lillois : Ernest …",
+      "saviez": "Bien accueillir commence par l'architecture : portes larges, cheminements clairs, temps laissés.",
+      "ages": [
+        14,
+        99
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      9,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Découvrir l'effet spectateur et oser réagir plutôt que d'attendre que quelqu'un d'autre agisse",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "spectateur",
+  "nom": "Les spectateurs",
+  "latin": "Effet spectateur · Darley & Latané, 1968",
+  "emoji": "👀",
+  "couleur": "#2e6fb3",
+  "categorie": "diurne",
+  "taille": "Réflexe : un témoin qui agit change tout",
+  "anecdotes": [
+    "En 1968, deux psychologues ont montré que plus il y a de témoins devant un problème, plus chacun attend que « quelqu'un » agisse.",
+    "La plupart des élèves témoins se sentent mal : ils ne sont pas d'accord, mais n'osent pas bouger.",
+    "Un seul mot d'un témoin (« viens avec nous », « arrêtez », aller prévenir un adulte) peut faire basculer la situation."
+  ],
+  "quiz": [
+    {
+      "q": "Plus il y a de spectateurs autour d'une agression, plus chacun…",
+      "options": [
+        "Attend que quelqu'un d'autre réagisse",
+        "Réagit très vite",
+        "Prend des photos"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Un bon réflexe de témoin, c'est…",
+      "options": [
+        "Soutenir la victime et alerter un adulte",
+        "Filmer pour rigoler",
+        "Relayer la moquerie"
+      ],
+      "reponse": 0
+    }
+  ]
+}

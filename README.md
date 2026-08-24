@@ -14,12 +14,11 @@ Passer de `1 application = 1 parcours` à :
 
 Un nouveau parcours **ne doit pas nécessiter de modifier le cœur**.
 
-## Statut actuel — PHASE 1 : Comprendre
+## Statut actuel — PHASE 2 : Normaliser (étape 1/3 ✅)
 
-Le projet part de l'existant éprouvé de [ducybrobin-ux](https://github.com/ducybrobin-ux) :
-TSLE1 → JDP_BC → Multi_JDP (+ éditions CEMÉA NPDC et Cristaux de Balto), soit déjà
-un moteur multi-packs fonctionnel, offline-first, avec serveur local, tableau de bord
-organisateur et éditeur de contenu.
+La plateforme de référence (Multi JDP v2.0.3) est copiée fidèlement dans ce dépôt
+([docs/MIGRATION.md](docs/MIGRATION.md)). Prochaine étape : extraction du
+`content-schema` + convertisseur vers le format universel `ducyb-parcours`.
 
 | Document | Contenu |
 |---|---|
@@ -27,6 +26,15 @@ organisateur et éditeur de contenu.
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Architecture cible et choix techniques argumentés |
 | [docs/ROADMAP.md](docs/ROADMAP.md) | Plan de migration incrémental (7 étapes vérifiables) |
 | [docs/DATA_MODEL.md](docs/DATA_MODEL.md) | Schéma universel versionné d'un parcours |
+| [docs/MIGRATION.md](docs/MIGRATION.md) | Journal de la migration (provenance + vérifications) |
+
+## Héritage
+
+Ce dépôt prolonge [TSLE1](https://github.com/ducybrobin-ux/tsle1-sentier-oiseaux),
+[JDP_BC / Multi_JDP](https://github.com/ducybrobin-ux/Multi_JDP) et leurs éditions
+[CEMÉA NPDC](https://github.com/ducybrobin-ux/jpd_CEMEAnpdc) /
+[Cristaux de Balto](https://github.com/ducybrobin-ux/jpd_CdB) — qui restent
+fonctionnels et publiés pendant toute la migration.
 
 ## Critère de réussite architecturale
 

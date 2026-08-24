@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "La typographie à l'école : les enfants imprimaient leurs propres textes.",
+    "Son héritage vit dans des centaines de classes coopératives actuelles."
+  ],
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Connaître quelques outils Freinet transposables en classe",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "freinet",
+  "nom": "La pédagogie Freinet",
+  "latin": "École moderne · Célestin Freinet",
+  "emoji": "🔧",
+  "couleur": "#b05f2a",
+  "taille": "Astuce : outils concrets, classe coopérative",
+  "description": "Célestin Freinet, instituteur, invente des outils simples et puissants : texte libre, correspondance scolaire, journal de classe, conseil coopératif, fichiers autocorrectifs. Sa devise implicite : les enfants font eux-mêmes."
+}

@@ -1,0 +1,30 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Le BAFA permet d'encadrer des enfants en accueil collectif de mineurs.",
+    "Chaque année, les CEMÉA Nord-Pas-de-Calais proposent entre 60 et 85 stages BAFA et BAFD.",
+    "Le Service d'Aide au Placement (cemea-sap.fr) met en relation animateurs, directeurs et organisateurs d'accueils collectifs de mineurs."
+  ],
+  "pedagogie": {
+    "ages": [
+      8,
+      99
+    ],
+    "duree_min": 5,
+    "objectif": "Découvrir les parcours vers les métiers de l'animation",
+    "programme": [
+      "cycle 3",
+      "cycle 4"
+    ]
+  },
+  "id": "metiers-animation",
+  "nom": "Métiers de l'animation",
+  "latin": "BPJEPS · animation socio-éducative",
+  "emoji": "🎓",
+  "couleur": "#2a6e5a",
+  "taille": "Piste : du BAFA au BPJEPS",
+  "description": "Animateur ou animatrice, éducateur ou éducatrice, directeur de colo : ces métiers se préparent par la pratique — BAFA/BAFD dès 17 ans, BPJEPS, diplômes d'État — souvent en alternance."
+}

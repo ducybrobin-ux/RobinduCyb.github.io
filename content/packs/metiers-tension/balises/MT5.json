@@ -1,0 +1,56 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT5",
+  "bird": "transport",
+  "code": "JDP-MT5",
+  "label": "L'autoroute du fret",
+  "x": 352,
+  "y": 344,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Sans moi, aucune console ni chaussure n'arrive en magasin. Je roule jour et nuit. Qui suis-je ?",
+      "reponses": [
+        "camion",
+        "le camion",
+        "conducteur routier"
+      ],
+      "indice": "Il traverse les autoroutes.",
+      "saviez": "Conducteurs routiers et caristes manquent partout en France.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Entrepôts, palettes, transpalettes : je fais circuler les marchandises du port à ta porte. Quel secteur suis-je ?",
+      "reponses": [
+        "logistique",
+        "transport",
+        "transport et logistique"
+      ],
+      "indice": "On y pilote des flux.",
+      "saviez": "La logistique moderne utilise radios et robots.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Permis spécial, carte conducteur, FIMO ou FCO : ces titres ouvrent la route aux…",
+      "reponses": [
+        "conducteurs routiers",
+        "routiers"
+      ],
+      "indice": "Ils dorment parfois loin de chez eux.",
+      "saviez": "Quelques mois de formation suffisent après l'âge requis.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Poser une question quand on ne sait pas est une qualité professionnelle, pas une faiblesse.",
+    "Un apprenti recommandé par son maître de stage trouve presque toujours la suite de son parcours."
+  ],
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Identifier les qualités professionnelles attendues et comment les montrer dès le collège",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "soft-skills",
+  "nom": "Les qualités qui comptent",
+  "latin": "Compétences comportementales",
+  "emoji": "🛠️",
+  "couleur": "#0f9b8e",
+  "taille": "Piste : montre ton sérieux",
+  "description": "Ponctualité, soin du travail, esprit d'équipe, respect des règles de sécurité : ce que les employeurs regardent avant même le diplôme. Et cela se montre dès le stage ou l'apprentissage : arriver à l'heure, poser des questions, ranger son poste."
+}

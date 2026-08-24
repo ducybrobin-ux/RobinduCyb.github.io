@@ -1,0 +1,23 @@
+{
+  "id": "retro",
+  "nom": "Rétro",
+  "emoji": "📼",
+  "description": "Sepia chaud des soirées diapo et cassettes VHS.",
+  "meta": "#241a0e",
+  "fond": "radial-gradient(1000px 520px at 80% -10%, rgba(255, 170, 60, 0.14), transparent 60%), radial-gradient(800px 460px at 5% 105%, rgba(200, 90, 40, 0.12), transparent 55%)",
+  "vars": {
+    "--bg": "#221708",
+    "--bg-soft": "#2c1f0d",
+    "--card": "#382713",
+    "--card-soft": "#44301a",
+    "--ink": "#fdf3dd",
+    "--text-muted": "#d3bd97",
+    "--primary": "#ffab40",
+    "--primary-dark": "#d98a25",
+    "--gold": "#ffd76e",
+    "--err": "#ff8674",
+    "--ok": "#ffd76e",
+    "--line": "#5a4326",
+    "--shadow": "0 6px 22px rgba(20, 10, 0, 0.5)"
+  }
+}

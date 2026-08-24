@@ -1,0 +1,51 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [
+      10,
+      15
+    ],
+    "duree_min": 8,
+    "objectif": "Faire connaître les métiers agricoles en pénurie de repreneurs et leur modernité",
+    "programme": [
+      "cycle 4",
+      "orientation 3e"
+    ]
+  },
+  "id": "agriculture",
+  "nom": "L'agriculture",
+  "latin": "Agriculteur · maraîcher · viticulteur",
+  "emoji": "🌾",
+  "couleur": "#7a3b8f",
+  "categorie": "diurne",
+  "taille": "Piste : des fermes entières cherchent une relève",
+  "anecdotes": [
+    "Producteurs de légumes, éleveurs, viticulteurs : beaucoup partent à la retraite sans trouver de repreneur.",
+    "Tracteurs avec GPS, serres connectées, agroécologie : l'agriculture est high-tech.",
+    "CAPa ou bac pro agricole, puis installation possible avec des aides à la reprise."
+  ],
+  "quiz": [
+    {
+      "q": "Beaucoup de fermes cherchent quelqu'un pour…",
+      "options": [
+        "Prendre la relève",
+        "Fermer définitivement",
+        "Tout importer de loin"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "L'agriculture moderne utilise…",
+      "options": [
+        "GPS, capteurs et serres connectées",
+        "Seulement des chevaux",
+        "Aucune technologie"
+      ],
+      "reponse": 0
+    }
+  ]
+}

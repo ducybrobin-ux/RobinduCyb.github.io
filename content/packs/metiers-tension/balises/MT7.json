@@ -1,0 +1,57 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "MT7",
+  "bird": "agriculture",
+  "code": "JDP-MT7",
+  "label": "La moisson dorée",
+  "x": 392,
+  "y": 470,
+  "lat": 48.8566,
+  "lng": 2.3526,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je pousse sous le soleil et je nourris tout le village. Qui suis-je ?",
+      "reponses": [
+        "ble",
+        "blé",
+        "moisson",
+        "la moisson"
+      ],
+      "indice": "Dorée à la fin de l'été.",
+      "saviez": "Beaucoup d'exploitations cherchent un repreneur.",
+      "ages": [
+        11,
+        12
+      ]
+    },
+    "moyen": {
+      "text": "Tracteurs GPS, serres connectées, agroécologie : mon métier n'a plus rien d'archaïque. Qui suis-je ?",
+      "reponses": [
+        "agriculteur",
+        "agricultrice",
+        "agriculture"
+      ],
+      "indice": "Il nourrit la population.",
+      "saviez": "CAPa et bac pro agricoles mènent à l'installation.",
+      "ages": [
+        13,
+        14
+      ]
+    },
+    "difficile": {
+      "text": "Sans repreneur, des exploitations disparaissent : on appelle cette personne tant attendue le ou la…",
+      "reponses": [
+        "repreneur",
+        "repreneuse"
+      ],
+      "indice": "Celui ou celle qui prend la suite.",
+      "saviez": "Des aides publiques existent pour s'installer jeune.",
+      "ages": [
+        15,
+        17
+      ]
+    }
+  }
+}

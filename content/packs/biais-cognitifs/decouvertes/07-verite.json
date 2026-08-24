@@ -1,0 +1,80 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "verite",
+  "nom": "Illusion de la vérité",
+  "latin": "Illusory truth effect · Hasher, Goldstein & Toppino, 1977",
+  "emoji": "🔁",
+  "couleur": "#3d4a6b",
+  "categorie": "nocturne",
+  "taille": "Antidote : vérifier la source",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Plus une information est répétée, plus elle paraît vraie — même si elle est fausse !",
+    "Les rumeurs et la désinformation exploitent cette répétition pour s'installer dans nos têtes.",
+    "Avant de croire, demande-toi : « Qui le dit ? Où est la preuve ? » Une répétition n'est pas une preuve."
+  ],
+  "chant": {
+    "tempo": 60,
+    "notes": [
+      {
+        "f": 440,
+        "fEnd": 440,
+        "d": 0.14,
+        "g": 0.1,
+        "type": "sine",
+        "v": 0.5
+      },
+      {
+        "f": 440,
+        "fEnd": 440,
+        "d": 0.14,
+        "g": 0.1,
+        "type": "sine",
+        "v": 0.5
+      },
+      {
+        "f": 440,
+        "fEnd": 440,
+        "d": 0.14,
+        "g": 0.9,
+        "type": "sine",
+        "v": 0.5
+      }
+    ]
+  },
+  "pedagogie": {
+    "ages": [
+      6,
+      99
+    ],
+    "duree_min": 8,
+    "objectif": "Vérifier source et preuve avant de croire une information répétée",
+    "programme": [
+      "cycle 3",
+      "cycle 4",
+      "lycée"
+    ]
+  },
+  "quiz": [
+    {
+      "q": "Une info répétée dix fois paraît…",
+      "options": [
+        "Plus vraie, même si elle est fausse",
+        "Toujours fausse",
+        "Plus longue"
+      ],
+      "reponse": 0
+    },
+    {
+      "q": "Quel est le meilleur réflexe face à une info surprenante ?",
+      "options": [
+        "Vérifier la source",
+        "La partager tout de suite",
+        "La répéter encore"
+      ],
+      "reponse": 0
+    }
+  ]
+}
