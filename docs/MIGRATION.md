@@ -1,5 +1,22 @@
 # MIGRATION — Journal de la migration vers DUCYB
 
+## Étape ROADMAP #3 — Exemple canonique + validation globale (2026-08-24)
+
+**Créé :**
+
+- `content/examples/exemple-quartier.json` : parcours d'exemple **écrit directement
+  au format universel** (preuve que le schéma tient sans héritage) — stations GPS
+  et purement schématiques, énigmes ×3 niveaux, quiz lié à un personnage, mission
+  d'observation, médias avec transcript, récompense, débriefing ;
+- `tools/validate-parcours.mjs` : valide tous les documents `ducyb-parcours`
+  (`content/ducyb-parcours/` + `content/examples/`) ;
+- étape CI « Validation des documents ducyb-parcours ».
+
+**Vérifications :** 5/5 documents valides (4 conversions + 1 exemple). ✔
+
+**PHASE 2 — Normaliser terminée.** Prochaine étape (ROADMAP #4) : extraire
+`packages/game-engine` depuis app.js avec les premiers tests unitaires.
+
 ## Étape ROADMAP #2 — content-schema + convertisseur (2026-08-24)
 
 **Créé :** [`packages/content-schema`](../packages/content-schema/) — zéro dépendance, modules ES purs :

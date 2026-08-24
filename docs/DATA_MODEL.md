@@ -8,6 +8,12 @@
 - Un parcours = donnée pure. Le moteur ignore tout ce qu'il ne connaît pas
   (champs inconnus préservés pour compatibilité ascendante).
 
+**Exemple canonique complet** : [`content/examples/exemple-quartier.json`](../content/examples/exemple-quartier.json)
+— démontre stations GPS *et* schématiques, énigmes ×3 niveaux, quiz lié à un
+personnage, mission d'observation, médias avec transcript, récompense et débriefing.
+Validation : `node tools/validate-parcours.mjs` (exécutée en CI sur les conversions
+*et* les exemples).
+
 ## 1. Document principal
 
 ```jsonc

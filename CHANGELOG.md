@@ -3,6 +3,14 @@
 Historique DUCYB (moteur universel) puis héritage Multi JDP.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — versionnement sémantique.
 
+## [DUCYB 0.3.0] — 2026-08-24
+
+### Ajouté
+- **Exemple canonique** `content/examples/exemple-quartier.json` : démo complète du format `ducyb-parcours` v1 (stations GPS/schématiques, énigmes ×3 niveaux, quiz, observation, médias, récompenses, débriefing)
+- CLI `tools/validate-parcours.mjs` : validation de tous les documents universels (convertis + exemples)
+- Étape CI « Validation des documents ducyb-parcours »
+- PHASE 2 terminée (étapes 1-3)
+
 ## [DUCYB 0.2.0] — 2026-08-24
 
 ### Ajouté

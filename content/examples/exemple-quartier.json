@@ -1,0 +1,243 @@
+{
+  "$format": "ducyb-parcours",
+  "$version": 1,
+  "id": "exemple-quartier",
+  "title": "À la découverte du quartier",
+  "metadata": {
+    "author": "Équipe DUCYB",
+    "organization": "DUCYB",
+    "language": "fr",
+    "license": "CC-BY-SA-4.0",
+    "createdAt": "2026-08-24",
+    "updatedAt": "2026-08-24"
+  },
+  "description": "Mini parcours d'exemple démontrant toutes les capacités du schéma ducyb-parcours v1 : stations GPS et schématiques, énigmes à trois niveaux, quiz, personnages, récompenses et débriefing.",
+  "theme": "exemple pédagogique",
+  "audience": { "minAge": 9, "maxAge": 14 },
+  "duration": { "minimum": 45, "maximum": 90 },
+  "pedagogy": {
+    "objectives": [
+      "Observer son environnement proche avec un regard documenté",
+      "Formuler une hypothèse et la vérifier sur le terrain"
+    ],
+    "skills": ["observation", "esprit-critique", "cooperation"],
+    "competencies": [
+      {
+        "id": "lecture-paysage",
+        "nom": "Lire un paysage urbain",
+        "description": "Repérer les éléments bâtis et naturels qui racontent l'histoire d'un lieu.",
+        "emoji": "🏙️",
+        "objectif": "Identifier trois indices matériels de l'évolution du quartier",
+        "ages": [9, 14],
+        "programme": ["cycle 3", "cycle 4"]
+      }
+    ],
+    "evaluation": [
+      { "indicator": "Qualité de l'argumentation", "observable": "L'équipe cite au moins deux indices observés pour justifier sa réponse" }
+    ]
+  },
+  "game": {
+    "mode": "cooperative",
+    "scoring": { "starsPerStation": 3, "timeBonus": true },
+    "rules": { "order": "lineaire" }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": { "lat": 50.6292500, "lng": 3.0573000 },
+    "trail": [
+      { "x": 120, "y": 80 },
+      { "x": 320, "y": 180 },
+      { "x": 520, "y": 340 }
+    ]
+  },
+  "stations": [
+    {
+      "id": "S1",
+      "label": "La fontaine du marché",
+      "code": "EX-S1",
+      "discoveryId": "gargouille",
+      "lat": 50.6292500,
+      "lng": 3.0573000,
+      "radius": 15,
+      "x": 120,
+      "y": 80,
+      "accessibility": { "alternativeToGps": "qr|manuel", "transcript": "" },
+      "missions": ["S1-enigme"]
+    },
+    {
+      "id": "S2",
+      "label": "Le porche de la bibliothèque",
+      "code": "EX-S2",
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "x": 320,
+      "y": 180,
+      "missions": ["S2-enigme"]
+    },
+    {
+      "id": "S3",
+      "label": "Le vieux tilleul",
+      "code": "EX-S3",
+      "lat": null,
+      "lng": null,
+      "radius": 20,
+      "x": 520,
+      "y": 340,
+      "missions": ["S3-enigme", "quiz-gargouille"]
+    }
+  ],
+  "missions": [
+    {
+      "id": "S1-enigme",
+      "type": "enigme",
+      "stationId": "S1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je verse de l'eau sans jamais avoir soif, et les pièces jetées me rendent sourde. Que suis-je ?",
+          "answers": ["la fontaine", "fontaine", "une fontaine"],
+          "ages": [9, 11],
+          "hint": "On y remplit les bidons le jour du marché.",
+          "knowMore": "Les fontaines publiques ont longtemps servi de point de rencontre et d'information."
+        },
+        "moyen": {
+          "text": "Compte les vasques de la fontaine : ce nombre, multiplié par quatre, donne l'année de sa construction. Combien y a-t-il de vasques ?",
+          "answers": ["2", "deux"],
+          "ages": [12, 14],
+          "hint": "Regarde autour du bassin principal, pas dans l'eau.",
+          "knowMore": ""
+        },
+        "difficile": {
+          "text": "Sur la plaque de la fontaine, une date est gravée. Donne-la sous la forme AAAA.",
+          "answers": ["1889"],
+          "ages": [13, 14],
+          "hint": "Elle commence comme l'année de l'Exposition universelle de Paris.",
+          "knowMore": ""
+        }
+      }
+    },
+    {
+      "id": "S2-enigme",
+      "type": "enigme",
+      "stationId": "S2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Je garde des milliers d'histoires mais je ne les lis jamais. Où es-tu arrivé ?",
+          "answers": ["bibliotheque", "la bibliotheque", "à la bibliothèque", "a la bibliotheque"],
+          "ages": [9, 11],
+          "hint": "Silence, on lit !",
+          "knowMore": ""
+        },
+        "moyen": {
+          "text": "Au-dessus du porche, une inscription rappelle à quoi sert le lieu. Recopie le premier mot gravé.",
+          "answers": ["aux livres", "livres", "aux-livres"],
+          "ages": [12, 14],
+          "hint": "Lève les yeux en entrant.",
+          "knowMore": ""
+        },
+        "difficile": {
+          "text": "Trouve dans la vitrine le livre le plus ancien exposé : donne son siècle (chiffre romain accepté).",
+          "answers": ["19e", "xix", "19eme", "xixe"],
+          "ages": [13, 14],
+          "hint": "Il n'est pas question du bâtiment mais d'un ouvrage.",
+          "knowMore": ""
+        }
+      }
+    },
+    {
+      "id": "S3-enigme",
+      "type": "enigme",
+      "stationId": "S3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Mesure l'arbre à bras ouverts avec ton équipe : environ combien de fois votre chaîne humaine fait le tour du tronc ?",
+          "answers": ["3", "trois", "4", "quatre"],
+          "ages": [9, 11],
+          "hint": "Serrez-vous, pas besoin de mètre.",
+          "knowMore": ""
+        },
+        "moyen": {
+          "text": "Un tilleul était planté dans chaque village pour symboliser quoi ?",
+          "answers": ["la liberte", "liberte", "la liberté"],
+          "ages": [12, 14],
+          "hint": "Révolution française…",
+          "knowMore": "Beaucoup de « tilleuls de la Liberté » datent de 1789-1792."
+        },
+        "difficile": {
+          "text": "Estime la hauteur du tilleul avec la méthode de l'ombre : donne ta réponse en mètres (± 2 m acceptés).",
+          "answers": ["15", "16", "17", "18", "quatrevingtdix"],
+          "ages": [13, 14],
+          "hint": "Compare avec l'ombre d'un participant dont tu connais la taille.",
+          "knowMore": ""
+        }
+      }
+    },
+    {
+      "id": "quiz-gargouille",
+      "type": "quiz",
+      "characterId": "gargouille",
+      "questions": [
+        {
+          "q": "Que mange une gargouille selon la légende ?",
+          "options": ["Des navires et leurs équipages", "Des pommes", "Du pain rassis"],
+          "answer": 0
+        },
+        {
+          "q": "À quoi servaient vraiment les gargouilles sur les églises ?",
+          "options": ["À décorer uniquement", "À évacuer l'eau de pluie", "À effrayer les facteurs"],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "S3-observation",
+      "type": "observation",
+      "stationId": "S3",
+      "consigne": "Prenez en photo la forme la plus étrange du tronc et inventez son histoire en une phrase."
+    }
+  ],
+  "characters": [
+    {
+      "id": "gargouille",
+      "nom": "Margot la Gargouille",
+      "latin": "Gargouilla vulgaris",
+      "emoji": "🐉",
+      "couleur": "#5b7f95",
+      "categorie": "légende urbaine",
+      "taille": "Petite mais très bavarde",
+      "img": "",
+      "anecdotes": [
+        "Une gargouille est d'abord une gouttière : elle évacue l'eau du toit loin des murs.",
+        "La légende dit qu'elle crachait le feu ; les maçons ont préféré lui faire cracher l'eau de pluie."
+      ],
+      "pedagogy": {
+        "ages": [9, 14],
+        "dureeMin": 5,
+        "objectif": "Distinguer légende et fonction technique d'un objet architectural",
+        "programme": ["cycle 3", "cycle 4"]
+      }
+    }
+  ],
+  "media": [
+    {
+      "id": "audio-intro",
+      "kind": "audio",
+      "src": "media/intro.mp3",
+      "transcript": "Bienvenue ! Margot la Gargouille a caché trois énigmes dans le quartier. À vous de jouer !"
+    }
+  ],
+  "rewards": [
+    { "id": "badge-fontaine", "nom": "Œil de lynx", "condition": "Valider la station S1 sans indice" }
+  ],
+  "debriefing": {
+    "participantQuestions": [
+      "Quel indice du quartier t'a le plus surpris, et pourquoi ?",
+      "Une hypothèse de ton équipe s'est-elle révélée fausse ? Comment l'avez-vous découvert ?"
+    ],
+    "facilitatorReport": [
+      "L'équipe a-t-elle distingué observation et interprétation ?",
+      "Quelle compétence semble acquise / à consolider ?"
+    ],
+    "skillsObserved": ["observation", "esprit-critique", "cooperation"]
+  }
+}

@@ -33,6 +33,9 @@ jobs:
       - name: Conversion ducyb-parcours à jour
         run: node tools/convert-packs.mjs --check
 
+      - name: Validation des documents ducyb-parcours
+        run: node tools/validate-parcours.mjs
+
       - name: JSON valides
         run: |
           fail=0
