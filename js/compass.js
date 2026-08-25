@@ -120,22 +120,13 @@ const Compass = (function () {
     if (!cb) return;
     const out = { heading: trueHeading(heading), decl, pos, target, bearing: null, distance: null };
     if (pos) {
-      out.distance = AudioSys.haversine(pos.lat, pos.lng, target.lat, target.lng);
-      out.bearing = bearing(pos.lat, pos.lng, target.lat, target.lng);
+      out.distance = GeoMath.haversine(pos.lat, pos.lng, target.lat, target.lng);
+      out.bearing = GeoMath.bearing(pos.lat, pos.lng, target.lat, target.lng);
     }
     cb(out);
   }
 
-  /* Cap (azimut) depuis le point courant vers la cible, en degrés 0-360 */
-  function bearing(lat1, lng1, lat2, lng2) {
-    const toRad = (d) => (d * Math.PI) / 180;
-    const toDeg = (r) => (r * 180) / Math.PI;
-    const p1 = toRad(lat1), p2 = toRad(lat2);
-    const dl = toRad(lng2 - lng1);
-    const y = Math.sin(dl) * Math.cos(p2);
-    const x = Math.cos(p1) * Math.sin(p2) - Math.sin(p1) * Math.cos(p2) * Math.cos(dl);
-    return (toDeg(Math.atan2(y, x)) + 360) % 360;
-  }
+  /* bearing déplacé dans packages/geolocation → window.GeoMath.bearing */
 
   function stop() {
     if (geoId != null && navigator.geolocation) navigator.geolocation.clearWatch(geoId);
@@ -151,5 +142,5 @@ const Compass = (function () {
     pos = null;
   }
 
-  return { support, requestPermission, start, stop, bearing, haversine: AudioSys.haversine };
+  return { support, requestPermission, start, stop, bearing: GeoMath.bearing, haversine: GeoMath.haversine };
 })();

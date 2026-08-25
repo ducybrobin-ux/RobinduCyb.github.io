@@ -1,5 +1,33 @@
 # MIGRATION — Journal de la migration vers DUCYB
 
+## Étape ROADMAP #5a — Extraction geolocation (2026-08-25)
+
+**Créé :** [`packages/geolocation`](../packages/geolocation/) — 4 fonctions pures extraites
+depuis trois fichiers hérités :
+
+- `haversine()` — depuis `js/audio.js` (AudioSys) → distance GPS en mètres (Haversine)
+- `bearing()` — depuis `js/compass.js` → azimut [0°, 360°] vers une cible
+- `normDeg()` — depuis `js/app.js` → angle normalisé [-180°, 180°]
+- `cardinal()` — depuis `js/app.js` → degrés → direction cardinale (N/NE/E/SE/S/SO/O/NO)
+
+**Modifié :**
+
+- `js/audio.js` — `haversine` déplacée ; AudioSys.haversine devient un getter vers `GeoMath.haversine`
+  (compatibilité descendante)
+- `js/compass.js` — `bearing()` et `AudioSys.haversine` remplacés par `GeoMath.bearing` et
+  `GeoMath.haversine`
+- `js/app.js` — `normDeg()` et `cardinal()` supprimés ; adapter `const {...} = window.GeoMath`
+  en haut de l'IIFE
+- `js/geo.js` (généré par `tools/build-geo.mjs`) expose `window.GeoMath`
+- `sw.js` bumpé v9, `js/geo.js` ajouté au précache
+- `index.html` : script `js/geo.js` ajouté avant audio.js
+
+**Créé :** `tools/smoke-geo.mjs`, `tools/build-geo.mjs`, `tests/unit/geolocation.test.mjs`
+
+**Vérifications :** 28 tests unitaires ✔ | smoke-geo ✔ | smoke-engine ✔ |
+build-data/build-engine/build-geo/convert/validate — tous OK ✔ | 0 erreur syntaxe ✔
+CI verte (9 étapes) ✔
+
 ## Étape ROADMAP #4 — Extraction game-engine + tests (2026-08-24)
 
 **Créé :** [`packages/game-engine`](../packages/game-engine/) — 4 fonctions pures extraites

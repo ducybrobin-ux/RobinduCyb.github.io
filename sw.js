@@ -5,9 +5,9 @@
    Wi-Fi du site, puis disponibles en zone blanche.
    ========================================================= */
 
-const VERSION = "jdpbc-v8";
-const CACHE = "jdpbc-core-v8";
-const RUNTIME = "jdpbc-runtime-v8";
+const VERSION = "jdpbc-v9";
+const CACHE = "jdpbc-core-v9";
+const RUNTIME = "jdpbc-runtime-v9";
 
 const PRECACHE = [
   "./",
@@ -15,6 +15,7 @@ const PRECACHE = [
   "manifest.json",
   "css/styles.css",
   "js/engine.js",
+  "js/geo.js",
   "js/data.js",
   "js/store.js",
   "js/i18n.js",

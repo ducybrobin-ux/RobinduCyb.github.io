@@ -7,6 +7,9 @@
 (function () {
   "use strict";
 
+  /* ---------- GeoMath (packages/geolocation → js/geo.js) ---------- */
+  const { normDeg, cardinal, haversine: geoHaversine } = window.GeoMath;
+
   /* ---------- État ---------- */
   const App = {
     screen: "home",
@@ -1966,10 +1969,7 @@
     }
   }
 
-  /* Angle normalisé dans [-180, 180] */
-  function normDeg(d) {
-    return ((((d % 360) + 360) % 360) + 180) % 360 - 180;
-  }
+  /* normDeg et cardinal → packages/geolocation (GeoMath) */
 
   /* État de proximité partagé (lumière + émoticône) :
      - null        : pas de position
@@ -2045,10 +2045,7 @@
     if (idx === 4) el.classList.add("happy");
   }
 
-  function cardinal(deg) {
-    const dirs = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"];
-    return dirs[Math.round((((deg % 360) + 360) % 360) / 45) % 8];
-  }
+  /* cardinal → packages/geolocation (GeoMath) */
 
    /* ---------- MODE ADMIN ---------- */
   function renderGod() {

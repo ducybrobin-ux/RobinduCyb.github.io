@@ -25,7 +25,8 @@
 | # | Étape | Livrable | Non-régression |
 |---|---|---|---|
 | 4 | Extraire `game-engine` (normalize, checkAnswer, makeQuiz, getEnigme) avec **premiers tests unitaires** | moteur importable sans DOM ; app.js consomme le module | ✅ fait (17 tests, smoke VM, CI verte) |
-| 5 | Extraire `geolocation` + `offline` (code existant déplacé) | modules testés | idem |
+| 5a | Extraire `geolocation` (haversine, bearing, normDeg, cardinal) depuis audio.js/compass.js/app.js | module pur, 28 tests, app.js/compass.js/audio.js consomment GeoMath | ✅ fait (CI verte, smoke-geo, SW v9) |
+| 5b | Extraire `offline` (service worker, cache registry, queue de synchronisation) | modules testés | pending |
 | 6 | `pedagogy-engine` + débriefing (nouveau, inoffensif si vide) | bilan fin de parcours | optionnel |
 
 ## PHASE 4 — Unifier

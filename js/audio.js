@@ -268,14 +268,9 @@ const AudioSys = (function () {
 
   function stop() { stopProximity(); stopLoop(); }
 
-  function haversine(lat1, lng1, lat2, lng2) {
-    const R = 6371000;
-    const toRad = (d) => (d * Math.PI) / 180;
-    const dLat = toRad(lat2 - lat1);
-    const dLng = toRad(lng2 - lng1);
-    const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
-    return 2 * R * Math.asin(Math.sqrt(a));
-  }
+  /* haversine déplacé dans packages/geolocation → window.GeoMath.haversine.
+     On garde l'alias AudioSys.haversine pour compatibilité descendante. */
+  const haversine = (...args) => window.GeoMath.haversine(...args);
 
   /* Jouer un son « signal » de validation */
   function blip(freq = 880) {
@@ -292,7 +287,8 @@ const AudioSys = (function () {
   }
 
   return {
-    ensure, setVolume, playBird, stop, startProximity, stopProximity, blip, haversine,
+    ensure, setVolume, playBird, stop, startProximity, stopProximity, blip,
+    get haversine() { return window.GeoMath.haversine; },
     testAlert, resetCustom,
     get isPlaying() { return !!playingBird; },
     get alertMode() { return alertMode; },
