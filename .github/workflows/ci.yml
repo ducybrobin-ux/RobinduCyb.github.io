@@ -30,6 +30,9 @@ jobs:
       - name: Synchronisation content/ → js/data.js
         run: node tools/build-data.mjs --check
 
+      - name: Synchronisation packages/game-engine → js/engine.js
+        run: node tools/build-engine.mjs --check
+
       - name: Conversion ducyb-parcours à jour
         run: node tools/convert-packs.mjs --check
 
@@ -46,3 +49,6 @@ jobs:
             fi
           done
           exit $fail
+
+      - name: Tests unitaires game-engine
+        run: node --test tests/unit/

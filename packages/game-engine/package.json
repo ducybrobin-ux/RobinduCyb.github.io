@@ -1,0 +1,9 @@
+{
+  "name": "@ducyb/game-engine",
+  "version": "0.1.0",
+  "description": "Moteur de jeu pur (normalize, checkAnswer, makeQuiz, getEnigme). Zéro dépendance.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "license": "AGPL-3.0"
+}

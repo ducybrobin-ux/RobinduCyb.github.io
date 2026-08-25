@@ -3,6 +3,20 @@
 Historique DUCYB (moteur universel) puis héritage Multi JDP.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — versionnement sémantique.
 
+## [DUCYB 0.4.0] — 2026-08-24
+
+### Ajouté
+- **`packages/game-engine`** (zéro dépendance, ES modules pur) : `normalize`, `checkAnswer`, `makeQuiz` (rng injectable), `getEnigme` — importable en Node.js pour les tests
+- `tools/build-engine.mjs` : génère `js/engine.js` (script classique navigateur) depuis les sources ESM avec `--check`
+- CLI `tools/smoke-engine.mjs` : smoke test VM de toutes les fonctions moteur
+- **Tests unitaires** `tests/unit/game-engine.test.mjs` (17 tests : normalize, checkAnswer, makeQuiz, getEnigme)
+- Étapes CI : « Synchronisation packages/game-engine → js/engine.js » + « Tests unitaires game-engine »
+
+### Modifié
+- `js/data.js` : les 4 fonctions moteur sont maintenant des adapters `var {...}=window.DUCYB_ENGINE` (les définitions originales vivent dans `packages/game-engine/src/`)
+- `index.html`, `dashboard.html`, `editeur.html`, `questionnaire.html` : ajout de `js/engine.js` avant `data.js`
+- `sw.js` : ajout de `js/engine.js` au précache, bump `jdpbc-v7` → `jdpbc-v8`
+
 ## [DUCYB 0.3.0] — 2026-08-24
 
 ### Ajouté

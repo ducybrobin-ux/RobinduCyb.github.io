@@ -3,7 +3,7 @@
 > Chaque étape = un livrable vérifiable, une PR reviewable, un critère de non-régression.
 > Interdit : merger deux étapes, ou « refactorer au passage ».
 
-## PHASE 1 — Comprendre ✅ (en cours)
+## PHASE 1 — Comprendre ✅
 
 - [x] Audit complet de l'organisation → [AUDIT.md](AUDIT.md)
 - [x] Architecture cible → [ARCHITECTURE.md](ARCHITECTURE.md)
@@ -24,7 +24,7 @@
 
 | # | Étape | Livrable | Non-régression |
 |---|---|---|---|
-| 4 | Extraire `game-engine` (unlock, checkAnswer, quiz, scoring) avec **premiers tests unitaires** | moteur importable sans DOM ; app.js consomme le module | parcours rejoué à l'identique |
+| 4 | Extraire `game-engine` (normalize, checkAnswer, makeQuiz, getEnigme) avec **premiers tests unitaires** | moteur importable sans DOM ; app.js consomme le module | ✅ fait (17 tests, smoke VM, CI verte) |
 | 5 | Extraire `geolocation` + `offline` (code existant déplacé) | modules testés | idem |
 | 6 | `pedagogy-engine` + débriefing (nouveau, inoffensif si vide) | bilan fin de parcours | optionnel |
 

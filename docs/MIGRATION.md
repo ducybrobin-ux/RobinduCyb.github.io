@@ -1,5 +1,23 @@
 # MIGRATION — Journal de la migration vers DUCYB
 
+## Étape ROADMAP #4 — Extraction game-engine + tests (2026-08-24)
+
+**Créé :** [`packages/game-engine`](../packages/game-engine/) — 4 fonctions pures extraites
+de `js/data.js` (héritage Multi JDP) :
+
+- `normalize.js` — normalisation de réponse (accents, casse, espaces, apostrophes) ;
+- `answers.js` — vérification de réponse avec ignore des articles initiaux ;
+- `quiz.js` — construction de quiz mélangé avec RNG injectable (tests déterministes) ;
+- `enigmes.js` — sélection d'énigme par difficulté (modulaire ou legacy).
+
+**Modifié :** `js/data.js` — les 4 fonctions deviennent des adapters
+`var {...} = window.DUCYB_ENGINE` ; définitions vivent dans `packages/game-engine/src/`.
+`js/engine.js` (généré par `tools/build-engine.mjs`) expose les fonctions au navigateur.
+Script tag `engine.js` ajouté dans les 4 pages HTML. `sw.js` bumpé (v8, engine.js en précache).
+
+**Vérifications :** 17 tests unitaires ✔ | smoke VM engine ✔ | smoke2 ✔ |
+build-data/build-engine/convert/validate — tous OK ✔ | 0 erreur syntaxe ✔
+
 ## Étape ROADMAP #3 — Exemple canonique + validation globale (2026-08-24)
 
 **Créé :**

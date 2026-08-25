@@ -2953,39 +2953,13 @@ function getBalise(id) { return BALISES.find((b) => b.id === id); }
 function getBaliseIndex(id) { return BALISES.findIndex((b) => b.id === id); }
 function nextBalise(id) { const i = getBaliseIndex(id); return i >= 0 && i < BALISES.length - 1 ? BALISES[i + 1] : null; }
 
-/* Retourne l'énigme d'une balise selon la difficulté choisie */
-function getEnigme(balise, difficulty) {
-  if (!balise) return null;
-  const d = difficulty || "facile";
-  if (balise.enigmes && balise.enigmes[d]) return balise.enigmes[d];
-  return balise.enigme || null;
-}
-
-/* Normalisation d'une réponse : minuscules, sans accents ni espaces doubles */
-function normalize(s) {
-  return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[''\u2019]/g, " ").replace(/\s+/g, " ").trim();
-}
-
-function checkAnswer(enigme, answer) {
-  const a = normalize(answer);
-  if (!a) return false;
-  return enigme.reponses.some((r) => normalize(r) === a || normalize(r) === a.replace(/^(le |la |un |une |l )/, ""));
-}
-
-/* Quiz ---------------------------------------------------------------- */
-function makeQuiz(bird) {
-  return bird.quiz.map((q, i) => {
-    const entries = q.options.map((opt, j) => ({ opt, j }));
-    entries.sort(() => Math.random() - 0.5);
-    return {
-      bird: bird.id,
-      num: i,
-      q: q.q,
-      options: entries.map((e) => e.opt),
-      reponse: entries.findIndex((e) => e.j === q.reponse),
-    };
-  });
-}
+/* ---- Moteur de jeu externalisé ----
+ * normalize, checkAnswer, makeQuiz, getEnigme vivent désormais dans
+ * packages/game-engine/src/ (importables en Node.js, testables).
+ * js/engine.js (généré par tools/build-engine.mjs) expose ces fonctions
+ * via window.DUCYB_ENGINE.
+ */
+var { normalize, checkAnswer, makeQuiz, getEnigme } = window.DUCYB_ENGINE;
 
 /* ---- Surcharges éditables (admin-data.json) -------------------------
    Applique les modifications sauvegardées par l'éditeur (serveur ou god
