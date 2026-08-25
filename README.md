@@ -16,12 +16,14 @@ Passer de `1 application = 1 parcours` à :
 
 Un nouveau parcours **ne doit pas nécessiter de modifier le cœur**.
 
-## Statut actuel — PHASE 3 : Extraire
+## Statut actuel — PHASE 3 : Extraire ✅
 
-Le moteur de jeu pur (`packages/game-engine`) est extrait et testé (17 tests, CI verte).
+Le moteur de jeu pur (`packages/game-engine`) est extrait et testé (17 tests).
 `packages/geolocation` extrait (28 tests, haversine/bearing/normDeg/cardinal).
+`packages/offline` extrait (23 tests, service worker → module testable).
+68 tests total, CI verte.
 [Schéma universel documenté](content/examples/exemple-quartier.json) avec exemple canonique.
-Suivant : extraction `offline`.
+Prochaine étape : PHASE 4 — Migrer.
 
 | Document | Contenu |
 |---|---|
