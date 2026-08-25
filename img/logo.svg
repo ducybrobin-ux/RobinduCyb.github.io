@@ -1,29 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40" role="img" aria-labelledby="title desc">
+
+  <title id="title">CURIOS</title>
+  <desc id="desc">Logo CURIOS, un parcours formant la lettre C et se terminant par un repère.</desc>
+
   <defs>
-    <radialGradient id="bg" cx="50%" cy="35%" r="80%">
-      <stop offset="0%" stop-color="#123c6e"/>
-      <stop offset="60%" stop-color="#0c2a52"/>
-      <stop offset="100%" stop-color="#081b38"/>
-    </radialGradient>
-    <linearGradient id="brain" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f5d94e"/>
-      <stop offset="100%" stop-color="#e8b82e"/>
+    <linearGradient id="route" x1="4" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00A6A6"></stop>
+      <stop offset="0.55" stop-color="#20B878"></stop>
+      <stop offset="1" stop-color="#F5A623"></stop>
     </linearGradient>
   </defs>
-  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
-  <circle cx="110" cy="100" r="7" fill="#fff" opacity="0.9"/>
-  <circle cx="410" cy="80" r="5" fill="#fff" opacity="0.8"/>
-  <circle cx="440" cy="180" r="6" fill="#fff" opacity="0.85"/>
-  <circle cx="70" cy="220" r="5" fill="#fff" opacity="0.75"/>
-  <g stroke="#1a1a1a" stroke-width="7" fill="none" stroke-linecap="round">
-    <path d="M256 150 C 190 150 160 200 168 250 C 140 270 140 330 175 355 C 170 400 210 430 255 425 L 255 150 Z" fill="url(#brain)" stroke-width="8"/>
-    <path d="M257 150 C 322 150 352 200 344 250 C 372 270 372 330 337 355 C 342 400 302 430 257 425 L 257 150 Z" fill="url(#brain)" stroke-width="8"/>
-    <path d="M205 205 q 25 20 50 0"/>
-    <path d="M195 275 q 30 25 60 0"/>
-    <path d="M215 350 q 22 18 42 0"/>
-    <path d="M305 205 q -22 20 -45 2"/>
-    <path d="M315 280 q -28 24 -58 2"/>
-    <path d="M298 352 q -20 16 -40 0"/>
-  </g>
-  <text x="256" y="486" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="#f5d94e" text-anchor="middle" letter-spacing="8">JDP_BC</text>
+
+  <!-- C / parcours -->
+  <path d="M34 9
+       C29 4 21 3 14 6
+       C6 10 3 17 4 24
+       C5 32 12 37 20 37
+       C27 37 32 34 35 29" fill="none" stroke="#073B5C" stroke-width="5" stroke-linecap="round"></path>
+
+  <!-- trajectoire -->
+  <path d="M7 27
+       C11 31 17 33 22 31
+       C27 29 29 25 29 21
+       C29 16 26 12 22 10
+       C18 8 14 9 11 11" fill="none" stroke="url(#route)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"></path>
+
+  <!-- point de départ -->
+  <circle cx="8" cy="27" r="2.5" fill="#073B5C"></circle>
+
+  <!-- destination / repère -->
+  <path d="M34 5
+       C30.7 5 28 7.5 28 10.5
+       C28 14.8 34 19 34 19
+       C34 19 40 14.8 40 10.5
+       C40 7.5 37.3 5 34 5Z" fill="#F5A623"></path>
+
+  <circle cx="34" cy="10.5" r="2" fill="#073B5C"></circle>
+
+  <!-- nom -->
+  <text x="48" y="28" font-family="Inter, Poppins, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.8" fill="#073B5C">
+    CURIOS
+  </text>
+
 </svg>
