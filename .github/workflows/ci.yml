@@ -36,6 +36,9 @@ jobs:
       - name: Synchronisation packages/geolocation → js/geo.js
         run: node tools/build-geo.mjs --check
 
+      - name: Synchronisation packages/offline → sw.js
+        run: node tools/build-sw.mjs --check
+
       - name: Conversion curios-parcours à jour
         run: node tools/convert-packs.mjs --check
 

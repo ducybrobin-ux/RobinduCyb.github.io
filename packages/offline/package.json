@@ -1,0 +1,9 @@
+{
+  "name": "@curios/offline",
+  "version": "0.1.0",
+  "description": "Configuration et stratégies de cache pour le service worker Curi🧭s. Zéro dépendance.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "license": "AGPL-3.0"
+}

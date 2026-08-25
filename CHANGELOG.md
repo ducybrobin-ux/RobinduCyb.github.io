@@ -13,6 +13,11 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — 
 - `sw.js` : bump `jdpbc-v9` → `curios-v1`
 - Tous les fichiers HTML, JS, CSS, docs et wiki mis à jour
 
+### Ajouté
+- **`packages/offline`** (zéro dépendance) : config du service worker (VERSION, CACHE, RUNTIME, PRECACHE) + stratégies de cache (shouldBypassCache, fetchStrategy, shouldCacheRuntime, offlineFallback, cachesToDelete) — 23 tests unitaires
+- `tools/build-sw.mjs` : génère `sw.js` depuis `packages/offline/src/` avec `--check`
+- Logo et icônes Curi🧭s (SVG + PNG 192/512/maskable)
+
 ## [DUCYB 0.4.0] — 2026-08-24
 
 ### Ajouté

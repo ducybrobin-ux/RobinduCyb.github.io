@@ -1,8 +1,7 @@
-﻿/* =========================================================
-   JDP — Service worker
-   Mode hors-ligne : toutes les données (cartes, sons,
-   fiches) sont mises en cache au premier chargement sur le
-   Wi-Fi du site, puis disponibles en zone blanche.
+/* =========================================================
+   Curi🧭s — Service worker
+   Généré par tools/build-sw.mjs — NE PAS ÉDITER MANUELLEMENT.
+   Source : packages/offline/src/{config,strategy}.js
    ========================================================= */
 
 const VERSION = "curios-v1";
@@ -58,9 +57,7 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(
-        keys
-          .filter((k) => k !== CACHE && k !== RUNTIME)
-          .map((k) => caches.delete(k))
+        cachesToDelete(keys, CACHE, RUNTIME).map((k) => caches.delete(k))
       ))
       .then(() => self.clients.claim())
   );
@@ -81,32 +78,23 @@ self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
 
-  // Les appels API doivent toujours être frais : jamais mis en cache.
-  if (req.url.includes("/api/")) {
+  if (shouldBypassCache(req.url)) {
     e.respondWith(fetch(req).catch(() => Response.error()));
     return;
   }
 
-  // Les surcharges éditeur doivent toujours être fraîches.
-  if (req.url.includes("/admin-data.json")) {
-    e.respondWith(fetch(req, { cache: "no-store" }).catch(() => Response.error()));
-    return;
-  }
-
-  // Stratégie : cache d'abord, réseau en secours (offline-first).
   e.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
       return fetch(req)
         .then((resp) => {
-          if (resp && resp.ok && req.url.startsWith(self.location.origin)) {
+          if (shouldCacheRuntime({ ok: resp.ok, url: req.url, origin: self.location.origin })) {
             const copy = resp.clone();
             caches.open(RUNTIME).then((c) => c.put(req, copy));
           }
           return resp;
         })
         .catch(() => {
-          // Navigation hors-ligne : retour à l'accueil.
           if (req.mode === "navigate") return caches.match("index.html");
           return Response.error();
         });
