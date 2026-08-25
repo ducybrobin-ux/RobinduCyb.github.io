@@ -3,7 +3,7 @@
  * build-geo — génère js/geo.js (ES5, navigateur) depuis packages/geolocation.
  * Usage : node tools/build-geo.mjs [--check]
  *
- * Expose window.DUCYB_GEO avec { haversine, bearing, normDeg, cardinal }.
+ * Expose window.GeoMath avec { haversine, bearing, normDeg, cardinal }.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";

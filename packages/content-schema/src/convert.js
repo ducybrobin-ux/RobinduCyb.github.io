@@ -1,5 +1,5 @@
 /* convert.js — Conversion d'un pack historique « jdpbc-pack » vers
- * un document universel « ducyb-parcours » v1.
+ * un document universel « curios-parcours » v1.
  *
  * Garde-fous :
  *  - conversion pure (aucune mutation des entrées, sortie déterministe) ;
@@ -107,7 +107,7 @@ export function parcoursFromPack({ pack, decouvertes, guide, balises }) {
   }
 
   const doc = {
-    $format: "ducyb-parcours",
+    $format: "curios-parcours",
     $version: 1,
     id: pack.id,
     title: pack.nom,

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0c3b2e">
-  <title>JDP — Tableau de bord</title>
+  <title>Curi🧭s — Tableau de bord</title>
   <link rel="icon" href="img/icon.svg">
   <link rel="stylesheet" href="css/styles.css">
   <style>
@@ -239,8 +239,8 @@
 </head>
 <body>
   <header class="topbar">
-    <img class="topbar-logo" src="img/logo.svg" alt="Multi JDP">
-    <h1 data-i18n="dash_title">Multi JDP — Tableau de bord</h1>
+    <img class="topbar-logo" src="img/logo.svg" alt="Curi🧭s">
+    <h1 data-i18n="dash_title">Curi🧭s — Tableau de bord</h1>
     <select id="dash-lang" class="dash-lang" data-i18n-title="lang_sel" title="Langue du tableau de bord">
       <option value="fr">🇫🇷 Français</option>
     </select>
@@ -447,7 +447,7 @@
     if (!DASH_LANGS[dashLang]) dashLang = "fr";
     const DASH_T = {
       fr: {
-        dash_title: "Multi JDP — Tableau de bord", lang_sel: "Langue du tableau de bord", editor_title: "Éditeur de contenu", refresh_title: "Actualiser",
+        dash_title: "Curi🧭s — Tableau de bord", lang_sel: "Langue du tableau de bord", editor_title: "Éditeur de contenu", refresh_title: "Actualiser",
         org_title: "🎛️ Organisateur", org_sub: "Communiquez avec les familles qui jouent : message diffusé, suivi en direct des équipes et épreuves aléatoires.",
         col_comm: "🗣️ Communication", col_field: "🗺️ Suivi du terrain", col_config: "⚙️ Configuration",
         msg_title: "📣 Message aux participants", msg_note: "Écrivez le message en <b>français</b> : il sera traduit automatiquement dans la langue de chaque équipe (en / nl / de / zh / ja). En cas d'absence de connexion, les équipes recevront la version française.",
@@ -525,7 +525,7 @@
         live_srv_down: "❌ Serveur injoignable : {err}", live_need_fr: "⚠️ Écris un message en français avant de diffuser.",
         live_translating: "⏳ Envoi en cours…", live_sent: "✅ Message diffusé.", live_cleared: "✅ Message effacé.",
         footer: "Chargé depuis le serveur (page <code>/dashboard</code>). Rafraîchissement automatique toutes les 5 s.",
-        table_aria: "Tableau de bord organisateur", dict_fr_title: "🎤 Dicter (français)", srv_local_full: "Serveur Local<small>Réseau Wi-Fi du site</small>", srv_int_full: "Serveur Internet<small>Tunnel public (cloudflared)</small>", unknown_err: "erreur inconnue", srv_down: "❌ Serveur injoignable.", copy_addr: "Copiez l'adresse :", save_refused: "❌ Enregistrement refusé par le serveur.", qr_unavailable: "QR indisponible", poster_title: "Multi JDP — Accès des familles", poster_sub: "Scannez le QR pour connecter le Wi-Fi, puis pour lancer le jeu.", poster_wifi: "1) Se connecter au Wi-Fi", poster_game: "2) Lancer le jeu", poster_footer: "Jeu de piste — jeu familial d'énigmes", qr_doc_title: "Multi JDP — QR d'accès", mail_share_text: "QR d'accès Wi-Fi et jeu (à imprimer)."
+        table_aria: "Tableau de bord organisateur", dict_fr_title: "🎤 Dicter (français)", srv_local_full: "Serveur Local<small>Réseau Wi-Fi du site</small>", srv_int_full: "Serveur Internet<small>Tunnel public (cloudflared)</small>", unknown_err: "erreur inconnue", srv_down: "❌ Serveur injoignable.", copy_addr: "Copiez l'adresse :", save_refused: "❌ Enregistrement refusé par le serveur.", qr_unavailable: "QR indisponible", poster_title: "Curi🧭s — Accès des familles", poster_sub: "Scannez le QR pour connecter le Wi-Fi, puis pour lancer le jeu.", poster_wifi: "1) Se connecter au Wi-Fi", poster_game: "2) Lancer le jeu", poster_footer: "Curi🧭s — jeu familial d'énigmes", qr_doc_title: "Curi🧭s — QR d'accès", mail_share_text: "QR d'accès Wi-Fi et jeu (à imprimer)."
       },
     };
     function T(key) {
@@ -1672,7 +1672,7 @@
 
     function exportPdf() {
       if (!wifiState.ssid) { window.HermesToast(T("need_wifi_first")); return; }
-      downloadBlob(buildPdfBlob(buildPosterCanvas()), "Multi JDP-QR-acces.pdf");
+      downloadBlob(buildPdfBlob(buildPosterCanvas()), "Curi-QR-acces.pdf");
       window.HermesToast(T("pdf_dl"));
     }
 
@@ -1680,7 +1680,7 @@
       if (!wifiState.ssid) { window.HermesToast(T("need_wifi_first")); return; }
       const a = document.createElement("a");
       a.href = buildPosterCanvas().toDataURL("image/jpeg", 0.92);
-      a.download = "Multi JDP-QR-acces.jpg";
+      a.download = "Curi-QR-acces.jpg";
       document.body.appendChild(a); a.click(); a.remove();
       window.HermesToast(T("jpeg_dl"));
     }
@@ -1694,13 +1694,13 @@
       const size = 800;
       const url = effectiveGameUrl();
       if (url) {
-        files.push({ name: "Multi JDP-acces-connexion.jpg", data: qrJpegDataUrl(qrCanvas(url, size)) });
+        files.push({ name: "Curi-acces-connexion.jpg", data: qrJpegDataUrl(qrCanvas(url, size)) });
       }
       if (typeof BALISES !== "undefined" && Array.isArray(BALISES)) {
         for (const b of BALISES) {
           const code = String(b.code || b.id || "");
           if (!code) continue;
-          files.push({ name: "Multi JDP-balise-" + String(b.id || code) + ".jpg", data: qrJpegDataUrl(qrCanvas(code, size)) });
+          files.push({ name: "Curi-balise-" + String(b.id || code) + ".jpg", data: qrJpegDataUrl(qrCanvas(code, size)) });
         }
       }
       if (files.length === 0) { window.HermesToast(T("qr_folder_need_url")); return; }
@@ -1735,14 +1735,14 @@
 
     async function mailPoster() {
       if (!wifiState.ssid) { window.HermesToast(T("need_wifi_first")); return; }
-      const file = new File([buildPdfBlob(buildPosterCanvas())], "Multi JDP-QR-acces.pdf", { type: "application/pdf" });
+      const file = new File([buildPdfBlob(buildPosterCanvas())], "Curi-QR-acces.pdf", { type: "application/pdf" });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
         try {
           await navigator.share({ files: [file], title: T("qr_doc_title"), text: T("mail_share_text") });
           return;
         } catch (e) { /* annulé par l'utilisateur */ }
       }
-      downloadBlob(file, "Multi JDP-QR-acces.pdf");
+      downloadBlob(file, "Curi-QR-acces.pdf");
       window.HermesToast(T("mail_dl"));
     }
 

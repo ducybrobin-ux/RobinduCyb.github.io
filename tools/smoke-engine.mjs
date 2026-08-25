@@ -2,7 +2,7 @@ import vm from "node:vm";
 import fs from "node:fs";
 
 const ctx = { window: {} };
-ctx.window.DUCYB_ENGINE = {
+ctx.window.CURIOS_ENGINE = {
   normalize(s) {
     return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[''\u2019]/g," ").replace(/\s+/g," ").trim();
   },

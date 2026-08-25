@@ -1,7 +1,17 @@
 # Journal des modifications
 
-Historique DUCYB (moteur universel) puis héritage Multi JDP.
+Historique Curi🧭s (moteur universel) puis héritage Multi JDP.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — versionnement sémantique.
+
+## [Curi🧭s 0.5.0] — 2026-08-25
+
+### Renommé
+- **Projet DUCYB rebaptisé Curi🧭s** — « Créez des expériences qui font apprendre »
+- `@ducyb/*` → `@curios/*` (packages npm)
+- `ducyb-parcours` → `curios-parcours` (format de données universel)
+- `window.DUCYB_ENGINE` → `window.CURIOS_ENGINE`
+- `sw.js` : bump `jdpbc-v9` → `curios-v1`
+- Tous les fichiers HTML, JS, CSS, docs et wiki mis à jour
 
 ## [DUCYB 0.4.0] — 2026-08-24
 
@@ -13,34 +23,34 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — 
 - Étapes CI : « Synchronisation packages/game-engine → js/engine.js » + « Tests unitaires game-engine »
 
 ### Modifié
-- `js/data.js` : les 4 fonctions moteur sont maintenant des adapters `var {...}=window.DUCYB_ENGINE` (les définitions originales vivent dans `packages/game-engine/src/`)
+- `js/data.js` : les 4 fonctions moteur sont maintenant des adapters `var {...}=window.CURIOS_ENGINE` (les définitions originales vivent dans `packages/game-engine/src/`)
 - `index.html`, `dashboard.html`, `editeur.html`, `questionnaire.html` : ajout de `js/engine.js` avant `data.js`
 - `sw.js` : ajout de `js/engine.js` au précache, bump `jdpbc-v7` → `jdpbc-v8`
 
 ## [DUCYB 0.3.0] — 2026-08-24
 
 ### Ajouté
-- **Exemple canonique** `content/examples/exemple-quartier.json` : démo complète du format `ducyb-parcours` v1 (stations GPS/schématiques, énigmes ×3 niveaux, quiz, observation, médias, récompenses, débriefing)
+- **Exemple canonique** `content/examples/exemple-quartier.json` : démo complète du format `curios-parcours` v1 (stations GPS/schématiques, énigmes ×3 niveaux, quiz, observation, médias, récompenses, débriefing)
 - CLI `tools/validate-parcours.mjs` : validation de tous les documents universels (convertis + exemples)
-- Étape CI « Validation des documents ducyb-parcours »
+- Étape CI « Validation des documents curios-parcours »
 - PHASE 2 terminée (étapes 1-3)
 
 ## [DUCYB 0.2.0] — 2026-08-24
 
 ### Ajouté
-- **`packages/content-schema`** (zéro dépendance) : règles de validation du contenu historique extraites de `tools/build-data.mjs` (source de vérité unique), convertisseur déterministe vers `ducyb-parcours` v1 avec vérification de couverture, validateur structurel du format universel
-- CLI `tools/convert-packs.mjs` : conversion des 4 packs → `content/ducyb-parcours/*.json`, mode `--check`
-- Étape CI « Conversion ducyb-parcours à jour »
+- **`packages/content-schema`** (zéro dépendance) : règles de validation du contenu historique extraites de `tools/build-data.mjs` (source de vérité unique), convertisseur déterministe vers `curios-parcours` v1 avec vérification de couverture, validateur structurel du format universel
+- CLI `tools/convert-packs.mjs` : conversion des 4 packs → `content/curios-parcours/*.json`, mode `--check`
+- Étape CI « Conversion curios-parcours à jour »
 
 ### Modifié
-- `tools/build-data.mjs` consomme `@ducyb/content-schema` (−138 lignes, sortie byte-identique vérifiée)
+- `tools/build-data.mjs` consomme `@curios/content-schema` (−138 lignes, sortie byte-identique vérifiée)
 - docs/DATA_MODEL.md : table de correspondance réelle du convertisseur
 
 ## [DUCYB 0.1.0] — 2026-08-24
 
 ### Ajouté
 - Dépôt fondateur : copie fidèle de la plateforme Multi JDP v2.0.3 (commit `b9dc7f9`) comme base de migration
-- Documentation fondatrice : AUDIT, ARCHITECTURE, ROADMAP (7 phases), DATA_MODEL (`ducyb-parcours` v1), MIGRATION
+- Documentation fondatrice : AUDIT, ARCHITECTURE, ROADMAP (7 phases), DATA_MODEL (`curios-parcours` v1), MIGRATION
 - Gouvernance : README, CONTRIBUTING, SECURITY (dette auth `/api` documentée), CODE_OF_CONDUCT
 - CI reprise de la plateforme (syntaxe JS, synchronisation content↔data.js, JSON)
 

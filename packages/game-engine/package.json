@@ -1,5 +1,5 @@
 {
-  "name": "@ducyb/game-engine",
+  "name": "@curios/game-engine",
   "version": "0.1.0",
   "description": "Moteur de jeu pur (normalize, checkAnswer, makeQuiz, getEnigme). Zéro dépendance.",
   "type": "module",

@@ -1,4 +1,4 @@
-/* @ducyb/geolocation — fonctions pures de géolocalisation.
+/* @curios/geolocation — fonctions pures de géolocalisation.
    Zéro dépendance. Tout est mathématique élémentaire. */
 
 /**

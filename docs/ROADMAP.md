@@ -16,8 +16,8 @@
 
 | # | Étape | Livrable vérifiable | Non-régression |
 |---|---|---|---|
-| 1 | Créer `ducyb`, y copier la plateforme telle quelle | build identique, jeu inchangé | ✅ fait (docs/MIGRATION.md) |
-| 2 | Extraire `packages/content-schema` depuis build-data.mjs + convertisseur pack→ducyb | 6 packs existants convertis et validés | ✅ fait (4 packs du manifest ; TSLE1/CdB suivront à la fusion des éditions) |
+| 1 | Créer `curios`, y copier la plateforme telle quelle | build identique, jeu inchangé | ✅ fait (docs/MIGRATION.md) |
+| 2 | Extraire `packages/content-schema` depuis build-data.mjs + convertisseur pack→curios | 6 packs existants convertis et validés | ✅ fait (4 packs du manifest ; TSLE1/CdB suivront à la fusion des éditions) |
 | 3 | Documenter le schéma universel v1 + exemples dans content/examples | validation CLI + CI | ✅ fait (exemple-quartier.json + validate-parcours.mjs) |
 
 ## PHASE 3 — Extraire

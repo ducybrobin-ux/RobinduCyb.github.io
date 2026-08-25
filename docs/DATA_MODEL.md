@@ -1,4 +1,4 @@
-# DATA MODEL — Schéma universel de parcours `ducyb-parcours` v1
+# DATA MODEL — Schéma universel de parcours `curios-parcours` v1
 
 ## 0. Stratégie
 
@@ -18,7 +18,7 @@ Validation : `node tools/validate-parcours.mjs` (exécutée en CI sur les conver
 
 ```jsonc
 {
-  "$format": "ducyb-parcours",
+  "$format": "curios-parcours",
   "$version": 1,
   "id": "parcours-001",
   "title": "Les mystères du territoire",
@@ -117,7 +117,7 @@ de session, export/suppression sur demande. La télémétrie est **optionnelle**
 
 ```jsonc
 {
-  "$format": "ducyb-edition", "$version": 1,
+  "$format": "curios-edition", "$version": 1,
   "id": "jpd-cdb",
   "name": "Les Cristaux de Balto",
   "branding": { "logo": "img/logo-cdb.png", "themeColor": "#0c2233", "swPrefix": "jdpcdb" },
@@ -138,7 +138,7 @@ Convertisseur : `tools/convert-packs.mjs` (implémenté dans
 déterministe**, contrôlée par une vérification de couverture (aucune entité
 perdue) puis validation structurelle. CI : `node tools/convert-packs.mjs --check`.
 
-| Format actuel (`jdpbc-pack`) | `ducyb-parcours` v1 |
+| Format actuel (`jdpbc-pack`) | `curios-parcours` v1 |
 |---|---|
 | `pack.{id,nom,description,theme,ages}` | racine `{id,title,description,theme}`, `audience.{minAge,maxAge}` |
 | `balise` | `station` (+ `discoveryId` vers le personnage) |
@@ -154,5 +154,5 @@ perdue) puis validation structurelle. CI : `node tools/convert-packs.mjs --check
 
 Rétro-références ajoutées à la conversion : `station.missions[]` ↔
 `mission.stationId`, `character` ↔ `mission.characterId`.
-Sorties versionnées dans `content/ducyb-parcours/<id>.json` (4 packs convertis,
+Sorties versionnées dans `content/curios-parcours/<id>.json` (4 packs convertis,
 zéro perte vérifiée en CI).

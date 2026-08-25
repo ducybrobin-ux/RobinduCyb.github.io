@@ -77,7 +77,7 @@ README, CONTRIBUTING, CHANGELOG, LICENSE AGPL-3.0 + LICENSE-DOCS, NOTICE, wikis 
 | `server.ps1` | **Remplacer (incrémental) par Node.js** | Non testable sous CI Linux, difficile sur RPi, pas de vraie persistance ; les contrats `/api/*` deviennent la spec |
 | `sw.js` | Conserver | Simple, efficace ; hachage de contenu plus tard |
 | localStorage profils | Conserver + compléter | IndexedDB pour médias/queue de synchro |
-| Dashboard/éditeur inline | Fusionner dans DUCYB puis découper | Fonctionnels mais monolithiques |
+| Dashboard/éditeur inline | Fusionner dans Curi🧭s puis découper | Fonctionnels mais monolithiques |
 | **Éditions = forks complets** | **Fusionner (supprimer à terme)** | ~90 % de code dupliqué ; preuves de dérive : SW CdB jamais rethémé (`jdpep-v4`), features divergentes. Une édition doit devenir une **donnée** (pack + thème + branding) |
 | Bug `allBirds()` (2026-08-24) | Leçon structurante | Régression silencieuse passée en prod ⇒ tests unitaires obligatoires dès PHASE 2 |
 | Auth `/api` | **À créer** | Aucune authentification : via tunnel public, quiconque connaît l'URL peut kicker/valider/déclencher une alerte |

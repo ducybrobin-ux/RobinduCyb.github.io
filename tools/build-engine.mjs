@@ -6,7 +6,7 @@
  *   node tools/build-engine.mjs --check    vérifie la synchro (exit 1 si obsolète)
  *
  * Transforme les déclarations `export` en déclarations classiques et
- * assigne toutes les fonctions à `window.DUCYB_ENGINE`.
+ * assigne toutes les fonctions à `window.CURIOS_ENGINE`.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -21,7 +21,7 @@ const EXPOSED = ["normalize", "checkAnswer", "makeQuiz", "getEnigme"];
 const SRC_FILES = ["normalize.js", "answers.js", "quiz.js", "enigmes.js"];
 
 function header() {
-  return `/* engine.js — Moteur de jeu DUCYB (généré automatiquement depuis packages/game-engine/src/).
+  return `/* engine.js — Moteur de jeu Curi🧭s (généré automatiquement depuis packages/game-engine/src/).
  * NE PAS ÉDITER DIRECTEMENT — modifier la source dans packages/game-engine/src/.
  * Régénérer : node tools/build-engine.mjs
  */\n`;
@@ -51,7 +51,7 @@ function generate() {
     const src = fs.readFileSync(path.join(SRC, f), "utf8");
     body += stripExportsAndImports(src) + "\n";
   }
-  body += `\nwindow.DUCYB_ENGINE = { ${EXPOSED.join(", ")} };\n`;
+  body += `\nwindow.CURIOS_ENGINE = { ${EXPOSED.join(", ")} };\n`;
   return header() + body;
 }
 

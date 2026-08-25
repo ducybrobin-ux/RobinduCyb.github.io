@@ -1,5 +1,5 @@
 /**
- * Tests unitaires — @ducyb/geolocation
+ * Tests unitaires — @curios/geolocation
  * Fonctions pures : haversine, bearing, normDeg, cardinal
  *
  * Point de contrôle : haul Saint-Gobain, Aube 10450 (exemple-quartier.json)

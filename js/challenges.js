@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Épreuves du tableau de bord organisateur
+   Curi🧭s — Épreuves du tableau de bord organisateur
    Thème : esprit & biais cognitifs.
    Ce fichier n'est chargé QUE par dashboard.html : la réponse
    des épreuves ne part jamais vers les participants (le serveur

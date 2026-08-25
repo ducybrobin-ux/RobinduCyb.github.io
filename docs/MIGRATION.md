@@ -1,4 +1,4 @@
-# MIGRATION — Journal de la migration vers DUCYB
+# MIGRATION — Journal de la migration vers Curi🧭s
 
 ## Étape ROADMAP #5a — Extraction geolocation (2026-08-25)
 
@@ -39,7 +39,7 @@ de `js/data.js` (héritage Multi JDP) :
 - `enigmes.js` — sélection d'énigme par difficulté (modulaire ou legacy).
 
 **Modifié :** `js/data.js` — les 4 fonctions deviennent des adapters
-`var {...} = window.DUCYB_ENGINE` ; définitions vivent dans `packages/game-engine/src/`.
+`var {...} = window.CURIOS_ENGINE` ; définitions vivent dans `packages/game-engine/src/`.
 `js/engine.js` (généré par `tools/build-engine.mjs`) expose les fonctions au navigateur.
 Script tag `engine.js` ajouté dans les 4 pages HTML. `sw.js` bumpé (v8, engine.js en précache).
 
@@ -54,9 +54,9 @@ build-data/build-engine/convert/validate — tous OK ✔ | 0 erreur syntaxe ✔
   au format universel** (preuve que le schéma tient sans héritage) — stations GPS
   et purement schématiques, énigmes ×3 niveaux, quiz lié à un personnage, mission
   d'observation, médias avec transcript, récompense, débriefing ;
-- `tools/validate-parcours.mjs` : valide tous les documents `ducyb-parcours`
-  (`content/ducyb-parcours/` + `content/examples/`) ;
-- étape CI « Validation des documents ducyb-parcours ».
+- `tools/validate-parcours.mjs` : valide tous les documents `curios-parcours`
+  (`content/curios-parcours/` + `content/examples/`) ;
+- étape CI « Validation des documents curios-parcours ».
 
 **Vérifications :** 5/5 documents valides (4 conversions + 1 exemple). ✔
 
@@ -69,19 +69,19 @@ build-data/build-engine/convert/validate — tous OK ✔ | 0 erreur syntaxe ✔
 
 - `src/legacy.js` : règles de chargement/validation `jdpbc-pack` **extraites telles quelles**
   de `tools/build-data.mjs` (une seule source de vérité ; messages d'erreur identiques) ;
-- `src/convert.js` : conversion déterministe pack → `ducyb-parcours` v1 +
+- `src/convert.js` : conversion déterministe pack → `curios-parcours` v1 +
   vérification de couverture (stations/missions/personnages/questions/notions) ;
-- `src/parcours.js` : validation structurelle d'un document `ducyb-parcours`.
+- `src/parcours.js` : validation structurelle d'un document `curios-parcours`.
 
 **Modifié :** `tools/build-data.mjs` consomme désormais le package (−138 lignes,
 comportement inchangé) ; nouveau CLI `tools/convert-packs.mjs` (`--check` intégré au CI) ;
-étape CI « Conversion ducyb-parcours à jour » ajoutée.
+étape CI « Conversion curios-parcours à jour » ajoutée.
 
 **Vérifications :**
 
 1. `node tools/build-data.mjs --check` : OK ✔
 2. Régénération complète : `js/data.js` et bundles **inchangés** (git diff vide) ✔
-3. 4/4 packs convertis sans perte (couverture + validation) → `content/ducyb-parcours/` ✔
+3. 4/4 packs convertis sans perte (couverture + validation) → `content/curios-parcours/` ✔
 4. `node tools/convert-packs.mjs --check` : OK ✔
 
 ## Étape ROADMAP #1 — Copie de la plateforme (2026-08-24)
@@ -97,9 +97,9 @@ comportement inchangé) ; nouveau CLI `tools/convert-packs.mjs` (`--check` inté
 | Élément | Décision |
 |---|---|
 | `.git/`, `data/` | Non copiés (runtime local uniquement) |
-| `README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | Version DUCYB conservée |
-| `.gitignore` | Fusion des règles jpd (`data/`, `*.exe`, `qrcodes/`) et DUCYB (`node_modules/`, `dist/`) |
-| `docs/AUDIT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `DATA_MODEL.md` | Ajoutés (documentation fondatrice DUCYB) |
+| `README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | Version Curi🧭s conservée |
+| `.gitignore` | Fusion des règles jpd (`data/`, `*.exe`, `qrcodes/`) et Curi🧭s (`node_modules/`, `dist/`) |
+| `docs/AUDIT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `DATA_MODEL.md` | Ajoutés (documentation fondatrice Curi🧭s) |
 
 **Vérifications de non-régression effectuées :**
 
@@ -110,4 +110,4 @@ comportement inchangé) ; nouveau CLI `tools/convert-packs.mjs` (`--check` inté
 5. Nom de fichier accentué `docs/wiki/Règles-du-jeu.md` restauré après corruption d'extraction ✔
 
 **Prochaine étape :** ROADMAP #2 — extraire `packages/content-schema`
-depuis `tools/build-data.mjs` + convertisseur pack → `ducyb-parcours`.
+depuis `tools/build-data.mjs` + convertisseur pack → `curios-parcours`.

@@ -10,7 +10,7 @@ cloudflared.err.log
 # Sorties QR locales
 qrcodes/
 
-# Node / build (DUCYB)
+# Node / build (Curi🧭s)
 node_modules/
 dist/
 *.local.json

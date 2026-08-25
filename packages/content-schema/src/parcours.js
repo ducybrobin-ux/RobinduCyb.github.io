@@ -1,4 +1,4 @@
-/* parcours.js — Validation structurelle d'un document « ducyb-parcours » v1.
+/* parcours.js — Validation structurelle d'un document « curios-parcours » v1.
  * Retourne un tableau d'erreurs (vide si le document est valide).
  */
 
@@ -6,7 +6,7 @@ export function validateParcours(doc) {
   const errs = [];
   const err = (m) => errs.push(m);
 
-  if (doc.$format !== "ducyb-parcours") err(`$format attendu "ducyb-parcours", reçu "${doc.$format}"`);
+  if (doc.$format !== "curios-parcours") err(`$format attendu "curios-parcours", reçu "${doc.$format}"`);
   if (doc.$version !== 1) err(`$version 1 attendue, reçue ${doc.$version}`);
   if (!doc.id) err("id requis");
   if (!doc.title) err("title requis");

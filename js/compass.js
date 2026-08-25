@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Boussole directionnelle vers la balise cible
+   Curi🧭s — Boussole directionnelle vers la balise cible
    - Coordonnées GPS courantes et de la balise
    - Distance restante
    - Cap à suivre (boussole), calibré avec l'orientation du

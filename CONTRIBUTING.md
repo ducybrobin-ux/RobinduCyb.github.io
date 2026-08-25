@@ -1,4 +1,4 @@
-# Contribuer à DUCYB
+# Contribuer à Curi🧭s
 
 ## Règle d'or
 

@@ -1,4 +1,4 @@
-/* engine.js — Moteur de jeu DUCYB (généré automatiquement depuis packages/game-engine/src/).
+/* engine.js — Moteur de jeu Curi🧭s (généré automatiquement depuis packages/game-engine/src/).
  * NE PAS ÉDITER DIRECTEMENT — modifier la source dans packages/game-engine/src/.
  * Régénérer : node tools/build-engine.mjs
  */
@@ -99,4 +99,4 @@ function getEnigme(balise, difficulty) {
 }
 
 
-window.DUCYB_ENGINE = { normalize, checkAnswer, makeQuiz, getEnigme };
+window.CURIOS_ENGINE = { normalize, checkAnswer, makeQuiz, getEnigme };

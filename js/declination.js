@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Déclinaison magnétique (nord vrai)
+   Curi🧭s — Déclinaison magnétique (nord vrai)
    Implémentation du World Magnetic Model 2025 (WMM2025,
    valable 2025-2030, NOAA / NCEI), adaptée de la lib
    « magvar » (MIT) de Darren Yeates (github.com/dpyeates/magvar).

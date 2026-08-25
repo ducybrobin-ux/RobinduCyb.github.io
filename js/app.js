@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Application principale
+   Curi🧭s — Application principale
    Navigation, carte interactive, GPS, énigmes, fiches, quiz,
    carnet, palmarès, reconnaissance et réglages.
    ========================================================= */

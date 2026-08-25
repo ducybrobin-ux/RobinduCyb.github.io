@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Reconnaissance sonore (« le Shazam des ambiances »)
+   Curi🧭s — Reconnaissance sonore
    Principe : enregistrement 8 s via le micro, puis analyse par
    une API BirdNET (à configurer) ou par un serveur local.
    Hors-ligne / zone blanche : message clair + mode démo.

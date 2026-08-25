@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Lecture des QR codes des balises
+   Curi🧭s — Lecture des QR codes des balises
    - BarcodeDetector quand disponible (Chrome / Android)
    - jsQR + canvas en secours (iPhone / Safari, universel)
    - Saisie manuelle du code en secours (solution fiable partout)

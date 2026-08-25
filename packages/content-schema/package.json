@@ -1,7 +1,7 @@
 {
-  "name": "@ducyb/content-schema",
+  "name": "@curios/content-schema",
   "version": "0.1.0",
-  "description": "Chargement/validation du contenu historique jdpbc-pack, conversion vers et validation du format universel ducyb-parcours v1. Zéro dépendance.",
+  "description": "Chargement/validation du contenu historique, conversion vers et validation du format universel curios-parcours v1. Zéro dépendance.",
   "type": "module",
   "main": "./src/index.js",
   "exports": {

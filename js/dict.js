@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Dictée vocale des réponses (Web Speech API)
+   Curi🧭s — Dictée vocale des réponses (Web Speech API)
    Bouton 🎤 à côté d'un champ : dicte la réponse dans le champ.
    bindFocused : dicte dans le dernier champ focalisé (ex. éditeur).
    ========================================================= */

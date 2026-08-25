@@ -1,6 +1,6 @@
-# @ducyb/game-engine
+# @curios/game-engine
 
-Moteur de jeu pur pour DUCYB — **zéro dépendance**, modules ES, importable en Node.js et dans le navigateur.
+Moteur de jeu pur pour Curi🧭s — **zéro dépendance**, modules ES, importable en Node.js et dans le navigateur.
 
 | Fonction | Rôle |
 |---|---|

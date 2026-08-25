@@ -38,7 +38,7 @@ describe("checkAnswer", () => {
   it("rejette une mauvaise réponse", () => {
     assert.equal(checkAnswer(enigme, "ancrage"), false);
   });
-  it("fonctionne avec le champ `answers` (format ducyb-parcours)", () => {
+  it("fonctionne avec le champ `answers` (format curios-parcours)", () => {
     assert.equal(checkAnswer({ answers: ["fontaine", "la fontaine"] }, "La Fontaine"), true);
   });
 });

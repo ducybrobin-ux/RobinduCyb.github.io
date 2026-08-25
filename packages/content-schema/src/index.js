@@ -1,8 +1,8 @@
-/* @ducyb/content-schema — point d'entrée unique.
+/* @curios/content-schema — point d'entrée unique.
  * Une seule source de vérité pour :
  *  1. charger/valider le contenu historique jdpbc-pack (legacy.js),
- *  2. le convertir en ducyb-parcours v1 (convert.js),
- *  3. valider un document ducyb-parcours (parcours.js).
+ *  2. le convertir en curios-parcours v1 (convert.js),
+ *  3. valider un document curios-parcours (parcours.js).
  */
 export {
   readJson, setRelBase,

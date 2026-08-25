@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Moteur audio
+   Curi🧭s — Moteur audio
    Signatures sonores synthétiques (Web Audio API) + indices
    directionnels : plus on s'approche de la balise, plus la
    signature de la découverte recherchée est forte et rapide.

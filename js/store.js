@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Persistance locale (localStorage)
+   Curi🧭s — Persistance locale (localStorage)
    Profils de familles, progression, palmarès et réglages.
    ========================================================= */
 

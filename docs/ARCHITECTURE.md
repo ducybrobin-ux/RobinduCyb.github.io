@@ -1,4 +1,4 @@
-# ARCHITECTURE — DUCYB
+# ARCHITECTURE — Curi🧭s
 
 ## 0. Principe directeur
 
@@ -11,7 +11,7 @@ fournisseur (cartes/IA/hébergement), fonctionnalités nécessitant Internet obl
 ## 1. Vue cible
 
 ```
-ducyb/                          (monorepo unique remplaçant progressivement les forks)
+curios/                          (monorepo unique remplaçant progressivement les forks)
 ├─ apps/
 │  ├─ player/        ← app participant (héritier de index.html + app.js)
 │  ├─ dashboard/     ← maître du jeu (héritier de dashboard.html)
@@ -22,7 +22,7 @@ ducyb/                          (monorepo unique remplaçant progressivement les
 │  ├─ game-engine/   missions, conditions, énigmes, indices, scoring, progression
 │  ├─ pedagogy-engine/ objectifs, compétences (CPS), indicateurs observables, bilan
 │  ├─ geolocation/   best-fix GPS, rayons par balise, haversine, KML (code existant)
-│  ├─ content-schema/ validation + conversion pack↔ducyb (héritier build-data.mjs)
+│  ├─ content-schema/ validation + conversion pack↔curios (héritier build-data.mjs)
 │  ├─ offline/       adaptateur service worker + queue de synchronisation différée
 │  ├─ teams/ scoring/ media/ accessibility/ analytics/ shared/
 │  └─ plugins/       qr (existe), nfc, arduino… interfaces sans toucher au cœur
@@ -57,4 +57,4 @@ ducyb/                          (monorepo unique remplaçant progressivement les
 
 - Endpoints `/api/*` documentés dans SERVER.md (à venir) — ils sont la spec du portage Node.
 - Schéma de pack v1 (balise/découverte/guide/thème) — base du schéma universel (voir DATA_MODEL.md).
-- Format bundle atelier (`$format: "jdpbc-pack"`) — deviendra `$format: "ducyb-parcours"` avec convertisseur.
+- Format bundle atelier (`$format: "jdpbc-pack"`) — deviendra `$format: "curios-parcours"` avec convertisseur.

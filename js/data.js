@@ -1,6 +1,5 @@
 /* =========================================================
-   JDP — Jeu de piste « Esprit piège »
-   Thème : neurosciences & biais cognitifs.
+   Curi🧭s — Données de jeu
    Découvertes du parcours, guide, balises, énigmes et quiz.
    NOTE : la variable interne BIRDS désigne les « découvertes »
    (un biais cognitif par balise) — nom conservé pour rester
@@ -2957,9 +2956,9 @@ function nextBalise(id) { const i = getBaliseIndex(id); return i >= 0 && i < BAL
  * normalize, checkAnswer, makeQuiz, getEnigme vivent désormais dans
  * packages/game-engine/src/ (importables en Node.js, testables).
  * js/engine.js (généré par tools/build-engine.mjs) expose ces fonctions
- * via window.DUCYB_ENGINE.
+ * via window.CURIOS_ENGINE.
  */
-var { normalize, checkAnswer, makeQuiz, getEnigme } = window.DUCYB_ENGINE;
+var { normalize, checkAnswer, makeQuiz, getEnigme } = window.CURIOS_ENGINE;
 
 /* ---- Surcharges éditables (admin-data.json) -------------------------
    Applique les modifications sauvegardées par l'éditeur (serveur ou god

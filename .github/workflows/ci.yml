@@ -36,10 +36,10 @@ jobs:
       - name: Synchronisation packages/geolocation → js/geo.js
         run: node tools/build-geo.mjs --check
 
-      - name: Conversion ducyb-parcours à jour
+      - name: Conversion curios-parcours à jour
         run: node tools/convert-packs.mjs --check
 
-      - name: Validation des documents ducyb-parcours
+      - name: Validation des documents curios-parcours
         run: node tools/validate-parcours.mjs
 
       - name: JSON valides

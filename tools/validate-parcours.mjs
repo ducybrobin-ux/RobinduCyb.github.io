@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-/* validate-parcours.mjs — Valide tous les documents « ducyb-parcours » v1 :
- *   - content/ducyb-parcours/*.json  (convertis depuis les packs historiques)
+/* validate-parcours.mjs — Valide tous les documents « curios-parcours » v1 :
+ *   - content/curios-parcours/*.json  (convertis depuis les packs historiques)
  *   - content/examples/*.json        (exemples canoniques)
  *
  *   node tools/validate-parcours.mjs [fichiers...]   exit 1 si invalide
@@ -15,7 +15,7 @@ const CONTENT = path.join(ROOT, "content");
 
 function fichiers(args) {
   if (args.length) return args.map((a) => path.resolve(a));
-  const dirs = ["ducyb-parcours", "examples"];
+  const dirs = ["curios-parcours", "examples"];
   const out = [];
   for (const d of dirs) {
     const p = path.join(CONTENT, d);
@@ -27,7 +27,7 @@ function fichiers(args) {
 
 const files = fichiers(process.argv.slice(2));
 if (!files.length) {
-  console.error("aucun document ducyb-parcours à valider");
+  console.error("aucun document curios-parcours à valider");
   process.exit(2);
 }
 

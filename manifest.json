@@ -1,7 +1,7 @@
 {
-  "name": "Multi JDP — Jeux de piste éducatifs",
-  "short_name": "Multi JDP",
-  "description": "Jeux de piste éducatifs en famille : sentier, QR codes, énigmes, quiz, avertisseur sonore. Packs modulaires et thèmes personnalisables. Fonctionne hors-ligne.",
+  "name": "Curi🧭s — Créez des expériences qui font apprendre",
+  "short_name": "Curi🧭s",
+  "description": "Moteur universel de parcours éducatifs : jeux de piste, chasses au trésor, enquêtes, escape games. Packs modulaires, thèmes personnalisables, hors-ligne.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -1,5 +1,5 @@
 /* =========================================================
-   JDP — Tableau de bord : réception côté participants
+   Curi🧭s — Tableau de bord : réception côté participants
    Interroge le serveur (/api/board) pour afficher le message
    diffusé par l'organisateur et les épreuves aléatoires.
    Les réponses sont envoyées sur /api/answer.

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /* convert-packs.mjs — Convertit les packs historiques vers le format universel
- * « ducyb-parcours » v1 (voir docs/DATA_MODEL.md).
+ * « curios-parcours » v1 (voir docs/DATA_MODEL.md).
  *
- *   node tools/convert-packs.mjs            convertit tous les packs du manifest → content/ducyb-parcours/<id>.json
+ *   node tools/convert-packs.mjs            convertit tous les packs du manifest → content/curios-parcours/<id>.json
  *   node tools/convert-packs.mjs --check    vérifie que les fichiers sont à jour (exit 1 sinon)
  *
  * Chaque conversion est contrôlée : couverture totale (aucune entité perdue)
@@ -18,7 +18,7 @@ import {
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = path.join(ROOT, "content");
-const OUT = path.join(CONTENT, "ducyb-parcours");
+const OUT = path.join(CONTENT, "curios-parcours");
 setRelBase(ROOT);
 
 const checkOnly = process.argv.includes("--check");
