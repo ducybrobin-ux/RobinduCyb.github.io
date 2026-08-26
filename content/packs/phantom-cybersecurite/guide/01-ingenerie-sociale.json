@@ -1,0 +1,12 @@
+{
+  "type": "guide",
+  "version": 1,
+  "id": "ingenerie-sociale",
+  "nom": "L'ingénierie sociale",
+  "description": "Techniques utilisées par les attaquants pour manipuler les humains plutôt que d'attaquer les ordinateurs.",
+  "pedagogie": {
+    "objectif": "Comprendre comment les humains peuvent être manipulés",
+    "ages": [12, 18],
+    "duree_min": 8
+  }
+}

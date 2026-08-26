@@ -1,0 +1,8 @@
+{
+  "id": "phantom-cybersecurite",
+  "nom": "Phantom — Cybersécurité",
+  "theme": "identité numérique & sécurité",
+  "description": "Neuf missions de cybersécurité immersive : phishing, QR codes piégés, métadonnées, mots de passe, ingénierie sociale. L'ennemi n'est pas l'ordinateur, ce sont nos décisions.",
+  "version": 1,
+  "ages": [12, 18]
+}

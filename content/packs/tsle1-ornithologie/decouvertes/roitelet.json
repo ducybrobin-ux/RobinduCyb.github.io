@@ -1,0 +1,33 @@
+{
+  "id": "roitelet",
+  "nom": "Roitelet huppé",
+  "latin": "Regulus regulus",
+  "category": "diurne",
+  "size": "9 cm",
+  "chant": {
+    "tempo": 260,
+    "notes": [
+      { "f": 6500, "fEnd": 7000, "d": 0.05, "g": 0.02, "type": "sine", "v": 0.4 },
+      { "f": 6800, "fEnd": 6200, "d": 0.05, "g": 0.02, "type": "sine", "v": 0.4 },
+      { "f": 6500, "fEnd": 7000, "d": 0.05, "g": 0.02, "type": "sine", "v": 0.4 },
+      { "f": 6800, "fEnd": 7200, "d": 0.06, "g": 0.30, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "anecdotes": [
+    "C'est l'un des plus petits oiseaux d'Europe, plus léger qu'une pièce !",
+    "Sur sa tête, une touffe orange vif s'allume quand il est excité.",
+    "Il ne pèse que 5 g mais chante très aigu, presque comme un criquet."
+  ],
+  "quiz": [
+    {
+      "q": "Combien pèse le roitelet huppé ?",
+      "options": ["Environ 5 g", "Environ 1 kg", "Environ 50 g"],
+      "reponse": 0
+    },
+    {
+      "q": "Où se trouve sa couleur vive ?",
+      "options": ["Sur la queue", "Sur la tête", "Sur les pattes"],
+      "reponse": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 9,
+    "objectif": "Raconter la grande course au sérum de Nome (1925) et la légende de Balto",
+    "programme": ["cycle 3", "cycle 4"]
+  },
+  "id": "legende-balto",
+  "nom": "La légende de Balto",
+  "latin": "Alaska, 1925 · la course contre la diphtérie",
+  "emoji": "🌟",
+  "couleur": "#0c6e8f",
+  "categorie": "nocturne",
+  "taille": "Repère : un chien devenu héros",
+  "anecdotes": [
+    "Hiver 1925 : la diphtérie menace Nome, en Alaska. Le sérum est porté en traîneaux-relais sur plus de 1 000 km, par -50 °C et dans le blizzard.",
+    "Balto termine le dernier relais et entre dans Nome ; son compagnon Togo a couru le plus long tronçon. Les deux sont des héros.",
+    "La statue de Balto se dresse aujourd'hui à Central Park, à New York : « Endurance · Fidelity · Intelligence »."
+  ],
+  "quiz": [
+    {
+      "q": "En 1925, quel précieux chargement a été transporté jusqu'à Nome ?",
+      "options": ["Le sérum anti-diphtérie", "De l'or", "Du courrier royal"],
+      "reponse": 0
+    },
+    {
+      "q": "Où se trouve la statue de Balto ?",
+      "options": ["À Central Park, New York", "Devant l'élevage de Charron", "À Moscou"],
+      "reponse": 0
+    }
+  ]
+}

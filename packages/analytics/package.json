@@ -1,0 +1,9 @@
+{
+  "name": "@curios/analytics",
+  "version": "0.1.0",
+  "description": "Analytics locales et adaptation configurable pour Curios",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "license": "AGPL-3.0"
+}

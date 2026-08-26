@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 7,
+    "objectif": "Découvrir l'hébergement insolite et l'esprit week-end trappeur",
+    "programme": ["cycle 2", "cycle 3"]
+  },
+  "id": "yourte-tipi",
+  "nom": "Yourte & tipi : week-end trappeur",
+  "latin": "Dormir au camping « La Toile sous les Étoiles »",
+  "emoji": "⛺",
+  "couleur": "#7a3b8f",
+  "categorie": "nocturne",
+  "taille": "Repère : une nuit hors du temps, près de la meute",
+  "anecdotes": [
+    "La yourte mongole et le tipi sont installés au camping « La Toile sous les Étoiles », à la même adresse que l'élevage.",
+    "Week-end trappeur : activités avec les huskys, nuit en yourte, repas partagés… et déconnexion totale.",
+    "La nuit tombée, on entend parfois la meute chanter sous les étoiles : le vrai concert nordique."
+  ],
+  "quiz": [
+    {
+      "q": "Comment s'appelle le camping où dorment les trappeurs d'un week-end ?",
+      "options": ["La Toile sous les Étoiles", "Le Chalet des Loups", "La Prairie d'Argent"],
+      "reponse": 0
+    },
+    {
+      "q": "Que peut ajouter un séjour en yourte en option ?",
+      "options": ["Un repas", "Un cours de ski", "Une piscine chauffée"],
+      "reponse": 0
+    }
+  ]
+}

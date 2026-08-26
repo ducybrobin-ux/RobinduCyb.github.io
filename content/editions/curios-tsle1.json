@@ -1,0 +1,48 @@
+{
+  "$format": "curios-edition",
+  "$version": 1,
+  "id": "curios-tsle1",
+  "name": "La toile sous les étoiles",
+  "branding": {
+    "logo": "img/logo-tsle1.png",
+    "themeColor": "#0c3b2e",
+    "swPrefix": "curios-tsle1"
+  },
+  "themes": ["nature"],
+  "packs": [
+    { "id": "tsle1-ornithologie", "actif": true }
+  ],
+  "home": {
+    "heroText": "La toile sous les étoiles",
+    "slogan": "Sentier, QR codes, chants d'oiseaux et quiz — fonctionne hors-ligne !",
+    "links": []
+  },
+  "manifest": {
+    "name": "TSLE1 — La toile sous les étoiles",
+    "short_name": "TSLE1",
+    "description": "Jeu d'ornithologie familial : sentier, QR codes, chants d'oiseaux et quiz. Fonctionne hors-ligne.",
+    "background_color": "#0c3b2e",
+    "theme_color": "#0c3b2e"
+  },
+  "site": {
+    "name": "La toile sous les étoiles",
+    "short": "TSLE1",
+    "region": "Camping nature",
+    "center": { "lat": 46.0309, "lng": 2.5525 },
+    "proximityRadius": 30,
+    "hintRadius": 250
+  },
+  "trail": {
+    "label": "Le sentier des oiseaux",
+    "path": [
+      [36, 552], [48, 500], [74, 452], [110, 428], [148, 400],
+      [176, 356], [200, 308], [238, 292], [282, 296], [320, 320],
+      [356, 352], [388, 396], [406, 448], [392, 500], [366, 540], [330, 556]
+    ]
+  },
+  "difficulties": [
+    { "id": "facile", "label": "Facile" },
+    { "id": "moyen", "label": "Moyen" },
+    { "id": "difficile", "label": "Difficile" }
+  ]
+}

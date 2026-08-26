@@ -1,0 +1,10 @@
+{
+  "name": "@curios/server",
+  "version": "0.1.0",
+  "description": "Serveur HTTP/HTTPS pour Curios — replacement Node.js de server.ps1",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "bin": { "curios-server": "./src/cli.js" },
+  "license": "AGPL-3.0"
+}

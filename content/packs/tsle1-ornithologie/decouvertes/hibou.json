@@ -1,0 +1,32 @@
+{
+  "id": "hibou",
+  "nom": "Hibou moyen-duc",
+  "latin": "Asio otus",
+  "category": "nocturne",
+  "size": "36 cm",
+  "chant": {
+    "tempo": 40,
+    "notes": [
+      { "f": 620, "fEnd": 620, "d": 0.10, "g": 0.10, "type": "sine", "v": 0.55 },
+      { "f": 620, "fEnd": 620, "d": 0.10, "g": 0.10, "type": "sine", "v": 0.55 },
+      { "f": 580, "fEnd": 560, "d": 0.18, "g": 1.2, "type": "sine", "v": 0.5 }
+    ]
+  },
+  "anecdotes": [
+    "Ses « oreilles » ne sont pas des oreilles : ce sont des touffes de plumes !",
+    "Son hululement est un petit « hou-hou-hou » qui ressemble à un ballon qui se dégonfle.",
+    "Il chasse surtout dans les champs et les prairies, au-dessus du camping la nuit."
+  ],
+  "quiz": [
+    {
+      "q": "Les longues touffes du hibou sont…",
+      "options": ["Des plumes, pas des oreilles", "Des vraies oreilles", "Des antennes"],
+      "reponse": 0
+    },
+    {
+      "q": "Où chasse le hibou moyen-duc ?",
+      "options": ["Dans les champs et prairies", "Dans l'eau", "Dans les greniers"],
+      "reponse": 0
+    }
+  ]
+}

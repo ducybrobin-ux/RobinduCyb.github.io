@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B8",
+  "bird": "hibou",
+  "code": "TSLE1-B8",
+  "label": "La lisière étoilée",
+  "x": 148,
+  "y": 560,
+  "lat": 46.0303623,
+  "lng": 2.5527967,
+  "enigmes": {
+    "facile": {
+      "text": "Mes « oreilles » sont des touffes de plumes et je hulule dans la nuit étoilée du camping. Quel oiseau suis-je ?",
+      "reponses": ["hibou", "le hibou", "hibou moyen duc", "hibou moyen-duc", "le hibou moyen-duc", "moyen duc", "moyen-duc"],
+      "indice": "Mon nom commence par « h » : le hibou moyen-duc.",
+      "saviez": "Les hiboux chassent dans les champs à la tombée de la nuit : les balades crépusculaires en Creuse permettent de les entendre sans les déranger.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Sur ma tête, deux piquants de plumes — mais ce ne sont pas des oreilles ! Je chasse sous les étoiles, dans les champs autour du camping. Quel oiseau suis-je ?",
+      "reponses": ["hibou", "le hibou", "hibou moyen duc", "hibou moyen-duc", "le hibou moyen-duc", "moyen duc", "moyen-duc"],
+      "indice": "Je suis le cousin de la chouette aux « oreilles » pointues : le hibou moyen-duc.",
+      "saviez": "Le pays d'Auzances est une terre de granite émaillée de hameaux : le dolmen de la Pierre Soupèse, monument classé, veille sur les prairies où chassent les hiboux à la nuit tombée.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Porteur de deux aigrettes, je ne suis pas un écouteur mais une ombre. Astronome des prés, je récite « hou-hou-hou » comme un ballon qui se dégonfle, là où les galaxies brillent au-dessus des tentes. Qui suis-je ?",
+      "reponses": ["hibou", "le hibou", "hibou moyen duc", "hibou moyen-duc", "le hibou moyen-duc", "moyen duc", "moyen-duc"],
+      "indice": "Mes touffes de plumes rappellent des « oreilles » d'âne : le hibou moyen-duc.",
+      "saviez": "À l'étang de Méouze (60 ha), les pêcheurs pratiquent le « no-kill » et sortent des brochets de plus d'un mètre : sur les rives, au crépuscule, écoutez le hibou moyen-duc chasser sous les étoiles.",
+      "ages": [10, 99]
+    }
+  }
+}

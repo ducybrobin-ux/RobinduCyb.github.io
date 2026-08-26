@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B8",
+  "bird": "metier-handler",
+  "code": "JDP-B8",
+  "label": "L'école des handlers",
+  "x": 75,
+  "y": 274,
+  "lat": 46.03075,
+  "lng": 2.55234,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Celui qui pilote le traîneau et prend soin de toute la meute porte un nom venu du Grand Nord. Lequel ?",
+      "reponses": ["musher", "le musher", "un musher"],
+      "indice": "M-U-S-H-E-R — comme le cri « marche ! » donné aux chiens.",
+      "saviez": "Le mot viendrait du « mush ! » ou « marche » lancé par les Canadiens francophones.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Je suis le bras droit du musher : je m'occupe des soins, du matériel et des entraînements. Comment m'appelle-t-on ?",
+      "reponses": ["handler", "le handler", "un handler"],
+      "indice": "Un mot anglais : HAND + ER… celui qui a toujours les mains dans le travail.",
+      "saviez": "La « Découverte du métier » dure une demi-journée : on devient handler d'un jour.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "D'après la FAQ du site, à partir de quel âge peut-on s'initier au métier de musher ?",
+      "reponses": ["12 ans", "douze ans", "12", "douze"],
+      "indice": "L'âge du passage en collège : deux chiffres, dont un 1 et un 2.",
+      "saviez": "Plus de vingt années d'engagement consolident l'expérience de Julien et sa meute.",
+      "ages": [14, 99]
+    }
+  }
+}

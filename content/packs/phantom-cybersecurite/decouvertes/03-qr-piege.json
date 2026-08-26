@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "qr-piege",
+  "nom": "Le QR Code Piégé",
+  "latin": "QR Code · Redirection",
+  "emoji": "📷",
+  "couleur": "#9b59b6",
+  "categorie": "diurne",
+  "taille": "Antidote : inspecter avant de scanner",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Un QR code peut mener n'importe où : un site officiel ou un piège.",
+    "PHANTOM ne te force jamais à scanner. Il te pousse à le faire sans réfléchir.",
+    "La règle d'or : inspecter la destination avant de faire confiance."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 392, "fEnd": 392, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 523, "fEnd": 523, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 659, "fEnd": 659, "d": 0.12, "g": 0.12, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Comprendre les risques des QR codes et inspecter avant de scanner",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Que faire AVANT de scanner un QR code inconnu ?",
+      "options": ["Le scanner directement", "Vérifier l'URL affichée", "Demander à un ami", "Tourner le téléphone"],
+      "reponse": 1
+    },
+    {
+      "q": "Un QR code peut-il mener vers un site malveillant ?",
+      "options": ["Non jamais", "Oui c'est possible", "Seulement si on le fabrique", "Seulement sur Android"],
+      "reponse": 1
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Le mot « musher » vient du cri « marche ! » (marchons) lancé aux chiens par les Canadiens francophones.",
+    "L'Iditarod, grande course d'Alaska, reprend en partie le tracé historique de la course au sérum de 1925 : environ 1 800 km.",
+    "Avant les avions et les routes, le traîneau était le seul « bus » fiable de l'hiver arctique."
+  ],
+  "pedagogie": {
+    "ages": [8, 99],
+    "duree_min": 5,
+    "objectif": "Situer l'histoire du transport attelé et des courses nordiques",
+    "programme": ["cycle 3", "cycle 4"]
+  },
+  "id": "histoire-du-mushing",
+  "nom": "L'histoire du mushing",
+  "latin": "Des peuples du Grand Nord à la légende de Nome",
+  "emoji": "🛷",
+  "couleur": "#b05f2a",
+  "taille": "Astuce : un transport millénaire devenu sport",
+  "description": "Pendant des millénaires, les peuples circumpolaires ont attelé leurs chiens pour chasser, pêcher et voyager : le traîneau était leur lien vital. À la fin du XIXe siècle, la ruée vers l'or en Alaska fait du mushing un métier ; en 1925, la course au sérum de Nome transforme ces chiens en héros mondiaux. Aujourd'hui, le mushing est un sport pratiqué dans le respect des chiens — et Balto veille sur son souvenir."
+}

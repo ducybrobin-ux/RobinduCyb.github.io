@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B3",
+  "bird": "mesange",
+  "code": "TSLE1-B3",
+  "label": "La haie qui chante",
+  "x": 238,
+  "y": 292,
+  "lat": 46.0319361,
+  "lng": 2.5523502,
+  "enigmes": {
+    "facile": {
+      "text": "J'ai une cravate noire sur un ventre jaune et je chante « ti-ti-tsa-tsa ». Quel oiseau suis-je ?",
+      "reponses": ["mesange", "la mesange", "mesange charbonniere", "la mesange charbonniere", "charbonniere"],
+      "indice": "Mon nom évoque une petite boule : une m… charbonnière.",
+      "saviez": "Les mésanges raffolent des mangeoires en hiver : plusieurs fermes pédagogiques et écomusées de la Creuse proposent des ateliers « fabriquer son nichoir » — une belle activité en famille.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Élégante des mangeoires, je porte une cravate noire sur un gilet jaune. Mon chant martèle « ti-ti-tsa-tsa » dès le printemps. Quel oiseau suis-je ?",
+      "reponses": ["mesange", "la mesange", "mesange charbonniere", "la mesange charbonniere", "charbonniere"],
+      "indice": "Je suis une petite « m… » et mon ventre est jaune.",
+      "saviez": "À l'étang des Landes (Lussat), réserve naturelle, des animations enfants « Explorateurs de la nature » proposent des défis sur les oiseaux de la réserve : parfait pour reconnaître le chant des mésanges.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Veste jaune et cravate de satin, je suis l'aristocrate des haies. On croit que je tambourine, mais je répète une phrase en deux temps pour annoncer le printemps. Qui suis-je ?",
+      "reponses": ["mesange", "la mesange", "mesange charbonniere", "la mesange charbonniere", "charbonniere"],
+      "indice": "Ma cravate noire sur fond jaune me désigne : une m…",
+      "saviez": "Une famille de mésanges protège un verger des chenilles : à l'arboretum de la Sédelle, à Crozant, des concerts de jazz sont donnés chaque été sous les arbres où nichent les oiseaux.",
+      "ages": [10, 99]
+    }
+  }
+}

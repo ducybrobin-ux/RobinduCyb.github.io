@@ -1,0 +1,21 @@
+{
+  "id": "phantom",
+  "nom": "Phantom — Cybersécurité",
+  "colors": {
+    "primary": "#1a1a2e",
+    "secondary": "#16213e",
+    "accent": "#0f3460",
+    "success": "#2ecc71",
+    "warning": "#e74c3c",
+    "info": "#3498db",
+    "text": "#ffffff",
+    "textMuted": "#8892b0"
+  },
+  "fonts": {
+    "heading": "'Inter', -apple-system, sans-serif",
+    "body": "'Inter', -apple-system, sans-serif"
+  },
+  "background": "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+  "cardBackground": "rgba(255,255,255,0.05)",
+  "borderRadius": "12px"
+}

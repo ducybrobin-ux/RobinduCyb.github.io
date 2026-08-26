@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B5",
+  "bird": "buse",
+  "code": "TSLE1-B5",
+  "label": "La prairie ouverte",
+  "x": 406,
+  "y": 448,
+  "lat": 46.0304762,
+  "lng": 2.5520927,
+  "enigmes": {
+    "facile": {
+      "text": "Grand oiseau, je plane en rond au-dessus des prairies et mon cri fait « piiia ». Quel oiseau suis-je ?",
+      "reponses": ["buse", "la buse", "buse variable", "la buse variable"],
+      "indice": "Mon nom commence par « b » : la buse variable.",
+      "saviez": "Les buses planent au-dessus des prairies creusoises : depuis le Châtelard ou Bussière-Nouvelle, la vue porte jusqu'aux Monts d'Auvergne, un superbe poste d'observation.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Dans le ciel, je dessine des cercles au-dessus des prés, à l'affût d'un mulot. Mon cri aigu ressemble à un miaulement. Quel oiseau suis-je ?",
+      "reponses": ["buse", "la buse", "buse variable", "la buse variable"],
+      "indice": "Je suis un grand rapace brun : la buse variable.",
+      "saviez": "Le massif des Monédières, site classé d'environ 920 m, offre un panorama à 360° : par temps clair, buses et milans y tournent dans les courants d'air au-dessus des landes.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Seigneur des courants d'air, je surveille les champs d'un œil doré. Quand je parle, mon « piiia » traverse toute la vallée. Qui suis-je ?",
+      "reponses": ["buse", "la buse", "buse variable", "la buse variable"],
+      "indice": "Mon nom me décrit comme « changeant » : la buse variable.",
+      "saviez": "Le lac de Vassivière, l'un des plus grands lacs artificiels de France (10 km² d'eau, 43 km de rivages), est surnommé le « petit Canada » : idéal pour voir tournoyer les rapaces au-dessus de l'eau.",
+      "ages": [10, 99]
+    }
+  }
+}

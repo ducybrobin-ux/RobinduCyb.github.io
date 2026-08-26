@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B2",
+  "bird": "phishing",
+  "code": "PH-B2",
+  "lat": 48.8566,
+  "lng": 2.3522,
+  "label": "Le Piège",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Tu vois une page de connexion bancaire. L'adresse est « secure-curos-login.com ». C'est fiable ?",
+      "reponses": ["non", "non c'est faux", "c'est un faux", "faux", "non c'est pas fiable", "non fiable"],
+      "indice": "Compare le nom de domaine avec le vrai nom du service.",
+      "saviez": "Les pirates créent des noms de domaine qui ressemblent aux vrais pour te tromper.",
+      "ages": [12, 14]
+    },
+    "moyen": {
+      "text": "Un site te demande ton mot de passe. Que dois-tu vérifier EN PREMIER ?",
+      "reponses": ["l'adresse du site", "l'URL", "le nom de domaine", "l'adresse URL"],
+      "indice": "Regarde la barre d'adresse : est-ce le bon site ?",
+      "saviez": "Le cadenas (HTTPS) ne suffit pas : il faut aussi vérifier le nom de domaine.",
+      "ages": [14, 16]
+    },
+    "difficile": {
+      "text": "On te donne 3 domaines : secure-curos-login.com, curios-security.example, curios.local. Lequel est le plus probablement un piège ?",
+      "reponses": ["secure-curos-login.com", "le premier", "secure-curos-login"],
+      "indice": "Un vrai site n'a pas besoin de mots comme « secure » ou « login » dans son adresse.",
+      "saviez": "Les pirates ajoutent des mots rassurants (secure, login, verify) pour tromper.",
+      "ages": [16, 18]
+    }
+  },
+  "enigme": null
+}

@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "phantom",
+  "nom": "PHANTOM",
+  "latin": "Ingénierie Sociale · Vulnérabilité Humaine",
+  "emoji": "👻",
+  "couleur": "#1a1a2e",
+  "categorie": "diurne",
+  "taille": "Antidote : esprit critique et réflexion",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "PHANTOM n'est pas un pirate informatique. C'est un protocole automatisé qui exploite les erreurs humaines.",
+    "Le véritable ennemi n'est pas la technologie, c'est l'imprévoyance.",
+    "PHANTOM n'est pas dans votre téléphone. PHANTOM est dans les décisions que vous prenez lorsque quelqu'un vous pousse à agir trop vite."
+  ],
+  "chant": {
+    "tempo": 90,
+    "notes": [
+      { "f": 220, "fEnd": 220, "d": 0.15, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 277, "fEnd": 277, "d": 0.15, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 330, "fEnd": 330, "d": 0.2, "g": 0.15, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 15,
+    "objectif": "Comprendre que la sécurité informatique repose sur les décisions humaines",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Qui est PHANTOM ?",
+      "options": ["Un pirate humain", "Un protocole automatisé", "Un virus informatique", "Un agent secret"],
+      "reponse": 1
+    },
+    {
+      "q": "Où se trouve真正的 PHANTOM ?",
+      "options": ["Dans un ordinateur", "Dans les décisions que nous prenons", "Sur Internet", "Dans un centre de données"],
+      "reponse": 1
+    }
+  ]
+}

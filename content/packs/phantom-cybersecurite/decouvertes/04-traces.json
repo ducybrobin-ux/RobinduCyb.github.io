@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "traces",
+  "nom": "Les Traces Numériques",
+  "latin": "Metadata · EXIF · OSINT",
+  "emoji": "📍",
+  "couleur": "#e67e22",
+  "categorie": "diurne",
+  "taille": "Antidote : minimiser les traces laissées",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Une photo contient des métadonnées invisibles : date, heure, lieu, appareil.",
+    "Les métadonnées EXIF peuvent révéler beaucoup plus que ce qu'on montre.",
+    "Ce qu'on peut savoir n'est pas toujours ce qu'on devrait utiliser."
+  ],
+  "chant": {
+    "tempo": 95,
+    "notes": [
+      { "f": 294, "fEnd": 294, "d": 0.12, "g": 0.06, "type": "sine", "v": 0.5 },
+      { "f": 392, "fEnd": 392, "d": 0.12, "g": 0.06, "type": "sine", "v": 0.5 },
+      { "f": 494, "fEnd": 494, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Comprendre les métadonnées et leur impact sur la vie privée",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Que contiennent les métadonnées d'une photo ?",
+      "options": ["Rien de spécial", "Date, heure, lieu, appareil", "Uniquement la taille", "Le mot de passe du téléphone"],
+      "reponse": 1
+    },
+    {
+      "q": "Une information disponible est-forcément une information à utiliser ?",
+      "options": ["Oui toujours", "Non, ça dépend du contexte", "Seulement en ligne", "Seulement pour la police"],
+      "reponse": 1
+    }
+  ]
+}

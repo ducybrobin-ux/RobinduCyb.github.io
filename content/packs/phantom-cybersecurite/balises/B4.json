@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B4",
+  "bird": "traces",
+  "code": "PH-B4",
+  "lat": 48.8566,
+  "lng": 2.3522,
+  "label": "Les Traces",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Tu reçois une photo. Que peut révéler une simple photographie ?\nA : La date et l'heure\nB : La localisation\nC : L'appareil utilisé\nD : Toutes ces réponses",
+      "reponses": ["D", "toutes ces réponses", "toutes", "tout"],
+      "indice": "Une photo contient plus d'informations que ce qu'on voit.",
+      "saviez": "Les métadonnées EXIF d'une photo peuvent révéler date, heure, lieu, appareil.",
+      "ages": [12, 14]
+    },
+    "moyen": {
+      "text": "On appelle « métadonnées » les informations cachées dans un fichier. Quelles métadonnées une photo peut-elle contenir ?",
+      "reponses": ["date, heure, lieu, appareil", "date heure lieu appareil", "lieu date appareil", "metadata"],
+      "indice": "Pense à tout ce que l'appareil enregistre automatiquement.",
+      "saviez": "Les métadonnées sont invisibles mais accessibles à quiconque sait où regarder.",
+      "ages": [14, 16]
+    },
+    "difficile": {
+      "text": "Quel principe éthique relie cybersécurité et respect de la vie privée concernant les métadonnées ?",
+      "reponses": ["une information disponible n'est pas forcément à utiliser", "pas parce qu'on peut on doit", "respect de la vie privée", "limitation"],
+      "indice": "Ce qu'on peut savoir n'est pas toujours ce qu'on devrait utiliser.",
+      "saviez": "La cybersécurité rejoint l'éthique : la技术能力 ne justifie pas l'usage.",
+      "ages": [16, 18]
+    }
+  },
+  "enigme": null
+}

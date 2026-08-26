@@ -1,0 +1,31 @@
+{
+  "id": "buse",
+  "nom": "Buse variable",
+  "latin": "Buteo buteo",
+  "category": "diurne",
+  "size": "55 cm",
+  "chant": {
+    "tempo": 30,
+    "notes": [
+      { "f": 2100, "fEnd": 900, "d": 0.55, "g": 0.20, "type": "sine", "v": 0.5 },
+      { "f": 1800, "fEnd": 750, "d": 0.50, "g": 1.4, "type": "sine", "v": 0.45 }
+    ]
+  },
+  "anecdotes": [
+    "C'est un grand rapace qui plane en cercles au-dessus des prairies pour guetter ses proies.",
+    "Son cri ressemble à un miaulement : un « piiia » aigu qui porte très loin.",
+    "Elle construit son nid très haut dans les arbres et le réutilise plusieurs années."
+  ],
+  "quiz": [
+    {
+      "q": "Comment reconnaître le cri de la buse ?",
+      "options": ["Un « piiia » aigu", "Un « coucou »", "Un tambourinement"],
+      "reponse": 0
+    },
+    {
+      "q": "Où construit-elle son nid ?",
+      "options": ["Dans une haie basse", "Très haut dans les arbres", "Sous les pierres"],
+      "reponse": 1
+    }
+  ]
+}

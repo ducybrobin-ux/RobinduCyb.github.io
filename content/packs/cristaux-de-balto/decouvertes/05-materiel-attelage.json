@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 7,
+    "objectif": "Nommer le matériel d'attelage et comprendre son rôle",
+    "programme": ["cycle 3"]
+  },
+  "id": "materiel-attelage",
+  "nom": "L'attelage et le matériel",
+  "latin": "Harnais, lignes, traîneau et cani-kart",
+  "emoji": "🛷",
+  "couleur": "#b05f2a",
+  "categorie": "diurne",
+  "taille": "Repère : chaque pièce a son rôle",
+  "anecdotes": [
+    "Le harnais en X répartit la traction sur tout le corps du chien : confortable, il permet de tirer sans se blesser.",
+    "La ligne d'attache relie les chiens entre eux et au traîneau ; le musher tient la poignée — l'archet — et freine avec le patin.",
+    "Pas de neige ? Pas de problème : le cani-kart remplace le traîneau dès que la piste est sèche."
+  ],
+  "quiz": [
+    {
+      "q": "À quoi sert le harnais ?",
+      "options": ["À répartir la traction sur le corps du chien", "À décorer le chien", "À mesurer sa vitesse"],
+      "reponse": 0
+    },
+    {
+      "q": "Que pilote l'attelage quand il n'y a pas de neige ?",
+      "options": ["Un cani-kart", "Une luge de plage", "Un vélo sans roues"],
+      "reponse": 0
+    }
+  ]
+}

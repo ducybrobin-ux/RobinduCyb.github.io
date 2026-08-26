@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B1",
+  "bird": "accueil-elevage",
+  "code": "JDP-B1",
+  "label": "La porte des Cristaux",
+  "x": 240,
+  "y": 105,
+  "lat": 50.7258178,
+  "lng": 3.1329639,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Bienvenue ! Notre élevage se trouve dans un village de la Creuse qui s'appelle…",
+      "reponses": ["charron", "charron creuse"],
+      "indice": "Comme le grand oiseau de mer au long bec : C-H-A-R-R-O-N.",
+      "saviez": "L'adresse exacte : 3 La Chaux, 23700 Charron — entre Aubusson et Montluçon.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Les Cristaux de Balto vous invitent à vivre une expérience authentique au cœur de la nature, en compagnie de chiens venus d'une région du Grand Nord. De quelle race ?",
+      "reponses": ["husky", "huskys", "husky de siberie", "huskys de siberie", "chien de traineau"],
+      "indice": "Ces chiens aux yeux bleus viennent de Sibérie : les h___ .",
+      "saviez": "Chaque prestation est pensée « dans le respect de leur bien-être, de la faune, de la flore ».",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "L'élevage est situé « aux portes » d'une petite sous-préfecture de la Creuse, citée en premier sur le site avec Aubusson et Clermont-Ferrand. Laquelle ?",
+      "reponses": ["auzances", "a Auzances", "aux portes d auzances"],
+      "indice": "Sept lettres, ça commence par « Au » comme Aubusson… mais ce n'est pas Aubusson.",
+      "saviez": "Le massif des Combrailles et le bocage creusois encadrent les pistes d'entraînement.",
+      "ages": [14, 99]
+    }
+  }
+}

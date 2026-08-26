@@ -8,9 +8,8 @@
 - [x] Audit complet de l'organisation → [AUDIT.md](AUDIT.md)
 - [x] Architecture cible → [ARCHITECTURE.md](ARCHITECTURE.md)
 - [x] Modèle de données → [DATA_MODEL.md](DATA_MODEL.md)
-- [ ] SERVER.md : documenter les 18 endpoints `/api/*` actuels comme spec de portage
-- [ ] GAME_ENGINE.md / PEDAGOGY_ENGINE.md / OFFLINE.md / EDITOR.md / AI.md /
-      ACCESSIBILITY.md (rédigés juste avant leur implémentation)
+- [x] SERVER.md : documenter les 23 endpoints `/api/*` actuels comme spec de portage
+- [x] GAME_ENGINE.md / PEDAGOGY_ENGINE.md / OFFLINE.md / EDITOR.md / AI.md / ACCESSIBILITY.md (rédigés)
 
 ## PHASE 2 — Normaliser
 
@@ -27,37 +26,40 @@
 | 4 | Extraire `game-engine` (normalize, checkAnswer, makeQuiz, getEnigme) avec **premiers tests unitaires** | moteur importable sans DOM ; app.js consomme le module | ✅ fait (17 tests, smoke VM, CI verte) |
 | 5a | Extraire `geolocation` (haversine, bearing, normDeg, cardinal) depuis audio.js/compass.js/app.js | module pur, 28 tests, app.js/compass.js/audio.js consomment GeoMath | ✅ fait (CI verte, smoke-geo, SW v9) |
 | 5b | Extraire `offline` (service worker, cache registry, queue de synchronisation) | modules testés | ✅ fait (23 tests, build-sw.mjs, CI verte) |
-| 6 | `pedagogy-engine` + débriefing (nouveau, inoffensif si vide) | bilan fin de parcours | optionnel |
+| 6 | `pedagogy-engine` + débriefing (nouveau, inoffensif si vide) | bilan fin de parcours | ✅ fait (packages/pedagogy-engine, 14 tests, debrief.html) |
 
 ## PHASE 4 — Unifier
 
 | # | Étape | Livrable | Non-régression |
 |---|---|---|---|
-| 7 | Portage serveur Node endpoint par endpoint derrière flag | script de diff réponses API ancien/nouveau | dashboard fonctionne sur les deux serveurs |
-| 8 | Auth session organisateur (token) pour endpoints sensibles | SECURITY.md appliqué | participants non affectés |
-| 9 | Fusion des éditions CEMÉA/CdB en `content/editions/*.json` | une base de code, 4 éditions générées | Pages + releases identiques aux forks |
+| 7 | Portage serveur Node endpoint par endpoint derrière flag | script de diff réponses API ancien/nouveau | ✅ fait (packages/server, 16 tests, CI verte) |
+| 8 | Auth session organisateur (token) pour endpoints sensibles | SECURITY.md appliqué | ✅ fait (auth.js, 25 tests, SECURITY.md) |
+| 9 | Fusion des éditions CEMÉA/CdB/TSLE1 en `content/editions/*.json` | une base de code, 4 éditions générées | ✅ fait (4 éditions validées, build-editions.mjs, CI verte) |
 
 ## PHASE 5 — Créer
 
-- 10 : Studio (fusion éditeur + atelier), workflow guidé objectifs→public→territoire→missions→tests→publication.
+- 10 : Studio (fusion éditeur + atelier), workflow guidé objectifs→public→territoire→missions→tests→publication. ✅ fait (packages/studio, 25 tests, studio.html)
 
 ## PHASE 6 — Augmenter
 
-- 11 : analytics locales (blocages, temps par mission), adaptation configurable (indices gradués, missions bonus), assistance IA au Studio uniquement.
+- 11 : analytics locales (blocages, temps par mission), adaptation configurable (indices gradués, missions bonus), assistance IA au Studio uniquement. ✅ fait (packages/analytics, 20 tests, tracker + adaptation)
 
-## PHASE 7 — Distribuer
+## PHASE 7 — Distribuer ✅
 
-- 12 : packaging « télécharger → lancer → scanner → jouer » (Windows/Raspberry Pi), documentation formateur + pédagogique, releases GitHub.
+- 12 : packaging « télécharger → lancer → scanner → jouer » (Windows/Raspberry Pi), documentation formateur + pédagogique, releases GitHub. ✅ fait
+  - ✅ documentation : README principal, GUIDE_FORMATEUR, GUIDE_PEDAGOGIQUE, README_STUDIO
+  - ✅ packaging : tools/build.mjs (Windows/Linux), tools/cli.mjs, lancer-curios.bat/sh
+  - ✅ releases GitHub : .github/workflows/release.yml, tools/version.mjs
 
 ## Définition du MVP (plus petit noyau utile)
 
-1. Charger un parcours validé (`content-schema`) — existe via build-data
-2. Démarrer une session (`/api/session`, SQLite) — nouveau, trivial
-3. Créer/rejoindre une équipe — `store.js` existe
-4. Jouer — player existant (carte/GPS/QR/énigmes/quiz)
-5. Progresser — game-engine extrait (unlock, scoring)
-6. Terminer — `/api/finish` existe
-7. Produire un bilan — écran fin + première question de débriefing
+1. Charger un parcours validé (`content-schema`) — existe via build-data ✅
+2. Démarrer une session (`/api/session`, JSON) — ✅ fait (routes/sessions.js)
+3. Créer/rejoindre une équipe — `store.js` existe ✅
+4. Jouer — player existant (carte/GPS/QR/énigmes/quiz) ✅
+5. Progresser — game-engine extrait (unlock, scoring) ✅
+6. Terminer — `/api/finish` existe ✅
+7. Produire un bilan — écran fin + débriefing ✅ (debriefing.html)
 
 ## Règles de collaboration (par étape)
 

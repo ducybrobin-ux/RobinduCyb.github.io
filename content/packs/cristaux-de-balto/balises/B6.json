@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B6",
+  "bird": "cani-sports",
+  "code": "JDP-B6",
+  "label": "La piste des sensations",
+  "x": 183,
+  "y": 503,
+  "lat": 46.03032,
+  "lng": 2.55272,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Je suis une marche sportive relié à un husky par un équipement spécial : on avance ensemble, à son rythme. Comment s'appelle mon activité ?",
+      "reponses": ["cani randonnee", "cani-randonnee", "la cani randonnee", "canirando", "cani rando"],
+      "indice": "« Cani » comme chien + une longue marche : la cani-___ .",
+      "saviez": "Le chien, motivé par son instinct de traction, vous aide dans l'effort — complicité garantie.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "En cani-randonnée, qui donne le rythme de la marche ?",
+      "reponses": ["le binome", "binome", "le chien et lhumain", "chien", "le chien"],
+      "indice": "On avance « au rythme de son compagnon » : qui décide ?",
+      "saviez": "L'initiation est encadrée : on apprend à gérer son binôme avant le départ.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "Selon la FAQ du site, pourquoi le pilotage d'attelage (cani-kart) n'est-il pas praticable toute l'année sans exception ?",
+      "reponses": ["forte chaleur", "a cause de la forte chaleur", "chaleur", "bien etre des chiens", "le bien etre des chiens"],
+      "indice": "Une raison météo… liée aux chiens, pas aux humains.",
+      "saviez": "Les sorties sont organisées « selon les conditions adaptées aux animaux » : c'est écrit noir sur blanc sur le site.",
+      "ages": [14, 99]
+    }
+  }
+}

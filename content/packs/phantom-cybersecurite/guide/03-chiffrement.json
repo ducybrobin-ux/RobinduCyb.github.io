@@ -1,0 +1,12 @@
+{
+  "type": "guide",
+  "version": 1,
+  "id": "chiffrement",
+  "nom": "Le chiffrement",
+  "description": "Le chiffrement protège les données en les rendant illisibles sans la clé de déchiffrement.",
+  "pedagogie": {
+    "objectif": "Comprendre le rôle du chiffrement dans la sécurité",
+    "ages": [14, 18],
+    "duree_min": 8
+  }
+}

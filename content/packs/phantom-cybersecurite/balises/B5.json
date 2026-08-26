@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B5",
+  "bird": "permissions",
+  "code": "PH-B5",
+  "lat": 48.8566,
+  "lng": 2.3522,
+  "label": "Le Téléphone Vous Trahit",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Une application demande l'accès à ta localisation. Laquelle de ces options est la plus sûre ?\nA : Toujours\nB : Pendant l'utilisation\nC : Refuser",
+      "reponses": ["B", "pendant l'utilisation", "pendant l'utilisation de l'application"],
+      "indice": "Donne le minimum nécessaire, le minimum de temps.",
+      "saviez": "La sécurité n'est pas tout autoriser ou tout interdire. C'est donner le bon accès, au bon moment.",
+      "ages": [12, 14]
+    },
+    "moyen": {
+      "text": "Pourquoi « Refuser toutes les permissions » n'est pas toujours la meilleure solution ?",
+      "reponses": ["certaines apps en ont besoin", "ça peut casser le fonctionnement", "pas toujours adapté"],
+      "indice": "Certaines applications ont besoin de permissions pour fonctionner.",
+      "saviez": "L'équilibre entre sécurité et fonctionnalité est la clé.",
+      "ages": [14, 16]
+    },
+    "difficile": {
+      "text": "Quel principe guide le choix des permissions sur un smartphone ?",
+      "reponses": ["le minimum nécessaire", "principe du moindre privilège", "donner le moins possible", "minimum vital"],
+      "indice": "Le principe du moindre privilège : seulement ce qui est nécessaire.",
+      "saviez": "En sécurité informatique, on donne le minimum de permissions nécessaires au fonctionnement.",
+      "ages": [16, 18]
+    }
+  },
+  "enigme": null
+}

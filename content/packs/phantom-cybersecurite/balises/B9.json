@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B9",
+  "bird": "phantom",
+  "code": "PH-B9",
+  "lat": 48.8566,
+  "lng": 2.3522,
+  "label": "PHANTOM",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Qui est PHANTOM ?\nA : Un pirate informatique\nB : Un protocole automatisé\nC : Un virus",
+      "reponses": ["B", "un protocole", "un protocole automatisé", "le protocole"],
+      "indice": "PHANTOM n'est pas une personne...",
+      "saviez": "PHANTOM exploite les erreurs humaines, pas les failles informatiques.",
+      "ages": [12, 14]
+    },
+    "moyen": {
+      "text": "Pourquoi dit-on que PHANTOM est « dans les décisions que vous prenez » ?",
+      "reponses": ["parce que c'est l'humain qui décide", "c'est nos erreurs", "la vulnérabilité humaine", "nos choix"],
+      "indice": "L'ordinateur ne se fait pas pirater. C'est l'utilisateur qui est manipulé.",
+      "saviez": "L'ingénierie sociale exploite la confiance, l'urgence et la peur.",
+      "ages": [14, 16]
+    },
+    "difficile": {
+      "text": "Quelle est la leçon principale de l'opération PHANTOM ?",
+      "reponses": ["la sécurité est dans nos décisions", "réfléchir avant d'agir", "ne pas se faire manipuler", "l'esprit critique"],
+      "indice": "Le véritable ennemi n'est pas la技术, c'est la imprévoyance.",
+      "saviez": "PHANTOM n'est pas dans votre téléphone. PHANTOM est dans les décisions que vous prenez lorsque quelqu'un vous pousse à agir trop vite.",
+      "ages": [16, 18]
+    }
+  },
+  "enigme": null
+}

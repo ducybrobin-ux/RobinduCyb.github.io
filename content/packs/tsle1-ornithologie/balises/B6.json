@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B6",
+  "bird": "roitelet",
+  "code": "TSLE1-B6",
+  "label": "Le sous-bois des aiguilles",
+  "x": 388,
+  "y": 396,
+  "lat": 46.0307692,
+  "lng": 2.5527699,
+  "enigmes": {
+    "facile": {
+      "text": "Je suis le plus petit oiseau d'Europe, plus léger qu'une pièce. Sur ma tête, une touffe orange. Quel oiseau suis-je ?",
+      "reponses": ["roitelet", "le roitelet", "roitelet huppe", "le roitelet huppe"],
+      "indice": "Mon nom évoque une petite couronne : le roitelet huppé.",
+      "saviez": "Les roitelets vivent dans les sapins : les forêts de résineux autour de Bourganeuf, la « cité des Templiers », sont leur terrain de jeu préféré.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Je pèse à peine 5 grammes, moins qu'un crayon ! Ma couronne orange s'allume quand je suis content et je chante très aigu. Quel oiseau suis-je ?",
+      "reponses": ["roitelet", "le roitelet", "roitelet huppe", "le roitelet huppe"],
+      "indice": "Petit comme un roi, je suis le roitelet huppé.",
+      "saviez": "Bourganeuf et sa tour Zizim rappellent l'histoire des chevaliers du Temple : dans les sous-bois de conifères, on entend le chant très aigu des plus petits oiseaux d'Europe.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Poids plume de 5 grammes, je suis le plus léger d'Europe. Ma crête orange flamboie dans les sapins et ma chanson imite un criquet. Qui suis-je ?",
+      "reponses": ["roitelet", "le roitelet", "roitelet huppe", "le roitelet huppe"],
+      "indice": "On m'appelle comme une petite « couronne » posée sur la tête : le roitelet.",
+      "saviez": "À Crozant, l'arboretum de la Sédelle accueille chaque été des concerts de jazz sous les arbres : tendez l'oreille, le roitelet (5 g) y chante si aigu qu'il se mêle aux notes des musiciens.",
+      "ages": [10, 99]
+    }
+  }
+}

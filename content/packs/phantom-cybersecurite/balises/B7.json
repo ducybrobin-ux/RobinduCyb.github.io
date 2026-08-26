@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B7",
+  "bird": "identite",
+  "code": "PH-B7",
+  "lat": 48.8566,
+  "lng": 2.3522,
+  "label": "L'Identité Numérique",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "On te donne une fausse identité : Léa, 16 ans, photo, ville, sport, école. Quelle info permet de retrouver son établissement ?",
+      "reponses": ["l'école", "le nom de l'école", "l'établissement", "école"],
+      "indice": "Le nom de l'école suffit à la localiser.",
+      "saviez": "Une identité numérique se construit pièce par pièce : chaque info rétrécit l'anonymat.",
+      "ages": [12, 14]
+    },
+    "moyen": {
+      "text": "Avec le nom d'une ville, le sport pratiqué et une photo d'école, que peut-on déduire ?",
+      "reponses": ["l'identité", "qui c'est", "l'établissement", "la personne"],
+      "indice": "Croise les informations : ville + école = identité.",
+      "saviez": "L'OSINT (renseignement d'ouverture) utilise les données publiques pour reconstituer une identité.",
+      "ages": [14, 16]
+    },
+    "difficile": {
+      "text": "Quel est le risque principal de partager beaucoup d'informations personnelles en ligne ?",
+      "reponses": ["reconstruction de l'identité", "usurpation", "harcèlement", "vol d'identité", "traque"],
+      "indice": "Chaque information publique est un puzzle qui peut être assemblé.",
+      "saviez": "On n'a pas besoin d'un mot de passe pour en savoir beaucoup sur quelqu'un.",
+      "ages": [16, 18]
+    }
+  },
+  "enigme": null
+}

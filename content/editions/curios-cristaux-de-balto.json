@@ -1,0 +1,47 @@
+{
+  "$format": "curios-edition",
+  "$version": 1,
+  "id": "curios-cristaux-de-balto",
+  "name": "Les Cristaux de Balto",
+  "branding": {
+    "logo": "img/logo-cdb.png",
+    "themeColor": "#0c2a3b",
+    "swPrefix": "curios-cdb"
+  },
+  "themes": ["defaut"],
+  "packs": [
+    { "id": "cristaux-de-balto", "actif": true }
+  ],
+  "home": {
+    "heroText": "Les Cristaux de Balto",
+    "slogan": "Neuf découvertes sur la vie de la meute, le husky de Sibérie et la légende de Balto !",
+    "links": []
+  },
+  "manifest": {
+    "name": "Les Cristaux de Balto — Jeu de piste",
+    "short_name": "CdB",
+    "description": "Jeu de piste en famille à l'élevage de huskys Les Cristaux de Balto (Charron, Creuse) : énigmes, quiz et découverte de la meute.",
+    "background_color": "#0c2a3b",
+    "theme_color": "#0c2a3b"
+  },
+  "site": {
+    "name": "Les Cristaux de Balto",
+    "short": "CdB",
+    "region": "Charron · Creuse",
+    "center": { "lat": 46.0306988, "lng": 2.5529196 },
+    "proximityRadius": 12,
+    "hintRadius": 250
+  },
+  "trail": {
+    "label": "Sentier de la meute",
+    "path": [
+      [240, 105], [348, 153], [405, 274], [385, 412], [297, 503],
+      [183, 503], [95, 412], [75, 274], [132, 153]
+    ]
+  },
+  "difficulties": [
+    { "id": "facile", "label": "Facile" },
+    { "id": "moyen", "label": "Moyen" },
+    { "id": "difficile", "label": "Difficile" }
+  ]
+}

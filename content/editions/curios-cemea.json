@@ -1,0 +1,25 @@
+{
+  "$format": "curios-edition",
+  "$version": 1,
+  "id": "curios-cemea",
+  "name": "Curi🧭s CEMÉA",
+  "branding": {
+    "logo": "img/logo-cemea.png",
+    "themeColor": "#2E7D32",
+    "swPrefix": "curios-cemea"
+  },
+  "themes": ["nature"],
+  "packs": [
+    { "id": "cemea-education-populaire", "actif": true }
+  ],
+  "home": {
+    "heroText": "Éducation populaire et méthodes actives",
+    "slogan": "Coopération, émancipation et esprit critique sur le terrain !",
+    "links": []
+  },
+  "manifest": {
+    "name": "Curi🧭s CEMÉA — Éducation populaire",
+    "short_name": "Curi🧭s CEMÉA",
+    "description": "Parcours éducatif CEMÉA : méthodes actives, cooperation, émancipation. Jeu de piste en famille avec énigmes et quiz."
+  }
+}

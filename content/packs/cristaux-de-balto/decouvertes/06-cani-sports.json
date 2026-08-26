@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [8, 99],
+    "duree_min": 8,
+    "objectif": "Distinguer cani-kart, cani-randonnée et balade en traîneau",
+    "programme": ["cycle 3", "cycle 4"]
+  },
+  "id": "cani-sports",
+  "nom": "Cani-kart & cani-randonnée",
+  "latin": "Les sports canins de traction · toute l'année",
+  "emoji": "🏃",
+  "couleur": "#d97b1f",
+  "categorie": "diurne",
+  "taille": "Repère : avancer avec son chien, pas devant lui",
+  "anecdotes": [
+    "En cani-kart, vous prenez place à bord d'un kart tracté par l'attelage : sensations garanties, en douceur.",
+    "En cani-randonnée, vous êtes relié à votre husky par un équipement spécifique : vous avancez ensemble, à son rythme.",
+    "Ces activités renforcent la complicité du binôme humain-chien — et font marcher les mollets des humains !"
+  ],
+  "quiz": [
+    {
+      "q": "En cani-randonnée, qui donne le rythme de la marche ?",
+      "options": ["Le binôme, au rythme du chien", "Le téléphone", "Le premier arrivé"],
+      "reponse": 0
+    },
+    {
+      "q": "Quand pratique-t-on le cani-kart ?",
+      "options": ["Toute l'année hors forte chaleur", "Uniquement la nuit", "Seulement sous la neige"],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curi🧭s — Débriefing</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { text-align: center; font-size: 2rem; margin-bottom: 0.5rem; }
+    .subtitle { text-align: center; color: #8892b0; margin-bottom: 2rem; }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .card h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #64ffda; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; }
+    .stat { padding: 1rem; }
+    .stat-value { font-size: 2rem; font-weight: bold; color: #64ffda; }
+    .stat-label { color: #8892b0; font-size: 0.875rem; }
+    .timeline { list-style: none; }
+    .timeline li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      justify-content: space-between;
+    }
+    .timeline li:last-child { border-bottom: none; }
+    .stars { color: #ffd700; }
+    .questions { list-style: none; }
+    .questions li {
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+    }
+    .question-text { font-weight: 500; margin-bottom: 0.5rem; }
+    .question-answer { color: #64ffda; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .btn-primary { background: #64ffda; color: #1a1a2e; }
+    .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; margin-top: 0.5rem; }
+    .hidden { display: none; }
+    @media (max-width: 600px) {
+      .stats { grid-template-columns: 1fr; }
+      body { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏁 Débriefing</h1>
+    <p class="subtitle">Bilan de votre parcours</p>
+
+    <!-- Résumé -->
+    <div class="card" id="summary">
+      <h2>Résumé</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" id="totalStars">0</div>
+          <div class="stat-label">Étoiles</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="totalStations">0</div>
+          <div class="stat-label">Balises</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="totalTime">0m</div>
+          <div class="stat-label">Durée</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progression -->
+    <div class="card" id="progressCard">
+      <h2>Progression</h2>
+      <ul class="timeline" id="timeline"></ul>
+    </div>
+
+    <!-- Questions de débriefing -->
+    <div class="card" id="questionsCard">
+      <h2>Questions de réflexion</h2>
+      <ul class="questions" id="questions"></ul>
+    </div>
+
+    <!-- Actions -->
+    <div class="card">
+      <button class="btn btn-primary" onclick="shareResults()">Partager les résultats</button>
+      <button class="btn btn-secondary" onclick="restart()">Nouveau parcours</button>
+    </div>
+  </div>
+
+  <script>
+    // Données de démonstration (sera remplacé par les données réelles)
+    const demoData = {
+      team: "Équipe 1",
+      totalStars: 15,
+      totalStations: 5,
+      duration: 3600,
+      progress: [
+        { station: "La Source", stars: 3, time: "14:30" },
+        { station: "Le Noyer", stars: 3, time: "14:45" },
+        { station: "La Vieille Pierre", stars: 2, time: "15:00" },
+        { station: "Le Sentier", stars: 4, time: "15:20" },
+        { station: "La Fontaine", stars: 3, time: "15:40" }
+      ],
+      debriefingQuestions: [
+        "Qu'avez-vous appris aujourd'hui ?",
+        "Quelle balise préférez-vous et pourquoi ?",
+        "Comment avez-vous travaillé en équipe ?",
+        "Qu'est-ce qui était le plus difficile ?",
+        "Que retiendrez-vous de cette expérience ?"
+      ]
+    };
+
+    function formatDuration(seconds) {
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      if (hours > 0) return `${hours}h${minutes.toString().padStart(2, '0')}m`;
+      return `${minutes}m`;
+    }
+
+    function render(data) {
+      document.getElementById('totalStars').textContent = data.totalStars;
+      document.getElementById('totalStations').textContent = data.totalStations;
+      document.getElementById('totalTime').textContent = formatDuration(data.duration);
+
+      const timeline = document.getElementById('timeline');
+      timeline.innerHTML = data.progress.map(p => `
+        <li>
+          <span>${p.station}</span>
+          <span class="stars">${'★'.repeat(p.stars)}${'☆'.repeat(3 - p.stars)}</span>
+        </li>
+      `).join('');
+
+      const questions = document.getElementById('questions');
+      questions.innerHTML = data.debriefingQuestions.map(q => `
+        <li>
+          <div class="question-text">${q}</div>
+        </li>
+      `).join('');
+    }
+
+    function shareResults() {
+      const text = `${demoData.team}\n${demoData.totalStars} étoiles | ${demoData.totalStations} balises | ${formatDuration(demoData.duration)}`;
+      if (navigator.share) {
+        navigator.share({ title: 'Curi🧭s Résultat', text });
+      } else {
+        navigator.clipboard.writeText(text);
+        alert('Résultat copié !');
+      }
+    }
+
+    function restart() {
+      if (confirm('Commencer un nouveau parcours ?')) {
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Initialisation
+    render(demoData);
+  </script>
+</body>
+</html>

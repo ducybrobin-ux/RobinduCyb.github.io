@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 8,
+    "objectif": "Comprendre l'organisation sociale de la meute et la place de chacun",
+    "programme": ["cycle 2", "cycle 3", "cycle 4"]
+  },
+  "id": "vie-meute",
+  "nom": "La vie en meute",
+  "latin": "Hiérarchie douce, complicité et entraide",
+  "emoji": "🐺",
+  "couleur": "#4a6fa5",
+  "categorie": "diurne",
+  "taille": "Repère : ensemble, chacun à sa place",
+  "anecdotes": [
+    "Une meute, ce n'est pas une bagarre pour le pouvoir : c'est un équilibre où chacun trouve sa place, avec les aînés qui apaisent les jeunes.",
+    "Les leaders de tête ne sont pas les plus forts mais les plus lucides : le musher se fie à leur jugement sur la piste.",
+    "Observer la meute au repos, c'est lire un langage entier : queues, oreilles, postures… et sieste collective au soleil."
+  ],
+  "quiz": [
+    {
+      "q": "Qu'est-ce qui fait un bon chien de tête ?",
+      "options": ["Son intelligence et sa lucidité", "Sa force brute", "Ses aboiements"],
+      "reponse": 0
+    },
+    {
+      "q": "Comment vit-on ensemble dans la meute ?",
+      "options": ["En respectant le rythme de chacun", "Chacun pour soi", "Toujours en cage"],
+      "reponse": 0
+    }
+  ]
+}

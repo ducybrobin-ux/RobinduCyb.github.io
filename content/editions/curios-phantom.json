@@ -1,0 +1,24 @@
+{
+  "$format": "curios-edition",
+  "$version": 1,
+  "id": "phantom-cybersecurite",
+  "name": "Phantom — Cybersécurité",
+  "branding": {
+    "logo": "img/logo-phantom.svg",
+    "themeColor": "#1a1a2e",
+    "swPrefix": "phantom"
+  },
+  "themes": ["phantom"],
+  "packs": [
+    { "id": "phantom-cybersecurite", "actif": true }
+  ],
+  "home": {
+    "heroText": "Votre téléphone sait beaucoup de choses sur vous. La question est : qui d'autre les connaît ?",
+    "links": []
+  },
+  "manifest": {
+    "name": "Phantom — Opération Cybersécurité",
+    "short_name": "Phantom",
+    "description": "Parcours immersif de cybersécurité pour comprendre les menaces numériques"
+  }
+}

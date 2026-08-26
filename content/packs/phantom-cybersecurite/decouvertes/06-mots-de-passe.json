@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "mots-de-passe",
+  "nom": "Les Mots de Passe",
+  "latin": "Passphrase · Hashing · Brute Force",
+  "emoji": "🔐",
+  "couleur": "#2ecc71",
+  "categorie": "diurne",
+  "taille": "Antidote : utiliser une phrase secrète",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "La longueur est plus importante que la complexité.",
+    "Une passphrase (phrase secrète) est à la fois mémorisable et difficile à craquer.",
+    "Ne jamais utiliser son nom + année de naissance."
+  ],
+  "chant": {
+    "tempo": 115,
+    "notes": [
+      { "f": 262, "fEnd": 262, "d": 0.1, "g": 0.05, "type": "sine", "v": 0.5 },
+      { "f": 330, "fEnd": 330, "d": 0.1, "g": 0.05, "type": "sine", "v": 0.5 },
+      { "f": 392, "fEnd": 392, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Comprendre les principes d'un mot de passe sûr",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Qu'est-ce qui rend un mot de passe sûr ?",
+      "options": ["Uniquement les majuscules", "La longueur et la variété", "Uniquement les chiffres", "Le nom de famille"],
+      "reponse": 1
+    },
+    {
+      "q": "Pourquoi « MonChien » est un mauvais mot de passe ?",
+      "options": ["Trop court", "Trop commun", "Pas de chiffres", "Toutes ces réponses"],
+      "reponse": 3
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B4",
+  "bird": "bienetre-animal",
+  "code": "JDP-B4",
+  "label": "Le refuge des soins",
+  "x": 385,
+  "y": 412,
+  "lat": 46.0305,
+  "lng": 2.55337,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Quand un husky est fatigué ou malade, une personne spéciale vient le soigner. Qui ?",
+      "reponses": ["veterinaire", "le veterinaire", "la veterinaire", "un veterinaire", "vet"],
+      "indice": "C'est le docteur des animaux : V-É-T-É-R-I-N-A-I-R-E.",
+      "saviez": "Des contrôles réguliers veillent sur la santé de toute la meute.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Par forte chaleur, que fait-on ici pour protéger les huskys ?",
+      "reponses": ["annule les sorties", "on annule les sorties", "pas de sortie", "aucune sortie", "on ne sort pas", "repos"],
+      "indice": "On préfère reporter plutôt que risquer leur santé : leur plaisir se lit dans leurs oreilles !",
+      "saviez": "Le bien-être animal inclut aussi le respect de la faune et de la flore des pistes.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "Sur la page d'accueil de l'élevage, chaque activité est présentée comme pensée « dans le respect de leur bien-être, de la faune, de la flore »… et de quoi d'autre, cité juste avant ?",
+      "reponses": ["nature", "de la nature", "la nature"],
+      "indice": "« Partager un moment de ___, de complicité et d'évasion ».",
+      "saviez": "Marcher sans trace : rester sur les pistes, observer sans déranger, c'est aussi ça, l'esprit des lieux.",
+      "ages": [14, 99]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B2",
+  "bird": "vie-meute",
+  "code": "JDP-B2",
+  "label": "Le cercle de la meute",
+  "x": 348,
+  "y": 153,
+  "lat": 46.03095,
+  "lng": 2.55332,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Les huskys vivent ensemble comme une grande famille. Comment appelle-t-on ce groupe de chiens (ou de loups) ?",
+      "reponses": ["meute", "la meute", "une meute"],
+      "indice": "M-E-U-T-E : cinq lettres, comme « loups ».",
+      "saviez": "Dans une meute bien équilibrée, chacun trouve sa place — les aînés apaisent les jeunes.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Je suis en tête d'attelage : je ne suis pas le plus fort, mais le plus lucide. Les mushers se fient à mon jugement sur la piste. Qui suis-je ?",
+      "reponses": ["chien de tete", "le chien de tete", "leader", "le leader", "tête"],
+      "indice": "En anglais on dirait le « leader »… mais ici on dit chien de ___ .",
+      "saviez": "Un bon chien de tête anticipe les virages et rassure toute la ligne d'attelage.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "Chez les canidés, la « hiérarchie de dominance » a longtemps servi d'explication unique. Les travaux modernes décrivent plutôt la meute familiale comme…",
+      "reponses": ["famille", "une famille", "groupe familial", "un groupe familial", "cellule familiale"],
+      "indice": "Parents et jeunes apprennent ensemble : quel mot de 7 lettres ?",
+      "saviez": "Observer les postures (queues, oreilles) suffit souvent à lire les relations dans le groupe.",
+      "ages": [14, 99]
+    }
+  }
+}

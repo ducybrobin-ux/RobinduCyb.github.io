@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B4",
+  "bird": "pic",
+  "code": "TSLE1-B4",
+  "label": "Le vieux chêne",
+  "x": 320,
+  "y": 320,
+  "lat": 46.0308226,
+  "lng": 2.5529671,
+  "enigmes": {
+    "facile": {
+      "text": "Je tambourine sur les troncs avec mon bec : on dit que je suis le docteur des arbres. Quel oiseau suis-je ?",
+      "reponses": ["pic", "le pic", "pic epeiche", "le pic epeiche"],
+      "indice": "Mon nom commence par « p » : un pic.",
+      "saviez": "Les pics ont besoin de vieux arbres : la forêt de Chabrières, près de Guéret, est le « poumon vert » de la Creuse — idéale pour une balade et l'écoute des tambourinages.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Bec-marteau, plumage noir et blanc, je tambourine sur l'écorce pour en sortir les insectes. Une tache rouge se cache sous ma queue. Quel oiseau suis-je ?",
+      "reponses": ["pic", "le pic", "pic epeiche", "le pic epeiche"],
+      "indice": "Je suis un « p… », le cousin des oiseaux à marteau.",
+      "saviez": "En août, la forêt de Chabrières accueille le Trophée de France des jeunes vététistes : 400 jeunes cyclistes s'y entraînent sous les vieux chênes où les pics tambourinent.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Vingt coups par seconde, plus vite qu'un battement d'ailes ! Chirurgien des écorces, j'opère quand le bois est silencieux. Ma boîte à outils est mon bec. Qui suis-je ?",
+      "reponses": ["pic", "le pic", "pic epeiche", "le pic epeiche"],
+      "indice": "On m'appelle souvent « docteur des arbres » : je suis un pic épeiche.",
+      "saviez": "Les vieux chênes creusois abritent les loges des pics : le sentier de découverte de la forêt de Chabrières, gratuit et accessible à tous, est un bon plan pour les observer en famille.",
+      "ages": [10, 99]
+    }
+  }
+}

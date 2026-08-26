@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 8,
+    "objectif": "Connaître le husky de Sibérie, ses origines et ses adaptations",
+    "programme": ["cycle 2", "cycle 3", "cycle 4"]
+  },
+  "id": "husky-siberien",
+  "nom": "Le husky de Sibérie",
+  "latin": "Chien de travail du Grand Nord · race FCI groupe 5",
+  "emoji": "❄️",
+  "couleur": "#2e8fb0",
+  "categorie": "diurne",
+  "taille": "Repère : un athlète au double manteau",
+  "anecdotes": [
+    "Le husky de Sibérie a été sélectionné par les Tchouktches pour tirer de légères charges très loin, très vite, sans presque rien manger.",
+    "Son double pelage le protège du froid intense… mais il supporte mal la chaleur : ici, on adapte les sorties à la météo.",
+    "Il « parle » beaucoup : gémissements, glapissements, hurlements — rarement aboiements."
+  ],
+  "quiz": [
+    {
+      "q": "À quoi sert le double pelage du husky ?",
+      "options": ["À se protéger du froid extrême", "À nager plus vite", "À attirer les partenaires"],
+      "reponse": 0
+    },
+    {
+      "q": "Quand fait-on attention à ne pas faire courir les huskys ?",
+      "options": ["Par forte chaleur", "Sous la pluie", "Pendant la nuit"],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B2",
+  "bird": "rougegorge",
+  "code": "TSLE1-B2",
+  "label": "Le jardin des curieux",
+  "x": 148,
+  "y": 400,
+  "lat": 46.031046,
+  "lng": 2.5521356,
+  "enigmes": {
+    "facile": {
+      "text": "J'ai un plastron orange vif et je m'approche tout près des gens qui jardinent. Je chante même en plein hiver. Quel oiseau suis-je ?",
+      "reponses": ["rouge gorge", "rouge-gorge", "le rouge-gorge", "le rouge gorge", "rougegorge"],
+      "indice": "Mon cœur est orange feu : je suis le …-gorge.",
+      "saviez": "Le rouge-gorge adore les jardins et les terrasses : à Auzances comme à Guéret, les ruelles et les jardins des villages l'accueillent toute l'année — un simple point d'eau suffit pour le voir de très près.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Petit gardien du jardin, mon poitrail orange éclaire les jours gris. Je suis le confident des personnes qui remuent la terre. Quel oiseau suis-je ?",
+      "reponses": ["rouge gorge", "rouge-gorge", "le rouge-gorge", "le rouge gorge", "rougegorge", "rouge gorge familier"],
+      "indice": "Mon nom dit la couleur de ma poitrine : rouge…",
+      "saviez": "Guéret est l'une des plus petites préfectures de France : le samedi matin, son marché de producteurs du pays creusois attire les familles — et leurs rouge-gorges de jardin, curieux et confiants.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Pas de couronne ni de diadème : mon orgueil est une poitrine de feu. Je chante le froid et l'orage, fidèle compagnon des mains dans la terre. Qui suis-je ?",
+      "reponses": ["rouge gorge", "rouge-gorge", "le rouge-gorge", "le rouge gorge", "rougegorge"],
+      "indice": "Ma poitrine embrasée porte le nom d'une couleur chaude.",
+      "saviez": "Bon plan : le marché de Boussac, sélectionné par TF1 au concours « Votre plus beau marché », a terminé 5e — sous les étals de fromages et de charcuteries, les rouge-gorges se faufilent entre les visiteurs.",
+      "ages": [10, 99]
+    }
+  }
+}

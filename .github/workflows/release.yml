@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version (ex: 1.0.0)"
+        required: true
+      changelog:
+        description: "Notes de version"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build & Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Déterminer la version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build distributions
+        run: node tools/build.mjs --target all
+
+      - name: Créer les archives
+        run: |
+          cd dist
+          tar -czf curios-${{ steps.version.outputs.version }}-linux.tar.gz curios-linux/
+          cd ..
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: curios-${{ steps.version.outputs.version }}
+          path: |
+            dist/curios-${{ steps.version.outputs.version }}-linux.tar.gz
+            dist/curios/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Curi>s v${{ steps.version.outputs.version }}
+          body: |
+            ## Curi>s v${{ steps.version.outputs.version }}
+            
+            ${{ github.event.inputs.changelog || 'Release automatisée' }}
+            
+            ### Installation
+            
+            **Windows** : Télécharger et extraire, puis lancer `lancer-curios.bat`
+            
+            **Linux / Raspberry Pi** :
+            ```bash
+            tar -xzf curios-${{ steps.version.outputs.version }}-linux.tar.gz
+            cd curios-linux
+            ./lancer-curios.sh
+            ```
+            
+            ### Contenu
+            
+            - 4 éditions incluses
+            - Studio de création
+            - Dashboard organisateur
+            - Mode hors-ligne
+            
+            ### Documentation
+            
+            Voir [docs/GUIDE_FORMATEUR.md](docs/GUIDE_FORMATEUR.md)
+          files: |
+            dist/curios-${{ steps.version.outputs.version }}-linux.tar.gz
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

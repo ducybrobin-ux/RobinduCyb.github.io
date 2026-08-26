@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Comprendre le métier de musher et le rôle de handler",
+    "programme": ["cycle 4"]
+  },
+  "id": "metier-handler",
+  "nom": "Musher & handler",
+  "latin": "Le quotidien d'une meute · dès 12 ans pour l'initiation",
+  "emoji": "🧭",
+  "couleur": "#444a6b",
+  "categorie": "diurne",
+  "taille": "Repère : devenir le bras droit du musher",
+  "anecdotes": [
+    "Le musher dirige l'attelage, mais surtout : il organise la vie entière de la meute, été comme hiver.",
+    "Le handler est son bras droit : soins, matériel, entraînements — une demi-journée suffit pour découvrir les coulisses.",
+    "Plus de vingt ans d'expérience guident Julien et sa meute : la passion, ça s'apprend au quotidien."
+  ],
+  "quiz": [
+    {
+      "q": "Comment appelle-t-on celui qui pilote et prend soin de l'attelage ?",
+      "options": ["Un musher", "Un jockey", "Un berger"],
+      "reponse": 0
+    },
+    {
+      "q": "À partir de quel âge peut-on s'initier au métier de musher ?",
+      "options": ["12 ans", "18 ans", "6 ans"],
+      "reponse": 0
+    }
+  ]
+}

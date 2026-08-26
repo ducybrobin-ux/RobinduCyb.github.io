@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Race officiellement reconnue depuis 1930 aux États-Unis, née des sélections des Tchouktches de Sibérie orientale.",
+    "Ses yeux peuvent être bruns, bleus, vairons… ou hétérochromes : un œil de chaque couleur !",
+    "Le sous-poil dense et le poil de couverture imperméable forment une barrière thermique redoutable."
+  ],
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 5,
+    "objectif": "Connaître les caractéristiques physiques et comportementales du husky",
+    "programme": ["cycle 2", "cycle 3"]
+  },
+  "id": "husky-de-siberie",
+  "nom": "Le husky de Sibérie",
+  "latin": "Canis lupus familiaris · groupe 5, spitz nordiques",
+  "emoji": "❄️",
+  "couleur": "#2e8fb0",
+  "taille": "Astuce : athlète endurant, bavard et sociable",
+  "description": "Taille moyenne (50-60 cm), ossature puissante sans lourdeur, allures légères et fluides : le husky est un coureur de fond. Très sociable avec l'humain comme avec ses congénères, il reste avant tout un chien de travail qui a besoin de dépense, de cadre et de fraîcheur. Son cri du loup porte loin dans la nuit."
+}

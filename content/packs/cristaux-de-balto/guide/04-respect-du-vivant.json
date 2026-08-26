@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Les sorties sont annulées par forte chaleur : le bien-être des chiens passe toujours avant la prestation.",
+    "Les pistes traversent un bocage vivant : on y respecte les nichées, les fleurs sauvages et le bétail voisin.",
+    "Observer un chien heureux : oreilles hautes, queue souple, envie de partir. C'est le meilleur des indicateurs."
+  ],
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 5,
+    "objectif": "Identifier les principes du bien-être animal et du respect du vivant",
+    "programme": ["cycle 2", "cycle 3"]
+  },
+  "id": "respect-du-vivant",
+  "nom": "Le respect du vivant",
+  "latin": "Chiens, faune, flore · une même attention",
+  "emoji": "🌿",
+  "couleur": "#2e8f5a",
+  "taille": "Astuce : la nature est une partenaire, pas un décor",
+  "description": "Ici, chaque activité est pensée « dans le respect de leur bien-être, de la faune, de la flore » : sorties adaptées à la météo et aux capacités de chacun, repos protégé, alimentation soignée. Et parce que l'élevage vit au cœur des paysages préservés de la Creuse, les balades apprennent aussi à marcher sans trace : rester sur les pistes, observer sans déranger, repartir plus malin qu'en arrivant."
+}

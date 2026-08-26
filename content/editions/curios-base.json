@@ -1,0 +1,25 @@
+{
+  "$format": "curios-edition",
+  "$version": 1,
+  "id": "curios-base",
+  "name": "Curi🧭s",
+  "branding": {
+    "logo": "img/logo.svg",
+    "themeColor": "#073B5C",
+    "swPrefix": "curios"
+  },
+  "themes": ["defaut"],
+  "packs": [
+    { "id": "biais-cognitifs", "actif": true }
+  ],
+  "home": {
+    "heroText": "Les jeux de piste éducatifs",
+    "slogan": "Suis le sentier, résous les énigmes, deviens passeur·se de savoirs !",
+    "links": []
+  },
+  "manifest": {
+    "name": "Curi🧭s — Créez des expériences qui font apprendre",
+    "short_name": "Curi🧭s",
+    "description": "Moteur universel de parcours éducatifs : jeux de piste, chasses au trésor, enquêtes, escape games. Packs modulaires, thèmes personnalisables, hors-ligne."
+  }
+}

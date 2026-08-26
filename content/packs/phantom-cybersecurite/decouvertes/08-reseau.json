@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "reseau",
+  "nom": "Le Réseau Wi-Fi",
+  "latin": "Wi-Fi · HTTPS · VPN",
+  "emoji": "📡",
+  "couleur": "#34495e",
+  "categorie": "diurne",
+  "taille": "Antidote : vérifier et sécuriser la connexion",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Un réseau Wi-Fi ouvert n'est pas forcément malveillant, mais il faut rester vigilant.",
+    "HTTPS chiffre les données entre ton navigateur et le site.",
+    "Un VPN peut protéger ta connexion sur un réseau public."
+  ],
+  "chant": {
+    "tempo": 108,
+    "notes": [
+      { "f": 294, "fEnd": 294, "d": 0.12, "g": 0.05, "type": "sine", "v": 0.5 },
+      { "f": 370, "fEnd": 370, "d": 0.12, "g": 0.05, "type": "sine", "v": 0.5 },
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.12, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Comprendre les risques des réseaux Wi-Fi publics",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Un réseau Wi-Fi gratuit est-il forcément sûr ?",
+      "options": ["Oui toujours", "Non, il faut rester vigilant", "Seulement le matin", "Seulement avec un iPhone"],
+      "reponse": 1
+    },
+    {
+      "q": "Que signifie le cadenas dans la barre d'adresse ?",
+      "options": ["Le site est officiel", "La connexion est chiffrée (HTTPS)", "Le site est rapide", "Le site est français"],
+      "reponse": 1
+    }
+  ]
+}

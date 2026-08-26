@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "img": "",
+  "categorie": "diurne",
+  "anecdotes": [
+    "Le musher ne choisit pas ses chiens au hasard : chaque place de l'attelage correspond à un tempérament (leaders, moteurs, roues).",
+    "Un handler apprend à reconnaître chaque husky individuellement : oreilles, queue, caractère… et préférences de câlins.",
+    "La saison se prépare l'été : entraînements à la carte à pneus, contrôles vétérinaires, révision du matériel."
+  ],
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 5,
+    "objectif": "Découvrir les coulisses du métier et le rôle de handler",
+    "programme": ["cycle 4"]
+  },
+  "id": "metier-de-musher",
+  "nom": "Le métier de musher",
+  "latin": "Conduire, soigner, organiser · toute l'année",
+  "emoji": "🧭",
+  "couleur": "#444a6b",
+  "taille": "Astuce : un métier de passion et de rigueur",
+  "description": "Être musher, c'est piloter un attelage… mais surtout gérer une meute entière : alimentation, soins, entraînements progressifs, matériel, sécurité. Le handler l'assiste comme un second capitaine. L'initiation proposée dès 12 ans permet de devenir, le temps d'une demi-journée, le bras droit du musher : c'est concret, physique et passionnant."
+}

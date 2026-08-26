@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 8,
+    "objectif": "Identifier les besoins quotidiens des chiens et le respect du vivant",
+    "programme": ["cycle 2", "cycle 3", "cycle 4"]
+  },
+  "id": "bienetre-animal",
+  "nom": "Le bien-être animal",
+  "latin": "Soins, repos, alimentation · la priorité absolue",
+  "emoji": "💚",
+  "couleur": "#2e8f5a",
+  "categorie": "diurne",
+  "taille": "Repère : des chiens avant tout bien traités",
+  "anecdotes": [
+    "Contrôles vétérinaires, alimentation riche en énergie, repos au frais l'été : la santé de la meute passe avant tout.",
+    "Aucune sortie quand il fait trop chaud ou si un chien semble fatigué : le plaisir des chiens se lit dans leurs oreilles !",
+    "Respecter le vivant, c'est aussi préserver la faune et la flore du bocage creusois qui entoure les pistes."
+  ],
+  "quiz": [
+    {
+      "q": "Que fait-on si un chien montre des signes de fatigue ?",
+      "options": ["On arrête et on le soigne", "On continue quand même", "On change seulement de piste"],
+      "reponse": 0
+    },
+    {
+      "q": "Le bien-être animal inclut aussi…",
+      "options": ["Le respect de la faune et de la flore", "Plus de courses", "Des entraînements plus longs"],
+      "reponse": 0
+    }
+  ]
+}

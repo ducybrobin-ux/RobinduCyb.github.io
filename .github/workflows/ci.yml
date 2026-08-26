@@ -45,6 +45,9 @@ jobs:
       - name: Validation des documents curios-parcours
         run: node tools/validate-parcours.mjs
 
+      - name: Validation des éditions
+        run: node tools/build-editions.mjs --check
+
       - name: JSON valides
         run: |
           fail=0
@@ -57,4 +60,25 @@ jobs:
           exit $fail
 
       - name: Tests unitaires game-engine
-        run: node --test tests/unit/
+        run: node --test tests/unit/game-engine.test.mjs
+
+      - name: Tests unitaires geolocation
+        run: node --test tests/unit/geolocation.test.mjs
+
+      - name: Tests unitaires offline
+        run: node --test tests/unit/offline.test.mjs
+
+      - name: Tests unitaires server
+        run: node --test tests/unit/server.test.mjs
+
+      - name: Tests unitaires studio
+        run: node --test tests/unit/studio.test.mjs
+
+      - name: Tests unitaires analytics
+        run: node --test tests/unit/analytics.test.mjs
+
+      - name: Tests unitaires pedagogy-engine
+        run: node --test tests/unit/pedagogy-engine.test.mjs
+
+      - name: Build distribution
+        run: node tools/build.mjs --target all

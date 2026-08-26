@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B5",
+  "bird": "materiel-attelage",
+  "code": "JDP-B5",
+  "label": "Le hangar des attelages",
+  "x": 297,
+  "y": 503,
+  "lat": 46.03032,
+  "lng": 2.55307,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "En hiver, les huskys tirent cet engin qui glisse sur la neige et transporte les voyageurs. De quoi s'agit-il ?",
+      "reponses": ["traineau", "le traineau", "un traineau", "luge"],
+      "indice": "Il a des patins et une poignée : T-R-A-I-N-E-A-U.",
+      "saviez": "Le musher freine avec le patin arrière et se tient à l'archet, la poignée du traîneau.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Je suis le morceau d'équipement qui répartit la traction sur tout le corps du chien sans le blesser. Que suis-je ?",
+      "reponses": ["harnais", "le harnais", "un harnais"],
+      "indice": "Sept lettres — on le boucle autour du corps, jamais au cou.",
+      "saviez": "Un bon harnais en X laisse les épaules libres : le chien tire avec plaisir.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "Sans neige, le traîneau cède sa place à un véhicule à roues tracté par l'attelage. Quel est son nom ?",
+      "reponses": ["cani kart", "cani-kart", "kart"],
+      "indice": "Deux mots : « cani » + le véhicule à quatre roues.",
+      "saviez": "Le cani-kart permet de vivre les sensations de l'attelage toute l'année, hors forte chaleur.",
+      "ages": [14, 99]
+    }
+  }
+}

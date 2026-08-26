@@ -1,0 +1,9 @@
+{
+  "name": "@curios/pedagogy-engine",
+  "version": "0.1.0",
+  "description": "Moteur pédagogique — bilan, compétences, évaluation",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "license": "AGPL-3.0"
+}

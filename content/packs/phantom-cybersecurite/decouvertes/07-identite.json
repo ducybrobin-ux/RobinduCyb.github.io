@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "identite",
+  "nom": "L'Identité Numérique",
+  "latin": "OSINT · Identité · Puzzle",
+  "emoji": "🧬",
+  "couleur": "#9b59b6",
+  "categorie": "diurne",
+  "taille": "Antidote : minimiser le partage d'informations",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Chaque information publique est un puzzle qui peut être assemblé.",
+    "On n'a pas besoin d'un mot de passe pour en savoir beaucoup sur quelqu'un.",
+    "L'OSINT utilise les données publiques pour reconstituer une identité."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 349, "fEnd": 349, "d": 0.1, "g": 0.06, "type": "sine", "v": 0.5 },
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.06, "type": "sine", "v": 0.5 },
+      { "f": 523, "fEnd": 523, "d": 0.12, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Comprendre comment les informations personnelles peuvent être utilisées",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Avec quelles informations peut-on retrouver quelqu'un ?",
+      "options": ["Uniquement avec le nom", "Nom + ville + école", "Uniquement avec la photo", "Aucune info ne suffit"],
+      "reponse": 1
+    },
+    {
+      "q": "Qu'est-ce que l'OSINT ?",
+      "options": ["Un type de virus", "Du renseignement à partir de sources publiques", "Un réseau social", "Un logiciel de sécurité"],
+      "reponse": 1
+    }
+  ]
+}

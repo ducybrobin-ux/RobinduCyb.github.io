@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B3",
+  "bird": "husky-siberien",
+  "code": "JDP-B3",
+  "label": "Le manteau du Nord",
+  "x": 405,
+  "y": 274,
+  "lat": 46.03075,
+  "lng": 2.55347,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Mon pelage a deux étages pour me tenir chaud au Grand Nord. De quoi mon corps est-il protégé ?",
+      "reponses": ["froid", "du froid", "le froid"],
+      "indice": "Ce qu'on ressent en hiver quand on oublie son écharpe !",
+      "saviez": "Sous-poil dense + poils imperméables = barrière thermique redoutable.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Mes yeux peuvent être bruns, bleus… ou un de chaque couleur ! Comment s'appelle cette particularité ?",
+      "reponses": ["heterochromie", "heterochrome", "yeux vairons", "vairon", "vairons"],
+      "indice": "En français on dit aussi « yeux ___ » comme les chats.",
+      "saviez": "Certains huskys ont même deux yeux de couleurs différentes : c'est admis par le standard de la race.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "Le husky de Sibérie fut sélectionné par un peuple autochtone du Grand Nord pour tirer de légères charges très loin en économisant son énergie. Quel peuple ?",
+      "reponses": ["tchouktches", "les tchouktches", "tchouktche", "tchouktki"],
+      "indice": "Un peuple de Sibérie orientale dont le nom commence par « Tcho ».",
+      "saviez": "La race est classée dans le groupe 5 FCI : spitz nordiques et types primitifs.",
+      "ages": [14, 99]
+    }
+  }
+}

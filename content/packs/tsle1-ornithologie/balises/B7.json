@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B7",
+  "bird": "chouette",
+  "code": "TSLE1-B7",
+  "label": "Le grand dortoir",
+  "x": 320,
+  "y": 500,
+  "lat": 46.0309759,
+  "lng": 2.5524359,
+  "enigmes": {
+    "facile": {
+      "text": "La nuit, sous les étoiles, j'appelle « hou-houuu ». Je vole sans faire le moindre bruit. Quel oiseau nocturne suis-je ?",
+      "reponses": ["chouette", "la chouette", "chouette hulotte", "la chouette hulotte", "hulotte"],
+      "indice": "Je suis la dame des nuits : la chouette hulotte.",
+      "saviez": "La nuit, le ciel creusois est l'un des plus sombres de France : idéal pour voir les étoiles et entendre les chouettes autour du camping.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Princesse des nuits étoilées, je chante « hou-houuu » en direction de la Lune. Mes plumes de velours étouffent mon vol. Quel oiseau suis-je ?",
+      "reponses": ["chouette", "la chouette", "chouette hulotte", "la chouette hulotte", "hulotte"],
+      "indice": "Mon nom commence par « c » : la chouette hulotte.",
+      "saviez": "Le 14 août, la 30e Nuit de la chauve-souris se tient à l'étang des Landes (Lussat) : l'occasion d'observer les animaux de la nuit, chouettes et hiboux compris.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Quand la Voie lactée déploie son ruban, je deviens la sentinelle du ciel. Mes yeux de phare ne clignent jamais et je tourne la tête pour compter les constellations. Mon cri scande la nuit. Qui suis-je ?",
+      "reponses": ["chouette", "la chouette", "chouette hulotte", "la chouette hulotte", "hulotte"],
+      "indice": "Je suis l'oiseau qui « hue » dans la nuit : la chouette hulotte.",
+      "saviez": "En Creuse, des veillées astronomie et des « randonnées aux chandelles » sont organisées en été : parfait pour compter les constellations tout en écoutant le « hou-houuu » des chouettes dans leur dortoir.",
+      "ages": [10, 99]
+    }
+  }
+}

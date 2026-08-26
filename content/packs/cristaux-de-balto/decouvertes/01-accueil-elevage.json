@@ -1,0 +1,37 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "img": "",
+  "audioFile": null,
+  "chant": null,
+  "pedagogie": {
+    "ages": [7, 99],
+    "duree_min": 6,
+    "objectif": "Découvrir l'élevage, son territoire et son esprit",
+    "programme": ["cycle 2", "cycle 3", "cycle 4"]
+  },
+  "id": "accueil-elevage",
+  "nom": "Bienvenue à l'élevage",
+  "latin": "Les Cristaux de Balto · 3 La Chaux, Charron (Creuse)",
+  "emoji": "🏡",
+  "couleur": "#2f6f4f",
+  "categorie": "diurne",
+  "taille": "Repère : une ferme, une meute, une famille",
+  "anecdotes": [
+    "L'élevage se cache à « 3 La Chaux », un hameau de Charron dans la Creuse, entre Aubusson, Montluçon et Clermont-Ferrand.",
+    "Ici, les huskys ne sont pas des outils : ce sont la famille du musher Julien et les ambassadeurs de l'aventure.",
+    "Le nom fait écho à Balto, le chien de traîneau devenu légende — et aux cristaux de givre des matins d'hiver."
+  ],
+  "quiz": [
+    {
+      "q": "Dans quel département se trouve l'élevage ?",
+      "options": ["La Creuse", "Le Puy-de-Dôme", "La Haute-Loire"],
+      "reponse": 0
+    },
+    {
+      "q": "Qui vit au cœur de l'élevage ?",
+      "options": ["Une meute de huskys de Sibérie", "Des loups sauvages", "Des rennes"],
+      "reponse": 0
+    }
+  ]
+}

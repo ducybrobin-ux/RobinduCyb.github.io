@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B1",
+  "bird": "fauvette",
+  "code": "TSLE1-B1",
+  "label": "La clairière des buissons",
+  "x": 74,
+  "y": 452,
+  "lat": 46.0308738,
+  "lng": 2.5527285,
+  "enigmes": {
+    "facile": {
+      "text": "Je porte une petite calotte noire sur la tête et je chante si fort que toute la forêt m'entend. Quel oiseau suis-je ?",
+      "reponses": ["fauvette", "la fauvette", "fauvette a tete noire", "la fauvette a tete noire"],
+      "indice": "Regarde ma tête : le mâle porte un petit béret noir. Mon nom commence par « fau »…",
+      "saviez": "En Creuse, les haies bocagères bordent les chemins : autour d'Auzances, la campagne de collines et de prairies est le royaume des fauvettes, qui offrent un vrai concert de chants dès le printemps.",
+      "ages": [6, 99]
+    },
+    "moyen": {
+      "text": "Le mâle porte un béret noir, la femelle un béret roux. J'adore les baies de sureau et je chante du matin au soir. Quel oiseau suis-je ?",
+      "reponses": ["fauvette", "la fauvette", "fauvette a tete noire", "la fauvette a tete noire"],
+      "indice": "Ma coiffe noire me donne mon nom : une « … » à tête noire.",
+      "saviez": "Auzances est entouré de hameaux et de villages dans un rayon de 15 km : au parc de Coux, dans la ville, les buissons des haies sont le meilleur poste pour observer les fauvettes de près.",
+      "ages": [8, 99]
+    },
+    "difficile": {
+      "text": "Casquée de noir tel un petit bandit des buissons, je déroule un chant qui déborde. En automne, je picore les baies noires avant le grand voyage vers le sud. Mon nom évoque ma coiffure : qui suis-je ?",
+      "reponses": ["fauvette", "la fauvette", "fauvette a tete noire", "la fauvette a tete noire"],
+      "indice": "Mon nom rime avec « fauvette » et précise la couleur de mon béret.",
+      "saviez": "En automne, les fauvettes picorent les baies de sureau avant leur grand voyage vers l'Afrique du Nord : les chemins balisés du pays d'Auzances (Sermur, Mainsat, Sannat) sont parfaits pour les surprendre.",
+      "ages": [10, 99]
+    }
+  }
+}

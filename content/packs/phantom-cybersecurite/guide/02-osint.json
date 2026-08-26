@@ -1,0 +1,12 @@
+{
+  "type": "guide",
+  "version": 1,
+  "id": "osint",
+  "nom": "Le renseignement d'ouverture",
+  "description": "L'OSINT utilise les données publiques pour reconstituer des informations sur une personne ou une organisation.",
+  "pedagogie": {
+    "objectif": "Comprendre que les données publiques peuvent être utilisées pour reconstituer une identité",
+    "ages": [14, 18],
+    "duree_min": 10
+  }
+}

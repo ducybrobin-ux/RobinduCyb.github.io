@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "permissions",
+  "nom": "Les Permissions",
+  "latin": "Privacy · Permissions · Moindre Privilège",
+  "emoji": "📱",
+  "couleur": "#1abc9c",
+  "categorie": "diurne",
+  "taille": "Antidote : donner le minimum nécessaire",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "La sécurité n'est pas tout autoriser ou tout interdire. C'est donner le bon accès, au bon moment.",
+    "Le principe du moindre privilège : seulement ce qui est nécessaire.",
+    "Refuser toutes les permissions peut casser le fonctionnement d'une application."
+  ],
+  "chant": {
+    "tempo": 105,
+    "notes": [
+      { "f": 330, "fEnd": 330, "d": 0.1, "g": 0.07, "type": "sine", "v": 0.5 },
+      { "f": 415, "fEnd": 415, "d": 0.1, "g": 0.07, "type": "sine", "v": 0.5 },
+      { "f": 523, "fEnd": 523, "d": 0.12, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Comprendre les permissions et le principe du moindre privilège",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quelle est la meilleure approche pour les permissions ?",
+      "options": ["Tout autoriser", "Tout refuser", "Donner le minimum nécessaire", "Demander à un adulte"],
+      "reponse": 2
+    },
+    {
+      "q": "Pourquoi une application a-t-elle besoin de permissions ?",
+      "options": ["Pour espionner", "Pour fonctionner correctement", "Pour vendre tes données", "Pour ralentir ton téléphone"],
+      "reponse": 1
+    }
+  ]
+}

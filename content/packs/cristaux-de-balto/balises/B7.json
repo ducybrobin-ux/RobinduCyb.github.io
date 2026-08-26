@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B7",
+  "bird": "yourte-tipi",
+  "code": "JDP-B7",
+  "label": "La yourte des voyageurs",
+  "x": 95,
+  "y": 412,
+  "lat": 46.0305,
+  "lng": 2.55244,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Pour dormir comme un trappeur, on peut coucher dans une tente ronde venue de Mongolie. Comment s'appelle-t-elle ?",
+      "reponses": ["yourte", "la yourte", "une yourte"],
+      "indice": "Y-O-U-R-T-E : six lettres, et elle est montée en rond !",
+      "saviez": "Il y a aussi un tipi : l'hébergement insolite se choisit selon son humeur.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "Le week-end trappeur se déroule dans un camping au nom poétique, à la même adresse que l'élevage. Lequel ?",
+      "reponses": ["la toile sous les etoiles", "toile sous les etoiles", "camping la toile sous les etoiles"],
+      "indice": "Regardez le ciel cette nuit : sous les ___, une toile…",
+      "saviez": "Un repas peut s'ajouter en option au séjour en yourte ou en tipi.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "La yourte associée aux Cristaux de Balto vient d'un pays d'Asie centrale célèbre pour ses steppes et son héritage nomade. Lequel ?",
+      "reponses": ["mongolie", "la mongolie", "de mongolie"],
+      "indice": "Gengis Khan, chevaux et steppes immenses…",
+      "saviez": "Yourte mongole + huskys + étoiles : le trio parfait du week-end hors du temps.",
+      "ages": [14, 99]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "alerte",
+  "nom": "Le Message Suspect",
+  "latin": "Social Engineering · Phishing",
+  "emoji": "🚨",
+  "couleur": "#e74c3c",
+  "categorie": "diurne",
+  "taille": "Antidote : ne jamais agir sous la pression",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Les attaquants créent un sentiment d'urgence pour court-circuiter ta réflexion.",
+    "Un message qui te pousse à agir « maintenant » est presque toujours suspect.",
+    "La première règle : une urgence n'est jamais une preuve de légitimité."
+  ],
+  "chant": {
+    "tempo": 120,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.05, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.05, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 10,
+    "objectif": "Identifier les techniques de manipulation dans les messages suspects",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quel est le premier réflexe face à un message urgent ?",
+      "options": ["Cliquer immédiatement", "Vérifier l'expéditeur et le contenu", "Transmettre à un ami", "Ignorer"],
+      "reponse": 1
+    },
+    {
+      "q": "Une urgence dans un message prouve-t-elle qu'il est légitime ?",
+      "options": ["Oui toujours", "Non, c'est souvent une manipulation", "Parfois", "Seulement si c'est de la banque"],
+      "reponse": 1
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "phishing",
+  "nom": "Le Phishing",
+  "latin": "Phishing · Hameçonnage",
+  "emoji": "🎣",
+  "couleur": "#3498db",
+  "categorie": "diurne",
+  "taille": "Antidote : toujours vérifier l'URL",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Le phishing utilise de faux sites qui ressemblent aux vrais pour voler tes identifiants.",
+    "Le cadenas (HTTPS) ne suffit pas : il faut vérifier le nom de domaine.",
+    "Un vrai site ne te demandera jamais ton mot de passe par message."
+  ],
+  "chant": {
+    "tempo": 110,
+    "notes": [
+      { "f": 330, "fEnd": 330, "d": 0.12, "g": 0.06, "type": "sine", "v": 0.5 },
+      { "f": 440, "fEnd": 440, "d": 0.12, "g": 0.06, "type": "sine", "v": 0.5 },
+      { "f": 550, "fEnd": 550, "d": 0.1, "g": 0.15, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 12,
+    "objectif": "Identifier les fausses pages de connexion et comprendre le mécanisme du phishing",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Qu'est-ce qui identifie un site de phishing ?",
+      "options": ["Le cadenas vert", "L'URL incorrecte", "Le design moderne", "La vitesse du site"],
+      "reponse": 1
+    },
+    {
+      "q": "Que donner à un site suspect qui te demande ton mot de passe ?",
+      "options": ["Ton vrai mot de passe", "Un mot de passe faux", "Rien du tout", "Ton email"],
+      "reponse": 2
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "guide",
+  "version": 1,
+  "id": " phishing-avance",
+  "nom": "Le phishing avancé",
+  "description": "Techniques sophistiquées : spear phishing, whaling, BEC (Business Email Compromise).",
+  "pedagogie": {
+    "objectif": "Reconnaître les formes avancées de phishing",
+    "ages": [16, 18],
+    "duree_min": 10
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B1",
+  "bird": "alerte",
+  "code": "PH-B1",
+  "lat": 48.8566,
+  "lng": 2.3522,
+  "label": "Le Message",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Tu reçois 3 notifications. Laquelle est la plus suspecte ?\nA : « Votre compte nécessite une vérification. Cliquez ici immédiatement. »\nB : « Votre administrateur vous demande de confirmer votre identité. Rendez-vous dans l'application. »\nC : « ALERTE !! Votre téléphone sera supprimé dans 5 minutes !!! »",
+      "reponses": ["C", "la C", "la troisième", "la troisième notification", "ALERTE"],
+      "indice": "Regarde le ton : menace, ponctuation excessive, urgence.",
+      "saviez": "L'ingénierie sociale utilise la peur et l'urgence pour te faire agir sans réfléchir.",
+      "ages": [12, 14]
+    },
+    "moyen": {
+      "text": "Quel élément rend un message suspect ?\nA : L'urgence artificielle\nB : Le nom de l'expéditeur\nC : L'heure d'envoi",
+      "reponses": ["A", "l'urgence artificielle", "l'urgence", "l'urgence artificielle"],
+      "indice": "Un message qui te pousse à agir « maintenant » est presque toujours suspect.",
+      "saviez": "Les attaquants créent un sentiment d'urgence pour court-circuiter ta réflexion.",
+      "ages": [14, 16]
+    },
+    "difficile": {
+      "text": "Identifie les 3 techniques de manipulation utilisées dans un message de phishing classique.",
+      "reponses": ["urgence, autorité, peur", "urgence autorité peur", "peur autorité urgence", "urgence, peur, autorité"],
+      "indice": "Pense à ce que le message te fait ressentir : pression, menace, obligation.",
+      "saviez": "Les 3 piliers du phishing : l'autorité (qui parle), l'urgence (agis vite), la peur (conséquences).",
+      "ages": [16, 18]
+    }
+  },
+  "enigme": null
+}

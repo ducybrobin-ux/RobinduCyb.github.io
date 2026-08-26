@@ -1,0 +1,36 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "B9",
+  "bird": "legende-balto",
+  "code": "JDP-B9",
+  "label": "La ligne de départ",
+  "x": 132,
+  "y": 153,
+  "lat": 46.03098,
+  "lng": 2.5525,
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Un chien de traîneau héroïque a donné son prénom à notre élevage. Comment s'appelle-t-il ?",
+      "reponses": ["balto", "balto le chien"],
+      "indice": "C'est aussi le nom de l'élevage : Les Cristaux de ___ .",
+      "saviez": "Sa statue se dresse à Central Park, à New York.",
+      "ages": [7, 10]
+    },
+    "moyen": {
+      "text": "En 1925, une terrible maladie menace les enfants de Nome, en Alaska. Quel remède est transporté en traîneau sur plus de 1 000 km ?",
+      "reponses": ["serum", "le serum", "serum anti-diphterie", "antitoxine diphterique", "serum antidiphterique"],
+      "indice": "Contre la diphtérie, on achemine un s___ .",
+      "saviez": "Par -50 °C et dans le blizzard, des relais de traîneaux se sont passés le témoin sans interruption.",
+      "ages": [11, 13]
+    },
+    "difficile": {
+      "text": "Balto a couru le dernier relais jusqu'à Nome… mais quel autre chien a parcouru le plus long tronçon de cette course au sérum ?",
+      "reponses": ["togo", "togo le chien", "leonhard seppala togo"],
+      "indice": "Quatre lettres : T-O-G-O — il a couru 424 km, cinq fois plus que Balto !",
+      "saviez": "Sur la statue de Balto à Central Park on lit : « Endurance · Fidelity · Intelligence ».",
+      "ages": [14, 99]
+    }
+  }
+}

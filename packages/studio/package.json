@@ -1,0 +1,9 @@
+{
+  "name": "@curios/studio",
+  "version": "0.1.0",
+  "description": "Studio Curios — workflow guidé de création de parcours éducatifs",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "license": "AGPL-3.0"
+}
