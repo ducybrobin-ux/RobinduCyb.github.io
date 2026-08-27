@@ -44,6 +44,39 @@
   function updatePack(id, p) { return request("PUT", "/packs/" + id, p); }
   function deletePack(id) { return request("DELETE", "/packs/" + id); }
 
+  /* ---- Clients ---- */
+  function getClients() { return request("GET", "/clients"); }
+  function createClient(p) { return request("POST", "/clients", p); }
+  function updateClient(id, p) { return request("PUT", "/clients/" + id, p); }
+  function deleteClient(id) { return request("DELETE", "/clients/" + id); }
+
+  /* ---- Materiel ---- */
+  function getMateriel() { return request("GET", "/materiel"); }
+  function createMateriel(p) { return request("POST", "/materiel", p); }
+  function updateMateriel(id, p) { return request("PUT", "/materiel/" + id, p); }
+  function deleteMateriel(id) { return request("DELETE", "/materiel/" + id); }
+
+  /* ---- Sessions ---- */
+  function getSessions() { return request("GET", "/sessions-data"); }
+  function createSession(p) { return request("POST", "/sessions-data", p); }
+  function updateSession(id, p) { return request("PUT", "/sessions-data/" + id, p); }
+  function deleteSession(id) { return request("DELETE", "/sessions-data/" + id); }
+
+  /* ---- Planning ---- */
+  function getPlanning() { return request("GET", "/planning"); }
+  function createEvent(p) { return request("POST", "/planning", p); }
+  function updateEvent(id, p) { return request("PUT", "/planning/" + id, p); }
+  function deleteEvent(id) { return request("DELETE", "/planning/" + id); }
+
+  /* ---- Commercial ---- */
+  function getCommercial() { return request("GET", "/commercial"); }
+  function createDevis(p) { return request("POST", "/commercial", p); }
+  function updateDevis(id, p) { return request("PUT", "/commercial/" + id, p); }
+  function deleteDevis(id) { return request("DELETE", "/commercial/" + id); }
+
+  /* ---- Analytics ---- */
+  function getAnalytics() { return request("GET", "/analytics"); }
+
   window.HubAPI = {
     getProjets: getProjets,
     createProjet: createProjet,
@@ -57,5 +90,26 @@
     createPack: createPack,
     updatePack: updatePack,
     deletePack: deletePack,
+    getClients: getClients,
+    createClient: createClient,
+    updateClient: updateClient,
+    deleteClient: deleteClient,
+    getMateriel: getMateriel,
+    createMateriel: createMateriel,
+    updateMateriel: updateMateriel,
+    deleteMateriel: deleteMateriel,
+    getSessions: getSessions,
+    createSession: createSession,
+    updateSession: updateSession,
+    deleteSession: deleteSession,
+    getPlanning: getPlanning,
+    createEvent: createEvent,
+    updateEvent: updateEvent,
+    deleteEvent: deleteEvent,
+    getCommercial: getCommercial,
+    createDevis: createDevis,
+    updateDevis: updateDevis,
+    deleteDevis: deleteDevis,
+    getAnalytics: getAnalytics,
   };
 })();

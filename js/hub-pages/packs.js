@@ -140,6 +140,7 @@ var renderPacks = (function () {
   }
 
   window.hubAction_import_pack = showImportModal;
+  window.hubAction_create_pack = showImportModal;
 
   return render;
 })();

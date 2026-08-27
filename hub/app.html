@@ -25,99 +25,24 @@
   <script src="../js/hub-pages/projets.js"></script>
   <script src="../js/hub-pages/parcours.js"></script>
   <script src="../js/hub-pages/packs.js"></script>
+  <script src="../js/hub-pages/sessions.js"></script>
+  <script src="../js/hub-pages/clients.js"></script>
+  <script src="../js/hub-pages/materiel.js"></script>
+  <script src="../js/hub-pages/planning.js"></script>
+  <script src="../js/hub-pages/commercial.js"></script>
+  <script src="../js/hub-pages/analytics.js"></script>
   <script>
     (function () {
       HubShell.registerPage("dashboard", renderDashboard);
       HubShell.registerPage("projets", renderProjets);
       HubShell.registerPage("parcours", renderParcours);
       HubShell.registerPage("packs", renderPacks);
-
-      HubShell.registerPage("sessions", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">🎯 Sessions</h1>' +
-          '<p class="hub-page-sub">Sessions de jeu en cours ou terminées</p></div></div>' +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">🎯</div>' +
-          '<div class="hub-empty-title">Aucune session active</div>' +
-          '<div class="hub-empty-desc">Les sessions apparaissent ici quand des équipes jouent.</div>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("clients", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">👥 Clients & Prescripteurs</h1>' +
-          '<p class="hub-page-sub">Vos contacts professionnels</p></div></div>' +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">👥</div>' +
-          '<div class="hub-empty-title">Aucun client</div>' +
-          '<div class="hub-empty-desc">Ajoutez vos établissements, collectivités et associations.</div>' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="new-client">➕ Ajouter un client</button>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("materiel", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">🔧 Matériel & Kits</h1>' +
-          '<p class="hub-page-sub">Inventaire et réservation de matériel</p></div></div>' +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">🔧</div>' +
-          '<div class="hub-empty-title">Aucun matériel enregistré</div>' +
-          '<div class="hub-empty-desc">Gérez vos balises, kits et équipements.</div>' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="new-materiel">➕ Ajouter du matériel</button>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("planning", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">📅 Planning</h1>' +
-          '<p class="hub-page-sub">Calendrier des sessions et événements</p></div></div>' +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">📅</div>' +
-          '<div class="hub-empty-title">Aucun événement planifié</div>' +
-          '<div class="hub-empty-desc">Planifiez vos sessions et suivez votre agenda.</div>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("commercial", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">💰 Commercial</h1>' +
-          '<p class="hub-page-sub">Devis, factures et suivi commercial</p></div></div>' +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">💰</div>' +
-          '<div class="hub-empty-title">Aucun devis ou facture</div>' +
-          '<div class="hub-empty-desc">Créez des devis et factures pour vos clients.</div>' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="new-devis">➕ Nouveau devis</button>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("analytics", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">📈 Analytics</h1>' +
-          '<p class="hub-page-sub">Tableaux de bord et métriques</p></div></div>' +
-          '<div class="hub-stats">' +
-          '<div class="hub-stat"><div class="hub-stat-icon blue">📊</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Sessions totales</div></div></div>' +
-          '<div class="hub-stat"><div class="hub-stat-icon green">👥</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Participants</div></div></div>' +
-          '<div class="hub-stat"><div class="hub-stat-icon gold">⭐</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Score moyen</div></div></div>' +
-          '<div class="hub-stat"><div class="hub-stat-icon red">⏱️</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Durée moyenne</div></div></div>' +
-          "</div>" +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">📈</div>' +
-          '<div class="hub-empty-title">Données en attente</div>' +
-          '<div class="hub-empty-desc">Les analytics s\'afficheront après vos premières sessions.</div>' +
-          "</div></div>"
-        );
-      });
+      HubShell.registerPage("sessions", renderSessions);
+      HubShell.registerPage("clients", renderClients);
+      HubShell.registerPage("materiel", renderMateriel);
+      HubShell.registerPage("planning", renderPlanning);
+      HubShell.registerPage("commercial", renderCommercial);
+      HubShell.registerPage("analytics", renderAnalytics);
 
       HubShell.registerPage("settings", function (user) {
         return (
