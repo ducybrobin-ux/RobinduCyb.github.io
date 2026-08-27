@@ -1,0 +1,11 @@
+{
+  "name": "@curios/shared",
+  "version": "0.1.0",
+  "description": "Utilitaires partagés Curi🧭s — escape, DOM, event bus. Zéro dépendance.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "AGPL-3.0"
+}

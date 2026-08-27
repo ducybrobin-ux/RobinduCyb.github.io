@@ -40,8 +40,8 @@
     const b = $("board-banner");
     if (!b) return;
     b.classList.remove("hidden");
-    b.innerHTML = '<span style="font-size:24px;">📣</span><span class="board-banner-text">' + esc(text) + '</span>' +
-      '<button type="button" class="board-banner-close" aria-label="Fermer">✕</button>';
+    b.innerHTML = `<span style="font-size:24px;">📣</span><span class="board-banner-text">${  esc(text)  }</span>` +
+      `<button type="button" class="board-banner-close" aria-label="Fermer">✕</button>`;
     const close = b.querySelector(".board-banner-close");
     if (close) close.addEventListener("click", () => b.classList.add("hidden"));
   }
@@ -52,7 +52,7 @@
   }
 
   function typeTag(t) {
-    const k = "chal_type_" + (t || "");
+    const k = `chal_type_${  t || ""}`;
     const v = I18N.t(k);
     return v === k ? (t || "") : v;
   }

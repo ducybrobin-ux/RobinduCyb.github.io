@@ -26,7 +26,7 @@ if (!fileArg) {
   process.exit(2);
 }
 
-function fail(msg) { console.error("❌ " + msg); process.exit(1); }
+function fail(msg) { console.error(`❌ ${  msg}`); process.exit(1); }
 
 let bundle;
 try {
@@ -69,7 +69,7 @@ const pad = (i) => String(i + 1).padStart(2, "0");
 const write = (rel, obj) => {
   const f = path.join(dir, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
-  fs.writeFileSync(f, JSON.stringify(obj, null, 2) + "\n", "utf8");
+  fs.writeFileSync(f, `${JSON.stringify(obj, null, 2)  }\n`, "utf8");
 };
 
 write("pack.json", {
@@ -86,7 +86,7 @@ const manifestFile = path.join(CONTENT, "manifest.json");
 const manifest = JSON.parse(fs.readFileSync(manifestFile, "utf8"));
 if (!manifest.packs.some((p) => p.id === pack.id)) {
   manifest.packs.push({ id: pack.id, actif: !!actif });
-  fs.writeFileSync(manifestFile, JSON.stringify(manifest, null, 2) + "\n", "utf8");
+  fs.writeFileSync(manifestFile, `${JSON.stringify(manifest, null, 2)  }\n`, "utf8");
 }
 
 console.log(`✅ Pack installé : content/packs/${pack.id}`);

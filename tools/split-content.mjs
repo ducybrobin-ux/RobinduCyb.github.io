@@ -43,7 +43,7 @@ function loadRegion() {
   const m2 = src.indexOf("/* ==== FIN CONTENU GÉNÉRÉ ==== */");
   if (m1 < 0 || m2 < 0) throw new Error("Marqueurs de région introuvables dans js/data.js");
   const region = src.slice(m1, m2);
-  return new Function(region + ";return {SITE,TRAIL,BIRDS,GUIDE,BALISES,DIFFICULTIES}")();
+  return new Function(`${region  };return {SITE,TRAIL,BIRDS,GUIDE,BALISES,DIFFICULTIES}`)();
 }
 
 function pedago(base, table, id, dureeMin) {
@@ -59,7 +59,7 @@ function pedago(base, table, id, dureeMin) {
 
 function writeJson(file, obj) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, JSON.stringify(obj, null, 2) + "\n", "utf8");
+  fs.writeFileSync(file, `${JSON.stringify(obj, null, 2)  }\n`, "utf8");
   console.log("écrit", path.relative(ROOT, file));
 }
 

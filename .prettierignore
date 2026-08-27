@@ -1,0 +1,9 @@
+dist/
+node_modules/
+js/jsqr.js
+js/qrcode.js
+img/
+content/
+docs/
+*.md
+*.json

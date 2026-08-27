@@ -9,42 +9,95 @@
    sinon une signature sonore synthétique (Web Audio) est jouée.
    ========================================================= */
 
-const SITE = {
-  name: "Jeu de piste",
-  short: "JDP",
-  region: "Parcours découverte",
-  mapTitle: "Le sentier des découvertes",
-  // Position du centre du site (GPS) — À RÉGLER via l'éditeur
-  // (« Ma position GPS » sur chaque balise) avant le terrain.
-  center: { lat: 50.6314885, lng: 3.0558956 },
-  proximityRadius: 12, // en mètres : distance pour valider par GPS
-  hintRadius: 250,     // en mètres : à partir d'où le signal sonore guide
-  photos: [],
-};
-
-const TRAIL = {
-  // Le tracé du sentier (x, y dans la vue de la carte)
-  path: [
-    [36, 552], [48, 500], [74, 452], [110, 428], [148, 400],
-    [176, 356], [200, 308], [238, 292], [282, 296], [320, 320],
-    [356, 352], [388, 396], [406, 448], [392, 500], [366, 540], [330, 556],
-  ],
-  label: "Sentier des découvertes",
-};
-
-/* ---- Découvertes (biais cognitifs) --------------------------------
-   chant : phrase musicale répétée (Web Audio), signature unique.
-   notes : [ { f, fEnd, d, g, type, v } ]
-     f = fréquence de départ (Hz), fEnd = fréquence d'arrivée,
-     d = durée (s), g = pause après la note (s),
-     type = 'sine' | 'square' | 'sawtooth' | 'noise', v = volume relatif.
-------------------------------------------------------------------- */
-
 /* ==== DÉBUT CONTENU GÉNÉRÉ — NE PAS ÉDITER ====
-   Source de vérité : content/ (packs JSON modulaires).
+   Source de vérité : content/ (config + packs JSON modulaires).
    Packs actifs : biais-cognitifs, cemea-education-populaire
    Régénérer : node tools/build-data.mjs
    Vérifier la synchro : node tools/build-data.mjs --check ==== */
+
+const SITE = {
+  "name": "Jeu de piste",
+  "short": "JDP",
+  "region": "Parcours découverte",
+  "mapTitle": "Le sentier des découvertes",
+  "center": {
+    "lat": 50.6314885,
+    "lng": 3.0558956
+  },
+  "proximityRadius": 12,
+  "hintRadius": 250,
+  "photos": []
+};
+
+const TRAIL = {
+  "path": [
+    [
+      36,
+      552
+    ],
+    [
+      48,
+      500
+    ],
+    [
+      74,
+      452
+    ],
+    [
+      110,
+      428
+    ],
+    [
+      148,
+      400
+    ],
+    [
+      176,
+      356
+    ],
+    [
+      200,
+      308
+    ],
+    [
+      238,
+      292
+    ],
+    [
+      282,
+      296
+    ],
+    [
+      320,
+      320
+    ],
+    [
+      356,
+      352
+    ],
+    [
+      388,
+      396
+    ],
+    [
+      406,
+      448
+    ],
+    [
+      392,
+      500
+    ],
+    [
+      366,
+      540
+    ],
+    [
+      330,
+      556
+    ]
+  ],
+  "label": "Sentier des découvertes"
+};
 
 const BIRDS = [
   {
@@ -2958,7 +3011,7 @@ function nextBalise(id) { const i = getBaliseIndex(id); return i >= 0 && i < BAL
  * js/engine.js (généré par tools/build-engine.mjs) expose ces fonctions
  * via window.CURIOS_ENGINE.
  */
-var { normalize, checkAnswer, makeQuiz, getEnigme } = window.CURIOS_ENGINE;
+const { normalize, checkAnswer, makeQuiz, getEnigme } = window.CURIOS_ENGINE;
 
 /* ---- Surcharges éditables (admin-data.json) -------------------------
    Applique les modifications sauvegardées par l'éditeur (serveur ou god
@@ -3053,7 +3106,7 @@ function applyAdminData(admin) {
         bal = {
           id: id,
           bird: ov.bird || "",
-          code: ov.code || "JDP-" + String(id).toUpperCase(),
+          code: ov.code || `JDP-${  String(id).toUpperCase()}`,
           x: (ov.x != null && isFinite(Number(ov.x))) ? Number(ov.x) : 200,
           y: (ov.y != null && isFinite(Number(ov.y))) ? Number(ov.y) : 400,
           lat: (ov.lat != null && isFinite(Number(ov.lat))) ? Number(ov.lat) : SITE.center.lat,

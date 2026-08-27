@@ -29,7 +29,7 @@ const BirdReco = (function () {
   }
 
   function setMeter(v) {
-    if (fillEl()) fillEl().style.width = Math.round(v * 100) + "%";
+    if (fillEl()) fillEl().style.width = `${Math.round(v * 100)  }%`;
   }
 
   async function startRecording() {

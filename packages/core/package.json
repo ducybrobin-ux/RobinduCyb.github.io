@@ -1,0 +1,11 @@
+{
+  "name": "@curios/core",
+  "version": "0.1.0",
+  "description": "Curi🧭s — data-loader et fonctions d'accès aux données.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "AGPL-3.0"
+}

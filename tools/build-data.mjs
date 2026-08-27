@@ -4,8 +4,9 @@
  *   node tools/build-data.mjs            régénère js/data.js
  *   node tools/build-data.mjs --check    vérifie la synchro (exit 1 si obsolète)
  *
- * La région délimitée par les marqueurs DÉBUT/FIN CONTENU GÉNÉRÉ est le seul
- * endroit modifié ; SITE, TRAIL et toutes les fonctions moteur restent intacts.
+ * La région délimitée par les marqueurs DÉBUT/FIN CONTENU GÉNÉRÉ inclut
+ * SITE, TRAIL et toutes les données de jeu. Les fonctions moteur restent
+ * intactes.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -23,13 +24,17 @@ const M_DEBUT = "/* ==== DÉBUT CONTENU GÉNÉRÉ — NE PAS ÉDITER ====";
 const M_FIN = "/* ==== FIN CONTENU GÉNÉRÉ ==== */";
 
 /* ---- Régénération de la région ---- */
-function regionGeneree({ decouvertes, guide, balises, themes, packsActifs }) {
+function regionGeneree({ decouvertes, guide, balises, themes, packsActifs, site, trail }) {
   const j = (o) => JSON.stringify(o, null, 2);
   return `${M_DEBUT}
-   Source de vérité : content/ (packs JSON modulaires).
+   Source de vérité : content/ (config + packs JSON modulaires).
    Packs actifs : ${packsActifs.join(", ")}
    Régénérer : node tools/build-data.mjs
    Vérifier la synchro : node tools/build-data.mjs --check ==== */
+
+const SITE = ${j(site)};
+
+const TRAIL = ${j(trail)};
 
 const BIRDS = ${j(decouvertes)};
 
@@ -55,7 +60,7 @@ function ecrireBundles(packsCharges) {
   for (const { pack, decouvertes, guide, balises } of packsCharges) {
     const bundle = { $format: "jdpbc-pack", $version: 1, pack, decouvertes, guide, balises };
     const file = path.join(dir, `${pack.id}.json`);
-    fs.writeFileSync(file, JSON.stringify(bundle, null, 2) + "\n", "utf8");
+    fs.writeFileSync(file, `${JSON.stringify(bundle, null, 2)  }\n`, "utf8");
     console.log("bundle :", path.relative(ROOT, file));
   }
 }
@@ -70,7 +75,9 @@ if (i1 < 0 || i2 < 0 || i2 < i1) {
 }
 
 const contenu = chargerContenu(CONTENT, ROOT);
-const region = regionGeneree(contenu);
+const site = readJson(path.join(CONTENT, "config", "site.json"));
+const trail = readJson(path.join(CONTENT, "config", "trail.json"));
+const region = regionGeneree({ ...contenu, site, trail });
 const nouveau = src.slice(0, i1) + region + src.slice(i2 + M_FIN.length);
 
 if (checkOnly) {

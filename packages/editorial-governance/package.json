@@ -1,0 +1,11 @@
+{
+  "name": "@curios/editorial-governance",
+  "version": "0.1.0",
+  "description": "Curi🧭s — gouvernance éducative : statuts, versions, signatures, audit log.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "AGPL-3.0"
+}

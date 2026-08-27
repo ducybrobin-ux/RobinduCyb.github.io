@@ -1,0 +1,10 @@
+{
+  "name": "Jeu de piste",
+  "short": "JDP",
+  "region": "Parcours découverte",
+  "mapTitle": "Le sentier des découvertes",
+  "center": { "lat": 50.6314885, "lng": 3.0558956 },
+  "proximityRadius": 12,
+  "hintRadius": 250,
+  "photos": []
+}

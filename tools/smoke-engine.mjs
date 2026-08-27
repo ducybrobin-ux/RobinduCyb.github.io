@@ -31,7 +31,7 @@ const code = fs.readFileSync(process.argv[2], "utf8");
 vm.runInContext(code, ctx, { filename: "data.js" });
 
 let pass = true;
-const ok = (name, val) => { console.log("  " + name + ": " + val); if (!val) pass = false; };
+const ok = (name, val) => { console.log(`  ${  name  }: ${  val}`); if (!val) pass = false; };
 
 ok("allBirds",  typeof ctx.allBirds === "function");
 ok("getBird",   typeof ctx.getBird  === "function");

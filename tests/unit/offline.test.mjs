@@ -7,7 +7,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 
 import {
-  VERSION, CACHE, RUNTIME, PRECACHE,
+  VERSION, CACHE, RUNTIME,
   shouldBypassCache, fetchStrategy, shouldCacheRuntime,
   offlineFallback, cachesToDelete,
 } from "../../packages/offline/src/index.js";
@@ -22,19 +22,6 @@ describe("config", () => {
 
   it("CACHE et RUNTIME sont distincts", () => {
     assert.notEqual(CACHE, RUNTIME);
-  });
-
-  it("PRECACHE contient index.html", () => {
-    assert.ok(PRECACHE.includes("index.html"));
-  });
-
-  it("PRECACHE contient engine.js et geo.js", () => {
-    assert.ok(PRECACHE.includes("js/engine.js"));
-    assert.ok(PRECACHE.includes("js/geo.js"));
-  });
-
-  it("PRECACHE contient le manifest", () => {
-    assert.ok(PRECACHE.includes("manifest.json"));
   });
 });
 

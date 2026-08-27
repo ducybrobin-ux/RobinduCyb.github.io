@@ -429,7 +429,7 @@ const I18N = (function () {
       const active = document.querySelector(".screen.active");
       if (active && active.dataset.title) {
         const t = document.getElementById("page-title");
-        if (t) t.textContent = this.t("title_" + active.dataset.title) || t.textContent;
+        if (t) t.textContent = this.t(`title_${  active.dataset.title}`) || t.textContent;
       }
       try {
         document.dispatchEvent(new CustomEvent("jdp:lang"));

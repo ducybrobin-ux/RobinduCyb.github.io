@@ -36,7 +36,7 @@ async function handleEditorPost(req, res, edFile) {
     return sendError(res, 400, "invalid-json");
   }
 
-  let data = payload.data || payload;
+  const data = payload.data || payload;
   if (typeof data !== "object" || data === null) {
     return sendError(res, 400, "invalid-data");
   }
@@ -63,7 +63,7 @@ export function handleEditorImages(method, req, res, state) {
       if (entry.isDirectory()) {
         walk(path.join(dir, entry.name), rel);
       } else if (/\.(jpg|jpeg|png|gif|svg|webp)$/i.test(entry.name)) {
-        list.push("img/" + rel);
+        list.push(`img/${  rel}`);
       }
     }
   }

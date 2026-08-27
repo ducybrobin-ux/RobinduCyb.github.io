@@ -1,6 +1,6 @@
 /* @curios/offline — point d'entrée unique. */
 
-export { VERSION, CACHE, RUNTIME, PRECACHE } from "./config.js";
+export { VERSION, CACHE, RUNTIME } from "./config.js";
 export {
   shouldBypassCache,
   fetchStrategy,

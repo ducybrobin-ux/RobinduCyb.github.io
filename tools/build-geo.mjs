@@ -29,15 +29,15 @@ const srcFunctions = [
 ];
 
 const out =
-  "/* Auto-généré par tools/build-geo.mjs — NE PAS ÉDITER MANUELLEMENT */\n" +
-  "(function(){\n" +
-  "window.GeoMath = {};\n" +
-  srcFunctions.map((fn) => `  ${fn};`).join("\n") + "\n" +
-  "  window.GeoMath.haversine = haversine;\n" +
-  "  window.GeoMath.bearing = bearing;\n" +
-  "  window.GeoMath.normDeg = normDeg;\n" +
-  "  window.GeoMath.cardinal = cardinal;\n" +
-  "})();\n";
+  `/* Auto-généré par tools/build-geo.mjs — NE PAS ÉDITER MANUELLEMENT */\n` +
+  `(function(){\n` +
+  `window.GeoMath = {};\n${ 
+  srcFunctions.map((fn) => `  ${fn};`).join("\n")  }\n` +
+  `  window.GeoMath.haversine = haversine;\n` +
+  `  window.GeoMath.bearing = bearing;\n` +
+  `  window.GeoMath.normDeg = normDeg;\n` +
+  `  window.GeoMath.cardinal = cardinal;\n` +
+  `})();\n`;
 
 if (CHECK) {
   const old = existsSync(OUT) ? readFileSync(OUT, "utf8") : "";
@@ -49,5 +49,5 @@ if (CHECK) {
 } else {
   mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, out, "utf8");
-  console.log("[build-geo] Généré js/geo.js (" + out.length + " octets).");
+  console.log(`[build-geo] Généré js/geo.js (${  out.length  } octets).`);
 }

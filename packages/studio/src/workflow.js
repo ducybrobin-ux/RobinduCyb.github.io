@@ -38,6 +38,22 @@ export const STEPS = [
     required: ["discoveries"],
   },
   {
+    id: "evenements",
+    label: "Événements",
+    icon: "⚡",
+    description: "Configurer les événements dynamiques : déclencheurs, conditions et actions",
+    fields: ["events"],
+    required: [],
+  },
+  {
+    id: "debriefing",
+    label: "Débriefing",
+    icon: "📋",
+    description: "Préparer le bilan pédagogique et les questions de réflexion",
+    fields: ["debriefing"],
+    required: [],
+  },
+  {
     id: "tests",
     label: "Tests",
     icon: "✅",
@@ -89,7 +105,17 @@ export function createWorkflow() {
       enigmas: [],
       quiz: [],
 
-      // Step 5: Tests
+      // Step 5: Événements
+      events: [],
+
+      // Step 6: Débriefing
+      debriefing: {
+        questions: [],
+        competences: [],
+        summaryTemplate: "",
+      },
+
+      // Step 7: Tests
       validation: {
         errors: [],
         warnings: [],
@@ -222,6 +248,49 @@ export function createWorkflow() {
     state.data.discoveries = state.data.discoveries.filter((d) => d.id !== id);
   }
 
+  function addEvent() {
+    const id = `event-${state.data.events.length + 1}`;
+    state.data.events.push({
+      id,
+      type: "BALISE_FOUND",
+      trigger: "always",
+      conditions: [],
+      actions: [],
+      description: "",
+    });
+    return id;
+  }
+
+  function removeEvent(id) {
+    state.data.events = state.data.events.filter((e) => e.id !== id);
+  }
+
+  function addDebriefQuestion() {
+    const id = `q-${state.data.debriefing.questions.length + 1}`;
+    state.data.debriefing.questions.push({
+      id,
+      text: "",
+      category: "reflection",
+    });
+    return id;
+  }
+
+  function removeDebriefQuestion(id) {
+    state.data.debriefing.questions = state.data.debriefing.questions.filter((q) => q.id !== id);
+  }
+
+  function addCompetence() {
+    state.data.debriefing.competences.push({
+      name: "",
+      description: "",
+      evaluationCriteria: [],
+    });
+  }
+
+  function removeCompetence(index) {
+    state.data.debriefing.competences.splice(index, 1);
+  }
+
   function validate() {
     const errors = [];
     const warnings = [];
@@ -258,6 +327,20 @@ export function createWorkflow() {
     for (const discovery of state.data.discoveries) {
       if (!discovery.nom.trim()) errors.push(`Découverte ${discovery.id} : nom manquant`);
       if (discovery.quiz.length === 0) warnings.push(`Découverte ${discovery.id} : pas de quiz`);
+    }
+
+    // Step 5: Événements
+    for (const event of state.data.events) {
+      if (!event.type) errors.push(`Événement ${event.id} : type manquant`);
+      if (!event.description.trim()) warnings.push(`Événement ${event.id} : pas de description`);
+    }
+
+    // Step 6: Débriefing
+    if (state.data.debriefing.questions.length === 0) {
+      warnings.push("Aucune question de débriefing définie");
+    }
+    for (const q of state.data.debriefing.questions) {
+      if (!q.text.trim()) errors.push(`Question ${q.id} : texte manquant`);
     }
 
     state.data.validation = {
@@ -307,6 +390,28 @@ export function createWorkflow() {
       return quizMissions;
     });
 
+    const events = state.data.events.map((e) => ({
+      id: e.id,
+      type: e.type,
+      trigger: e.trigger,
+      conditions: e.conditions,
+      actions: e.actions,
+    }));
+
+    const debriefing = {
+      questions: state.data.debriefing.questions.map((q) => ({
+        id: q.id,
+        text: q.text,
+        category: q.category,
+      })),
+      competences: state.data.debriefing.competences.map((c) => ({
+        name: c.name,
+        description: c.description,
+        evaluationCriteria: c.evaluationCriteria,
+      })),
+      summaryTemplate: state.data.debriefing.summaryTemplate,
+    };
+
     return {
       $format: "curios-parcours",
       $version: 1,
@@ -334,6 +439,8 @@ export function createWorkflow() {
       trail: state.data.trail,
       stations,
       missions,
+      events,
+      debriefing,
     };
   }
 
@@ -351,6 +458,12 @@ export function createWorkflow() {
     removeBalise,
     addDiscovery,
     removeDiscovery,
+    addEvent,
+    removeEvent,
+    addDebriefQuestion,
+    removeDebriefQuestion,
+    addCompetence,
+    removeCompetence,
     validate,
     toParcours,
   };

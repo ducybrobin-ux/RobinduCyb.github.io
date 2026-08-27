@@ -8,8 +8,8 @@ import { createWorkflow, STEPS } from "../../packages/studio/src/workflow.js";
 import { createHistory } from "../../packages/studio/src/history.js";
 
 describe("STEPS", () => {
-  it("has 6 steps", () => {
-    assert.equal(STEPS.length, 6);
+  it("has 8 steps", () => {
+    assert.equal(STEPS.length, 8);
   });
 
   it("each step has required fields", () => {
@@ -112,6 +112,86 @@ describe("Discoveries", () => {
   });
 });
 
+describe("Events", () => {
+  it("addEvent creates a new event", () => {
+    const wf = createWorkflow();
+    const id = wf.addEvent();
+    assert.equal(id, "event-1");
+    assert.equal(wf.state.data.events.length, 1);
+    assert.equal(wf.state.data.events[0].type, "BALISE_FOUND");
+  });
+
+  it("removeEvent removes by id", () => {
+    const wf = createWorkflow();
+    wf.addEvent();
+    wf.removeEvent("event-1");
+    assert.equal(wf.state.data.events.length, 0);
+  });
+
+  it("updateEvent modifies event properties", () => {
+    const wf = createWorkflow();
+    wf.addEvent();
+    wf.updateData("events.0.type", "QUIZ_COMPLETED");
+    wf.updateData("events.0.trigger", "always");
+    wf.updateData("events.0.description", "Récompense quand le quiz est terminé");
+    assert.equal(wf.state.data.events[0].type, "QUIZ_COMPLETED");
+    assert.equal(wf.state.data.events[0].description, "Récompense quand le quiz est terminé");
+  });
+
+  it("toParcours includes events", () => {
+    const wf = createWorkflow();
+    wf.updateData("title", "Test");
+    wf.updateData("theme", "Test");
+    wf.addEvent();
+    wf.updateData("events.0.description", "Test event");
+    const doc = wf.toParcours();
+    assert.equal(doc.events.length, 1);
+    assert.equal(doc.events[0].type, "BALISE_FOUND");
+  });
+});
+
+describe("Debriefing", () => {
+  it("addDebriefQuestion creates a question", () => {
+    const wf = createWorkflow();
+    const id = wf.addDebriefQuestion();
+    assert.equal(id, "q-1");
+    assert.equal(wf.state.data.debriefing.questions.length, 1);
+  });
+
+  it("removeDebriefQuestion removes by id", () => {
+    const wf = createWorkflow();
+    wf.addDebriefQuestion();
+    wf.removeDebriefQuestion("q-1");
+    assert.equal(wf.state.data.debriefing.questions.length, 0);
+  });
+
+  it("addCompetence adds a competence", () => {
+    const wf = createWorkflow();
+    wf.addCompetence();
+    assert.equal(wf.state.data.debriefing.competences.length, 1);
+  });
+
+  it("removeCompetence removes by index", () => {
+    const wf = createWorkflow();
+    wf.addCompetence();
+    wf.addCompetence();
+    wf.removeCompetence(0);
+    assert.equal(wf.state.data.debriefing.competences.length, 1);
+  });
+
+  it("toParcours includes debriefing", () => {
+    const wf = createWorkflow();
+    wf.updateData("title", "Test");
+    wf.updateData("theme", "Test");
+    wf.addDebriefQuestion();
+    wf.updateData("debriefing.questions.0.text", "Qu'avez-vous appris ?");
+    const doc = wf.toParcours();
+    assert.ok(doc.debriefing);
+    assert.equal(doc.debriefing.questions.length, 1);
+    assert.equal(doc.debriefing.questions[0].text, "Qu'avez-vous appris ?");
+  });
+});
+
 describe("Validation", () => {
   it("validate returns errors for empty workflow", () => {
     const wf = createWorkflow();
@@ -172,6 +252,8 @@ describe("toParcours", () => {
     assert.equal(doc.stations[0].label, "Première halte");
     assert.ok(doc.stations[0].missions.length > 0);
     assert.equal(doc.stations[0].missions[0].type, "enigme");
+    assert.ok(Array.isArray(doc.events));
+    assert.ok(doc.debriefing);
   });
 });
 

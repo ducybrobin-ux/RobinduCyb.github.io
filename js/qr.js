@@ -31,7 +31,7 @@ const QrScan = (function () {
         .then((r) => (r.ok ? r.json() : null))
         .then((info) => {
           if (info && info.url) {
-            setStatus("❌ Caméra bloquée : la page n'est pas en HTTPS (obligatoire pour la caméra). Rechargez-la via " + info.url + " (l'adresse HTTPS du serveur) pour activer la caméra et le GPS.");
+            setStatus(`❌ Caméra bloquée : la page n'est pas en HTTPS (obligatoire pour la caméra). Rechargez-la via ${  info.url  } (l'adresse HTTPS du serveur) pour activer la caméra et le GPS.`);
           } else if (window.location.protocol === "http:" && /^localhost|127\./.test(window.location.hostname)) {
             setStatus("❌ Caméra bloquée : sur cet appareil (hors contexte sécurisé), ouvrez l'adresse HTTPS affichée dans le panneau « Connecter un autre appareil » pour activer la caméra et le GPS.");
           }
@@ -60,7 +60,7 @@ const QrScan = (function () {
       }
       return true;
     } catch (e) {
-      setStatus("❌ Impossible d'accéder à la caméra : " + (e && e.message ? e.message : e) + " — sinon, saisissez le code inscrit sous le QR.");
+      setStatus(`❌ Impossible d'accéder à la caméra : ${  e && e.message ? e.message : e  } — sinon, saisissez le code inscrit sous le QR.`);
       return false;
     }
   }

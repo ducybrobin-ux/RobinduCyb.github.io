@@ -17,8 +17,34 @@ const SRC = path.join(ROOT, "packages", "game-engine", "src");
 const OUT = path.join(ROOT, "js", "engine.js");
 const checkOnly = process.argv.includes("--check");
 
-const EXPOSED = ["normalize", "checkAnswer", "makeQuiz", "getEnigme"];
-const SRC_FILES = ["normalize.js", "answers.js", "quiz.js", "enigmes.js"];
+/* ---- Utilitaires existants (toujours exposés) ---- */
+const CORE_EXPOSED = ["normalize", "checkAnswer", "makeQuiz", "getEnigme"];
+const CORE_FILES = ["normalize.js", "answers.js", "quiz.js", "enigmes.js"];
+
+/* ---- Event engine (nouveaux modules) ---- */
+const ENGINE_FILES = ["events.js", "conditions.js", "state.js", "engine.js", "rules.js"];
+const ENGINE_EXPOSED = [
+  // Events
+  "BALISE_FOUND", "RIDDLE_SOLVED", "QUIZ_COMPLETED", "BIRD_REVEALED",
+  "SEED_OFFERED", "RUN_FINISHED", "PROFILE_CHANGED", "SETTINGS_CHANGED", "SYNC_DONE",
+  // Conditions
+  "isBaliseDone", "isBalisePending", "isRaceMode", "isClassicMode", "isRandomMode",
+  "isRiddleSolved", "isRiddlePending", "isQuizPerfect", "isAdmin", "isNightMode",
+  "isOffline", "hasSeeds", "allBalisesDone", "not", "and", "or",
+  // State
+  "createGameState",
+  "reduceBaliseDone", "reduceRiddleSolved", "reduceQuizScore",
+  "reduceProfileChange", "reduceSeedOffered", "reduceSettingsChange",
+  "reduceTimerTick", "reduceRunFinished",
+  // Engine
+  "createEngine",
+  // Rules
+  "DEFAULT_RULES",
+  "actionRevealBird", "actionUnlockBalise", "actionSolveRiddle",
+  "actionUpdateQuizScore", "actionPlayBirdSong", "actionPostValidation",
+];
+
+const ALL_EXPOSED = [...CORE_EXPOSED, ...ENGINE_EXPOSED];
 
 function header() {
   return `/* engine.js — Moteur de jeu Curi🧭s (généré automatiquement depuis packages/game-engine/src/).
@@ -30,10 +56,21 @@ function header() {
 function stripExportsAndImports(src) {
   const lines = src.split("\n");
   const out = [];
+  let skipBlock = false;
   for (const line of lines) {
     const trimmed = line.trimStart();
-    if (trimmed.startsWith("import ")) continue;            // supprime imports ESM
-    if (trimmed.startsWith("export {")) continue;           // supprime réexport index
+    if (skipBlock) {
+      if (trimmed.includes("}")) skipBlock = false;
+      continue;
+    }
+    if (trimmed.startsWith("import ")) {
+      if (!trimmed.includes("}")) skipBlock = true;
+      continue;
+    }
+    if (trimmed.startsWith("export {")) {
+      if (!trimmed.includes("}")) skipBlock = true;
+      continue;
+    }
     if (trimmed.startsWith("export function")) {
       out.push(line.replace("export function", "function"));
     } else if (trimmed.startsWith("export const")) {
@@ -47,11 +84,20 @@ function stripExportsAndImports(src) {
 
 function generate() {
   let body = "";
-  for (const f of SRC_FILES) {
+
+  // Utilitaires de base
+  for (const f of CORE_FILES) {
     const src = fs.readFileSync(path.join(SRC, f), "utf8");
-    body += stripExportsAndImports(src) + "\n";
+    body += `${stripExportsAndImports(src)}\n`;
   }
-  body += `\nwindow.CURIOS_ENGINE = { ${EXPOSED.join(", ")} };\n`;
+
+  // Event engine
+  for (const f of ENGINE_FILES) {
+    const src = fs.readFileSync(path.join(SRC, f), "utf8");
+    body += `${stripExportsAndImports(src)}\n`;
+  }
+
+  body += `\nwindow.CURIOS_ENGINE = { ${ALL_EXPOSED.join(", ")} };\n`;
   return header() + body;
 }
 
@@ -66,5 +112,5 @@ if (checkOnly) {
 } else {
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, nouveau, "utf8");
-  console.log(`généré : ${path.relative(ROOT, OUT)} (${EXPOSED.length} fonctions exposées)`);
+  console.log(`généré : ${path.relative(ROOT, OUT)} (${ALL_EXPOSED.length} fonctions exposées)`);
 }

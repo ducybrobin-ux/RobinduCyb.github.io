@@ -44,7 +44,7 @@ for (const entry of manifest.packs) {
     continue;
   }
 
-  const json = JSON.stringify(doc, null, 2) + "\n";
+  const json = `${JSON.stringify(doc, null, 2)  }\n`;
   const file = path.join(OUT, `${entry.id}.json`);
 
   if (checkOnly) {

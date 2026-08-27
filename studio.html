@@ -309,8 +309,10 @@
         case 1: html += renderPublic(); break;
         case 2: html += renderTerritoire(); break;
         case 3: html += renderMissions(); break;
-        case 4: html += renderTests(); break;
-        case 5: html += renderPublication(); break;
+        case 4: html += renderEvenements(); break;
+        case 5: html += renderDebriefing(); break;
+        case 6: html += renderTests(); break;
+        case 7: html += renderPublication(); break;
       }
 
       main.innerHTML = html;
@@ -463,6 +465,111 @@
       `;
     }
 
+    function renderEvenements() {
+      const d = wf.state.data;
+      const eventTypes = [
+        { value: "BALISE_FOUND", label: "Balise trouvée" },
+        { value: "RIDDLE_SOLVED", label: "Énigme résolue" },
+        { value: "QUIZ_COMPLETED", label: "Quiz terminé" },
+        { value: "BIRD_REVEALED", label: "Oiseau révélé" },
+        { value: "SEED_OFFERED", label: "Graine offerte" },
+        { value: "RUN_FINISHED", label: "Parcours terminé" },
+      ];
+
+      const events = d.events.map((ev, i) => `
+        <div class="card event-card">
+          <div class="card-header">
+            <h3>${esc(ev.id)}</h3>
+            <button class="btn btn-danger btn-sm" data-remove-event="${ev.id}">✕</button>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Type d'événement</label>
+              <select data-event="${i}.type">
+                ${eventTypes.map((t) => `<option value="${t.value}" ${ev.type === t.value ? "selected" : ""}>${t.label}</option>`).join("")}
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Déclencheur</label>
+              <select data-event="${i}.trigger">
+                <option value="always" ${ev.trigger === "always" ? "selected" : ""}>Toujours</option>
+                <option value="first_time" ${ev.trigger === "first_time" ? "selected" : ""}>Première fois</option>
+                <option value="daily" ${ev.trigger === "daily" ? "selected" : ""}>Une fois par jour</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" data-event="${i}.description" value="${esc(ev.description)}" placeholder="Description de l'événement">
+          </div>
+        </div>
+      `).join("");
+
+      return `
+        <p class="step-desc">Les événements permettent de déclencher des actions dynamiques (sons, indices, récompenses) en réponse aux actions du joueur.</p>
+        <button class="btn btn-primary btn-sm" id="btn-add-event">+ Ajouter un événement</button>
+        <div style="margin-top: 12px">${events || '<div class="empty"><div class="icon">⚡</div>Ajoutez des événements pour dynamiser le parcours</div>'}</div>
+      `;
+    }
+
+    function renderDebriefing() {
+      const d = wf.state.data;
+      const questions = d.debriefing.questions.map((q, i) => `
+        <div class="card">
+          <div class="card-header">
+            <h3>${esc(q.id)}</h3>
+            <button class="btn btn-danger btn-sm" data-remove-debrief-q="${q.id}">✕</button>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="flex:3">
+              <label>Question</label>
+              <input type="text" data-debrief-q="${i}.text" value="${esc(q.text)}" placeholder="Ex: Qu'avez-vous découvert aujourd'hui ?">
+            </div>
+            <div class="form-group">
+              <label>Catégorie</label>
+              <select data-debrief-q="${i}.category">
+                <option value="reflection" ${q.category === "reflection" ? "selected" : ""}>Réflexion</option>
+                <option value="observation" ${q.category === "observation" ? "selected" : ""}>Observation</option>
+                <option value="teamwork" ${q.category === "teamwork" ? "selected" : ""}>Travail d'équipe</option>
+                <option value="knowledge" ${q.category === "knowledge" ? "selected" : ""}>Connaissances</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+      const competences = d.debriefing.competences.map((c, i) => `
+        <div class="card">
+          <div class="card-header">
+            <h3>Compétence ${i + 1}</h3>
+            <button class="btn btn-danger btn-sm" data-remove-competence="${i}">✕</button>
+          </div>
+          <div class="form-group">
+            <label>Nom</label>
+            <input type="text" data-competence="${i}.name" value="${esc(c.name)}" placeholder="Ex: Observation scientifique">
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" data-competence="${i}.description" value="${esc(c.description)}">
+          </div>
+        </div>
+      `).join("");
+
+      return `
+        <p class="step-desc">Préparez le bilan pédagogique : questions de réflexion et compétences évaluées.</p>
+        <h3 style="margin: 16px 0 8px">Questions de réflexion</h3>
+        <button class="btn btn-primary btn-sm" id="btn-add-debrief-q">+ Ajouter une question</button>
+        <div style="margin-top: 12px">${questions || '<div class="empty"><div class="icon">📋</div>Ajoutez des questions pour le débriefing</div>'}</div>
+        <h3 style="margin: 24px 0 8px">Compétences évaluées</h3>
+        <button class="btn btn-primary btn-sm" id="btn-add-competence">+ Ajouter une compétence</button>
+        <div style="margin-top: 12px">${competences || '<div class="empty"><div class="icon">🎓</div>Ajoutez les compétences développées</div>'}</div>
+        <div class="form-group" style="margin-top: 20px">
+          <label>Modèle de résumé</label>
+          <textarea id="f-debrief-summary" placeholder="Template du résumé...">${esc(d.debriefing.summaryTemplate)}</textarea>
+        </div>
+      `;
+    }
+
     function renderTests() {
       wf.validate();
       const v = wf.state.data.validation;
@@ -481,6 +588,9 @@
           <p>📍 ${wf.state.data.balises.length} balise(s)</p>
           <p>🔍 ${wf.state.data.discoveries.length} découverte(s)</p>
           <p>🎯 ${wf.state.data.objectives.length} objectif(s)</p>
+          <p>⚡ ${wf.state.data.events.length} événement(s)</p>
+          <p>📋 ${wf.state.data.debriefing.questions.length} question(s) de débriefing</p>
+          <p>🎓 ${wf.state.data.debriefing.competences.length} compétence(s)</p>
         </div>
       `;
     }
@@ -579,6 +689,103 @@
           render();
         });
       });
+
+      // Events
+      $$("[data-event]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const path = `events.${el.dataset.event}`;
+          wf.updateData(path, el.value);
+          saveSnapshot();
+        });
+      });
+      $$("[data-event]").forEach((el) => {
+        if (el.tagName === "SELECT") {
+          el.addEventListener("change", () => {
+            const path = `events.${el.dataset.event}`;
+            wf.updateData(path, el.value);
+            saveSnapshot();
+          });
+        }
+      });
+
+      const addEvent = $("#btn-add-event");
+      if (addEvent) addEvent.addEventListener("click", () => {
+        wf.addEvent();
+        saveSnapshot();
+        render();
+      });
+
+      $$("[data-remove-event]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          wf.removeEvent(btn.dataset.removeEvent);
+          saveSnapshot();
+          render();
+        });
+      });
+
+      // Debriefing
+      $$("[data-debrief-q]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const path = `debriefing.questions.${el.dataset.debriefQ}`;
+          wf.updateData(path, el.value);
+          saveSnapshot();
+        });
+      });
+      $$("[data-debrief-q]").forEach((el) => {
+        if (el.tagName === "SELECT") {
+          el.addEventListener("change", () => {
+            const path = `debriefing.questions.${el.dataset.debriefQ}`;
+            wf.updateData(path, el.value);
+            saveSnapshot();
+          });
+        }
+      });
+
+      const addDebriefQ = $("#btn-add-debrief-q");
+      if (addDebriefQ) addDebriefQ.addEventListener("click", () => {
+        wf.addDebriefQuestion();
+        saveSnapshot();
+        render();
+      });
+
+      $$("[data-remove-debrief-q]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          wf.removeDebriefQuestion(btn.dataset.removeDebriefQ);
+          saveSnapshot();
+          render();
+        });
+      });
+
+      $$("[data-competence]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const path = `debriefing.competences.${el.dataset.competence}`;
+          wf.updateData(path, el.value);
+          saveSnapshot();
+        });
+      });
+
+      const addCompetence = $("#btn-add-competence");
+      if (addCompetence) addCompetence.addEventListener("click", () => {
+        wf.addCompetence();
+        saveSnapshot();
+        render();
+      });
+
+      $$("[data-remove-competence]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          wf.removeCompetence(parseInt(btn.dataset.removeCompetence));
+          saveSnapshot();
+          render();
+        });
+      });
+
+      const debriefSummary = $("#f-debrief-summary");
+      if (debriefSummary) {
+        debriefSummary.addEventListener("input", () => {
+          wf.updateData("debriefing.summaryTemplate", debriefSummary.value);
+          saveSnapshot();
+        });
+      }
 
       // Export
       const exportBtn = $("#btn-export-json");

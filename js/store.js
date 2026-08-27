@@ -12,7 +12,7 @@ const Store = (function () {
     activeProfileId: null,
   };
 
-  let data = load();
+  const data = load();
 
   function load() {
     try {
@@ -59,7 +59,7 @@ const Store = (function () {
 
   function createProfile(name, kids, avatar, emoji) {
     const profile = {
-      id: "p" + Date.now(),
+      id: `p${  Date.now()}`,
       name: name.trim(),
       kids: kids,
       avatar: avatar,

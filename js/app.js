@@ -30,6 +30,76 @@
 
   const $ = (id) => document.getElementById(id);
 
+  /* ---------- Event Engine ---------- */
+  const {
+    createEngine, createGameState,
+    BALISE_FOUND, RIDDLE_SOLVED, QUIZ_COMPLETED, BIRD_REVEALED, RUN_FINISHED,
+    DEFAULT_RULES,
+  } = window.CURIOS_ENGINE;
+
+  let gameState = createGameState();
+  const engine = createEngine({
+    rules: DEFAULT_RULES,
+    getState: () => gameState,
+    setState: (s) => { gameState = s; },
+    ctx: { get balisesCount() { return typeof BALISES !== "undefined" ? BALISES.length : 0; } },
+    log: console.log,
+  });
+
+  /* --- Engine → DOM bridge : listeners qui déclenchent les effets --- */
+  engine.on(BALISE_FOUND, (state, payload) => {
+    const { balise, mode } = payload;
+    if (mode === "qr" || mode === "gps" || mode === "manual") {
+      Store.unlockBalise(balise.id, balise.bird, 0);
+      postValidation(Store.getActive().name, balise.id);
+      AudioSys.blip(880);
+    }
+  });
+
+  engine.on(BIRD_REVEALED, (state, payload) => {
+    if (payload.playSong && payload.bird) {
+      AudioSys.playBird(payload.bird, 1);
+    }
+  });
+
+  engine.on(QUIZ_COMPLETED, (state, payload) => {
+    Store.unlockBalise(payload.balise.id, payload.bird.id, payload.score);
+  });
+
+  engine.on(RIDDLE_SOLVED, (state, payload) => {
+    const p = Store.getActive();
+    Store.updateProfile(p.id, { riddles: Object.assign({}, p.riddles, { [payload.balise.id]: true }) });
+  });
+
+  engine.on(RUN_FINISHED, (state, payload) => {
+    renderEndScreen(Store.getActive());
+    if (Store.raceEnabled()) renderRaceEnd(Store.getActive());
+    showScreen("end");
+    AudioSys.blip(660);
+    postFinish(Store.getActive());
+  });
+
+  /* --- Sync : synchronise le gameState du moteur avec le Store --- */
+  function syncGameState() {
+    const p = Store.getActive();
+    const s = Store.getSettings();
+    if (p) {
+      gameState = createGameState({
+        profileId: p.id,
+        profileName: p.name,
+        isAdmin: !!p.isAdmin,
+        completed: p.completed || [],
+        discovered: p.birds || [],
+        riddles: p.riddles || {},
+        seeds: p.seeds || 0,
+        offered: p.offered || [],
+        seconds: p.seconds || 0,
+        startTime: p.startTime || null,
+        playMode: s.race ? "race" : "classic",
+      });
+    }
+  }
+
   /* ---------- Service Worker ---------- */
   function registerSW() {
     if (!("serviceWorker" in navigator)) return;
@@ -38,28 +108,20 @@
     });
   }
 
-  /* ---------- Routage ---------- */
-  function showScreen(name) {
-    document.querySelectorAll(".screen").forEach((s) => s.classList.remove("active"));
-    const scr = $("screen-" + name);
-    if (scr) scr.classList.add("active");
-    App.screen = name;
-
-    $("page-title").textContent = name === "home" ? "JDP" : (I18N.t("title_" + name) || "JDP");
-
-    document.querySelectorAll(".nav-btn").forEach((b) => {
-      b.classList.toggle("active", b.dataset.go === name || (name === "scan" && b.dataset.go === "map"));
-    });
-
-    if (name !== "scan" && App.cameraOn) QrScan.stop();
-    App.cameraOn = false;
-    if (name !== "map") stopCompass();
-    if (name !== "bird" && name !== "map") AudioSys.stop();
-    stopVoice();
-    if (name === "intro") applyIntroRules();
-    $("btn-home").style.visibility = name === "home" ? "hidden" : "visible";
-    window.scrollTo(0, 0);
-  }
+  /* ---------- Routage (délègue à window.Router) ---------- */
+  const router = window.Router.createRouter({
+    $,
+    t: (k) => I18N.t(k),
+    state: App,
+    effects: {
+      stopCamera: () => QrScan.stop(),
+      stopCompass,
+      stopAudio: () => AudioSys.stop(),
+      stopVoice,
+      onIntro: applyIntroRules,
+    },
+  });
+  function showScreen(name) { router.navigate(name); }
 
   /* Mode course / aléatoire : règles d'intro adaptées (pas de question ni de réponse). */
   function applyIntroRules() {
@@ -148,6 +210,7 @@
   /* ---------- Démarrage ---------- */
   async function init() {
     applySettings();
+    syncGameState();
     bindEvents();
     unlockOnFirstGesture();
     await loadAdminData();
@@ -285,7 +348,7 @@
         Store.setSettings({ theme: id });
         applySettings();
         const t = findTheme(id);
-        toast(I18N.fmt(I18N.t("theme_changed"), { nom: t ? ((t.emoji ? t.emoji + " " : "") + t.nom) : id }));
+        toast(I18N.fmt(I18N.t("theme_changed"), { nom: t ? ((t.emoji ? `${t.emoji  } ` : "") + t.nom) : id }));
       });
       $("btn-home-unlock").addEventListener("click", () => {
         const s = Store.getSettings();
@@ -312,7 +375,7 @@
     }
     const list = typeof THEMES !== "undefined" ? THEMES : [];
     sel.innerHTML = list.map((t) =>
-      `<option value="${esc(t.id)}">${esc((t.emoji ? t.emoji + " " : "") + t.nom)}</option>`).join("");
+      `<option value="${esc(t.id)}">${esc((t.emoji ? `${t.emoji  } ` : "") + t.nom)}</option>`).join("");
     sel.value = Store.getSettings().theme || "defaut";
     const s2 = Store.getSettings();
     const hintH = $("row-home-lock-hint");
@@ -395,6 +458,7 @@
     list.querySelectorAll("[data-act]").forEach((b) => {
       b.addEventListener("click", () => {
         Store.setActive(b.dataset.act);
+        syncGameState();
         renderProfiles(); renderHome(); applySettings(); toast("Profil actif sélectionné.");
         syncValidations(true);
       });
@@ -521,7 +585,7 @@
       parts.push(`<g class="map-tree"><circle cx="${x}" cy="${y}" r="20"/><circle cx="${x-10}" cy="${y+12}" r="14"/><circle cx="${x+10}" cy="${y+12}" r="14"/></g>`);
     });
     // sentier
-    const d = TRAIL.path.map(([x, y], i) => (i ? "L" : "M") + x + " " + y).join(" ");
+    const d = TRAIL.path.map(([x, y], i) => `${(i ? "L" : "M") + x  } ${  y}`).join(" ");
     parts.push(`<path class="map-trail" d="${d}" />`);
     // balises
     BALISES.forEach((b, i) => {
@@ -651,7 +715,7 @@
             const bb = getBalise(id);
             Store.unlockBalise(id, bb ? bb.bird : null, 0);
           });
-          toast("✅ " + toApply.length + " balise(s) validée(s) par l'organisateur.");
+          toast(`✅ ${  toApply.length  } balise(s) validée(s) par l'organisateur.`);
           if (Store.getActive().completed.length >= BALISES.length) toast("🎉 Toutes les balises sont validées !");
           if (App.screen === "home") renderHome();
           if (App.screen === "map") renderMap();
@@ -786,27 +850,39 @@
     const p = Store.getActive();
     if (!p) { toast("Choisis d'abord un profil !"); showScreen("profile"); return; }
 
-    if (Store.isDone(balise.id)) {
-      toast("Cette balise est déjà validée. Bravo ! ✔");
-      return;
-    }
-    const target = currentTarget();
-    if (target && balise.id !== target.id) {
-      toast(`Ce n'est pas encore votre étape. Cherchez la balise ${target.id}.`);
+    const validation = GF.validateBaliseFound({
+      balise,
+      mode,
+      ctx: {
+        getActive: Store.getActive,
+        isDone: Store.isDone,
+        currentTarget,
+      },
+    });
+    if (!validation.ok) {
+      const messages = {
+        already_done: "Cette balise est déjà validée. Bravo ! ✔",
+        wrong_order: `Ce n'est pas encore votre étape. Cherchez la balise ${validation.target.id}.`,
+      };
+      toast(messages[validation.reason] || "Erreur.");
       return;
     }
 
     App.target = balise;
-    if (Store.raceEnabled()) {
-      Store.unlockBalise(balise.id, balise.bird, 0);
-      postValidation(p.name, balise.id);
-      AudioSys.blip(880);
+    const action = GF.resolveBaliseAction({
+      balise,
+      ctx: {
+        raceEnabled: Store.raceEnabled,
+        isRiddleSolved: (id) => p.riddles && p.riddles[id],
+        getDifficulty: () => Store.getSettings().difficulty,
+        getEnigme,
+      },
+    });
+
+    if (action.action === "unlock_and_reveal") {
+      engine.emit(BALISE_FOUND, { balise, mode: "race" });
       revealBird(balise, true);
-      return;
-    }
-    const solved = p.riddles && p.riddles[balise.id];
-    const enigme = getEnigme(balise, Store.getSettings().difficulty);
-    if (enigme && !solved) {
+    } else if (action.action === "show_riddle") {
       showRiddle(balise);
     } else {
       revealBird(balise);
@@ -849,14 +925,15 @@
     const enigme = App.currentEnigme;
     if (!b || !enigme) return;
     const ans = $("riddle-input").value;
-    if (checkAnswer(enigme, ans)) {
+    if (GF.checkRiddleAnswer({ enigme, answer: ans, checkAnswer }).correct) {
+      engine.emit(RIDDLE_SOLVED, { balise: b, answer: ans });
       const p = Store.getActive();
       Store.updateProfile(p.id, { riddles: Object.assign({}, p.riddles, { [b.id]: true }) });
       $("riddle-status").textContent = "✔ Bravo, c'est la bonne réponse !";
       $("riddle-status").style.color = "var(--ok)";
       AudioSys.blip(880);
       if (App.riddleMode === "clue") {
-        setTimeout(() => { toast("Balise " + b.id + " déverrouillée. À vous de la trouver sur le terrain !"); showScreen("map"); renderMap(); }, 900);
+        setTimeout(() => { toast(`Balise ${  b.id  } déverrouillée. À vous de la trouver sur le terrain !`); showScreen("map"); renderMap(); }, 900);
       } else {
         setTimeout(() => revealBird(b), 900);
       }
@@ -869,6 +946,7 @@
 
   function revealBird(balise, race) {
     const bird = getBird(balise.bird);
+    engine.emit(BIRD_REVEALED, { bird, balise, playSong: !race });
     const enigme = getEnigme(balise, Store.getSettings().difficulty);
     const saviez = enigme && enigme.saviez ? enigme.saviez : "";
     const done = Store.getActive().completed.length;
@@ -915,7 +993,7 @@
       $("btn-bird-next").addEventListener("click", () => {
         if (done >= BALISES.length) { finishRun(); return; }
         const next = currentTarget();
-        toast("✔ Balise validée. Prochaine étape (ordre aléatoire) : " + (next ? next.label : "fin du parcours") + " !");
+        toast(`✔ Balise validée. Prochaine étape (ordre aléatoire) : ${  next ? next.label : "fin du parcours"  } !`);
         showScreen("map"); renderMap();
       });
       return;
@@ -956,22 +1034,22 @@
     }
   }
 
-  /* ---------- QUIZ ---------- */
+  /* ---------- QUIZ (logique pure → GameFlow) ---------- */
+  const GF = window.GameFlow;
+
   function startQuiz(bird) {
-    App.quiz = makeQuiz(bird);
-    App.quizIndex = 0;
-    App.quizScore = 0;
+    App.quiz = GF.createQuizSession({ bird, makeQuiz });
     showScreen("quiz");
     renderQuiz();
   }
 
   function renderQuiz() {
     const card = $("quiz-card");
-    const q = App.quiz[App.quizIndex];
+    const q = App.quiz.questions[App.quiz.index];
     if (!q) return endQuiz();
     const bird = getBird(q.bird);
     card.innerHTML = `
-      <p class="kicker">${I18N.t("title_quiz")} ${App.quizIndex + 1} / ${App.quiz.length} — ${esc(birdLabel(bird))}</p>
+      <p class="kicker">${I18N.t("title_quiz")} ${App.quiz.index + 1} / ${App.quiz.questions.length} — ${esc(birdLabel(bird))}</p>
       <h3 class="quiz-q">${esc(q.q)}</h3>
       <div class="quiz-options">
         ${q.options.map((opt, i) => `<button class="quiz-opt" data-i="${i}">${esc(opt)}</button>`).join("")}
@@ -979,37 +1057,48 @@
       <p class="note" id="quiz-feedback"></p>`;
     card.querySelectorAll(".quiz-opt").forEach((b) => {
       b.addEventListener("click", () => {
-        const i = +b.dataset.i;
-        const good = i === q.reponse;
+        const result = GF.answerQuizQuestion({ session: App.quiz, selectedIndex: +b.dataset.i });
+        App.quiz = result.session;
         const fb = $("quiz-feedback");
         card.querySelectorAll(".quiz-opt").forEach((x) => x.disabled = true);
-        b.classList.add(good ? "good" : "bad");
-        if (good) {
-          App.quizScore++;
+        b.classList.add(result.correct ? "good" : "bad");
+        if (result.correct) {
           fb.textContent = "✔ Bien joué !";
           fb.style.color = "var(--ok)";
           AudioSys.blip(880);
         } else {
-          card.querySelectorAll(".quiz-opt")[q.reponse].classList.add("good");
-          fb.textContent = "❌ Pas grave, on retient : " + q.options[q.reponse];
+          card.querySelectorAll(".quiz-opt")[result.correctIndex].classList.add("good");
+          fb.textContent = `❌ Pas grave, on retient : ${  q.options[result.correctIndex]}`;
           fb.style.color = "var(--err)";
           AudioSys.blip(220);
         }
-        setTimeout(() => { App.quizIndex++; renderQuiz(); }, 1400);
+        setTimeout(() => renderQuiz(), 1400);
       });
     });
   }
 
   function endQuiz() {
-    const ok = App.quizScore >= App.quiz.length;
     const card = $("quiz-card");
     const b = App.target;
     const bird = App.activeBird || getBird(b.bird);
-    if (ok) {
-      Store.unlockBalise(b.id, bird.id, App.quiz.length);
-      postValidation(Store.getActive().name, b.id);
-      const p = Store.getActive();
-      const done = p.completed.length;
+    const p = Store.getActive();
+    const done = p.completed.length;
+
+    const qr = GF.quizResult({ session: App.quiz });
+    const qe = GF.resolveQuizEnd({
+      session: App.quiz,
+      balise: b,
+      ctx: {
+        balisesCount: BALISES.length,
+        completedCount: done,
+        nextBalise,
+      },
+    });
+
+    engine.emit(QUIZ_COMPLETED, { bird, balise: b, score: qr.score, total: qr.total });
+    postValidation(p.name, b.id);
+
+    if (qr.perfect) {
       card.innerHTML = `
         <div class="quiz-end">
           <div class="big-emoji">🎉</div>
@@ -1019,40 +1108,22 @@
           <button class="btn btn-ghost" id="btn-back-map">🗺️ Retour à la carte</button>
         </div>`;
       $("btn-next-step").addEventListener("click", () => {
-        if (done >= BALISES.length) {
+        if (qe.action === "finish_run") {
           finishRun();
         } else {
-          const next = nextBalise(b.id);
-          showNextRiddle(next);
+          showNextRiddle(qe.next);
         }
       });
       $("btn-back-map").addEventListener("click", () => showScreen("map"));
       renderMap();
     } else {
-      const next = nextBalise(b.id);
-      const done = (Store.getActive().completed || []).length;
-      card.innerHTML = `
-        <div class="quiz-end">
-          <div class="big-emoji">💪</div>
-          <h3>Encore un petit effort !</h3>
-          <p>Vous avez eu ${App.quizScore} bonne${App.quizScore > 1 ? "s" : ""} réponse${App.quizScore > 1 ? "s" : ""} sur ${App.quiz.length}.</p>
-          <button class="btn btn-ghost" id="btn-retry">↻ Réessayer le quiz</button>
-          <button class="btn btn-primary" id="btn-next-step">${done >= BALISES.length - 1 ? "🏁 Voir le résultat final" : "→ Passer à la suite"}</button>
-          <button class="btn btn-ghost" id="btn-back-map">🗺️ Retour à la carte</button>
-        </div>`;
-      $("btn-retry").addEventListener("click", () => startQuiz(bird));
-      $("btn-next-step").addEventListener("click", () => {
-        Store.unlockBalise(b.id, bird.id, App.quizScore);
-        postValidation(Store.getActive().name, b.id);
-        renderHome(); renderMap();
-        if (done >= BALISES.length - 1) {
-          finishRun();
-        } else {
-          toast("Balise " + b.id + " déverrouillée (⭐ " + App.quizScore + "). Prochaine étape : " + (next ? next.label : "fin du parcours") + " !");
-          showScreen("map");
-        }
-      });
-      $("btn-back-map").addEventListener("click", () => showScreen("map"));
+      renderHome(); renderMap();
+      if (qe.action === "finish_run") {
+        finishRun();
+      } else {
+        toast(`Balise ${  b.id  } déverrouillée (⭐ ${  qr.score  }). Prochaine étape : ${  qe.next ? qe.next.label : "fin du parcours"  } !`);
+        showScreen("map");
+      }
     }
   }
 
@@ -1061,7 +1132,7 @@
     App.target = next;
     App.currentEnigme = getEnigme(next, Store.getSettings().difficulty) || null;
     showScreen("riddle");
-    $("riddle-text").textContent = "Prochaine balise : " + next.label + ".\n\n" + (App.currentEnigme ? App.currentEnigme.text : "");
+    $("riddle-text").textContent = `Prochaine balise : ${  next.label  }.\n\n${  App.currentEnigme ? App.currentEnigme.text : ""}`;
     $("riddle-status").textContent = "Trouve la réponse pour déverrouiller la suite (ou scanne la balise sur place).";
     $("riddle-status").style.color = "var(--text-muted)";
     $("riddle-input").value = "";
@@ -1093,11 +1164,7 @@
     const p = Store.getActive();
     Store.tickTimer();
     Store.finishWeek(p.id);
-    renderEndScreen(p);
-    if (Store.raceEnabled()) renderRaceEnd(p);
-    showScreen("end");
-    AudioSys.blip(660);
-    postFinish(p);
+    engine.emit(RUN_FINISHED, { profile: p });
   }
 
   /* Récap du parcours terminé (écran de conclusion) */
@@ -1134,7 +1201,7 @@
     if (!p) { toast(I18N.t("race_need_profile")); return; }
     $("race-overlay").classList.remove("hidden");
     const box = $("race-opponents");
-    box.innerHTML = '<p class="empty">' + I18N.t("race_opp_loading") + "</p>";
+    box.innerHTML = `<p class="empty">${  I18N.t("race_opp_loading")  }</p>`;
     fetch("/api/pos").then((r) => r.json()).then((d) => {
       const list = d.positions || [];
       const names = [];
@@ -1143,14 +1210,14 @@
         if (n && n.toLowerCase() !== p.name.toLowerCase() && names.indexOf(n) < 0) names.push(n);
       });
       if (!names.length) {
-        box.innerHTML = '<p class="empty">' + I18N.t("race_opp_none") + "</p>";
+        box.innerHTML = `<p class="empty">${  I18N.t("race_opp_none")  }</p>`;
       } else {
         box.innerHTML = names.map((n) =>
-          '<label class="race-opp"><input type="checkbox" value="' + esc(n) + '" checked> <span>' + esc(n) + "</span></label>"
+          `<label class="race-opp"><input type="checkbox" value="${  esc(n)  }" checked> <span>${  esc(n)  }</span></label>`
         ).join("");
       }
     }).catch(() => {
-      box.innerHTML = '<p class="empty">' + I18N.t("race_opp_offline") + "</p>";
+      box.innerHTML = `<p class="empty">${  I18N.t("race_opp_offline")  }</p>`;
     });
   }
 
@@ -1181,22 +1248,22 @@
         return n === p.name.toLowerCase() || opponents.indexOf(n) >= 0;
       }).filter((f) => Number(f.seconds || 0) > 0);
       if (!rows.length) {
-        box.innerHTML = '<p class="empty">' + I18N.t("race_wait_others") + "</p>";
+        box.innerHTML = `<p class="empty">${  I18N.t("race_wait_others")  }</p>`;
         return;
       }
       rows.sort((a, b) => (Number(a.seconds || 0) - Number(b.seconds || 0)));
       box.innerHTML = rows.map((f, i) => {
         const me = f.team.toLowerCase() === p.name.toLowerCase();
         const medal = ["🥇", "🥈", "🥉"][i] || (i + 1);
-        return '<div class="race-row ' + (me ? "me" : "") + '">' +
-          '<span class="race-medal">' + medal + "</span>" +
-          '<b>' + esc(f.team) + (me ? " · " + I18N.t("race_you") : "") + "</b>" +
-          "<small>⏱️ " + fmtTime(Number(f.seconds || 0)) + "</small>" +
-          (f.message ? '<em class="palmares-msg">« ' + esc(f.message) + " »</em>" : "") +
-          "</div>";
+        return `<div class="race-row ${  me ? "me" : ""  }">` +
+          `<span class="race-medal">${  medal  }</span>` +
+          `<b>${  esc(f.team)  }${me ? ` · ${  I18N.t("race_you")}` : ""  }</b>` +
+          `<small>⏱️ ${  fmtTime(Number(f.seconds || 0))  }</small>${ 
+          f.message ? `<em class="palmares-msg">« ${  esc(f.message)  } »</em>` : "" 
+          }</div>`;
       }).join("");
     }).catch(() => {
-      box.innerHTML = '<p class="empty">' + I18N.t("race_offline") + "</p>";
+      box.innerHTML = `<p class="empty">${  I18N.t("race_offline")  }</p>`;
     });
   }
 
@@ -1320,96 +1387,26 @@
     toast(I18N.t("guestbook_saved"));
   }
 
-  /* ---------- CARNET ---------- */
+  /* ---------- CARNET (délègue à window.Screens.carnet) ---------- */
   function renderCarnet() {
-    const p = Store.getActive();
-    const grid = $("carnet-grid");
-    if (!p) { $("carnet-summary").textContent = "Crée d'abord un profil."; grid.innerHTML = ""; return; }
-    $("carnet-summary").textContent = `${esc(p.name)} a validé ${p.birds.length} découverte${p.birds.length > 1 ? "s" : ""} sur ${BIRDS.length}.`;
-    grid.innerHTML = BIRDS.map((b) => {
-      const found = p.birds.includes(b.id);
-      return `
-        <button class="carnet-card ${found ? "" : "empty"}" data-open="${b.id}" ${found ? "" : "disabled"}>
-          <span class="carnet-emoji">${found ? b.emoji : "❓"}</span>
-          <span class="carnet-name">${found ? esc(birdLabel(b)) : "À découvrir"}</span>
-          ${b.categorie === "nocturne" ? `<span class="carnet-night">🌙</span>` : ""}
-        </button>`;
-    }).join("");
-    grid.querySelectorAll("[data-open]").forEach((b) => {
-      b.addEventListener("click", () => {
-        const bird = getBird(b.dataset.open);
-        App.target = BALISES.find((x) => x.bird === bird.id);
-        App.activeBird = bird;
-        showBirdOnly(bird);
-      });
+    window.Screens.carnet.render({
+      $, esc, I18N, Store, BIRDS, BALISES, birdLabel, getBird,
+      App, showScreen, showBirdOnly,
     });
   }
 
+  /* ---------- FICHE OISEAU (délègue à window.Screens.bird) ---------- */
   function showBirdOnly(bird) {
     showScreen("bird");
-    const card = $("bird-card");
-    card.innerHTML = `
-      ${bird.img
-        ? `<img class="bird-illustration-img" src="${bird.img}" alt="${esc(bird.nom)}" loading="lazy">`
-        : `<div class="bird-illustration" style="--bird:${bird.couleur}">${bird.emoji}</div>`}
-      <h2 class="bird-name">${esc(birdLabel(bird))}</h2>
-      <p class="bird-latin">${esc(bird.latin)}</p>
-      <div class="bird-tags">
-        <span class="tag">Taille : ${bird.taille}</span>
-        <span class="tag ${bird.categorie === "nocturne" ? "tag-night" : ""}">${bird.categorie === "nocturne" ? I18N.t("bird_nocturne") : I18N.t("bird_diurne")}</span>
-      </div>
-      <div class="bird-anecdotes">
-        ${bird.description ? `<div class="bird-desc"><p>${esc(bird.description)}</p></div>` : ""}
-        <p class="kicker">${I18N.t("bird_stories")}</p>
-        <ul>${bird.anecdotes.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>
-      </div>
-      <button class="btn btn-primary" id="btn-bird-sound">${I18N.t("bird_btn_sound")}</button>
-      <button class="btn btn-ghost" id="btn-bird-back">🗺️ ${App.backScreen === "god" || App.backScreen === "guide" ? I18N.t("god_back") : I18N.t("nav_map")}</button>`;
-    $("btn-bird-sound").addEventListener("click", () => {
-      if (bird.audioFile) { const a = new Audio(bird.audioFile); a.volume = 0.8; a.play().catch(() => {}); }
-      else AudioSys.playBird(bird, 1);
-    });
-    $("btn-bird-back").addEventListener("click", () => {
-      if (App.backScreen === "god") { showScreen("god"); renderGod(); }
-      else if (App.backScreen === "guide") { showScreen("guide"); renderGuide(); }
-      else { showScreen("carnet"); renderCarnet(); }
+    window.Screens.bird.renderCard({
+      $, showScreen, esc, I18N, AudioSys, App, bird, birdLabel, BALISES,
+      renderGod, renderGuide, renderCarnet,
     });
   }
 
-  /* ---------- PALMARÈS ---------- */
-  function renderPalmares() {
-    const list = $("palmares-list");
-    const rows = Store.palmares();
-    const active = Store.getActive();
-    const msgBtn = $("btn-message");
-    if (msgBtn) {
-      msgBtn.textContent = active && ((active.message || "").trim() || active.selfie)
-        ? I18N.t("guestbook_palmares_btn_edit")
-        : I18N.t("guestbook_palmares_btn");
-    }
-    if (!rows.length) {
-      list.innerHTML = '<p class="note">Aucune famille n\'a encore terminé le parcours cette semaine. À vous de jouer !</p>';
-    } else {
-      list.innerHTML = rows.map((r, i) => `
-        <div class="palmares-row ${active && active.name === r.name ? "me" : ""}">
-          <span class="palmares-rank">${i + 1}</span>
-          ${avatarHTML(r)}
-          ${r.selfie ? `<img class="palmares-selfie" src="${r.selfie}" alt="${esc(r.name)}">` : ""}
-          <div class="palmares-info">
-            <strong>${esc(r.name)}</strong>
-            <small>${r.birds} découvertes · ⭐ ${r.stars} · ⏱️ ${fmtTime(r.seconds)}${r.offered ? ` · 🧠 ${r.offered}` : ""}</small>
-            ${r.message ? `<em class="palmares-msg">« ${esc(r.message)} »</em>` : ""}
-          </div>
-        </div>`).join("");
-    }
-    $("palmares-note").textContent = "Le palmarès de la semaine est enregistré sur cet appareil.";
-  }
-
-  function fmtTime(s) {
-    if (!s && s !== 0) return "—";
-    const m = Math.floor(s / 60), sec = s % 60;
-    return m > 0 ? `${m} min ${sec} s` : `${sec} s`;
-  }
+  /* ---------- PALMARÈS (délègue à Screens.palmares) ---------- */
+  function renderPalmares() { window.Screens.palmares.render($, Store, I18N, esc); }
+  function fmtTime(s) { return window.Screens.palmares.fmtTime(s); }
 
   /* --- Mode course : chronomètre sur la carte --- */
   function getElapsed(p) {
@@ -1419,7 +1416,7 @@
 
   function fmtStopwatch(s) {
     const m = Math.floor(s / 60), sec = s % 60;
-    return String(m).padStart(2, "0") + ":" + String(sec).padStart(2, "0");
+    return `${String(m).padStart(2, "0")  }:${  String(sec).padStart(2, "0")}`;
   }
 
   function updateRaceTimer() {
@@ -1429,7 +1426,7 @@
     const on = Store.raceEnabled();
     const show = on && App.screen === "map";
     el.classList.toggle("hidden", !show);
-    if (show) el.textContent = "⏱️ " + fmtStopwatch(getElapsed(p));
+    if (show) el.textContent = `⏱️ ${  fmtStopwatch(getElapsed(p))}`;
   }
 
   function sharePalmares() {
@@ -1492,7 +1489,7 @@
           <div class="reco-bird">
             <span class="reco-emoji">${found ? found.emoji : "🧠"}</span>
             <div><strong>${esc(r.name)}</strong><br>
-            <small>Confiance : ${pct}%${r.sci ? " · " + esc(r.sci) : ""}</small></div>
+            <small>Confiance : ${pct}%${r.sci ? ` · ${  esc(r.sci)}` : ""}</small></div>
           </div>
           ${found ? `<button class="btn btn-ghost" data-open="${found.id}">Voir la fiche de ${esc(birdLabel(found))}</button>` : ""}
         </div>`;
@@ -1634,7 +1631,7 @@
       }
       if ("caches" in window) {
         const keys = await caches.keys();
-        await Promise.all(keys.filter((k) => k.startsWith("jdp-runtime")).map((k) => caches.delete(k)));
+        await Promise.all(keys.filter((k) => k.startsWith("jdp-runtime") || k.startsWith("curios-runtime")).map((k) => caches.delete(k)));
       }
       set(I18N.t("set_update_ok"));
       setTimeout(() => location.reload(true), 700);
@@ -1684,7 +1681,7 @@
     try {
       if ("caches" in window) {
         const keys = await caches.keys();
-        const core = keys.find((k) => k.indexOf("jdp-core-") === 0);
+        const core = keys.find((k) => k.indexOf("curios-core-") === 0 || k.indexOf("jdp-core-") === 0);
         if (core) {
           const hit = await caches.match(new Request("index.html"), { cacheName: core });
           cacheOk = !!hit;
@@ -1695,9 +1692,9 @@
 
     let storageOk = false;
     try {
-      localStorage.setItem("__jdp_diag", "1");
-      storageOk = localStorage.getItem("__jdp_diag") === "1";
-      localStorage.removeItem("__jdp_diag");
+      localStorage.setItem("__curios_diag", "1");
+      storageOk = localStorage.getItem("__curios_diag") === "1";
+      localStorage.removeItem("__curios_diag");
     } catch (e) { storageOk = false; }
     items.push({ key: "trouble_storage", ok: storageOk, hint: storageOk ? "" : I18N.t("trouble_storage_hint") });
 
@@ -1752,13 +1749,13 @@
 
     box.innerHTML =
       `<p class="trouble-title">${fails ? "⚠️ " : "✅ "}${esc(summary)}</p>` +
-      `<ul class="trouble-list">` +
+      `<ul class="trouble-list">${ 
       items.map((i) =>
         `<li class="${i.ok ? "ok" : "ko"}"><span class="trouble-mark">${i.ok ? "✓" : "✗"}</span>` +
-        `<span>${esc(I18N.t(i.key))}</span>` +
-        (i.hint ? `<small>${esc(i.hint)}</small>` : "") +
-        `</li>`).join("") +
-      `</ul>` +
+        `<span>${esc(I18N.t(i.key))}</span>${ 
+        i.hint ? `<small>${esc(i.hint)}</small>` : "" 
+        }</li>`).join("") 
+      }</ul>` +
       `<div class="trouble-actions">` +
       `<button class="btn btn-outline" id="btn-fix-cache">${esc(I18N.t("trouble_btn_fix"))}</button>` +
       `<button class="btn btn-outline" id="btn-trouble-reload">${esc(I18N.t("trouble_btn_reload"))}</button>` +
@@ -1777,7 +1774,7 @@
       }
       if ("caches" in window) {
         const keys = await caches.keys();
-        await Promise.all(keys.filter((k) => k.indexOf("jdp-") === 0).map((k) => caches.delete(k)));
+        await Promise.all(keys.filter((k) => k.indexOf("jdp-") === 0 || k.indexOf("curios-") === 0).map((k) => caches.delete(k)));
       }
     } catch (e) {}
     toast(I18N.t("trouble_fixed"));
@@ -1793,70 +1790,15 @@
   };
   const EMOJI_ORDER = ["faces", "hearts", "cats", "moons"];
 
-  let compassLastRaw = null;
-  let compassState = null;   // "near" (on approche) | "away" (on s'éloigne)
-  let compassGlow = 0;       // 0..1 progression infrarouge (rouge) -> ultraviolet (violet)
-
-  /* Distance lissée : les GPS de téléphone « sautent » de quelques mètres
-     d'une lecture à l'autre ; on amortit pour éviter le clignotement. */
-  let smoothDist = null;
-  function smoothDistance(d) {
-    if (d == null) return null;
-    if (smoothDist == null) smoothDist = d;
-    else smoothDist = smoothDist * 0.7 + d * 0.3;
-    return smoothDist;
-  }
-
-  /* Lissage du cap de la boussole : filtre médian (absorbe les sauts de ~180°)
-     + moyenne glissante courte. Évite le clignotement N/S et l'aiguille qui tourne. */
-  let headingBuf = [];
-  let smoothHeading = null;
-  const HEADING_WINDOW = 5;
-  function smoothedHeading(h) {
-    if (h == null) return null;
-    headingBuf.push(h);
-    if (headingBuf.length > HEADING_WINDOW) headingBuf.shift();
-    const sorted = headingBuf.slice().sort((a, b) => a - b);
-    const med = sorted[Math.floor(sorted.length / 2)];
-    if (smoothHeading == null) smoothHeading = med;
-    else {
-      let d = normDeg(med - smoothHeading);
-      if (Math.abs(d) > 120) d = 0;             // saut impossible -> on ignore
-      smoothHeading = normDeg(smoothHeading + d * 0.4) ;
-    }
-    return (smoothHeading + 360) % 360;
-  }
-  function resetHeadingFilter() {
-    headingBuf = [];
-    smoothHeading = null;
-  }
-
-  function emojiChain() {
-    return EMOJI_CHAINS[Store.getSettings().proximityEmoji] || EMOJI_CHAINS.faces;
-  }
-
-  function resetCompassLight() {
-    compassLastRaw = null;
-    compassState = null;
-    compassGlow = 0;
-    smoothDist = null;
-    proxAwayCount = 0;
-    proxOnTarget = false;
-    resetHeadingFilter();
-    const light = $("compass-light");
-    if (light) { light.style.background = "#000"; light.style.boxShadow = ""; }
-    const emoji = $("compass-emoji");
-    if (emoji) { emoji.textContent = emojiChain()[0]; emoji.classList.remove("happy", "dim"); }
-    const guide = $("compass-guide");
-    if (guide) guide.textContent = I18N.t("compass_guide_wait");
-    const head = $("compass-head");
-    if (head) head.textContent = "…";
-  }
+  /* --- Compass UI (délègue à window.CompassUI) --- */
+  const compassUI = window.CompassUI.createCompassUI({
+    $, normDeg, cardinal, Store, I18N,
+  });
 
   function stopCompass() {
     App.compassOn = false;
     Compass.stop();
-    resetCompassLight();
+    compassUI.resetLight();
     const cal = $("btn-compass-cal");
     if (cal) cal.classList.add("hidden");
     const dest = $("compass-dest");
@@ -1879,7 +1821,7 @@
     const t = currentTarget();
     if (!t) { toast("Toutes les balises sont déjà validées. 🎉"); return; }
     App.compassOn = true;
-    resetCompassLight();
+    compassUI.resetLight();
     const cal = $("btn-compass-cal");
     if (cal) cal.classList.remove("hidden");
     try { Compass.start(t, onCompassUpdate); } catch (e) {}
@@ -1901,208 +1843,19 @@
     if (guide) guide.textContent = I18N.t("compass_cal_hint");
   }
 
-  function onCompassUpdate(out) {
-    const here = $("compass-here"), tgt = $("compass-target"),
-          dist = $("compass-distance"), az = $("compass-azimut"),
-          dir = $("compass-direction"), needle = $("compass-needle"),
-          dest = $("compass-dest"), st = $("compass-status"),
-          guide = $("compass-guide");
-    const head = $("compass-head");
-    if (head) {
-      if (out.bearing != null) {
-        const c = cardinal(out.bearing);
-        head.innerHTML = esc(I18N.t("compass_head")) + " <b>" + c + "</b> <small>· " + Math.round(out.bearing) + "°</small>";
-      } else {
-        head.textContent = "…";
-      }
-    }
-    if (out.pos) here.textContent = out.pos.lat.toFixed(5) + ", " + out.pos.lng.toFixed(5);
-    else here.textContent = I18N.t("compass_wait");
-    if (out.target) tgt.textContent = out.target.id + " · " + out.target.lat.toFixed(5) + ", " + out.target.lng.toFixed(5);
-    const sDist = smoothDistance(out.distance);
-    if (sDist != null) dist.textContent = Math.round(sDist) + " m";
-    else dist.textContent = "—";
-    if (out.bearing != null) az.textContent = Math.round(out.bearing) + "° " + cardinal(out.bearing);
-    else az.textContent = "—";
-
-    const heading = smoothedHeading(out.heading);
-    let rel = null;
-    if (out.bearing != null && heading != null) {
-      rel = normDeg(out.bearing - heading);
-      dir.textContent = cardinal(out.bearing) + " · " + (rel >= 0 ? "+" : "-") + Math.abs(Math.round(rel)) + "°";
-    } else if (out.bearing != null) {
-      dir.textContent = cardinal(out.bearing);
-    } else {
-      dir.textContent = "—";
-    }
-
-    /* Aiguille : pointe vers la balise (cap lissé, donc stable). */
-    if (needle) {
-      if (out.bearing != null && heading != null) needle.style.transform = "rotate(" + normDeg(out.bearing - heading) + "deg)";
-      else if (out.bearing != null) needle.style.transform = "rotate(" + out.bearing + "deg)";
-    }
-    if (dest && out.bearing != null) dest.style.transform = "rotate(" + out.bearing + "deg)";
-
-    /* Indication de direction en toutes lettres : gauche / droite / demi-tour / droit devant. */
-    if (guide) {
-      if (rel == null) {
-        guide.textContent = out.pos ? I18N.t("compass_guide_far") : I18N.t("compass_guide_wait");
-      } else {
-        const absRel = Math.abs(rel);
-        if (absRel <= 22) guide.textContent = I18N.t("compass_guide_here");
-        else if (rel > 0) guide.textContent = I18N.t("compass_guide_right");
-        else guide.textContent = I18N.t("compass_guide_left");
-        if (absRel > 157) guide.textContent = I18N.t("compass_guide_back");
-      }
-    }
-
-    const p = proximity(sDist);
-    renderLight(p);
-    renderEmoji(p);
-    if (st) {
-      if (heading != null) {
-        const dec = out.decl != null
-          ? " · nord vrai (déc. " + (out.decl >= 0 ? "+" : "") + out.decl.toFixed(1) + "°)" : "";
-        st.textContent = "🧭 " + Math.round(heading) + "° " + cardinal(heading) + dec;
-      } else if (!out.pos) st.textContent = I18N.t("compass_wait");
-      else st.textContent = "ℹ️ …";
-    }
-  }
+  function onCompassUpdate(out) { compassUI.onUpdate(out); }
 
   /* normDeg et cardinal → packages/geolocation (GeoMath) */
 
-  /* État de proximité partagé (lumière + émoticône) :
-     - null        : pas de position
-     - onTarget    : dist <= 6 m (blanc / super joyeux), avec hystérésis (quitte à > 10 m)
-     - away        : la distance augmente (noir / triste), confirmé 2 lectures
-     - t (0..1)    : progression infrarouge -> ultraviolet */
-  let proxAwayCount = 0;
-  let proxOnTarget = false;
-  function proximity(dist) {
-    if (dist == null) return null;
-    if (proxOnTarget) {
-      if (dist <= 10) return { away: false, onTarget: true, t: 1 };
-      proxOnTarget = false;
-    }
-    if (dist <= 6) {
-      proxOnTarget = true;
-      proxAwayCount = 0;
-      compassLastRaw = dist;
-      compassState = "near";
-      return { away: false, onTarget: true, t: 1 };
-    }
-    let state = compassState;
-    if (compassLastRaw != null) {
-      const delta = dist - compassLastRaw;
-      if (delta > 6) { proxAwayCount++; if (proxAwayCount >= 2) state = "away"; }
-      else if (delta < -6) { proxAwayCount = 0; state = "near"; }
-    }
-    compassLastRaw = dist;
-    compassState = state;
-    return {
-      away: state === "away",
-      onTarget: false,
-      t: Math.min(1, Math.max(0, 1 - dist / 150)),
-    };
-  }
+  /* État de proximité partagé (lumière + émoticône) : délégué à compassUI */
 
-  /* Indicateur lumineux :
-     - noir   : on s'éloigne de la balise
-     - blanc  : on est sur la cible
-     - sinon  : de l'infrarouge (rouge, loin) à l'ultraviolet (violet, proche) */
-  function renderLight(p) {
-    const light = $("compass-light");
-    if (!light) return;
-    if (!p) { light.style.background = "#000"; light.style.boxShadow = ""; return; }
-    if (p.onTarget) {
-      light.style.background = "#fff";
-      light.style.boxShadow = "0 0 24px rgba(255,255,255,1), inset 0 0 6px rgba(0,0,0,0.15)";
-      return;
-    }
-    if (p.away) {
-      light.style.background = "#000";
-      light.style.boxShadow = "0 0 4px rgba(0,0,0,0.5)";
-      return;
-    }
-    compassGlow += (p.t - compassGlow) * 0.18;
-    const hue = Math.round(compassGlow * 270);
-    light.style.background = "hsl(" + hue + ", 100%, 55%)";
-    light.style.boxShadow = "0 0 " + Math.round(6 + compassGlow * 22) + "px hsla(" + hue + ", 100%, 65%, 0.95), inset 0 0 4px rgba(255,255,255,0.5)";
-  }
-
-  /* Émoticône de proximité : de triste (loin / on s'éloigne) à super joyeux (cible) */
-  function renderEmoji(p) {
-    const el = $("compass-emoji");
-    if (!el) return;
-    const chain = emojiChain();
-    if (!p) { el.textContent = chain[0]; el.classList.remove("happy"); el.classList.add("dim"); return; }
-    el.classList.remove("dim");
-    if (p.onTarget) { el.textContent = chain[4]; el.classList.add("happy"); return; }
-    el.classList.remove("happy");
-    if (p.away) { el.textContent = chain[0]; return; }
-    const idx = p.t < 0.25 ? 1 : p.t < 0.5 ? 2 : p.t < 0.75 ? 3 : 4;
-    el.textContent = chain[idx];
-    if (idx === 4) el.classList.add("happy");
-  }
-
-  /* cardinal → packages/geolocation (GeoMath) */
-
-   /* ---------- MODE ADMIN ---------- */
+   /* ---------- MODE ADMIN (délègue à window.Screens.god) ---------- */
   function renderGod() {
-    const p = Store.getActive();
-    const list = $("god-list");
-    if (!isGodProfile(p)) {
-      list.innerHTML = `<p class="note">${esc(I18N.t("god_sam_only"))}</p>`;
-      return;
-    }
-
-    const photos = $("god-photos");
-    photos.innerHTML = `<h3 class="subtitle">${esc(I18N.t("god_photos"))}</h3>` +
-      SITE.photos.map((ph) => `<img class="god-photo" src="${ph.src}" alt="${esc(ph.label)}" loading="lazy">`).join("");
-
-    list.innerHTML = BALISES.map((b) => {
-      const done = Store.isDone(b.id);
-      return `
-        <div class="god-card ${done ? "done" : ""}" data-id="${b.id}">
-          <div class="god-head">
-            <strong>${esc(b.id)} — ${esc(b.label)}</strong>
-            <span class="god-code">${esc(b.code)}</span>
-          </div>
-          <div class="god-coords">📍 ${b.lat.toFixed(5)}, ${b.lng.toFixed(5)}</div>
-          <div class="god-qr">${makeQR(b.code)}</div>
-          <div class="god-actions">
-            <button class="btn btn-ghost" data-god="riddle">${esc(I18N.t("god_open_riddle"))}</button>
-            <button class="btn btn-ghost" data-god="bird">${esc(I18N.t("god_open_bird"))}</button>
-            <button class="btn ${done ? "btn-danger" : "btn-primary"}" data-god="toggle">${done ? esc(I18N.t("god_mark_undo")) : esc(I18N.t("god_mark_done"))}</button>
-          </div>
-        </div>`;
-    }).join("");
-
-    list.querySelectorAll("[data-god]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const card = btn.closest(".god-card");
-        const b = getBalise(card.dataset.id);
-        if (!b) return;
-        if (btn.dataset.god === "riddle") { App.target = b; showRiddle(b); }
-        else if (btn.dataset.god === "bird") { App.target = b; App.activeBird = getBird(b.bird); App.backScreen = "god"; showBirdOnly(getBird(b.bird)); }
-        else if (btn.dataset.god === "toggle") toggleBalise(b);
-      });
+    window.Screens.god.render({
+      $, Store, I18N, esc, isGodProfile, BALISES, SITE,
+      getBalise, getBird, showRiddle, showBirdOnly,
+      App, toggleBalise, renderHome, toast,
     });
-
-    $("btn-god-all-done").onclick = () => {
-      const active = Store.getActive();
-      if (!active) return;
-      BALISES.forEach((b) => { if (!Store.isDone(b.id)) Store.unlockBalise(b.id, b.bird, 0); });
-      renderGod(); renderHome();
-      toast("✅ " + I18N.t("god_all_done"));
-    };
-    $("btn-god-all-reset").onclick = () => {
-      const active = Store.getActive();
-      if (!active) return;
-      Store.resetProgress(active.id);
-      renderGod(); renderHome();
-      toast(I18N.t("god_all_reset"));
-    };
   }
 
   function toggleBalise(b) {
@@ -2120,15 +1873,7 @@
   }
 
   function makeQR(code) {
-    try {
-      if (typeof qrcode !== "function") return "";
-      const qr = qrcode(0, "M");
-      qr.addData(code);
-      qr.make();
-      return qr.createSvgTag(3, 0);
-    } catch (e) {
-      return "";
-    }
+    return window.Screens.god.makeQR(code);
   }
 
   /* ---------- GOD MODE : rapport complet par email ---------- */
@@ -2136,15 +1881,15 @@
     try {
       const r = await fetch("/api/report", { cache: "no-store" });
       const d = await r.json();
-      if (!d.ok || !d.text) { toast("❌ " + I18N.t("god_report_error")); return; }
-      window.location.href = "mailto:contact@exemple.fr?subject=" + encodeURIComponent(d.subject) + "&body=" + encodeURIComponent(d.text);
-      toast("📧 " + I18N.t("god_report_ok"));
+      if (!d.ok || !d.text) { toast(`❌ ${  I18N.t("god_report_error")}`); return; }
+      window.location.href = `mailto:contact@exemple.fr?subject=${  encodeURIComponent(d.subject)  }&body=${  encodeURIComponent(d.text)}`;
+      toast(`📧 ${  I18N.t("god_report_ok")}`);
     } catch (e) {
-      toast("❌ " + I18N.t("god_report_error"));
+      toast(`❌ ${  I18N.t("god_report_error")}`);
     }
   }
 
-  /* ---------- GUIDE DES OISEAUX ---------- */
+  /* ---------- GUIDE DES OISEAUX (délègue à window.Screens.guide) ---------- */
   function openGuide(from) {
     App.guideBack = from || null;
     showScreen("guide");
@@ -2152,76 +1897,15 @@
   }
 
   function renderGuide() {
-    const grid = $("guide-grid");
-    grid.innerHTML = shuffle(allBirds()).map((b) => `
-      <button class="guide-card" data-guide="${b.id}">
-        <div class="guide-photo">${b.img ? `<img class="guide-photo-img" src="${b.img}" alt="${esc(b.nom)}" loading="lazy">` : birdSvg(b)}</div>
-        <div class="guide-info">
-          <strong class="guide-name">${esc(birdLabel(b))}</strong>
-          <small class="guide-latin">${esc(b.latin)}</small>
-          <span class="tag">${esc(b.taille)}</span>
-        </div>
-      </button>`).join("");
-    grid.querySelectorAll("[data-guide]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const bird = getBird(btn.dataset.guide);
-        if (!bird) return;
-        App.activeBird = bird;
-        App.backScreen = "guide";
-        showBirdOnly(bird);
-      });
+    window.Screens.guide.render({
+      $, esc, allBirds, birdLabel, getBird, App, showBirdOnly,
     });
   }
 
-  /* Mélange aléatoire (Fisher-Yates) : nouvel ordre à chaque ouverture */
-  function shuffle(arr) {
-    const a = arr.slice();
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
-    }
-    return a;
-  }
-
-  /* Illustration SVG locale : pas de vraie photo → dessin hors-ligne */
-  function shade(hex, amt) {
-    const n = parseInt(String(hex).replace("#", ""), 16);
-    if (isNaN(n)) return hex;
-    const f = (v) => Math.max(0, Math.min(255, Math.round(v + amt)));
-    const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
-    return "#" + [f(r), f(g), f(b)].map((v) => v.toString(16).padStart(2, "0")).join("");
-  }
-
-  function birdSvg(bird) {
-    const c = bird.couleur || "#5a5a5a";
-    const body = shade(c, 8);
-    const belly = shade(c, 42);
-    const dark = shade(c, -32);
-    const beak = "#e8a33d";
-    const leg = "#8a6b3f";
-    let accent = "";
-    switch (bird.id) {
-      case "pinson": accent = '<path d="M112 100 q30 6 44 26 l-10 12 q-20 -18 -46 -20 Z" fill="#d96b36" opacity="0.95"/>'; break;
-      case "hirondelle": accent = '<path d="M92 100 q8 18 26 24 q-22 -4 -26 -24 Z" fill="#b0402a"/>'; break;
-      case "verdier": accent = '<ellipse cx="148" cy="104" rx="22" ry="9" fill="#f2d13d" transform="rotate(-10 148 104)"/>'; break;
-      case "grive": accent = '<circle cx="118" cy="104" r="3.6" fill="#5a4632"/><circle cx="133" cy="114" r="3.6" fill="#5a4632"/><circle cx="146" cy="102" r="3.6" fill="#5a4632"/>'; break;
-      case "chouette": case "hibou": accent = '<circle cx="168" cy="46" r="10" fill="#d8b13a"/><circle cx="192" cy="46" r="10" fill="#d8b13a"/>'; break;
-      case "pic": accent = '<path d="M166 34 l12 15 l-12 6 Z" fill="#c8302e"/><path d="M194 34 l-12 15 l12 6 Z" fill="#c8302e"/>'; break;
-    }
-    return `<svg class="bird-svg" viewBox="0 0 260 190" role="img" aria-label="${esc(bird.nom)}">
-      <rect x="16" y="140" width="228" height="9" rx="4.5" fill="#7a5a3a" opacity="0.6"/>
-      <path d="M76 92 L14 70 L30 112 Z" fill="${dark}"/>
-      <ellipse cx="122" cy="100" rx="52" ry="38" fill="${body}"/>
-      <ellipse cx="128" cy="112" rx="36" ry="20" fill="${belly}"/>
-      <path d="M92 88 q34 -18 70 -2 q-34 6 -70 2 Z" fill="${dark}" opacity="0.85"/>
-      ${accent}
-      <circle cx="176" cy="62" r="26" fill="${body}"/>
-      <circle cx="172" cy="58" r="6.5" fill="#fff"/>
-      <circle cx="173" cy="58" r="3" fill="#1a1a1a"/>
-      <path d="M197 57 l19 7 l-19 9 Z" fill="${beak}"/>
-      <path d="M114 128 l-3 12 M132 126 l3 14" stroke="${leg}" stroke-width="3.5" stroke-linecap="round"/>
-    </svg>`;
-  }
+  /* shuffle et birdSvg → screens/guide.js */
+  function shuffle(arr) { return window.Screens.guide.shuffle(arr); }
+  function shade(hex, amt) { return window.Screens.guide.shade(hex, amt); }
+  function birdSvg(bird) { return window.Screens.guide.birdSvg(bird, esc); }
 
   /* ---------- ÉVÉNEMENTS ---------- */
   function bindEvents() {
@@ -2312,6 +1996,7 @@
         Store.setSettings({ race: false });
         Store.updateProfile(p.id, { playMode: "classic", raceOrder: null });
       }
+      syncGameState();
       renderProfiles(); renderHome();
       showScreen("intro");
       toast(`Bienvenue ${name} ! 🎉`);
@@ -2336,7 +2021,7 @@
     $("btn-guide-back").addEventListener("click", () => {
       const from = App.guideBack;
       App.guideBack = null;
-      if (from && $(from === "riddle" ? "screen-riddle" : "screen-" + from)) { showScreen(from); return; }
+      if (from && $(from === "riddle" ? "screen-riddle" : `screen-${  from}`)) { showScreen(from); return; }
       showScreen("home"); renderHome();
     });
 
@@ -2370,8 +2055,8 @@
         box.className = "hint";
         $("riddle-status").after(box);
       }
-      box.innerHTML = '<p class="hint-text">💡 ' + esc(enigme.indice) + '</p>'
-        + '<button class="btn btn-ghost btn-mini" id="btn-hint-guide">🧠 ' + esc(I18N.t("guide_open")) + '</button>';
+      box.innerHTML = `<p class="hint-text">💡 ${  esc(enigme.indice)  }</p>`
+        + `<button class="btn btn-ghost btn-mini" id="btn-hint-guide">🧠 ${  esc(I18N.t("guide_open"))  }</button>`;
       const gb = $("btn-hint-guide");
       if (gb) gb.addEventListener("click", () => openGuide("riddle"));
     });
@@ -2415,7 +2100,7 @@
       Store.setSettings({ alertSound: e.target.value });
       applySettings();
       if ($("row-alert-actions")) $("row-alert-actions").classList.toggle("hidden", e.target.value === "signature");
-      toast("🔔 " + e.target.options[e.target.selectedIndex].text);
+      toast(`🔔 ${  e.target.options[e.target.selectedIndex].text}`);
     });
     $("btn-alert-test").addEventListener("click", () => {
       const ok = AudioSys.testAlert();
@@ -2443,7 +2128,7 @@
       b.addEventListener("click", () => {
         Store.setSettings({ difficulty: b.dataset.diff });
         renderSettings();
-        toast("Difficulté : " + b.dataset.diff);
+        toast(`Difficulté : ${  b.dataset.diff}`);
       });
     });
     $("btn-cache").addEventListener("click", cacheNow);
@@ -2532,7 +2217,7 @@
         Store.setSettings({ theme: id });
         applySettings();
         const t = findTheme(id);
-        toast(I18N.fmt(I18N.t("theme_changed"), { nom: t ? ((t.emoji ? t.emoji + " " : "") + t.nom) : id }));
+        toast(I18N.fmt(I18N.t("theme_changed"), { nom: t ? ((t.emoji ? `${t.emoji  } ` : "") + t.nom) : id }));
       });
       $("btn-theme-unlock").addEventListener("click", () => {
         const s = Store.getSettings();
@@ -2559,7 +2244,7 @@
     if (thSel) {
       const list = typeof THEMES !== "undefined" ? THEMES : [];
       thSel.innerHTML = list.map((t) =>
-        `<option value="${esc(t.id)}">${esc((t.emoji ? t.emoji + " " : "") + t.nom)}</option>`).join("");
+        `<option value="${esc(t.id)}">${esc((t.emoji ? `${t.emoji  } ` : "") + t.nom)}</option>`).join("");
       thSel.value = Store.getSettings().theme || "defaut";
       const isSamT = !!Store.getActive() && isGodProfile(Store.getActive());
       const adminRowT = $("row-theme-admin");
@@ -2579,17 +2264,17 @@
     if (erow) {
       const current = Store.getSettings().proximityEmoji || "faces";
       erow.innerHTML = EMOJI_ORDER.map((id) =>
-        `<button type="button" class="emoji-btn ${id === current ? "sel" : ""}" data-emoji="${id}" title="${esc(I18N.t("emoji_" + id))}">
+        `<button type="button" class="emoji-btn ${id === current ? "sel" : ""}" data-emoji="${id}" title="${esc(I18N.t(`emoji_${  id}`))}">
            <span class="emoji-big">${EMOJI_CHAINS[id][4]}</span>
-           <span class="emoji-name">${esc(I18N.t("emoji_" + id))}</span>
+           <span class="emoji-name">${esc(I18N.t(`emoji_${  id}`))}</span>
          </button>`).join("");
       erow.querySelectorAll("[data-emoji]").forEach((b) => {
         b.addEventListener("click", () => {
           Store.setSettings({ proximityEmoji: b.dataset.emoji });
           renderSettings();
           const emoji = $("compass-emoji");
-          if (emoji) emoji.textContent = emojiChain()[0];
-          toast("Emoji de proximité : " + I18N.t("emoji_" + b.dataset.emoji));
+          if (emoji) { const chain = EMOJI_CHAINS[b.dataset.emoji] || EMOJI_CHAINS.faces; emoji.textContent = chain[chain.length - 1]; }
+          toast(`Emoji de proximité : ${  I18N.t(`emoji_${  b.dataset.emoji}`)}`);
         });
       });
     }
@@ -2629,8 +2314,8 @@
       const status = $("contact-status");
       copyText(email);
       if (status) status.textContent = I18N.t("contact_copied");
-      const subject = "Multi JDP - " + (Store.getActive() ? Store.getActive().name : "");
-      window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent(subject);
+      const subject = `Multi JDP - ${  Store.getActive() ? Store.getActive().name : ""}`;
+      window.location.href = `mailto:${  email  }?subject=${  encodeURIComponent(subject)}`;
     });
     updateOfflineUI();
   }
@@ -2640,46 +2325,46 @@
     const Y = () => T("tester_yes"), N = () => T("tester_no");
     const L = [];
     L.push(T("tester_report_title"));
-    L.push(T("tester_report_date") + " : " + new Date().toISOString());
-    L.push(T("tester_report_version") + " : " + I18N.t("set_version"));
-    L.push(T("tester_report_lang") + " : " + I18N.lang);
-    L.push(T("tester_report_url") + " : " + location.href);
-    L.push(T("tester_report_online") + " : " + (navigator.onLine ? Y() : N()));
-    L.push(T("tester_report_device") + " : " + navigator.userAgent);
-    L.push(T("tester_report_screen") + " : " + innerWidth + "x" + innerHeight + " (dpr=" + (window.devicePixelRatio || 1) + ")");
-    L.push(T("tester_report_secure") + " : " + (window.isSecureContext ? Y() : N()) + " (" + location.protocol + ")");
+    L.push(`${T("tester_report_date")  } : ${  new Date().toISOString()}`);
+    L.push(`${T("tester_report_version")  } : ${  I18N.t("set_version")}`);
+    L.push(`${T("tester_report_lang")  } : ${  I18N.lang}`);
+    L.push(`${T("tester_report_url")  } : ${  location.href}`);
+    L.push(`${T("tester_report_online")  } : ${  navigator.onLine ? Y() : N()}`);
+    L.push(`${T("tester_report_device")  } : ${  navigator.userAgent}`);
+    L.push(`${T("tester_report_screen")  } : ${  innerWidth  }x${  innerHeight  } (dpr=${  window.devicePixelRatio || 1  })`);
+    L.push(`${T("tester_report_secure")  } : ${  window.isSecureContext ? Y() : N()  } (${  location.protocol  })`);
     try {
       const p = Store.getActive();
       if (p) {
-        L.push(T("tester_report_profile") + " : " + p.name);
+        L.push(`${T("tester_report_profile")  } : ${  p.name}`);
         const done = BALISES.filter((b) => Store.isDone(b.id)).map((b) => b.id);
-        L.push(T("tester_report_beacons") + " : " + (done.length ? done.join(", ") : T("tester_none")));
-        L.push(T("tester_report_birds") + " : " + p.birds.length);
-        L.push(T("tester_report_stars") + " : " + p.stars);
+        L.push(`${T("tester_report_beacons")  } : ${  done.length ? done.join(", ") : T("tester_none")}`);
+        L.push(`${T("tester_report_birds")  } : ${  p.birds.length}`);
+        L.push(`${T("tester_report_stars")  } : ${  p.stars}`);
       } else {
-        L.push(T("tester_report_profile") + " : " + T("tester_none"));
+        L.push(`${T("tester_report_profile")  } : ${  T("tester_none")}`);
       }
     } catch (e) {
-      L.push(T("tester_report_profile") + " : ERROR " + e.message);
+      L.push(`${T("tester_report_profile")  } : ERROR ${  e.message}`);
     }
-    L.push(T("tester_report_gps") + " : " + ("geolocation" in navigator ? Y() : N()));
-    if (App.lastPos) L.push(T("tester_report_pos") + " : " + App.lastPos.lat.toFixed(6) + ", " + App.lastPos.lng.toFixed(6));
-    else L.push(T("tester_report_pos") + " : " + T("tester_none"));
+    L.push(`${T("tester_report_gps")  } : ${  "geolocation" in navigator ? Y() : N()}`);
+    if (App.lastPos) L.push(`${T("tester_report_pos")  } : ${  App.lastPos.lat.toFixed(6)  }, ${  App.lastPos.lng.toFixed(6)}`);
+    else L.push(`${T("tester_report_pos")  } : ${  T("tester_none")}`);
     try {
-      L.push(T("tester_report_sw") + " : " + ("serviceWorker" in navigator && navigator.serviceWorker.controller
-        ? navigator.serviceWorker.controller.state : T("tester_sw_none")));
-    } catch (e) { L.push(T("tester_report_sw") + " : ERROR"); }
+      L.push(`${T("tester_report_sw")  } : ${  "serviceWorker" in navigator && navigator.serviceWorker.controller
+        ? navigator.serviceWorker.controller.state : T("tester_sw_none")}`);
+    } catch (e) { L.push(`${T("tester_report_sw")  } : ERROR`); }
     try {
       const keys = await caches.keys();
-      L.push(T("tester_report_caches") + " : " + (keys.length ? keys.join(", ") : T("tester_none")));
-    } catch (e) { L.push(T("tester_report_caches") + " : ERROR"); }
+      L.push(`${T("tester_report_caches")  } : ${  keys.length ? keys.join(", ") : T("tester_none")}`);
+    } catch (e) { L.push(`${T("tester_report_caches")  } : ERROR`); }
     try {
       let bytes = 0;
       for (let i = 0; i < localStorage.length; i++) {
         const k = localStorage.key(i);
         bytes += (localStorage.getItem(k) || "").length * 2;
       }
-      L.push(T("tester_report_ls") + " : " + bytes + " octets");
+      L.push(`${T("tester_report_ls")  } : ${  bytes  } octets`);
     } catch (e) {}
     return L.join("\n");
   }
@@ -2715,7 +2400,7 @@
     QrScan.start((raw) => {
       const b = QrScan.matchCode(raw);
       if (b) {
-        QrScan.setStatus("✔ Balise détectée : " + b.id);
+        QrScan.setStatus(`✔ Balise détectée : ${  b.id}`);
         QrScan.stop(); App.cameraOn = false;
         $("btn-start-camera").disabled = false;
         handleBaliseFound(b, "qr");

@@ -1,0 +1,35 @@
+{
+  "name": "curios",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Curi🧭s — Plateforme libre de création et d'exécution de parcours éducatifs interactifs",
+  "license": "AGPL-3.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:coverage": "c8 node --test tests/unit/*.test.mjs",
+    "build": "node tools/build.mjs --target all",
+    "build:data": "node tools/build-data.mjs",
+    "build:engine": "node tools/build-engine.mjs",
+    "build:geo": "node tools/build-geo.mjs",
+    "build:sw": "node tools/build-sw.mjs",
+    "validate": "node tools/validate-parcours.mjs",
+    "editions": "node tools/build-editions.mjs --check",
+    "convert": "node tools/convert-packs.mjs",
+    "serve": "node packages/server/src/cli.js"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "prettier": "^3.0.0",
+    "c8": "^10.0.0",
+    "globals": "^15.0.0"
+  }
+}
