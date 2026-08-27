@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073B5C">
+  <title>CURIOS — Documentation</title>
+  <link rel="icon" href="img/icon.svg">
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+
+  <header class="pub-topbar">
+    <a class="pub-topbar-logo" href="index.html">
+      <img src="img/logo.svg" alt="CURIOS"> CURIOS
+    </a>
+    <nav class="pub-topbar-nav">
+      <a href="index.html">Accueil</a>
+      <a href="curios.html">CURIOS</a>
+      <a href="documentation.html" class="active">Documentation</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="pub-cta" href="hub/login.html">Se connecter</a>
+  </header>
+
+  <section class="pub-section" style="max-width:800px;">
+    <h2 class="pub-section-title">Documentation</h2>
+    <p class="pub-section-sub">Guides, référence technique et bonnes pratiques.</p>
+
+    <div style="margin-top:32px;">
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">🚀 Démarrage rapide</h3>
+        <p style="color:var(--pub-ink-dim);margin:0 0 12px;">Lancez votre premier parcours en 3 étapes.</p>
+        <ol style="padding-left:20px;font-size:14px;line-height:2;">
+          <li>Ouvrez le <a href="hub/login.html">Hub</a> et créez un compte</li>
+          <li>Créez un parcours avec le <a href="player/studio.html">Studio</a></li>
+          <li>Configurez la session depuis le <a href="player/dashboard.html">Dashboard</a></li>
+        </ol>
+      </div>
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">🎨 Studio de création</h3>
+        <p style="color:var(--pub-ink-dim);margin:0;">Le Studio guide votre création en 8 étapes : Objectifs → Public → Territoire → Missions → Événements → Débriefing → Tests → Publication. Chaque étape a des champs obligatoires et une validation automatique.</p>
+      </div>
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">✏️ Éditeur de contenu</h3>
+        <p style="color:var(--pub-ink-dim);margin:0;">L'éditeur permet de modifier directement les balises, découvertes, quiz et guide. Il inclut un éditeur de carte (Leaflet/OpenStreetMap), un browser d'images, et l'import/export KML.</p>
+      </div>
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">🧩 Atelier de packs</h3>
+        <p style="color:var(--pub-ink-dim);margin:0;">L'Atelier crée des bundles de contenu réutilisables : balises, découvertes, guide, quiz et événements. Exportez en JSON et importez avec <code>node tools/import-pack.mjs</code>.</p>
+      </div>
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">🎛️ Dashboard organisateur</h3>
+        <p style="color:var(--pub-ink-dim);margin:0;">Le Dashboard affiche : message broadcast, suivi GPS des équipes, validations par balise, épreuves aléatoires, QR codes de connexion, configuration serveur (Local/Internet), et gestion des urgences.</p>
+      </div>
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">📱 Player mobile (PWA)</h3>
+        <p style="color:var(--pub-ink-dim);margin:0;">Le Player est une Progressive Web App complète : carte interactive, scan QR, GPS, boussole, énigmes à 3 niveaux de difficulté, quiz, carnet d'observation, palmarès, reconnaissance sonore et mode course. Fonctionne entièrement hors-ligne.</p>
+      </div>
+
+      <div style="background:var(--pub-bg-alt);border:1px solid var(--pub-line);border-radius:12px;padding:24px;margin-bottom:16px;">
+        <h3 style="margin:0 0 8px;">🔧 Installation serveur</h3>
+        <p style="color:var(--pub-ink-dim);margin:0 0 8px;">Le serveur CURIOS est en Node.js, zéro dépendance externe.</p>
+        <pre style="background:var(--pub-bg);padding:12px;border-radius:8px;font-size:13px;overflow-x:auto;margin:0;">node packages/server/src/index.js</pre>
+        <p style="color:var(--pub-ink-dim);margin:8px 0 0;font-size:13px;">Le serveur démarre sur le port 8080. La première connexion définit le mot de passe organisateur.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="pub-footer">
+    <img class="pub-footer-logo" src="img/logo.svg" alt="CURIOS">
+    <p>© 2026 CURIOS — Moteur de parcours éducatifs</p>
+    <div class="pub-footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="curios.html">CURIOS</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

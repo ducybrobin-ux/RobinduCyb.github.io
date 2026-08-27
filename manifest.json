@@ -1,0 +1,16 @@
+{
+  "name": "CURIOS Hub",
+  "short_name": "CURIOS",
+  "description": "CURIOS Project Hub — Gestion de parcours éducatifs",
+  "start_url": "/hub/app.html",
+  "display": "standalone",
+  "background_color": "#073B5C",
+  "theme_color": "#073B5C",
+  "icons": [
+    {
+      "src": "img/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

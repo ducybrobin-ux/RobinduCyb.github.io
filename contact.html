@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073B5C">
+  <title>CURIOS — Contact</title>
+  <link rel="icon" href="img/icon.svg">
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+
+  <header class="pub-topbar">
+    <a class="pub-topbar-logo" href="index.html">
+      <img src="img/logo.svg" alt="CURIOS"> CURIOS
+    </a>
+    <nav class="pub-topbar-nav">
+      <a href="index.html">Accueil</a>
+      <a href="curios.html">CURIOS</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a class="pub-cta" href="hub/login.html">Se connecter</a>
+  </header>
+
+  <section class="pub-section" style="max-width:600px;">
+    <h2 class="pub-section-title">Contact</h2>
+    <p class="pub-section-sub">Une question, une suggestion ou un partenariat ? Écrivez-nous.</p>
+
+    <form id="contact-form" style="margin-top:24px;">
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-weight:700;font-size:13px;color:var(--pub-ink-dim);margin-bottom:6px;text-transform:uppercase;">Nom</label>
+        <input type="text" id="contact-name" required placeholder="Votre nom"
+               style="width:100%;padding:10px 14px;border:2px solid var(--pub-line);border-radius:8px;font-size:15px;font-family:inherit;">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-weight:700;font-size:13px;color:var(--pub-ink-dim);margin-bottom:6px;text-transform:uppercase;">Email</label>
+        <input type="email" id="contact-email" required placeholder="vous@exemple.fr"
+               style="width:100%;padding:10px 14px;border:2px solid var(--pub-line);border-radius:8px;font-size:15px;font-family:inherit;">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-weight:700;font-size:13px;color:var(--pub-ink-dim);margin-bottom:6px;text-transform:uppercase;">Sujet</label>
+        <select id="contact-subject"
+                style="width:100%;padding:10px 14px;border:2px solid var(--pub-line);border-radius:8px;font-size:15px;font-family:inherit;">
+          <option value="question">Question</option>
+          <option value="demo">Demander une démo</option>
+          <option value="partnership">Partenariat</option>
+          <option value="bug">Signaler un bug</option>
+          <option value="other">Autre</option>
+        </select>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="display:block;font-weight:700;font-size:13px;color:var(--pub-ink-dim);margin-bottom:6px;text-transform:uppercase;">Message</label>
+        <textarea id="contact-message" rows="5" required placeholder="Votre message…"
+                  style="width:100%;padding:10px 14px;border:2px solid var(--pub-line);border-radius:8px;font-size:15px;font-family:inherit;resize:vertical;"></textarea>
+      </div>
+      <button type="submit"
+              style="width:100%;padding:12px;border:none;border-radius:8px;background:var(--pub-primary);color:#fff;font-size:16px;font-weight:700;cursor:pointer;">
+        Envoyer
+      </button>
+    </form>
+    <div id="contact-success" style="display:none;text-align:center;padding:32px;">
+      <div style="font-size:48px;margin-bottom:12px;">✅</div>
+      <h3 style="font-size:18px;">Message envoyé !</h3>
+      <p style="color:var(--pub-ink-dim);">Nous vous répondrons dans les plus brefs délais.</p>
+    </div>
+  </section>
+
+  <footer class="pub-footer">
+    <img class="pub-footer-logo" src="img/logo.svg" alt="CURIOS">
+    <p>© 2026 CURIOS — Moteur de parcours éducatifs</p>
+    <div class="pub-footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="curios.html">CURIOS</a>
+      <a href="documentation.html">Documentation</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("contact-form").style.display = "none";
+      document.getElementById("contact-success").style.display = "";
+    });
+  </script>
+
+</body>
+</html>
