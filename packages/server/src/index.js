@@ -47,6 +47,21 @@ import {
   handleSetup,
 } from "./routes/auth.js";
 import {
+  handleHubRegister,
+  handleHubLogin,
+  handleHubMe,
+  handleHubLogout,
+  createHubAuth,
+} from "./routes/hub-auth.js";
+import {
+  handleHubProjets,
+  handleHubProjet,
+  handleHubParcours,
+  handleHubParcoursItem,
+  handleHubPacks,
+  handleHubPack,
+} from "./routes/hub-crud.js";
+import {
   handleSession,
   handleSessionTeam,
   handleSessionProgress,
@@ -82,20 +97,24 @@ export function createServer(options = {}) {
 
   const state = createState(root);
   const auth = createAuth(root);
+  const hubAuth = createHubAuth(root);
   const config = { port, httpsPort };
 
   // Nettoyer les sessions expirées toutes les heures (unref pour ne pas bloquer l'arrêt)
-  const cleanupInterval = setInterval(() => auth.cleanupSessions(), 60 * 60 * 1000);
+  const cleanupInterval = setInterval(() => {
+    auth.cleanupSessions();
+    hubAuth.cleanupSessions();
+  }, 60 * 60 * 1000);
   cleanupInterval.unref();
 
   const server = http.createServer((req, res) => {
-    handleRequest(req, res, state, auth, config);
+    handleRequest(req, res, state, auth, hubAuth, config);
   });
 
-  return { server, state, auth, config };
+  return { server, state, auth, hubAuth, config };
 }
 
-function handleRequest(req, res, state, auth, config) {
+function handleRequest(req, res, state, auth, hubAuth, config) {
   const method = req.method;
   const url = new URL(req.url, "http://localhost");
   const apiPath = url.pathname;
@@ -127,6 +146,20 @@ function handleRequest(req, res, state, auth, config) {
       if (apiPath === "/api/auth/logout") return handleLogout(method, req, res, auth);
       if (apiPath === "/api/auth/me") return handleMe(method, req, res, auth);
       if (apiPath === "/api/auth/setup") return handleSetup(method, req, res, auth);
+
+      // Hub Auth (multi-user)
+      if (apiPath === "/api/hub/auth/register") return handleHubRegister(method, req, res, hubAuth);
+      if (apiPath === "/api/hub/auth/login") return handleHubLogin(method, req, res, hubAuth);
+      if (apiPath === "/api/hub/auth/me") return handleHubMe(method, req, res, hubAuth);
+      if (apiPath === "/api/hub/auth/logout") return handleHubLogout(method, req, res, hubAuth);
+
+      // Hub CRUD
+      if (apiPath === "/api/hub/projets") return handleHubProjets(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/projets/")) return handleHubProjet(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/parcours") return handleHubParcours(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/parcours/")) return handleHubParcoursItem(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/packs") return handleHubPacks(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/packs/")) return handleHubPack(method, req, res, hubAuth, state.root);
 
       // Board
       if (apiPath === "/api/board") return handleBoard(method, req, res, state);
@@ -200,7 +233,7 @@ function handleRequest(req, res, state, auth, config) {
 }
 
 export function startServer(options = {}) {
-  const { server, state, auth, config } = createServer(options);
+  const { server, state, auth, hubAuth, config } = createServer(options);
 
   server.listen(config.port, () => {
     console.log(`Curios server started`);
@@ -220,5 +253,5 @@ export function startServer(options = {}) {
     throw err;
   });
 
-  return { server, state, auth, config };
+  return { server, state, auth, hubAuth, config };
 }
