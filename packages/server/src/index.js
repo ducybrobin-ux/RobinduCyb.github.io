@@ -62,6 +62,19 @@ import {
   handleHubPack,
 } from "./routes/hub-crud.js";
 import {
+  handleHubClients,
+  handleHubClient,
+  handleHubMateriel,
+  handleHubMaterielItem,
+  handleHubSessions,
+  handleHubSessionItem,
+  handleHubPlanning,
+  handleHubPlanningItem,
+  handleHubCommercial,
+  handleHubCommercialItem,
+  handleHubAnalytics,
+} from "./routes/hub-resources.js";
+import {
   handleSession,
   handleSessionTeam,
   handleSessionProgress,
@@ -160,6 +173,19 @@ function handleRequest(req, res, state, auth, hubAuth, config) {
       if (apiPath.startsWith("/api/hub/parcours/")) return handleHubParcoursItem(method, req, res, hubAuth, state.root);
       if (apiPath === "/api/hub/packs") return handleHubPacks(method, req, res, hubAuth, state.root);
       if (apiPath.startsWith("/api/hub/packs/")) return handleHubPack(method, req, res, hubAuth, state.root);
+
+      // Hub resources
+      if (apiPath === "/api/hub/clients") return handleHubClients(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/clients/")) return handleHubClient(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/materiel") return handleHubMateriel(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/materiel/")) return handleHubMaterielItem(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/sessions-data") return handleHubSessions(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/sessions-data/")) return handleHubSessionItem(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/planning") return handleHubPlanning(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/planning/")) return handleHubPlanningItem(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/commercial") return handleHubCommercial(method, req, res, hubAuth, state.root);
+      if (apiPath.startsWith("/api/hub/commercial/")) return handleHubCommercialItem(method, req, res, hubAuth, state.root);
+      if (apiPath === "/api/hub/analytics") return handleHubAnalytics(method, req, res, hubAuth, state.root);
 
       // Board
       if (apiPath === "/api/board") return handleBoard(method, req, res, state);
