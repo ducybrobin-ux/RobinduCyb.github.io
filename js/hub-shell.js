@@ -85,7 +85,7 @@
 
     topbar.innerHTML =
       '<a class="hub-topbar-logo" href="../index.html">' +
-      '<img src="../img/logo.svg" alt="CURIOS"> CURIOS Hub</a>' +
+      '<img src="../img/logo.svg" alt="CURIOS"> Hub</a>' +
       '<button class="hub-btn-icon hub-hamburger" id="hub-hamburger" aria-label="Menu">☰</button>' +
       '<nav class="hub-topbar-nav" id="hub-nav">' + navHtml + "</nav>" +
       '<div class="hub-topbar-right">' +
