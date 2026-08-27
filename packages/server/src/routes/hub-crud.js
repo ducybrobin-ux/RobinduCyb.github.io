@@ -180,8 +180,8 @@ async function handleCreate(req, res, filePath, data, type, userId) {
   const p = parseJson(body);
   if (!p || !p.name) return sendError(res, 400, "missing-name");
 
+  const id = type + "-" + Date.now();
   const item = {
-    id: type + "-" + Date.now(),
     name: p.name.trim(),
     description: (p.description || "").trim(),
     status: "draft",
@@ -189,7 +189,7 @@ async function handleCreate(req, res, filePath, data, type, userId) {
     created: Date.now(),
     updated: Date.now(),
     ...p,
-    id: type + "-" + Date.now(), // ensure id is set after spread
+    id,
   };
 
   data.push(item);

@@ -1,80 +1,72 @@
-# CURIOS Project Hub — Premiere PR
+# CURIOS Project Hub — Notes d'intégration
 
-## Contenu
+> **Mise à jour :** les routes Hub sont désormais **intégrées nativement** dans le serveur.
+> Les fichiers `hub-auth-server.js` / `server-index-patch.js` sont conservés comme
+> référence historique de la première PR. Le code actif se trouve dans
+> `packages/server/src/routes/` (voir ci-dessous).
+
+## Code actif (nativement intégré)
+
+Le serveur `packages/server/src/index.js` inclut directement les routes Hub :
+
+| Fichier | Contenu |
+|---------|---------|
+| `packages/server/src/routes/hub-auth.js` | Auth multi-utilisateurs : register, login, me, logout (PBKDF2, rôles, premier user = ADMIN) |
+| `packages/server/src/routes/hub-crud.js` | CRUD projets, parcours, packs |
+| `packages/server/src/routes/hub-resources.js` | CRUD clients, matériel, sessions, planning, commercial + analytics agrégées |
+
+## Endpoints
 
 ```
-curios-hub-public/
-├── index.html                    ← Landing page publique
-├── curios.html                   ← Page présentation CURIOS
-├── contact.html                  ← Formulaire contact
-├── documentation.html            ← Docs techniques
-├── hub/
-│   ├── login.html                ← Login / Register
-│   └── app.html                  ← App Shell Hub (SPA)
-├── css/
-│   ├── hub.css                   ← Design system Hub (400+ composants)
-│   └── public.css                ← Styles site public
-├── js/
-│   ├── hub-auth.js               ← Auth client (login, token, roles)
-│   ├── hub-shell.js              ← App Shell (topbar, routing, nav)
-│   └── hub-pages/
-│       └── dashboard.js          ← Dashboard initial
-├── patches/
-│   ├── hub-auth-server.js        ← Auth serveur (register, login, me)
-│   ├── server-index-patch.js     ← Patch pour index.js serveur
-│   └── README-PATCHES.md         ← Instructions d'intégration
-└── player/                       ← (vide — copier l'existant ici)
+POST/GET /api/hub/auth/register|login|me|logout
+GET/POST  /api/hub/projets      GET/PUT/DELETE /api/hub/projets/:id
+GET/POST  /api/hub/parcours     GET/PUT/DELETE /api/hub/parcours/:id
+GET/POST  /api/hub/packs        GET/PUT/DELETE /api/hub/packs/:id
+GET/POST  /api/hub/clients      GET/PUT/DELETE /api/hub/clients/:id
+GET/POST  /api/hub/materiel     GET/PUT/DELETE /api/hub/materiel/:id
+GET/POST  /api/hub/sessions-data GET/PUT/DELETE /api/hub/sessions-data/:id
+GET/POST  /api/hub/planning     GET/PUT/DELETE /api/hub/planning/:id
+GET/POST  /api/hub/commercial   GET/PUT/DELETE /api/hub/commercial/:id
+GET       /api/hub/analytics
 ```
 
-## Installation
+## Persistance
 
-### 1. Copier dans le dépôt public
+Les données sont stockées en JSON dans `data/` :
+
+```
+data/hub-users.json          ← utilisateurs (hash PBKDF2 + sel + rôle)
+data/hub-sessions.json       ← sessions tokens (7 jours)
+data/hub-projets.json        ← projets
+data/hub-parcours.json       ← parcours
+data/hub-packs.json          ← packs
+data/hub-clients.json        ← clients
+data/hub-materiel.json       ← matériel
+data/hub-sessions-data.json  ← sessions du Hub
+data/hub-planning.json       ← planning
+data/hub-commercial.json     ← devis / factures
+```
+
+## RBAC (8 rôles)
+
+`ADMIN`, `PROJECT_MANAGER`, `PEDAGOGICAL_EDITOR`, `CONTENT_VALIDATOR`,
+`FORMATOR`, `OBSERVER`, `CLIENT`, `PLAYER`
+
+- **Écriture** : ADMIN, PROJECT_MANAGER, PEDAGOGICAL_EDITOR, CONTENT_VALIDATOR, FORMATOR
+- **Suppression** : ADMIN, PROJECT_MANAGER
+- **Lecture** : tous les utilisateurs authentifiés
+- **Premier utilisateur enregistré = ADMIN**
+
+## Tester
 
 ```bash
-# Depuis la racine de RobinduCyb.github.io
-cp -r curios-hub-public/* .
-```
-
-### 2. Copier le player existant
-
-```bash
-# Copier tout le player depuis ducyb/ vers player/
-cp -r /path/to/ducyb/* player/
-# Garder uniquement les fichiers du player
-rm -rf player/hub player/css/hub.css player/js/hub-*
-```
-
-### 3. Intégrer les patches serveur
-
-Voir `patches/README-PATCHES.md` pour les instructions détaillées.
-
-### 4. Tester
-
-```bash
-# Depuis la racine du projet
 node packages/server/src/index.js
-# Ouvrir http://localhost:8080
+# Ouvrir http://localhost:8080/hub/login.html
 ```
 
-## Ce qui fonctionne
+Tests unitaires :
 
-- **Landing page** : hero, features, CTA, footer
-- **Hub login** : register + login + token auth
-- **Hub App Shell** : topbar horizontale, navigation 11 pages, routing hash
-- **Dashboard** : stats, accès rapides, outils de création
-- **Pages Hub** : projets, parcours, packs, sessions, clients, matériel, planning, commercial, analytics, settings (toutes avec placeholder structuré)
-- **Auth** : register (premier user = ADMIN), login, logout, token 7 jours
-- **Responsive** : mobile-first, hamburger menu
-- **Dark mode** : via prefers-color-scheme
+```bash
+npm test        # inclut tests/unit/hub.test.mjs (auth + CRUD + RBAC + analytics)
+```
 
-## Ce qui reste à faire (Phases 2+)
-
-- Connecter le dashboard aux vraies données serveur (/api/session, /api/hub/stats)
-- CRUD complet pour projets, parcours, packs
-- Gestion clients et prescripteurs
-- Planning avec calendrier
-- Devis et factures
-- Analytics agrégées côté serveur
-- RBAC complet (8 rôles)
-- Site public complet (10 pages)
-- Tests E2E

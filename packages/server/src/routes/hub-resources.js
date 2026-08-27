@@ -36,8 +36,8 @@ function createGeneric(type, filePath, req, res, user) {
   return readBody(req).then(body => {
     const p = parseJson(body);
     if (!p || !p.name) return sendError(res, 400, "missing-name");
+    const id = type + "-" + Date.now();
     const item = {
-      id: type + "-" + Date.now(),
       name: p.name.trim(),
       description: (p.description || "").trim(),
       status: "draft",
@@ -45,7 +45,7 @@ function createGeneric(type, filePath, req, res, user) {
       created: Date.now(),
       updated: Date.now(),
       ...p,
-      id: type + "-" + Date.now(),
+      id,
     };
     data.push(item);
     saveJson(filePath, data);
