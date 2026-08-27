@@ -8,7 +8,7 @@
 
   var TOKEN_KEY = "curios_hub_token";
   var USER_KEY = "curios_hub_user";
-  var API = "/api/auth";
+  var API = "/api/hub/auth";
 
   function getToken() {
     try { return localStorage.getItem(TOKEN_KEY); } catch { return null; }

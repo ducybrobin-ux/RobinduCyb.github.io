@@ -19,64 +19,18 @@
   </main>
 
   <script src="../js/hub-auth.js"></script>
+  <script src="../js/hub-api.js"></script>
   <script src="../js/hub-shell.js"></script>
   <script src="../js/hub-pages/dashboard.js"></script>
+  <script src="../js/hub-pages/projets.js"></script>
+  <script src="../js/hub-pages/parcours.js"></script>
+  <script src="../js/hub-pages/packs.js"></script>
   <script>
     (function () {
       HubShell.registerPage("dashboard", renderDashboard);
-
-      HubShell.registerPage("projets", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">📁 Projets</h1>' +
-          '<p class="hub-page-sub">Gérez vos projets éducatifs</p></div>' +
-          '<div class="hub-page-actions">' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="new-projet">➕ Nouveau projet</button>' +
-          "</div></div>" +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">📁</div>' +
-          '<div class="hub-empty-title">Aucun projet pour l\'instant</div>' +
-          '<div class="hub-empty-desc">Créez votre premier projet pour commencer à gérer vos parcours, sessions et clients.</div>' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="new-projet">➕ Créer un projet</button>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("parcours", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">🗺️ Parcours</h1>' +
-          '<p class="hub-page-sub">Vos parcours éducatifs et sentiers</p></div>' +
-          '<div class="hub-page-actions">' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="new-parcours">➕ Nouveau parcours</button>' +
-          "</div></div>" +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">🗺️</div>' +
-          '<div class="hub-empty-title">Aucun parcours</div>' +
-          '<div class="hub-empty-desc">Créez des parcours avec le Studio ou importez des bundles depuis l\'Atelier.</div>' +
-          '<div class="hub-quick-actions">' +
-          '<a class="hub-quick-action" href="../player/studio.html"><span class="qa-icon">🎨</span><span class="qa-label">Ouvrir le Studio</span></a>' +
-          '<a class="hub-quick-action" href="../player/atelier.html"><span class="qa-icon">🧩</span><span class="qa-label">Ouvrir l\'Atelier</span></a>' +
-          "</div></div>"
-        );
-      });
-
-      HubShell.registerPage("packs", function (user) {
-        return (
-          '<div class="hub-page-header">' +
-          '<div><h1 class="hub-page-title">📦 Packs</h1>' +
-          '<p class="hub-page-sub">Bundles de contenu éducatif</p></div>' +
-          '<div class="hub-page-actions">' +
-          '<button class="hub-btn hub-btn-primary" data-page-action="import-pack">📤 Importer un pack</button>' +
-          "</div></div>" +
-          '<div class="hub-card"><div class="hub-empty">' +
-          '<div class="hub-empty-icon">📦</div>' +
-          '<div class="hub-empty-title">Gestion des packs</div>' +
-          '<div class="hub-empty-desc">Importez, configurez et publiez vos packs de contenu.</div>' +
-          '<a class="hub-btn hub-btn-outline" href="../player/atelier.html">🧩 Ouvrir l\'Atelier</a>' +
-          "</div></div>"
-        );
-      });
+      HubShell.registerPage("projets", renderProjets);
+      HubShell.registerPage("parcours", renderParcours);
+      HubShell.registerPage("packs", renderPacks);
 
       HubShell.registerPage("sessions", function (user) {
         return (
