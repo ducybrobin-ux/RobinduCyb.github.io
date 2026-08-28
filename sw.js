@@ -4,16 +4,19 @@
    Source : packages/offline/src/{config,strategy}.js
    ========================================================= */
 
-const VERSION = "curios-v1";
-const CACHE = "curios-core-v1";
-const RUNTIME = "curios-runtime-v1";
+const VERSION = "curios-v2";
+const CACHE = "curios-core-v2";
+const RUNTIME = "curios-runtime-v2";
 
 const PRECACHE = [
   "./",
   "atelier.html",
+  "css/curios-design-system.css",
+  "css/curios-tokens.css",
   "css/styles.css",
   "dashboard.html",
   "debriefing.html",
+  "docs/design-system-preview.html",
   "docs/fiche-pedagogique-JDP_BC.pdf",
   "editeur.html",
   "img/flags/fr.svg",
@@ -32,15 +35,26 @@ const PRECACHE = [
   "js/board.js",
   "js/challenges.js",
   "js/compass.js",
+  "js/dashboard.js",
   "js/data.js",
   "js/declination.js",
   "js/dict.js",
+  "js/editeur.js",
+  "js/engine-helpers.js",
   "js/engine.js",
+  "js/game-flow.js",
   "js/geo.js",
   "js/i18n.js",
   "js/jsqr.js",
   "js/qr.js",
   "js/qrcode.js",
+  "js/questionnaire.js",
+  "js/router.js",
+  "js/screens/bird.js",
+  "js/screens/god.js",
+  "js/screens/guide.js",
+  "js/screens/palmares.js",
+  "js/services/compass-ui.js",
   "js/store.js",
   "manifest.json",
   "questionnaire.html",

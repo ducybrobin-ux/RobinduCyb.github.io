@@ -71,6 +71,7 @@ async function build() {
     "demarrer_serveur.cmd",
     "index.html",
     "dashboard.html",
+    "debriefing.html",
     "editeur.html",
     "atelier.html",
     "studio.html",
@@ -91,7 +92,7 @@ async function build() {
   }
 
   // 2. Copy directories
-  const dirs = ["css", "img", "js", "data", "content"];
+  const dirs = ["css", "img", "js", "data", "content", "docs"];
   for (const dir of dirs) {
     const src = join(ROOT, dir);
     try {
