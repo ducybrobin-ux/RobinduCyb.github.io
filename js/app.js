@@ -1850,6 +1850,38 @@
   /* État de proximité partagé (lumière + émoticône) : délégué à compassUI */
 
    /* ---------- MODE ADMIN (délègue à window.Screens.god) ---------- */
+
+  /* ---------- Espaces Parcours / Administrer (Phase 2) ---------- */
+  function renderParcours() {
+    const list = $("parcours-list");
+    if (!list) return;
+    const p = Store.getActive();
+    const total = BALISES.length;
+    const done = p ? p.completed.length : 0;
+    let html = '<div class="cur-parc-item">';
+    html += '<span class="parc-name">\ud83d\uddfa\ufe0f Le grand sentier</span>';
+    html += `<span class="parc-sub">${total} balises \u00e0 explorer</span>`;
+    if (p) {
+      html += `<span class="parc-sub">\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 ${esc(p.name)} \u00b7 ${done}/${total} valid\u00e9es \u00b7 \u2b50 ${p.stars} \u00e9toiles</span>`;
+      html += '<div class="parc-actions"><button class="btn btn-primary" id="parc-play">\u25b6 Jouer / continuer</button></div>';
+    } else {
+      html += '<span class="parc-sub">\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 Pas encore de profil famille pour cette tablette.</span>';
+      html += '<div class="parc-actions"><button class="btn btn-primary" id="parc-create-profile">\ud83d\udcdd Cr\u00e9er le profil de ma famille</button></div>';
+    }
+    html += '</div>';
+    list.innerHTML = html;
+    const play = $("parc-play");
+    if (play) play.addEventListener("click", () => { renderMap(); showScreen("map"); });
+    const create = $("parc-create-profile");
+    if (create) create.addEventListener("click", () => { renderProfiles(); showScreen("profile"); });
+  }
+
+  function renderAdmin() {
+    /* Carte statique : les tuiles sont reliées par data-go. */
+    const el = $("screen-admin");
+    if (el) return;
+  }
+
   function renderGod() {
     window.Screens.god.render({
       $, Store, I18N, esc, isGodProfile, BALISES, SITE,
@@ -2024,6 +2056,14 @@
       if (from && $(from === "riddle" ? "screen-riddle" : `screen-${  from}`)) { showScreen(from); return; }
       showScreen("home"); renderHome();
     });
+
+    // Espaces Parcours / Administrer (Phase 2)
+    const goHomeFromSpace = () => { renderHome(); showScreen("home"); };
+    $("btn-choose-parcours").addEventListener("click", () => { renderParcours(); showScreen("parcours"); });
+    $("btn-administer").addEventListener("click", () => { renderAdmin(); showScreen("admin"); });
+    $("btn-parcours-back").addEventListener("click", goHomeFromSpace);
+    $("btn-admin-back").addEventListener("click", goHomeFromSpace);
+    $("btn-admin-edit").addEventListener("click", () => { if (!window.open("editeur", "_blank")) location.href = "editeur"; });
 
     // Scan
     $("btn-start-camera").addEventListener("click", startScanner);
@@ -2422,5 +2462,5 @@
   /* ---------- Démarrage ---------- */
   document.addEventListener("DOMContentLoaded", init);
 
-  window.JDP = { showScreen, renderMap, renderCarnet, renderHome, renderPalmares, finishRun, currentTarget, App, Store };
+  window.JDP = { showScreen, renderMap, renderCarnet, renderHome, renderPalmares, renderParcours, renderAdmin, finishRun, currentTarget, App, Store };
 })();

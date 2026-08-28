@@ -50,8 +50,13 @@
         <p class="hero-kicker" data-i18n="home_kicker">Les jeux de piste éducatifs</p>
         <h2 class="hero-title">Curi🧭s</h2>
         <p class="hero-slogan" data-i18n="home_slogan">Suis le sentier, résous les énigmes, deviens passeur·se de savoirs&nbsp;!</p>
+        <p class="hero-baseline" data-i18n="home_baseline">Explorer. Jouer. Comprendre.</p>
         <div id="home-offline" class="status-pill hidden" data-i18n="home_offline">Hors-ligne — tout est prêt</div>
         <button class="btn btn-primary btn-big" id="btn-play" data-i18n="home_play">▶ Commencer le jeu</button>
+        <div class="hero-actions">
+          <button class="btn btn-ghost" id="btn-choose-parcours" data-i18n="btn_choose_parcours">📦 Choisir un parcours</button>
+          <button class="btn btn-ghost" id="btn-administer" data-i18n="btn_administer">⚙️ Administrer</button>
+        </div>
         <button class="btn btn-ghost" id="btn-open-carnet-home" data-i18n="home_carnet_btn">📔 Mon carnet d'observation</button>
         <p class="hero-meta" id="home-progress"></p>
         <div class="setting-row" id="row-home-theme">
@@ -102,7 +107,34 @@
 
       <div class="home-footer-tip" id="home-tip"></div>
       <p class="author-note" data-i18n="author_note">🤝 Des jeux pour transmettre et apprendre ensemble.</p>
+        <!-- ================= PARCOURS (Choisir un parcours) ================= -->
+    <section class="screen" id="screen-parcours" data-title="parcours">
+      <div class="space-card">
+        <p class="space-kicker">📦 Parcours</p>
+        <h2 class="space-title" data-i18n="parcours_title">Tes expéditions</h2>
+        <p class="space-lede" data-i18n="parcours_lede">Choisis l’aventure à explorer. Chaque parcours déroule son sentier d’énigmes et de découvertes.</p>
+        <div id="parcours-list" class="space-list"></div>
+        <button class="btn btn-ghost" id="btn-parcours-back" data-i18n="parcours_back">← Retour à l’accueil</button>
+      </div>
     </section>
+
+    <!-- ================= ADMINISTRER (zone formateur / pilote) ================= -->
+    <section class="screen" id="screen-admin" data-title="admin">
+      <div class="space-card">
+        <p class="space-kicker">⚙️ Administrer</p>
+        <h2 class="space-title" data-i18n="admin_title">Piloter une session</h2>
+        <p class="space-lede" data-i18n="admin_lede">Outils pour préparer et animer : tableau de bord, éditeur, mode admin et réglages.</p>
+        <div class="space-grid">
+          <button class="home-tile" data-go="dashboard"><span class="tile-ico">📊</span><span data-i18n="home_tile_dashboard">Tableau de bord</span></button>
+          <button class="home-tile" id="btn-admin-edit"><span class="tile-ico">🛠️</span><span data-i18n="admin_edit">Éditeur de parcours</span></button>
+          <button class="home-tile" data-go="god"><span class="tile-ico">🗝️</span><span data-i18n="home_tile_god">Mode admin</span></button>
+          <button class="home-tile" data-go="settings"><span class="tile-ico">⚙️</span><span data-i18n="home_tile_settings">Réglages</span></button>
+        </div>
+        <button class="btn btn-ghost" id="btn-admin-back" data-i18n="admin_back">← Retour à l’accueil</button>
+      </div>
+    </section>
+
+</section>
 
     <!-- ================= INTRODUCTION (histoire + règlement + sécurité) ================= -->
     <section class="screen" id="screen-intro" data-title="intro">
