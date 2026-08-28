@@ -1,46 +1,48 @@
 /* =========================================================
-   Curi🧭s — Styles
-   Mobile-first · grand contraste · lecture en plein soleil
-   Thème jour / nuit (nocturne).
+   CURIOS - Styles (Player)
+   Cartographie Cognitive Futuriste (Design System v1.0)
+   Theme jour / nuit (nocturne).
+   Tokens : css/curios-tokens.css (charger d'abord).
    ========================================================= */
 
 :root {
-  --bg: #f3f7ef;
-  --bg-soft: #e6efe0;
+  /* ---- Jour (variante claire lisible en plein soleil) ---- */
+  --bg: #eff4f6;
+  --bg-soft: #dde8ee;
   --card: #ffffff;
-  --card-soft: #f7faf4;
-  --ink: #12302a;
-  --text-muted: #3e5c54;
-  --primary: #0c8f4f;
-  --primary-dark: #0a6b3c;
-  --gold: #e0a800;
+  --card-soft: #f5f9fb;
+  --ink: #12303f;
+  --text-muted: #4a6675;
+  --primary: #073b5c;      /* curios-blue */
+  --primary-dark: #052a44;
+  --gold: #c98a1b;
   --err: #c33c3c;
-  --ok: #148a3d;
-  --line: #c8d8c8;
-  --shadow: 0 6px 22px rgba(18, 48, 42, 0.14);
-  --radius: 18px;
-  --font: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --ok: #1e8a5a;
+  --line: #bcceda;
+  --shadow: 0 6px 22px rgba(18, 48, 63, 0.14);
+  --radius: var(--cur-radius-lg);
+  --font: var(--cur-font);
 }
 
 body.night {
-  --bg: #101822;
-  --bg-soft: #15202c;
-  --card: #1b2735;
-  --card-soft: #22303f;
-  --ink: #e8f0f5;
-  --text-muted: #b9c8d4;
-  --primary: #2fb97c;
-  --primary-dark: #1d8a5b;
-  --gold: #ffce3d;
-  --err: #ff7878;
+  /* ---- Nuit (palette officielle Cartographie) ---- */
+  --bg: #061522;           /* bg-primary */
+  --bg-soft: #092235;      /* bg-secondary */
+  --card: #092235;
+  --card-soft: rgba(7, 59, 92, 0.28);
+  --ink: #e9f0f2;          /* text-primary */
+  --text-muted: #8da8b3;   /* text-secondary */
+  --primary: #7ddde5;      /* technical-cyan */
+  --primary-dark: #073b5c; /* curios-blue */
+  --gold: #e7b77a;         /* gold */
+  --err: #ff7b7b;
   --ok: #5fd68f;
-  --line: #33465a;
+  --line: #315468;         /* technical-line */
   --shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  --radius: var(--cur-radius-lg);
+  --font: var(--cur-font);
 }
 
-* { box-sizing: border-box; }
-
-html, body { margin: 0; padding: 0; }
 
 body {
   font-family: var(--font);
