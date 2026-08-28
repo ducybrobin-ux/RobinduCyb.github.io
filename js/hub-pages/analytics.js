@@ -57,16 +57,16 @@ var renderAnalytics = (function () {
         '<div class="hub-grid"><div class="hub-card">' +
         '<div class="hub-card-header"><h2>📈 Activité récente</h2></div>' +
         '<div class="hub-analytics">' +
-        bar("Projets (7 jours)", r.projetsThisWeek || 0, Math.max(1, r.projetsThisWeek), "#073B5C") +
-        bar("Sessions (30 jours)", r.sessionsThisMonth || 0, Math.max(1, r.sessionsThisMonth), "#00A6A6") +
-        bar("Devis (30 jours)", r.devisThisMonth || 0, Math.max(1, r.devisThisMonth), "#F5A623") +
+        bar("Projets (7 jours)", r.projetsThisWeek || 0, Math.max(1, r.projetsThisWeek), "#7DDDE5") +
+        bar("Sessions (30 jours)", r.sessionsThisMonth || 0, Math.max(1, r.sessionsThisMonth), "#D99678") +
+        bar("Devis (30 jours)", r.devisThisMonth || 0, Math.max(1, r.devisThisMonth), "#E7B77A") +
         "</div></div>" +
 
         '<div class="hub-card">' +
         '<div class="hub-card-header"><h2>📊 Projets par statut</h2></div>' +
         '<div class="hub-analytics">' +
-        bar("Actifs", s.projetsActive || 0, Math.max(1, s.projetsActive), "#20B878") +
-        bar("Brouillons", s.projetsDraft || 0, Math.max(1, s.projetsDraft), "#94a3b8") +
+        bar("Actifs", s.projetsActive || 0, Math.max(1, s.projetsActive), "#5FD68F") +
+        bar("Brouillons", s.projetsDraft || 0, Math.max(1, s.projetsDraft), "#8DA8B3") +
         "</div></div></div>";
 
       el.innerHTML = html;
