@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CURIOS — Aperçu du Design System</title>
+<link rel="stylesheet" href="../css/curios-tokens.css">
+<link rel="stylesheet" href="../css/curios-design-system.css">
+<style>
+  body { margin: 0; }
+  .cur-demo {
+    min-height: 100vh;
+    background: var(--cur-bg-primary);
+    padding: var(--cur-space-6);
+  }
+  .cur-demo__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--cur-space-3);
+    margin-bottom: var(--cur-space-6);
+    padding-bottom: var(--cur-space-4);
+    border-bottom: var(--cur-line-thin) solid var(--cur-border);
+  }
+  .cur-demo__title { font-size: var(--cur-fs-xl); font-weight: var(--cur-fw-bold); }
+  .cur-demo__section { margin: var(--cur-space-6) 0; }
+  .cur-demo__h {
+    font-size: var(--cur-fs-lg);
+    font-weight: var(--cur-fw-bold);
+    color: var(--cur-cyan-light);
+    margin: 0 0 var(--cur-space-3);
+  }
+  .cur-demo__row { display: flex; gap: var(--cur-space-3); flex-wrap: wrap; align-items: center; }
+  .cur-demo__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--cur-space-4); }
+</style>
+</head>
+<body class="cur">
+<div class="cur-demo">
+  <header class="cur-demo__header">
+    <div>
+      <div class="cur-demo__title">CURIOS</div>
+      <div class="cur-dim">Design System — « Cartographie Cognitive Futuriste »</div>
+    </div>
+    <span class="cur-badge cur-badge--cyan">Design System v1.0</span>
+  </header>
+
+  <!-- Boutons -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Boutons</h2>
+    <div class="cur-demo__row">
+      <button class="cur-btn cur-btn--primary">Primary</button>
+      <button class="cur-btn">Secondaire</button>
+      <button class="cur-btn cur-btn--ghost">Fantôme</button>
+      <button class="cur-btn cur-btn--danger">Danger</button>
+      <button class="cur-btn" disabled>Désactivé</button>
+      <button class="cur-btn cur-btn--block">Bloqué</button>
+    </div>
+  </section>
+
+  <!-- Cartes & panneaux -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Cartes &amp; panneaux</h2>
+    <div class="cur-demo__grid">
+      <div class="cur-card">
+        <h3 class="cur-card-title">Carte standard</h3>
+        <p class="cur-muted">Cartographie cognitive futuriste.</p>
+      </div>
+      <div class="cur-card cur-corner">
+        <h3 class="cur-card-title">Carte HUD</h3>
+        <p class="cur-muted">Coins techniques très fins.</p>
+      </div>
+      <div class="cur-panel cur-corner">
+        <h3 class="cur-card-title">Panneau</h3>
+        <p class="cur-muted">Surface secondaire + coins HUD.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Badges</h2>
+    <div class="cur-demo__row">
+      <span class="cur-badge cur-badge--cyan">Cyan</span>
+      <span class="cur-badge cur-badge--gold">Gold</span>
+      <span class="cur-badge cur-badge--copper">Copper</span>
+      <span class="cur-badge cur-badge--success">Succès</span>
+      <span class="cur-badge cur-badge--danger">Erreur</span>
+      <span class="cur-badge cur-badge--dim">Dim</span>
+    </div>
+  </section>
+
+  <!-- Indicateurs -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Indicateurs</h2>
+    <div class="cur-demo__row">
+      <span class="cur-indicator cur-indicator--on" title="actif"></span> Actif
+      <span class="cur-indicator cur-indicator--off" title="inactif"></span> Inactif
+      <span class="cur-indicator cur-indicator--err" title="erreur"></span> Erreur
+      <span class="cur-indicator cur-indicator--info" title="info"></span> Info
+      <span class="cur-indicator cur-indicator--gold" title="récompense"></span> Découverte
+    </div>
+  </section>
+
+  <!-- Progress -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Progress bars</h2>
+    <div style="max-width:420px">
+      <div class="cur-progress__label"><span>Parcours</span><span class="cur-mono">64%</span></div>
+      <div class="cur-progress"><div class="cur-progress__fill" style="width:64%"></div></div>
+      <div style="height:8px"></div>
+      <div class="cur-progress__label"><span>Objectif</span><span class="cur-mono">32%</span></div>
+      <div class="cur-progress"><div class="cur-progress__fill cur-progress__fill--gold" style="width:32%"></div></div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Timeline</h2>
+    <div class="cur-timeline" style="max-width:420px">
+      <div class="cur-timeline__item cur-timeline__item--done"><strong>Découverte</strong><div class="cur-muted">Étape terminée</div></div>
+      <div class="cur-timeline__item cur-timeline__item--done"><strong>Exploration</strong><div class="cur-muted">Étape en cours</div></div>
+      <div class="cur-timeline__item cur-timeline__item--future"><strong>Maîtrise</strong><div class="cur-muted">À venir</div></div>
+    </div>
+  </section>
+
+  <!-- Alertes -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Alertes</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;max-width:560px">
+      <div class="cur-alert cur-alert--info">Information technique.</div>
+      <div class="cur-alert cur-alert--success">Compétence validée.</div>
+      <div class="cur-alert cur-alert--warn">Objectif proche.</div>
+      <div class="cur-alert cur-alert--danger">Énigme non résolue.</div>
+    </div>
+  </section>
+
+  <!-- Formulaires -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Formulaires</h2>
+    <div style="max-width:420px">
+      <div class="cur-field"><label class="cur-label">Nom du parcours</label><input class="cur-input" placeholder="Ex. La Cartographie"></div>
+      <div class="cur-field"><label class="cur-label">Type</label><select class="cur-select"><option>Parcours</option><option>Mission</option><option>Énigme</option></select></div>
+      <div class="cur-field"><label class="cur-label">Description</label><textarea class="cur-textarea" placeholder="Décrivez le contenu..."></textarea><span class="cur-hint">Aide contextuelle.</span></div>
+    </div>
+  </section>
+
+  <!-- Tableau -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Tableau</h2>
+    <div style="max-width:640px;overflow:auto">
+      <table class="cur-table">
+        <thead><tr><th>Compétence</th><th>Statut</th><th>Progrès</th></tr></thead>
+        <tbody>
+          <tr><td><span class="cur-skillhex cur-skillhex--active">A1</span> Lecture de carte</td><td><span class="cur-badge cur-badge--success">Atteint</span></td><td class="cur-mono">100%</td></tr>
+          <tr><td>Orientation</td><td><span class="cur-badge cur-badge--cyan">En cours</span></td><td class="cur-mono">64%</td></tr>
+          <tr><td>Résolution d'énigme</td><td><span class="cur-badge cur-badge--dim">À venir</span></td><td class="cur-mono">0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Graphique -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Graphique (barres)</h2>
+    <div class="cur-chart" style="max-width:560px">
+      <div class="cur-chart__row"><span class="cur-chart__label">Exploration</span><div class="cur-progress"><div class="cur-progress__fill" style="width:80%"></div></div><span class="cur-chart__value">80%</span></div>
+      <div class="cur-chart__row"><span class="cur-chart__label">Analyse</span><div class="cur-progress"><div class="cur-progress__fill" style="width:55%"></div></div><span class="cur-chart__value">55%</span></div>
+      <div class="cur-chart__row"><span class="cur-chart__label">Synthèse</span><div class="cur-progress"><div class="cur-progress__fill cur-progress__fill--gold" style="width:30%"></div></div><span class="cur-chart__value">30%</span></div>
+    </div>
+  </section>
+
+  <!-- Carte géographique -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Carte géographique</h2>
+    <div class="cur-map" style="max-width:640px;height:260px">
+      <span class="cur-map__marker" style="left:30%;top:35%"></span>
+      <span class="cur-map__marker cur-map__marker--copper" style="left:60%;top:55%"></span>
+      <span class="cur-map__marker cur-map__marker--gold" style="left:45%;top:20%"></span>
+      <span class="cur-mono cur-dim" style="position:absolute;bottom:8px;right:12px;font-size:12px">39.9042° N / 116.4074° E</span>
+    </div>
+  </section>
+
+  <!-- Hexagones de compétences -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Hexagones de compétences</h2>
+    <div class="cur-demo__row">
+      <span class="cur-skillhex cur-skillhex--active">A1</span>
+      <span class="cur-skillhex cur-skillhex--gold">B2</span>
+      <span class="cur-skillhex">C3</span>
+    </div>
+    <p class="cur-muted" style="max-width:560px">Encadrer chaque hexagone par une forme SVG polygonale (motif signature). Le libellé monospace = code de compétence.</p>
+  </section>
+
+  <!-- Missions -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Missions</h2>
+    <div style="max-width:560px;display:flex;flex-direction:column;gap:8px">
+      <div class="cur-mission cur-mission--done"><span class="cur-mission__num">01</span> <span>Cartographier la zone nord</span> <span class="cur-mono" style="margin-left:auto">✓</span></div>
+      <div class="cur-mission"><span class="cur-mission__num">02</span> <span>Décoder l'énigme des méridiens</span> <span class="cur-badge cur-badge--cyan" style="margin-left:auto">En cours</span></div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Dashboard</h2>
+    <div class="cur-dashboard">
+      <div class="cur-stat"><div class="cur-stat__value">12</div><div class="cur-stat__label">Parcours</div></div>
+      <div class="cur-stat"><div class="cur-stat__value">48</div><div class="cur-stat__label">Missions</div></div>
+      <div class="cur-stat"><div class="cur-stat__value">97%</div><div class="cur-stat__label">Complétion</div></div>
+      <div class="cur-stat"><div class="cur-stat__value">3</div><div class="cur-stat__label">Découvertes</div></div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <section class="cur-demo__section">
+    <h2 class="cur-demo__h">Navigation</h2>
+    <nav class="cur-nav">
+      <a class="cur-nav__link cur-nav__link--active" href="#">Vue d'ensemble</a>
+      <a class="cur-nav__link" href="#">Parcours</a>
+      <a class="cur-nav__link" href="#">Compétences</a>
+      <a class="cur-nav__link" href="#">Studio</a>
+    </nav>
+  </section>
+
+  <footer class="cur-demo__section" style="border-top:1px solid var(--cur-border);padding-top:16px">
+    <div class="cur-dim">Baseline : « La grammaire du jeu au service des compétences. » — CURIOS · Explorer. Jouer. Comprendre.</div>
+  </footer>
+</div>
+</body>
+</html>
