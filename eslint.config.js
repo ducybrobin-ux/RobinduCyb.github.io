@@ -53,6 +53,9 @@ const CURIOS_GLOBALS = {
   toast: "readonly",
   updateSaviez: "readonly",
   CONFIG: "readonly",
+  // hub frontend (hub-shell.js, hub-pages/*.js)
+  HubAuth: "readonly",
+  HubShell: "readonly",
 };
 
 export default [

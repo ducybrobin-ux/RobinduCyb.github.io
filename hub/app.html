@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073B5C">
+  <title>CURIOS Project Hub</title>
+  <link rel="icon" href="../img/icon.svg">
+  <link rel="stylesheet" href="../css/hub.css">
+</head>
+<body>
+  <header class="hub-topbar" id="hub-topbar"></header>
+
+  <main class="hub-main" id="hub-content">
+    <div class="hub-empty">
+      <div class="hub-empty-icon">⏳</div>
+      <div class="hub-empty-title">Chargement…</div>
+    </div>
+  </main>
+
+  <script src="../js/hub-auth.js"></script>
+  <script src="../js/hub-shell.js"></script>
+  <script src="../js/hub-pages/dashboard.js"></script>
+  <script>
+    (function () {
+      HubShell.registerPage("dashboard", renderDashboard);
+
+      HubShell.registerPage("projets", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">📁 Projets</h1>' +
+          '<p class="hub-page-sub">Gérez vos projets éducatifs</p></div>' +
+          '<div class="hub-page-actions">' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="new-projet">➕ Nouveau projet</button>' +
+          "</div></div>" +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">📁</div>' +
+          '<div class="hub-empty-title">Aucun projet pour l\'instant</div>' +
+          '<div class="hub-empty-desc">Créez votre premier projet pour commencer à gérer vos parcours, sessions et clients.</div>' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="new-projet">➕ Créer un projet</button>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("parcours", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">🗺️ Parcours</h1>' +
+          '<p class="hub-page-sub">Vos parcours éducatifs et sentiers</p></div>' +
+          '<div class="hub-page-actions">' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="new-parcours">➕ Nouveau parcours</button>' +
+          "</div></div>" +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">🗺️</div>' +
+          '<div class="hub-empty-title">Aucun parcours</div>' +
+          '<div class="hub-empty-desc">Créez des parcours avec le Studio ou importez des bundles depuis l\'Atelier.</div>' +
+          '<div class="hub-quick-actions">' +
+          '<a class="hub-quick-action" href="../player/studio.html"><span class="qa-icon">🎨</span><span class="qa-label">Ouvrir le Studio</span></a>' +
+          '<a class="hub-quick-action" href="../player/atelier.html"><span class="qa-icon">🧩</span><span class="qa-label">Ouvrir l\'Atelier</span></a>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("packs", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">📦 Packs</h1>' +
+          '<p class="hub-page-sub">Bundles de contenu éducatif</p></div>' +
+          '<div class="hub-page-actions">' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="import-pack">📤 Importer un pack</button>' +
+          "</div></div>" +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">📦</div>' +
+          '<div class="hub-empty-title">Gestion des packs</div>' +
+          '<div class="hub-empty-desc">Importez, configurez et publiez vos packs de contenu.</div>' +
+          '<a class="hub-btn hub-btn-outline" href="../player/atelier.html">🧩 Ouvrir l\'Atelier</a>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("sessions", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">🎯 Sessions</h1>' +
+          '<p class="hub-page-sub">Sessions de jeu en cours ou terminées</p></div></div>' +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">🎯</div>' +
+          '<div class="hub-empty-title">Aucune session active</div>' +
+          '<div class="hub-empty-desc">Les sessions apparaissent ici quand des équipes jouent.</div>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("clients", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">👥 Clients & Prescripteurs</h1>' +
+          '<p class="hub-page-sub">Vos contacts professionnels</p></div></div>' +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">👥</div>' +
+          '<div class="hub-empty-title">Aucun client</div>' +
+          '<div class="hub-empty-desc">Ajoutez vos établissements, collectivités et associations.</div>' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="new-client">➕ Ajouter un client</button>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("materiel", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">🔧 Matériel & Kits</h1>' +
+          '<p class="hub-page-sub">Inventaire et réservation de matériel</p></div></div>' +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">🔧</div>' +
+          '<div class="hub-empty-title">Aucun matériel enregistré</div>' +
+          '<div class="hub-empty-desc">Gérez vos balises, kits et équipements.</div>' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="new-materiel">➕ Ajouter du matériel</button>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("planning", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">📅 Planning</h1>' +
+          '<p class="hub-page-sub">Calendrier des sessions et événements</p></div></div>' +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">📅</div>' +
+          '<div class="hub-empty-title">Aucun événement planifié</div>' +
+          '<div class="hub-empty-desc">Planifiez vos sessions et suivez votre agenda.</div>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("commercial", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">💰 Commercial</h1>' +
+          '<p class="hub-page-sub">Devis, factures et suivi commercial</p></div></div>' +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">💰</div>' +
+          '<div class="hub-empty-title">Aucun devis ou facture</div>' +
+          '<div class="hub-empty-desc">Créez des devis et factures pour vos clients.</div>' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="new-devis">➕ Nouveau devis</button>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("analytics", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">📈 Analytics</h1>' +
+          '<p class="hub-page-sub">Tableaux de bord et métriques</p></div></div>' +
+          '<div class="hub-stats">' +
+          '<div class="hub-stat"><div class="hub-stat-icon blue">📊</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Sessions totales</div></div></div>' +
+          '<div class="hub-stat"><div class="hub-stat-icon green">👥</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Participants</div></div></div>' +
+          '<div class="hub-stat"><div class="hub-stat-icon gold">⭐</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Score moyen</div></div></div>' +
+          '<div class="hub-stat"><div class="hub-stat-icon red">⏱️</div><div><div class="hub-stat-value">—</div><div class="hub-stat-label">Durée moyenne</div></div></div>' +
+          "</div>" +
+          '<div class="hub-card"><div class="hub-empty">' +
+          '<div class="hub-empty-icon">📈</div>' +
+          '<div class="hub-empty-title">Données en attente</div>' +
+          '<div class="hub-empty-desc">Les analytics s\'afficheront après vos premières sessions.</div>' +
+          "</div></div>"
+        );
+      });
+
+      HubShell.registerPage("settings", function (user) {
+        return (
+          '<div class="hub-page-header">' +
+          '<div><h1 class="hub-page-title">⚙️ Settings</h1>' +
+          '<p class="hub-page-sub">Paramètres du Hub et de votre compte</p></div></div>' +
+          '<div class="hub-grid">' +
+          '<div class="hub-card">' +
+          '<div class="hub-card-header"><h2>👤 Profil</h2></div>' +
+          '<div class="hub-form-group"><label class="hub-form-label">Nom</label>' +
+          '<input class="hub-form-input" type="text" value="' +
+          HubShell.escHtml(user ? user.name : "") + '" id="settings-name"></div>' +
+          '<div class="hub-form-group"><label class="hub-form-label">Email</label>' +
+          '<input class="hub-form-input" type="email" value="' +
+          HubShell.escHtml(user ? user.email : "") + '" readonly></div>' +
+          '<div class="hub-form-group"><label class="hub-form-label">Rôle</label>' +
+          '<input class="hub-form-input" type="text" value="' +
+          HubShell.escHtml(user ? user.role : "") + '" readonly></div>' +
+          '<button class="hub-btn hub-btn-primary" data-page-action="save-settings">💾 Enregistrer</button>' +
+          "</div>" +
+          '<div class="hub-card">' +
+          '<div class="hub-card-header"><h2>🔗 Liens rapides</h2></div>' +
+          '<div class="hub-quick-actions" style="flex-direction:column;">' +
+          '<a class="hub-quick-action" href="../player/dashboard.html"><span class="qa-icon">🎛️</span><span class="qa-label">Dashboard organisateur</span></a>' +
+          '<a class="hub-quick-action" href="../player/editeur.html"><span class="qa-icon">✏️</span><span class="qa-label">Éditeur de contenu</span></a>' +
+          '<a class="hub-quick-action" href="../player/studio.html"><span class="qa-icon">🎨</span><span class="qa-label">Studio de création</span></a>' +
+          '<a class="hub-quick-action" href="../player/atelier.html"><span class="qa-icon">🧩</span><span class="qa-label">Atelier de packs</span></a>' +
+          '<a class="hub-quick-action" href="../player/"><span class="qa-icon">▶️</span><span class="qa-label">Lancer le player</span></a>' +
+          "</div></div></div>"
+        );
+      });
+
+      HubShell.init();
+    })();
+  </script>
+</body>
+</html>

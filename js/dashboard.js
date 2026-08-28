@@ -90,7 +90,11 @@ const DASH_T = {
     live_srv_down: "❌ Serveur injoignable : {err}", live_need_fr: "⚠️ Écris un message en français avant de diffuser.",
     live_translating: "⏳ Envoi en cours…", live_sent: "✅ Message diffusé.", live_cleared: "✅ Message effacé.",
     footer: "Chargé depuis le serveur (page <code>/dashboard</code>). Rafraîchissement automatique toutes les 5 s.",
-    table_aria: "Tableau de bord organisateur", dict_fr_title: "🎤 Dicter (français)", srv_local_full: "Serveur Local<small>Réseau Wi-Fi du site</small>", srv_int_full: "Serveur Internet<small>Tunnel public (cloudflared)</small>", unknown_err: "erreur inconnue", srv_down: "❌ Serveur injoignable.", copy_addr: "Copiez l'adresse :", save_refused: "❌ Enregistrement refusé par le serveur.", qr_unavailable: "QR indisponible", poster_title: "Curi🧭s — Accès des familles", poster_sub: "Scannez le QR pour connecter le Wi-Fi, puis pour lancer le jeu.", poster_wifi: "1) Se connecter au Wi-Fi", poster_game: "2) Lancer le jeu", poster_footer: "Curi🧭s — jeu familial d'énigmes", qr_doc_title: "Curi🧭s — QR d'accès", mail_share_text: "QR d'accès Wi-Fi et jeu (à imprimer)."
+    table_aria: "Tableau de bord organisateur", dict_fr_title: "🎤 Dicter (français)", srv_local_full: "Serveur Local<small>Réseau Wi-Fi du site</small>", srv_int_full: "Serveur Internet<small>Tunnel public (cloudflared)</small>", unknown_err: "erreur inconnue", srv_down: "❌ Serveur injoignable.", copy_addr: "Copiez l'adresse :", save_refused: "❌ Enregistrement refusé par le serveur.", qr_unavailable: "QR indisponible", poster_title: "Curi🧭s — Accès des familles", poster_sub: "Scannez le QR pour connecter le Wi-Fi, puis pour lancer le jeu.", poster_wifi: "1) Se connecter au Wi-Fi", poster_game: "2) Lancer le jeu", poster_footer: "Curi🧭s — jeu familial d'énigmes", qr_doc_title: "Curi🧭s — QR d'accès", mail_share_text: "QR d'accès Wi-Fi et jeu (à imprimer).",
+    packs_title: "📦 Packs disponibles", packs_sub: "Catalogue des packs installés et leurs états (actif, désactivé, disponible, erreur). Lecture seule.",
+    packs_summary: "{a} actif(s) · {d} désactivé(s) · {v} disponible(s) · {e} en erreur",
+    packs_empty: "Aucun pack installé pour le moment.",
+    packs_offline: "Hors ligne : catalogue indisponible.",
   },
 };
 function T(key) {
@@ -1362,6 +1366,57 @@ async function refreshVal() {
   } catch (e) { /* silencieux */ }
 }
 
+let lastPacks = null;
+function renderPacks() {
+  const list = $("packs-list");
+  if (!list) return;
+  const b = (st) => {
+    const lib = { ACTIVE: "Actif", DISABLED: "Désactivé", AVAILABLE: "Disponible", ERROR: "Erreur" };
+    return `<span class="parc-badge badge-${esc(st)}">${lib[st] || esc(st)}</span>`;
+  };
+  if (!lastPacks) {
+    list.innerHTML = `<p class="note">${T("packs_empty")}</p>`;
+    return;
+  }
+  const d = lastPacks;
+  const sum = $("packs-summary");
+  if (sum && d.states) {
+    sum.innerHTML = `<span class="parc-sub">${T("packs_summary", { a: d.states.active || 0, d: d.states.disabled || 0, v: d.states.available || 0, e: d.states.error || 0 })}</span>`;
+  }
+  if (!Array.isArray(d.packs) || !d.packs.length) {
+    list.innerHTML = `<p class="note">${T("packs_empty")}</p>`;
+    return;
+  }
+  let out = "";
+  for (const pk of d.packs) {
+    let ages = "";
+    if (pk.audience) {
+      if (pk.audience.minAge !== undefined && pk.audience.maxAge !== undefined) ages = `${pk.audience.minAge}–${pk.audience.maxAge} ans`;
+      else if (Array.isArray(pk.audience) && pk.audience.length) ages = `${pk.audience[0]}–${pk.audience[1]} ans`;
+    }
+    const nb = pk.stations ? `${pk.stations} balises` : "";
+    const missions = pk.missions ? `${pk.missions} missions` : "";
+    const meta = [nb, missions, ages].filter(Boolean).join(" · ");
+    out += `<div class="cur-parc-item">`;
+    out += `<div class="parc-head"><span class="parc-name">${esc(pk.name)}</span>${b(pk.state)}</div>`;
+    if (meta) out += `<div class="parc-sub">${esc(meta)}</div>`;
+    if (pk.description) out += `<div class="parc-desc">${esc(pk.description).slice(0, 140)}${pk.description.length > 140 ? "…" : ""}</div>`;
+    out += `</div>`;
+  }
+  list.innerHTML = out;
+}
+async function refreshPacks() {
+  try {
+    const res = await fetch("/api/packs", { cache: "no-store" });
+    if (!res.ok) throw new Error("http");
+    lastPacks = await res.json();
+    renderPacks();
+  } catch {
+    const list = $("packs-list");
+    if (list) list.innerHTML = `<p class="note">${T("packs_offline")}</p>`;
+  }
+}
+
 $("btn-val-add-team").addEventListener("click", addValTeam);
 $("val-team-input").addEventListener("keydown", (e) => { if (e.key === "Enter") addValTeam(); });
 $("btn-map-save").addEventListener("click", saveMap);
@@ -1393,6 +1448,7 @@ refreshVal();
 refreshMode();
 refreshWifi();
 refreshMap();
+refreshPacks();
 function tickAll() {
   refresh();
   refreshPos();
@@ -1400,6 +1456,7 @@ function tickAll() {
   refreshUrgency();
   refreshVal();
   refreshMode();
+  refreshPacks();
 }
 setInterval(tickAll, 5000);
 setInterval(refreshWifi, 10000);

@@ -80,6 +80,7 @@ import {
   handleSessionProgress,
   handleSessionEnd,
 } from "./routes/sessions.js";
+import { handlePacks } from "./routes/packs.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..", "..");
@@ -173,6 +174,9 @@ function handleRequest(req, res, state, auth, hubAuth, config) {
       if (apiPath.startsWith("/api/hub/parcours/")) return handleHubParcoursItem(method, req, res, hubAuth, state.root);
       if (apiPath === "/api/hub/packs") return handleHubPacks(method, req, res, hubAuth, state.root);
       if (apiPath.startsWith("/api/hub/packs/")) return handleHubPack(method, req, res, hubAuth, state.root);
+
+      // Packs (Pack Manager — lecture seule, Phase 3 tranche A)
+      if (apiPath === "/api/packs") return handlePacks(method, req, res, state);
 
       // Hub resources
       if (apiPath === "/api/hub/clients") return handleHubClients(method, req, res, hubAuth, state.root);

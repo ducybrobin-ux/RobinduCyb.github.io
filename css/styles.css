@@ -207,6 +207,20 @@ body.night .hero-card { background: linear-gradient(160deg, #123826, #0b2320); }
 .cur-parc-item .parc-name { font-weight: 800; font-size: 18px; color: var(--ink); }
 .cur-parc-item .parc-sub { color: var(--text-muted); font-size: 14px; }
 .cur-parc-item .parc-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.space-subtitle { margin: 20px 0 8px; font-size: 16px; font-weight: 800; color: var(--ink); }
+.parc-current { border-color: var(--primary); background: var(--card-soft); }
+.parc-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.parc-badge {
+  display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.03em;
+  border: 1px solid transparent; white-space: nowrap;
+}
+.badge-ACTIVE { background: var(--good-soft, rgba(80,200,120,0.18)); color: var(--good, #2e9e63); border-color: var(--good, #2e9e63); }
+.badge-DISABLED { background: var(--card-soft); color: var(--text-muted); border-color: var(--line); }
+.badge-AVAILABLE { background: rgba(125,221,229,0.14); color: var(--accent, #0c8ea8); border-color: var(--accent, #0c8ea8); }
+.badge-ERROR { background: rgba(240,80,80,0.15); color: var(--err); border-color: var(--err); }
+.parc-desc { color: var(--text-muted); font-size: 14px; line-height: 1.45; }
+
 
 .home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
 .home-tile {

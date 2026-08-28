@@ -1858,9 +1858,10 @@
     const p = Store.getActive();
     const total = BALISES.length;
     const done = p ? p.completed.length : 0;
-    let html = '<div class="cur-parc-item">';
-    html += '<span class="parc-name">\ud83d\uddfa\ufe0f Le grand sentier</span>';
-    html += `<span class="parc-sub">${total} balises \u00e0 explorer</span>`;
+
+    let html = '<div class="cur-parc-item parc-current">';
+    html += '<span class="parc-name">\ud83d\uddfa\ufe0f Parcours actuel</span>';
+    html += `<span class="parc-sub">${total} balises \u00e0 explorer \u00b7 un sentier regroupant les parcours actifs</span>`;
     if (p) {
       html += `<span class="parc-sub">\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 ${esc(p.name)} \u00b7 ${done}/${total} valid\u00e9es \u00b7 \u2b50 ${p.stars} \u00e9toiles</span>`;
       html += '<div class="parc-actions"><button class="btn btn-primary" id="parc-play">\u25b6 Jouer / continuer</button></div>';
@@ -1869,11 +1870,50 @@
       html += '<div class="parc-actions"><button class="btn btn-primary" id="parc-create-profile">\ud83d\udcdd Cr\u00e9er le profil de ma famille</button></div>';
     }
     html += '</div>';
+    html += '<h3 class="space-subtitle">\ud83d\udce6 Packs disponibles</h3>';
+    html += '<div id="parc-catalog">Chargement des packs\u2026</div>';
     list.innerHTML = html;
+
     const play = $("parc-play");
     if (play) play.addEventListener("click", () => { renderMap(); showScreen("map"); });
     const create = $("parc-create-profile");
     if (create) create.addEventListener("click", () => { renderProfiles(); showScreen("profile"); });
+
+    const badge = (st) => {
+      const lib = { ACTIVE: "Actif", DISABLED: "D\u00e9sactiv\u00e9", AVAILABLE: "Disponible", ERROR: "Erreur" };
+      return `<span class="parc-badge badge-${esc(st)}">${lib[st] || esc(st)}</span>`;
+    };
+    fetch("/api/packs", { cache: "no-store" })
+      .then((r) => { if (!r.ok) throw new Error("http"); return r.json(); })
+      .then((data) => {
+        const cat = $("parc-catalog");
+        if (!cat) return;
+        if (!data || !Array.isArray(data.packs) || !data.packs.length) {
+          cat.innerHTML = '<p class="note">Aucun pack install\u00e9 pour le moment.</p>';
+          return;
+        }
+        let out = "";
+        for (const pk of data.packs) {
+          let ages = "";
+          if (pk.audience) {
+            if (pk.audience.minAge !== undefined && pk.audience.maxAge !== undefined) ages = pk.audience.minAge + "\u2013" + pk.audience.maxAge + " ans";
+            else if (Array.isArray(pk.audience) && pk.audience.length) ages = pk.audience[0] + "\u2013" + pk.audience[1] + " ans";
+          }
+          const nb = pk.stations ? pk.stations + " balises" : "";
+          const missions = pk.missions ? pk.missions + " missions" : "";
+          const meta = [nb, missions, ages].filter(Boolean).join(" \u00b7 ");
+          out += '<div class="cur-parc-item">';
+          out += '<div class="parc-head"><span class="parc-name">' + esc(pk.name) + '</span>' + badge(pk.state) + '</div>';
+          if (meta) out += '<div class="parc-sub">' + esc(meta) + '</div>';
+          if (pk.description) out += '<div class="parc-desc">' + esc(pk.description).slice(0, 140) + (pk.description.length > 140 ? "\u2026" : "") + '</div>';
+          out += '</div>';
+        }
+        cat.innerHTML = out;
+      })
+      .catch(() => {
+        const cat = $("parc-catalog");
+        if (cat) cat.innerHTML = '<p class="note">Hors ligne : catalogue indisponible. Le parcours actuel reste jouable.</p>';
+      });
   }
 
   function renderAdmin() {
