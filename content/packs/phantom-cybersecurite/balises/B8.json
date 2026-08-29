@@ -11,25 +11,50 @@
   "enigmes": {
     "facile": {
       "text": "Tu vois 3 réseaux Wi-Fi : CURIOS-WIFI, CURIOS-GUEST, PHANTOM_FREE_WIFI. Lequel est le plus suspect ?",
-      "reponses": ["PHANTOM_FREE_WIFI", "le troisième", "PHANTOM"],
+      "reponses": [
+        "PHANTOM_FREE_WIFI",
+        "le troisième",
+        "PHANTOM"
+      ],
       "indice": "Un réseau avec un nom accrocheur et gratuit est souvent suspect.",
       "saviez": "Un réseau Wi-Fi ouvert n'est pas forcément malveillant, mais un réseau inconnu ne doit pas être considéré comme fiable.",
-      "ages": [12, 14]
+      "ages": [
+        12,
+        14
+      ]
     },
     "moyen": {
       "text": "Qu'est-ce que le HTTPS ?",
-      "reponses": ["une connexion sécurisée", "un protocole sécurisé", "chiffrement", "protection"],
+      "reponses": [
+        "une connexion sécurisée",
+        "un protocole sécurisé",
+        "chiffrement",
+        "protection"
+      ],
       "indice": "C'est ce qui active le cadenas dans la barre d'adresse.",
       "saviez": "HTTPS chiffre les données entre ton navigateur et le site. Sans HTTPS, tout est en clair.",
-      "ages": [14, 16]
+      "ages": [
+        14,
+        16
+      ]
     },
     "difficile": {
       "text": "Un réseau Wi-Fi public peut-il être utilisé en toute sécurité ?",
-      "reponses": ["oui avec précautions", "avec un VPN", "jamais en toute sécurité", "ça dépend"],
+      "reponses": [
+        "oui avec précautions",
+        "avec un VPN",
+        "jamais en toute sécurité",
+        "ça dépend"
+      ],
       "indice": "La réponse n'est pas binaire : il y a des précautions à prendre.",
       "saviez": "Un VPN, le HTTPS et la mise à jour sont les protections de base sur un réseau public.",
-      "ages": [16, 18]
+      "ages": [
+        16,
+        18
+      ]
     }
   },
-  "enigme": null
+  "enigme": null,
+  "x": 356,
+  "y": 352
 }

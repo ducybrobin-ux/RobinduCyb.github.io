@@ -11,25 +11,53 @@
   "enigmes": {
     "facile": {
       "text": "Tu trouves un QR code sur un mur. Que dois-tu faire AVANT de le scanner ?",
-      "reponses": ["vérifier", "analyser", "regarder", "inspector", "vérifier le code", "analyser le code"],
+      "reponses": [
+        "vérifier",
+        "analyser",
+        "regarder",
+        "inspector",
+        "vérifier le code",
+        "analyser le code"
+      ],
       "indice": "Un QR code peut mener n'importe où : vérifie d'abord.",
       "saviez": "PHANTOM ne te force jamais à scanner. Il te pousse à le faire sans réfléchir.",
-      "ages": [12, 14]
+      "ages": [
+        12,
+        14
+      ]
     },
     "moyen": {
       "text": "Un QR code contient l'URL « https://curios.local@phantom... ». Que remarques-tu ?",
-      "reponses": ["l'URL est modifiée", "il y a un @", "l'adresse est différente", "phantom"],
+      "reponses": [
+        "l'URL est modifiée",
+        "il y a un @",
+        "l'adresse est différente",
+        "phantom"
+      ],
       "indice": "Le symbole @ dans une URL peut cacher une redirection.",
       "saviez": "Le format URL peut être manipulé pour rediriger vers un autre site.",
-      "ages": [14, 16]
+      "ages": [
+        14,
+        16
+      ]
     },
     "difficile": {
       "text": "Quelle est la règle d'or concernant les QR codes inconnus ?",
-      "reponses": ["ne jamais scanner sans vérifier", "toujours vérifier avant", "ne pas scanner aveuglément", "vérifier l'URL avant de scanner"],
+      "reponses": [
+        "ne jamais scanner sans vérifier",
+        "toujours vérifier avant",
+        "ne pas scanner aveuglément",
+        "vérifier l'URL avant de scanner"
+      ],
       "indice": "Le QR code est un raccourci : il peut aussi être un piège.",
       "saviez": "PHANTOM ne te force jamais à cliquer. Il te pousse à cliquer.",
-      "ages": [16, 18]
+      "ages": [
+        16,
+        18
+      ]
     }
   },
-  "enigme": null
+  "enigme": null,
+  "x": 148,
+  "y": 400
 }

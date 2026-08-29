@@ -9,7 +9,8 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { sendJson } from "../http.js";
+import { sendJson, sendError, sendOk, readBody, parseJson } from "../http.js";
+import { regenererDataJs } from "../content-region.mjs";
 
 export const PACK_STATES = {
   ACTIVE: "ACTIVE",
@@ -134,4 +135,90 @@ export function handlePacks(method, req, res, state) {
     problems,
     version: "1",
   });
+}
+
+/** Écrit content/manifest.json en activant un seul pack (id) et en
+ *  désactivant les autres. Retourne false si le pack n'existe pas sur disque. */
+function ecrireManifestActif(root, id) {
+  const packsDir = path.join(root, "content", "packs");
+  const parcoursDir = path.join(root, "content", "curios-parcours");
+  const packDir = path.join(packsDir, id);
+  const estInstalle =
+    fs.existsSync(path.join(packDir, "pack.json")) ||
+    fs.existsSync(path.join(parcoursDir, `${id}.json`));
+  if (!estInstalle) return { ok: false, error: `pack-introuvable:${id}` };
+
+  const manifestFile = path.join(root, "content", "manifest.json");
+  const manifest = (() => {
+    try { return JSON.parse(fs.readFileSync(manifestFile, "utf8")); } catch { return { version: 1 }; }
+  })();
+  const packs = Array.isArray(manifest.packs) ? manifest.packs : [];
+  const vus = new Set();
+  const liste = packs.map((p) => {
+    if (!p || !p.id) return p;
+    vus.add(p.id);
+    return { id: p.id, actif: p.id === id };
+  });
+  if (!vus.has(id)) liste.push({ id, actif: true });
+  manifest.packs = liste;
+  fs.writeFileSync(manifestFile, `${JSON.stringify(manifest, null, 2)  }\n`, "utf8");
+  return { ok: true };
+}
+
+/** POST /api/packs/activate — active un pack dans content/manifest.json puis
+ *  régénère js/data.js (région contenu) pour que toutes les tablettes
+ *  servent le même parcours. Protégé (organisateur). */
+export async function handlePacksActivate(method, req, res, state, auth, hubAuth) {
+  if (method !== "POST") return sendError(res, 405, "method-not-allowed");
+  const hubUser = hubAuth && hubAuth.requireAuth(req, res);
+  const organizerOk = auth && auth.requireAuth(req, res);
+  if (!hubUser && !organizerOk) return sendError(res, 401, "unauthorized");
+  if (hubUser && !["ADMIN", "PROJECT_MANAGER"].includes(hubUser.role)) {
+    return sendError(res, 403, "forbidden");
+  }
+  const body = parseJson(await readBody(req));
+  const id = body && typeof body.id === "string" ? body.id.trim() : "";
+  if (!id) return sendError(res, 400, "id requis");
+
+  const r = ecrireManifestActif(state.root, id);
+  if (!r.ok) return sendError(res, 404, r.error);
+
+  let regen;
+  try {
+    regen = regenererDataJs(state.root);
+  } catch (e) {
+    return sendError(res, 500, `regeneration-failed:${e.message}`);
+  }
+  return sendOk(res, { id, state: "ACTIVE", regenerated: regen });
+}
+
+/** GET /api/packs/:id — renvoie le bundle du pack (pack.json + balises +
+ *  découvertes + guide) pour affichage des détails côté client. */
+export function handlePacksDetail(method, req, res, state, id) {
+  if (method !== "GET") return sendError(res, 405, "method-not-allowed");
+  const safe = String(id || "").replace(/[^a-z0-9_-]/gi, "");
+  const dir = path.join(state.root, "content", "packs", safe);
+  if (!fs.existsSync(path.join(dir, "pack.json"))) {
+    return sendError(res, 404, "pack-introuvable");
+  }
+  try {
+    const pack = JSON.parse(fs.readFileSync(path.join(dir, "pack.json"), "utf8"));
+    const lire = (sub) => {
+      const subdir = path.join(dir, sub);
+      if (!fs.existsSync(subdir)) return [];
+      return fs.readdirSync(subdir).filter((f) => f.endsWith(".json")).sort()
+        .map((f) => JSON.parse(fs.readFileSync(path.join(subdir, f), "utf8")));
+    };
+    const bundle = {
+      $format: "jdpbc-pack",
+      $version: 1,
+      pack,
+      decouvertes: lire("decouvertes"),
+      guide: lire("guide"),
+      balises: lire("balises"),
+    };
+    return sendOk(res, { id: safe, bundle });
+  } catch (e) {
+    return sendError(res, 500, `lecture-échec:${e.message}`);
+  }
 }

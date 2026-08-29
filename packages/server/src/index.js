@@ -80,7 +80,7 @@ import {
   handleSessionProgress,
   handleSessionEnd,
 } from "./routes/sessions.js";
-import { handlePacks } from "./routes/packs.js";
+import { handlePacks, handlePacksActivate, handlePacksDetail } from "./routes/packs.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..", "..");
@@ -175,8 +175,13 @@ function handleRequest(req, res, state, auth, hubAuth, config) {
       if (apiPath === "/api/hub/packs") return handleHubPacks(method, req, res, hubAuth, state.root);
       if (apiPath.startsWith("/api/hub/packs/")) return handleHubPack(method, req, res, hubAuth, state.root);
 
-      // Packs (Pack Manager — lecture seule, Phase 3 tranche A)
+      // Packs (Pack Manager — Phase 3 tranche A)
       if (apiPath === "/api/packs") return handlePacks(method, req, res, state);
+      if (apiPath === "/api/packs/activate") return handlePacksActivate(method, req, res, state, auth, hubAuth);
+      if (apiPath.startsWith("/api/packs/")) {
+        const id = decodeURIComponent(apiPath.slice("/api/packs/".length));
+        return handlePacksDetail(method, req, res, state, id);
+      }
 
       // Hub resources
       if (apiPath === "/api/hub/clients") return handleHubClients(method, req, res, hubAuth, state.root);

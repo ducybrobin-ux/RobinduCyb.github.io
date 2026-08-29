@@ -11,25 +11,52 @@
   "enigmes": {
     "facile": {
       "text": "Lequel de ces mots de passe est le plus sûr ?\nA : Lucas2009\nB : Mon-Chien-Mange-7-Pizzas!\nC : Azerty123",
-      "reponses": ["B", "le deuxième", "Mon-Chien-Mange-7-Pizzas!", "Mon-Chien-Mange-7-Pizzas"],
+      "reponses": [
+        "B",
+        "le deuxième",
+        "Mon-Chien-Mange-7-Pizzas!",
+        "Mon-Chien-Mange-7-Pizzas"
+      ],
       "indice": "Un mot de passe long et avec des caractères variés est plus sûr.",
       "saviez": "La longueur est plus importante que la complexité. Une phrase est plus sûre qu'un mot.",
-      "ages": [12, 14]
+      "ages": [
+        12,
+        14
+      ]
     },
     "moyen": {
       "text": "Pourquoi « Lucas2009 » est un mauvais mot de passe ?",
-      "reponses": ["prédicible", "contient une année", "nom + année", "facile à deviner", "trop court"],
+      "reponses": [
+        "prédicible",
+        "contient une année",
+        "nom + année",
+        "facile à deviner",
+        "trop court"
+      ],
       "indice": "Combien de personnes utilisent leur nom + année de naissance ?",
       "saviez": "Les pirates testent d'abord les combinaisons les plus courantes : nom + année.",
-      "ages": [14, 16]
+      "ages": [
+        14,
+        16
+      ]
     },
     "difficile": {
       "text": "Quelle est la meilleure stratégie pour créer un mot de passe mémorisable et sûr ?",
-      "reponses": ["phrase secrète", "passphrase", "phrase aléatoire", "3 mots aléatoires"],
+      "reponses": [
+        "phrase secrète",
+        "passphrase",
+        "phrase aléatoire",
+        "3 mots aléatoires"
+      ],
       "indice": "Pense à une phrase que toi seul connais, avec des mots aléatoires.",
       "saviez": "Une passphrase (phrase secrète) est à la fois mémorisable et difficile à craquer.",
-      "ages": [16, 18]
+      "ages": [
+        16,
+        18
+      ]
     }
   },
-  "enigme": null
+  "enigme": null,
+  "x": 250,
+  "y": 292
 }

@@ -11,7 +11,7 @@
 
 /* ==== DÉBUT CONTENU GÉNÉRÉ — NE PAS ÉDITER ====
    Source de vérité : content/ (config + packs JSON modulaires).
-   Packs actifs : biais-cognitifs, cemea-education-populaire
+   Packs actifs : phantom-cybersecurite
    Régénérer : node tools/build-data.mjs
    Vérifier la synchro : node tools/build-data.mjs --check ==== */
 
@@ -103,1186 +103,729 @@ const BIRDS = [
   {
     "type": "decouverte",
     "version": 1,
-    "id": "confirmation",
-    "nom": "Biais de confirmation",
-    "latin": "Confirmation bias · Wason, 1960",
-    "emoji": "🔍",
-    "couleur": "#2e6fb3",
+    "id": "alerte",
+    "nom": "Le Message Suspect",
+    "latin": "Social Engineering · Phishing",
+    "emoji": "🚨",
+    "couleur": "#e74c3c",
     "categorie": "diurne",
-    "taille": "Antidote : chercher ce qui te contredit",
+    "taille": "Antidote : ne jamais agir sous la pression",
     "img": "",
     "audioFile": null,
     "anecdotes": [
-      "Notre cerveau adore avoir raison : il collectionne les preuves qui lui plaisent et jette les autres.",
-      "Sur les réseaux sociaux, on voit surtout les messages qui confirment ce qu'on pense déjà : le biais adore ça !",
-      "Pour le contrer, pose-toi la question : « Qu'est-ce qui pourrait prouver que j'ai tort ? »"
+      "Les attaquants créent un sentiment d'urgence pour court-circuiter ta réflexion.",
+      "Un message qui te pousse à agir « maintenant » est presque toujours suspect.",
+      "La première règle : une urgence n'est jamais une preuve de légitimité."
+    ],
+    "chant": {
+      "tempo": 120,
+      "notes": [
+        {
+          "f": 440,
+          "fEnd": 440,
+          "d": 0.1,
+          "g": 0.05,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 520,
+          "fEnd": 520,
+          "d": 0.1,
+          "g": 0.05,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 660,
+          "fEnd": 660,
+          "d": 0.15,
+          "g": 0.1,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Identifier les techniques de manipulation dans les messages suspects",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Quel est le premier réflexe face à un message urgent ?",
+        "options": [
+          "Cliquer immédiatement",
+          "Vérifier l'expéditeur et le contenu",
+          "Transmettre à un ami",
+          "Ignorer"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Une urgence dans un message prouve-t-elle qu'il est légitime ?",
+        "options": [
+          "Oui toujours",
+          "Non, c'est souvent une manipulation",
+          "Parfois",
+          "Seulement si c'est de la banque"
+        ],
+        "reponse": 1
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "phishing",
+    "nom": "Le Phishing",
+    "latin": "Phishing · Hameçonnage",
+    "emoji": "🎣",
+    "couleur": "#3498db",
+    "categorie": "diurne",
+    "taille": "Antidote : toujours vérifier l'URL",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "Le phishing utilise de faux sites qui ressemblent aux vrais pour voler tes identifiants.",
+      "Le cadenas (HTTPS) ne suffit pas : il faut vérifier le nom de domaine.",
+      "Un vrai site ne te demandera jamais ton mot de passe par message."
+    ],
+    "chant": {
+      "tempo": 110,
+      "notes": [
+        {
+          "f": 330,
+          "fEnd": 330,
+          "d": 0.12,
+          "g": 0.06,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 440,
+          "fEnd": 440,
+          "d": 0.12,
+          "g": 0.06,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 550,
+          "fEnd": 550,
+          "d": 0.1,
+          "g": 0.15,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 12,
+      "objectif": "Identifier les fausses pages de connexion et comprendre le mécanisme du phishing",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Qu'est-ce qui identifie un site de phishing ?",
+        "options": [
+          "Le cadenas vert",
+          "L'URL incorrecte",
+          "Le design moderne",
+          "La vitesse du site"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Que donner à un site suspect qui te demande ton mot de passe ?",
+        "options": [
+          "Ton vrai mot de passe",
+          "Un mot de passe faux",
+          "Rien du tout",
+          "Ton email"
+        ],
+        "reponse": 2
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "qr-piege",
+    "nom": "Le QR Code Piégé",
+    "latin": "QR Code · Redirection",
+    "emoji": "📷",
+    "couleur": "#9b59b6",
+    "categorie": "diurne",
+    "taille": "Antidote : inspecter avant de scanner",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "Un QR code peut mener n'importe où : un site officiel ou un piège.",
+      "PHANTOM ne te force jamais à scanner. Il te pousse à le faire sans réfléchir.",
+      "La règle d'or : inspecter la destination avant de faire confiance."
+    ],
+    "chant": {
+      "tempo": 100,
+      "notes": [
+        {
+          "f": 392,
+          "fEnd": 392,
+          "d": 0.1,
+          "g": 0.08,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 523,
+          "fEnd": 523,
+          "d": 0.1,
+          "g": 0.08,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 659,
+          "fEnd": 659,
+          "d": 0.12,
+          "g": 0.12,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Comprendre les risques des QR codes et inspecter avant de scanner",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Que faire AVANT de scanner un QR code inconnu ?",
+        "options": [
+          "Le scanner directement",
+          "Vérifier l'URL affichée",
+          "Demander à un ami",
+          "Tourner le téléphone"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Un QR code peut-il mener vers un site malveillant ?",
+        "options": [
+          "Non jamais",
+          "Oui c'est possible",
+          "Seulement si on le fabrique",
+          "Seulement sur Android"
+        ],
+        "reponse": 1
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "traces",
+    "nom": "Les Traces Numériques",
+    "latin": "Metadata · EXIF · OSINT",
+    "emoji": "📍",
+    "couleur": "#e67e22",
+    "categorie": "diurne",
+    "taille": "Antidote : minimiser les traces laissées",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "Une photo contient des métadonnées invisibles : date, heure, lieu, appareil.",
+      "Les métadonnées EXIF peuvent révéler beaucoup plus que ce qu'on montre.",
+      "Ce qu'on peut savoir n'est pas toujours ce qu'on devrait utiliser."
+    ],
+    "chant": {
+      "tempo": 95,
+      "notes": [
+        {
+          "f": 294,
+          "fEnd": 294,
+          "d": 0.12,
+          "g": 0.06,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 392,
+          "fEnd": 392,
+          "d": 0.12,
+          "g": 0.06,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 494,
+          "fEnd": 494,
+          "d": 0.15,
+          "g": 0.1,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Comprendre les métadonnées et leur impact sur la vie privée",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Que contiennent les métadonnées d'une photo ?",
+        "options": [
+          "Rien de spécial",
+          "Date, heure, lieu, appareil",
+          "Uniquement la taille",
+          "Le mot de passe du téléphone"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Une information disponible est-forcément une information à utiliser ?",
+        "options": [
+          "Oui toujours",
+          "Non, ça dépend du contexte",
+          "Seulement en ligne",
+          "Seulement pour la police"
+        ],
+        "reponse": 1
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "permissions",
+    "nom": "Les Permissions",
+    "latin": "Privacy · Permissions · Moindre Privilège",
+    "emoji": "📱",
+    "couleur": "#1abc9c",
+    "categorie": "diurne",
+    "taille": "Antidote : donner le minimum nécessaire",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "La sécurité n'est pas tout autoriser ou tout interdire. C'est donner le bon accès, au bon moment.",
+      "Le principe du moindre privilège : seulement ce qui est nécessaire.",
+      "Refuser toutes les permissions peut casser le fonctionnement d'une application."
+    ],
+    "chant": {
+      "tempo": 105,
+      "notes": [
+        {
+          "f": 330,
+          "fEnd": 330,
+          "d": 0.1,
+          "g": 0.07,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 415,
+          "fEnd": 415,
+          "d": 0.1,
+          "g": 0.07,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 523,
+          "fEnd": 523,
+          "d": 0.12,
+          "g": 0.1,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Comprendre les permissions et le principe du moindre privilège",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Quelle est la meilleure approche pour les permissions ?",
+        "options": [
+          "Tout autoriser",
+          "Tout refuser",
+          "Donner le minimum nécessaire",
+          "Demander à un adulte"
+        ],
+        "reponse": 2
+      },
+      {
+        "q": "Pourquoi une application a-t-elle besoin de permissions ?",
+        "options": [
+          "Pour espionner",
+          "Pour fonctionner correctement",
+          "Pour vendre tes données",
+          "Pour ralentir ton téléphone"
+        ],
+        "reponse": 1
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "mots-de-passe",
+    "nom": "Les Mots de Passe",
+    "latin": "Passphrase · Hashing · Brute Force",
+    "emoji": "🔐",
+    "couleur": "#2ecc71",
+    "categorie": "diurne",
+    "taille": "Antidote : utiliser une phrase secrète",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "La longueur est plus importante que la complexité.",
+      "Une passphrase (phrase secrète) est à la fois mémorisable et difficile à craquer.",
+      "Ne jamais utiliser son nom + année de naissance."
+    ],
+    "chant": {
+      "tempo": 115,
+      "notes": [
+        {
+          "f": 262,
+          "fEnd": 262,
+          "d": 0.1,
+          "g": 0.05,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 330,
+          "fEnd": 330,
+          "d": 0.1,
+          "g": 0.05,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 392,
+          "fEnd": 392,
+          "d": 0.15,
+          "g": 0.1,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Comprendre les principes d'un mot de passe sûr",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Qu'est-ce qui rend un mot de passe sûr ?",
+        "options": [
+          "Uniquement les majuscules",
+          "La longueur et la variété",
+          "Uniquement les chiffres",
+          "Le nom de famille"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Pourquoi « MonChien » est un mauvais mot de passe ?",
+        "options": [
+          "Trop court",
+          "Trop commun",
+          "Pas de chiffres",
+          "Toutes ces réponses"
+        ],
+        "reponse": 3
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "identite",
+    "nom": "L'Identité Numérique",
+    "latin": "OSINT · Identité · Puzzle",
+    "emoji": "🧬",
+    "couleur": "#9b59b6",
+    "categorie": "diurne",
+    "taille": "Antidote : minimiser le partage d'informations",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "Chaque information publique est un puzzle qui peut être assemblé.",
+      "On n'a pas besoin d'un mot de passe pour en savoir beaucoup sur quelqu'un.",
+      "L'OSINT utilise les données publiques pour reconstituer une identité."
+    ],
+    "chant": {
+      "tempo": 100,
+      "notes": [
+        {
+          "f": 349,
+          "fEnd": 349,
+          "d": 0.1,
+          "g": 0.06,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 440,
+          "fEnd": 440,
+          "d": 0.1,
+          "g": 0.06,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 523,
+          "fEnd": 523,
+          "d": 0.12,
+          "g": 0.1,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Comprendre comment les informations personnelles peuvent être utilisées",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Avec quelles informations peut-on retrouver quelqu'un ?",
+        "options": [
+          "Uniquement avec le nom",
+          "Nom + ville + école",
+          "Uniquement avec la photo",
+          "Aucune info ne suffit"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Qu'est-ce que l'OSINT ?",
+        "options": [
+          "Un type de virus",
+          "Du renseignement à partir de sources publiques",
+          "Un réseau social",
+          "Un logiciel de sécurité"
+        ],
+        "reponse": 1
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "reseau",
+    "nom": "Le Réseau Wi-Fi",
+    "latin": "Wi-Fi · HTTPS · VPN",
+    "emoji": "📡",
+    "couleur": "#34495e",
+    "categorie": "diurne",
+    "taille": "Antidote : vérifier et sécuriser la connexion",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "Un réseau Wi-Fi ouvert n'est pas forcément malveillant, mais il faut rester vigilant.",
+      "HTTPS chiffre les données entre ton navigateur et le site.",
+      "Un VPN peut protéger ta connexion sur un réseau public."
+    ],
+    "chant": {
+      "tempo": 108,
+      "notes": [
+        {
+          "f": 294,
+          "fEnd": 294,
+          "d": 0.12,
+          "g": 0.05,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 370,
+          "fEnd": 370,
+          "d": 0.12,
+          "g": 0.05,
+          "type": "sine",
+          "v": 0.5
+        },
+        {
+          "f": 440,
+          "fEnd": 440,
+          "d": 0.1,
+          "g": 0.12,
+          "type": "sine",
+          "v": 0.4
+        }
+      ]
+    },
+    "pedagogie": {
+      "ages": [
+        12,
+        18
+      ],
+      "duree_min": 10,
+      "objectif": "Comprendre les risques des réseaux Wi-Fi publics",
+      "programme": [
+        "cycle 4",
+        "lycée"
+      ]
+    },
+    "quiz": [
+      {
+        "q": "Un réseau Wi-Fi gratuit est-il forcément sûr ?",
+        "options": [
+          "Oui toujours",
+          "Non, il faut rester vigilant",
+          "Seulement le matin",
+          "Seulement avec un iPhone"
+        ],
+        "reponse": 1
+      },
+      {
+        "q": "Que signifie le cadenas dans la barre d'adresse ?",
+        "options": [
+          "Le site est officiel",
+          "La connexion est chiffrée (HTTPS)",
+          "Le site est rapide",
+          "Le site est français"
+        ],
+        "reponse": 1
+      }
+    ]
+  },
+  {
+    "type": "decouverte",
+    "version": 1,
+    "id": "phantom",
+    "nom": "PHANTOM",
+    "latin": "Ingénierie Sociale · Vulnérabilité Humaine",
+    "emoji": "👻",
+    "couleur": "#1a1a2e",
+    "categorie": "diurne",
+    "taille": "Antidote : esprit critique et réflexion",
+    "img": "",
+    "audioFile": null,
+    "anecdotes": [
+      "PHANTOM n'est pas un pirate informatique. C'est un protocole automatisé qui exploite les erreurs humaines.",
+      "Le véritable ennemi n'est pas la technologie, c'est l'imprévoyance.",
+      "PHANTOM n'est pas dans votre téléphone. PHANTOM est dans les décisions que vous prenez lorsque quelqu'un vous pousse à agir trop vite."
     ],
     "chant": {
       "tempo": 90,
       "notes": [
         {
-          "f": 880,
-          "fEnd": 880,
-          "d": 0.12,
-          "g": 0.08,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 880,
-          "fEnd": 880,
-          "d": 0.12,
-          "g": 0.08,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 1100,
-          "fEnd": 1100,
-          "d": 0.1,
-          "g": 0.3,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Chercher activement ce qui pourrait contredire une opinion avant de la croire",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Que fait le biais de confirmation ?",
-        "options": [
-          "Il ne retient que les preuves qui nous donnent raison",
-          "Il rend myope",
-          "Il traduit les langues"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Quel est le meilleur antidote ?",
-        "options": [
-          "Chercher ce qui pourrait nous contredire",
-          "Répéter plus fort son opinion",
-          "Fermer les yeux"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "ancrage",
-    "nom": "Effet d'ancrage",
-    "latin": "Anchoring effect · Tversky & Kahneman, 1974",
-    "emoji": "⚓",
-    "couleur": "#5a4fcf",
-    "categorie": "diurne",
-    "taille": "Antidote : comparer avec tes propres repères",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Le premier nombre entendu devient une ancre : notre estimation reste collée dessus, même si elle est absurde.",
-      "« Au lieu de 100 €, seulement 39 € ! » : le prix barré est une ancre qui donne l'impression d'une bonne affaire.",
-      "Même les experts se font piéger : une roue de loterie truquée a suffi à fausser leurs estimations en labo."
-    ],
-    "chant": {
-      "tempo": 45,
-      "notes": [
-        {
           "f": 220,
           "fEnd": 220,
-          "d": 0.3,
-          "g": 0.15,
+          "d": 0.15,
+          "g": 0.08,
           "type": "sine",
-          "v": 0.55
+          "v": 0.5
+        },
+        {
+          "f": 277,
+          "fEnd": 277,
+          "d": 0.15,
+          "g": 0.08,
+          "type": "sine",
+          "v": 0.5
         },
         {
           "f": 330,
-          "fEnd": 440,
-          "d": 0.25,
-          "g": 0.5,
-          "type": "sine",
-          "v": 0.45
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Reconnaître l'influence du premier chiffre reçu et recalculer avec ses propres repères",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Qu'est-ce qu'une « ancre » dans notre tête ?",
-        "options": [
-          "La première information reçue, qui influence toute la suite",
-          "Un bijou",
-          "Une chanson qui reste dans la tête"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "« Barré à 100 €, vendu 39 € » joue sur…",
-        "options": [
-          "L'effet d'ancrage",
-          "La météo",
-          "Notre faim"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "disponibilite",
-    "nom": "Biais de disponibilité",
-    "latin": "Availability heuristic · Tversky & Kahneman, 1973",
-    "emoji": "📺",
-    "couleur": "#c2452e",
-    "categorie": "diurne",
-    "taille": "Antidote : chercher les vrais chiffres",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Ce qui revient souvent à la télé ou dans les discussions semble plus fréquent qu'il ne l'est vraiment.",
-      "On craint parfois l'avion plus que la voiture, parce que les accidents d'avion marquent les mémoires.",
-      "Astuce : avant de juger « c'est plein d'accidents », demande-toi « ai-je des chiffres ou juste des souvenirs ? »"
-    ],
-    "chant": {
-      "tempo": 160,
-      "notes": [
-        {
-          "f": 1200,
-          "fEnd": 1400,
-          "d": 0.07,
-          "g": 0.04,
-          "type": "square",
-          "v": 0.4
-        },
-        {
-          "f": 1500,
-          "fEnd": 1300,
-          "d": 0.07,
-          "g": 0.04,
-          "type": "square",
-          "v": 0.4
-        },
-        {
-          "f": 1800,
-          "fEnd": 1600,
-          "d": 0.09,
-          "g": 0.35,
-          "type": "square",
-          "v": 0.38
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Distinguer ce qui est facile à se rappeler de ce qui est réellement fréquent",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Pourquoi craint-on parfois l'avion plus que la voiture ?",
-        "options": [
-          "Les accidents d'avion sont très médiatisés, donc faciles à se rappeler",
-          "L'avion va moins vite",
-          "Parce qu'on y est assis longtemps"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Quel est l'antidote du biais de disponibilité ?",
-        "options": [
-          "Regarder les statistiques",
-          "Regarder plus la télé",
-          "Oublier vite"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "dunning",
-    "nom": "Effet Dunning-Kruger",
-    "latin": "Dunning-Kruger effect · Kruger & Dunning, 1999",
-    "emoji": "🎢",
-    "couleur": "#d98e04",
-    "categorie": "diurne",
-    "taille": "Antidote : s'entraîner et demander des avis",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Débutants, on se croit souvent très fort ; en progressant, on découvre enfin l'étendue de ce qu'on ignore.",
-      "Les chercheurs ont testé des étudiants : les moins bons s'estimaient au-dessus de la moyenne !",
-      "La vraie compétence commence quand on sait mesurer ce qu'on ne sait pas encore."
-    ],
-    "chant": {
-      "tempo": 70,
-      "notes": [
-        {
-          "f": 520,
-          "fEnd": 900,
-          "d": 0.18,
-          "g": 0.06,
-          "type": "triangle",
-          "v": 0.5
-        },
-        {
-          "f": 900,
-          "fEnd": 1300,
-          "d": 0.16,
-          "g": 0.06,
-          "type": "triangle",
-          "v": 0.5
-        },
-        {
-          "f": 1300,
-          "fEnd": 600,
-          "d": 0.22,
-          "g": 0.55,
-          "type": "triangle",
-          "v": 0.45
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Mesurer ses progrès pour évaluer son niveau réel et accueillir les retours",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Que fait souvent un grand débutant, selon cet effet ?",
-        "options": [
-          "Il se surestime car il ne voit pas encore ses lacunes",
-          "Il devient champion tout de suite",
-          "Il n'apprend jamais rien"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Comment progresse-t-on malgré cet effet ?",
-        "options": [
-          "En s'entraînant et en écoutant les retours",
-          "En évitant de pratiquer",
-          "En se comparant aux débutants"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "cout",
-    "nom": "Sophisme du coût irrécupérable",
-    "latin": "Sunk cost fallacy · Arkes & Blumer, 1985",
-    "emoji": "🕳️",
-    "couleur": "#6b4a8a",
-    "categorie": "diurne",
-    "taille": "Antidote : raisonner sur l'avenir, pas le passé",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Rester jusqu'au bout d'un film ennuyeux « puisque le billet est payé » : l'argent dépensé ne reviendra pas !",
-      "Continuer simplement parce qu'on a déjà beaucoup investi, c'est jeter bon argent après mauvais.",
-      "La bonne question : « En partant de maintenant, qu'est-ce qui est le mieux pour la suite ? »"
-    ],
-    "chant": {
-      "tempo": 40,
-      "notes": [
-        {
-          "f": 700,
-          "fEnd": 480,
-          "d": 0.3,
-          "g": 0.2,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 600,
-          "fEnd": 400,
-          "d": 0.3,
-          "g": 0.2,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 500,
-          "fEnd": 300,
-          "d": 0.35,
-          "g": 0.6,
-          "type": "sine",
-          "v": 0.45
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Décider d'après les gains futurs possibles, sans se laisser enfermer par le passé",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Le film est nul mais tu restes « parce que le billet est payé ». C'est…",
-        "options": [
-          "Le sophisme du coût irrécupérable",
-          "Un bon calcul",
-          "De la patience"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Que faut-il prendre en compte pour bien décider ?",
-        "options": [
-          "Seulement ce qui peut encore arriver",
-          "Tout ce qu'on a déjà dépensé",
-          "Ce que les autres pensent"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "halo",
-    "nom": "Effet halo",
-    "latin": "Halo effect · Thorndike, 1920",
-    "emoji": "😇",
-    "couleur": "#0f9b8e",
-    "categorie": "diurne",
-    "taille": "Antidote : juger chaque point séparément",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Une seule qualité illumine tout le reste : on trouve quelqu'un « sympa », et voilà qu'on le croit intelligent et honnête.",
-      "Edward Thorndike l'a observé chez des officiers notés par leurs supérieurs : une bonne note entraînait toutes les autres.",
-      "La publicité l'utilise beaucoup : une star souriante prête son « halo » au produit."
-    ],
-    "chant": {
-      "tempo": 80,
-      "notes": [
-        {
-          "f": 523,
-          "fEnd": 523,
-          "d": 0.14,
-          "g": 0.05,
-          "type": "sine",
-          "v": 0.45
-        },
-        {
-          "f": 659,
-          "fEnd": 659,
-          "d": 0.14,
-          "g": 0.05,
-          "type": "sine",
-          "v": 0.45
-        },
-        {
-          "f": 784,
-          "fEnd": 784,
+          "fEnd": 330,
           "d": 0.2,
-          "g": 0.45,
-          "type": "sine",
-          "v": 0.45
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Évaluer chaque qualité séparément avant de juger un ensemble",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "On trouve quelqu'un sympathique, alors on le croit aussi intelligent. C'est…",
-        "options": [
-          "L'effet halo",
-          "Un superpouvoir",
-          "De la télépathie"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Comment éviter l'effet halo ?",
-        "options": [
-          "Évaluer chaque qualité séparément",
-          "Ne regarder qu'un seul détail",
-          "Suivre la foule"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "verite",
-    "nom": "Illusion de la vérité",
-    "latin": "Illusory truth effect · Hasher, Goldstein & Toppino, 1977",
-    "emoji": "🔁",
-    "couleur": "#3d4a6b",
-    "categorie": "nocturne",
-    "taille": "Antidote : vérifier la source",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Plus une information est répétée, plus elle paraît vraie — même si elle est fausse !",
-      "Les rumeurs et la désinformation exploitent cette répétition pour s'installer dans nos têtes.",
-      "Avant de croire, demande-toi : « Qui le dit ? Où est la preuve ? » Une répétition n'est pas une preuve."
-    ],
-    "chant": {
-      "tempo": 60,
-      "notes": [
-        {
-          "f": 440,
-          "fEnd": 440,
-          "d": 0.14,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 440,
-          "fEnd": 440,
-          "d": 0.14,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 440,
-          "fEnd": 440,
-          "d": 0.14,
-          "g": 0.9,
-          "type": "sine",
-          "v": 0.5
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Vérifier source et preuve avant de croire une information répétée",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Une info répétée dix fois paraît…",
-        "options": [
-          "Plus vraie, même si elle est fausse",
-          "Toujours fausse",
-          "Plus longue"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Quel est le meilleur réflexe face à une info surprenante ?",
-        "options": [
-          "Vérifier la source",
-          "La partager tout de suite",
-          "La répéter encore"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "barnum",
-    "nom": "Effet Barnum",
-    "latin": "Barnum (Forer) effect · Forer, 1949",
-    "emoji": "🔮",
-    "couleur": "#7a3b8f",
-    "categorie": "nocturne",
-    "taille": "Antidote : demander une description précise",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "« Tu es parfois timide, mais très sociable avec ceux que tu aimes » : ça te ressemble ? Ça ressemble à tout le monde !",
-      "Les horoscopes et faux tests de personnalité utilisent des phrases floues valables pour presque tous.",
-      "Bertram Forer a donné exactement le même « portrait » à tous ses étudiants : ils y ont cru à 4/5 !"
-    ],
-    "chant": {
-      "tempo": 50,
-      "notes": [
-        {
-          "f": 600,
-          "fEnd": 750,
-          "d": 0.35,
           "g": 0.15,
-          "type": "sawtooth",
-          "v": 0.32
-        },
-        {
-          "f": 700,
-          "fEnd": 550,
-          "d": 0.35,
-          "g": 0.6,
-          "type": "sawtooth",
-          "v": 0.3
+          "type": "sine",
+          "v": 0.4
         }
       ]
     },
     "pedagogie": {
       "ages": [
-        6,
-        99
+        12,
+        18
       ],
-      "duree_min": 8,
-      "objectif": "Exiger des descriptions précises et vérifiables plutôt que des phrases universelles",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Un horoscope décrit « ta personnalité unique ». En fait, il…",
-        "options": [
-          "Décrit tout le monde avec des phrases floues",
-          "Lit vraiment dans ton esprit",
-          "Connaît ton avenir"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Comment reconnaître un effet Barnum ?",
-        "options": [
-          "Une description vague qui conviendrait à presque tout le monde",
-          "Des chiffres précis et vérifiables",
-          "Une recette de cuisine"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Identifier des situations où coopérer fait mieux apprendre que rivaliser",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "cooperation",
-    "nom": "Coopération",
-    "latin": "Pédagogie coopérative · Freinet, 1924",
-    "emoji": "🤝",
-    "couleur": "#0f9b8e",
-    "categorie": "diurne",
-    "taille": "Réflexe : chercher ce qui fait avancer tout le groupe",
-    "anecdotes": [
-      "En coopération, chacun apporte un morceau de la réussite : personne n'est « nul », chacun est utile.",
-      "Le tutorat entre pairs : expliquer à un camarade est l'un des meilleurs moyens d'apprendre soi-même.",
-      "La coopération traverse les frontières : en juin 2026, les CEMÉA Nord-Pas-de-Calais ont accueilli huit enseignantes italiennes dans le cadre d'un projet Erasmus+."
-    ],
-    "quiz": [
-      {
-        "q": "Dans une pédagogie coopérative, on apprend surtout…",
-        "options": [
-          "En travaillant ensemble et en s'entraidant",
-          "Chacun seul dans son coin",
-          "En compétition permanente"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Expliquer une notion à un camarade, c'est…",
-        "options": [
-          "Un excellent moyen de mieux la comprendre soi-même",
-          "Perdre son temps",
-          "Interdit pendant la classe"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Comprendre que l'expérience directe ancre durablement les savoirs",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "methode-active",
-    "nom": "Apprendre en faisant",
-    "latin": "Éducation active · CEMÉA, 1937",
-    "emoji": "✋",
-    "couleur": "#2e6fb3",
-    "categorie": "diurne",
-    "taille": "Réflexe : essayer, se tromper, recommencer",
-    "anecdotes": [
-      "Fondés en 1937, les CEMÉA (Centres d'entraînement aux méthodes d'éducation active) forment animateurs et éducateurs en pratiquant, pas en récitant.",
-      "Chaque année, la Journée de l'Éducation du Dehors organisée par le secteur École réunit à Lille une centaine d'enseignant·es, éducateur·rice·s et chercheur·se·s.",
-      "L'erreur y est une étape normale de l'apprentissage, pas une faute à punir."
-    ],
-    "quiz": [
-      {
-        "q": "Une « méthode active », c'est apprendre…",
-        "options": [
-          "En faisant soi-même, par l'expérience",
-          "En écoutant sans bouger",
-          "En récitant par cœur uniquement"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Dans les centres d'entraînement (CEMÉA), on forme…",
-        "options": [
-          "Des animateurs et des éducateurs, en pratiquant",
-          "Seulement des professeurs",
-          "Des sportifs de haut niveau"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Oser s'exprimer devant le groupe et écouter la parole des autres",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "expression",
-    "nom": "Expression libre",
-    "latin": "Textes libres & théâtre-forum · Boal, 1971",
-    "emoji": "🗣️",
-    "couleur": "#d97b1f",
-    "categorie": "diurne",
-    "taille": "Réflexe : donner la parole à celles et ceux qui ne la prennent pas",
-    "anecdotes": [
-      "Texte libre, journal de classe… aujourd'hui, les jeunes publient aussi sur Yakamédia, le média des CEMÉA : toujours de vrais lecteurs pour leur parole.",
-      "Le théâtre-forum joue une situation puis demande au public de changer la fin : s'entraîner à agir.",
-      "Parler devant les autres s'apprend aussi : c'est une compétence, pas un don."
-    ],
-    "quiz": [
-      {
-        "q": "Le théâtre-forum consiste à…",
-        "options": [
-          "Rejouer une scène et proposer d'autres issues",
-          "Regarder une pièce en silence",
-          "Réciter des vers"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Publier les textes libres des élèves sert à…",
-        "options": [
-          "Leur donner de vrais lecteurs et de la confiance",
-          "Les corriger sans pitié",
-          "Remplir le bureau du directeur"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Relier apprentissages et capacité d'agir sur sa vie",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "emancipation",
-    "nom": "Émancipation",
-    "latin": "Instruction pour tous · Condorcet, 1792",
-    "emoji": "⚖️",
-    "couleur": "#5a4fcf",
-    "categorie": "nocturne",
-    "taille": "Réflexe : comprendre le monde pour pouvoir le transformer",
-    "anecdotes": [
-      "L'éducation populaire vise l'émancipation : devenir libre par la compréhension, pas subir les décisions des autres.",
-      "Condorcet rêvait dès 1792 d'une instruction vraiment universelle et gratuite.",
-      "Les CEMÉA sont aussi une entreprise de l'économie sociale et solidaire et un terrain d'expérimentation : une autre économie mise au service de l'éducation."
-    ],
-    "quiz": [
-      {
-        "q": "S'émanciper par la connaissance, c'est…",
-        "options": [
-          "Devenir plus libre de penser et d'agir",
-          "Mémoriser sans comprendre",
-          "Suivre sans discuter"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Qui rêvait d'une instruction universelle dès 1792 ?",
-        "options": [
-          "Condorcet",
-          "Napoléon",
-          "Jules Ferry"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Repérer les inégalités d'accès à la culture et imaginer des solutions",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "acces-tous",
-    "nom": "Pour toutes et tous",
-    "latin": "Loisirs populaires · Léo Lagrange, 1936",
-    "emoji": "🌍",
-    "couleur": "#c2452e",
-    "categorie": "diurne",
-    "taille": "Réflexe : se demander qui manque à l'appel",
-    "anecdotes": [
-      "Avec les congés payés de 1936, Léo Lagrange invente les loisirs encadrés pour celles et ceux qui n'en avaient jamais eu.",
-      "À Lille, les locaux des CEMÉA Nord-Pas-de-Calais sont pensés pour l'accessibilité de toutes et tous : l'accueil commence par la porte.",
-      "Une question clé de l'éducation populaire : qui n'a pas accès ? Comment ouvrir la porte ?"
-    ],
-    "quiz": [
-      {
-        "q": "En 1936, avec les congés payés, Léo Lagrange développe…",
-        "options": [
-          "Les loisirs populaires encadrés pour toutes et tous",
-          "Les vacances réservées aux riches",
-          "L'école le samedi"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "La démocratie culturelle veut dire que la culture est…",
-        "options": [
-          "Un droit pour chacun",
-          "Une marchandise rare",
-          "Réservée aux experts"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Utiliser le jeu comme espace d'essai et de réflexion",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "jeu-role",
-    "nom": "Jouer pour apprendre",
-    "latin": "Mises en situation · CEMÉA",
-    "emoji": "🎭",
-    "couleur": "#7a3b8f",
-    "categorie": "nocturne",
-    "taille": "Réflexe : essayer des rôles avant de vivre les situations",
-    "anecdotes": [
-      "Jouer un entretien, un débat ou un conflit permet de s'entraîner sans risque avant la vraie vie.",
-      "Théâtre, expositions ouvertes à toutes et tous, veillées : la culture vit au cœur des actions des CEMÉA, comme les vernissages de Lille.",
-      "Après le jeu, le débriefing compte autant que la partie : qu'ai-je ressenti ? Qu'ai-je appris ?"
-    ],
-    "quiz": [
-      {
-        "q": "Le jeu de rôle pédagogique sert à…",
-        "options": [
-          "S'entraîner à des situations réelles sans risque",
-          "Perdre du temps",
-          "Éliminer les plus faibles"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Après un jeu d'apprentissage, l'étape importante est…",
-        "options": [
-          "Le débriefing : ce qu'on a ressenti et appris",
-          "Range vite les chaises",
-          "Aucune"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Expliquer en quoi apprendre dehors change la façon d'apprendre",
-      "programme": [
-        "cycle 2",
-        "cycle 3"
-      ]
-    },
-    "id": "journee-dehors",
-    "nom": "Éducation du Dehors",
-    "latin": "Journée Éducation du Dehors · Lille",
-    "emoji": "🌳",
-    "couleur": "#2e8f5a",
-    "categorie": "diurne",
-    "taille": "Repère : dehors, on apprend avec tout son corps",
-    "anecdotes": [
-      "Chaque année, la Journée Éducation du Dehors réunit plus d'une centaine de participant·es à Lille, animée par les CEMÉA Nord-Pas-de-Calais.",
-      "Apprendre dehors stimule l'attention, la motricité et la mémoire : le corps fait partie de la leçon.",
-      "L'éducation du dehors relie les « forest schools » nordiques à la pédagogie nouvelle née en France."
-    ],
-    "quiz": [
-      {
-        "q": "Apprendre dehors, c'est…",
-        "options": [
-          "Utiliser le lieu et le corps comme supports d'apprentissage",
-          "Une simple récréation prolongée",
-          "Réservé aux maternelles"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "La Journée Éducation du Dehors de Lille rassemble…",
-        "options": [
-          "Des professionnel·les, des familles et des curieux",
-          "Uniquement des élus",
-          "Personne : elle est virtuelle"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Relier coopération pédagogique et ouverture européenne",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "id": "erasmus",
-    "nom": "Erasmus+",
-    "latin": "Mobilité européenne · accueil à Lille, 2026",
-    "emoji": "🇪🇺",
-    "couleur": "#0c6e8f",
-    "categorie": "diurne",
-    "taille": "Repère : voyager pour apprendre, accueillir pour transmettre",
-    "anecdotes": [
-      "En juin 2026, les CEMÉA Nord-Pas-de-Calais ont accueilli une délégation italienne : huit enseignantes des écoles Margherita Fasolo.",
-      "Erasmus+ finance des mobilités pour que les pratiques pédagogiques circulent entre pays.",
-      "Observer une classe d'ailleurs oblige à s'interroger sur ses propres habitudes."
-    ],
-    "quiz": [
-      {
-        "q": "Erasmus+, c'est un programme européen qui permet…",
-        "options": [
-          "De se former et d'observer ailleurs",
-          "De partir en vacances",
-          "De financer uniquement les universités"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "En 2026, les CEMÉA NPDC ont accueilli des enseignantes venues de…",
-        "options": [
-          "Italie",
-          "Portugal",
-          "Suède"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Découvrir la presse jeune et l'expression médiatique des enfants",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "yakamedia",
-    "nom": "Yakamédia",
-    "latin": "Média jeunesse des CEMÉA · revue Yak, 1955",
-    "emoji": "🎙️",
-    "couleur": "#d97b1f",
-    "categorie": "diurne",
-    "taille": "Réflexe : s'exprimer, créer et publier librement",
-    "anecdotes": [
-      "Yakamédia est la plateforme média des CEMÉA : des contenus créés par et pour les jeunes.",
-      "Dès 1955, la revue Yak donnait la parole aux enfants — une révolution à l'époque.",
-      "Fabriquer un journal développe l'esprit critique, l'écriture et la coopération."
-    ],
-    "quiz": [
-      {
-        "q": "Qui écrit et choisit les contenus de Yakamédia ?",
-        "options": [
-          "Les jeunes, accompagnés par des journalistes",
-          "Uniquement des adultes",
-          "Un algorithme"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "La revue Yak a été créée par les CEMÉA en…",
-        "options": [
-          "1955",
-          "1989",
-          "2005"
-        ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Comprendre ce qu'est une entreprise de l'ESS et son utilité sociale",
+      "duree_min": 15,
+      "objectif": "Comprendre que la sécurité informatique repose sur les décisions humaines",
       "programme": [
         "cycle 4",
         "lycée"
       ]
     },
-    "id": "ess",
-    "nom": "Économie sociale",
-    "latin": "ESS & utilité publique · mouvement CEMÉA",
-    "emoji": "🤲",
-    "couleur": "#7a3b8f",
-    "categorie": "nocturne",
-    "taille": "Repère : les bénéfices servent le projet, pas l'inverse",
-    "anecdotes": [
-      "Les CEMÉA sont une association reconnue d'utilité publique ET une entreprise de l'économie sociale et solidaire.",
-      "Dans l'ESS, ce ne sont pas les actionnaires qui décident mais les sociétaires : une personne = une voix.",
-      "Le réseau CEMÉA est décentralisé : chaque tête régionale agit au plus près de son territoire."
-    ],
     "quiz": [
       {
-        "q": "Dans une coopérative de l'ESS, la règle de vote est…",
+        "q": "Qui est PHANTOM ?",
         "options": [
-          "Une personne = une voix",
-          "Un euro = une voix",
-          "Seuls les fondateurs votent"
+          "Un pirate humain",
+          "Un protocole automatisé",
+          "Un virus informatique",
+          "Un agent secret"
         ],
-        "reponse": 0
+        "reponse": 1
       },
       {
-        "q": "« Reconnue d'utilité publique » signifie que l'association…",
+        "q": "Où se trouve真正的 PHANTOM ?",
         "options": [
-          "Poursuit un intérêt général reconnu par l'État",
-          "Est gérée par l'État",
-          "Ne paie aucun impôt"
+          "Dans un ordinateur",
+          "Dans les décisions que nous prenons",
+          "Sur Internet",
+          "Dans un centre de données"
         ],
-        "reponse": 0
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "img": "",
-    "audioFile": null,
-    "chant": null,
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 8,
-      "objectif": "Identifier les conditions concrètes d'un accueil accessible à tous",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "locaux-accessibles",
-    "nom": "Accueillir tout·es",
-    "latin": "Locaux accessibles · rue Ernest Deconynck, Lille",
-    "emoji": "♿",
-    "couleur": "#444a6b",
-    "categorie": "diurne",
-    "taille": "Repère : chacun·e a sa place autour du feu",
-    "anecdotes": [
-      "Les locaux lillois des CEMÉA Nord-Pas-de-Calais sont pensés pour être accessibles à toutes et tous.",
-      "L'accessibilité n'est pas une option : c'est une condition de la démocratie culturelle.",
-      "Bien accueillir commence par des portes larges, des consignes claires et du temps."
-    ],
-    "quiz": [
-      {
-        "q": "Un lieu « accessible » est un lieu que peuvent utiliser…",
-        "options": [
-          "Tout le monde, y compris en situation de handicap",
-          "Seules les personnes valides",
-          "Uniquement sur rendez-vous"
-        ],
-        "reponse": 0
-      },
-      {
-        "q": "Pour l'éducation populaire, l'accueil de toutes et tous est…",
-        "options": [
-          "Un principe fondateur",
-          "Un détail pratique",
-          "Une contrainte légale seulement"
-        ],
-        "reponse": 0
+        "reponse": 1
       }
     ]
   }
@@ -1290,422 +833,64 @@ const BIRDS = [
 
 const GUIDE = [
   {
-    "type": "notion-guide",
+    "type": "guide",
     "version": 1,
-    "id": "reciprocite",
-    "nom": "Biais de réciprocité",
-    "latin": "Reciprocity norm · Cialdini",
-    "emoji": "🤝",
-    "couleur": "#b05f2a",
-    "categorie": "diurne",
-    "taille": "Antidote : accepter sans se sentir redevable",
-    "img": "",
-    "description": "Recevoir un petit cadeau crée une dette invisible : on dit alors oui à de grosses demandes.",
-    "anecdotes": [
-      "C'est la technique du « échantillon gratuit ».",
-      "Offrir d'abord, demander ensuite : ça marche trop bien."
-    ],
+    "id": "ingenerie-sociale",
+    "nom": "L'ingénierie sociale",
+    "description": "Techniques utilisées par les attaquants pour manipuler les humains plutôt que d'attaquer les ordinateurs.",
     "pedagogie": {
+      "objectif": "Comprendre comment les humains peuvent être manipulés",
       "ages": [
-        6,
-        99
+        12,
+        18
       ],
-      "duree_min": 5,
-      "objectif": "Reconnaître la dette invisible créée par un cadeau et choisir librement",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
+      "duree_min": 8
     }
   },
   {
-    "type": "notion-guide",
+    "type": "guide",
     "version": 1,
-    "id": "joueur",
-    "nom": "Erreur du joueur",
-    "latin": "Gambler's fallacy",
-    "emoji": "🎲",
-    "couleur": "#2a6e5a",
-    "categorie": "diurne",
-    "taille": "Antidote : chaque tirage est indépendant",
-    "img": "",
-    "description": "Croire que « ça doit bien tomber maintenant » après une série de pile, alors que les chances n'ont pas bougé.",
-    "anecdotes": [
-      "La pièce n'a pas de mémoire.",
-      "Les casinos adorent cette erreur."
-    ],
+    "id": "osint",
+    "nom": "Le renseignement d'ouverture",
+    "description": "L'OSINT utilise les données publiques pour reconstituer des informations sur une personne ou une organisation.",
     "pedagogie": {
+      "objectif": "Comprendre que les données publiques peuvent être utilisées pour reconstituer une identité",
       "ages": [
-        6,
-        99
+        14,
+        18
       ],
-      "duree_min": 5,
-      "objectif": "Comprendre que chaque tirage aléatoire est indépendant des précédents",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
+      "duree_min": 10
     }
   },
   {
-    "type": "notion-guide",
+    "type": "guide",
     "version": 1,
-    "id": "apophenie",
-    "nom": "Apophénie",
-    "latin": "Apophenia · Conrad, 1958",
-    "emoji": "👀",
-    "couleur": "#5c5c8a",
-    "categorie": "nocturne",
-    "taille": "Antidote : tester avant de croire",
-    "img": "",
-    "description": "Voir des formes ou des liens là où il n'y en a pas : visages dans les nuages, « coïncidences » partout.",
-    "anecdotes": [
-      "Pareidolie : voir un visage dans une prise électrique.",
-      "Notre cerveau détecteur de motifs, parfois trop zélé."
-    ],
+    "id": "chiffrement",
+    "nom": "Le chiffrement",
+    "description": "Le chiffrement protège les données en les rendant illisibles sans la clé de déchiffrement.",
     "pedagogie": {
+      "objectif": "Comprendre le rôle du chiffrement dans la sécurité",
       "ages": [
-        6,
-        99
+        14,
+        18
       ],
-      "duree_min": 5,
-      "objectif": "Tester une coïncidence avant d'y voir un motif réel",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
+      "duree_min": 8
     }
   },
   {
-    "type": "notion-guide",
+    "type": "guide",
     "version": 1,
-    "id": "optimisme",
-    "nom": "Biais d'optimisme",
-    "latin": "Optimism bias · Weinstein, 1980",
-    "emoji": "🌈",
-    "couleur": "#d97b1f",
-    "categorie": "diurne",
-    "taille": "Antidote : prévoir une marge de sécurité",
-    "img": "",
-    "description": "« Ça n'arrivera qu'aux autres. » On sous-estime ses risques et on surestime ses chances.",
-    "anecdotes": [
-      "La plupart des conducteurs se disent « au-dessus de la moyenne ».",
-      "Les projets dépassent toujours leur délai prévu : loi de Hofstadter."
-    ],
+    "id": " phishing-avance",
+    "nom": "Le phishing avancé",
+    "description": "Techniques sophistiquées : spear phishing, whaling, BEC (Business Email Compromise).",
     "pedagogie": {
+      "objectif": "Reconnaître les formes avancées de phishing",
       "ages": [
-        6,
-        99
+        16,
+        18
       ],
-      "duree_min": 5,
-      "objectif": "Estimer ses risques avec une marge de sécurité au lieu d'un optimisme aveugle",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
+      "duree_min": 10
     }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "id": "paille",
-    "nom": "Homme de paille",
-    "latin": "Straw man fallacy",
-    "emoji": "🎯",
-    "couleur": "#8a3b3b",
-    "categorie": "diurne",
-    "taille": "Antidote : reformuler l'argument d'autrui",
-    "img": "",
-    "description": "Déformer l'argument de l'autre pour le réfuter plus facilement, puis attaquer cette version affaiblie.",
-    "anecdotes": [
-      "Classique des débats en ligne.",
-      "Contre-pied : l'homme d'acier — reformuler au plus juste."
-    ],
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Reformuler fidèlement l'argument d'autrui avant de le discuter",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "id": "statuquo",
-    "nom": "Biais du statu quo",
-    "latin": "Status quo bias · Samuelson & Zeckhauser, 1988",
-    "emoji": "🛋️",
-    "couleur": "#4a5a6a",
-    "categorie": "diurne",
-    "taille": "Antidote : imaginer qu'on choisit aujourd'hui",
-    "img": "",
-    "description": "Préférer ce qui existe déjà, par simple habitude, même quand une meilleure option est disponible.",
-    "anecdotes": [
-      "Le « fait comme d'habitude » qui coûte cher.",
-      "Tester : « Si je découvrais tout aujourd'hui, je choisirais quoi ? »"
-    ],
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Réévaluer les options existantes comme si le choix se faisait aujourd'hui",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "id": "exposition",
-    "nom": "Simple exposition",
-    "latin": "Mere exposure effect · Zajonc, 1968",
-    "emoji": "💿",
-    "couleur": "#7a5c9a",
-    "categorie": "diurne",
-    "taille": "Antidote : juger la chose, pas sa familiarité",
-    "img": "",
-    "description": "À force d'être vu ou entendu, quelque chose nous plaît davantage — sans aucune autre raison.",
-    "anecdotes": [
-      "Pourquoi les pubs passent en boucle.",
-      "Une chanson « moyenne » devient favorite après quelques écoutes."
-    ],
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Distinguer la familiarité d'une chose de sa qualité réelle",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "id": "controle",
-    "nom": "Illusion de contrôle",
-    "latin": "Illusion of control · Langer, 1975",
-    "emoji": "🎮",
-    "couleur": "#2a5a8a",
-    "categorie": "diurne",
-    "taille": "Antidote : distinguer habileté et hasard",
-    "img": "",
-    "description": "Croire qu'on maîtrise des événements purement aléatoires : lancer fort les dés pour faire un six !",
-    "anecdotes": [
-      "Les loteries vendent le choix des numéros comme un pouvoir.",
-      "Souffler sur les dés ne change pas les probabilités."
-    ],
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Distinguer ce qui relève de l'habileté de ce qui relève du hasard",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "id": "groupe",
-    "nom": "Pensée de groupe",
-    "latin": "Groupthink · Janis, 1972",
-    "emoji": "🐑",
-    "couleur": "#6a7a3a",
-    "categorie": "nocturne",
-    "taille": "Antidote : garder un avocat du diable",
-    "img": "",
-    "description": "Dans un groupe soudé, l'envie d'être d'accord écrase le doute : personne n'ose dire « attention ».",
-    "anecdotes": [
-      "Décisions célèbres ratées faute de contradiction.",
-      "Une voix discordante améliore la décision collective."
-    ],
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Protéger la parole dissidente pour garder une décision collective lucide",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "id": "recence",
-    "nom": "Biais de récence",
-    "latin": "Recency bias",
-    "emoji": "⏱️",
-    "couleur": "#8a6a2a",
-    "categorie": "diurne",
-    "taille": "Antidote : regagner la vue d'ensemble",
-    "img": "",
-    "description": "Donner trop de poids aux derniers événements : la dernière réponse d'un élève colore toute sa note.",
-    "anecdotes": [
-      "Après un accident médiatisé, tous les risques semblent imminents.",
-      "Tenir un journal aide à se souvenir de tout, pas juste de la fin."
-    ],
-    "pedagogie": {
-      "ages": [
-        6,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Remettre les derniers événements dans leur contexte global",
-      "programme": [
-        "cycle 3",
-        "cycle 4",
-        "lycée"
-      ]
-    }
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "img": "",
-    "categorie": "diurne",
-    "anecdotes": [
-      "« Les Ceméa » : Centres d'entraînement aux méthodes d'éducation active.",
-      "Reconnus nationalement d'utilité publique, les CEMÉA fêtent leurs 89 ans en 2026.",
-      "Le réseau est décentralisé : une association nationale tête de réseau et des associations régionales, en métropole comme en outre-mer."
-    ],
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Situer l'éducation populaire dans son contexte historique",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "histoire",
-    "nom": "Repères historiques",
-    "latin": "1936-1937 · le tournant populaire",
-    "emoji": "📜",
-    "couleur": "#3d4a6b",
-    "taille": "Repère : congés payés → éducation pour tous",
-    "description": "1936 : congés payés et front populaire. 1937 : naissance des CEMÉA. Puis Peuple et Culture, les MJC, les maisons de jeunes : tout un mouvement pour l'accès de tous à l'éducation et à la culture."
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "img": "",
-    "categorie": "diurne",
-    "anecdotes": [
-      "Le BAFA permet d'encadrer des enfants en accueil collectif de mineurs.",
-      "Chaque année, les CEMÉA Nord-Pas-de-Calais proposent entre 60 et 85 stages BAFA et BAFD.",
-      "Le Service d'Aide au Placement (cemea-sap.fr) met en relation animateurs, directeurs et organisateurs d'accueils collectifs de mineurs."
-    ],
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Découvrir les parcours vers les métiers de l'animation",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "metiers-animation",
-    "nom": "Métiers de l'animation",
-    "latin": "BPJEPS · animation socio-éducative",
-    "emoji": "🎓",
-    "couleur": "#2a6e5a",
-    "taille": "Piste : du BAFA au BPJEPS",
-    "description": "Animateur ou animatrice, éducateur ou éducatrice, directeur de colo : ces métiers se préparent par la pratique — BAFA/BAFD dès 17 ans, BPJEPS, diplômes d'État — souvent en alternance."
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "img": "",
-    "categorie": "diurne",
-    "anecdotes": [
-      "La typographie à l'école : les enfants imprimaient leurs propres textes.",
-      "Son héritage vit dans des centaines de classes coopératives actuelles."
-    ],
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Connaître quelques outils Freinet transposables en classe",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "freinet",
-    "nom": "La pédagogie Freinet",
-    "latin": "École moderne · Célestin Freinet",
-    "emoji": "🔧",
-    "couleur": "#b05f2a",
-    "taille": "Astuce : outils concrets, classe coopérative",
-    "description": "Célestin Freinet, instituteur, invente des outils simples et puissants : texte libre, correspondance scolaire, journal de classe, conseil coopératif, fichiers autocorrectifs. Sa devise implicite : les enfants font eux-mêmes."
-  },
-  {
-    "type": "notion-guide",
-    "version": 1,
-    "img": "",
-    "categorie": "diurne",
-    "anecdotes": [
-      "Pour beaucoup d'enfants, la première colo reste un souvenir fondateur.",
-      "Les séjours suivent une réglementation stricte (encadrement, projet pédagogique)."
-    ],
-    "pedagogie": {
-      "ages": [
-        8,
-        99
-      ],
-      "duree_min": 5,
-      "objectif": "Relier vacances et apprentissages informels",
-      "programme": [
-        "cycle 3",
-        "cycle 4"
-      ]
-    },
-    "id": "colos",
-    "nom": "Vacances apprenantes",
-    "latin": "Accueil collectif de mineurs",
-    "emoji": "🏕️",
-    "couleur": "#d98e04",
-    "taille": "Idée : partir loin, grandir beaucoup",
-    "description": "Colos et séjours « vacances apprenantes » mêlent jeu, découverte et renforcement des acquis : on y pratique les méthodes actives sans même s'en rendre compte. Encadrées par des équipes formées aux pédagogies de l'engagement."
   }
 ];
 
@@ -1714,1160 +899,553 @@ const BALISES = [
     "type": "balise",
     "version": 1,
     "id": "B1",
-    "bird": "confirmation",
-    "code": "JDP-B1",
-    "x": 74,
-    "y": 452,
-    "lat": 50.7258178,
-    "lng": 3.1329639,
-    "label": "La cabane à idées",
+    "bird": "alerte",
+    "code": "PH-B1",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Le Message",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Je ne vois que les preuves qui me donnent raison, et je ferme les yeux sur les autres. Quel biais suis-je ?",
+        "text": "Tu reçois 3 notifications. Laquelle est la plus suspecte ?\nA : « Votre compte nécessite une vérification. Cliquez ici immédiatement. »\nB : « Votre administrateur vous demande de confirmer votre identité. Rendez-vous dans l'application. »\nC : « ALERTE !! Votre téléphone sera supprimé dans 5 minutes !!! »",
         "reponses": [
-          "confirmation",
-          "biais de confirmation",
-          "le biais de confirmation",
-          "biais de confirmations"
+          "C",
+          "la C",
+          "la troisième",
+          "la troisième notification",
+          "ALERTE"
         ],
-        "indice": "Mon nom parle de « confirmer » une idée déjà en place.",
-        "saviez": "Peter Wason l'a démontré avec une suite de nombres : presque personne n'osait tester une hypothèse qui pouvait la détruire.",
+        "indice": "Regarde le ton : menace, ponctuation excessive, urgence.",
+        "saviez": "L'ingénierie sociale utilise la peur et l'urgence pour te faire agir sans réfléchir.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Quand tu cherches des arguments, je ne te montre que ceux qui flattent ton opinion. Ton idée a toujours raison avec moi. Qui suis-je ?",
+        "text": "Quel élément rend un message suspect ?\nA : L'urgence artificielle\nB : Le nom de l'expéditeur\nC : L'heure d'envoi",
         "reponses": [
-          "confirmation",
-          "biais de confirmation",
-          "le biais de confirmation"
+          "A",
+          "l'urgence artificielle",
+          "l'urgence",
+          "l'urgence artificielle"
         ],
-        "indice": "Je porte le nom d'un accord : « oui, oui, c'est confirmé ! »",
-        "saviez": "Les réseaux sociaux montrent surtout des contenus qui nous ressemblent : notre biais adore s'y nourrir.",
+        "indice": "Un message qui te pousse à agir « maintenant » est presque toujours suspect.",
+        "saviez": "Les attaquants créent un sentiment d'urgence pour court-circuiter ta réflexion.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Née dans les laboratoires de Peter Wason en 1960, je fais tester les hypothèses dans un seul sens : celui qui arrange mon propriétaire. Quel biais suis-je ?",
+        "text": "Identifie les 3 techniques de manipulation utilisées dans un message de phishing classique.",
         "reponses": [
-          "confirmation",
-          "biais de confirmation",
-          "le biais de confirmation"
+          "urgence, autorité, peur",
+          "urgence autorité peur",
+          "peur autorité urgence",
+          "urgence, peur, autorité"
         ],
-        "indice": "Chercher à confirmer plutôt qu'à infirmer : me voilà.",
-        "saviez": "Le meilleur réflexe scientifique : essayer de se tromper. Une hypothèse qui survit à tous les tests gagne notre confiance.",
+        "indice": "Pense à ce que le message te fait ressentir : pression, menace, obligation.",
+        "saviez": "Les 3 piliers du phishing : l'autorité (qui parle), l'urgence (agis vite), la peur (conséquences).",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 74,
+    "y": 452
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B2",
-    "bird": "ancrage",
-    "code": "JDP-B2",
-    "x": 148,
-    "y": 400,
-    "lat": 48.8567,
-    "lng": 2.3523,
-    "label": "Le quai des ancres",
+    "bird": "phishing",
+    "code": "PH-B2",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Le Piège",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Le premier nombre que tu entends me devient une chaîne : tes estimations restent accrochées dessus. Quel effet suis-je ?",
+        "text": "Tu vois une page de connexion bancaire. L'adresse est « secure-curos-login.com ». C'est fiable ?",
         "reponses": [
-          "ancrage",
-          "effet d ancrage",
-          "l effet d ancrage",
-          "effet d'ancrage",
-          "l'effet d'ancrage"
+          "non",
+          "non c'est faux",
+          "c'est un faux",
+          "faux",
+          "non c'est pas fiable",
+          "non fiable"
         ],
-        "indice": "Mon nom vient du gros objet lourd qui empêche le bateau de bouger.",
-        "saviez": "Même un nombre tiré au sort sous vos yeux influence ensuite vos estimations : l'ancre tient bon.",
+        "indice": "Compare le nom de domaine avec le vrai nom du service.",
+        "saviez": "Les pirates créent des noms de domaine qui ressemblent aux vrais pour te tromper.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "« Barré à 100 €, aujourd'hui 39 € ! » Grâce à moi, 100 € est resté dans ta tête et l'affaire te paraît imbattable. Qui suis-je ?",
+        "text": "Un site te demande ton mot de passe. Que dois-tu vérifier EN PREMIER ?",
         "reponses": [
-          "ancrage",
-          "effet d ancrage",
-          "l effet d ancrage",
-          "effet d'ancrage",
-          "l'effet d'ancrage"
+          "l'adresse du site",
+          "l'URL",
+          "le nom de domaine",
+          "l'adresse URL"
         ],
-        "indice": "Le prix barré sert de… point de départ à ton jugement.",
-        "saviez": "Kahneman et Tversky ont montré qu'une roue de loterie truquée changeait les estimations des participants, experts compris.",
+        "indice": "Regarde la barre d'adresse : est-ce le bon site ?",
+        "saviez": "Le cadenas (HTTPS) ne suffit pas : il faut aussi vérifier le nom de domaine.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Amiral des premiers chiffres, je mouille devant ta pensée : tout ce qui suit se mesure à ma chaîne, même quand je suis absurde. Nommez-moi.",
+        "text": "On te donne 3 domaines : secure-curos-login.com, curios-security.example, curios.local. Lequel est le plus probablement un piège ?",
         "reponses": [
-          "ancrage",
-          "effet d ancrage",
-          "l effet d ancrage",
-          "effet d'ancrage",
-          "l'effet d'ancrage"
+          "secure-curos-login.com",
+          "le premier",
+          "secure-curos-login"
         ],
-        "indice": "Tversky & Kahneman, 1974 : la première valeur capture l'estimation.",
-        "saviez": "En négociation, celui qui annonce le premier prix pose souvent l'ancre : connaître l'effet permet de le contrer.",
+        "indice": "Un vrai site n'a pas besoin de mots comme « secure » ou « login » dans son adresse.",
+        "saviez": "Les pirates ajoutent des mots rassurants (secure, login, verify) pour tromper.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 110,
+    "y": 428
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B3",
-    "bird": "disponibilite",
-    "code": "JDP-B3",
-    "x": 238,
-    "y": 292,
-    "lat": 48.8565,
-    "lng": 2.3521,
-    "label": "L'écran géant",
+    "bird": "qr-piege",
+    "code": "PH-B3",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Le QR Code Piégé",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Ce que tu vois souvent aux infos te semble arriver tout le temps. Je juge la fréquence par la facilité de s'en souvenir. Quel biais suis-je ?",
+        "text": "Tu trouves un QR code sur un mur. Que dois-tu faire AVANT de le scanner ?",
         "reponses": [
-          "disponibilite",
-          "biais de disponibilite",
-          "le biais de disponibilite",
-          "disponibilité",
-          "biais de disponibilité",
-          "le biais de disponibilité"
+          "vérifier",
+          "analyser",
+          "regarder",
+          "inspector",
+          "vérifier le code",
+          "analyser le code"
         ],
-        "indice": "Mon nom parle de ce qui est facilement « disponible » dans ta mémoire.",
-        "saviez": "Après un accident d'avion médiatisé, beaucoup ont peur de voler… alors que la route reste bien plus risquée.",
+        "indice": "Un QR code peut mener n'importe où : vérifie d'abord.",
+        "saviez": "PHANTOM ne te force jamais à scanner. Il te pousse à le faire sans réfléchir.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Images choc, titres fracassants : je transforme les souvenirs faciles en statistiques imaginaires. Qui suis-je ?",
+        "text": "Un QR code contient l'URL « https://curios.local@phantom... ». Que remarques-tu ?",
         "reponses": [
-          "disponibilite",
-          "biais de disponibilite",
-          "le biais de disponibilite",
-          "disponibilité",
-          "biais de disponibilité",
-          "le biais de disponibilité"
+          "l'URL est modifiée",
+          "il y a un @",
+          "l'adresse est différente",
+          "phantom"
         ],
-        "indice": "Facile à retrouver en mémoire ≠ fréquent dans la réalité.",
-        "saviez": "Tversky et Kahneman (1973) : on estime la fréquence d'un mot selon la vitesse à laquelle on retrouve des exemples.",
+        "indice": "Le symbole @ dans une URL peut cacher une redirection.",
+        "saviez": "Le format URL peut être manipulé pour rediriger vers un autre site.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Archiviste paresseux, je classe « fréquent » ce qui remonte vite à la surface, et « rare » ce que la mémoire peine à retrouver. Mon nom ?",
+        "text": "Quelle est la règle d'or concernant les QR codes inconnus ?",
         "reponses": [
-          "disponibilite",
-          "biais de disponibilite",
-          "le biais de disponibilite",
-          "disponibilité",
-          "biais de disponibilité",
-          "le biais de disponibilité"
+          "ne jamais scanner sans vérifier",
+          "toujours vérifier avant",
+          "ne pas scanner aveuglément",
+          "vérifier l'URL avant de scanner"
         ],
-        "indice": "Heuristique de… : la mémoire comme raccourci de jugement.",
-        "saviez": "L'antidote : demander les chiffres. Les vraies statistiques corrigent les impressions créées par les médias.",
+        "indice": "Le QR code est un raccourci : il peut aussi être un piège.",
+        "saviez": "PHANTOM ne te force jamais à cliquer. Il te pousse à cliquer.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 148,
+    "y": 400
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B4",
-    "bird": "dunning",
-    "code": "JDP-B4",
-    "x": 320,
-    "y": 320,
-    "lat": 48.8568,
-    "lng": 2.3524,
-    "label": "La grande montagne russe",
+    "bird": "traces",
+    "code": "PH-B4",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Les Traces",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Plus on débute, plus on se croit fort ; plus on apprend, plus on voit ses lacunes. Quel effet suis-je ?",
+        "text": "Tu reçois une photo. Que peut révéler une simple photographie ?\nA : La date et l'heure\nB : La localisation\nC : L'appareil utilisé\nD : Toutes ces réponses",
         "reponses": [
-          "dunning kruger",
-          "effet dunning kruger",
-          "l effet dunning kruger",
-          "dunning-kruger",
-          "effet dunning-kruger",
-          "kruger dunning"
+          "D",
+          "toutes ces réponses",
+          "toutes",
+          "tout"
         ],
-        "indice": "Mon nom est composé de deux noms de chercheurs.",
-        "saviez": "Chez les étudiants testés, les moins bons résultats s'accompagnaient des estimations les plus élevées.",
+        "indice": "Une photo contient plus d'informations que ce qu'on voit.",
+        "saviez": "Les métadonnées EXIF d'une photo peuvent révéler date, heure, lieu, appareil.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Je suis la bosse de confiance du débutant : elle monte vite, puis redescend à mesure que la vraie compétence apparaît. Qui suis-je ?",
+        "text": "On appelle « métadonnées » les informations cachées dans un fichier. Quelles métadonnées une photo peut-elle contenir ?",
         "reponses": [
-          "dunning kruger",
-          "effet dunning kruger",
-          "l effet dunning kruger",
-          "dunning-kruger",
-          "effet dunning-kruger"
+          "date, heure, lieu, appareil",
+          "date heure lieu appareil",
+          "lieu date appareil",
+          "metadata"
         ],
-        "indice": "Deux psychologues de Cornell, Kruger et Dunning, m'ont décrit en 1999.",
-        "saviez": "Courbe célèbre : la « vallée de la mort » arrive quand on réalise enfin tout ce qu'il reste à apprendre.",
+        "indice": "Pense à tout ce que l'appareil enregistre automatiquement.",
+        "saviez": "Les métadonnées sont invisibles mais accessibles à quiconque sait où regarder.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Double incompétence : celle qui échoue, et celle qui ne permet pas de voir l'échec. Mes deux pères portent des noms de chercheurs. Qui suis-je ?",
+        "text": "Quel principe éthique relie cybersécurité et respect de la vie privée concernant les métadonnées ?",
         "reponses": [
-          "dunning kruger",
-          "effet dunning kruger",
-          "l effet dunning kruger",
-          "dunning-kruger",
-          "effet dunning-kruger"
+          "une information disponible n'est pas forcément à utiliser",
+          "pas parce qu'on peut on doit",
+          "respect de la vie privée",
+          "limitation"
         ],
-        "indice": "Il faut être un minimum compétent pour mesurer son incompétence.",
-        "saviez": "L'humilité épistémique — savoir qu'on peut se tromper — est la marque des vrais experts.",
+        "indice": "Ce qu'on peut savoir n'est pas toujours ce qu'on devrait utiliser.",
+        "saviez": "La cybersécurité rejoint l'éthique : la技术能力 ne justifie pas l'usage.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 186,
+    "y": 356
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B5",
-    "bird": "cout",
-    "code": "JDP-B5",
-    "x": 406,
-    "y": 448,
-    "lat": 48.8564,
-    "lng": 2.352,
-    "label": "Le puits aux pièces",
+    "bird": "permissions",
+    "code": "PH-B5",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Le Téléphone Vous Trahit",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Tu continues un jeu ennuyeux juste parce que tu as déjà payé. L'argent perdu te pousse à en perdre plus. Quel sophisme suis-je ?",
+        "text": "Une application demande l'accès à ta localisation. Laquelle de ces options est la plus sûre ?\nA : Toujours\nB : Pendant l'utilisation\nC : Refuser",
         "reponses": [
-          "cout irrecuperable",
-          "coût irrécupérable",
-          "le coût irrécupérable",
-          "sophisme du coût irrécupérable",
-          "sunk cost"
+          "B",
+          "pendant l'utilisation",
+          "pendant l'utilisation de l'application"
         ],
-        "indice": "Mon nom parle d'une dépense qui ne reviendra jamais.",
-        "saviez": "Restez jusqu'au bout d'un film nul « puisque le billet est payé » : classique ! Le billet ne reviendra pas pour autant.",
+        "indice": "Donne le minimum nécessaire, le minimum de temps.",
+        "saviez": "La sécurité n'est pas tout autoriser ou tout interdire. C'est donner le bon accès, au bon moment.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "« J'ai déjà investi tant de temps, je ne peux pas arrêter maintenant ! » Je transforme le passé en prison. Qui suis-je ?",
+        "text": "Pourquoi « Refuser toutes les permissions » n'est pas toujours la meilleure solution ?",
         "reponses": [
-          "cout irrecuperable",
-          "coût irrécupérable",
-          "le coût irrécupérable",
-          "sophisme du coût irrécupérable",
-          "sunk cost"
+          "certaines apps en ont besoin",
+          "ça peut casser le fonctionnement",
+          "pas toujours adapté"
         ],
-        "indice": "Seuls les gains futurs devraient compter dans une décision.",
-        "saviez": "Le projet Concorde a été poursuivi des années « à cause des milliards déjà dépensés » : le sophisme porte aussi son nom.",
+        "indice": "Certaines applications ont besoin de permissions pour fonctionner.",
+        "saviez": "L'équilibre entre sécurité et fonctionnalité est la clé.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Comptable de l'impossible, j'exige qu'on paye deux fois la même erreur sous prétexte qu'elle a déjà coûté. Les économistes m'appellent sunk cost. Mon nom français ?",
+        "text": "Quel principe guide le choix des permissions sur un smartphone ?",
         "reponses": [
-          "cout irrecuperable",
-          "coût irrécupérable",
-          "le coût irrécupérable",
-          "sophisme du coût irrécupérable"
+          "le minimum nécessaire",
+          "principe du moindre privilège",
+          "donner le moins possible",
+          "minimum vital"
         ],
-        "indice": "Irrécupérable : ce qui est perdu ne se récupère pas.",
-        "saviez": "La bonne question : « En partant de maintenant, quelle est la meilleure option ? » Le passé n'a pas de vote.",
+        "indice": "Le principe du moindre privilège : seulement ce qui est nécessaire.",
+        "saviez": "En sécurité informatique, on donne le minimum de permissions nécessaires au fonctionnement.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 212,
+    "y": 308
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B6",
-    "bird": "halo",
-    "code": "JDP-B6",
-    "x": 388,
-    "y": 396,
-    "lat": 48.8569,
-    "lng": 2.3525,
-    "label": "Le jardin lumineux",
+    "bird": "mots-de-passe",
+    "code": "PH-B6",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Le Coffre Numérique",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Une seule qualité illumine tout : « Il est sympa, donc intelligent et honnête ! » Quel effet suis-je ?",
+        "text": "Lequel de ces mots de passe est le plus sûr ?\nA : Lucas2009\nB : Mon-Chien-Mange-7-Pizzas!\nC : Azerty123",
         "reponses": [
-          "halo",
-          "effet halo",
-          "l effet halo",
-          "effet de halo"
+          "B",
+          "le deuxième",
+          "Mon-Chien-Mange-7-Pizzas!",
+          "Mon-Chien-Mange-7-Pizzas"
         ],
-        "indice": "Mon nom est le cercle de lumière que les peintres mettent autour des saints.",
-        "saviez": "Edward Thorndike l'a observé en 1920 : une bonne note d'un officier entraînait toutes les autres.",
+        "indice": "Un mot de passe long et avec des caractères variés est plus sûr.",
+        "saviez": "La longueur est plus importante que la complexité. Une phrase est plus sûre qu'un mot.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Une star sourit à la télé et voilà qu'on croit que son produit est génial. Sa lumière colorie tout ce qu'elle touche. Qui suis-je ?",
+        "text": "Pourquoi « Lucas2009 » est un mauvais mot de passe ?",
         "reponses": [
-          "halo",
-          "effet halo",
-          "l effet halo",
-          "effet de halo"
+          "prédicible",
+          "contient une année",
+          "nom + année",
+          "facile à deviner",
+          "trop court"
         ],
-        "indice": "La publicité exploite la renommée : c'est mon royaume.",
-        "saviez": "À l'inverse, le « horn effect » (effet corne) : un seul défaut, et tout le dossier devient sombre.",
+        "indice": "Combien de personnes utilisent leur nom + année de naissance ?",
+        "saviez": "Les pirates testent d'abord les combinaisons les plus courantes : nom + année.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Auréole trompeuse, je fais déborder une vertu sur toutes les autres : jugez-moi en 1920 chez les officiers de Thorndike. Mon nom ?",
+        "text": "Quelle est la meilleure stratégie pour créer un mot de passe mémorisable et sûr ?",
         "reponses": [
-          "halo",
-          "effet halo",
-          "l effet halo",
-          "effet de halo"
+          "phrase secrète",
+          "passphrase",
+          "phrase aléatoire",
+          "3 mots aléatoires"
         ],
-        "indice": "Un rayon de lumière qui aveugle le jugement.",
-        "saviez": "Antidote : noter chaque critère séparément, avant de se faire une opinion globale.",
+        "indice": "Pense à une phrase que toi seul connais, avec des mots aléatoires.",
+        "saviez": "Une passphrase (phrase secrète) est à la fois mémorisable et difficile à craquer.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 250,
+    "y": 292
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B7",
-    "bird": "verite",
-    "code": "JDP-B7",
-    "x": 320,
-    "y": 500,
-    "lat": 48.857,
-    "lng": 2.3526,
-    "label": "L'écho sans fin",
+    "bird": "identite",
+    "code": "PH-B7",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "L'Identité Numérique",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Répétée dix fois, une fausse information finit par paraître vraie. Quelle illusion suis-je ?",
+        "text": "On te donne une fausse identité : Léa, 16 ans, photo, ville, sport, école. Quelle info permet de retrouver son établissement ?",
         "reponses": [
-          "illusion de la verite",
-          "l illusion de la verite",
-          "verite illusoire",
-          "illusion de vérité",
-          "la illusion de la vérité",
-          "vérité illusoire"
+          "l'école",
+          "le nom de l'école",
+          "l'établissement",
+          "école"
         ],
-        "indice": "Mon nom associe « illusion » et une grande mot à 5 lettres : la vérité.",
-        "saviez": "Hasher, Goldstein et Toppino (1977) ont montré que la répétition suffit à créer un sentiment de vérité.",
+        "indice": "Le nom de l'école suffit à la localiser.",
+        "saviez": "Une identité numérique se construit pièce par pièce : chaque info rétrécit l'anonymat.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Je ne suis ni preuve ni source : je ne suis qu'une répétition. Et pourtant, plus on m'entend, plus on me croit. Qui suis-je ?",
+        "text": "Avec le nom d'une ville, le sport pratiqué et une photo d'école, que peut-on déduire ?",
         "reponses": [
-          "illusion de la verite",
-          "l illusion de la verite",
-          "verite illusoire",
-          "illusion de vérité",
-          "vérité illusoire"
+          "l'identité",
+          "qui c'est",
+          "l'établissement",
+          "la personne"
         ],
-        "indice": "Les rumeurs prospèrent grâce à moi.",
-        "saviez": "Le réflexe : vérifier la source et la date avant de partager. Une répétition n'est pas une preuve.",
+        "indice": "Croise les informations : ville + école = identité.",
+        "saviez": "L'OSINT (renseignement d'ouverture) utilise les données publiques pour reconstituer une identité.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Sœur jumelle du mensonge, je gagne ma force à chaque écho. Trois chercheurs de 1977 m'ont donnée un nom. Lequel ?",
+        "text": "Quel est le risque principal de partager beaucoup d'informations personnelles en ligne ?",
         "reponses": [
-          "illusion de la verite",
-          "verite illusoire",
-          "illusory truth"
+          "reconstruction de l'identité",
+          "usurpation",
+          "harcèlement",
+          "vol d'identité",
+          "traque"
         ],
-        "indice": "Illusory truth effect en anglais.",
-        "saviez": "Même des gens avertis retombent dans le panneau : la familiarité agit avant la réflexion.",
+        "indice": "Chaque information publique est un puzzle qui peut être assemblé.",
+        "saviez": "On n'a pas besoin d'un mot de passe pour en savoir beaucoup sur quelqu'un.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 320,
+    "y": 296
   },
   {
     "type": "balise",
     "version": 1,
     "id": "B8",
-    "bird": "barnum",
-    "code": "JDP-B8",
-    "x": 148,
-    "y": 560,
-    "lat": 48.8571,
-    "lng": 2.3527,
-    "label": "La roulotte du devin",
+    "bird": "reseau",
+    "code": "PH-B8",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "Le Réseau",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "« Tu as besoin que les autres t'estiment, mais tu doutes de toi parfois. » Ça te ressemble ? À moi aussi ! Quel effet suis-je ?",
+        "text": "Tu vois 3 réseaux Wi-Fi : CURIOS-WIFI, CURIOS-GUEST, PHANTOM_FREE_WIFI. Lequel est le plus suspect ?",
         "reponses": [
-          "barnum",
-          "effet barnum",
-          "l effet barnum",
-          "forer",
-          "effet forer"
+          "PHANTOM_FREE_WIFI",
+          "le troisième",
+          "PHANTOM"
         ],
-        "indice": "Mon nom vient du directeur de cirque P.T. Barnum : un spectacle pour tous !",
-        "saviez": "En 1949, Bertram Forer a donné le même portrait astrologique à toute sa classe : note moyenne de vérité, 4/5 !",
+        "indice": "Un réseau avec un nom accrocheur et gratuit est souvent suspect.",
+        "saviez": "Un réseau Wi-Fi ouvert n'est pas forcément malveillant, mais un réseau inconnu ne doit pas être considéré comme fiable.",
         "ages": [
-          6,
-          9
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Horoscopes et faux tests me servent de scène : mes phrases floues semblent faites sur mesure… pour tout le monde. Qui suis-je ?",
+        "text": "Qu'est-ce que le HTTPS ?",
         "reponses": [
-          "barnum",
-          "effet barnum",
-          "l effet barnum",
-          "forer",
-          "effet forer"
+          "une connexion sécurisée",
+          "un protocole sécurisé",
+          "chiffrement",
+          "protection"
         ],
-        "indice": "Une description vague qui convient à presque tout le monde.",
-        "saviez": "Test Barnum : si la phrase marcherait pour n'importe qui, elle ne décrit personne en particulier.",
+        "indice": "C'est ce qui active le cadenas dans la barre d'adresse.",
+        "saviez": "HTTPS chiffre les données entre ton navigateur et le site. Sans HTTPS, tout est en clair.",
         "ages": [
-          10,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Charlatan des généralités, je peins des portraits universels que chacun prend pour son reflet. Mon second nom est celui du psychologue de 1949. Qui suis-je ?",
+        "text": "Un réseau Wi-Fi public peut-il être utilisé en toute sécurité ?",
         "reponses": [
-          "barnum",
-          "forer",
-          "effet barnum",
-          "effet forer"
+          "oui avec précautions",
+          "avec un VPN",
+          "jamais en toute sécurité",
+          "ça dépend"
         ],
-        "indice": "Deux noms possibles : un cirque et un psychologue.",
-        "saviez": "L'antidote : exiger de la précision. Une vraie description personnelle comporte des détails vérifiables.",
+        "indice": "La réponse n'est pas binaire : il y a des précautions à prendre.",
+        "saviez": "Un VPN, le HTTPS et la mise à jour sont les protections de base sur un réseau public.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
     },
-    "enigme": null
+    "enigme": null,
+    "x": 356,
+    "y": 352
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "C1",
-    "bird": "cooperation",
-    "code": "JDP-C1",
-    "label": "Le cercle d'entraide",
-    "x": 240,
-    "y": 105,
-    "lat": 50.7258178,
-    "lng": 3.1329639,
+    "id": "B9",
+    "bird": "phantom",
+    "code": "PH-B9",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "label": "PHANTOM",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Ici, personne ne gagne seul : on avance en tirant tous dans le même sens. Quel principe suis-je ?",
+        "text": "Qui est PHANTOM ?\nA : Un pirate informatique\nB : Un protocole automatisé\nC : Un virus",
         "reponses": [
-          "cooperation",
-          "la cooperation",
-          "coopérer",
-          "cooperer"
+          "B",
+          "un protocole",
+          "un protocole automatisé",
+          "le protocole"
         ],
-        "indice": "Mon nom commence comme « opérer »… mais ensemble.",
-        "saviez": "Freinet appelait cela la « classe coopérative » : les élèves gèrent leur journal, leurs responsabilités, leur budget.",
+        "indice": "PHANTOM n'est pas une personne...",
+        "saviez": "PHANTOM exploite les erreurs humaines, pas les failles informatiques.",
         "ages": [
-          8,
-          10
+          12,
+          14
         ]
       },
       "moyen": {
-        "text": "Je transforme un groupe d'élèves en équipe : tutorat, conseils, projets communs. La victoire de l'un devient celle de tous. Qui suis-je ?",
+        "text": "Pourquoi dit-on que PHANTOM est « dans les décisions que vous prenez » ?",
         "reponses": [
-          "cooperation",
-          "pedagogie cooperative",
-          "la pedagogie cooperative"
+          "parce que c'est l'humain qui décide",
+          "c'est nos erreurs",
+          "la vulnérabilité humaine",
+          "nos choix"
         ],
-        "indice": "On m'oppose souvent à la compétition.",
-        "saviez": "Expliquer à un pair oblige à organiser sa pensée : c'est pourquoi le tutorat profite aussi à celui qui explique.",
+        "indice": "L'ordinateur ne se fait pas pirater. C'est l'utilisateur qui est manipulé.",
+        "saviez": "L'ingénierie sociale exploite la confiance, l'urgence et la peur.",
         "ages": [
-          11,
-          13
+          14,
+          16
         ]
       },
       "difficile": {
-        "text": "Instituée par un maître d'école du Bar-sur-Loup, je remplace la rangée silencieuse par un atelier solidaire. Mon nom complet ?",
+        "text": "Quelle est la leçon principale de l'opération PHANTOM ?",
         "reponses": [
-          "pedagogie cooperative freinet",
-          "la pedagogie cooperativa",
-          "cooperation"
+          "la sécurité est dans nos décisions",
+          "réfléchir avant d'agir",
+          "ne pas se faire manipuler",
+          "l'esprit critique"
         ],
-        "indice": "Pensez à Célestin Freinet et à son École moderne.",
-        "saviez": "Le conseil de coopérative existe encore aujourd'hui dans de nombreuses classes françaises.",
+        "indice": "Le véritable ennemi n'est pas la技术, c'est la imprévoyance.",
+        "saviez": "PHANTOM n'est pas dans votre téléphone. PHANTOM est dans les décisions que vous prenez lorsque quelqu'un vous pousse à agir trop vite.",
         "ages": [
-          14,
-          99
+          16,
+          18
         ]
       }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C10",
-    "bird": "ess",
-    "code": "JDP-C10",
-    "label": "La monnaie du sens",
-    "x": 87,
-    "y": 225,
-    "lat": 50.6315014,
-    "lng": 3.0558671,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Ici, l'argent gagné retourne dans le projet, pas dans les poches d'actionnaires. Comment appelle-t-on cette économie ?",
-        "reponses": [
-          "l'economie sociale et solidaire",
-          "economie sociale et solidaire",
-          "ess",
-          "l ess",
-          "l'ess",
-          "economie solidaire"
-        ],
-        "indice": "Trois initiales : E-S-S.",
-        "saviez": "Les CEMÉA relèvent à la fois de l'utilité publique et de l'économie sociale et solidaire.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Coopératives, associations, mutuelles : mon principe est simple, une personne = une voix. Quel secteur suis-je ?",
-        "reponses": [
-          "l'economie sociale et solidaire",
-          "economie sociale et solidaire",
-          "ess",
-          "l ess",
-          "l'ess"
-        ],
-        "indice": "On la surnomme souvent par trois lettres.",
-        "saviez": "Dans une coopérative, ce sont les sociétaires qui votent, pas les actionnaires majoritaires.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Association reconnue d'utilité publique ET entreprise de l'ESS, le mouvement CEMÉA s'appuie sur un réseau décentralisé. Sur quoi repose sa gouvernance ?",
-        "reponses": [
-          "une personne une voix",
-          "1 personne 1 voix",
-          "une personne egale une voix",
-          "une personne = une voix",
-          "une tete regionale par territoire"
-        ],
-        "indice": "Pensez au suffrage… coopératif.",
-        "saviez": "Chaque tête régionale CEMÉA adapte les formations aux besoins de son territoire.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C11",
-    "bird": "locaux-accessibles",
-    "code": "JDP-C11",
-    "label": "La porte large",
-    "x": 149,
-    "y": 138,
-    "lat": 50.6315107,
-    "lng": 3.0558901,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Mes portes sont larges, mes couloirs sans marches : ici, tout le monde peut entrer et apprendre. De quoi parle-t-on ?",
-        "reponses": [
-          "l'accessibilite",
-          "accessibilite",
-          "accessibilité",
-          "un lieu accessible",
-          "locaux accessibles"
-        ],
-        "indice": "Le mot vient de « accéder » : pouvoir entrer.",
-        "saviez": "Les locaux lillois des CEMÉA NPDC sont conçus pour être accessibles à toutes et tous.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Rampes, signalétique claire, temps adapté : je désigne l'ensemble des conditions qui permettent à chacun de participer. Suis-je ?",
-        "reponses": [
-          "l'accessibilite",
-          "accessibilite",
-          "accessibilite universelle",
-          "l accessibilite"
-        ],
-        "indice": "Universelle, même.",
-        "saviez": "L'accessibilité est une condition de la démocratie culturelle défendue par l'éducation populaire.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Siège des CEMÉA Nord-Pas-de-Calais, ce lieu lillois illustre leur principe d'accueil inconditionnel. Dans quelle rue se trouve-t-il ?",
-        "reponses": [
-          "rue ernest deconynck",
-          "ernest deconynck",
-          "11 rue ernest deconynck",
-          "rue deconynck"
-        ],
-        "indice": "Un prénom et un nom lillois : Ernest …",
-        "saviez": "Bien accueillir commence par l'architecture : portes larges, cheminements clairs, temps laissés.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C2",
-    "bird": "methode-active",
-    "code": "JDP-C2",
-    "label": "L'atelier des mains",
-    "x": 331,
-    "y": 138,
-    "lat": 50.6314952,
-    "lng": 3.0559003,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "On ne m'apprend pas en écoutant seulement : il faut me toucher, me tester, me rater puis me réussir. Comment appelle-t-on cette façon d'apprendre ?",
-        "reponses": [
-          "methode active",
-          "methodes actives",
-          "apprendre en faisant",
-          "education active"
-        ],
-        "indice": "Mes mains ! Le corps participe.",
-        "saviez": "Les CEMÉA ont été créés en 1937 précisément pour entraîner aux méthodes d'éducation ACTIVE.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Je suis l'inverse du cours magistral pur : ici on expérimente, on cherche, on prouve. Mon nom ?",
-        "reponses": [
-          "methode active",
-          "pedagogie active",
-          "l education active"
-        ],
-        "indice": "Adjectif opposé à « passif ».",
-        "saviez": "Faire soi-même multiplie la mémorisation : c'est prouvé par les recherches en sciences cognitives.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Créés en 1937 pour former les cadres des colonies et des mouvements de jeunesse, ces centres portent mon nom dans leur intitulé. Lesquels ?",
-        "reponses": [
-          "cemea",
-          "les cemea",
-          "centres d entrainement aux methodes d education active"
-        ],
-        "indice": "Quatre lettres majuscules.",
-        "saviez": "Les CEMÉA forment toujours aujourd'hui animateurs, éducateurs et enseignants, en France et à l'international.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C3",
-    "bird": "expression",
-    "code": "JDP-C3",
-    "label": "La scène ouverte",
-    "x": 393,
-    "y": 225,
-    "lat": 50.631502,
-    "lng": 3.0559154,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Écris, dessine, dis : ici ta parole vaut sans note ni sanction. Comment nomme-t-on cette liberté de s'exprimer ?",
-        "reponses": [
-          "expression libre",
-          "l expression libre",
-          "expression"
-        ],
-        "indice": "Libre comme l'oiseau — mais c'est ta voix qui s'envole.",
-        "saviez": "Le journal de classe imprimait les textes des élèves pour de vrais lecteurs : parents, correspondants, autres classes.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "On rejoue une dispute devant vous, puis on arrête tout : à vous de changer le cours de l'histoire. Quelle technique suis-je ?",
-        "reponses": [
-          "theatre forum",
-          "theatre-forum",
-          "le theatre forum"
-        ],
-        "indice": "Augusto Boal l'appelait aussi « théâtre des opprimés ».",
-        "saviez": "Le théâtre-forum est utilisé pour travailler citoyenneté, harcèlement, égalité : on répète à agir autrement.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "De Freinet à Boal, je suis le fil rouge : faire entendre celles et ceux qu'on n'écoute jamais. En deux mots ?",
-        "reponses": [
-          "expression libre",
-          "libre expression"
-        ],
-        "indice": "Deux mots : un verbe nominalisé + un adjectif.",
-        "saviez": "Prendre la parole en public figure parmi les compétences psychosociales recommandées par l'OMS.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C4",
-    "bird": "emancipation",
-    "code": "JDP-C4",
-    "label": "Le conseil des libres",
-    "x": 406,
-    "y": 339,
-    "lat": 50.6314986,
-    "lng": 3.0559328,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Grâce à moi, tu comprends mieux le monde et tu décides toi-même au lieu de subir. Que deviens-tu ainsi ?",
-        "reponses": [
-          "emancipe",
-          "émancipé",
-          "emancipee",
-          "plus libre",
-          "autonome"
-        ],
-        "indice": "Presque « mancipé »… mais débarrassé des chaînes de l'ignorance.",
-        "saviez": "« Émanciper » vient du droit romain : affranchir un enfant de l'autorité du père.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Lire un contrat, vérifier une info, argumenter calmement : ces savoirs-là rendent difficile à duper. Quel but poursuit l'éducation populaire à travers eux ?",
-        "reponses": [
-          "l emancipation",
-          "emancipation",
-          "rendre libre"
-        ],
-        "indice": "C'est le titre même de cette découverte.",
-        "saviez": "Condorcet proposait dès 1792 une instruction publique gratuite et égale pour toutes et tous.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Ni dressage ni remplissage : je suis le projet qui traverse de Condorcet aux CEMÉA — former des esprits libres capables de transformer leur monde. Un mot ?",
-        "reponses": [
-          "emancipation",
-          "l emancipation",
-          "emanciper"
-        ],
-        "indice": "Sept syllabes… presque une révolution.",
-        "saviez": "Pour l'éducation populaire, on n'apprend pas seulement pour l'école, mais pour agir dans la société.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C5",
-    "bird": "acces-tous",
-    "code": "JDP-C5",
-    "label": "La grande porte ouverte",
-    "x": 367,
-    "y": 444,
-    "lat": 50.6314833,
-    "lng": 3.0559315,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Depuis 1936, les vacances ne sont plus un privilège : elles deviennent un droit pour toutes et tous. Qui a organisé ces premiers loisirs populaires ?",
-        "reponses": [
-          "leo lagrange",
-          "lagrange"
-        ],
-        "indice": "Prénom d'un lion, nom d'un mathématicien célèbre.",
-        "saviez": "Léo Lagrange fut sous-secrétaire d'État aux Sports et à l'Organisation des Loisirs dès 1936.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Colos, MJC, bibliothèques de quartier : je veille à ce que la culture ne soit pas une marchandise de luxe. Comment appelle-t-on cet idéal ?",
-        "reponses": [
-          "democratie culturelle",
-          "la democratie culturelle",
-          "acces pour tous",
-          "culture pour tous"
-        ],
-        "indice": "Démocratie… mais côté culture.",
-        "saviez": "Les colonies de vacances ont accueilli des millions d'enfants depuis les années 1930.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Ma question rituelle : « Qui n'est pas venu ? Pourquoi ? Comment rouvrir la porte ? » Je suis la boussole de toute action d'éducation populaire. Quel principe ?",
-        "reponses": [
-          "acces de tous",
-          "l acces de tous a la culture",
-          "pour toutes et tous",
-          "democratie culturelle"
-        ],
-        "indice": "Cette découverte s'intitule « Pour … et … ».",
-        "saviez": "Ce souci d'accès irrigue aussi les politiques publiques : tarif réduit, transport solidaire, matériel prêté.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C6",
-    "bird": "jeu-role",
-    "code": "JDP-C6",
-    "label": "Le terrain des possibles",
-    "x": 287,
-    "y": 507,
-    "lat": 50.6314782,
-    "lng": 3.0559141,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Je te fais vivre un entretien ou un débat… pour de faux ! Demain, tu sauras le faire pour de vrai. Que pratique-t-on ici ?",
-        "reponses": [
-          "jeu de role",
-          "le jeu de role",
-          "mise en situation"
-        ],
-        "indice": "On endosse un personnage, comme au théâtre.",
-        "saviez": "Les pilotes s'entraînent sur simulateur : c'est le même principe pour les situations humaines.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Avant, je joue ; après, j'analyse : qu'ai-je ressenti, décidé, appris ? Comment s'appelle cette phase essentielle ?",
-        "reponses": [
-          "debriefing",
-          "le debriefing",
-          "debrief",
-          "retour d experience"
-        ],
-        "indice": "Mot anglais adopté en formation…",
-        "saviez": "Sans débriefing, le jeu reste un divertissement ; avec lui, il devient apprentissage.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Simuler pour ne pas subir : je suis la méthode signature des formations CEMÉA, où l'on éprouve les situations avant de les vivre. De quelle méthode parle-t-on ?",
-        "reponses": [
-          "mises en situation",
-          "mise en situation",
-          "jeux de role",
-          "simulation"
-        ],
-        "indice": "Pluriel conseillé : on n'éprouve jamais qu'une seule fois.",
-        "saviez": "Ces mises en situation préparent aux métiers de l'animation, du social et de l'éducation spécialisée.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C7",
-    "bird": "journee-dehors",
-    "code": "JDP-C7",
-    "label": "La salle sans murs",
-    "x": 193,
-    "y": 507,
-    "lat": 50.6314652,
-    "lng": 3.0558846,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Ma salle n'a ni plafond ni murs : les feuilles servent de cahier et le vent de messager. Où apprend-on ainsi ?",
-        "reponses": [
-          "dehors",
-          "en exterieur",
-          "à l'extérieur",
-          "exterieur",
-          "la nature",
-          "nature",
-          "en pleine air",
-          "plein air"
-        ],
-        "indice": "Levez les yeux : le plafond est bleu (ou gris).",
-        "saviez": "La Journée Éducation du Dehors réunit chaque année un peu plus d'une centaine de participant·es à Lille.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Forest schools au nord, classes vertes au sud : je désigne toutes les pratiques où l'on apprend hors des murs. Qui suis-je ?",
-        "reponses": [
-          "l'education du dehors",
-          "education du dehors",
-          "education dehors",
-          "l education du dehors"
-        ],
-        "indice": "Trois mots : éducation … du …",
-        "saviez": "Apprendre dehors mobilise le corps : on retient mieux quand on bouge, touche et explore.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Organisée à Lille par les CEMÉA NPDC, cette journée annuelle rassemble plus de cent professionnels de l'enfance autour du jeu et de la nature. Son nom ?",
-        "reponses": [
-          "journee education du dehors",
-          "la journee education du dehors",
-          "journee de l education du dehors",
-          "journée éducation du dehors"
-        ],
-        "indice": "Elle célèbre un lieu : le « dehors ».",
-        "saviez": "Les forest schools scandinaves inspirent directement les pratiques françaises d'éducation du dehors.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C8",
-    "bird": "erasmus",
-    "code": "JDP-C8",
-    "label": "Le pont de l'Europe",
-    "x": 113,
-    "y": 444,
-    "lat": 50.6314701,
-    "lng": 3.0558641,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Huit maîtresses italiennes ont traversé la mer pour découvrir comment on fait la classe à la française. Quel programme européen paie le voyage ?",
-        "reponses": [
-          "erasmus",
-          "erasmus+",
-          "erasmus plus",
-          "le programme erasmus"
-        ],
-        "indice": "Ce prénom grec est devenu LE mot des échanges d'étudiants.",
-        "saviez": "En juin 2026, les CEMÉA NPDC accueillaient huit enseignantes des écoles Margherita Fasolo (Italie).",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Je finance les mobilités des apprentis, des élèves et des enseignants pour que les savoirs voyagent en Europe. Je suis…",
-        "reponses": [
-          "erasmus+",
-          "erasmus plus",
-          "erasmus"
-        ],
-        "indice": "Ajoutez un « + » au nom le plus connu d'Europe.",
-        "saviez": "Observer une classe étrangère oblige à repenser ses propres routines pédagogiques.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Juin 2026, Lille : une délégation italienne découvre la pédagogie active grâce aux CEMÉA NPDC. Quelles écoles représentait-elle ?",
-        "reponses": [
-          "ecoles margherita fasolo",
-          "les ecoles margherita fasolo",
-          "margherita fasolo",
-          "ecole margherita fasolo"
-        ],
-        "indice": "Un prénom et un nom : Margherita …",
-        "saviez": "Les mobilités Erasmus+ concernent aussi bien les élèves que les professionnel·les de l'éducation.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
-  },
-  {
-    "type": "balise",
-    "version": 1,
-    "id": "C9",
-    "bird": "yakamedia",
-    "code": "JDP-C9",
-    "label": "La voix des jeunes",
-    "x": 74,
-    "y": 339,
-    "lat": 50.6314852,
-    "lng": 3.0558591,
-    "hintImg": "",
-    "enigmes": {
-      "facile": {
-        "text": "Journal, radio, vidéo : ici, ce sont les jeunes qui tiennent la plume et le micro. Comment s'appelle leur média ?",
-        "reponses": [
-          "yakamedia",
-          "yaka media",
-          "yak"
-        ],
-        "indice": "Ça commence comme « Y a ka »… comprendre : il y a quoi !",
-        "saviez": "Yakamédia publie des contenus créés par et pour les jeunes, accompagnés par les CEMÉA.",
-        "ages": [
-          8,
-          10
-        ]
-      },
-      "moyen": {
-        "text": "Née en 1955 sous forme de revue, je donne la parole aux enfants depuis bientôt un siècle de médias. Mon petit nom ?",
-        "reponses": [
-          "yak",
-          "la revue yak",
-          "revue yak"
-        ],
-        "indice": "Trois lettres, ça veut dire « il y a quoi ? ».",
-        "saviez": "Faire son journal apprend à vérifier, hiérarchiser et raconter : le socle de l'esprit critique.",
-        "ages": [
-          11,
-          13
-        ]
-      },
-      "difficile": {
-        "text": "Plateforme des CEMÉA dédiée aux médias jeunesse, je prolonge une revue pionnière créée en 1955. Mon nom complet ?",
-        "reponses": [
-          "yakamedia",
-          "yaka media",
-          "yakamedia cemea",
-          "la plateforme yakamedia"
-        ],
-        "indice": "Yak + média.",
-        "saviez": "En 1955, laisser les enfants écrire leur propre revue était une vraie révolution culturelle.",
-        "ages": [
-          14,
-          99
-        ]
-      }
-    }
+    },
+    "enigme": null,
+    "x": 388,
+    "y": 448
   }
 ];
 

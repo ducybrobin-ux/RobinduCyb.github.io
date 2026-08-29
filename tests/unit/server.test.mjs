@@ -360,6 +360,39 @@ describe("GET /api/editor", () => {
   });
 });
 
+describe("Packs API", () => {
+  it("GET /api/packs lists the active phantom pack", async () => {
+    const res = await fetch("/api/packs");
+    assert.equal(res.status, 200);
+    const data = res.json();
+    assert.equal(data.ok, true);
+    const phantom = data.packs.find((p) => p.id === "phantom-cybersecurite");
+    assert.ok(phantom, "phantom-cybersecurite must be listed");
+    assert.equal(phantom.state, "ACTIVE");
+  });
+
+  it("GET /api/packs/:id returns the pack bundle", async () => {
+    const res = await fetch("/api/packs/phantom-cybersecurite");
+    assert.equal(res.status, 200);
+    const data = res.json();
+    assert.equal(data.ok, true);
+    assert.equal(data.id, "phantom-cybersecurite");
+    assert.equal(data.bundle.pack.id, "phantom-cybersecurite");
+    assert.equal(data.bundle.balises.length, 9);
+    assert.equal(data.bundle.decouvertes.length, 9);
+  });
+
+  it("GET /api/packs/:id 404 for unknown pack", async () => {
+    const res = await fetch("/api/packs/inexistant");
+    assert.equal(res.status, 404);
+  });
+
+  it("POST /api/packs/activate requires auth", async () => {
+    const res = await jsonPost("/api/packs/activate", { id: "phantom-cybersecurite" });
+    assert.equal(res.status, 401);
+  });
+});
+
 describe("Static files", () => {
   it("serves index.html", async () => {
     const res = await fetch("/");

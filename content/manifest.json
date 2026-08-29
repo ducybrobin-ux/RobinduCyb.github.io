@@ -1,9 +1,25 @@
 {
   "version": 1,
   "packs": [
-    { "id": "biais-cognitifs", "actif": true },
-    { "id": "cemea-education-populaire", "actif": true },
-    { "id": "harcelement-scolaire", "actif": false },
-    { "id": "metiers-tension", "actif": false }
+    {
+      "id": "biais-cognitifs",
+      "actif": false
+    },
+    {
+      "id": "cemea-education-populaire",
+      "actif": false
+    },
+    {
+      "id": "harcelement-scolaire",
+      "actif": false
+    },
+    {
+      "id": "metiers-tension",
+      "actif": false
+    },
+    {
+      "id": "phantom-cybersecurite",
+      "actif": true
+    }
   ]
 }

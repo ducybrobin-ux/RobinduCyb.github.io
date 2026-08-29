@@ -311,9 +311,10 @@
       if (isGod) {
         tip.textContent = "🛠️ Profil « Admin » : le mode admin est activé (codes, QR codes, navigation directe).";
       } else {
-        tip.innerHTML = done >= BALISES.length
+        const t = currentTarget();
+        tip.innerHTML = done >= BALISES.length || !t
           ? "🎉 Parcours terminé ! Rejouez pour battre votre record, ou consultez le palmarès des familles."
-          : `Prochaine balise : <strong>${esc(currentTarget().label)}</strong> — scannez son QR code sur place.`;
+          : `Prochaine balise : <strong>${esc(t.label)}</strong> — scannez son QR code sur place.`;
       }
     } else {
       prog.innerHTML = I18N.t("home_progress_noprofile");
@@ -1906,14 +1907,48 @@
           out += '<div class="parc-head"><span class="parc-name">' + esc(pk.name) + '</span>' + badge(pk.state) + '</div>';
           if (meta) out += '<div class="parc-sub">' + esc(meta) + '</div>';
           if (pk.description) out += '<div class="parc-desc">' + esc(pk.description).slice(0, 140) + (pk.description.length > 140 ? "\u2026" : "") + '</div>';
+          if (pk.state !== "ACTIVE") {
+            out += '<div class="parc-actions"><button class="btn btn-outline" data-activate-pack="' + esc(pk.id) + '">\ud83d\udce6 Choisir ce parcours</button></div>';
+          } else {
+            out += '<div class="parc-actions"><span class="parc-badge badge-ACTIVE">\u2714 Parcours actif</span></div>';
+          }
           out += '</div>';
         }
         cat.innerHTML = out;
+        cat.querySelectorAll("[data-activate-pack]").forEach((btn) => {
+          btn.addEventListener("click", () => activatePack(btn.dataset.activatePack));
+        });
       })
       .catch(() => {
         const cat = $("parc-catalog");
         if (cat) cat.innerHTML = '<p class="note">Hors ligne : catalogue indisponible. Le parcours actuel reste jouable.</p>';
       });
+  }
+
+  /* Active un pack côté serveur (écrit content/manifest.json + régénère
+     js/data.js) puis recharge pour servir le nouveau parcours à toutes les
+     tablettes. Réservé à l'organisateur (token Hub ou admin). */
+  async function activatePack(id) {
+    try {
+      const token = window.HubAuth && window.HubAuth.getToken ? window.HubAuth.getToken() : null;
+      const headers = { "Content-Type": "application/json" };
+      if (token) headers["Authorization"] = "Bearer " + token;
+      const res = await fetch("/api/packs/activate", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ id }),
+      });
+      if (!res.ok) {
+        if (res.status === 401) toast("Sélection réservée à l'organisateur — connectez-vous en mode Admin.");
+        else if (res.status === 403) toast("Votre compte ne permet pas de changer de parcours.");
+        else toast("Activation impossible. Vérifiez la connexion au serveur.");
+        return;
+      }
+      toast("Parcours activé — rechargement…");
+      setTimeout(() => location.reload(true), 500);
+    } catch (e) {
+      toast("Hors ligne : activez le parcours depuis l'écran organisateur.");
+    }
   }
 
   function renderAdmin() {
@@ -2028,6 +2063,7 @@
     document.querySelectorAll(".home-tile, .nav-btn").forEach((b) => {
       b.addEventListener("click", () => {
         const go = b.dataset.go;
+        if (!go) return;
         if (go === "carnet") renderCarnet();
         if (go === "palmares") renderPalmares();
         if (go === "settings") { renderSettings(); applySettings(); }
@@ -2257,11 +2293,41 @@
     $("btn-race-start").addEventListener("click", startRace);
     $("btn-race-refresh").addEventListener("click", () => renderRaceEnd(Store.getActive()));
     $("btn-race-guestbook").addEventListener("click", openGuestbook);
+
+    // Réglages (panneaux statiques, liés une seule fois)
+    $("btn-troubleshoot").addEventListener("click", runTroubleshoot);
+    $("btn-tester").addEventListener("click", () => $("tester-panel").classList.toggle("hidden"));
+    $("btn-tester-questionnaire").addEventListener("click", () => {
+      if (!window.open("questionnaire.html", "_blank")) location.href = "questionnaire.html";
+    });
+    $("btn-tester-report").addEventListener("click", async () => {
+      const pre = $("tester-report");
+      pre.textContent = I18N.t("tester_report_gen");
+      pre.classList.remove("hidden");
+      pre.textContent = await generateTesterReport();
+      $("btn-tester-copy").classList.remove("hidden");
+      $("btn-tester-share").classList.remove("hidden");
+    });
+    $("btn-tester-copy").addEventListener("click", () => copyText($("tester-report").textContent));
+    $("btn-tester-share").addEventListener("click", async () => {
+      const text = $("tester-report").textContent;
+      if (navigator.share) {
+        try { await navigator.share({ title: "JDP", text }); return; } catch (e) {}
+      }
+      copyText(text);
+    });
+    $("btn-contact").addEventListener("click", () => {
+      const email = "contact@exemple.fr";
+      const status = $("contact-status");
+      copyText(email);
+      if (status) status.textContent = I18N.t("contact_copied");
+      const subject = `Multi JDP - ${  Store.getActive() ? Store.getActive().name : ""}`;
+      window.location.href = `mailto:${  email  }?subject=${  encodeURIComponent(subject)}`;
+    });
   }
 
   function renderSettings() {
     $("info-version").textContent = I18N.t("set_version");
-    $("btn-troubleshoot").addEventListener("click", runTroubleshoot);
     // Sélecteur de pays / langue (drapeaux)
     const row = $("lang-row");
     if (row) {
@@ -2364,39 +2430,11 @@
     const isSam = !!Store.getActive() && isGodProfile(Store.getActive());
     if (adminRow) adminRow.classList.toggle("hidden", !isSam);
     if (adminChk) adminChk.checked = isSam ? !Store.getSettings().adminOff : false;
-    // Espace testeur bêta
+    // Espace testeur bêta (les clics sont liés une seule fois dans bindEvents)
     const tqChk = $("set-tester-q");
     if (tqChk) tqChk.checked = !!Store.getSettings().testerQ;
     const tqBtn = $("btn-tester-questionnaire");
     if (tqBtn) tqBtn.disabled = !tqChk || !tqChk.checked;
-    $("btn-tester").addEventListener("click", () => $("tester-panel").classList.toggle("hidden"));
-    $("btn-tester-questionnaire").addEventListener("click", () => {
-      if (!window.open("questionnaire.html", "_blank")) location.href = "questionnaire.html";
-    });
-    $("btn-tester-report").addEventListener("click", async () => {
-      const pre = $("tester-report");
-      pre.textContent = I18N.t("tester_report_gen");
-      pre.classList.remove("hidden");
-      pre.textContent = await generateTesterReport();
-      $("btn-tester-copy").classList.remove("hidden");
-      $("btn-tester-share").classList.remove("hidden");
-    });
-    $("btn-tester-copy").addEventListener("click", () => copyText($("tester-report").textContent));
-    $("btn-tester-share").addEventListener("click", async () => {
-      const text = $("tester-report").textContent;
-      if (navigator.share) {
-        try { await navigator.share({ title: "JDP", text }); return; } catch (e) {}
-      }
-      copyText(text);
-    });
-    $("btn-contact").addEventListener("click", () => {
-      const email = "contact@exemple.fr";
-      const status = $("contact-status");
-      copyText(email);
-      if (status) status.textContent = I18N.t("contact_copied");
-      const subject = `Multi JDP - ${  Store.getActive() ? Store.getActive().name : ""}`;
-      window.location.href = `mailto:${  email  }?subject=${  encodeURIComponent(subject)}`;
-    });
     updateOfflineUI();
   }
 
