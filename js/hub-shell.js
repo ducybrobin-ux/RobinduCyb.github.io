@@ -10,6 +10,7 @@
     { id: "dashboard", label: "Dashboard", icon: "📊" },
     { id: "projets", label: "Projets", icon: "📁" },
     { id: "parcours", label: "Parcours", icon: "🗺️" },
+    { id: "catalogue", label: "Catalogue", icon: "🎨" },
     { id: "packs", label: "Packs", icon: "📦" },
     { id: "sessions", label: "Sessions", icon: "🎯" },
     { id: "clients", label: "Clients", icon: "👥" },

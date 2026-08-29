@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "coordonnees",
+  "nom": "Coordonnées et orientation",
+  "latin": "Coordonnées célestes · Sphère céleste · Azimut",
+  "emoji": "🧭",
+  "couleur": "#315468",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "Se repérer dans l'espace, c'est utiliser des coordonnées et une boussole : l'azimut mesure une direction en degrés depuis le nord pour pointer une étoile.",
+  "anecdotes": [
+    "La sphère céleste imaginaire permet de placer chaque étoile avec deux coordonnées, comme une adresse sur le globe.",
+    "L'azimut se mesure de 0° (nord) à 360° en passant par l'est, le sud et l'ouest.",
+    "Depuis toujours, navigateurs et astronomes se sont fiés aux étoiles pour s'orienter."
+  ],
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 5,
+    "objectif": "Lire un azimut et se repérer sur la sphère céleste pour orienter une observation du ciel.",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

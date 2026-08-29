@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "P2",
+  "bird": "fragment",
+  "code": "PAS-P2",
+  "x": 148,
+  "y": 400,
+  "lat": null,
+  "lng": null,
+  "label": "Le Fragment",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Regarde bien autour de toi : chaque endroit du parcours ne montre qu'un bout du grand message. Comment appelle-t-on ce bout ?",
+      "reponses": ["un fragment", "fragment", "un indice"],
+      "indice": "Cela commence comme « fragile » : un petit morceau cassé d'un tout.",
+      "saviez": "Dans une enquête, un seul fragment ne prouve rien : c'est leur ensemble qui fait sens.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Tu as réuni plusieurs morceaux épars. Pour comprendre le message complet, il faut les remettre dans le bon ordre. Nomme ce travail.",
+      "reponses": ["la reconstitution", "reconstitution"],
+      "indice": "Re… comme recommencer, puis « constitution » : refaire le tout.",
+      "saviez": "Dans les laboratoires, on reconstitue des documents déchirés morceau par morceau, comme un puzzle géant.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "À partir d'un seul fragment, on formule une supposition provisoire avant de la vérifier. Quel terme scientifique désigne cette supposition ?",
+      "reponses": ["une hypothese", "hypothese", "une hypothèse"],
+      "indice": "Elle commence par la lettre qui se cache au début d'« hypersensible ».",
+      "saviez": "« Hypothèse » vient du grec hupothesis (base, fondement) : une base provisoire que l'expérience doit confirmer ou infirmer.",
+      "ages": [14, 99]
+    }
+  },
+  "enigme": null
+}

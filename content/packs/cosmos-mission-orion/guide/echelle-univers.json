@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "echelle-univers",
+  "nom": "L'échelle de l'univers",
+  "latin": "Échelle de l'univers · Tailles et distances",
+  "emoji": "🌌",
+  "couleur": "#315468",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "De la Lune à la supergéante Bételgeuse, l'univers s'étend sur des échelles vertigineuses qu'on appréhende en rangeant les objets du plus petit au plus grand.",
+  "anecdotes": [
+    "Les puissances de dix permettent de passer de l'échelle humaine aux lointaines galaxies.",
+    "La lumière met 8 minutes pour venir du Soleil mais plus de 4 ans pour venir de Proxima du Centaure.",
+    "Bételgeuse, si elle remplaçait le Soleil, engloutirait les planètes jusqu'à Jupiter."
+  ],
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 5,
+    "objectif": "Ordonner les corps célestes et appréhender les immenses distances de l'univers avec l'échelle des tailles.",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

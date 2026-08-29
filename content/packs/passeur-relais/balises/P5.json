@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "P5",
+  "bird": "chaine",
+  "code": "PAS-P5",
+  "x": 388,
+  "y": 396,
+  "lat": null,
+  "lng": null,
+  "label": "La Chaîne",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Dans un relais, chaque équipe reçoit le témoin, court, puis doit le…",
+      "reponses": ["passer", "transmettre", "remettre"],
+      "indice": "Le mouvement du relais : recevoir, puis … au suivant.",
+      "saviez": "En athlétisme, le témoin est un petit cylindre qui voyage plus vite que n'importe quel coureur seul.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Sur la carte mondiale du jeu, chaque partie jouée allume un point de lumière. Comment appelle-t-on cet ensemble de maillons reliés entre eux ?",
+      "reponses": ["le reseau", "reseau", "une chaine", "la chaine"],
+      "indice": "Comme un filet : on dit « réseau routier », « réseau social »…",
+      "saviez": "Un réseau se mesure à ce qu'il relie : un maillon isolé n'est plus un réseau mais un simple point.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "La réussite de tous dépend de chacun : si un seul maillon ne joue pas son rôle, la ligne entière s'effondre. Nomme cette dépendance mutuelle.",
+      "reponses": ["la cooperation", "cooperation", "l interdependance", "la collaboration"],
+      "indice": "« co- » veut dire ensemble, « opérer » veut dire agir : agir avec les autres.",
+      "saviez": "L'interdépendance n'est pas une faiblesse : écosystèmes, équipes et réseaux tiennent grâce aux liens qui unissent leurs membres.",
+      "ages": [14, 99]
+    }
+  },
+  "enigme": null
+}

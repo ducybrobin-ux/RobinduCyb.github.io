@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "transmission-savoirs",
+  "nom": "Transmettre des savoirs",
+  "latin": "Traditio et memoria",
+  "emoji": "📘",
+  "couleur": "#315468",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "Un savoir ne tient que tant qu'il circule : avant l'écriture, les griots mémorisaient des siècles d'histoire et les déroulaient de bouche à oreille ; les compagnons transmettaient leurs tours de main d'artisan en artisan. Transmettre, ce n'est pas perdre ce qu'on sait, c'est le faire vivre plus longtemps que soi. Le passeur comprend que son rôle ne s'arrête pas à réussir : il doit faire réussir la suite.",
+  "anecdotes": [
+    "En Afrique de l'Ouest, les griots portaient dans leur mémoire des généalogies, des épopées et des lois : des heures de récit sans aucun support écrit.",
+    "Les compagnons du Tour de France bâtissaient leur métier en le passant : chaque « chef-d'œuvre » prouvait que le savoir avait bien été reçu.",
+    "Dans les anciennes corporations, le secret d'un métier se transmettait trois fois : à la vue, à la pratique et vite oublié s'il n'était pas repris."
+  ],
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 5,
+    "objectif": "Comprendre que les savoirs ne durent que s'ils sont transmis",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

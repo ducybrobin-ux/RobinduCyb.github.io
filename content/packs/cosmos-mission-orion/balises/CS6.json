@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS6",
+  "bird": "orbite",
+  "code": "COS-CS6",
+  "x": 300,
+  "y": 420,
+  "lat": null,
+  "lng": null,
+  "label": "Le Choix d'Orbite",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Pour gagner de la vitesse sans carburant, une sonde passe tout près d'une planète et se fait « catapulter ». Quel nom donne-t-on à cette manœuvre ?",
+      "reponses": ["fronde gravitationnelle", "assistance gravitationnelle", "la fronde gravitationnelle", "fronde"],
+      "indice": "On dit qu'elle utilise la « fronde » de la gravité pour accélérer.",
+      "saviez": "Cette manœuvre a permis aux sondes Voyager de visiter plusieurs planètes sans combustible.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "La sonde doit rejoindre Saturne. Pour économiser du carburant, quelle planète géante peut-elle utiliser pour sa fronde gravitationnelle ?",
+      "reponses": ["jupiter", "la terre", "venus", "saturne", "jupiter"],
+      "indice": "C'est la plus grosse planète du système solaire, une vraie catapulte géante.",
+      "saviez": "La sonde Cassini a utilisé plusieurs assistances gravitationnelles, dont Vénus et Jupiter, pour rejoindre Saturne.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Décision coopérative : ta sonde doit gagner de la vitesse vers Saturne. Deux trajets s'offrent à toi. Quel grand principe physique décrit l'échange de vitesse lors d'une assistance gravitationnelle ?",
+      "reponses": ["la conservation de l'energie", "conservation de l'energie", "conservation de l'energie et de la quantite de mouvement"],
+      "indice": "Pense au terme « conservation » et à ce qui ne se perd pas ni ne se crée.",
+      "saviez": "La sonde vole de la vitesse orbitale de la planète, qui elle en perd un tout petit peu : rien ne se crée, tout se transfère.",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}

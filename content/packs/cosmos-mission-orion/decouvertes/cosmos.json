@@ -1,0 +1,39 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "cosmos",
+  "nom": "La Révélation du Cosmos",
+  "latin": "Cosmos · Sphère céleste · Curiosité scientifique",
+  "emoji": "✨",
+  "couleur": "#5A4B8A",
+  "categorie": "nocturne",
+  "taille": "Antidote : rassembler les indices pour contempler l'univers",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "La sphère céleste est une construction imaginaire qui entoure la Terre et aide à repérer les étoiles.",
+    "Rassembler des indices épars, c'est la première étape de toute enquête scientifique.",
+    "Le mot « cosmos » évoque l'univers ordonné, objet d'émerveillement et de raison."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Reconstituer une carte du ciel à partir d'indices convergents et formuler un message sur la curiosité.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quelle qualité scientifique anime notre quête de compréhension du cosmos ?",
+      "options": ["La curiosité", "L'indifférence", "La distraction"],
+      "reponse": 0
+    }
+  ]
+}

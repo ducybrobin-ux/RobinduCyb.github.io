@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS1",
+  "bird": "signal",
+  "code": "COS-CS1",
+  "x": 74,
+  "y": 452,
+  "lat": null,
+  "lng": null,
+  "label": "Le Signal d'Alnilam",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Oriente ta boussole vers l'azimut 120. Là-bas, une constellation brille avec trois étoiles alignées nommées les trois Rois. Quel est son nom ?",
+      "reponses": ["orion", "la constellation d'orion", "constellation orion"],
+      "indice": "Elle contient le célèbre baudrier, trois étoiles alignées en diagonale.",
+      "saviez": "Orion est l'une des constellations les plus reconnaissables du ciel d'hiver, visible des deux hémisphères.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Toujours orienté vers l'azimut 120, cherche le signal stellaire. Trois étoiles forment le baudrier : Alnilam, Alnitak et Mintaka. De quelle constellation font-elles partie ?",
+      "reponses": ["orion", "la constellation d'orion", "constellation orion"],
+      "indice": "Le chasseur géant de la mythologie grecque porte ce fameux baudrier.",
+      "saviez": "Les trois étoiles du baudrier d'Orion sont presque parfaitement alignées, servant de repère pour trouver d'autres étoiles.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Pour intercepter le signal, pointe vers l'azimut 120. Celui-ci vient d'Alnilam, l'étoile centrale du baudrier d'Orion. À quelle distance approximative se trouve Alnilam de la Terre ?",
+      "reponses": ["2000 annees lumiere", "environ 2000 annees lumiere", "2000 annees", "2000 al", "2000"],
+      "indice": "Tout est en années-lumière : cette étoile est très lointaine, pas à quelques centaines, mais à quelques milliers.",
+      "saviez": "Alnilam est une supergéante bleue plus de 275 000 fois plus brillante que le Soleil, à environ 2 000 années-lumière.",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}

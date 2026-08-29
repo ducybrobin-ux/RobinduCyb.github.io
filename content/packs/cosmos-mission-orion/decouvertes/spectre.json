@@ -1,0 +1,39 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "spectre",
+  "nom": "Analyse Spectrale",
+  "latin": "Spectroscopy · Fraunhofer lines",
+  "emoji": "🌈",
+  "couleur": "#7B4FA6",
+  "categorie": "nocturne",
+  "taille": "Antidote : décomposer la lumière pour lire la matière",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Le spectre de la lumière blanche s'étale comme un arc-en-ciel, du rouge au violet.",
+    "Les raies sombres du spectre solaire ont été cartographiées par Joseph von Fraunhofer au XIXe siècle.",
+    "Chaque élément chimique laisse une signature unique de raies, comme une empreinte digitale."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Interpréter un spectre stellaire et relier ses raies d'absorption à la composition chimique d'une étoile.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Que révèlent les raies d'absorption d'un spectre ?",
+      "options": ["La température du ciel", "Les éléments chimiques présents", "La distance de la Lune"],
+      "reponse": 1
+    }
+  ]
+}

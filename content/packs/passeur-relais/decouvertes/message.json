@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "message",
+  "nom": "Le Message",
+  "latin": "Relay · Transmission",
+  "emoji": "🔗",
+  "couleur": "#C44536",
+  "categorie": "diurne",
+  "taille": "Antidote : transmettre plutôt que garder",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Vous êtes les premiers : le message de cette étape n'existe que parce qu'il doit continuer vers l'équipe suivante.",
+    "Une information qui reste dans une seule tête s'éteint ; transmise, elle fait avancer toute la chaîne.",
+    "Avant le téléphone, des relayeurs couraient parfois des centaines de kilomètres pour qu'un seul message parvienne à destination."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Comprendre qu'une information n'a de valeur que si elle est transmise",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Que doit faire une équipe qui reçoit le message ?",
+      "options": ["Le transmettre aux équipes suivantes", "Le garder secret pour elle", "L'oublier aussitôt"],
+      "reponse": 0
+    },
+    {
+      "q": "Pourquoi transmettre plutôt que garder ?",
+      "options": ["Pour prolonger le jeu et la découverte", "Pour que personne ne joue", "C'est exactement pareil"],
+      "reponse": 0
+    }
+  ]
+}

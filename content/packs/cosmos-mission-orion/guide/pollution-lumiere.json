@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "pollution-lumiere",
+  "nom": "Pollution lumineuse et biodiversité",
+  "latin": "Pollution lumineuse · Échelle de Bortle · Biodiversité nocturne",
+  "emoji": "💡",
+  "couleur": "#315468",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "L'éclairage artificiel excessif efface les étoiles et dérègle la vie nocturne : l'échelle de Bortle de 1 à 9 mesure la qualité du ciel.",
+  "anecdotes": [
+    "Plus de 80 % de l'humanité vit sous un ciel pollué par la lumière artificielle.",
+    "Les papillons de nuit, désorientés par les lampadaires, sont victimes de la pollution lumineuse.",
+    "Éteindre l'éclairage inutile protège à la fois le ciel et les espèces nocturnes."
+  ],
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 5,
+    "objectif": "Mesurer la pollution lumineuse et comprendre son impact sur la biodiversité nocturne et l'observation du ciel.",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

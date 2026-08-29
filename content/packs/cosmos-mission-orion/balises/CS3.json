@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS3",
+  "bird": "echelle",
+  "code": "COS-CS3",
+  "x": 240,
+  "y": 300,
+  "lat": null,
+  "lng": null,
+  "label": "L'Échelle des Géantes",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Classe ces trois objets du plus petit au plus grand : la Lune, la Terre et le Soleil. Quelle est la plus petite ?",
+      "reponses": ["la lune", "lune", "la terre", "lune"],
+      "indice": "Jupiter pourrait contenir plus de mille Terres, imagine la taille du Soleil.",
+      "saviez": "Le Soleil est plus d'un million de fois plus volumineux que la Terre.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Toujours sur l'échelle des tailles : compare la Terre à Jupiter. Combien de fois Jupiter est-elle plus grosse que la Terre en volume ?",
+      "reponses": ["plus de 1300 fois", "1300", "plus de 1300", "environ 1300 fois", "1300 fois"],
+      "indice": "C'est un nombre de mille... suivi d'environ trois cents.",
+      "saviez": "Jupiter est la plus grande planète du système solaire : plus de 1 300 Terres y tiendraient.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Poursuis sur l'échelle des géantes : dans la constellation d'Orion, une supergéante rouge dépasserait l'orbite de Jupiter si elle était à la place du Soleil. Quel est son nom ?",
+      "reponses": ["betelgeuse", "bételgeuse", "betelgeuse rouge"],
+      "indice": "Son nom rime avec « geuse » et commence par « Bétel ».",
+      "saviez": "Bételgeuse est tellement énorme que si elle remplaçait le Soleil, elle engloberait les orbites de Mercure à Jupiter.",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}

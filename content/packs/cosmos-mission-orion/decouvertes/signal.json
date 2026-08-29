@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "signal",
+  "nom": "Le Signal d'Alnilam",
+  "latin": "Orientation · Constellation d'Orion",
+  "emoji": "🔭",
+  "couleur": "#2E6FB3",
+  "categorie": "nocturne",
+  "taille": "Antidote : orienter son regard, intercepter les signaux du ciel",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "L'azimut 120° indique la direction, mesurée en degrés depuis le nord, dans le sens des aiguilles d'une montre.",
+    "Orion est visible des deux hémisphères et son baudrier de trois étoiles sert de repère universel.",
+    "Alnilam est l'étoile centrale du baudrier, une supergéante bleue très brillante."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Se repérer dans l'espace grâce à l'orientation et lire un azimut pour intercepter un signal.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quelle est l'étoile centrale du baudrier d'Orion ?",
+      "options": ["Alnilam", "Sirius", "Bételgeuse"],
+      "reponse": 0
+    },
+    {
+      "q": "Que mesure l'azimut ?",
+      "options": ["La couleur d'une étoile", "Une direction en degrés depuis le nord", "La distance d'une galaxie"],
+      "reponse": 1
+    }
+  ]
+}

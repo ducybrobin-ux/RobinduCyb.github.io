@@ -1,0 +1,22 @@
+{
+  "$schema": "curios-catalog-pack-v1",
+  "id": "cosmos-mission-orion",
+  "nom": "Cosmos — Mission Orion",
+  "tagline": "Enquête dans le ciel étoilé",
+  "description": "Une enquête d'orientation et d'investigation scientifique à la découverte des secrets du ciel nocturne, du système solaire et des constellations, tout en luttant contre la pollution lumineuse. Sept missions : signal stellaire, analyse spectrale, échelle des tailles, chiffre de Cassini, traces nocturnes, choix d'orbite et révélation du cosmos.",
+  "cover": "cosmos-mission-orion",
+  "accent": "#6c5ce7",
+  "emoji": "🔭",
+  "difficulty": "moyen",
+  "durationMin": 110,
+  "players": [1, 6],
+  "location": "Dans la nuit, sous un ciel étoilé",
+  "environment": "extérieur",
+  "skills": ["Astronomie", "Investigation scientifique", "Orientation"],
+  "material": ["Smartphone", "Disque de chiffrement", "Carte du ciel"],
+  "goals": ["S'orienter dans le ciel nocturne", "Comprendre la méthode scientifique", "Agir contre la pollution lumineuse"],
+  "staff": false,
+  "badges": ["Sciences", "Nature"],
+  "collection": "Sciences & espace",
+  "featured": true
+}

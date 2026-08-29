@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "P3",
+  "bird": "exploration",
+  "code": "PAS-P3",
+  "x": 238,
+  "y": 292,
+  "lat": null,
+  "lng": null,
+  "label": "La Zone",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "« Vous êtes dans la zone ! » Pour savoir si tu approches de la balise, tu regardes la distance qui…",
+      "reponses": ["diminue", "baisse", "se reduit"],
+      "indice": "Le contraire d'« augmente ».",
+      "saviez": "La distance s'affiche en mètres : lorsque tu es tout proche, le cercle de la balise s'illumine sur la carte.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Quand la distance diminue régulièrement, on dit que tu suis le bon cap et que tu es…",
+      "reponses": ["dans la zone", "sur la bonne voie", "proche"],
+      "indice": "Crie-le quand la balise est toute proche : « Vous êtes … ! »",
+      "saviez": "Ce jeu s'inspire du géocaching : les caches y sont décrites par leurs coordonnées géographiques précises.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Quel système, reposant sur une constellation de satellites, te donne ta position et la distance restante jusqu'à la balise ?",
+      "reponses": ["le gps", "gps", "gnss"],
+      "indice": "Trois lettres mystérieuses… Global Positioning System.",
+      "saviez": "Le GPS utilise au moins quatre satellites pour calculer position et altitude : c'est la triangulation qui rend le point unique.",
+      "ages": [14, 99]
+    }
+  },
+  "enigme": null
+}

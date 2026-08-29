@@ -1,0 +1,22 @@
+{
+  "$schema": "curios-catalog-pack-v1",
+  "id": "phantom-cybersecurite",
+  "nom": "Phantom — Cybersécurité",
+  "tagline": "L'ennemi, ce sont nos décisions",
+  "description": "Neuf missions de cybersécurité immersive : phishing, QR codes piégés, métadonnées, mots de passe, ingénierie sociale. Un parcours qui révèle que le véritable ennemi n'est pas l'ordinateur mais nos propres décisions.",
+  "cover": "phantom-cybersecurite",
+  "accent": "#1a1a2e",
+  "emoji": "👻",
+  "difficulty": "moyen",
+  "durationMin": 90,
+  "players": [1, 6],
+  "location": "Roeulx (France)",
+  "environment": "extérieur",
+  "skills": ["Cybersécurité", "Esprit critique", "Vie privée"],
+  "material": ["Smartphone"],
+  "goals": ["Reconnaître le phishing", "Protéger son identité numérique", "Comprendre l'ingénierie sociale"],
+  "staff": false,
+  "badges": ["Éducatif", "Numérique"],
+  "collection": "Cybersécurité & numérique",
+  "featured": true
+}

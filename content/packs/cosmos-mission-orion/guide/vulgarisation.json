@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "vulgarisation",
+  "nom": "Vulgariser la science",
+  "latin": "Méthodes de vulgarisation scientifique",
+  "emoji": "📘",
+  "couleur": "#315468",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "Vulgariser, c'est traduire des idées scientifiques complexes en images et mots simples, sans trahir la vérité, pour les rendre accessibles à tous.",
+  "anecdotes": [
+    "Des métaphores comme le « tapis roulant » des plaques tectoniques aident à se représenter un phénomène invisible.",
+    "Une bonne vulgarisation vérifie toujours sa source avant de simplifier une idée.",
+    "Les personnages, les analogies et les schémas sont les outils clés du vulgarisateur."
+  ],
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 5,
+    "objectif": "Reconnaître les méthodes de vulgarisation et distinguer une simplification honnête d'un raccourci trompeur.",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

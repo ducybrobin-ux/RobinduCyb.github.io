@@ -1,0 +1,16 @@
+{
+  "$schema": "curios-catalog-index-v1",
+  "version": 1,
+  "updatedAt": "2026-08-29",
+  "packs": [
+    "biais-cognitifs",
+    "cemea-education-populaire",
+    "cosmos-mission-orion",
+    "cristaux-de-balto",
+    "harcelement-scolaire",
+    "metiers-tension",
+    "passeur-relais",
+    "phantom-cybersecurite",
+    "tsle1-ornithologie"
+  ]
+}

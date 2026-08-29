@@ -1,0 +1,39 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "chiffre",
+  "nom": "Le Chiffre de Cassini",
+  "latin": "Cryptographie · Chiffre de César · Constellation de Cassiopée",
+  "emoji": "🗝️",
+  "couleur": "#B33B6E",
+  "categorie": "nocturne",
+  "taille": "Antidote : décoder, décrypter et lire entre les lignes",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Cassiopée dessine un grand « W » dans le ciel, très facile à reconnaître.",
+    "Le chiffre de César décale chaque lettre d'un nombre fixe, l'un des plus anciens codes connus.",
+    "Le mot « stella », signifiant « étoile » en latin, a donné « constellation » et « stellaire »."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Déchiffrer un message codé par un décalage de lettres et relier le code à une figure céleste.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quelle lettre la constellation de Cassiopée évoque-t-elle ?",
+      "options": ["Le W", "Le A", "Le O"],
+      "reponse": 0
+    }
+  ]
+}

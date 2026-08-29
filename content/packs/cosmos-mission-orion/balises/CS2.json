@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS2",
+  "bird": "spectre",
+  "code": "COS-CS2",
+  "x": 160,
+  "y": 380,
+  "lat": null,
+  "lng": null,
+  "label": "Analyse Spectrale",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "On décompose la lumière d'une étoile en un arc-en-ciel. Comment s'appelle ce résultat qui ressemble à un dégradé de couleurs ?",
+      "reponses": ["spectre", "un spectre", "le spectre"],
+      "indice": "Le mot commence par « spec », comme spectaculaire.",
+      "saviez": "Un spectre est la décomposition de la lumière en ses différentes couleurs, comme un arc-en-ciel.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Dans le spectre d'une étoile, on observe des traits sombres qui révèlent les éléments présents. Comment s'appellent ces traits noirs ?",
+      "reponses": ["raies d'absorption", "raies", "des raies d'absorption", "raies sombres", "raies de fraunhofer"],
+      "indice": "Ce sont des lignes sombres qui « absorbent » certaines couleurs.",
+      "saviez": "Chaque élément chimique produit des raies à des couleurs précises, une sorte de code-barres unique.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "En analysant le spectre de l'étoile, tu trouves surtout de l'hydrogène et de l'hélium. Dans quelle catégorie classe-t-on une étoile qui fusionne de l'hydrogène en hélium ?",
+      "reponses": ["sequence principale", "la sequence principale", "etoile de la sequence principale"],
+      "indice": "C'est l'étape la plus longue de la vie d'une étoile : le mot commence par « séquence ».",
+      "saviez": "Le Soleil est une étoile de la séquence principale : il fusionne l'hydrogène en hélium depuis environ 4,6 milliards d'années.",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}

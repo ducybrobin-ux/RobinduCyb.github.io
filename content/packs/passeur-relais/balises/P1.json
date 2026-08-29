@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "P1",
+  "bird": "message",
+  "code": "PAS-P1",
+  "x": 74,
+  "y": 452,
+  "lat": null,
+  "lng": null,
+  "label": "Le Premier Relais",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Premier relais ! Tu viens de recevoir un message secret. Ta mission, pour les équipes suivantes, est de le…",
+      "reponses": ["transmettre", "le transmettre", "transmettre le message"],
+      "indice": "Le contraire de « garder pour soi ».",
+      "saviez": "Dans les courses de relais, un témoin reçu doit être remis : garder le témoin, c'est arrêter toute la course.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Une information passe de bouche à oreille, de relais en relais, sans machine ni écriture. Comment appelle-t-on ce passage d'une personne à une autre ?",
+      "reponses": ["le bouche a oreille", "bouche a oreille"],
+      "indice": "C'est la communication la plus ancienne : la bouche… puis l'oreille !",
+      "saviez": "Avant les journaux, le bouche à oreille propageait nouvelles et rumeurs dans les villages et sur les marchés.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Transférer un message d'une main à la suivante, sans l'altérer, c'est l'art de la transmission. Donne le nom de ce mouvement continu.",
+      "reponses": ["la transmission", "transmission", "le relais"],
+      "indice": "Cela commence par « trans »… comme trans-border, trans-mettre.",
+      "saviez": "En informatique, la transmission fiable repose sur l'acquittement : chaque étape confirme à la précédente qu'elle a bien reçu.",
+      "ages": [14, 99]
+    }
+  },
+  "enigme": null
+}

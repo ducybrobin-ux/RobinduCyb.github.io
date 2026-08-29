@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "fragment",
+  "nom": "Le Fragment",
+  "latin": "Pars pro toto · Morceau de message",
+  "emoji": "🧩",
+  "couleur": "#8E3B8E",
+  "categorie": "diurne",
+  "taille": "Antidote : décoder, assembler, comprendre",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Un fragment n'est jamais une réponse à lui tout seul : c'est une pièce qui attend silencieusement les autres.",
+    "En enquête comme en géocaching, chaque indice analysé libère un nouveau morceau du grand message.",
+    "Les cartes anciennes n'étaient souvent que des fragments : les explorateurs les recollaient au fil de leurs voyages."
+  ],
+  "chant": {
+    "tempo": 90,
+    "notes": [
+      { "f": 392, "fEnd": 388, "d": 0.08, "g": 0.06, "type": "triangle", "v": 0.45 },
+      { "f": 494, "fEnd": 490, "d": 0.1, "g": 0.06, "type": "triangle", "v": 0.45 },
+      { "f": 587, "fEnd": 583, "d": 0.22, "g": 0.1, "type": "triangle", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Analyser des indices partiels pour reconstituer un message complet",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Un morceau de message isolé est…",
+      "options": ["Un fragment", "Une réponse complète", "Le trésor du jeu"],
+      "reponse": 0
+    },
+    {
+      "q": "Que faut-il faire des fragments pour comprendre le tout ?",
+      "options": ["Les assembler dans le bon ordre", "Les jeter au vent", "Les cacher sous les pierres"],
+      "reponse": 0
+    }
+  ]
+}

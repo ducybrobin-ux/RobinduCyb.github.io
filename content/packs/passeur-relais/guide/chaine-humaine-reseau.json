@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "chaine-humaine-reseau",
+  "nom": "La chaîne humaine et le réseau",
+  "latin": "Catena · Un maillon parmi les maillons",
+  "emoji": "⛓️",
+  "couleur": "#B05F2A",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "Une chaîne est une ligne : chaque maillon n'en connaît que deux voisins, et si l'un casse, tout s'arrête. Un réseau, au contraire, est maillé : chaque nœud connaît plusieurs chemins, et la panne d'un maillon ne paralyse pas l'ensemble. De la flamme olympique aux boucles du kilomètre littéraire, l'humanité a toujours fabriqué des chaînes humaines ; d'internet aux réseaux sociaux, elle construit surtout des réseaux. Le passeur comprend qu'il est un maillon et un nœud à la fois.",
+  "anecdotes": [
+    "Le relais de la flamme olympique relie deux villes par des milliers de porteurs : une seule flamme, des centaines de mains.",
+    "Sur internet, si un serveur tombe, les données empruntent un autre chemin : le réseau est conçu pour survivre à la panne d'un seul maillon.",
+    "Dans un « flash mob » humain ou une chaîne de vêtements, chacun ne voit que son voisin… et pourtant le dessin global est parfait."
+  ],
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 5,
+    "objectif": "Distinguer chaîne linéaire et réseau maillé pour lire la coopération moderne",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

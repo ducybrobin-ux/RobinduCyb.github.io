@@ -1,0 +1,1129 @@
+{
+  "$format": "curios-parcours",
+  "$version": 1,
+  "id": "cosmos-mission-orion",
+  "title": "Cosmos — Mission Orion",
+  "metadata": {
+    "author": "",
+    "organization": "",
+    "language": "fr",
+    "license": "",
+    "createdAt": "2026-08-29",
+    "updatedAt": "2026-08-29",
+    "source": {
+      "format": "jdpbc-pack",
+      "version": 1
+    }
+  },
+  "description": "Une enquête d'orientation et d'investigation scientifique à la découverte des secrets du ciel nocturne, du système solaire et des constellations, tout en luttant contre la pollution lumineuse. Sept missions : signal stellaire, analyse spectrale, échelle des tailles, chiffre de Cassini, traces nocturnes, choix d'orbite et révélation du cosmos.",
+  "theme": "astronomie, sciences & vulgarisation",
+  "audience": {
+    "minAge": 12,
+    "maxAge": 18
+  },
+  "duration": null,
+  "pedagogy": {
+    "objectives": [
+      "Lire un azimut et se repérer sur la sphère céleste pour orienter une observation du ciel.",
+      "Ordonner les corps célestes et appréhender les immenses distances de l'univers avec l'échelle des tailles.",
+      "Mesurer la pollution lumineuse et comprendre son impact sur la biodiversité nocturne et l'observation du ciel.",
+      "Reconnaître les méthodes de vulgarisation et distinguer une simplification honnête d'un raccourci trompeur.",
+      "Déchiffrer un message codé par un décalage de lettres et relier le code à une figure céleste.",
+      "Reconstituer une carte du ciel à partir d'indices convergents et formuler un message sur la curiosité.",
+      "Comparer et classer les corps célestes du plus petit au plus grand pour construire une échelle des tailles.",
+      "Prendre une décision coopérative en exploitant l'assistance gravitationnelle pour épargner le carburant.",
+      "Se repérer dans l'espace grâce à l'orientation et lire un azimut pour intercepter un signal.",
+      "Interpréter un spectre stellaire et relier ses raies d'absorption à la composition chimique d'une étoile.",
+      "Analyser les métadonnées d'une image du ciel et mesurer l'impact de la pollution lumineuse sur la biodiversité."
+    ],
+    "skills": [],
+    "competencies": [
+      {
+        "id": "coordonnees",
+        "nom": "Coordonnées et orientation",
+        "description": "Se repérer dans l'espace, c'est utiliser des coordonnées et une boussole : l'azimut mesure une direction en degrés depuis le nord pour pointer une étoile.",
+        "emoji": "🧭",
+        "objectif": "Lire un azimut et se repérer sur la sphère céleste pour orienter une observation du ciel.",
+        "ages": [
+          12,
+          18
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "La sphère céleste imaginaire permet de placer chaque étoile avec deux coordonnées, comme une adresse sur le globe.",
+          "L'azimut se mesure de 0° (nord) à 360° en passant par l'est, le sud et l'ouest.",
+          "Depuis toujours, navigateurs et astronomes se sont fiés aux étoiles pour s'orienter."
+        ]
+      },
+      {
+        "id": "echelle-univers",
+        "nom": "L'échelle de l'univers",
+        "description": "De la Lune à la supergéante Bételgeuse, l'univers s'étend sur des échelles vertigineuses qu'on appréhende en rangeant les objets du plus petit au plus grand.",
+        "emoji": "🌌",
+        "objectif": "Ordonner les corps célestes et appréhender les immenses distances de l'univers avec l'échelle des tailles.",
+        "ages": [
+          12,
+          18
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Les puissances de dix permettent de passer de l'échelle humaine aux lointaines galaxies.",
+          "La lumière met 8 minutes pour venir du Soleil mais plus de 4 ans pour venir de Proxima du Centaure.",
+          "Bételgeuse, si elle remplaçait le Soleil, engloutirait les planètes jusqu'à Jupiter."
+        ]
+      },
+      {
+        "id": "pollution-lumiere",
+        "nom": "Pollution lumineuse et biodiversité",
+        "description": "L'éclairage artificiel excessif efface les étoiles et dérègle la vie nocturne : l'échelle de Bortle de 1 à 9 mesure la qualité du ciel.",
+        "emoji": "💡",
+        "objectif": "Mesurer la pollution lumineuse et comprendre son impact sur la biodiversité nocturne et l'observation du ciel.",
+        "ages": [
+          12,
+          18
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Plus de 80 % de l'humanité vit sous un ciel pollué par la lumière artificielle.",
+          "Les papillons de nuit, désorientés par les lampadaires, sont victimes de la pollution lumineuse.",
+          "Éteindre l'éclairage inutile protège à la fois le ciel et les espèces nocturnes."
+        ]
+      },
+      {
+        "id": "vulgarisation",
+        "nom": "Vulgariser la science",
+        "description": "Vulgariser, c'est traduire des idées scientifiques complexes en images et mots simples, sans trahir la vérité, pour les rendre accessibles à tous.",
+        "emoji": "📘",
+        "objectif": "Reconnaître les méthodes de vulgarisation et distinguer une simplification honnête d'un raccourci trompeur.",
+        "ages": [
+          12,
+          18
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Des métaphores comme le « tapis roulant » des plaques tectoniques aident à se représenter un phénomène invisible.",
+          "Une bonne vulgarisation vérifie toujours sa source avant de simplifier une idée.",
+          "Les personnages, les analogies et les schémas sont les outils clés du vulgarisateur."
+        ]
+      }
+    ],
+    "evaluation": []
+  },
+  "game": {
+    "mode": "courses",
+    "scoring": {
+      "starsPerStation": 3,
+      "timeBonus": true
+    },
+    "rules": {
+      "order": "libre"
+    }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": null,
+    "trail": []
+  },
+  "stations": [
+    {
+      "id": "CS1",
+      "label": "Le Signal d'Alnilam",
+      "code": "COS-CS1",
+      "discoveryId": "signal",
+      "x": 74,
+      "y": 452,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS1-enigme"
+      ]
+    },
+    {
+      "id": "CS2",
+      "label": "Analyse Spectrale",
+      "code": "COS-CS2",
+      "discoveryId": "spectre",
+      "x": 160,
+      "y": 380,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS2-enigme"
+      ]
+    },
+    {
+      "id": "CS3",
+      "label": "L'Échelle des Géantes",
+      "code": "COS-CS3",
+      "discoveryId": "echelle",
+      "x": 240,
+      "y": 300,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS3-enigme"
+      ]
+    },
+    {
+      "id": "CS4",
+      "label": "Le Chiffre de Cassini",
+      "code": "COS-CS4",
+      "discoveryId": "chiffre",
+      "x": 330,
+      "y": 210,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS4-enigme"
+      ]
+    },
+    {
+      "id": "CS5",
+      "label": "Les Traces Nocturnes",
+      "code": "COS-CS5",
+      "discoveryId": "traces",
+      "x": 400,
+      "y": 130,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS5-enigme"
+      ]
+    },
+    {
+      "id": "CS6",
+      "label": "Le Choix d'Orbite",
+      "code": "COS-CS6",
+      "discoveryId": "orbite",
+      "x": 300,
+      "y": 420,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS6-enigme"
+      ]
+    },
+    {
+      "id": "CS7",
+      "label": "La Révélation du Cosmos",
+      "code": "COS-CS7",
+      "discoveryId": "cosmos",
+      "x": 200,
+      "y": 60,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "CS7-enigme"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "CS1-enigme",
+      "type": "enigme",
+      "stationId": "CS1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Oriente ta boussole vers l'azimut 120. Là-bas, une constellation brille avec trois étoiles alignées nommées les trois Rois. Quel est son nom ?",
+          "answers": [
+            "orion",
+            "la constellation d'orion",
+            "constellation orion"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Elle contient le célèbre baudrier, trois étoiles alignées en diagonale.",
+          "knowMore": "Orion est l'une des constellations les plus reconnaissables du ciel d'hiver, visible des deux hémisphères."
+        },
+        "moyen": {
+          "text": "Toujours orienté vers l'azimut 120, cherche le signal stellaire. Trois étoiles forment le baudrier : Alnilam, Alnitak et Mintaka. De quelle constellation font-elles partie ?",
+          "answers": [
+            "orion",
+            "la constellation d'orion",
+            "constellation orion"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Le chasseur géant de la mythologie grecque porte ce fameux baudrier.",
+          "knowMore": "Les trois étoiles du baudrier d'Orion sont presque parfaitement alignées, servant de repère pour trouver d'autres étoiles."
+        },
+        "difficile": {
+          "text": "Pour intercepter le signal, pointe vers l'azimut 120. Celui-ci vient d'Alnilam, l'étoile centrale du baudrier d'Orion. À quelle distance approximative se trouve Alnilam de la Terre ?",
+          "answers": [
+            "2000 annees lumiere",
+            "environ 2000 annees lumiere",
+            "2000 annees",
+            "2000 al",
+            "2000"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "Tout est en années-lumière : cette étoile est très lointaine, pas à quelques centaines, mais à quelques milliers.",
+          "knowMore": "Alnilam est une supergéante bleue plus de 275 000 fois plus brillante que le Soleil, à environ 2 000 années-lumière."
+        }
+      }
+    },
+    {
+      "id": "CS2-enigme",
+      "type": "enigme",
+      "stationId": "CS2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "On décompose la lumière d'une étoile en un arc-en-ciel. Comment s'appelle ce résultat qui ressemble à un dégradé de couleurs ?",
+          "answers": [
+            "spectre",
+            "un spectre",
+            "le spectre"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Le mot commence par « spec », comme spectaculaire.",
+          "knowMore": "Un spectre est la décomposition de la lumière en ses différentes couleurs, comme un arc-en-ciel."
+        },
+        "moyen": {
+          "text": "Dans le spectre d'une étoile, on observe des traits sombres qui révèlent les éléments présents. Comment s'appellent ces traits noirs ?",
+          "answers": [
+            "raies d'absorption",
+            "raies",
+            "des raies d'absorption",
+            "raies sombres",
+            "raies de fraunhofer"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Ce sont des lignes sombres qui « absorbent » certaines couleurs.",
+          "knowMore": "Chaque élément chimique produit des raies à des couleurs précises, une sorte de code-barres unique."
+        },
+        "difficile": {
+          "text": "En analysant le spectre de l'étoile, tu trouves surtout de l'hydrogène et de l'hélium. Dans quelle catégorie classe-t-on une étoile qui fusionne de l'hydrogène en hélium ?",
+          "answers": [
+            "sequence principale",
+            "la sequence principale",
+            "etoile de la sequence principale"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "C'est l'étape la plus longue de la vie d'une étoile : le mot commence par « séquence ».",
+          "knowMore": "Le Soleil est une étoile de la séquence principale : il fusionne l'hydrogène en hélium depuis environ 4,6 milliards d'années."
+        }
+      }
+    },
+    {
+      "id": "CS3-enigme",
+      "type": "enigme",
+      "stationId": "CS3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Classe ces trois objets du plus petit au plus grand : la Lune, la Terre et le Soleil. Quelle est la plus petite ?",
+          "answers": [
+            "la lune",
+            "lune",
+            "la terre",
+            "lune"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Jupiter pourrait contenir plus de mille Terres, imagine la taille du Soleil.",
+          "knowMore": "Le Soleil est plus d'un million de fois plus volumineux que la Terre."
+        },
+        "moyen": {
+          "text": "Toujours sur l'échelle des tailles : compare la Terre à Jupiter. Combien de fois Jupiter est-elle plus grosse que la Terre en volume ?",
+          "answers": [
+            "plus de 1300 fois",
+            "1300",
+            "plus de 1300",
+            "environ 1300 fois",
+            "1300 fois"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "C'est un nombre de mille... suivi d'environ trois cents.",
+          "knowMore": "Jupiter est la plus grande planète du système solaire : plus de 1 300 Terres y tiendraient."
+        },
+        "difficile": {
+          "text": "Poursuis sur l'échelle des géantes : dans la constellation d'Orion, une supergéante rouge dépasserait l'orbite de Jupiter si elle était à la place du Soleil. Quel est son nom ?",
+          "answers": [
+            "betelgeuse",
+            "bételgeuse",
+            "betelgeuse rouge"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "Son nom rime avec « geuse » et commence par « Bétel ».",
+          "knowMore": "Bételgeuse est tellement énorme que si elle remplaçait le Soleil, elle engloberait les orbites de Mercure à Jupiter."
+        }
+      }
+    },
+    {
+      "id": "CS4-enigme",
+      "type": "enigme",
+      "stationId": "CS4",
+      "difficultyLevels": {
+        "facile": {
+          "text": "La constellation de Cassiopée dessine une lettre bien reconnaissable dans le ciel. Quelle lettre cette formation d'étoiles évoque-t-elle ?",
+          "answers": [
+            "w",
+            "un w",
+            "la lettre w",
+            "le w"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "C'est une lettre qui se lit pareil que la troisième de l'alphabet à l'envers.",
+          "knowMore": "Cassiopée forme un grand « W » ou « M » selon la saison, très facile à reconnaître."
+        },
+        "moyen": {
+          "text": "Cassini t'a laissé un code décalé de 3 lettres. Dans ce décalage, quel mot se cache derrière « FHWD » ? Indice : décale chaque lettre de 3 vers le haut.",
+          "answers": [
+            "ceci",
+            "le mot ceci"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Effectue le chemin inverse : « F » devient « C », « H » devient « E ».",
+          "knowMore": "Ce décalage s'appelle le chiffre de César, l'un des plus anciens procédés de cryptage connus."
+        },
+        "difficile": {
+          "text": "Ultime message de Cassini décodé avec un décalage de 3 lettres à l'envers, le mot « VWHOOD » se transforme en un mot latin signifiant « étoile ». Quel mot obtiens-tu ?",
+          "answers": [
+            "stella",
+            "stella"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "Décale chaque lettre de 3 vers le début de l'alphabet : V→S, W→T, H→E, L→I, D→A.",
+          "knowMore": "« Stella » signifie « étoile » en latin, d'où viennent les mots « stellaire » et « constellation »."
+        }
+      }
+    },
+    {
+      "id": "CS5-enigme",
+      "type": "enigme",
+      "stationId": "CS5",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Pour voir les étoiles, il faut un ciel bien sombre. Comment s'appelle l'éclairage artificiel qui trouble l'observation du ciel nocturne ?",
+          "answers": [
+            "la pollution lumineuse",
+            "pollution lumineuse",
+            "lumiere artificielle"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "C'est une « pollution » causée par la lumière des villes.",
+          "knowMore": "Près des grandes villes, on ne voit parfois plus que quelques dizaines d'étoiles."
+        },
+        "moyen": {
+          "text": "On mesure la qualité d'un ciel avec une échelle numérique, de 1 (très noir) à 9 (très pollué). Quel nom porte cette échelle ?",
+          "answers": [
+            "bortle",
+            "l'echelle de bortle",
+            "echelle de bortle",
+            "echelle de bortles"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "C'est le nom d'un astronome américain : il commence par « Bort ».",
+          "knowMore": "L'échelle de Bortle va de 1 (ciel d'exception) à 9 (centre-ville très éclairé)."
+        },
+        "difficile": {
+          "text": "En analysant les métadonnées de l'image, tu repères un halo jaune très marqué. Cette lumière parasite perturbe les insectes nocturnes et leurs prédateurs. Sur quel phénomène écologique a-t-elle le plus d'impact ?",
+          "answers": [
+            "la biodiversite nocturne",
+            "biodiversite nocturne",
+            "les insectes nocturnes",
+            "la biodiversite"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "Il s'agit des êtres vivants qui s'activent la nuit, comme les papillons de nuit.",
+          "knowMore": "La lumière artificielle peut désorienter des millions d'insectes, perturbant la chaîne alimentaire nocturne."
+        }
+      }
+    },
+    {
+      "id": "CS6-enigme",
+      "type": "enigme",
+      "stationId": "CS6",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Pour gagner de la vitesse sans carburant, une sonde passe tout près d'une planète et se fait « catapulter ». Quel nom donne-t-on à cette manœuvre ?",
+          "answers": [
+            "fronde gravitationnelle",
+            "assistance gravitationnelle",
+            "la fronde gravitationnelle",
+            "fronde"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "On dit qu'elle utilise la « fronde » de la gravité pour accélérer.",
+          "knowMore": "Cette manœuvre a permis aux sondes Voyager de visiter plusieurs planètes sans combustible."
+        },
+        "moyen": {
+          "text": "La sonde doit rejoindre Saturne. Pour économiser du carburant, quelle planète géante peut-elle utiliser pour sa fronde gravitationnelle ?",
+          "answers": [
+            "jupiter",
+            "la terre",
+            "venus",
+            "saturne",
+            "jupiter"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "C'est la plus grosse planète du système solaire, une vraie catapulte géante.",
+          "knowMore": "La sonde Cassini a utilisé plusieurs assistances gravitationnelles, dont Vénus et Jupiter, pour rejoindre Saturne."
+        },
+        "difficile": {
+          "text": "Décision coopérative : ta sonde doit gagner de la vitesse vers Saturne. Deux trajets s'offrent à toi. Quel grand principe physique décrit l'échange de vitesse lors d'une assistance gravitationnelle ?",
+          "answers": [
+            "la conservation de l'energie",
+            "conservation de l'energie",
+            "conservation de l'energie et de la quantite de mouvement"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "Pense au terme « conservation » et à ce qui ne se perd pas ni ne se crée.",
+          "knowMore": "La sonde vole de la vitesse orbitale de la planète, qui elle en perd un tout petit peu : rien ne se crée, tout se transfère."
+        }
+      }
+    },
+    {
+      "id": "CS7-enigme",
+      "type": "enigme",
+      "stationId": "CS7",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Tu as rassemblé tous les indices : Orion, le spectre, Bételgeuse, Cassiopée, le ciel sombre. Quel immense ensemble contient toutes les étoiles, les planètes et les galaxies ?",
+          "answers": [
+            "l'univers",
+            "univers",
+            "le cosmos",
+            "cosmos"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Un mot qui commence par « uni » et contient tout sans exception.",
+          "knowMore": "L'univers contient des milliards de galaxies, chacune emplie d'étoiles."
+        },
+        "moyen": {
+          "text": "Pour reconstituer la carte du ciel, transforme les coordonnées d'un point en le situant sur une sphère imaginaire entourant la Terre. Quel nom porte cette sphère ?",
+          "answers": [
+            "la sphere celeste",
+            "sphere celeste",
+            "la sphere du ciel",
+            "sphere celeste imaginaire"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Elle est « céleste », c'est-à-dire liée au ciel.",
+          "knowMore": "La sphère céleste est une construction imaginaire qui permet de repérer les étoiles par des coordonnées."
+        },
+        "difficile": {
+          "text": "Mission accomplie : le message final nous rappelle que regarder le ciel, c'est interroger notre place dans le cosmos. Quel état d'esprit scientifique est le moteur de cette quête de compréhension ?",
+          "answers": [
+            "la curiosite",
+            "curiosite",
+            "l'emerveillement et la curiosite",
+            "la curiosite scientifique"
+          ],
+          "ages": [
+            14,
+            18
+          ],
+          "hint": "C'est le désir de savoir et de comprendre, commençant par « curio ».",
+          "knowMore": "La curiosité pousse l'humanité à poser des questions, de l'observation des étoiles aux sondes interstellaires."
+        }
+      }
+    },
+    {
+      "id": "chiffre-quiz",
+      "type": "quiz",
+      "characterId": "chiffre",
+      "questions": [
+        {
+          "q": "Quelle lettre la constellation de Cassiopée évoque-t-elle ?",
+          "options": [
+            "Le W",
+            "Le A",
+            "Le O"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "cosmos-quiz",
+      "type": "quiz",
+      "characterId": "cosmos",
+      "questions": [
+        {
+          "q": "Quelle qualité scientifique anime notre quête de compréhension du cosmos ?",
+          "options": [
+            "La curiosité",
+            "L'indifférence",
+            "La distraction"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "echelle-quiz",
+      "type": "quiz",
+      "characterId": "echelle",
+      "questions": [
+        {
+          "q": "Quel objet est le plus petit de cette liste : Lune, Terre, Soleil ?",
+          "options": [
+            "La Lune",
+            "La Terre",
+            "Le Soleil"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Quelle supergéante dépasserait l'orbite de Jupiter si elle était à la place du Soleil ?",
+          "options": [
+            "Sirius",
+            "Bételgeuse",
+            "Alnilam"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "orbite-quiz",
+      "type": "quiz",
+      "characterId": "orbite",
+      "questions": [
+        {
+          "q": "Quelle manœuvre accélère une sonde sans carburant ?",
+          "options": [
+            "La fronde gravitationnelle",
+            "La réserve de carburant",
+            "Le freinage atmosphérique"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "signal-quiz",
+      "type": "quiz",
+      "characterId": "signal",
+      "questions": [
+        {
+          "q": "Quelle est l'étoile centrale du baudrier d'Orion ?",
+          "options": [
+            "Alnilam",
+            "Sirius",
+            "Bételgeuse"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Que mesure l'azimut ?",
+          "options": [
+            "La couleur d'une étoile",
+            "Une direction en degrés depuis le nord",
+            "La distance d'une galaxie"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "spectre-quiz",
+      "type": "quiz",
+      "characterId": "spectre",
+      "questions": [
+        {
+          "q": "Que révèlent les raies d'absorption d'un spectre ?",
+          "options": [
+            "La température du ciel",
+            "Les éléments chimiques présents",
+            "La distance de la Lune"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "traces-quiz",
+      "type": "quiz",
+      "characterId": "traces",
+      "questions": [
+        {
+          "q": "Sur une échelle de 1 à 9, quelle valeur note le ciel le plus pollué ?",
+          "options": [
+            "9",
+            "1",
+            "5"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "chiffre",
+      "nom": "Le Chiffre de Cassini",
+      "latin": "Cryptographie · Chiffre de César · Constellation de Cassiopée",
+      "emoji": "🗝️",
+      "couleur": "#B33B6E",
+      "categorie": "nocturne",
+      "taille": "Antidote : décoder, décrypter et lire entre les lignes",
+      "img": "",
+      "anecdotes": [
+        "Cassiopée dessine un grand « W » dans le ciel, très facile à reconnaître.",
+        "Le chiffre de César décale chaque lettre d'un nombre fixe, l'un des plus anciens codes connus.",
+        "Le mot « stella », signifiant « étoile » en latin, a donné « constellation » et « stellaire »."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Déchiffrer un message codé par un décalage de lettres et relier le code à une figure céleste.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "cosmos",
+      "nom": "La Révélation du Cosmos",
+      "latin": "Cosmos · Sphère céleste · Curiosité scientifique",
+      "emoji": "✨",
+      "couleur": "#5A4B8A",
+      "categorie": "nocturne",
+      "taille": "Antidote : rassembler les indices pour contempler l'univers",
+      "img": "",
+      "anecdotes": [
+        "La sphère céleste est une construction imaginaire qui entoure la Terre et aide à repérer les étoiles.",
+        "Rassembler des indices épars, c'est la première étape de toute enquête scientifique.",
+        "Le mot « cosmos » évoque l'univers ordonné, objet d'émerveillement et de raison."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Reconstituer une carte du ciel à partir d'indices convergents et formuler un message sur la curiosité.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "echelle",
+      "nom": "L'Échelle des Géantes",
+      "latin": "Tailles comparées · Échelle des corps célestes",
+      "emoji": "🪐",
+      "couleur": "#D9792B",
+      "categorie": "nocturne",
+      "taille": "Antidote : classer les objets du plus petit au plus grand",
+      "img": "",
+      "anecdotes": [
+        "Plus de 200 Lunes tiendraient à l'intérieur de la Terre.",
+        "Jupiter est si grosse que plus de 1 300 Terres pourraient y entrer.",
+        "Bételgeuse, supergéante rouge, dépasserait l'orbite de Jupiter si elle remplaçait le Soleil."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Comparer et classer les corps célestes du plus petit au plus grand pour construire une échelle des tailles.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "orbite",
+      "nom": "Le Choix d'Orbite",
+      "latin": "Assistance gravitationnelle · Mécanique orbitale",
+      "emoji": "🚀",
+      "couleur": "#2E8A8A",
+      "categorie": "nocturne",
+      "taille": "Antidote : décider ensemble pour économiser l'énergie",
+      "img": "",
+      "anecdotes": [
+        "La fronde gravitationnelle permet d'accélérer une sonde sans brûler de carburant.",
+        "La sonde Cassini a utilisé plusieurs assistances gravitationnelles pour rejoindre Saturne.",
+        "C'est le principe de conservation de l'énergie qui explique l'échange de vitesse avec une planète."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Prendre une décision coopérative en exploitant l'assistance gravitationnelle pour épargner le carburant.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "signal",
+      "nom": "Le Signal d'Alnilam",
+      "latin": "Orientation · Constellation d'Orion",
+      "emoji": "🔭",
+      "couleur": "#2E6FB3",
+      "categorie": "nocturne",
+      "taille": "Antidote : orienter son regard, intercepter les signaux du ciel",
+      "img": "",
+      "anecdotes": [
+        "L'azimut 120° indique la direction, mesurée en degrés depuis le nord, dans le sens des aiguilles d'une montre.",
+        "Orion est visible des deux hémisphères et son baudrier de trois étoiles sert de repère universel.",
+        "Alnilam est l'étoile centrale du baudrier, une supergéante bleue très brillante."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Se repérer dans l'espace grâce à l'orientation et lire un azimut pour intercepter un signal.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectre",
+      "nom": "Analyse Spectrale",
+      "latin": "Spectroscopy · Fraunhofer lines",
+      "emoji": "🌈",
+      "couleur": "#7B4FA6",
+      "categorie": "nocturne",
+      "taille": "Antidote : décomposer la lumière pour lire la matière",
+      "img": "",
+      "anecdotes": [
+        "Le spectre de la lumière blanche s'étale comme un arc-en-ciel, du rouge au violet.",
+        "Les raies sombres du spectre solaire ont été cartographiées par Joseph von Fraunhofer au XIXe siècle.",
+        "Chaque élément chimique laisse une signature unique de raies, comme une empreinte digitale."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Interpréter un spectre stellaire et relier ses raies d'absorption à la composition chimique d'une étoile.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "traces",
+      "nom": "Les Traces Nocturnes",
+      "latin": "Pollution lumineuse · Échelle de Bortle · Biodiversité",
+      "emoji": "🌌",
+      "couleur": "#315468",
+      "categorie": "nocturne",
+      "taille": "Antidote : lire les traces du ciel pour préserver la nuit",
+      "img": "",
+      "anecdotes": [
+        "L'échelle de Bortle va de 1 (ciel presque parfait) à 9 (centre-ville saturé de lumière).",
+        "La lumière artificielle désoriente les insectes nocturnes et perturbe la chaîne alimentaire.",
+        "Éteindre l'éclairage inutile permet de retrouver des milliers d'étoiles visibles à l'œil nu."
+      ],
+      "pedagogy": {
+        "ages": [
+          12,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Analyser les métadonnées d'une image du ciel et mesurer l'impact de la pollution lumineuse sur la biodiversité.",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    }
+  ],
+  "media": [],
+  "rewards": [],
+  "debriefing": {
+    "participantQuestions": [],
+    "facilitatorReport": [],
+    "skillsObserved": []
+  }
+}

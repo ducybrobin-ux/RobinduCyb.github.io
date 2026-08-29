@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "cooperation-relais",
+  "nom": "La coopération en relais",
+  "latin": "Concurrere · Jouer ensemble",
+  "emoji": "🤲",
+  "couleur": "#3A7D74",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "Dans un relais, personne ne gagne seul : le temps de l'équipe dépend de la qualité de chaque passe. Coopérer ne veut pas dire faire la même chose partout, mais tenir chacun son poste pour un but commun. Le jeu de la chaîne fonctionne sur ce principe : le plus beau geste du relais n'est pas la course, c'est la passe — recevoir pour donner.",
+  "anecdotes": [
+    "En athlétisme, le vrai exploit du relais 4x100 m se joue dans les zones de passage : c'est la passe qui fait le record.",
+    "Le « jeu du téléphone arabe » montre comment un message se transforme : coopérer, c'est aussi vérifier que la passe arrive intacte.",
+    "Les tornades de confettis dans un stade ont une règle d'or : chaque spectateur reçoit un paquet et le passe, la vague ne traverse le stade que grâce à tous."
+  ],
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 5,
+    "objectif": "Expérimenter que la réussite commune dépend de la qualité de chaque passe",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

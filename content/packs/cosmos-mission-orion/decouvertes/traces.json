@@ -1,0 +1,39 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "traces",
+  "nom": "Les Traces Nocturnes",
+  "latin": "Pollution lumineuse · Échelle de Bortle · Biodiversité",
+  "emoji": "🌌",
+  "couleur": "#315468",
+  "categorie": "nocturne",
+  "taille": "Antidote : lire les traces du ciel pour préserver la nuit",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "L'échelle de Bortle va de 1 (ciel presque parfait) à 9 (centre-ville saturé de lumière).",
+    "La lumière artificielle désoriente les insectes nocturnes et perturbe la chaîne alimentaire.",
+    "Éteindre l'éclairage inutile permet de retrouver des milliers d'étoiles visibles à l'œil nu."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Analyser les métadonnées d'une image du ciel et mesurer l'impact de la pollution lumineuse sur la biodiversité.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Sur une échelle de 1 à 9, quelle valeur note le ciel le plus pollué ?",
+      "options": ["9", "1", "5"],
+      "reponse": 0
+    }
+  ]
+}

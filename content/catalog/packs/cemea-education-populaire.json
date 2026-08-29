@@ -1,0 +1,22 @@
+{
+  "$schema": "curios-catalog-pack-v1",
+  "id": "cemea-education-populaire",
+  "nom": "CEMÉA & éducation populaire",
+  "tagline": "Coopérer, apprendre, s'émanciper",
+  "description": "Six découvertes sur l'éducation populaire et les pédagogies actives (CEMÉA, Freinet, Léo Lagrange), quatre notions complémentaires et sept balises énigmatiques. Une expérience qui place la coopération et l'émancipation au cœur du jeu.",
+  "cover": "cemea-education-populaire",
+  "accent": "#e74c3c",
+  "emoji": "🤝",
+  "difficulty": "facile",
+  "durationMin": 110,
+  "players": [2, 12],
+  "location": "En salle ou en plein air",
+  "environment": "mixte",
+  "skills": ["Coopération", "Méthodes actives", "Émancipation"],
+  "material": ["Smartphone", "Matériel d'animation"],
+  "goals": ["Découvrir l'éducation populaire", "Expérimenter la coopération", "S'initier aux pédagogies actives"],
+  "staff": true,
+  "badges": ["Éducatif", "Collectif"],
+  "collection": "Éducation & coopération",
+  "featured": true
+}

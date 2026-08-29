@@ -1,0 +1,22 @@
+{
+  "$schema": "curios-catalog-pack-v1",
+  "id": "harcelement-scolaire",
+  "nom": "Harcèlement scolaire",
+  "tagline": "Témoigner, protéger, alerter",
+  "description": "Six découvertes pour comprendre le harcèlement et apprendre les bons réflexes — témoigner, protéger, alerter — avec quatre notions de repères et six balises sobres. Module destiné aux interventions en milieu scolaire.",
+  "cover": "harcelement-scolaire",
+  "accent": "#2980b9",
+  "emoji": "🛡️",
+  "difficulty": "facile",
+  "durationMin": 60,
+  "players": [1, 8],
+  "location": "Milieu scolaire",
+  "environment": "mixte",
+  "skills": ["Empathie", "Prévention", "Esprit civique"],
+  "material": ["Smartphone"],
+  "goals": ["Comprendre le harcèlement", "Apprendre les bons réflexes", "Sensibiliser à l'entraide"],
+  "staff": true,
+  "badges": ["Éducatif", "Citoyenneté"],
+  "collection": "Citoyenneté & climat scolaire",
+  "featured": false
+}

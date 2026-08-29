@@ -20,6 +20,14 @@
     {
       "id": "phantom-cybersecurite",
       "actif": true
+    },
+    {
+      "id": "cosmos-mission-orion",
+      "actif": false
+    },
+    {
+      "id": "passeur-relais",
+      "actif": false
     }
   ]
 }

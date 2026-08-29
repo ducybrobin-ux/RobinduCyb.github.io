@@ -1,0 +1,22 @@
+{
+  "$schema": "curios-catalog-pack-v1",
+  "id": "metiers-tension",
+  "nom": "Métiers en tension",
+  "tagline": "Explorez les métiers qui recrutent",
+  "description": "Huit découvertes de familles de métiers où les entreprises recrutent fortement — bâtiment, soin, alimentation, transport, réparation, agriculture, industrie — avec quatre notions pour comprendre l'orientation. Conçu pour le cycle 4 et la 3e.",
+  "cover": null,
+  "accent": "#d35400",
+  "emoji": "🔧",
+  "difficulty": "facile",
+  "durationMin": 80,
+  "players": [1, 10],
+  "location": "En classe ou sur le terrain",
+  "environment": "mixte",
+  "skills": ["Orientation", "Découverte des métiers", "Projet professionnel"],
+  "material": ["Smartphone"],
+  "goals": ["Découvrir des métiers en tension", "Comprendre l'orientation", "Construire son projet"],
+  "staff": true,
+  "badges": ["Orientation", "Éducatif"],
+  "collection": "Orientation & métiers",
+  "featured": false
+}

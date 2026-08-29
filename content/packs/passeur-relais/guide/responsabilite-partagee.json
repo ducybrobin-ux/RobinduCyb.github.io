@@ -1,0 +1,24 @@
+{
+  "type": "notion-guide",
+  "version": 1,
+  "id": "responsabilite-partagee",
+  "nom": "La responsabilité partagée",
+  "latin": "Pro omnibus · Le soin du collectif",
+  "emoji": "🛡️",
+  "couleur": "#6B4F9E",
+  "categorie": "diurne",
+  "taille": "Le savais-tu ?",
+  "img": "",
+  "description": "Être responsable, c'est répondre des conséquences de ses actes. Dans un jeu transmis de main en main, la responsabilité ne s'arrête pas à sa propre équipe : préparer le chemin, ne pas révéler la mission, laisser la zone prête — chacun de ces gestes protège le plaisir de ceux qui viendront après. Le maillon faible n'existe pas : chaque responsabilité assumée renforce la chaîne tout entière.",
+  "anecdotes": [
+    "« Laisser le lieu plus propre qu'on ne l'a trouvé » est une consigne scoute centenaire : elle transforme chaque joueur en gardien du terrain des suivants.",
+    "Dans la course au sérum de 1925 en Alaska, chaque musher ne savait pas où allait la fièvre : il savait seulement qu'il devait passer le paquet au suivant.",
+    "En amont d'une chaîne logistique, un producteur ne rencontrera jamais le consommateur final : il travaille quand même pour lui, à l'aveugle."
+  ],
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 5,
+    "objectif": "Assumer une responsabilité pour le bien-être des équipes suivantes",
+    "programme": ["cycle 4", "lycée"]
+  }
+}

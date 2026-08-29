@@ -2077,6 +2077,10 @@
           if (!window.open("dashboard", "_blank")) location.href = "dashboard";
           return;
         }
+        if (go === "catalogue") {
+          if (!window.open("catalogue", "_blank")) location.href = "catalogue";
+          return;
+        }
         if (go === "guide") renderGuide();
         showScreen(go);
       });

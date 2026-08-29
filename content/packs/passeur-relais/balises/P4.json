@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "P4",
+  "bird": "passeur",
+  "code": "PAS-P4",
+  "x": 320,
+  "y": 320,
+  "lat": null,
+  "lng": null,
+  "label": "Le Passeur",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Le passeur devient responsable du jeu. Son devoir le plus important est de laisser, pour les équipes suivantes, un chemin…",
+      "reponses": ["prepare", "preparé", "pret"],
+      "indice": "Le contraire d'« abandonné en désordre » : un chemin bien …",
+      "saviez": "Un chemin préparé permet à la prochaine équipe de réussir sans refaire toutes les erreurs.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Pour préserver la surprise des équipes suivantes, le passeur doit taire certains détails. Lesquels ?",
+      "reponses": ["la solution des enigmes", "les solutions", "la reponse"],
+      "indice": "S'il dit tout, les suivants n'auront plus rien à découvrir.",
+      "saviez": "Garder le secret, ce n'est pas mentir : c'est offrir aux autres la joie de chercher par eux-mêmes.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Quelle qualité décrit celui qui accepte de préparer le terrain et d'organiser le jeu non pas pour gagner seul, mais pour les équipes suivantes ?",
+      "reponses": ["la responsabilite", "responsabilite", "l altruisme", "le sens du collectif"],
+      "indice": "« Capacité de répondre des conséquences de tes actes », cela commence par la lettre R…",
+      "saviez": "L'idée « laisse l'endroit et la mission en meilleur état que tu ne les as trouvés » est au cœur de l'éducation populaire.",
+      "ages": [14, 99]
+    }
+  },
+  "enigme": null
+}

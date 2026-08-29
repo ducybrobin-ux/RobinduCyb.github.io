@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS7",
+  "bird": "cosmos",
+  "code": "COS-CS7",
+  "x": 200,
+  "y": 60,
+  "lat": null,
+  "lng": null,
+  "label": "La Révélation du Cosmos",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Tu as rassemblé tous les indices : Orion, le spectre, Bételgeuse, Cassiopée, le ciel sombre. Quel immense ensemble contient toutes les étoiles, les planètes et les galaxies ?",
+      "reponses": ["l'univers", "univers", "le cosmos", "cosmos"],
+      "indice": "Un mot qui commence par « uni » et contient tout sans exception.",
+      "saviez": "L'univers contient des milliards de galaxies, chacune emplie d'étoiles.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Pour reconstituer la carte du ciel, transforme les coordonnées d'un point en le situant sur une sphère imaginaire entourant la Terre. Quel nom porte cette sphère ?",
+      "reponses": ["la sphere celeste", "sphere celeste", "la sphere du ciel", "sphere celeste imaginaire"],
+      "indice": "Elle est « céleste », c'est-à-dire liée au ciel.",
+      "saviez": "La sphère céleste est une construction imaginaire qui permet de repérer les étoiles par des coordonnées.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Mission accomplie : le message final nous rappelle que regarder le ciel, c'est interroger notre place dans le cosmos. Quel état d'esprit scientifique est le moteur de cette quête de compréhension ?",
+      "reponses": ["la curiosite", "curiosite", "l'emerveillement et la curiosite", "la curiosite scientifique"],
+      "indice": "C'est le désir de savoir et de comprendre, commençant par « curio ».",
+      "saviez": "La curiosité pousse l'humanité à poser des questions, de l'observation des étoiles aux sondes interstellaires.",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}

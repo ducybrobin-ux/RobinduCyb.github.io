@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "tresor",
+  "nom": "Le Trésor",
+  "latin": "Thesauros · Le vrai trésor",
+  "emoji": "✨",
+  "couleur": "#C9A227",
+  "categorie": "diurne",
+  "taille": "Antidote : le trésor n'a jamais été caché",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Le trésor n'a jamais été caché : c'est la chaîne elle-même, formée par tous ceux qui ont joué avant et après toi.",
+    "Chaque fin de partie ouvre une nouvelle première partie : tu es le premier joueur du suivant.",
+    "Les plus beaux trésors ne se mesurent pas en or : les jeux, les savoirs et les souvenirs valent par ce qu'on en transmet."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 523, "fEnd": 523, "d": 0.12, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 659, "fEnd": 659, "d": 0.12, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 784, "fEnd": 784, "d": 0.25, "g": 0.12, "type": "sine", "v": 0.42 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Révéler que le trésor du jeu est la chaîne de transmission elle-même",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Le vrai trésor de ce jeu est…",
+      "options": ["La chaîne humaine", "Un coffre rempli d'or", "Une carte secrète"],
+      "reponse": 0
+    },
+    {
+      "q": "Que devient chaque équipe en fin de partie ?",
+      "options": ["Le premier maillon de la suivante", "Un simple spectateur", "Un collectionneur d'objets"],
+      "reponse": 0
+    }
+  ]
+}

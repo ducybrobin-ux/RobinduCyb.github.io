@@ -1,0 +1,45 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "chaine",
+  "nom": "La Chaîne",
+  "latin": "Homo sum · Relais humain",
+  "emoji": "⛓️",
+  "couleur": "#5A9E2F",
+  "categorie": "diurne",
+  "taille": "Antidote : jouer ensemble, dépendre les uns des autres",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Le relais humain : chaque maillon reçoit le témoin, court, puis le remet. L'échec d'un seul maillon casse toute la ligne.",
+    "Sur la carte mondiale, la chaîne s'illumine à chaque partie jouée : ton maillon relie les joueurs d'avant et d'après toi.",
+    "Depuis l'Antiquité, on s'est transmis nouvelles et objets de main en main : la première « chaîne humaine » a précédé internet de plusieurs millénaires."
+  ],
+  "chant": {
+    "tempo": 120,
+    "notes": [
+      { "f": 523, "fEnd": 523, "d": 0.08, "g": 0.07, "type": "sine", "v": 0.45 },
+      { "f": 523, "fEnd": 523, "d": 0.08, "g": 0.07, "type": "sine", "v": 0.45 },
+      { "f": 587, "fEnd": 587, "d": 0.12, "g": 0.08, "type": "sine", "v": 0.45 },
+      { "f": 659, "fEnd": 659, "d": 0.2, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Coopérer en relais et prendre conscience que chacun dépend des autres",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Dans un relais, qu'arrive-t-il si un seul maillon ne joue pas son rôle ?",
+      "options": ["La chaîne casse", "Rien ne change", "Le trésor apparaît"],
+      "reponse": 0
+    },
+    {
+      "q": "Comment appelle-t-on cet ensemble de maillons reliés entre eux ?",
+      "options": ["Un réseau", "Un désert", "Une île déserte"],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,1025 @@
+{
+  "$format": "curios-parcours",
+  "$version": 1,
+  "id": "passeur-relais",
+  "title": "Les Passeurs",
+  "metadata": {
+    "author": "",
+    "organization": "",
+    "language": "fr",
+    "license": "",
+    "createdAt": "2026-08-29",
+    "updatedAt": "2026-08-29",
+    "source": {
+      "format": "jdpbc-pack",
+      "version": 1
+    }
+  },
+  "description": "Un jeu coopératif et d'enquête où chaque équipe découvre qu'elle ne joue pas seulement pour elle : elle est responsable de transmettre l'expérience aux suivants. Fragment, QR code, exploration et relais humain : le trésor n'a jamais été caché, c'est la chaîne.",
+  "theme": "coopération, transmission & relais",
+  "audience": {
+    "minAge": 10,
+    "maxAge": 99
+  },
+  "duration": null,
+  "pedagogy": {
+    "objectives": [
+      "Distinguer chaîne linéaire et réseau maillé pour lire la coopération moderne",
+      "Expérimenter que la réussite commune dépend de la qualité de chaque passe",
+      "Assumer une responsabilité pour le bien-être des équipes suivantes",
+      "Comprendre que les savoirs ne durent que s'ils sont transmis",
+      "Coopérer en relais et prendre conscience que chacun dépend des autres",
+      "Lire une distance et s'orienter pour atteindre une zone ciblée",
+      "Analyser des indices partiels pour reconstituer un message complet",
+      "Comprendre qu'une information n'a de valeur que si elle est transmise",
+      "Devenir responsable de la transmission au-delà de sa propre réussite",
+      "Révéler que le trésor du jeu est la chaîne de transmission elle-même"
+    ],
+    "skills": [],
+    "competencies": [
+      {
+        "id": "chaine-humaine-reseau",
+        "nom": "La chaîne humaine et le réseau",
+        "description": "Une chaîne est une ligne : chaque maillon n'en connaît que deux voisins, et si l'un casse, tout s'arrête. Un réseau, au contraire, est maillé : chaque nœud connaît plusieurs chemins, et la panne d'un maillon ne paralyse pas l'ensemble. De la flamme olympique aux boucles du kilomètre littéraire, l'humanité a toujours fabriqué des chaînes humaines ; d'internet aux réseaux sociaux, elle construit surtout des réseaux. Le passeur comprend qu'il est un maillon et un nœud à la fois.",
+        "emoji": "⛓️",
+        "objectif": "Distinguer chaîne linéaire et réseau maillé pour lire la coopération moderne",
+        "ages": [
+          10,
+          99
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "Le relais de la flamme olympique relie deux villes par des milliers de porteurs : une seule flamme, des centaines de mains.",
+          "Sur internet, si un serveur tombe, les données empruntent un autre chemin : le réseau est conçu pour survivre à la panne d'un seul maillon.",
+          "Dans un « flash mob » humain ou une chaîne de vêtements, chacun ne voit que son voisin… et pourtant le dessin global est parfait."
+        ]
+      },
+      {
+        "id": "cooperation-relais",
+        "nom": "La coopération en relais",
+        "description": "Dans un relais, personne ne gagne seul : le temps de l'équipe dépend de la qualité de chaque passe. Coopérer ne veut pas dire faire la même chose partout, mais tenir chacun son poste pour un but commun. Le jeu de la chaîne fonctionne sur ce principe : le plus beau geste du relais n'est pas la course, c'est la passe — recevoir pour donner.",
+        "emoji": "🤲",
+        "objectif": "Expérimenter que la réussite commune dépend de la qualité de chaque passe",
+        "ages": [
+          10,
+          99
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "En athlétisme, le vrai exploit du relais 4x100 m se joue dans les zones de passage : c'est la passe qui fait le record.",
+          "Le « jeu du téléphone arabe » montre comment un message se transforme : coopérer, c'est aussi vérifier que la passe arrive intacte.",
+          "Les tornades de confettis dans un stade ont une règle d'or : chaque spectateur reçoit un paquet et le passe, la vague ne traverse le stade que grâce à tous."
+        ]
+      },
+      {
+        "id": "responsabilite-partagee",
+        "nom": "La responsabilité partagée",
+        "description": "Être responsable, c'est répondre des conséquences de ses actes. Dans un jeu transmis de main en main, la responsabilité ne s'arrête pas à sa propre équipe : préparer le chemin, ne pas révéler la mission, laisser la zone prête — chacun de ces gestes protège le plaisir de ceux qui viendront après. Le maillon faible n'existe pas : chaque responsabilité assumée renforce la chaîne tout entière.",
+        "emoji": "🛡️",
+        "objectif": "Assumer une responsabilité pour le bien-être des équipes suivantes",
+        "ages": [
+          10,
+          99
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "« Laisser le lieu plus propre qu'on ne l'a trouvé » est une consigne scoute centenaire : elle transforme chaque joueur en gardien du terrain des suivants.",
+          "Dans la course au sérum de 1925 en Alaska, chaque musher ne savait pas où allait la fièvre : il savait seulement qu'il devait passer le paquet au suivant.",
+          "En amont d'une chaîne logistique, un producteur ne rencontrera jamais le consommateur final : il travaille quand même pour lui, à l'aveugle."
+        ]
+      },
+      {
+        "id": "transmission-savoirs",
+        "nom": "Transmettre des savoirs",
+        "description": "Un savoir ne tient que tant qu'il circule : avant l'écriture, les griots mémorisaient des siècles d'histoire et les déroulaient de bouche à oreille ; les compagnons transmettaient leurs tours de main d'artisan en artisan. Transmettre, ce n'est pas perdre ce qu'on sait, c'est le faire vivre plus longtemps que soi. Le passeur comprend que son rôle ne s'arrête pas à réussir : il doit faire réussir la suite.",
+        "emoji": "📘",
+        "objectif": "Comprendre que les savoirs ne durent que s'ils sont transmis",
+        "ages": [
+          10,
+          99
+        ],
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ],
+        "anecdotes": [
+          "En Afrique de l'Ouest, les griots portaient dans leur mémoire des généalogies, des épopées et des lois : des heures de récit sans aucun support écrit.",
+          "Les compagnons du Tour de France bâtissaient leur métier en le passant : chaque « chef-d'œuvre » prouvait que le savoir avait bien été reçu.",
+          "Dans les anciennes corporations, le secret d'un métier se transmettait trois fois : à la vue, à la pratique et vite oublié s'il n'était pas repris."
+        ]
+      }
+    ],
+    "evaluation": []
+  },
+  "game": {
+    "mode": "courses",
+    "scoring": {
+      "starsPerStation": 3,
+      "timeBonus": true
+    },
+    "rules": {
+      "order": "libre"
+    }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": null,
+    "trail": []
+  },
+  "stations": [
+    {
+      "id": "P1",
+      "label": "Le Premier Relais",
+      "code": "PAS-P1",
+      "discoveryId": "message",
+      "x": 74,
+      "y": 452,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "P1-enigme"
+      ]
+    },
+    {
+      "id": "P2",
+      "label": "Le Fragment",
+      "code": "PAS-P2",
+      "discoveryId": "fragment",
+      "x": 148,
+      "y": 400,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "P2-enigme"
+      ]
+    },
+    {
+      "id": "P3",
+      "label": "La Zone",
+      "code": "PAS-P3",
+      "discoveryId": "exploration",
+      "x": 238,
+      "y": 292,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "P3-enigme"
+      ]
+    },
+    {
+      "id": "P4",
+      "label": "Le Passeur",
+      "code": "PAS-P4",
+      "discoveryId": "passeur",
+      "x": 320,
+      "y": 320,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "P4-enigme"
+      ]
+    },
+    {
+      "id": "P5",
+      "label": "La Chaîne",
+      "code": "PAS-P5",
+      "discoveryId": "chaine",
+      "x": 388,
+      "y": 396,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "P5-enigme"
+      ]
+    },
+    {
+      "id": "P6",
+      "label": "Le Trésor",
+      "code": "PAS-P6",
+      "discoveryId": "tresor",
+      "x": 330,
+      "y": 460,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "P6-enigme"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "P1-enigme",
+      "type": "enigme",
+      "stationId": "P1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Premier relais ! Tu viens de recevoir un message secret. Ta mission, pour les équipes suivantes, est de le…",
+          "answers": [
+            "transmettre",
+            "le transmettre",
+            "transmettre le message"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Le contraire de « garder pour soi ».",
+          "knowMore": "Dans les courses de relais, un témoin reçu doit être remis : garder le témoin, c'est arrêter toute la course."
+        },
+        "moyen": {
+          "text": "Une information passe de bouche à oreille, de relais en relais, sans machine ni écriture. Comment appelle-t-on ce passage d'une personne à une autre ?",
+          "answers": [
+            "le bouche a oreille",
+            "bouche a oreille"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "C'est la communication la plus ancienne : la bouche… puis l'oreille !",
+          "knowMore": "Avant les journaux, le bouche à oreille propageait nouvelles et rumeurs dans les villages et sur les marchés."
+        },
+        "difficile": {
+          "text": "Transférer un message d'une main à la suivante, sans l'altérer, c'est l'art de la transmission. Donne le nom de ce mouvement continu.",
+          "answers": [
+            "la transmission",
+            "transmission",
+            "le relais"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Cela commence par « trans »… comme trans-border, trans-mettre.",
+          "knowMore": "En informatique, la transmission fiable repose sur l'acquittement : chaque étape confirme à la précédente qu'elle a bien reçu."
+        }
+      }
+    },
+    {
+      "id": "P2-enigme",
+      "type": "enigme",
+      "stationId": "P2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Regarde bien autour de toi : chaque endroit du parcours ne montre qu'un bout du grand message. Comment appelle-t-on ce bout ?",
+          "answers": [
+            "un fragment",
+            "fragment",
+            "un indice"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Cela commence comme « fragile » : un petit morceau cassé d'un tout.",
+          "knowMore": "Dans une enquête, un seul fragment ne prouve rien : c'est leur ensemble qui fait sens."
+        },
+        "moyen": {
+          "text": "Tu as réuni plusieurs morceaux épars. Pour comprendre le message complet, il faut les remettre dans le bon ordre. Nomme ce travail.",
+          "answers": [
+            "la reconstitution",
+            "reconstitution"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Re… comme recommencer, puis « constitution » : refaire le tout.",
+          "knowMore": "Dans les laboratoires, on reconstitue des documents déchirés morceau par morceau, comme un puzzle géant."
+        },
+        "difficile": {
+          "text": "À partir d'un seul fragment, on formule une supposition provisoire avant de la vérifier. Quel terme scientifique désigne cette supposition ?",
+          "answers": [
+            "une hypothese",
+            "hypothese",
+            "une hypothèse"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Elle commence par la lettre qui se cache au début d'« hypersensible ».",
+          "knowMore": "« Hypothèse » vient du grec hupothesis (base, fondement) : une base provisoire que l'expérience doit confirmer ou infirmer."
+        }
+      }
+    },
+    {
+      "id": "P3-enigme",
+      "type": "enigme",
+      "stationId": "P3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "« Vous êtes dans la zone ! » Pour savoir si tu approches de la balise, tu regardes la distance qui…",
+          "answers": [
+            "diminue",
+            "baisse",
+            "se reduit"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Le contraire d'« augmente ».",
+          "knowMore": "La distance s'affiche en mètres : lorsque tu es tout proche, le cercle de la balise s'illumine sur la carte."
+        },
+        "moyen": {
+          "text": "Quand la distance diminue régulièrement, on dit que tu suis le bon cap et que tu es…",
+          "answers": [
+            "dans la zone",
+            "sur la bonne voie",
+            "proche"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Crie-le quand la balise est toute proche : « Vous êtes … ! »",
+          "knowMore": "Ce jeu s'inspire du géocaching : les caches y sont décrites par leurs coordonnées géographiques précises."
+        },
+        "difficile": {
+          "text": "Quel système, reposant sur une constellation de satellites, te donne ta position et la distance restante jusqu'à la balise ?",
+          "answers": [
+            "le gps",
+            "gps",
+            "gnss"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Trois lettres mystérieuses… Global Positioning System.",
+          "knowMore": "Le GPS utilise au moins quatre satellites pour calculer position et altitude : c'est la triangulation qui rend le point unique."
+        }
+      }
+    },
+    {
+      "id": "P4-enigme",
+      "type": "enigme",
+      "stationId": "P4",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Le passeur devient responsable du jeu. Son devoir le plus important est de laisser, pour les équipes suivantes, un chemin…",
+          "answers": [
+            "prepare",
+            "preparé",
+            "pret"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Le contraire d'« abandonné en désordre » : un chemin bien …",
+          "knowMore": "Un chemin préparé permet à la prochaine équipe de réussir sans refaire toutes les erreurs."
+        },
+        "moyen": {
+          "text": "Pour préserver la surprise des équipes suivantes, le passeur doit taire certains détails. Lesquels ?",
+          "answers": [
+            "la solution des enigmes",
+            "les solutions",
+            "la reponse"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "S'il dit tout, les suivants n'auront plus rien à découvrir.",
+          "knowMore": "Garder le secret, ce n'est pas mentir : c'est offrir aux autres la joie de chercher par eux-mêmes."
+        },
+        "difficile": {
+          "text": "Quelle qualité décrit celui qui accepte de préparer le terrain et d'organiser le jeu non pas pour gagner seul, mais pour les équipes suivantes ?",
+          "answers": [
+            "la responsabilite",
+            "responsabilite",
+            "l altruisme",
+            "le sens du collectif"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "« Capacité de répondre des conséquences de tes actes », cela commence par la lettre R…",
+          "knowMore": "L'idée « laisse l'endroit et la mission en meilleur état que tu ne les as trouvés » est au cœur de l'éducation populaire."
+        }
+      }
+    },
+    {
+      "id": "P5-enigme",
+      "type": "enigme",
+      "stationId": "P5",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Dans un relais, chaque équipe reçoit le témoin, court, puis doit le…",
+          "answers": [
+            "passer",
+            "transmettre",
+            "remettre"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Le mouvement du relais : recevoir, puis … au suivant.",
+          "knowMore": "En athlétisme, le témoin est un petit cylindre qui voyage plus vite que n'importe quel coureur seul."
+        },
+        "moyen": {
+          "text": "Sur la carte mondiale du jeu, chaque partie jouée allume un point de lumière. Comment appelle-t-on cet ensemble de maillons reliés entre eux ?",
+          "answers": [
+            "le reseau",
+            "reseau",
+            "une chaine",
+            "la chaine"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "Comme un filet : on dit « réseau routier », « réseau social »…",
+          "knowMore": "Un réseau se mesure à ce qu'il relie : un maillon isolé n'est plus un réseau mais un simple point."
+        },
+        "difficile": {
+          "text": "La réussite de tous dépend de chacun : si un seul maillon ne joue pas son rôle, la ligne entière s'effondre. Nomme cette dépendance mutuelle.",
+          "answers": [
+            "la cooperation",
+            "cooperation",
+            "l interdependance",
+            "la collaboration"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "« co- » veut dire ensemble, « opérer » veut dire agir : agir avec les autres.",
+          "knowMore": "L'interdépendance n'est pas une faiblesse : écosystèmes, équipes et réseaux tiennent grâce aux liens qui unissent leurs membres."
+        }
+      }
+    },
+    {
+      "id": "P6-enigme",
+      "type": "enigme",
+      "stationId": "P6",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Révélation finale : le trésor n'a jamais été caché ! Ce trésor-là, c'est…",
+          "answers": [
+            "la chaine",
+            "la chaîne",
+            "le relais"
+          ],
+          "ages": [
+            6,
+            9
+          ],
+          "hint": "Regarde derrière toi : tous les maillons que tu as parcourus forment …",
+          "knowMore": "Tu n'as jamais cherché un objet : tu as construit, à chaque étape, un maillon de plus."
+        },
+        "moyen": {
+          "text": "Chaque équipe pensait chercher un objet enterré, mais ce qui est précieux, c'est le mouvement qui les relie. Ce précieux-là est…",
+          "answers": [
+            "la chaine",
+            "la chaîne",
+            "le relais humain",
+            "la transmission"
+          ],
+          "ages": [
+            10,
+            13
+          ],
+          "hint": "« Ne pas serrer, mais passer » : la valeur circule de main en main.",
+          "knowMore": "Dans cette aventure, l'important n'est pas d'arriver au bout, mais que quelqu'un d'autre puisse y arriver après toi."
+        },
+        "difficile": {
+          "text": "Le trésor, c'est la boucle : en finissant de jouer, tu en commences une autre pour quelqu'un d'autre. Comment résumer ce que devient chaque équipe ?",
+          "answers": [
+            "le premier maillon de la prochaine chaine",
+            "le premier joueur du suivant",
+            "un passeur"
+          ],
+          "ages": [
+            14,
+            99
+          ],
+          "hint": "Reprends les mots du titre : « tu es le premier … du … ».",
+          "knowMore": "C'est la boucle des passeurs : aucune partie ne se termine vraiment tant qu'une autre a commencé."
+        }
+      }
+    },
+    {
+      "id": "chaine-quiz",
+      "type": "quiz",
+      "characterId": "chaine",
+      "questions": [
+        {
+          "q": "Dans un relais, qu'arrive-t-il si un seul maillon ne joue pas son rôle ?",
+          "options": [
+            "La chaîne casse",
+            "Rien ne change",
+            "Le trésor apparaît"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Comment appelle-t-on cet ensemble de maillons reliés entre eux ?",
+          "options": [
+            "Un réseau",
+            "Un désert",
+            "Une île déserte"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "exploration-quiz",
+      "type": "quiz",
+      "characterId": "exploration",
+      "questions": [
+        {
+          "q": "Lorsque la distance restante diminue, que se passe-t-il ?",
+          "options": [
+            "On entre dans la zone",
+            "On s'éloigne du but",
+            "Rien ne change"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Quel système calcule ta position depuis des satellites ?",
+          "options": [
+            "Le GPS",
+            "Un sifflet d'arbitre",
+            "Une simple boussole seule"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "fragment-quiz",
+      "type": "quiz",
+      "characterId": "fragment",
+      "questions": [
+        {
+          "q": "Un morceau de message isolé est…",
+          "options": [
+            "Un fragment",
+            "Une réponse complète",
+            "Le trésor du jeu"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Que faut-il faire des fragments pour comprendre le tout ?",
+          "options": [
+            "Les assembler dans le bon ordre",
+            "Les jeter au vent",
+            "Les cacher sous les pierres"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "message-quiz",
+      "type": "quiz",
+      "characterId": "message",
+      "questions": [
+        {
+          "q": "Que doit faire une équipe qui reçoit le message ?",
+          "options": [
+            "Le transmettre aux équipes suivantes",
+            "Le garder secret pour elle",
+            "L'oublier aussitôt"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Pourquoi transmettre plutôt que garder ?",
+          "options": [
+            "Pour prolonger le jeu et la découverte",
+            "Pour que personne ne joue",
+            "C'est exactement pareil"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "passeur-quiz",
+      "type": "quiz",
+      "characterId": "passeur",
+      "questions": [
+        {
+          "q": "Un passeur responsable doit surtout…",
+          "options": [
+            "Laisser le chemin préparé",
+            "Terminer seul le plus vite possible",
+            "Tout raconter aux équipes suivantes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Que doit-il taire pour préserver la surprise ?",
+          "options": [
+            "Les solutions des énigmes",
+            "Le nom de son équipe",
+            "L'heure de la partie"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "tresor-quiz",
+      "type": "quiz",
+      "characterId": "tresor",
+      "questions": [
+        {
+          "q": "Le vrai trésor de ce jeu est…",
+          "options": [
+            "La chaîne humaine",
+            "Un coffre rempli d'or",
+            "Une carte secrète"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Que devient chaque équipe en fin de partie ?",
+          "options": [
+            "Le premier maillon de la suivante",
+            "Un simple spectateur",
+            "Un collectionneur d'objets"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "chaine",
+      "nom": "La Chaîne",
+      "latin": "Homo sum · Relais humain",
+      "emoji": "⛓️",
+      "couleur": "#5A9E2F",
+      "categorie": "diurne",
+      "taille": "Antidote : jouer ensemble, dépendre les uns des autres",
+      "img": "",
+      "anecdotes": [
+        "Le relais humain : chaque maillon reçoit le témoin, court, puis le remet. L'échec d'un seul maillon casse toute la ligne.",
+        "Sur la carte mondiale, la chaîne s'illumine à chaque partie jouée : ton maillon relie les joueurs d'avant et d'après toi.",
+        "Depuis l'Antiquité, on s'est transmis nouvelles et objets de main en main : la première « chaîne humaine » a précédé internet de plusieurs millénaires."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Coopérer en relais et prendre conscience que chacun dépend des autres",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 120,
+        "notes": [
+          {
+            "f": 523,
+            "fEnd": 523,
+            "d": 0.08,
+            "g": 0.07,
+            "type": "sine",
+            "v": 0.45
+          },
+          {
+            "f": 523,
+            "fEnd": 523,
+            "d": 0.08,
+            "g": 0.07,
+            "type": "sine",
+            "v": 0.45
+          },
+          {
+            "f": 587,
+            "fEnd": 587,
+            "d": 0.12,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.45
+          },
+          {
+            "f": 659,
+            "fEnd": 659,
+            "d": 0.2,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "exploration",
+      "nom": "La Zone",
+      "latin": "Navigare necesse est · Orientation",
+      "emoji": "🧭",
+      "couleur": "#2E6FB3",
+      "categorie": "diurne",
+      "taille": "Antidote : chercher, se repérer, viser juste",
+      "img": "",
+      "anecdotes": [
+        "« Vous êtes dans la zone ! » : la distance GPS diminue, la carte parle et la balise se rapproche à chaque pas.",
+        "Sans cap clair, on tourne en rond ; avec une bonne orientation, chaque pas éloigne du point de départ et rapproche du but.",
+        "Les premiers explorateurs s'orientaient aux étoiles : une seule étoile fixe suffisait à trouver le nord la nuit."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Lire une distance et s'orienter pour atteindre une zone ciblée",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 110,
+        "notes": [
+          {
+            "f": 330,
+            "fEnd": 330,
+            "d": 0.08,
+            "g": 0.07,
+            "type": "square",
+            "v": 0.35
+          },
+          {
+            "f": 330,
+            "fEnd": 330,
+            "d": 0.08,
+            "g": 0.07,
+            "type": "square",
+            "v": 0.35
+          },
+          {
+            "f": 392,
+            "fEnd": 392,
+            "d": 0.12,
+            "g": 0.08,
+            "type": "square",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "fragment",
+      "nom": "Le Fragment",
+      "latin": "Pars pro toto · Morceau de message",
+      "emoji": "🧩",
+      "couleur": "#8E3B8E",
+      "categorie": "diurne",
+      "taille": "Antidote : décoder, assembler, comprendre",
+      "img": "",
+      "anecdotes": [
+        "Un fragment n'est jamais une réponse à lui tout seul : c'est une pièce qui attend silencieusement les autres.",
+        "En enquête comme en géocaching, chaque indice analysé libère un nouveau morceau du grand message.",
+        "Les cartes anciennes n'étaient souvent que des fragments : les explorateurs les recollaient au fil de leurs voyages."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Analyser des indices partiels pour reconstituer un message complet",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 90,
+        "notes": [
+          {
+            "f": 392,
+            "fEnd": 388,
+            "d": 0.08,
+            "g": 0.06,
+            "type": "triangle",
+            "v": 0.45
+          },
+          {
+            "f": 494,
+            "fEnd": 490,
+            "d": 0.1,
+            "g": 0.06,
+            "type": "triangle",
+            "v": 0.45
+          },
+          {
+            "f": 587,
+            "fEnd": 583,
+            "d": 0.22,
+            "g": 0.1,
+            "type": "triangle",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "message",
+      "nom": "Le Message",
+      "latin": "Relay · Transmission",
+      "emoji": "🔗",
+      "couleur": "#C44536",
+      "categorie": "diurne",
+      "taille": "Antidote : transmettre plutôt que garder",
+      "img": "",
+      "anecdotes": [
+        "Vous êtes les premiers : le message de cette étape n'existe que parce qu'il doit continuer vers l'équipe suivante.",
+        "Une information qui reste dans une seule tête s'éteint ; transmise, elle fait avancer toute la chaîne.",
+        "Avant le téléphone, des relayeurs couraient parfois des centaines de kilomètres pour qu'un seul message parvienne à destination."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Comprendre qu'une information n'a de valeur que si elle est transmise",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 520,
+            "fEnd": 520,
+            "d": 0.1,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 660,
+            "fEnd": 660,
+            "d": 0.15,
+            "g": 0.1,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "passeur",
+      "nom": "Le Passeur",
+      "latin": "Mentor · Transmission responsable",
+      "emoji": "🤝",
+      "couleur": "#C07F00",
+      "categorie": "diurne",
+      "taille": "Antidote : préparer le chemin sans gâcher la surprise",
+      "img": "",
+      "anecdotes": [
+        "Le passeur garde le secret de la mission pour préserver la surprise des équipes qui suivent.",
+        "Préparer le chemin, c'est empêcher le jeu de s'arrêter : le vrai succès du passeur, c'est que la prochaine équipe réussisse.",
+        "Dans les compagnonnages, le « passeur » est celui qui transmet les tours de main : le savoir ne lui appartient pas, il le doit aux suivants."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Devenir responsable de la transmission au-delà de sa propre réussite",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 95,
+        "notes": [
+          {
+            "f": 349,
+            "fEnd": 349,
+            "d": 0.1,
+            "g": 0.07,
+            "type": "sawtooth",
+            "v": 0.3
+          },
+          {
+            "f": 392,
+            "fEnd": 392,
+            "d": 0.1,
+            "g": 0.07,
+            "type": "sawtooth",
+            "v": 0.3
+          },
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.18,
+            "g": 0.09,
+            "type": "sawtooth",
+            "v": 0.32
+          }
+        ]
+      }
+    },
+    {
+      "id": "tresor",
+      "nom": "Le Trésor",
+      "latin": "Thesauros · Le vrai trésor",
+      "emoji": "✨",
+      "couleur": "#C9A227",
+      "categorie": "diurne",
+      "taille": "Antidote : le trésor n'a jamais été caché",
+      "img": "",
+      "anecdotes": [
+        "Le trésor n'a jamais été caché : c'est la chaîne elle-même, formée par tous ceux qui ont joué avant et après toi.",
+        "Chaque fin de partie ouvre une nouvelle première partie : tu es le premier joueur du suivant.",
+        "Les plus beaux trésors ne se mesurent pas en or : les jeux, les savoirs et les souvenirs valent par ce qu'on en transmet."
+      ],
+      "pedagogy": {
+        "ages": [
+          10,
+          99
+        ],
+        "dureeMin": 8,
+        "objectif": "Révéler que le trésor du jeu est la chaîne de transmission elle-même",
+        "programme": [
+          "cycle 4",
+          "lycée"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 523,
+            "fEnd": 523,
+            "d": 0.12,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 659,
+            "fEnd": 659,
+            "d": 0.12,
+            "g": 0.08,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 784,
+            "fEnd": 784,
+            "d": 0.25,
+            "g": 0.12,
+            "type": "sine",
+            "v": 0.42
+          }
+        ]
+      }
+    }
+  ],
+  "media": [],
+  "rewards": [],
+  "debriefing": {
+    "participantQuestions": [],
+    "facilitatorReport": [],
+    "skillsObserved": []
+  }
+}

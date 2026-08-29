@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "exploration",
+  "nom": "La Zone",
+  "latin": "Navigare necesse est · Orientation",
+  "emoji": "🧭",
+  "couleur": "#2E6FB3",
+  "categorie": "diurne",
+  "taille": "Antidote : chercher, se repérer, viser juste",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "« Vous êtes dans la zone ! » : la distance GPS diminue, la carte parle et la balise se rapproche à chaque pas.",
+    "Sans cap clair, on tourne en rond ; avec une bonne orientation, chaque pas éloigne du point de départ et rapproche du but.",
+    "Les premiers explorateurs s'orientaient aux étoiles : une seule étoile fixe suffisait à trouver le nord la nuit."
+  ],
+  "chant": {
+    "tempo": 110,
+    "notes": [
+      { "f": 330, "fEnd": 330, "d": 0.08, "g": 0.07, "type": "square", "v": 0.35 },
+      { "f": 330, "fEnd": 330, "d": 0.08, "g": 0.07, "type": "square", "v": 0.35 },
+      { "f": 392, "fEnd": 392, "d": 0.12, "g": 0.08, "type": "square", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Lire une distance et s'orienter pour atteindre une zone ciblée",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Lorsque la distance restante diminue, que se passe-t-il ?",
+      "options": ["On entre dans la zone", "On s'éloigne du but", "Rien ne change"],
+      "reponse": 0
+    },
+    {
+      "q": "Quel système calcule ta position depuis des satellites ?",
+      "options": ["Le GPS", "Un sifflet d'arbitre", "Une simple boussole seule"],
+      "reponse": 0
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "cosmos-mission-orion",
+  "nom": "Cosmos — Mission Orion",
+  "theme": "astronomie, sciences & vulgarisation",
+  "description": "Une enquête d'orientation et d'investigation scientifique à la découverte des secrets du ciel nocturne, du système solaire et des constellations, tout en luttant contre la pollution lumineuse. Sept missions : signal stellaire, analyse spectrale, échelle des tailles, chiffre de Cassini, traces nocturnes, choix d'orbite et révélation du cosmos.",
+  "version": 1,
+  "ages": [12, 18]
+}

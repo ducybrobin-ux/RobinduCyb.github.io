@@ -1,0 +1,8 @@
+{
+  "id": "passeur-relais",
+  "nom": "Les Passeurs",
+  "theme": "coopération, transmission & relais",
+  "description": "Un jeu coopératif et d'enquête où chaque équipe découvre qu'elle ne joue pas seulement pour elle : elle est responsable de transmettre l'expérience aux suivants. Fragment, QR code, exploration et relais humain : le trésor n'a jamais été caché, c'est la chaîne.",
+  "version": 1,
+  "ages": [10, 99]
+}

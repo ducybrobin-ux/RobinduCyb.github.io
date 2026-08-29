@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "echelle",
+  "nom": "L'Échelle des Géantes",
+  "latin": "Tailles comparées · Échelle des corps célestes",
+  "emoji": "🪐",
+  "couleur": "#D9792B",
+  "categorie": "nocturne",
+  "taille": "Antidote : classer les objets du plus petit au plus grand",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Plus de 200 Lunes tiendraient à l'intérieur de la Terre.",
+    "Jupiter est si grosse que plus de 1 300 Terres pourraient y entrer.",
+    "Bételgeuse, supergéante rouge, dépasserait l'orbite de Jupiter si elle remplaçait le Soleil."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Comparer et classer les corps célestes du plus petit au plus grand pour construire une échelle des tailles.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quel objet est le plus petit de cette liste : Lune, Terre, Soleil ?",
+      "options": ["La Lune", "La Terre", "Le Soleil"],
+      "reponse": 0
+    },
+    {
+      "q": "Quelle supergéante dépasserait l'orbite de Jupiter si elle était à la place du Soleil ?",
+      "options": ["Sirius", "Bételgeuse", "Alnilam"],
+      "reponse": 1
+    }
+  ]
+}

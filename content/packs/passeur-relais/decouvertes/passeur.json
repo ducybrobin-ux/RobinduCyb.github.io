@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "passeur",
+  "nom": "Le Passeur",
+  "latin": "Mentor · Transmission responsable",
+  "emoji": "🤝",
+  "couleur": "#C07F00",
+  "categorie": "diurne",
+  "taille": "Antidote : préparer le chemin sans gâcher la surprise",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Le passeur garde le secret de la mission pour préserver la surprise des équipes qui suivent.",
+    "Préparer le chemin, c'est empêcher le jeu de s'arrêter : le vrai succès du passeur, c'est que la prochaine équipe réussisse.",
+    "Dans les compagnonnages, le « passeur » est celui qui transmet les tours de main : le savoir ne lui appartient pas, il le doit aux suivants."
+  ],
+  "chant": {
+    "tempo": 95,
+    "notes": [
+      { "f": 349, "fEnd": 349, "d": 0.1, "g": 0.07, "type": "sawtooth", "v": 0.3 },
+      { "f": 392, "fEnd": 392, "d": 0.1, "g": 0.07, "type": "sawtooth", "v": 0.3 },
+      { "f": 440, "fEnd": 440, "d": 0.18, "g": 0.09, "type": "sawtooth", "v": 0.32 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [10, 99],
+    "duree_min": 8,
+    "objectif": "Devenir responsable de la transmission au-delà de sa propre réussite",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Un passeur responsable doit surtout…",
+      "options": ["Laisser le chemin préparé", "Terminer seul le plus vite possible", "Tout raconter aux équipes suivantes"],
+      "reponse": 0
+    },
+    {
+      "q": "Que doit-il taire pour préserver la surprise ?",
+      "options": ["Les solutions des énigmes", "Le nom de son équipe", "L'heure de la partie"],
+      "reponse": 0
+    }
+  ]
+}

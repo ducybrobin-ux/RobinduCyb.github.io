@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS5",
+  "bird": "traces",
+  "code": "COS-CS5",
+  "x": 400,
+  "y": 130,
+  "lat": null,
+  "lng": null,
+  "label": "Les Traces Nocturnes",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Pour voir les étoiles, il faut un ciel bien sombre. Comment s'appelle l'éclairage artificiel qui trouble l'observation du ciel nocturne ?",
+      "reponses": ["la pollution lumineuse", "pollution lumineuse", "lumiere artificielle"],
+      "indice": "C'est une « pollution » causée par la lumière des villes.",
+      "saviez": "Près des grandes villes, on ne voit parfois plus que quelques dizaines d'étoiles.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "On mesure la qualité d'un ciel avec une échelle numérique, de 1 (très noir) à 9 (très pollué). Quel nom porte cette échelle ?",
+      "reponses": ["bortle", "l'echelle de bortle", "echelle de bortle", "echelle de bortles"],
+      "indice": "C'est le nom d'un astronome américain : il commence par « Bort ».",
+      "saviez": "L'échelle de Bortle va de 1 (ciel d'exception) à 9 (centre-ville très éclairé).",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "En analysant les métadonnées de l'image, tu repères un halo jaune très marqué. Cette lumière parasite perturbe les insectes nocturnes et leurs prédateurs. Sur quel phénomène écologique a-t-elle le plus d'impact ?",
+      "reponses": ["la biodiversite nocturne", "biodiversite nocturne", "les insectes nocturnes", "la biodiversite"],
+      "indice": "Il s'agit des êtres vivants qui s'activent la nuit, comme les papillons de nuit.",
+      "saviez": "La lumière artificielle peut désorienter des millions d'insectes, perturbant la chaîne alimentaire nocturne.",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}

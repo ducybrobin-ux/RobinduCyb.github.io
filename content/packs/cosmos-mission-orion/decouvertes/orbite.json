@@ -1,0 +1,39 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "orbite",
+  "nom": "Le Choix d'Orbite",
+  "latin": "Assistance gravitationnelle · Mécanique orbitale",
+  "emoji": "🚀",
+  "couleur": "#2E8A8A",
+  "categorie": "nocturne",
+  "taille": "Antidote : décider ensemble pour économiser l'énergie",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "La fronde gravitationnelle permet d'accélérer une sonde sans brûler de carburant.",
+    "La sonde Cassini a utilisé plusieurs assistances gravitationnelles pour rejoindre Saturne.",
+    "C'est le principe de conservation de l'énergie qui explique l'échange de vitesse avec une planète."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 520, "fEnd": 520, "d": 0.1, "g": 0.08, "type": "sine", "v": 0.5 },
+      { "f": 660, "fEnd": 660, "d": 0.15, "g": 0.1, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [12, 18],
+    "duree_min": 8,
+    "objectif": "Prendre une décision coopérative en exploitant l'assistance gravitationnelle pour épargner le carburant.",
+    "programme": ["cycle 4", "lycée"]
+  },
+  "quiz": [
+    {
+      "q": "Quelle manœuvre accélère une sonde sans carburant ?",
+      "options": ["La fronde gravitationnelle", "La réserve de carburant", "Le freinage atmosphérique"],
+      "reponse": 0
+    }
+  ]
+}

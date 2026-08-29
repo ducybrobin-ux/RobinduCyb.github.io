@@ -1,0 +1,22 @@
+{
+  "$schema": "curios-catalog-pack-v1",
+  "id": "cristaux-de-balto",
+  "nom": "Les Cristaux de Balto",
+  "tagline": "La meute, le traîneau, la légende",
+  "description": "Neuf découvertes sur la vie de la meute, le husky de Sibérie, le matériel d'attelage, les sports canins, l'hébergement trappeur et la légende de Balto. Quatre notions complémentaires et neuf balises énigmatiques à l'élevage de Charron (Creuse).",
+  "cover": "cristaux-de-balto",
+  "accent": "#f39c12",
+  "emoji": "🐺",
+  "difficulty": "facile",
+  "durationMin": 90,
+  "players": [1, 6],
+  "location": "Élevage de Charron (Creuse)",
+  "environment": "extérieur",
+  "skills": ["Observation", "Connaissance du vivant", "Culture"],
+  "material": ["Smartphone"],
+  "goals": ["Découvrir le husky de Sibérie", "Comprendre le métier de musher", "Explorer la légende de Balto"],
+  "staff": false,
+  "badges": ["Nature", "Éducatif"],
+  "collection": "Nature & vivant",
+  "featured": true
+}

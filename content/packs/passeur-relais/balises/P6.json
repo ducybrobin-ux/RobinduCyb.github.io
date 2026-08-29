@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "P6",
+  "bird": "tresor",
+  "code": "PAS-P6",
+  "x": 330,
+  "y": 460,
+  "lat": null,
+  "lng": null,
+  "label": "Le Trésor",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Révélation finale : le trésor n'a jamais été caché ! Ce trésor-là, c'est…",
+      "reponses": ["la chaine", "la chaîne", "le relais"],
+      "indice": "Regarde derrière toi : tous les maillons que tu as parcourus forment …",
+      "saviez": "Tu n'as jamais cherché un objet : tu as construit, à chaque étape, un maillon de plus.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Chaque équipe pensait chercher un objet enterré, mais ce qui est précieux, c'est le mouvement qui les relie. Ce précieux-là est…",
+      "reponses": ["la chaine", "la chaîne", "le relais humain", "la transmission"],
+      "indice": "« Ne pas serrer, mais passer » : la valeur circule de main en main.",
+      "saviez": "Dans cette aventure, l'important n'est pas d'arriver au bout, mais que quelqu'un d'autre puisse y arriver après toi.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Le trésor, c'est la boucle : en finissant de jouer, tu en commences une autre pour quelqu'un d'autre. Comment résumer ce que devient chaque équipe ?",
+      "reponses": ["le premier maillon de la prochaine chaine", "le premier joueur du suivant", "un passeur"],
+      "indice": "Reprends les mots du titre : « tu es le premier … du … ».",
+      "saviez": "C'est la boucle des passeurs : aucune partie ne se termine vraiment tant qu'une autre a commencé.",
+      "ages": [14, 99]
+    }
+  },
+  "enigme": null
+}

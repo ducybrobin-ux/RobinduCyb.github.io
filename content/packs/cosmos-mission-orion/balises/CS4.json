@@ -1,0 +1,37 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "CS4",
+  "bird": "chiffre",
+  "code": "COS-CS4",
+  "x": 330,
+  "y": 210,
+  "lat": null,
+  "lng": null,
+  "label": "Le Chiffre de Cassini",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "La constellation de Cassiopée dessine une lettre bien reconnaissable dans le ciel. Quelle lettre cette formation d'étoiles évoque-t-elle ?",
+      "reponses": ["w", "un w", "la lettre w", "le w"],
+      "indice": "C'est une lettre qui se lit pareil que la troisième de l'alphabet à l'envers.",
+      "saviez": "Cassiopée forme un grand « W » ou « M » selon la saison, très facile à reconnaître.",
+      "ages": [6, 9]
+    },
+    "moyen": {
+      "text": "Cassini t'a laissé un code décalé de 3 lettres. Dans ce décalage, quel mot se cache derrière « FHWD » ? Indice : décale chaque lettre de 3 vers le haut.",
+      "reponses": ["ceci", "le mot ceci"],
+      "indice": "Effectue le chemin inverse : « F » devient « C », « H » devient « E ».",
+      "saviez": "Ce décalage s'appelle le chiffre de César, l'un des plus anciens procédés de cryptage connus.",
+      "ages": [10, 13]
+    },
+    "difficile": {
+      "text": "Ultime message de Cassini décodé avec un décalage de 3 lettres à l'envers, le mot « VWHOOD » se transforme en un mot latin signifiant « étoile ». Quel mot obtiens-tu ?",
+      "reponses": ["stella", "stella"],
+      "indice": "Décale chaque lettre de 3 vers le début de l'alphabet : V→S, W→T, H→E, L→I, D→A.",
+      "saviez": "« Stella » signifie « étoile » en latin, d'où viennent les mots « stellaire » et « constellation ».",
+      "ages": [14, 18]
+    }
+  },
+  "enigme": null
+}
