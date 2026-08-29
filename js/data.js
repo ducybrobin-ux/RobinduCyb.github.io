@@ -901,8 +901,8 @@ const BALISES = [
     "id": "B1",
     "bird": "alerte",
     "code": "PH-B1",
-    "lat": 48.8566,
-    "lng": 2.3522,
+    "lat": 50.3110118,
+    "lng": 3.3298823,
     "label": "Le Message",
     "hintImg": "",
     "enigmes": {
@@ -963,8 +963,8 @@ const BALISES = [
     "id": "B2",
     "bird": "phishing",
     "code": "PH-B2",
-    "lat": 48.8566,
-    "lng": 2.3522,
+    "lat": 50.3115907,
+    "lng": 3.3300398,
     "label": "Le Piège",
     "hintImg": "",
     "enigmes": {

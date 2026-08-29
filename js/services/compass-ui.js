@@ -23,6 +23,7 @@
     let smoothDist = null;
     let headingBuf = [];
     let smoothHeading = null;
+    let lastHaptic = 0;
     const HEADING_WINDOW = 5;
 
     function smoothDistance(d) {
@@ -122,8 +123,11 @@
       proxOnTarget = false;
       headingBuf = [];
       smoothHeading = null;
+      lastHaptic = 0;
       const light = $("compass-light");
       if (light) { light.style.background = "#000"; light.style.boxShadow = ""; }
+      const rose = $("compass-rose");
+      if (rose) rose.style.transform = "rotate(0deg)";
       const emoji = $("compass-emoji");
       if (emoji) { emoji.textContent = emojiChain()[0]; emoji.classList.remove("happy", "dim"); }
       const guide = $("compass-guide");
@@ -132,12 +136,26 @@
       if (head) head.textContent = "\u2026";
     }
 
+    /* Retour haptique (vibration) en approche de la cible, style boussole 3D. */
+    function haptic(p) {
+      if (!p || !navigator.vibrate) return;
+      const now = Date.now();
+      if (p.onTarget) {
+        if (now - lastHaptic > 1400) { navigator.vibrate(140); lastHaptic = now; }
+        return;
+      }
+      if (p.t > 0.35 && now - lastHaptic > 750) {
+        navigator.vibrate(30);
+        lastHaptic = now;
+      }
+    }
+
     function onUpdate(out) {
       const here = $("compass-here"), tgt = $("compass-target"),
             dist = $("compass-distance"), az = $("compass-azimut"),
             dir = $("compass-direction"), needle = $("compass-needle"),
             dest = $("compass-dest"), st = $("compass-status"),
-            guide = $("compass-guide");
+            guide = $("compass-guide"), rose = $("compass-rose");
       const head = $("compass-head");
       if (head) {
         if (out.bearing != null) {
@@ -157,6 +175,7 @@
       else az.textContent = "\u2014";
 
       const heading = smoothedHeading(out.heading);
+      if (rose && heading != null) rose.style.transform = `rotate(${-heading}deg)`;
       let rel = null;
       if (out.bearing != null && heading != null) {
         rel = normDeg(out.bearing - heading);
@@ -188,6 +207,7 @@
       const p = proximity(sDist);
       renderLight(p);
       renderEmoji(p);
+      haptic(p);
       if (st) {
         if (heading != null) {
           const dec = out.decl != null

@@ -576,6 +576,22 @@ body.night .balise.locked circle { fill: #405368; }
   content: ""; position: absolute; inset: 12px;
   border-radius: 50%; border: 2px dashed var(--line);
 }
+.compass-rose {
+  position: absolute; inset: 0; border-radius: 50%;
+  transform: rotate(0deg); will-change: transform;
+  transition: transform 0.15s ease-out;
+}
+.compass-lubber {
+  position: absolute; left: 50%; top: -7px;
+  width: 0; height: 0; z-index: 3;
+  border-left: 7px solid transparent; border-right: 7px solid transparent;
+  border-top: 12px solid var(--err);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+.compass-lubber::after {
+  content: ""; position: absolute; left: -1px; top: 3px;
+  width: 2px; height: 20px; background: var(--err);
+}
 .compass-card { position: absolute; font-weight: 900; font-size: 15px; color: var(--ink); }
 .compass-n { top: 6px; left: 50%; transform: translateX(-50%); color: var(--err); }
 .compass-e { right: 8px; top: 50%; transform: translateY(-50%); }

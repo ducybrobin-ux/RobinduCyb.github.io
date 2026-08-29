@@ -114,8 +114,8 @@
       "discoveryId": "alerte",
       "x": 74,
       "y": 452,
-      "lat": 48.8566,
-      "lng": 2.3522,
+      "lat": 50.3110118,
+      "lng": 3.3298823,
       "radius": null,
       "missions": [
         "B1-enigme"
@@ -128,8 +128,8 @@
       "discoveryId": "phishing",
       "x": 110,
       "y": 428,
-      "lat": 48.8566,
-      "lng": 2.3522,
+      "lat": 50.3115907,
+      "lng": 3.3300398,
       "radius": null,
       "missions": [
         "B2-enigme"
