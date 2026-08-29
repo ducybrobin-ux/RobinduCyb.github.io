@@ -2140,6 +2140,9 @@
     // Espaces Parcours / Administrer (Phase 2)
     const goHomeFromSpace = () => { renderHome(); showScreen("home"); };
     $("btn-choose-parcours").addEventListener("click", () => { renderParcours(); showScreen("parcours"); });
+    $("btn-catalogue").addEventListener("click", () => {
+      if (!window.open("catalogue", "_blank")) location.href = "catalogue";
+    });
     $("btn-administer").addEventListener("click", () => { renderAdmin(); showScreen("admin"); });
     $("btn-parcours-back").addEventListener("click", goHomeFromSpace);
     $("btn-admin-back").addEventListener("click", goHomeFromSpace);

@@ -10,6 +10,10 @@
   var USER_KEY = "curios_hub_user";
   var API = "/api/hub/auth";
 
+  /* Utilisateur local par défaut : permet d'accéder au Hub sans backend.
+     Si un compte réel existe (login/register via /api), il prend le dessus. */
+  var LOCAL_USER = { name: "Organisateur local", email: "organisateur@curios.local", role: "ADMIN" };
+
   function getToken() {
     try { return localStorage.getItem(TOKEN_KEY); } catch { return null; }
   }
@@ -28,8 +32,9 @@
   function getUser() {
     try {
       var raw = localStorage.getItem(USER_KEY);
-      return raw ? JSON.parse(raw) : null;
-    } catch { return null; }
+      if (raw) return JSON.parse(raw);
+    } catch {}
+    return LOCAL_USER;
   }
 
   function setUser(user) {
@@ -37,14 +42,11 @@
   }
 
   function isAuthenticated() {
-    return !!getToken() && !!getUser();
+    return true;
   }
 
   function requireAuth() {
-    if (!isAuthenticated()) {
-      window.location.href = "login.html";
-      return false;
-    }
+    if (!localStorage.getItem(USER_KEY)) setUser(LOCAL_USER);
     return true;
   }
 

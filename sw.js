@@ -23,6 +23,8 @@ const PRECACHE = [
   "docs/design-system-preview.html",
   "docs/fiche-pedagogique-JDP_BC.pdf",
   "editeur.html",
+  "hub/app.html",
+  "hub/login.html",
   "img/covers/biais-cognitifs.png",
   "img/covers/cemea-education-populaire.png",
   "img/covers/cosmos-mission-orion.png",

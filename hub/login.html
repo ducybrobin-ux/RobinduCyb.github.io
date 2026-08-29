@@ -15,60 +15,18 @@
         <img src="../img/logo.svg" alt="CURIOS">
       </div>
       <h1 class="hub-login-title">Project Hub</h1>
-      <p class="hub-login-sub">Connectez-vous pour gérer vos projets</p>
+      <p class="hub-login-sub">Accès direct au Hub — aucune connexion requise</p>
 
-      <div class="hub-login-error" id="login-error"></div>
+      <div class="hub-login-error" id="login-error" style="display:none;"></div>
 
-      <form id="login-form" autocomplete="on">
-        <div class="hub-form-group">
-          <label class="hub-form-label" for="email">Email</label>
-          <input class="hub-form-input" type="email" id="email" name="email"
-                 placeholder="vous@exemple.fr" required autocomplete="email">
-        </div>
-        <div class="hub-form-group">
-          <label class="hub-form-label" for="password">Mot de passe</label>
-          <input class="hub-form-input" type="password" id="password" name="password"
-                 placeholder="Votre mot de passe" required autocomplete="current-password">
-        </div>
-        <button class="hub-btn hub-btn-primary" type="submit"
-                style="width:100%;justify-content:center;padding:12px;font-size:15px;">
-          Se connecter
-        </button>
-      </form>
+      <button class="hub-btn hub-btn-primary" type="button"
+              style="width:100%;justify-content:center;padding:12px;font-size:15px;"
+              onclick="window.location.href='app.html'">
+        Entrer dans le Hub
+      </button>
 
       <div class="hub-login-footer">
-        Première connexion ? <a href="#" id="toggle-register">Créer un compte</a>
-      </div>
-
-      <form id="register-form" class="hidden" autocomplete="on">
-        <div class="hub-form-group">
-          <label class="hub-form-label" for="reg-name">Nom</label>
-          <input class="hub-form-input" type="text" id="reg-name" name="name"
-                 placeholder="Votre nom" required autocomplete="name">
-        </div>
-        <div class="hub-form-group">
-          <label class="hub-form-label" for="reg-email">Email</label>
-          <input class="hub-form-input" type="email" id="reg-email" name="email"
-                 placeholder="vous@exemple.fr" required autocomplete="email">
-        </div>
-        <div class="hub-form-group">
-          <label class="hub-form-label" for="reg-password">Mot de passe</label>
-          <input class="hub-form-input" type="password" id="reg-password" name="password"
-                 placeholder="6 caractères minimum" required minlength="6" autocomplete="new-password">
-        </div>
-        <div class="hub-form-group">
-          <label class="hub-form-label" for="reg-password2">Confirmer</label>
-          <input class="hub-form-input" type="password" id="reg-password2" name="password2"
-                 placeholder="Confirmez le mot de passe" required minlength="6" autocomplete="new-password">
-        </div>
-        <button class="hub-btn hub-btn-primary" type="submit"
-                style="width:100%;justify-content:center;padding:12px;font-size:15px;">
-          Créer mon compte
-        </button>
-      </form>
-
-      <div class="hub-login-footer" id="register-footer" style="display:none;">
-        Déjà un compte ? <a href="#" id="toggle-login">Se connecter</a>
+        Le Hub Curi🧭s est accessible sans connexion.
       </div>
     </div>
   </div>
@@ -80,73 +38,6 @@
         window.location.href = "app.html";
         return;
       }
-
-      var loginForm = document.getElementById("login-form");
-      var registerForm = document.getElementById("register-form");
-      var toggleReg = document.getElementById("toggle-register");
-      var toggleLogin = document.getElementById("toggle-login");
-      var registerFooter = document.getElementById("register-footer");
-      var loginFooter = document.querySelector(".hub-login-footer");
-      var errorDiv = document.getElementById("login-error");
-
-      function showError(msg) {
-        errorDiv.textContent = msg;
-        errorDiv.style.display = "block";
-      }
-      function hideError() { errorDiv.style.display = "none"; }
-
-      toggleReg.addEventListener("click", function (e) {
-        e.preventDefault();
-        loginForm.classList.add("hidden");
-        loginFooter.style.display = "none";
-        registerForm.classList.remove("hidden");
-        registerFooter.style.display = "";
-        hideError();
-      });
-      toggleLogin.addEventListener("click", function (e) {
-        e.preventDefault();
-        registerForm.classList.add("hidden");
-        registerFooter.style.display = "none";
-        loginForm.classList.remove("hidden");
-        loginFooter.style.display = "";
-        hideError();
-      });
-
-      loginForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        hideError();
-        var email = document.getElementById("email").value.trim();
-        var password = document.getElementById("password").value;
-        try {
-          await HubAuth.login(email, password);
-          window.location.href = "app.html";
-        } catch (err) {
-          showError(err.message === "invalid-credentials"
-            ? "Email ou mot de passe incorrect."
-            : "Erreur de connexion. Réessayez.");
-        }
-      });
-
-      registerForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        hideError();
-        var name = document.getElementById("reg-name").value.trim();
-        var email = document.getElementById("reg-email").value.trim();
-        var password = document.getElementById("reg-password").value;
-        var password2 = document.getElementById("reg-password2").value;
-        if (password !== password2) {
-          showError("Les mots de passe ne correspondent pas.");
-          return;
-        }
-        try {
-          await HubAuth.register(name, email, password);
-          window.location.href = "app.html";
-        } catch (err) {
-          showError(err.message === "email-exists"
-            ? "Cet email est déjà utilisé."
-            : "Erreur lors de la création du compte.");
-        }
-      });
     })();
   </script>
 </body>

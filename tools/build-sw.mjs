@@ -29,7 +29,7 @@ import { VERSION, CACHE, RUNTIME } from "../packages/offline/src/config.js";
 import { shouldBypassCache, shouldCacheRuntime, cachesToDelete } from "../packages/offline/src/strategy.js";
 
 /* ---------- Scan filesystem pour PRECACHE ---------- */
-const INCLUDE_DIRS = ["js", "css", "img", "docs"];
+const INCLUDE_DIRS = ["js", "css", "img", "docs", "hub"];
 const INCLUDE_ROOT_FILES = ["index.html", "manifest.json"];
 const EXCLUDE_FILES = new Set([
   "sw.js", "package.json", "package-lock.json",
