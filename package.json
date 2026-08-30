@@ -26,10 +26,11 @@
     "serve": "node packages/server/src/cli.js"
   },
   "devDependencies": {
-    "eslint": "^9.0.0",
     "@eslint/js": "^9.0.0",
-    "prettier": "^3.0.0",
     "c8": "^10.0.0",
-    "globals": "^15.0.0"
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "playwright-core": "^1.62.1",
+    "prettier": "^3.0.0"
   }
 }

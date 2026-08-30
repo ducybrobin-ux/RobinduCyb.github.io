@@ -1595,7 +1595,11 @@ function nextBalise(id) { const i = getBaliseIndex(id); return i >= 0 && i < BAL
  * js/engine.js (généré par tools/build-engine.mjs) expose ces fonctions
  * via window.CURIOS_ENGINE.
  */
-const { normalize, checkAnswer, makeQuiz, getEnigme } = window.CURIOS_ENGINE;
+/* normalize, checkAnswer, makeQuiz, getEnigme sont déjà déclarés en
+   portée globale par js/engine.js (scripts classiques antérieurs dans
+   index.html). Les re-déstructurer ici créait des collisions de
+   redéclaration (SyntaxError) qui empêchaient TOUT js/data.js de
+   s'exécuter (BALISES, SITE, ACTIVE_PACKS absents au runtime). */
 
 /* ---- Surcharges éditables (admin-data.json) -------------------------
    Applique les modifications sauvegardées par l'éditeur (serveur ou god
