@@ -3,6 +3,73 @@
 Historique Curi🧭s (moteur universel) puis héritage Multi JDP.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) — versionnement sémantique.
 
+## [Curi🧭s v1.7.0] — 2026-08-30
+
+### Corrigé
+- **Bug racine `js/data.js`** : le module ne s'exécutait jamais en navigateur. Une collision de redéclaration (`const { normalize, checkAnswer, makeQuiz, getEnigme } = window.CURIOS_ENGINE;` entrait en conflit avec les `function normalize/checkAnswer/makeQuiz/getEnigme` déjà globales chargées par `js/engine.js`) provoquait une `SyntaxError` qui jetait tout `data.js`. Résultat : `BALISES` / `SITE` / `ACTIVE_PACKS` étaient **undefined** au runtime (écran « Choisir un parcours » vide). Corrigé en supprimant la déstructuration redondante. Bug pré-existant (présent depuis le commit `b349aa9`).
+- **Liste « Choisir un parcours »** : la vitrine des parcours ne listait rien ; désormais rendue hors-ligne via `CATALOGUE_DATA` + `ACTIVE_PACKS` + `js/catalogue-data.js` (voir **Ajouté**).
+
+### Ajouté
+- **Liste offline des parcours** : `renderParcours` / `renderPackList` dans `js/app.js`, génération de `ACTIVE_PACKS` dans `js/data.js` (région contenu) via `tools/build-data.mjs`, `js/catalogue-data.js` (données hors-ligne du catalogue) et inclusion du script dans `index.html`.
+- **Tests E2E** : 15 tests de non-régression + `docs/VERIFICATION_FONCTIONNELLE.md`.
+- **Test navigateur permanent** : `tests/e2e/parcours-flow.test.mjs` (5 tests `node:test` + `playwright-core` sur Chrome installé) qui vérifie l'exécution réelle de `data.js`, l'affichage des 9 packs + Phantom « Actif », la réponse des boutons « Choisir ce parcours » et la création de profil. Dépendance `playwright-core` ajoutée en `devDependencies`.
+
+### Vérifié
+- Au runtime navigateur : `BALISES=9`, `ACTIVE_PACKS=['phantom-cybersecurite']`, `SITE` défini, 0 erreur JS (plus de collision).
+- Écran parcours : 9 packs listés + Phantom « Actif », packs non-actifs avec bouton d'activation ; clic « Choisir ce parcours » répond (toast organisateur sans auth, 401 — pas un bouton mort) ; formulaire profil crée un profil actif ; bouton « Jouer / continuer » apparaît.
+- `node tools/build-data.mjs --check` OK ; `node tools/build-sw.mjs --check` « sw.js est à jour » ; eslint 0 erreur ; tests unitaires 380/380.
+
+## [Curi🧭s v1.6.0] — 2026-08-29
+
+### Ajouté
+- **Catalogue premium immersif** des packs Curi🧭s (vitrine immersive des parcours).
+- **Nouveaux packs** : 🌌 `cosmos-mission-orion` (Cosmos) et 🚧 `passeur-relais` (Passeur Relais).
+
+## [Curi🧭s v1.5.0] — 2026-08-29
+
+### Ajouté
+- **Positions GPS réelles** sur cartes Google My Maps pour l'ensemble des packs.
+- **Boussole 3D** : anneau rotatif + retour haptique.
+
+## [Curi🧭s v1.4.0] — 2026-08-29
+
+### Corrigé
+- Correctifs Curi🧭s : parcours activable, dossier, boussole.
+
+### Ajouté
+- **Pack 🛡️ `phantom-cybersecurite`** (cybersécurité).
+
+## [Curi🧭s v1.3.0] — 2026-08-28
+
+### Ajouté
+- **Hub intégré** : authentification multi-utilisateurs `/api/hub/auth` (register/login/me/logout).
+- **Pack Manager** dans le dashboard (Phase 3).
+- **Hub complet** : CRUD clients / matériel / sessions / planning / commercial + analytics (phases Hub 10, CURIOS 2.0).
+- Accès au Hub sans login + lien explicite vers le Catalogue.
+
+## [Curi🧭s v1.2.0] — 2026-08-28
+
+### Ajouté
+- **Phase 2 (slice)** : accueil simplifié + espaces « Parcours » / « Administrer ».
+- **Design System v1.0** (cartographie cognitive futuriste) appliqué au CURIOS.
+
+## [Curi🧭s v1.1.1] — 2026-08-28
+
+### Corrigé
+- **Réparation du service worker** + rebuild `dist` (jeu bloqué + visuelles périmées).
+
+## [Curi🧭s v1.1.0] — 2026-08-28
+
+### Modifié
+- **Application du Design System v1.0 au Player** (habillage futuriste).
+
+## [Curi🧭s v1.0.0] — 2026-08-26
+
+### Ajouté
+- **CURIOS 2.0** : infrastructure complète + Hub patches.
+- **Opération Phantom** : pack cybersécurité + documentation complète + packages manquants.
+- **Éditions incluses** : 4 éditions, Studio de création, Dashboard organisateur, Mode hors-ligne.
+
 ## [Curi🧭s 0.5.0] — 2026-08-25
 
 ### Renommé
