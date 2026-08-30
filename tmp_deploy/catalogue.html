@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Catalogue · Curi🧭s</title>
+  <meta name="description" content="Explorez les expéditions Curi🧭s : un catalogue immersif de parcours éducatifs.">
+  <meta name="theme-color" content="#061522">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+  <link rel="stylesheet" href="css/curios-tokens.css">
+  <link rel="stylesheet" href="css/curios-design-system.css">
+  <link rel="stylesheet" href="css/catalogue.css">
+</head>
+<body class="catalog cur">
+  <header class="cat-topbar">
+    <a class="cat-brand" href="index.html"><img src="img/logo.svg" alt="Curi🧭s" width="26" height="26"><span>Curi<span class="cat-brand-cur">🧭</span>s</span></a>
+    <div class="cat-spacer"></div>
+    <div class="cat-search">
+      <span class="cat-search-ico"><svg class="cur-icon" aria-hidden="true"><use xlink:href="img/curios-icons-sprite.svg#search"></use></svg></span>
+      <input type="search" id="cat-search" placeholder="Rechercher un parcours, un thème…" aria-label="Rechercher un parcours">
+    </div>
+    <div class="cat-spacer"></div>
+    <nav class="cat-top-nav">
+      <button class="cur-btn cur-btn--ghost" id="btn-cat-home">Jouer</button>
+      <button class="cur-btn cur-btn--ghost" id="btn-cat-hub">Organisateur</button>
+    </nav>
+  </header>
+
+  <div class="cat-collections" id="cat-collections" role="tablist" aria-label="Filtres par collection"></div>
+
+  <main class="cat-main">
+    <section class="cat-hero">
+      <span class="cat-hero-badge"><svg class="cur-icon" aria-hidden="true"><use xlink:href="img/curios-icons-sprite.svg#brand-compass"></use></svg> Le catalogue Curi🧭s</span>
+      <h1>Choisis ton <span class="cat-hl">expédition</span><br>et pars à l'aventure</h1>
+      <p class="cat-hero-sub">
+        Des parcours éducatifs immersifs — nature, science, cybersécurité, orientation —
+        à vivre sur le terrain avec ton smartphone. Sélectionne une expédition, prépare-la,
+        et débusque les balises une à une.
+      </p>
+      <div class="cat-hero-cta">
+        <button class="cur-btn cur-btn--primary" data-scroll-rail>Explorer les expéditions</button>
+      </div>
+      <div class="cat-hero-stats" id="cat-hero-stats"></div>
+    </section>
+
+    <div id="cat-collections-sections"></div>
+
+    <section class="cat-section" data-section="__all">
+      <div class="cat-section-head">
+        <h2><span class="cat-dot">▦</span> Toutes les expéditions</h2>
+        <span class="cat-count">vue d'ensemble</span>
+      </div>
+      <div class="cat-grid" id="cat-all-grid"></div>
+    </section>
+
+    <footer class="cat-footer">
+      <p>Curi🧭s — Catalogue de parcours éducatifs. Explorer, jouer, apprendre.</p>
+      <p class="cat-dim">💡 Fonctionne hors-ligne : les fiches expéditions restent consultables sans connexion.</p>
+    </footer>
+  </main>
+
+  <div class="cat-modal-bg" id="cat-modal-bg">
+    <div class="cat-modal" id="cat-modal" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div id="cat-toast" role="status" aria-live="polite"></div>
+
+  <script src="js/catalogue-data.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>
