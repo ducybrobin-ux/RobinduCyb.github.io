@@ -1573,6 +1573,12 @@ const THEMES = [
     }
   }
 ];
+
+/* Ids des packs actuellement activés (source de vérité : content/manifest.json).
+   Permet au parcours ("Choisir un parcours") de marquer le pack joué, même hors-ligne. */
+const ACTIVE_PACKS = [
+  "phantom-cybersecurite"
+];
 /* ==== FIN CONTENU GÉNÉRÉ ==== */
 
 /* Toutes les découvertes : celles du parcours + celles du guide embarqué */

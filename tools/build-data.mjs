@@ -50,6 +50,10 @@ const DIFFICULTIES = [
 
 /* Thèmes visuels sélectionnables dans Réglages (content/themes/) */
 const THEMES = ${j(themes)};
+
+/* Ids des packs actuellement activés (source de vérité : content/manifest.json).
+   Permet au parcours ("Choisir un parcours") de marquer le pack joué, même hors-ligne. */
+const ACTIVE_PACKS = ${j(packsActifs)};
 ${M_FIN}`;
 }
 

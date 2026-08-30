@@ -23,6 +23,7 @@ const CURIOS_GLOBALS = {
   BIRDS: "writable",
   GUIDE: "writable",
   BALISES: "writable",
+  ACTIVE_PACKS: "readonly",
   THEMES: "readonly",
   DIFFICULTIES: "readonly",
   allBirds: "readonly",

@@ -1884,45 +1884,70 @@
       const lib = { ACTIVE: "Actif", DISABLED: "D\u00e9sactiv\u00e9", AVAILABLE: "Disponible", ERROR: "Erreur" };
       return `<span class="parc-badge badge-${esc(st)}">${lib[st] || esc(st)}</span>`;
     };
+    /* Affiche une liste de packs (servie par /api/packs, sinon reconstruite
+       depuis les métadonnées embarquées catalogue-data.js + ACTIVE_PACKS). */
+    const renderPackList = (cat, list) => {
+      if (!cat) return;
+      if (!list || !list.length) {
+        cat.innerHTML = '<p class="note">Aucun pack install\u00e9 pour le moment.</p>';
+        return;
+      }
+      let out = "";
+      for (const pk of list) {
+        let ages = "";
+        if (pk.audience) {
+          if (pk.audience.minAge !== undefined && pk.audience.maxAge !== undefined) ages = pk.audience.minAge + "\u2013" + pk.audience.maxAge + " ans";
+          else if (Array.isArray(pk.audience) && pk.audience.length) ages = pk.audience[0] + "\u2013" + pk.audience[1] + " ans";
+        }
+        const nb = pk.stations ? pk.stations + " balises" : "";
+        const missions = pk.missions ? pk.missions + " missions" : "";
+        const meta = [nb, missions, ages].filter(Boolean).join(" \u00b7 ");
+        out += '<div class="cur-parc-item">';
+        out += '<div class="parc-head"><span class="parc-name">' + esc(pk.name) + '</span>' + badge(pk.state) + '</div>';
+        if (meta) out += '<div class="parc-sub">' + esc(meta) + '</div>';
+        if (pk.description) out += '<div class="parc-desc">' + esc(pk.description).slice(0, 140) + (pk.description.length > 140 ? "\u2026" : "") + '</div>';
+        if (pk.state !== "ACTIVE") {
+          out += '<div class="parc-actions"><button class="btn btn-outline" data-activate-pack="' + esc(pk.id) + '">\ud83d\udce6 Choisir ce parcours</button></div>';
+        } else {
+          out += '<div class="parc-actions"><span class="parc-badge badge-ACTIVE">\u2714 Parcours actif</span></div>';
+        }
+        out += '</div>';
+      }
+      cat.innerHTML = out;
+      cat.querySelectorAll("[data-activate-pack]").forEach((btn) => {
+        btn.addEventListener("click", () => activatePack(btn.dataset.activatePack));
+      });
+    };
+    const cat0 = $("parc-catalog");
+    if (cat0) {
+      const catData =
+        (typeof window !== "undefined" && window.CATALOGUE_DATA && window.CATALOGUE_DATA.packs) || [];
+      const activePacks = new Set(typeof ACTIVE_PACKS !== "undefined" ? ACTIVE_PACKS : []);
+      if (catData.length) {
+        renderPackList(cat0, catData.map((pp) => ({
+          id: pp.id,
+          name: pp.nom,
+          description: pp.tagline || "",
+          state: activePacks.has(pp.id) ? "ACTIVE" : "AVAILABLE",
+          stations: pp.nbBalises,
+          missions: undefined,
+          audience: null,
+        })));
+      } else {
+        cat0.innerHTML = '<p class="note">Chargement des packs\u2026</p>';
+      }
+    }
+    /* Enrichissement serveur (mode npm run serve) : remplace la liste locale par
+       les états réels (actif, stations, missions) quand /api/packs répond. */
     fetch("/api/packs", { cache: "no-store" })
       .then((r) => { if (!r.ok) throw new Error("http"); return r.json(); })
       .then((data) => {
         const cat = $("parc-catalog");
         if (!cat) return;
-        if (!data || !Array.isArray(data.packs) || !data.packs.length) {
-          cat.innerHTML = '<p class="note">Aucun pack install\u00e9 pour le moment.</p>';
-          return;
-        }
-        let out = "";
-        for (const pk of data.packs) {
-          let ages = "";
-          if (pk.audience) {
-            if (pk.audience.minAge !== undefined && pk.audience.maxAge !== undefined) ages = pk.audience.minAge + "\u2013" + pk.audience.maxAge + " ans";
-            else if (Array.isArray(pk.audience) && pk.audience.length) ages = pk.audience[0] + "\u2013" + pk.audience[1] + " ans";
-          }
-          const nb = pk.stations ? pk.stations + " balises" : "";
-          const missions = pk.missions ? pk.missions + " missions" : "";
-          const meta = [nb, missions, ages].filter(Boolean).join(" \u00b7 ");
-          out += '<div class="cur-parc-item">';
-          out += '<div class="parc-head"><span class="parc-name">' + esc(pk.name) + '</span>' + badge(pk.state) + '</div>';
-          if (meta) out += '<div class="parc-sub">' + esc(meta) + '</div>';
-          if (pk.description) out += '<div class="parc-desc">' + esc(pk.description).slice(0, 140) + (pk.description.length > 140 ? "\u2026" : "") + '</div>';
-          if (pk.state !== "ACTIVE") {
-            out += '<div class="parc-actions"><button class="btn btn-outline" data-activate-pack="' + esc(pk.id) + '">\ud83d\udce6 Choisir ce parcours</button></div>';
-          } else {
-            out += '<div class="parc-actions"><span class="parc-badge badge-ACTIVE">\u2714 Parcours actif</span></div>';
-          }
-          out += '</div>';
-        }
-        cat.innerHTML = out;
-        cat.querySelectorAll("[data-activate-pack]").forEach((btn) => {
-          btn.addEventListener("click", () => activatePack(btn.dataset.activatePack));
-        });
+        if (!data || !Array.isArray(data.packs) || !data.packs.length) return;
+        renderPackList(cat, data.packs);
       })
-      .catch(() => {
-        const cat = $("parc-catalog");
-        if (cat) cat.innerHTML = '<p class="note">Hors ligne : catalogue indisponible. Le parcours actuel reste jouable.</p>';
-      });
+      .catch(() => { /* La liste locale reste affichée (offline / server.ps1 / Pages). */ });
   }
 
   /* Active un pack côté serveur (écrit content/manifest.json + régénère
