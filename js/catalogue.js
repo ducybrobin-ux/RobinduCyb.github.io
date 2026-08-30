@@ -244,7 +244,10 @@
     $("#cat-modal-body-content", body).innerHTML =
       '<div class="cat-modal-title"><span class="cat-md-emoji">' + p.emoji + '</span><h2>' + esc(p.nom) + '</h2></div>' +
       '<div class="cat-md-tagline">' + esc(p.tagline || "") + '</div>' +
-      '<p class="cat-md-desc">' + esc(p.description || "") + '</p>' +
+      (function(){
+        var gen = p.description || ((p.tagline ? p.tagline + ' — ' : '') + (p.goals && p.goals.length ? 'Objectifs: ' + p.goals.join(', ') : '') + (p.skills && p.skills.length ? (p.goals && p.goals.length ? '. ' : '') + ' Compétences: ' + p.skills.join(', ') : ''));
+        return '<p class="cat-md-desc">' + esc(gen) + '</p>' +
+      })()
       '<div class="cat-md-meta">' + meta + '</div>' +
       '<div class="cat-md-block"><h4>Objectifs</h4>' + chips(p.goals) + '</div>' +
       '<div class="cat-md-block"><h4>Compétences</h4>' + chips(p.skills) + '</div>' +
@@ -390,6 +393,24 @@
     renderAllGrid();
     bind();
     fetchLive();
+
+    /* Support opening a pack detail directly via URL hash: #pack=<id> */
+    try {
+      var hash = window.location.hash || "";
+      var m = hash.match(/[#&]pack=([^&]+)/);
+      if (m) {
+        var nid = decodeURIComponent(m[1]);
+        if (packsById[nid]) setTimeout(function () { openModal(nid); }, 150);
+      }
+      window.addEventListener('hashchange', function () {
+        var h = window.location.hash || "";
+        var mm = h.match(/[#&]pack=([^&]+)/);
+        if (mm) {
+          var idd = decodeURIComponent(mm[1]);
+          if (packsById[idd]) openModal(idd);
+        }
+      });
+    } catch (e) { /* ignore */ }
   }
 
   function renderStats() {

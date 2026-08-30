@@ -8,8 +8,32 @@
   "use strict";
 
   var DATA = window.CATALOGUE_DATA || { packs: [], collections: [] };
+  var PACKS = (DATA.packs || []).slice();
   var liveStates = {};
-  DATA.packs.forEach(function (p) { liveStates[p.id] = undefined; });
+  PACKS.forEach(function (p) { liveStates[p.id] = undefined; });
+
+  function loadCustomPacks() {
+    try {
+      var raw = localStorage.getItem('curios_custom_packs');
+      if (!raw) return [];
+      var arr = JSON.parse(raw);
+      if (!Array.isArray(arr)) return [];
+      return arr;
+    } catch (e) { return []; }
+  }
+
+  function mergeCustomIntoPacks() {
+    var custom = loadCustomPacks();
+    var ids = (DATA.packs || []).map(function(p){return p.id;});
+    PACKS = (DATA.packs || []).slice();
+    custom.forEach(function (cp) {
+      if (!cp || !cp.id) return;
+      // avoid duplicates: replace if exists
+      var i = PACKS.findIndex(function (x) { return x.id === cp.id; });
+      if (i >= 0) PACKS[i] = cp; else PACKS.push(cp);
+      liveStates[cp.id] = liveStates[cp.id] || undefined;
+    });
+  }
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -36,7 +60,8 @@
   }
 
   function renderCatalogue(user) {
-    var rows = DATA.packs.map(function (p) {
+    mergeCustomIntoPacks();
+    var rows = PACKS.map(function (p) {
       return (
         "<tr>" +
         "<td><strong>" + esc(p.emoji || "🧭") + " " + esc(p.nom) + "</strong><br>" +
@@ -80,15 +105,28 @@
   }
 
   function loadLive() {
+    // always merge local custom packs so the hub shows imports even offline
+    mergeCustomIntoPacks();
+    // reflect any locally activated pack
+    try {
+      var localActive = localStorage.getItem('curios_active_pack');
+      if (localActive) {
+        liveStates[localActive] = liveStates[localActive] || {};
+        liveStates[localActive].actif = true;
+      }
+    } catch (e) {}
+
     if (!window.fetch) return;
     fetch("/api/packs", { cache: "no-store" })
       .then(function (r) { if (!r.ok) throw new Error("r"); return r.json(); })
       .then(function (j) {
         (j.packs || []).forEach(function (pp) { liveStates[pp.id] = pp; });
+        // merge custom packs after liveStates updated
+        mergeCustomIntoPacks();
         var cur = window.location.hash;
         if (cur.indexOf("catalogue") !== -1 && HubShell && HubShell.navigate) HubShell.navigate("catalogue");
       })
-      .catch(function () {});
+      .catch(function () { /* offline: custom packs already merged above */ });
   }
 
   function activate(id) {
@@ -100,7 +138,10 @@
       if (j && j.ok) { HubShell.toast("Parcours activé ✔"); setTimeout(loadLive, 400); }
       else HubShell.toast((j && j.error) || "Activation impossible (réservé à l'organisateur).");
     }).catch(function () {
-      HubShell.toast("Hors ligne : activation impossible.");
+      // offline fallback: mark active pack locally
+      try { localStorage.setItem('curios_active_pack', id); liveStates[id] = liveStates[id] || {}; liveStates[id].actif = true; } catch (e) {}
+      HubShell.toast("Hors ligne : parcours activé localement.");
+      if (window.HubShell) setTimeout(loadLive, 200);
     });
   }
 
@@ -112,7 +153,7 @@
       if (!id) return;
       if (el.classList.contains("cat-hub-activate")) activate(id);
       else if (el.classList.contains("cat-hub-play")) window.open("../index.html", "_blank");
-      else if (el.classList.contains("cat-hub-detail")) window.open("../catalogue.html", "_blank");
+      else if (el.classList.contains("cat-hub-detail")) window.open("../catalogue.html#pack=" + encodeURIComponent(id), "_blank");
     });
   }
 

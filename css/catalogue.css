@@ -224,7 +224,9 @@
 .cat-card-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--cur-surface-alt);
   display: block;
   transition: transform var(--cur-dur-lg) var(--cur-ease);
 }
@@ -359,7 +361,7 @@
   height: 200px;
   overflow: hidden;
 }
-.cat-modal-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cat-modal-hero img { width: 100%; height: 100%; object-fit: contain; object-position: center; background: var(--cur-surface-alt); display: block; }
 .cat-modal-hero .cat-cover-fallback { position: absolute; inset: 0; }
 .cat-modal-close {
   position: absolute;
@@ -438,7 +440,9 @@
 .cat-cover-fallback-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--cur-surface-alt);
   display: block;
   position: absolute;
   inset: 0;
@@ -473,7 +477,9 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--cur-surface-alt);
 }
 .cat-hf-content {
   padding: var(--cur-space-5);
