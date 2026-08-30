@@ -1,0 +1,15 @@
+{
+    "type":  "guide",
+    "version":  1,
+    "id":  "jeu-balises",
+    "nom":  "Le jeu de balises",
+    "description":  "Comment fonctionne une partie : balises Ã  trouver, Ã©nigmes Ã  rÃ©soudre et niveaux de difficultÃ©.",
+    "pedagogie":  {
+                      "objectif":  "Comprendre le dÃ©roulement d\u0027une partie de Curi\u003es",
+                      "ages":  [
+                                   8,
+                                   18
+                               ],
+                      "duree_min":  6
+                  }
+}

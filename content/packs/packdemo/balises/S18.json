@@ -1,0 +1,64 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S18",
+    "bird":  "curios",
+    "code":  "DEMO-S18",
+    "lat":  -17.5516,
+    "lng":  -149.5585,
+    "label":  "Papeete â€” PolynÃ©sie franÃ§aise",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Enregistre 5 secondes de sons ambiants. Combien de sources sonores diffÃ©rentes peux-tu distinguer ?",
+                                   "reponses":  [
+                                                    "1",
+                                                    "2",
+                                                    "3",
+                                                    "4",
+                                                    "5"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Enregistre 5 secondes de sons ambiants. Combien de sources sonores diffÃ©rentes peux-tu distinguer ?",
+                                  "reponses":  [
+                                                   "1",
+                                                   "2",
+                                                   "3",
+                                                   "4",
+                                                   "5"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Enregistre 5 secondes de sons ambiants. Combien de sources sonores diffÃ©rentes peux-tu distinguer ?",
+                                      "reponses":  [
+                                                       "1",
+                                                       "2",
+                                                       "3",
+                                                       "4",
+                                                       "5"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

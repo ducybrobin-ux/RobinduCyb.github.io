@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S16",
+    "bird":  "curios",
+    "code":  "DEMO-S16",
+    "lat":  4.9224,
+    "lng":  -52.3135,
+    "label":  "Cayenne â€” Guyane",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "En Guyane, la lumiÃ¨re naturelle est forte. Compare la luminositÃ© dehors et Ã  l\u0027ombre : laquelle est la plus Ã©levÃ©e ?",
+                                   "reponses":  [
+                                                    "dehors",
+                                                    "extÃ©rieur"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "En Guyane, la lumiÃ¨re naturelle est forte. Compare la luminositÃ© dehors et Ã  l\u0027ombre : laquelle est la plus Ã©levÃ©e ?",
+                                  "reponses":  [
+                                                   "dehors",
+                                                   "extÃ©rieur"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "En Guyane, la lumiÃ¨re naturelle est forte. Compare la luminositÃ© dehors et Ã  l\u0027ombre : laquelle est la plus Ã©levÃ©e ?",
+                                      "reponses":  [
+                                                       "dehors",
+                                                       "extÃ©rieur"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S09",
+    "bird":  "curios",
+    "code":  "DEMO-S09",
+    "lat":  48.8955,
+    "lng":  2.387,
+    "label":  "CitÃ© des sciences â€” Paris",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Tape trois fois dans tes mains. Combien d\u0027impulsions sonores ton micro peut-il dÃ©tecter ?",
+                                   "reponses":  [
+                                                    "3",
+                                                    "trois"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Tape trois fois dans tes mains. Combien d\u0027impulsions sonores ton micro peut-il dÃ©tecter ?",
+                                  "reponses":  [
+                                                   "3",
+                                                   "trois"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Tape trois fois dans tes mains. Combien d\u0027impulsions sonores ton micro peut-il dÃ©tecter ?",
+                                      "reponses":  [
+                                                       "3",
+                                                       "trois"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

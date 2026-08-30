@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S23",
+    "bird":  "curios",
+    "code":  "DEMO-S23",
+    "lat":  47.214,
+    "lng":  -1.5562,
+    "label":  "Nantes â€” Machines de l\u0027Ã®le",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Prends une photo d\u0027une structure mÃ©canique et identifie une piÃ¨ce qui sert de pivot.",
+                                   "reponses":  [
+                                                    "axe",
+                                                    "pivot",
+                                                    "roue"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Prends une photo d\u0027une structure mÃ©canique et identifie une piÃ¨ce qui sert de pivot.",
+                                  "reponses":  [
+                                                   "axe",
+                                                   "pivot",
+                                                   "roue"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Prends une photo d\u0027une structure mÃ©canique et identifie une piÃ¨ce qui sert de pivot.",
+                                      "reponses":  [
+                                                       "axe",
+                                                       "pivot",
+                                                       "roue"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

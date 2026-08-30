@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S15",
+    "bird":  "curios",
+    "code":  "DEMO-S15",
+    "lat":  16.2411,
+    "lng":  -61.5331,
+    "label":  "Pointe-Ã -Pitre â€” Guadeloupe",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Oriente le tÃ©lÃ©phone vers l\u0027Est. Quel point cardinal trouveras-tu aprÃ¨s un quart de tour vers la gauche ?",
+                                   "reponses":  [
+                                                    "nord",
+                                                    "nord"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Oriente le tÃ©lÃ©phone vers l\u0027Est. Quel point cardinal trouveras-tu aprÃ¨s un quart de tour vers la gauche ?",
+                                  "reponses":  [
+                                                   "nord",
+                                                   "nord"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Oriente le tÃ©lÃ©phone vers l\u0027Est. Quel point cardinal trouveras-tu aprÃ¨s un quart de tour vers la gauche ?",
+                                      "reponses":  [
+                                                       "nord",
+                                                       "nord"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

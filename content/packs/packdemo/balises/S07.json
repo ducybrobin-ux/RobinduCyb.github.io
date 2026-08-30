@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S07",
+    "bird":  "curios",
+    "code":  "DEMO-S07",
+    "lat":  45.8326,
+    "lng":  6.8652,
+    "label":  "Mont-Blanc",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Ã€ haute altitude, la pression atmosphÃ©rique diminue. Ton tÃ©lÃ©phone possÃ¨de-t-il un baromÃ¨tre ? Si oui, relÃ¨ve la pression.",
+                                   "reponses":  [
+                                                    "oui",
+                                                    "yes"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Ã€ haute altitude, la pression atmosphÃ©rique diminue. Ton tÃ©lÃ©phone possÃ¨de-t-il un baromÃ¨tre ? Si oui, relÃ¨ve la pression.",
+                                  "reponses":  [
+                                                   "oui",
+                                                   "yes"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Ã€ haute altitude, la pression atmosphÃ©rique diminue. Ton tÃ©lÃ©phone possÃ¨de-t-il un baromÃ¨tre ? Si oui, relÃ¨ve la pression.",
+                                      "reponses":  [
+                                                       "oui",
+                                                       "yes"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

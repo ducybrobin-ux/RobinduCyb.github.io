@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S19",
+    "bird":  "curios",
+    "code":  "DEMO-S19",
+    "lat":  -22.2758,
+    "lng":  166.458,
+    "label":  "NoumÃ©a â€” Nouvelle-CalÃ©donie",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Fais une rotation lente de 360Â°. Le gyroscope doit-il dÃ©tecter une rotation nulle ou un tour complet ?",
+                                   "reponses":  [
+                                                    "tour complet",
+                                                    "360",
+                                                    "360Â°"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Fais une rotation lente de 360Â°. Le gyroscope doit-il dÃ©tecter une rotation nulle ou un tour complet ?",
+                                  "reponses":  [
+                                                   "tour complet",
+                                                   "360",
+                                                   "360Â°"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Fais une rotation lente de 360Â°. Le gyroscope doit-il dÃ©tecter une rotation nulle ou un tour complet ?",
+                                      "reponses":  [
+                                                       "tour complet",
+                                                       "360",
+                                                       "360Â°"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

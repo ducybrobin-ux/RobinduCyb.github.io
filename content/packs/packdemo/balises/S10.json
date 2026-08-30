@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S10",
+    "bird":  "curios",
+    "code":  "DEMO-S10",
+    "lat":  45.0535,
+    "lng":  1.1686,
+    "label":  "Lascaux â€” Dordogne",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Ã‰mets un son grave puis un son aigu. Lequel possÃ¨de la frÃ©quence la plus Ã©levÃ©e ?",
+                                   "reponses":  [
+                                                    "aigu",
+                                                    "le son aigu"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Ã‰mets un son grave puis un son aigu. Lequel possÃ¨de la frÃ©quence la plus Ã©levÃ©e ?",
+                                  "reponses":  [
+                                                   "aigu",
+                                                   "le son aigu"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Ã‰mets un son grave puis un son aigu. Lequel possÃ¨de la frÃ©quence la plus Ã©levÃ©e ?",
+                                      "reponses":  [
+                                                       "aigu",
+                                                       "le son aigu"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

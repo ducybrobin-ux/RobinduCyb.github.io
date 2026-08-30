@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S13",
+    "bird":  "curios",
+    "code":  "DEMO-S13",
+    "lat":  -21.2444,
+    "lng":  55.7088,
+    "label":  "Piton de la Fournaise â€” RÃ©union",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Le Piton de la Fournaise est volcanique. Si une coulÃ©e avance de 600 m en 10 min, quelle est sa vitesse moyenne en m/s ?",
+                                   "reponses":  [
+                                                    "1",
+                                                    "1 m/s",
+                                                    "1.0"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Le Piton de la Fournaise est volcanique. Si une coulÃ©e avance de 600 m en 10 min, quelle est sa vitesse moyenne en m/s ?",
+                                  "reponses":  [
+                                                   "1",
+                                                   "1 m/s",
+                                                   "1.0"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Le Piton de la Fournaise est volcanique. Si une coulÃ©e avance de 600 m en 10 min, quelle est sa vitesse moyenne en m/s ?",
+                                      "reponses":  [
+                                                       "1",
+                                                       "1 m/s",
+                                                       "1.0"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

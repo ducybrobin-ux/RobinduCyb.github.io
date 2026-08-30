@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S02",
+    "bird":  "curios",
+    "code":  "DEMO-S02",
+    "lat":  50.6365,
+    "lng":  3.0633,
+    "label":  "Lille â€” Grand\u0027Place",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Sans regarder une carte, tourne ton tÃ©lÃ©phone jusqu\u0027au Nord puis avance de 10 pas. Quel angle approximatif sÃ©pare le Nord et l\u0027Est ?",
+                                   "reponses":  [
+                                                    "90",
+                                                    "90Â°",
+                                                    "90 degrÃ©s"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Sans regarder une carte, tourne ton tÃ©lÃ©phone jusqu\u0027au Nord puis avance de 10 pas. Quel angle approximatif sÃ©pare le Nord et l\u0027Est ?",
+                                  "reponses":  [
+                                                   "90",
+                                                   "90Â°",
+                                                   "90 degrÃ©s"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Sans regarder une carte, tourne ton tÃ©lÃ©phone jusqu\u0027au Nord puis avance de 10 pas. Quel angle approximatif sÃ©pare le Nord et l\u0027Est ?",
+                                      "reponses":  [
+                                                       "90",
+                                                       "90Â°",
+                                                       "90 degrÃ©s"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

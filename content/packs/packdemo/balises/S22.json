@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S22",
+    "bird":  "curios",
+    "code":  "DEMO-S22",
+    "lat":  51.0344,
+    "lng":  2.3768,
+    "label":  "Dunkerque â€” plage",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Marche 10 pas, arrÃªte-toi net. Que mesure principalement l\u0027accÃ©lÃ©romÃ¨tre lors de l\u0027arrÃªt ?",
+                                   "reponses":  [
+                                                    "une variation d\u0027accÃ©lÃ©ration",
+                                                    "accÃ©lÃ©ration"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Marche 10 pas, arrÃªte-toi net. Que mesure principalement l\u0027accÃ©lÃ©romÃ¨tre lors de l\u0027arrÃªt ?",
+                                  "reponses":  [
+                                                   "une variation d\u0027accÃ©lÃ©ration",
+                                                   "accÃ©lÃ©ration"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Marche 10 pas, arrÃªte-toi net. Que mesure principalement l\u0027accÃ©lÃ©romÃ¨tre lors de l\u0027arrÃªt ?",
+                                      "reponses":  [
+                                                       "une variation d\u0027accÃ©lÃ©ration",
+                                                       "accÃ©lÃ©ration"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

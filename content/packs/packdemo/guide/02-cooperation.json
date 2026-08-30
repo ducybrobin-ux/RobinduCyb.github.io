@@ -1,0 +1,15 @@
+{
+    "type":  "guide",
+    "version":  1,
+    "id":  "cooperation",
+    "nom":  "La coopÃ©ration",
+    "description":  "L\u0027importance de jouer ensemble et de partager ses idÃ©es pour rÃ©ussir les dÃ©fis du parcours.",
+    "pedagogie":  {
+                      "objectif":  "DÃ©velopper l\u0027entraide et la communication au sein de l\u0027Ã©quipe",
+                      "ages":  [
+                                   8,
+                                   18
+                               ],
+                      "duree_min":  6
+                  }
+}

@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S06",
+    "bird":  "curios",
+    "code":  "DEMO-S06",
+    "lat":  43.214,
+    "lng":  5.4474,
+    "label":  "Calanques â€” Marseille",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Marche 20 m puis accÃ©lÃ¨re lÃ©gÃ¨rement pendant 3 s. Quelle grandeur mesure ton tÃ©lÃ©phone pour dÃ©tecter ce changement ?",
+                                   "reponses":  [
+                                                    "accÃ©lÃ©ration",
+                                                    "accelerometre"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Marche 20 m puis accÃ©lÃ¨re lÃ©gÃ¨rement pendant 3 s. Quelle grandeur mesure ton tÃ©lÃ©phone pour dÃ©tecter ce changement ?",
+                                  "reponses":  [
+                                                   "accÃ©lÃ©ration",
+                                                   "accelerometre"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Marche 20 m puis accÃ©lÃ¨re lÃ©gÃ¨rement pendant 3 s. Quelle grandeur mesure ton tÃ©lÃ©phone pour dÃ©tecter ce changement ?",
+                                      "reponses":  [
+                                                       "accÃ©lÃ©ration",
+                                                       "accelerometre"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}
