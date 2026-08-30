@@ -28,6 +28,10 @@
     {
       "id": "passeur-relais",
       "actif": false
+    },
+    {
+      "id": "demo",
+      "actif": false
     }
   ]
 }

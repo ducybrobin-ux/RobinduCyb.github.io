@@ -1,0 +1,53 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "D2",
+  "bird": "curios",
+  "code": "DEMO-B2",
+  "lat": null,
+  "lng": null,
+  "label": "Le Théme",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Quel est le thème du parcours que tu es en train de jouer ?\nA : La prise en main de Curi>s\nB : La botanique\nC : La cuisine",
+      "reponses": [
+        "A",
+        "la prise en main",
+        "prise en main",
+        "a"
+      ],
+      "indice": "Relis le titre du parcours sur l'écran d'accueil.",
+      "saviez": "Chaque parcours a un thème qui guide toutes ses énigmes.",
+      "ages": [8, 12]
+    },
+    "moyen": {
+      "text": "Où trouver les règles du jeu avant de commencer un parcours ?\nA : Dans le guide des notions\nB : Dans les paramètres du jeu\nC : Impossible de les consulter",
+      "reponses": [
+        "B",
+        "les paramètres",
+        "dans les paramètres",
+        "b"
+      ],
+      "indice": "Cherche l'icône des réglages ou l'onglet « Règles ».",
+      "saviez": "Les règles et le mode de déplacement sont détaillés avant le départ.",
+      "ages": [12, 15]
+    },
+    "difficile": {
+      "text": "Cite les 2 modes de déplacement disponibles dans un parcours Curi>s.",
+      "reponses": [
+        "schématique et gps",
+        "schematic et gps",
+        "plan et gps",
+        "schématique gps",
+        "carte et gps"
+      ],
+      "indice": "L'un utilise une carte dessinée, l'autre la localisation par satellite.",
+      "saviez": "Le mode schématique fonctionne hors-ligne ; le mode GPS utilise la localisation réelle.",
+      "ages": [15, 18]
+    }
+  },
+  "enigme": null,
+  "x": 50,
+  "y": 50
+}

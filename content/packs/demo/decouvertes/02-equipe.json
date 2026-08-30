@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "equipe",
+  "nom": "L'équipe",
+  "latin": "Coopération · Entraide",
+  "emoji": "🤝",
+  "couleur": "#2ecc71",
+  "categorie": "diurne",
+  "taille": "Astuce : répartissez les rôles dans l'équipe",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "En mode coopératif, toute l'équipe gagne ou perd ensemble.",
+    "Partager ses idées aide à résoudre les énigmes difficiles.",
+    "Chaque membre peut prendre un rôle : lecteur, explorateur, validateur."
+  ],
+  "chant": {
+    "tempo": 112,
+    "notes": [
+      { "f": 294, "fEnd": 294, "d": 0.12, "g": 0.07, "type": "sine", "v": 0.5 },
+      { "f": 370, "fEnd": 370, "d": 0.12, "g": 0.07, "type": "sine", "v": 0.5 },
+      { "f": 440, "fEnd": 440, "d": 0.1, "g": 0.15, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [8, 18],
+    "duree_min": 8,
+    "objectif": "Comprendre l'importance de la coopération dans la résolution de problèmes",
+    "programme": ["cycle 3", "cycle 4"]
+  },
+  "quiz": [
+    {
+      "q": "En mode coopératif, qui gagne des étoiles ?",
+      "options": ["Le meilleur joueur", "Toute l'équipe", "Personne", "Le capitaine uniquement"],
+      "reponse": 1
+    },
+    {
+      "q": "Quel comportement aide le plus une équipe ?",
+      "options": ["Garder ses réponses pour soi", "Partager ses idées", "Se dépêcher seul", "Ignorer les autres"],
+      "reponse": 1
+    }
+  ]
+}

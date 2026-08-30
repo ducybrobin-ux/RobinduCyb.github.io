@@ -1,0 +1,44 @@
+{
+  "type": "decouverte",
+  "version": 1,
+  "id": "curios",
+  "nom": "Curi>s, le jeu",
+  "latin": "Exploration · Découverte",
+  "emoji": "🧭",
+  "couleur": "#e67e22",
+  "categorie": "diurne",
+  "taille": "Astuce : explore chaque balise avant de valider",
+  "img": "",
+  "audioFile": null,
+  "anecdotes": [
+    "Curi>s est un jeu de découverte qui mêle balises, énigmes et notions pédagogiques.",
+    "Le jeu fonctionne hors-ligne : une fois téléchargé, il joue partout.",
+    "Chaque balise raconte une histoire et invite à chercher la réponse sur le terrain."
+  ],
+  "chant": {
+    "tempo": 100,
+    "notes": [
+      { "f": 262, "fEnd": 262, "d": 0.12, "g": 0.07, "type": "sine", "v": 0.5 },
+      { "f": 392, "fEnd": 392, "d": 0.12, "g": 0.07, "type": "sine", "v": 0.5 },
+      { "f": 523, "fEnd": 523, "d": 0.1, "g": 0.15, "type": "sine", "v": 0.4 }
+    ]
+  },
+  "pedagogie": {
+    "ages": [8, 18],
+    "duree_min": 10,
+    "objectif": "Découvrir le fonctionnement global du jeu et ses mécaniques de balise",
+    "programme": ["cycle 3", "cycle 4"]
+  },
+  "quiz": [
+    {
+      "q": "Curi>s est avant tout un jeu de…",
+      "options": ["Compétition individuelle", "Découverte et coopération", "Course contre la montre", "Puzzle"],
+      "reponse": 1
+    },
+    {
+      "q": "Le jeu peut-il jouer sans connexion internet ?",
+      "options": ["Non, jamais", "Oui, hors-ligne", "Seulement le week-end", "Uniquement avec un abonnement"],
+      "reponse": 1
+    }
+  ]
+}

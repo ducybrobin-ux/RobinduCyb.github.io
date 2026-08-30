@@ -1,0 +1,8 @@
+{
+  "id": "demo",
+  "nom": "Démo Curi>s — Découverte du jeu",
+  "theme": "prise en main & découverte",
+  "description": "Un parcours court de prise en main pour découvrir les 3 types de balises, les quiz de découverte et les notions du guide. Idéal pour tester Curi>s en 15 minutes.",
+  "version": 1,
+  "ages": [8, 18]
+}

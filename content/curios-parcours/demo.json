@@ -1,0 +1,457 @@
+{
+  "$format": "curios-parcours",
+  "$version": 1,
+  "id": "demo",
+  "title": "Démo Curi>s — Découverte du jeu",
+  "metadata": {
+    "author": "",
+    "organization": "",
+    "language": "fr",
+    "license": "",
+    "createdAt": "2026-08-30",
+    "updatedAt": "2026-08-30",
+    "source": {
+      "format": "jdpbc-pack",
+      "version": 1
+    }
+  },
+  "description": "Un parcours court de prise en main pour découvrir les 3 types de balises, les quiz de découverte et les notions du guide. Idéal pour tester Curi>s en 15 minutes.",
+  "theme": "prise en main & découverte",
+  "audience": {
+    "minAge": 8,
+    "maxAge": 18
+  },
+  "duration": null,
+  "pedagogy": {
+    "objectives": [
+      "Comprendre le déroulement d'une partie de Curi>s",
+      "Développer l'entraide et la communication au sein de l'équipe",
+      "Découvrir le fonctionnement global du jeu et ses mécaniques de balise",
+      "Comprendre l'importance de la coopération dans la résolution de problèmes"
+    ],
+    "skills": [],
+    "competencies": [
+      {
+        "id": "jeu-balises",
+        "nom": "Le jeu de balises",
+        "description": "Comment fonctionne une partie : balises à trouver, énigmes à résoudre et niveaux de difficulté.",
+        "emoji": "",
+        "objectif": "Comprendre le déroulement d'une partie de Curi>s",
+        "ages": [
+          8,
+          18
+        ],
+        "programme": []
+      },
+      {
+        "id": "cooperation",
+        "nom": "La coopération",
+        "description": "L'importance de jouer ensemble et de partager ses idées pour réussir les défis du parcours.",
+        "emoji": "",
+        "objectif": "Développer l'entraide et la communication au sein de l'équipe",
+        "ages": [
+          8,
+          18
+        ],
+        "programme": []
+      }
+    ],
+    "evaluation": []
+  },
+  "game": {
+    "mode": "courses",
+    "scoring": {
+      "starsPerStation": 3,
+      "timeBonus": true
+    },
+    "rules": {
+      "order": "libre"
+    }
+  },
+  "location": {
+    "provider": "schematic",
+    "center": null,
+    "trail": []
+  },
+  "stations": [
+    {
+      "id": "D1",
+      "label": "Le Départ",
+      "code": "DEMO-B1",
+      "discoveryId": "curios",
+      "x": 25,
+      "y": 25,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "D1-enigme"
+      ]
+    },
+    {
+      "id": "D2",
+      "label": "Le Théme",
+      "code": "DEMO-B2",
+      "discoveryId": "curios",
+      "x": 50,
+      "y": 50,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "D2-enigme"
+      ]
+    },
+    {
+      "id": "D3",
+      "label": "L'Arrivee",
+      "code": "DEMO-B3",
+      "discoveryId": "curios",
+      "x": 75,
+      "y": 75,
+      "lat": null,
+      "lng": null,
+      "radius": null,
+      "missions": [
+        "D3-enigme"
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "D1-enigme",
+      "type": "enigme",
+      "stationId": "D1",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Bienvenue dans Curi>s ! Quelle est la meilleure façon de gagner des étoiles ?\nA : Deviner au hasard\nB : Trouver les bonnes réponses aux énigmes\nC : Rien faire",
+          "answers": [
+            "B",
+            "trouver les bonnes réponses",
+            "les bonnes réponses",
+            "b"
+          ],
+          "ages": [
+            8,
+            12
+          ],
+          "hint": "L'objectif est de résoudre les énigmes correctement.",
+          "knowMore": "Chaque balise propose 3 niveaux : facile, moyen et difficile."
+        },
+        "moyen": {
+          "text": "Combien de niveaux de difficulté propose une énigme de balise ?\nA : 1\nB : 3 (facile, moyen, difficile)\nC : 5",
+          "answers": [
+            "B",
+            "3",
+            "3 niveaux",
+            "facile moyen difficile",
+            "b"
+          ],
+          "ages": [
+            12,
+            15
+          ],
+          "hint": "La réponse s'écrit en toutes lettres : trois.",
+          "knowMore": "Chaque équipe choisit le niveau qu'elle souhaite pour chaque balise."
+        },
+        "difficile": {
+          "text": "Dans Curi>s, quel est le rôle du « code de validation » présent sur chaque balise ?",
+          "answers": [
+            "prouver qu on est passé sur la balise",
+            "valider le passage sur la balise",
+            "prouver le passage",
+            "valider sa présence",
+            "valider le passage sur la station"
+          ],
+          "ages": [
+            15,
+            18
+          ],
+          "hint": "Il s'affiche sur la balise et sert à confirmer la visite.",
+          "knowMore": "Le code est saisi dans l'application pour valider la découverte de la station."
+        }
+      }
+    },
+    {
+      "id": "D2-enigme",
+      "type": "enigme",
+      "stationId": "D2",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Quel est le thème du parcours que tu es en train de jouer ?\nA : La prise en main de Curi>s\nB : La botanique\nC : La cuisine",
+          "answers": [
+            "A",
+            "la prise en main",
+            "prise en main",
+            "a"
+          ],
+          "ages": [
+            8,
+            12
+          ],
+          "hint": "Relis le titre du parcours sur l'écran d'accueil.",
+          "knowMore": "Chaque parcours a un thème qui guide toutes ses énigmes."
+        },
+        "moyen": {
+          "text": "Où trouver les règles du jeu avant de commencer un parcours ?\nA : Dans le guide des notions\nB : Dans les paramètres du jeu\nC : Impossible de les consulter",
+          "answers": [
+            "B",
+            "les paramètres",
+            "dans les paramètres",
+            "b"
+          ],
+          "ages": [
+            12,
+            15
+          ],
+          "hint": "Cherche l'icône des réglages ou l'onglet « Règles ».",
+          "knowMore": "Les règles et le mode de déplacement sont détaillés avant le départ."
+        },
+        "difficile": {
+          "text": "Cite les 2 modes de déplacement disponibles dans un parcours Curi>s.",
+          "answers": [
+            "schématique et gps",
+            "schematic et gps",
+            "plan et gps",
+            "schématique gps",
+            "carte et gps"
+          ],
+          "ages": [
+            15,
+            18
+          ],
+          "hint": "L'un utilise une carte dessinée, l'autre la localisation par satellite.",
+          "knowMore": "Le mode schématique fonctionne hors-ligne ; le mode GPS utilise la localisation réelle."
+        }
+      }
+    },
+    {
+      "id": "D3-enigme",
+      "type": "enigme",
+      "stationId": "D3",
+      "difficultyLevels": {
+        "facile": {
+          "text": "Que fais-tu quand tu as trouvé la bonne réponse à toutes les énigmes du parcours ?\nA : On arrête de jouer\nB : On valide les dernières balises et on profite du débriefing\nC : On recommence sans valider",
+          "answers": [
+            "B",
+            "on valide les dernières balises",
+            "on profite du débriefing",
+            "b"
+          ],
+          "ages": [
+            8,
+            12
+          ],
+          "hint": "La fin de partie est marquée par une phase de retour sur le parcours.",
+          "knowMore": "Le débriefing permet à l'équipe de discuter de ce qu'elle a appris."
+        },
+        "moyen": {
+          "text": "Quel élément du score récompense le travail d'équipe en fin de partie ?\nA : Le classement individuel\nB : Le débriefing collectif et les étoiles d'équipe\nC : La vitesse seule",
+          "answers": [
+            "B",
+            "le débriefing collectif",
+            "les étoiles d équipe",
+            "b"
+          ],
+          "ages": [
+            12,
+            15
+          ],
+          "hint": "Curi>s met l'accent sur la coopération plutôt que sur la compétition.",
+          "knowMore": "Le score combine les étoiles des balises et le bonus de temps."
+        },
+        "difficile": {
+          "text": "Explique pourquoi le mode coopératif est privilégié dans la pédagogie de Curi>s.",
+          "answers": [
+            "favorise l entraide et la discussion",
+            "favorise l entraide",
+            "développe la coopération",
+            "encourage le travail en équipe",
+            "favorise la collaboration"
+          ],
+          "ages": [
+            15,
+            18
+          ],
+          "hint": "Pense à la valeur ajoutée du collectif face aux énigmes.",
+          "knowMore": "Le mode coopératif incite chaque membre à participer au raisonnement collectif."
+        }
+      }
+    },
+    {
+      "id": "curios-quiz",
+      "type": "quiz",
+      "characterId": "curios",
+      "questions": [
+        {
+          "q": "Curi>s est avant tout un jeu de…",
+          "options": [
+            "Compétition individuelle",
+            "Découverte et coopération",
+            "Course contre la montre",
+            "Puzzle"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Le jeu peut-il jouer sans connexion internet ?",
+          "options": [
+            "Non, jamais",
+            "Oui, hors-ligne",
+            "Seulement le week-end",
+            "Uniquement avec un abonnement"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "equipe-quiz",
+      "type": "quiz",
+      "characterId": "equipe",
+      "questions": [
+        {
+          "q": "En mode coopératif, qui gagne des étoiles ?",
+          "options": [
+            "Le meilleur joueur",
+            "Toute l'équipe",
+            "Personne",
+            "Le capitaine uniquement"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Quel comportement aide le plus une équipe ?",
+          "options": [
+            "Garder ses réponses pour soi",
+            "Partager ses idées",
+            "Se dépêcher seul",
+            "Ignorer les autres"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "curios",
+      "nom": "Curi>s, le jeu",
+      "latin": "Exploration · Découverte",
+      "emoji": "🧭",
+      "couleur": "#e67e22",
+      "categorie": "diurne",
+      "taille": "Astuce : explore chaque balise avant de valider",
+      "img": "",
+      "anecdotes": [
+        "Curi>s est un jeu de découverte qui mêle balises, énigmes et notions pédagogiques.",
+        "Le jeu fonctionne hors-ligne : une fois téléchargé, il joue partout.",
+        "Chaque balise raconte une histoire et invite à chercher la réponse sur le terrain."
+      ],
+      "pedagogy": {
+        "ages": [
+          8,
+          18
+        ],
+        "dureeMin": 10,
+        "objectif": "Découvrir le fonctionnement global du jeu et ses mécaniques de balise",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      },
+      "chant": {
+        "tempo": 100,
+        "notes": [
+          {
+            "f": 262,
+            "fEnd": 262,
+            "d": 0.12,
+            "g": 0.07,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 392,
+            "fEnd": 392,
+            "d": 0.12,
+            "g": 0.07,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 523,
+            "fEnd": 523,
+            "d": 0.1,
+            "g": 0.15,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "equipe",
+      "nom": "L'équipe",
+      "latin": "Coopération · Entraide",
+      "emoji": "🤝",
+      "couleur": "#2ecc71",
+      "categorie": "diurne",
+      "taille": "Astuce : répartissez les rôles dans l'équipe",
+      "img": "",
+      "anecdotes": [
+        "En mode coopératif, toute l'équipe gagne ou perd ensemble.",
+        "Partager ses idées aide à résoudre les énigmes difficiles.",
+        "Chaque membre peut prendre un rôle : lecteur, explorateur, validateur."
+      ],
+      "pedagogy": {
+        "ages": [
+          8,
+          18
+        ],
+        "dureeMin": 8,
+        "objectif": "Comprendre l'importance de la coopération dans la résolution de problèmes",
+        "programme": [
+          "cycle 3",
+          "cycle 4"
+        ]
+      },
+      "chant": {
+        "tempo": 112,
+        "notes": [
+          {
+            "f": 294,
+            "fEnd": 294,
+            "d": 0.12,
+            "g": 0.07,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 370,
+            "fEnd": 370,
+            "d": 0.12,
+            "g": 0.07,
+            "type": "sine",
+            "v": 0.5
+          },
+          {
+            "f": 440,
+            "fEnd": 440,
+            "d": 0.1,
+            "g": 0.15,
+            "type": "sine",
+            "v": 0.4
+          }
+        ]
+      }
+    }
+  ],
+  "media": [],
+  "rewards": [],
+  "debriefing": {
+    "participantQuestions": [],
+    "facilitatorReport": [],
+    "skillsObserved": []
+  }
+}

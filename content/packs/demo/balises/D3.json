@@ -1,0 +1,53 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "D3",
+  "bird": "curios",
+  "code": "DEMO-B3",
+  "lat": null,
+  "lng": null,
+  "label": "L'Arrivee",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Que fais-tu quand tu as trouvé la bonne réponse à toutes les énigmes du parcours ?\nA : On arrête de jouer\nB : On valide les dernières balises et on profite du débriefing\nC : On recommence sans valider",
+      "reponses": [
+        "B",
+        "on valide les dernières balises",
+        "on profite du débriefing",
+        "b"
+      ],
+      "indice": "La fin de partie est marquée par une phase de retour sur le parcours.",
+      "saviez": "Le débriefing permet à l'équipe de discuter de ce qu'elle a appris.",
+      "ages": [8, 12]
+    },
+    "moyen": {
+      "text": "Quel élément du score récompense le travail d'équipe en fin de partie ?\nA : Le classement individuel\nB : Le débriefing collectif et les étoiles d'équipe\nC : La vitesse seule",
+      "reponses": [
+        "B",
+        "le débriefing collectif",
+        "les étoiles d équipe",
+        "b"
+      ],
+      "indice": "Curi>s met l'accent sur la coopération plutôt que sur la compétition.",
+      "saviez": "Le score combine les étoiles des balises et le bonus de temps.",
+      "ages": [12, 15]
+    },
+    "difficile": {
+      "text": "Explique pourquoi le mode coopératif est privilégié dans la pédagogie de Curi>s.",
+      "reponses": [
+        "favorise l entraide et la discussion",
+        "favorise l entraide",
+        "développe la coopération",
+        "encourage le travail en équipe",
+        "favorise la collaboration"
+      ],
+      "indice": "Pense à la valeur ajoutée du collectif face aux énigmes.",
+      "saviez": "Le mode coopératif incite chaque membre à participer au raisonnement collectif.",
+      "ages": [15, 18]
+    }
+  },
+  "enigme": null,
+  "x": 75,
+  "y": 75
+}

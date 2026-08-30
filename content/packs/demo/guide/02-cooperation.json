@@ -1,0 +1,12 @@
+{
+  "type": "guide",
+  "version": 1,
+  "id": "cooperation",
+  "nom": "La coopération",
+  "description": "L'importance de jouer ensemble et de partager ses idées pour réussir les défis du parcours.",
+  "pedagogie": {
+    "objectif": "Développer l'entraide et la communication au sein de l'équipe",
+    "ages": [8, 18],
+    "duree_min": 6
+  }
+}

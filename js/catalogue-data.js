@@ -16,6 +16,27 @@
 
   var packs = [
     {
+      id: "demo",
+      nom: "Démo Curi>s — Découverte du jeu",
+      tagline: "Prends le jeu en main en 15 minutes",
+      cover: "demo",
+      accent: "#e67e22",
+      emoji: "🧭",
+      difficulty: "facile",
+      durationMin: 20,
+      players: [1, 6],
+      location: "Partout (sans GPS)",
+      environment: "intérieur / extérieur",
+      skills: ["Prise en main", "Coopération", "Découverte"],
+      material: ["Smartphone"],
+      goals: ["Découvrir le jeu de balises", "Comprendre les niveaux de difficulté", "Expérimenter la coopération"],
+      staff: false,
+      badges: ["Démo", "Prise en main"],
+      collection: "Démos",
+      featured: true,
+      nbBalises: 3
+    },
+    {
       id: "biais-cognitifs",
       nom: "Biais cognitifs",
       tagline: "Déjouez les pièges du cerveau",

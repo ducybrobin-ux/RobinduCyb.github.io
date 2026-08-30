@@ -1,0 +1,54 @@
+{
+  "type": "balise",
+  "version": 1,
+  "id": "D1",
+  "bird": "curios",
+  "code": "DEMO-B1",
+  "lat": null,
+  "lng": null,
+  "label": "Le Départ",
+  "hintImg": "",
+  "enigmes": {
+    "facile": {
+      "text": "Bienvenue dans Curi>s ! Quelle est la meilleure façon de gagner des étoiles ?\nA : Deviner au hasard\nB : Trouver les bonnes réponses aux énigmes\nC : Rien faire",
+      "reponses": [
+        "B",
+        "trouver les bonnes réponses",
+        "les bonnes réponses",
+        "b"
+      ],
+      "indice": "L'objectif est de résoudre les énigmes correctement.",
+      "saviez": "Chaque balise propose 3 niveaux : facile, moyen et difficile.",
+      "ages": [8, 12]
+    },
+    "moyen": {
+      "text": "Combien de niveaux de difficulté propose une énigme de balise ?\nA : 1\nB : 3 (facile, moyen, difficile)\nC : 5",
+      "reponses": [
+        "B",
+        "3",
+        "3 niveaux",
+        "facile moyen difficile",
+        "b"
+      ],
+      "indice": "La réponse s'écrit en toutes lettres : trois.",
+      "saviez": "Chaque équipe choisit le niveau qu'elle souhaite pour chaque balise.",
+      "ages": [12, 15]
+    },
+    "difficile": {
+      "text": "Dans Curi>s, quel est le rôle du « code de validation » présent sur chaque balise ?",
+      "reponses": [
+        "prouver qu on est passé sur la balise",
+        "valider le passage sur la balise",
+        "prouver le passage",
+        "valider sa présence",
+        "valider le passage sur la station"
+      ],
+      "indice": "Il s'affiche sur la balise et sert à confirmer la visite.",
+      "saviez": "Le code est saisi dans l'application pour valider la découverte de la station.",
+      "ages": [15, 18]
+    }
+  },
+  "enigme": null,
+  "x": 25,
+  "y": 25
+}
