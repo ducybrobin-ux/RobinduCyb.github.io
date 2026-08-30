@@ -215,7 +215,7 @@
     if (!p) return;
     state.activeId = id;
     var b = $("#cat-modal-bg");
-    var body = $("#cat-modal-body");
+    var body = $("#cat-modal");
     b.classList.add("is-open");
     document.body.style.overflow = "hidden";
 
