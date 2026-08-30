@@ -59,7 +59,7 @@
   function coverSrc(p) {
     return p.cover ? "img/covers/" + p.cover + ".png" : null;
   }
-  function icon(name) { return '<svg class="cur-icon" aria-hidden="true"><use xlink:href="img/curios-icons-sprite.svg#' + esc(name) + '"></use></svg>'; }
+  function icon(name) { return '<svg class="cur-icon" aria-hidden="true"><use xlink:href="img/curios-icons-sprite.svg#curios-' + esc(name) + '"></use></svg>'; }
   function coverMarkup(p, big) {
     var src = coverSrc(p);
     var badge = stateBadge(p);
