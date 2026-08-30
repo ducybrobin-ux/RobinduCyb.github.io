@@ -16,6 +16,11 @@
 }
 
 /* ---- Barre supérieure ---- */
+
+/* Small icon helper (SVG sprite uses) */
+.cur-icon { width: 1.1em; height: 1.1em; vertical-align: -0.15em; fill: currentColor; display: inline-block; }
+.cur-icon use { pointer-events: none; }
+
 .cat-topbar {
   position: sticky;
   top: 0;

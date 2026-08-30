@@ -1,9 +1,9 @@
 {
   "$schema": "curios-catalog-pack-v1",
   "id": "demo",
-  "nom": "Démo Curi>s — Découverte du jeu",
-  "tagline": "Prends le jeu en main en 15 minutes",
-  "description": "Un parcours court et ludique pour découvrir les mécaniques de Curi>s : balises à énigmes, quiz de découverte et notions du guide. Parfait pour tester le jeu avant un vrai parcours.",
+  "nom": "Curi🧭s — Le GRAND DEMO PACK : France & Outre-mer",
+  "tagline": "Parcours de démonstration multi-terrain",
+  "description": "Parcours de démonstration destiné à montrer l'étendue de Curi🧭s : scénario, humour, matières scolaires, géolocalisation, POI de France et Outre-mer, observation, médias et expérimentation des capacités d'un smartphone.",
   "cover": "demo",
   "accent": "#e67e22",
   "emoji": "🧭",

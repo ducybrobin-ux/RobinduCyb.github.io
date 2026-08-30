@@ -11,7 +11,7 @@
 
 /* ==== DÉBUT CONTENU GÉNÉRÉ — NE PAS ÉDITER ====
    Source de vérité : content/ (config + packs JSON modulaires).
-   Packs actifs : phantom-cybersecurite
+   Packs actifs : packdemo
    Régénérer : node tools/build-data.mjs
    Vérifier la synchro : node tools/build-data.mjs --check ==== */
 
@@ -103,123 +103,42 @@ const BIRDS = [
   {
     "type": "decouverte",
     "version": 1,
-    "id": "alerte",
-    "nom": "Le Message Suspect",
-    "latin": "Social Engineering · Phishing",
-    "emoji": "🚨",
-    "couleur": "#e74c3c",
+    "id": "curios",
+    "nom": "Curi>s, le jeu",
+    "latin": "Exploration Â· DÃ©couverte",
+    "emoji": "ðŸ§­",
+    "couleur": "#e67e22",
     "categorie": "diurne",
-    "taille": "Antidote : ne jamais agir sous la pression",
+    "taille": "Astuce : explore chaque balise avant de valider",
     "img": "",
     "audioFile": null,
     "anecdotes": [
-      "Les attaquants créent un sentiment d'urgence pour court-circuiter ta réflexion.",
-      "Un message qui te pousse à agir « maintenant » est presque toujours suspect.",
-      "La première règle : une urgence n'est jamais une preuve de légitimité."
+      "Curi>s est un jeu de dÃ©couverte qui mÃªle balises, Ã©nigmes et notions pÃ©dagogiques.",
+      "Le jeu fonctionne hors-ligne : une fois tÃ©lÃ©chargÃ©, il joue partout.",
+      "Chaque balise raconte une histoire et invite Ã  chercher la rÃ©ponse sur le terrain."
     ],
     "chant": {
-      "tempo": 120,
+      "tempo": 100,
       "notes": [
         {
-          "f": 440,
-          "fEnd": 440,
-          "d": 0.1,
-          "g": 0.05,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 520,
-          "fEnd": 520,
-          "d": 0.1,
-          "g": 0.05,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 660,
-          "fEnd": 660,
-          "d": 0.15,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
-        18
-      ],
-      "duree_min": 10,
-      "objectif": "Identifier les techniques de manipulation dans les messages suspects",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Quel est le premier réflexe face à un message urgent ?",
-        "options": [
-          "Cliquer immédiatement",
-          "Vérifier l'expéditeur et le contenu",
-          "Transmettre à un ami",
-          "Ignorer"
-        ],
-        "reponse": 1
-      },
-      {
-        "q": "Une urgence dans un message prouve-t-elle qu'il est légitime ?",
-        "options": [
-          "Oui toujours",
-          "Non, c'est souvent une manipulation",
-          "Parfois",
-          "Seulement si c'est de la banque"
-        ],
-        "reponse": 1
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "phishing",
-    "nom": "Le Phishing",
-    "latin": "Phishing · Hameçonnage",
-    "emoji": "🎣",
-    "couleur": "#3498db",
-    "categorie": "diurne",
-    "taille": "Antidote : toujours vérifier l'URL",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Le phishing utilise de faux sites qui ressemblent aux vrais pour voler tes identifiants.",
-      "Le cadenas (HTTPS) ne suffit pas : il faut vérifier le nom de domaine.",
-      "Un vrai site ne te demandera jamais ton mot de passe par message."
-    ],
-    "chant": {
-      "tempo": 110,
-      "notes": [
-        {
-          "f": 330,
-          "fEnd": 330,
+          "f": 262,
+          "fEnd": 262,
           "d": 0.12,
-          "g": 0.06,
+          "g": 0.07,
           "type": "sine",
           "v": 0.5
         },
         {
-          "f": 440,
-          "fEnd": 440,
+          "f": 392,
+          "fEnd": 392,
           "d": 0.12,
-          "g": 0.06,
+          "g": 0.07,
           "type": "sine",
           "v": 0.5
         },
         {
-          "f": 550,
-          "fEnd": 550,
+          "f": 523,
+          "fEnd": 523,
           "d": 0.1,
           "g": 0.15,
           "type": "sine",
@@ -229,115 +148,34 @@ const BIRDS = [
     },
     "pedagogie": {
       "ages": [
-        12,
-        18
-      ],
-      "duree_min": 12,
-      "objectif": "Identifier les fausses pages de connexion et comprendre le mécanisme du phishing",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Qu'est-ce qui identifie un site de phishing ?",
-        "options": [
-          "Le cadenas vert",
-          "L'URL incorrecte",
-          "Le design moderne",
-          "La vitesse du site"
-        ],
-        "reponse": 1
-      },
-      {
-        "q": "Que donner à un site suspect qui te demande ton mot de passe ?",
-        "options": [
-          "Ton vrai mot de passe",
-          "Un mot de passe faux",
-          "Rien du tout",
-          "Ton email"
-        ],
-        "reponse": 2
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "qr-piege",
-    "nom": "Le QR Code Piégé",
-    "latin": "QR Code · Redirection",
-    "emoji": "📷",
-    "couleur": "#9b59b6",
-    "categorie": "diurne",
-    "taille": "Antidote : inspecter avant de scanner",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Un QR code peut mener n'importe où : un site officiel ou un piège.",
-      "PHANTOM ne te force jamais à scanner. Il te pousse à le faire sans réfléchir.",
-      "La règle d'or : inspecter la destination avant de faire confiance."
-    ],
-    "chant": {
-      "tempo": 100,
-      "notes": [
-        {
-          "f": 392,
-          "fEnd": 392,
-          "d": 0.1,
-          "g": 0.08,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 523,
-          "fEnd": 523,
-          "d": 0.1,
-          "g": 0.08,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 659,
-          "fEnd": 659,
-          "d": 0.12,
-          "g": 0.12,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
+        8,
         18
       ],
       "duree_min": 10,
-      "objectif": "Comprendre les risques des QR codes et inspecter avant de scanner",
+      "objectif": "DÃ©couvrir le fonctionnement global du jeu et ses mÃ©caniques de balise",
       "programme": [
-        "cycle 4",
-        "lycée"
+        "cycle 3",
+        "cycle 4"
       ]
     },
     "quiz": [
       {
-        "q": "Que faire AVANT de scanner un QR code inconnu ?",
+        "q": "Curi>s est avant tout un jeu deâ€¦",
         "options": [
-          "Le scanner directement",
-          "Vérifier l'URL affichée",
-          "Demander à un ami",
-          "Tourner le téléphone"
+          "CompÃ©tition individuelle",
+          "DÃ©couverte et coopÃ©ration",
+          "Course contre la montre",
+          "Puzzle"
         ],
         "reponse": 1
       },
       {
-        "q": "Un QR code peut-il mener vers un site malveillant ?",
+        "q": "Le jeu peut-il jouer sans connexion internet ?",
         "options": [
-          "Non jamais",
-          "Oui c'est possible",
-          "Seulement si on le fabrique",
-          "Seulement sur Android"
+          "Non, jamais",
+          "Oui, hors-ligne",
+          "Seulement le week-end",
+          "Uniquement avec un abonnement"
         ],
         "reponse": 1
       }
@@ -346,352 +184,28 @@ const BIRDS = [
   {
     "type": "decouverte",
     "version": 1,
-    "id": "traces",
-    "nom": "Les Traces Numériques",
-    "latin": "Metadata · EXIF · OSINT",
-    "emoji": "📍",
-    "couleur": "#e67e22",
-    "categorie": "diurne",
-    "taille": "Antidote : minimiser les traces laissées",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Une photo contient des métadonnées invisibles : date, heure, lieu, appareil.",
-      "Les métadonnées EXIF peuvent révéler beaucoup plus que ce qu'on montre.",
-      "Ce qu'on peut savoir n'est pas toujours ce qu'on devrait utiliser."
-    ],
-    "chant": {
-      "tempo": 95,
-      "notes": [
-        {
-          "f": 294,
-          "fEnd": 294,
-          "d": 0.12,
-          "g": 0.06,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 392,
-          "fEnd": 392,
-          "d": 0.12,
-          "g": 0.06,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 494,
-          "fEnd": 494,
-          "d": 0.15,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
-        18
-      ],
-      "duree_min": 10,
-      "objectif": "Comprendre les métadonnées et leur impact sur la vie privée",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Que contiennent les métadonnées d'une photo ?",
-        "options": [
-          "Rien de spécial",
-          "Date, heure, lieu, appareil",
-          "Uniquement la taille",
-          "Le mot de passe du téléphone"
-        ],
-        "reponse": 1
-      },
-      {
-        "q": "Une information disponible est-forcément une information à utiliser ?",
-        "options": [
-          "Oui toujours",
-          "Non, ça dépend du contexte",
-          "Seulement en ligne",
-          "Seulement pour la police"
-        ],
-        "reponse": 1
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "permissions",
-    "nom": "Les Permissions",
-    "latin": "Privacy · Permissions · Moindre Privilège",
-    "emoji": "📱",
-    "couleur": "#1abc9c",
-    "categorie": "diurne",
-    "taille": "Antidote : donner le minimum nécessaire",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "La sécurité n'est pas tout autoriser ou tout interdire. C'est donner le bon accès, au bon moment.",
-      "Le principe du moindre privilège : seulement ce qui est nécessaire.",
-      "Refuser toutes les permissions peut casser le fonctionnement d'une application."
-    ],
-    "chant": {
-      "tempo": 105,
-      "notes": [
-        {
-          "f": 330,
-          "fEnd": 330,
-          "d": 0.1,
-          "g": 0.07,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 415,
-          "fEnd": 415,
-          "d": 0.1,
-          "g": 0.07,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 523,
-          "fEnd": 523,
-          "d": 0.12,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
-        18
-      ],
-      "duree_min": 10,
-      "objectif": "Comprendre les permissions et le principe du moindre privilège",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Quelle est la meilleure approche pour les permissions ?",
-        "options": [
-          "Tout autoriser",
-          "Tout refuser",
-          "Donner le minimum nécessaire",
-          "Demander à un adulte"
-        ],
-        "reponse": 2
-      },
-      {
-        "q": "Pourquoi une application a-t-elle besoin de permissions ?",
-        "options": [
-          "Pour espionner",
-          "Pour fonctionner correctement",
-          "Pour vendre tes données",
-          "Pour ralentir ton téléphone"
-        ],
-        "reponse": 1
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "mots-de-passe",
-    "nom": "Les Mots de Passe",
-    "latin": "Passphrase · Hashing · Brute Force",
-    "emoji": "🔐",
+    "id": "equipe",
+    "nom": "L'Ã©quipe",
+    "latin": "CoopÃ©ration Â· Entraide",
+    "emoji": "ðŸ¤",
     "couleur": "#2ecc71",
     "categorie": "diurne",
-    "taille": "Antidote : utiliser une phrase secrète",
+    "taille": "Astuce : rÃ©partissez les rÃ´les dans l'Ã©quipe",
     "img": "",
     "audioFile": null,
     "anecdotes": [
-      "La longueur est plus importante que la complexité.",
-      "Une passphrase (phrase secrète) est à la fois mémorisable et difficile à craquer.",
-      "Ne jamais utiliser son nom + année de naissance."
+      "En mode coopÃ©ratif, toute l'Ã©quipe gagne ou perd ensemble.",
+      "Partager ses idÃ©es aide Ã  rÃ©soudre les Ã©nigmes difficiles.",
+      "Chaque membre peut prendre un rÃ´le : lecteur, explorateur, validateur."
     ],
     "chant": {
-      "tempo": 115,
-      "notes": [
-        {
-          "f": 262,
-          "fEnd": 262,
-          "d": 0.1,
-          "g": 0.05,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 330,
-          "fEnd": 330,
-          "d": 0.1,
-          "g": 0.05,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 392,
-          "fEnd": 392,
-          "d": 0.15,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
-        18
-      ],
-      "duree_min": 10,
-      "objectif": "Comprendre les principes d'un mot de passe sûr",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Qu'est-ce qui rend un mot de passe sûr ?",
-        "options": [
-          "Uniquement les majuscules",
-          "La longueur et la variété",
-          "Uniquement les chiffres",
-          "Le nom de famille"
-        ],
-        "reponse": 1
-      },
-      {
-        "q": "Pourquoi « MonChien » est un mauvais mot de passe ?",
-        "options": [
-          "Trop court",
-          "Trop commun",
-          "Pas de chiffres",
-          "Toutes ces réponses"
-        ],
-        "reponse": 3
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "identite",
-    "nom": "L'Identité Numérique",
-    "latin": "OSINT · Identité · Puzzle",
-    "emoji": "🧬",
-    "couleur": "#9b59b6",
-    "categorie": "diurne",
-    "taille": "Antidote : minimiser le partage d'informations",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Chaque information publique est un puzzle qui peut être assemblé.",
-      "On n'a pas besoin d'un mot de passe pour en savoir beaucoup sur quelqu'un.",
-      "L'OSINT utilise les données publiques pour reconstituer une identité."
-    ],
-    "chant": {
-      "tempo": 100,
-      "notes": [
-        {
-          "f": 349,
-          "fEnd": 349,
-          "d": 0.1,
-          "g": 0.06,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 440,
-          "fEnd": 440,
-          "d": 0.1,
-          "g": 0.06,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 523,
-          "fEnd": 523,
-          "d": 0.12,
-          "g": 0.1,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
-        18
-      ],
-      "duree_min": 10,
-      "objectif": "Comprendre comment les informations personnelles peuvent être utilisées",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Avec quelles informations peut-on retrouver quelqu'un ?",
-        "options": [
-          "Uniquement avec le nom",
-          "Nom + ville + école",
-          "Uniquement avec la photo",
-          "Aucune info ne suffit"
-        ],
-        "reponse": 1
-      },
-      {
-        "q": "Qu'est-ce que l'OSINT ?",
-        "options": [
-          "Un type de virus",
-          "Du renseignement à partir de sources publiques",
-          "Un réseau social",
-          "Un logiciel de sécurité"
-        ],
-        "reponse": 1
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "reseau",
-    "nom": "Le Réseau Wi-Fi",
-    "latin": "Wi-Fi · HTTPS · VPN",
-    "emoji": "📡",
-    "couleur": "#34495e",
-    "categorie": "diurne",
-    "taille": "Antidote : vérifier et sécuriser la connexion",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "Un réseau Wi-Fi ouvert n'est pas forcément malveillant, mais il faut rester vigilant.",
-      "HTTPS chiffre les données entre ton navigateur et le site.",
-      "Un VPN peut protéger ta connexion sur un réseau public."
-    ],
-    "chant": {
-      "tempo": 108,
+      "tempo": 112,
       "notes": [
         {
           "f": 294,
           "fEnd": 294,
           "d": 0.12,
-          "g": 0.05,
+          "g": 0.07,
           "type": "sine",
           "v": 0.5
         },
@@ -699,7 +213,7 @@ const BIRDS = [
           "f": 370,
           "fEnd": 370,
           "d": 0.12,
-          "g": 0.05,
+          "g": 0.07,
           "type": "sine",
           "v": 0.5
         },
@@ -707,87 +221,6 @@ const BIRDS = [
           "f": 440,
           "fEnd": 440,
           "d": 0.1,
-          "g": 0.12,
-          "type": "sine",
-          "v": 0.4
-        }
-      ]
-    },
-    "pedagogie": {
-      "ages": [
-        12,
-        18
-      ],
-      "duree_min": 10,
-      "objectif": "Comprendre les risques des réseaux Wi-Fi publics",
-      "programme": [
-        "cycle 4",
-        "lycée"
-      ]
-    },
-    "quiz": [
-      {
-        "q": "Un réseau Wi-Fi gratuit est-il forcément sûr ?",
-        "options": [
-          "Oui toujours",
-          "Non, il faut rester vigilant",
-          "Seulement le matin",
-          "Seulement avec un iPhone"
-        ],
-        "reponse": 1
-      },
-      {
-        "q": "Que signifie le cadenas dans la barre d'adresse ?",
-        "options": [
-          "Le site est officiel",
-          "La connexion est chiffrée (HTTPS)",
-          "Le site est rapide",
-          "Le site est français"
-        ],
-        "reponse": 1
-      }
-    ]
-  },
-  {
-    "type": "decouverte",
-    "version": 1,
-    "id": "phantom",
-    "nom": "PHANTOM",
-    "latin": "Ingénierie Sociale · Vulnérabilité Humaine",
-    "emoji": "👻",
-    "couleur": "#1a1a2e",
-    "categorie": "diurne",
-    "taille": "Antidote : esprit critique et réflexion",
-    "img": "",
-    "audioFile": null,
-    "anecdotes": [
-      "PHANTOM n'est pas un pirate informatique. C'est un protocole automatisé qui exploite les erreurs humaines.",
-      "Le véritable ennemi n'est pas la technologie, c'est l'imprévoyance.",
-      "PHANTOM n'est pas dans votre téléphone. PHANTOM est dans les décisions que vous prenez lorsque quelqu'un vous pousse à agir trop vite."
-    ],
-    "chant": {
-      "tempo": 90,
-      "notes": [
-        {
-          "f": 220,
-          "fEnd": 220,
-          "d": 0.15,
-          "g": 0.08,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 277,
-          "fEnd": 277,
-          "d": 0.15,
-          "g": 0.08,
-          "type": "sine",
-          "v": 0.5
-        },
-        {
-          "f": 330,
-          "fEnd": 330,
-          "d": 0.2,
           "g": 0.15,
           "type": "sine",
           "v": 0.4
@@ -796,34 +229,34 @@ const BIRDS = [
     },
     "pedagogie": {
       "ages": [
-        12,
+        8,
         18
       ],
-      "duree_min": 15,
-      "objectif": "Comprendre que la sécurité informatique repose sur les décisions humaines",
+      "duree_min": 8,
+      "objectif": "Comprendre l'importance de la coopÃ©ration dans la rÃ©solution de problÃ¨mes",
       "programme": [
-        "cycle 4",
-        "lycée"
+        "cycle 3",
+        "cycle 4"
       ]
     },
     "quiz": [
       {
-        "q": "Qui est PHANTOM ?",
+        "q": "En mode coopÃ©ratif, qui gagne des Ã©toiles ?",
         "options": [
-          "Un pirate humain",
-          "Un protocole automatisé",
-          "Un virus informatique",
-          "Un agent secret"
+          "Le meilleur joueur",
+          "Toute l'Ã©quipe",
+          "Personne",
+          "Le capitaine uniquement"
         ],
         "reponse": 1
       },
       {
-        "q": "Où se trouve真正的 PHANTOM ?",
+        "q": "Quel comportement aide le plus une Ã©quipe ?",
         "options": [
-          "Dans un ordinateur",
-          "Dans les décisions que nous prenons",
-          "Sur Internet",
-          "Dans un centre de données"
+          "Garder ses rÃ©ponses pour soi",
+          "Partager ses idÃ©es",
+          "Se dÃ©pÃªcher seul",
+          "Ignorer les autres"
         ],
         "reponse": 1
       }
@@ -835,61 +268,31 @@ const GUIDE = [
   {
     "type": "guide",
     "version": 1,
-    "id": "ingenerie-sociale",
-    "nom": "L'ingénierie sociale",
-    "description": "Techniques utilisées par les attaquants pour manipuler les humains plutôt que d'attaquer les ordinateurs.",
+    "id": "jeu-balises",
+    "nom": "Le jeu de balises",
+    "description": "Comment fonctionne une partie : balises Ã  trouver, Ã©nigmes Ã  rÃ©soudre et niveaux de difficultÃ©.",
     "pedagogie": {
-      "objectif": "Comprendre comment les humains peuvent être manipulés",
+      "objectif": "Comprendre le dÃ©roulement d'une partie de Curi>s",
       "ages": [
-        12,
+        8,
         18
       ],
-      "duree_min": 8
+      "duree_min": 6
     }
   },
   {
     "type": "guide",
     "version": 1,
-    "id": "osint",
-    "nom": "Le renseignement d'ouverture",
-    "description": "L'OSINT utilise les données publiques pour reconstituer des informations sur une personne ou une organisation.",
+    "id": "cooperation",
+    "nom": "La coopÃ©ration",
+    "description": "L'importance de jouer ensemble et de partager ses idÃ©es pour rÃ©ussir les dÃ©fis du parcours.",
     "pedagogie": {
-      "objectif": "Comprendre que les données publiques peuvent être utilisées pour reconstituer une identité",
+      "objectif": "DÃ©velopper l'entraide et la communication au sein de l'Ã©quipe",
       "ages": [
-        14,
+        8,
         18
       ],
-      "duree_min": 10
-    }
-  },
-  {
-    "type": "guide",
-    "version": 1,
-    "id": "chiffrement",
-    "nom": "Le chiffrement",
-    "description": "Le chiffrement protège les données en les rendant illisibles sans la clé de déchiffrement.",
-    "pedagogie": {
-      "objectif": "Comprendre le rôle du chiffrement dans la sécurité",
-      "ages": [
-        14,
-        18
-      ],
-      "duree_min": 8
-    }
-  },
-  {
-    "type": "guide",
-    "version": 1,
-    "id": " phishing-avance",
-    "nom": "Le phishing avancé",
-    "description": "Techniques sophistiquées : spear phishing, whaling, BEC (Business Email Compromise).",
-    "pedagogie": {
-      "objectif": "Reconnaître les formes avancées de phishing",
-      "ages": [
-        16,
-        18
-      ],
-      "duree_min": 10
+      "duree_min": 6
     }
   }
 ];
@@ -898,554 +301,1376 @@ const BALISES = [
   {
     "type": "balise",
     "version": 1,
-    "id": "B1",
-    "bird": "alerte",
-    "code": "PH-B1",
-    "lat": 50.3110118,
-    "lng": 3.3298823,
-    "label": "Le Message",
+    "id": "S01",
+    "bird": "curios",
+    "code": "DEMO-S01",
+    "lat": 48.85837,
+    "lng": 2.29448,
+    "label": "Tour Eiffel â€” Paris",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Tu reçois 3 notifications. Laquelle est la plus suspecte ?\nA : « Votre compte nécessite une vérification. Cliquez ici immédiatement. »\nB : « Votre administrateur vous demande de confirmer votre identité. Rendez-vous dans l'application. »\nC : « ALERTE !! Votre téléphone sera supprimé dans 5 minutes !!! »",
+        "text": "La Tour Eiffel mesure environ 330 m. Si un ascenseur parcourt 2,5 m/s, combien de secondes pour monter 300 m ?",
         "reponses": [
-          "C",
-          "la C",
-          "la troisième",
-          "la troisième notification",
-          "ALERTE"
+          "120",
+          "120 s",
+          "120 secondes"
         ],
-        "indice": "Regarde le ton : menace, ponctuation excessive, urgence.",
-        "saviez": "L'ingénierie sociale utilise la peur et l'urgence pour te faire agir sans réfléchir.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Quel élément rend un message suspect ?\nA : L'urgence artificielle\nB : Le nom de l'expéditeur\nC : L'heure d'envoi",
+        "text": "La Tour Eiffel mesure environ 330 m. Si un ascenseur parcourt 2,5 m/s, combien de secondes pour monter 300 m ?",
         "reponses": [
-          "A",
-          "l'urgence artificielle",
-          "l'urgence",
-          "l'urgence artificielle"
+          "120",
+          "120 s",
+          "120 secondes"
         ],
-        "indice": "Un message qui te pousse à agir « maintenant » est presque toujours suspect.",
-        "saviez": "Les attaquants créent un sentiment d'urgence pour court-circuiter ta réflexion.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Identifie les 3 techniques de manipulation utilisées dans un message de phishing classique.",
+        "text": "La Tour Eiffel mesure environ 330 m. Si un ascenseur parcourt 2,5 m/s, combien de secondes pour monter 300 m ?",
         "reponses": [
-          "urgence, autorité, peur",
-          "urgence autorité peur",
-          "peur autorité urgence",
-          "urgence, peur, autorité"
+          "120",
+          "120 s",
+          "120 secondes"
         ],
-        "indice": "Pense à ce que le message te fait ressentir : pression, menace, obligation.",
-        "saviez": "Les 3 piliers du phishing : l'autorité (qui parle), l'urgence (agis vite), la peur (conséquences).",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 74,
-    "y": 452
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B2",
-    "bird": "phishing",
-    "code": "PH-B2",
-    "lat": 50.3115907,
-    "lng": 3.3300398,
-    "label": "Le Piège",
+    "id": "S02",
+    "bird": "curios",
+    "code": "DEMO-S02",
+    "lat": 50.6365,
+    "lng": 3.0633,
+    "label": "Lille â€” Grand'Place",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Tu vois une page de connexion bancaire. L'adresse est « secure-curos-login.com ». C'est fiable ?",
+        "text": "Sans regarder une carte, tourne ton tÃ©lÃ©phone jusqu'au Nord puis avance de 10 pas. Quel angle approximatif sÃ©pare le Nord et l'Est ?",
         "reponses": [
-          "non",
-          "non c'est faux",
-          "c'est un faux",
-          "faux",
-          "non c'est pas fiable",
-          "non fiable"
+          "90",
+          "90Â°",
+          "90 degrÃ©s"
         ],
-        "indice": "Compare le nom de domaine avec le vrai nom du service.",
-        "saviez": "Les pirates créent des noms de domaine qui ressemblent aux vrais pour te tromper.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Un site te demande ton mot de passe. Que dois-tu vérifier EN PREMIER ?",
+        "text": "Sans regarder une carte, tourne ton tÃ©lÃ©phone jusqu'au Nord puis avance de 10 pas. Quel angle approximatif sÃ©pare le Nord et l'Est ?",
         "reponses": [
-          "l'adresse du site",
-          "l'URL",
-          "le nom de domaine",
-          "l'adresse URL"
+          "90",
+          "90Â°",
+          "90 degrÃ©s"
         ],
-        "indice": "Regarde la barre d'adresse : est-ce le bon site ?",
-        "saviez": "Le cadenas (HTTPS) ne suffit pas : il faut aussi vérifier le nom de domaine.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "On te donne 3 domaines : secure-curos-login.com, curios-security.example, curios.local. Lequel est le plus probablement un piège ?",
+        "text": "Sans regarder une carte, tourne ton tÃ©lÃ©phone jusqu'au Nord puis avance de 10 pas. Quel angle approximatif sÃ©pare le Nord et l'Est ?",
         "reponses": [
-          "secure-curos-login.com",
-          "le premier",
-          "secure-curos-login"
+          "90",
+          "90Â°",
+          "90 degrÃ©s"
         ],
-        "indice": "Un vrai site n'a pas besoin de mots comme « secure » ou « login » dans son adresse.",
-        "saviez": "Les pirates ajoutent des mots rassurants (secure, login, verify) pour tromper.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 110,
-    "y": 428
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B3",
-    "bird": "qr-piege",
-    "code": "PH-B3",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "Le QR Code Piégé",
+    "id": "S03",
+    "bird": "curios",
+    "code": "DEMO-S03",
+    "lat": 48.6361,
+    "lng": -1.5115,
+    "label": "Mont-Saint-Michel",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Tu trouves un QR code sur un mur. Que dois-tu faire AVANT de le scanner ?",
+        "text": "Le Mont-Saint-Michel semble surgir de la mer. Si une marÃ©e monte de 8 m en 6 h, quelle est sa vitesse moyenne en cm/min ?",
         "reponses": [
-          "vérifier",
-          "analyser",
-          "regarder",
-          "inspector",
-          "vérifier le code",
-          "analyser le code"
+          "2.22",
+          "2,22",
+          "2.2"
         ],
-        "indice": "Un QR code peut mener n'importe où : vérifie d'abord.",
-        "saviez": "PHANTOM ne te force jamais à scanner. Il te pousse à le faire sans réfléchir.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Un QR code contient l'URL « https://curios.local@phantom... ». Que remarques-tu ?",
+        "text": "Le Mont-Saint-Michel semble surgir de la mer. Si une marÃ©e monte de 8 m en 6 h, quelle est sa vitesse moyenne en cm/min ?",
         "reponses": [
-          "l'URL est modifiée",
-          "il y a un @",
-          "l'adresse est différente",
-          "phantom"
+          "2.22",
+          "2,22",
+          "2.2"
         ],
-        "indice": "Le symbole @ dans une URL peut cacher une redirection.",
-        "saviez": "Le format URL peut être manipulé pour rediriger vers un autre site.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Quelle est la règle d'or concernant les QR codes inconnus ?",
+        "text": "Le Mont-Saint-Michel semble surgir de la mer. Si une marÃ©e monte de 8 m en 6 h, quelle est sa vitesse moyenne en cm/min ?",
         "reponses": [
-          "ne jamais scanner sans vérifier",
-          "toujours vérifier avant",
-          "ne pas scanner aveuglément",
-          "vérifier l'URL avant de scanner"
+          "2.22",
+          "2,22",
+          "2.2"
         ],
-        "indice": "Le QR code est un raccourci : il peut aussi être un piège.",
-        "saviez": "PHANTOM ne te force jamais à cliquer. Il te pousse à cliquer.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 148,
-    "y": 400
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B4",
-    "bird": "traces",
-    "code": "PH-B4",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "Les Traces",
+    "id": "S04",
+    "bird": "curios",
+    "code": "DEMO-S04",
+    "lat": 48.8049,
+    "lng": 2.1204,
+    "label": "Palais de Versailles",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Tu reçois une photo. Que peut révéler une simple photographie ?\nA : La date et l'heure\nB : La localisation\nC : L'appareil utilisé\nD : Toutes ces réponses",
+        "text": "Prends une photo d'un motif symÃ©trique. Combien d'axes de symÃ©trie peux-tu repÃ©rer ?",
         "reponses": [
-          "D",
-          "toutes ces réponses",
-          "toutes",
-          "tout"
+          "2",
+          "3",
+          "4",
+          "un",
+          "deux",
+          "trois",
+          "quatre"
         ],
-        "indice": "Une photo contient plus d'informations que ce qu'on voit.",
-        "saviez": "Les métadonnées EXIF d'une photo peuvent révéler date, heure, lieu, appareil.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "On appelle « métadonnées » les informations cachées dans un fichier. Quelles métadonnées une photo peut-elle contenir ?",
+        "text": "Prends une photo d'un motif symÃ©trique. Combien d'axes de symÃ©trie peux-tu repÃ©rer ?",
         "reponses": [
-          "date, heure, lieu, appareil",
-          "date heure lieu appareil",
-          "lieu date appareil",
-          "metadata"
+          "2",
+          "3",
+          "4",
+          "un",
+          "deux",
+          "trois",
+          "quatre"
         ],
-        "indice": "Pense à tout ce que l'appareil enregistre automatiquement.",
-        "saviez": "Les métadonnées sont invisibles mais accessibles à quiconque sait où regarder.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Quel principe éthique relie cybersécurité et respect de la vie privée concernant les métadonnées ?",
+        "text": "Prends une photo d'un motif symÃ©trique. Combien d'axes de symÃ©trie peux-tu repÃ©rer ?",
         "reponses": [
-          "une information disponible n'est pas forcément à utiliser",
-          "pas parce qu'on peut on doit",
-          "respect de la vie privée",
-          "limitation"
+          "2",
+          "3",
+          "4",
+          "un",
+          "deux",
+          "trois",
+          "quatre"
         ],
-        "indice": "Ce qu'on peut savoir n'est pas toujours ce qu'on devrait utiliser.",
-        "saviez": "La cybersécurité rejoint l'éthique : la技术能力 ne justifie pas l'usage.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 186,
-    "y": 356
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B5",
-    "bird": "permissions",
-    "code": "PH-B5",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "Le Téléphone Vous Trahit",
+    "id": "S05",
+    "bird": "curios",
+    "code": "DEMO-S05",
+    "lat": 43.206,
+    "lng": 2.3634,
+    "label": "Carcassonne",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Une application demande l'accès à ta localisation. Laquelle de ces options est la plus sûre ?\nA : Toujours\nB : Pendant l'utilisation\nC : Refuser",
+        "text": "Fais tourner doucement ton tÃ©lÃ©phone d'un demi-tour. Combien de degrÃ©s as-tu parcourus ?",
         "reponses": [
-          "B",
-          "pendant l'utilisation",
-          "pendant l'utilisation de l'application"
+          "180",
+          "180Â°",
+          "180 degrÃ©s"
         ],
-        "indice": "Donne le minimum nécessaire, le minimum de temps.",
-        "saviez": "La sécurité n'est pas tout autoriser ou tout interdire. C'est donner le bon accès, au bon moment.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Pourquoi « Refuser toutes les permissions » n'est pas toujours la meilleure solution ?",
+        "text": "Fais tourner doucement ton tÃ©lÃ©phone d'un demi-tour. Combien de degrÃ©s as-tu parcourus ?",
         "reponses": [
-          "certaines apps en ont besoin",
-          "ça peut casser le fonctionnement",
-          "pas toujours adapté"
+          "180",
+          "180Â°",
+          "180 degrÃ©s"
         ],
-        "indice": "Certaines applications ont besoin de permissions pour fonctionner.",
-        "saviez": "L'équilibre entre sécurité et fonctionnalité est la clé.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Quel principe guide le choix des permissions sur un smartphone ?",
+        "text": "Fais tourner doucement ton tÃ©lÃ©phone d'un demi-tour. Combien de degrÃ©s as-tu parcourus ?",
         "reponses": [
-          "le minimum nécessaire",
-          "principe du moindre privilège",
-          "donner le moins possible",
-          "minimum vital"
+          "180",
+          "180Â°",
+          "180 degrÃ©s"
         ],
-        "indice": "Le principe du moindre privilège : seulement ce qui est nécessaire.",
-        "saviez": "En sécurité informatique, on donne le minimum de permissions nécessaires au fonctionnement.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 212,
-    "y": 308
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B6",
-    "bird": "mots-de-passe",
-    "code": "PH-B6",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "Le Coffre Numérique",
+    "id": "S06",
+    "bird": "curios",
+    "code": "DEMO-S06",
+    "lat": 43.214,
+    "lng": 5.4474,
+    "label": "Calanques â€” Marseille",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Lequel de ces mots de passe est le plus sûr ?\nA : Lucas2009\nB : Mon-Chien-Mange-7-Pizzas!\nC : Azerty123",
+        "text": "Marche 20 m puis accÃ©lÃ¨re lÃ©gÃ¨rement pendant 3 s. Quelle grandeur mesure ton tÃ©lÃ©phone pour dÃ©tecter ce changement ?",
         "reponses": [
-          "B",
-          "le deuxième",
-          "Mon-Chien-Mange-7-Pizzas!",
-          "Mon-Chien-Mange-7-Pizzas"
+          "accÃ©lÃ©ration",
+          "accelerometre"
         ],
-        "indice": "Un mot de passe long et avec des caractères variés est plus sûr.",
-        "saviez": "La longueur est plus importante que la complexité. Une phrase est plus sûre qu'un mot.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Pourquoi « Lucas2009 » est un mauvais mot de passe ?",
+        "text": "Marche 20 m puis accÃ©lÃ¨re lÃ©gÃ¨rement pendant 3 s. Quelle grandeur mesure ton tÃ©lÃ©phone pour dÃ©tecter ce changement ?",
         "reponses": [
-          "prédicible",
-          "contient une année",
-          "nom + année",
-          "facile à deviner",
-          "trop court"
+          "accÃ©lÃ©ration",
+          "accelerometre"
         ],
-        "indice": "Combien de personnes utilisent leur nom + année de naissance ?",
-        "saviez": "Les pirates testent d'abord les combinaisons les plus courantes : nom + année.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Quelle est la meilleure stratégie pour créer un mot de passe mémorisable et sûr ?",
+        "text": "Marche 20 m puis accÃ©lÃ¨re lÃ©gÃ¨rement pendant 3 s. Quelle grandeur mesure ton tÃ©lÃ©phone pour dÃ©tecter ce changement ?",
         "reponses": [
-          "phrase secrète",
-          "passphrase",
-          "phrase aléatoire",
-          "3 mots aléatoires"
+          "accÃ©lÃ©ration",
+          "accelerometre"
         ],
-        "indice": "Pense à une phrase que toi seul connais, avec des mots aléatoires.",
-        "saviez": "Une passphrase (phrase secrète) est à la fois mémorisable et difficile à craquer.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 250,
-    "y": 292
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B7",
-    "bird": "identite",
-    "code": "PH-B7",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "L'Identité Numérique",
+    "id": "S07",
+    "bird": "curios",
+    "code": "DEMO-S07",
+    "lat": 45.8326,
+    "lng": 6.8652,
+    "label": "Mont-Blanc",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "On te donne une fausse identité : Léa, 16 ans, photo, ville, sport, école. Quelle info permet de retrouver son établissement ?",
+        "text": "Ã€ haute altitude, la pression atmosphÃ©rique diminue. Ton tÃ©lÃ©phone possÃ¨de-t-il un baromÃ¨tre ? Si oui, relÃ¨ve la pression.",
         "reponses": [
-          "l'école",
-          "le nom de l'école",
-          "l'établissement",
-          "école"
+          "oui",
+          "yes"
         ],
-        "indice": "Le nom de l'école suffit à la localiser.",
-        "saviez": "Une identité numérique se construit pièce par pièce : chaque info rétrécit l'anonymat.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Avec le nom d'une ville, le sport pratiqué et une photo d'école, que peut-on déduire ?",
+        "text": "Ã€ haute altitude, la pression atmosphÃ©rique diminue. Ton tÃ©lÃ©phone possÃ¨de-t-il un baromÃ¨tre ? Si oui, relÃ¨ve la pression.",
         "reponses": [
-          "l'identité",
-          "qui c'est",
-          "l'établissement",
-          "la personne"
+          "oui",
+          "yes"
         ],
-        "indice": "Croise les informations : ville + école = identité.",
-        "saviez": "L'OSINT (renseignement d'ouverture) utilise les données publiques pour reconstituer une identité.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Quel est le risque principal de partager beaucoup d'informations personnelles en ligne ?",
+        "text": "Ã€ haute altitude, la pression atmosphÃ©rique diminue. Ton tÃ©lÃ©phone possÃ¨de-t-il un baromÃ¨tre ? Si oui, relÃ¨ve la pression.",
         "reponses": [
-          "reconstruction de l'identité",
-          "usurpation",
-          "harcèlement",
-          "vol d'identité",
-          "traque"
+          "oui",
+          "yes"
         ],
-        "indice": "Chaque information publique est un puzzle qui peut être assemblé.",
-        "saviez": "On n'a pas besoin d'un mot de passe pour en savoir beaucoup sur quelqu'un.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 320,
-    "y": 296
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B8",
-    "bird": "reseau",
-    "code": "PH-B8",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "Le Réseau",
+    "id": "S08",
+    "bird": "curios",
+    "code": "DEMO-S08",
+    "lat": 46.6699,
+    "lng": 0.367,
+    "label": "Futuroscope â€” Poitiers",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Tu vois 3 réseaux Wi-Fi : CURIOS-WIFI, CURIOS-GUEST, PHANTOM_FREE_WIFI. Lequel est le plus suspect ?",
+        "text": "Place ton tÃ©lÃ©phone dans une zone claire puis ombragÃ©e. La valeur du capteur de lumiÃ¨re devrait-elle augmenter ou diminuer ?",
         "reponses": [
-          "PHANTOM_FREE_WIFI",
-          "le troisième",
-          "PHANTOM"
+          "augmenter",
+          "diminuer"
         ],
-        "indice": "Un réseau avec un nom accrocheur et gratuit est souvent suspect.",
-        "saviez": "Un réseau Wi-Fi ouvert n'est pas forcément malveillant, mais un réseau inconnu ne doit pas être considéré comme fiable.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Qu'est-ce que le HTTPS ?",
+        "text": "Place ton tÃ©lÃ©phone dans une zone claire puis ombragÃ©e. La valeur du capteur de lumiÃ¨re devrait-elle augmenter ou diminuer ?",
         "reponses": [
-          "une connexion sécurisée",
-          "un protocole sécurisé",
-          "chiffrement",
-          "protection"
+          "augmenter",
+          "diminuer"
         ],
-        "indice": "C'est ce qui active le cadenas dans la barre d'adresse.",
-        "saviez": "HTTPS chiffre les données entre ton navigateur et le site. Sans HTTPS, tout est en clair.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Un réseau Wi-Fi public peut-il être utilisé en toute sécurité ?",
+        "text": "Place ton tÃ©lÃ©phone dans une zone claire puis ombragÃ©e. La valeur du capteur de lumiÃ¨re devrait-elle augmenter ou diminuer ?",
         "reponses": [
-          "oui avec précautions",
-          "avec un VPN",
-          "jamais en toute sécurité",
-          "ça dépend"
+          "augmenter",
+          "diminuer"
         ],
-        "indice": "La réponse n'est pas binaire : il y a des précautions à prendre.",
-        "saviez": "Un VPN, le HTTPS et la mise à jour sont les protections de base sur un réseau public.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 356,
-    "y": 352
+    "x": null,
+    "y": null
   },
   {
     "type": "balise",
     "version": 1,
-    "id": "B9",
-    "bird": "phantom",
-    "code": "PH-B9",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "label": "PHANTOM",
+    "id": "S09",
+    "bird": "curios",
+    "code": "DEMO-S09",
+    "lat": 48.8955,
+    "lng": 2.387,
+    "label": "CitÃ© des sciences â€” Paris",
     "hintImg": "",
     "enigmes": {
       "facile": {
-        "text": "Qui est PHANTOM ?\nA : Un pirate informatique\nB : Un protocole automatisé\nC : Un virus",
+        "text": "Tape trois fois dans tes mains. Combien d'impulsions sonores ton micro peut-il dÃ©tecter ?",
         "reponses": [
-          "B",
-          "un protocole",
-          "un protocole automatisé",
-          "le protocole"
+          "3",
+          "trois"
         ],
-        "indice": "PHANTOM n'est pas une personne...",
-        "saviez": "PHANTOM exploite les erreurs humaines, pas les failles informatiques.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          12,
-          14
+          9,
+          11
         ]
       },
       "moyen": {
-        "text": "Pourquoi dit-on que PHANTOM est « dans les décisions que vous prenez » ?",
+        "text": "Tape trois fois dans tes mains. Combien d'impulsions sonores ton micro peut-il dÃ©tecter ?",
         "reponses": [
-          "parce que c'est l'humain qui décide",
-          "c'est nos erreurs",
-          "la vulnérabilité humaine",
-          "nos choix"
+          "3",
+          "trois"
         ],
-        "indice": "L'ordinateur ne se fait pas pirater. C'est l'utilisateur qui est manipulé.",
-        "saviez": "L'ingénierie sociale exploite la confiance, l'urgence et la peur.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          14,
-          16
+          12,
+          15
         ]
       },
       "difficile": {
-        "text": "Quelle est la leçon principale de l'opération PHANTOM ?",
+        "text": "Tape trois fois dans tes mains. Combien d'impulsions sonores ton micro peut-il dÃ©tecter ?",
         "reponses": [
-          "la sécurité est dans nos décisions",
-          "réfléchir avant d'agir",
-          "ne pas se faire manipuler",
-          "l'esprit critique"
+          "3",
+          "trois"
         ],
-        "indice": "Le véritable ennemi n'est pas la技术, c'est la imprévoyance.",
-        "saviez": "PHANTOM n'est pas dans votre téléphone. PHANTOM est dans les décisions que vous prenez lorsque quelqu'un vous pousse à agir trop vite.",
+        "indice": true,
+        "saviez": true,
         "ages": [
-          16,
-          18
+          15,
+          99
         ]
       }
     },
     "enigme": null,
-    "x": 388,
-    "y": 448
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S10",
+    "bird": "curios",
+    "code": "DEMO-S10",
+    "lat": 45.0535,
+    "lng": 1.1686,
+    "label": "Lascaux â€” Dordogne",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Ã‰mets un son grave puis un son aigu. Lequel possÃ¨de la frÃ©quence la plus Ã©levÃ©e ?",
+        "reponses": [
+          "aigu",
+          "le son aigu"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Ã‰mets un son grave puis un son aigu. Lequel possÃ¨de la frÃ©quence la plus Ã©levÃ©e ?",
+        "reponses": [
+          "aigu",
+          "le son aigu"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Ã‰mets un son grave puis un son aigu. Lequel possÃ¨de la frÃ©quence la plus Ã©levÃ©e ?",
+        "reponses": [
+          "aigu",
+          "le son aigu"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S11",
+    "bird": "curios",
+    "code": "DEMO-S11",
+    "lat": 42.9369,
+    "lng": 0.141,
+    "label": "Observatoire â€” Pic du Midi",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Pointe ton tÃ©lÃ©phone vers le Nord, puis vers le Sud. De combien de degrÃ©s environ as-tu changÃ© d'orientation ?",
+        "reponses": [
+          "180",
+          "180Â°",
+          "180 degrÃ©s"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Pointe ton tÃ©lÃ©phone vers le Nord, puis vers le Sud. De combien de degrÃ©s environ as-tu changÃ© d'orientation ?",
+        "reponses": [
+          "180",
+          "180Â°",
+          "180 degrÃ©s"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Pointe ton tÃ©lÃ©phone vers le Nord, puis vers le Sud. De combien de degrÃ©s environ as-tu changÃ© d'orientation ?",
+        "reponses": [
+          "180",
+          "180Â°",
+          "180 degrÃ©s"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S12",
+    "bird": "curios",
+    "code": "DEMO-S12",
+    "lat": 48.5819,
+    "lng": 7.7508,
+    "label": "Strasbourg â€” CathÃ©drale",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "TÃ©lÃ©phone posÃ© sur une table : dÃ©clenche une vibration et dÃ©cris ce que tu observes. Quelle Ã©nergie est convertie en mouvement ?",
+        "reponses": [
+          "electrique",
+          "Ã©lectrique"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "TÃ©lÃ©phone posÃ© sur une table : dÃ©clenche une vibration et dÃ©cris ce que tu observes. Quelle Ã©nergie est convertie en mouvement ?",
+        "reponses": [
+          "electrique",
+          "Ã©lectrique"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "TÃ©lÃ©phone posÃ© sur une table : dÃ©clenche une vibration et dÃ©cris ce que tu observes. Quelle Ã©nergie est convertie en mouvement ?",
+        "reponses": [
+          "electrique",
+          "Ã©lectrique"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S13",
+    "bird": "curios",
+    "code": "DEMO-S13",
+    "lat": -21.2444,
+    "lng": 55.7088,
+    "label": "Piton de la Fournaise â€” RÃ©union",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Le Piton de la Fournaise est volcanique. Si une coulÃ©e avance de 600 m en 10 min, quelle est sa vitesse moyenne en m/s ?",
+        "reponses": [
+          "1",
+          "1 m/s",
+          "1.0"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Le Piton de la Fournaise est volcanique. Si une coulÃ©e avance de 600 m en 10 min, quelle est sa vitesse moyenne en m/s ?",
+        "reponses": [
+          "1",
+          "1 m/s",
+          "1.0"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Le Piton de la Fournaise est volcanique. Si une coulÃ©e avance de 600 m en 10 min, quelle est sa vitesse moyenne en m/s ?",
+        "reponses": [
+          "1",
+          "1 m/s",
+          "1.0"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S14",
+    "bird": "curios",
+    "code": "DEMO-S14",
+    "lat": 14.6161,
+    "lng": -61.0588,
+    "label": "Fort-de-France â€” Martinique",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Cadre un Ã©lÃ©ment rouge, bleu ou blanc. Quelle couleur franÃ§aise manque dans ton cadre ?",
+        "reponses": [
+          "une des deux autres",
+          "rouge",
+          "bleu",
+          "blanc"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Cadre un Ã©lÃ©ment rouge, bleu ou blanc. Quelle couleur franÃ§aise manque dans ton cadre ?",
+        "reponses": [
+          "une des deux autres",
+          "rouge",
+          "bleu",
+          "blanc"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Cadre un Ã©lÃ©ment rouge, bleu ou blanc. Quelle couleur franÃ§aise manque dans ton cadre ?",
+        "reponses": [
+          "une des deux autres",
+          "rouge",
+          "bleu",
+          "blanc"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S15",
+    "bird": "curios",
+    "code": "DEMO-S15",
+    "lat": 16.2411,
+    "lng": -61.5331,
+    "label": "Pointe-Ã -Pitre â€” Guadeloupe",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Oriente le tÃ©lÃ©phone vers l'Est. Quel point cardinal trouveras-tu aprÃ¨s un quart de tour vers la gauche ?",
+        "reponses": [
+          "nord",
+          "nord"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Oriente le tÃ©lÃ©phone vers l'Est. Quel point cardinal trouveras-tu aprÃ¨s un quart de tour vers la gauche ?",
+        "reponses": [
+          "nord",
+          "nord"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Oriente le tÃ©lÃ©phone vers l'Est. Quel point cardinal trouveras-tu aprÃ¨s un quart de tour vers la gauche ?",
+        "reponses": [
+          "nord",
+          "nord"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S16",
+    "bird": "curios",
+    "code": "DEMO-S16",
+    "lat": 4.9224,
+    "lng": -52.3135,
+    "label": "Cayenne â€” Guyane",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "En Guyane, la lumiÃ¨re naturelle est forte. Compare la luminositÃ© dehors et Ã  l'ombre : laquelle est la plus Ã©levÃ©e ?",
+        "reponses": [
+          "dehors",
+          "extÃ©rieur"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "En Guyane, la lumiÃ¨re naturelle est forte. Compare la luminositÃ© dehors et Ã  l'ombre : laquelle est la plus Ã©levÃ©e ?",
+        "reponses": [
+          "dehors",
+          "extÃ©rieur"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "En Guyane, la lumiÃ¨re naturelle est forte. Compare la luminositÃ© dehors et Ã  l'ombre : laquelle est la plus Ã©levÃ©e ?",
+        "reponses": [
+          "dehors",
+          "extÃ©rieur"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S17",
+    "bird": "curios",
+    "code": "DEMO-S17",
+    "lat": -12.7806,
+    "lng": 45.2278,
+    "label": "Mamoudzou â€” Mayotte",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Trouve ta position GPS et donne les deux premiÃ¨res dÃ©cimales de ta latitude.",
+        "reponses": [
+          "manuel"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Trouve ta position GPS et donne les deux premiÃ¨res dÃ©cimales de ta latitude.",
+        "reponses": [
+          "manuel"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Trouve ta position GPS et donne les deux premiÃ¨res dÃ©cimales de ta latitude.",
+        "reponses": [
+          "manuel"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S18",
+    "bird": "curios",
+    "code": "DEMO-S18",
+    "lat": -17.5516,
+    "lng": -149.5585,
+    "label": "Papeete â€” PolynÃ©sie franÃ§aise",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Enregistre 5 secondes de sons ambiants. Combien de sources sonores diffÃ©rentes peux-tu distinguer ?",
+        "reponses": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Enregistre 5 secondes de sons ambiants. Combien de sources sonores diffÃ©rentes peux-tu distinguer ?",
+        "reponses": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Enregistre 5 secondes de sons ambiants. Combien de sources sonores diffÃ©rentes peux-tu distinguer ?",
+        "reponses": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S19",
+    "bird": "curios",
+    "code": "DEMO-S19",
+    "lat": -22.2758,
+    "lng": 166.458,
+    "label": "NoumÃ©a â€” Nouvelle-CalÃ©donie",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Fais une rotation lente de 360Â°. Le gyroscope doit-il dÃ©tecter une rotation nulle ou un tour complet ?",
+        "reponses": [
+          "tour complet",
+          "360",
+          "360Â°"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Fais une rotation lente de 360Â°. Le gyroscope doit-il dÃ©tecter une rotation nulle ou un tour complet ?",
+        "reponses": [
+          "tour complet",
+          "360",
+          "360Â°"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Fais une rotation lente de 360Â°. Le gyroscope doit-il dÃ©tecter une rotation nulle ou un tour complet ?",
+        "reponses": [
+          "tour complet",
+          "360",
+          "360Â°"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S20",
+    "bird": "curios",
+    "code": "DEMO-S20",
+    "lat": 46.7811,
+    "lng": -56.1773,
+    "label": "Saint-Pierre â€” Saint-Pierre-et-Miquelon",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Regarde le niveau de batterie. Si tu as 60 % et que trois dÃ©fis consomment chacun 4 %, combien restera-t-il ?",
+        "reponses": [
+          "48",
+          "48%",
+          "48 %"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Regarde le niveau de batterie. Si tu as 60 % et que trois dÃ©fis consomment chacun 4 %, combien restera-t-il ?",
+        "reponses": [
+          "48",
+          "48%",
+          "48 %"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Regarde le niveau de batterie. Si tu as 60 % et que trois dÃ©fis consomment chacun 4 %, combien restera-t-il ?",
+        "reponses": [
+          "48",
+          "48%",
+          "48 %"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S21",
+    "bird": "curios",
+    "code": "DEMO-S21",
+    "lat": -49.35,
+    "lng": 69.35,
+    "label": "Terres australes â€” mission virtuelle",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Mission hors-ligne : coupe le rÃ©seau. Le parcours doit-il continuer Ã  fonctionner ?",
+        "reponses": [
+          "oui",
+          "oui, il doit continuer"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Mission hors-ligne : coupe le rÃ©seau. Le parcours doit-il continuer Ã  fonctionner ?",
+        "reponses": [
+          "oui",
+          "oui, il doit continuer"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Mission hors-ligne : coupe le rÃ©seau. Le parcours doit-il continuer Ã  fonctionner ?",
+        "reponses": [
+          "oui",
+          "oui, il doit continuer"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S22",
+    "bird": "curios",
+    "code": "DEMO-S22",
+    "lat": 51.0344,
+    "lng": 2.3768,
+    "label": "Dunkerque â€” plage",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Marche 10 pas, arrÃªte-toi net. Que mesure principalement l'accÃ©lÃ©romÃ¨tre lors de l'arrÃªt ?",
+        "reponses": [
+          "une variation d'accÃ©lÃ©ration",
+          "accÃ©lÃ©ration"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Marche 10 pas, arrÃªte-toi net. Que mesure principalement l'accÃ©lÃ©romÃ¨tre lors de l'arrÃªt ?",
+        "reponses": [
+          "une variation d'accÃ©lÃ©ration",
+          "accÃ©lÃ©ration"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Marche 10 pas, arrÃªte-toi net. Que mesure principalement l'accÃ©lÃ©romÃ¨tre lors de l'arrÃªt ?",
+        "reponses": [
+          "une variation d'accÃ©lÃ©ration",
+          "accÃ©lÃ©ration"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S23",
+    "bird": "curios",
+    "code": "DEMO-S23",
+    "lat": 47.214,
+    "lng": -1.5562,
+    "label": "Nantes â€” Machines de l'Ã®le",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "Prends une photo d'une structure mÃ©canique et identifie une piÃ¨ce qui sert de pivot.",
+        "reponses": [
+          "axe",
+          "pivot",
+          "roue"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "Prends une photo d'une structure mÃ©canique et identifie une piÃ¨ce qui sert de pivot.",
+        "reponses": [
+          "axe",
+          "pivot",
+          "roue"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "Prends une photo d'une structure mÃ©canique et identifie une piÃ¨ce qui sert de pivot.",
+        "reponses": [
+          "axe",
+          "pivot",
+          "roue"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
+  },
+  {
+    "type": "balise",
+    "version": 1,
+    "id": "S24",
+    "bird": "curios",
+    "code": "DEMO-S24",
+    "lat": 44.8378,
+    "lng": -0.5702,
+    "label": "Bordeaux â€” miroir d'eau",
+    "hintImg": "",
+    "enigmes": {
+      "facile": {
+        "text": "ChronomÃ¨tre 10 secondes sans regarder l'Ã©cran. Ã€ quel point ton estimation est-elle proche ?",
+        "reponses": [
+          "10",
+          "10 secondes"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          9,
+          11
+        ]
+      },
+      "moyen": {
+        "text": "ChronomÃ¨tre 10 secondes sans regarder l'Ã©cran. Ã€ quel point ton estimation est-elle proche ?",
+        "reponses": [
+          "10",
+          "10 secondes"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          12,
+          15
+        ]
+      },
+      "difficile": {
+        "text": "ChronomÃ¨tre 10 secondes sans regarder l'Ã©cran. Ã€ quel point ton estimation est-elle proche ?",
+        "reponses": [
+          "10",
+          "10 secondes"
+        ],
+        "indice": true,
+        "saviez": true,
+        "ages": [
+          15,
+          99
+        ]
+      }
+    },
+    "enigme": null,
+    "x": null,
+    "y": null
   }
 ];
 
@@ -1577,7 +1802,7 @@ const THEMES = [
 /* Ids des packs actuellement activés (source de vérité : content/manifest.json).
    Permet au parcours ("Choisir un parcours") de marquer le pack joué, même hors-ligne. */
 const ACTIVE_PACKS = [
-  "phantom-cybersecurite"
+  "packdemo"
 ];
 /* ==== FIN CONTENU GÉNÉRÉ ==== */
 

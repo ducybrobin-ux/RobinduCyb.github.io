@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S05",
+    "bird":  "curios",
+    "code":  "DEMO-S05",
+    "lat":  43.206,
+    "lng":  2.3634,
+    "label":  "Carcassonne",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Fais tourner doucement ton tÃ©lÃ©phone d\u0027un demi-tour. Combien de degrÃ©s as-tu parcourus ?",
+                                   "reponses":  [
+                                                    "180",
+                                                    "180Â°",
+                                                    "180 degrÃ©s"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Fais tourner doucement ton tÃ©lÃ©phone d\u0027un demi-tour. Combien de degrÃ©s as-tu parcourus ?",
+                                  "reponses":  [
+                                                   "180",
+                                                   "180Â°",
+                                                   "180 degrÃ©s"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Fais tourner doucement ton tÃ©lÃ©phone d\u0027un demi-tour. Combien de degrÃ©s as-tu parcourus ?",
+                                      "reponses":  [
+                                                       "180",
+                                                       "180Â°",
+                                                       "180 degrÃ©s"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

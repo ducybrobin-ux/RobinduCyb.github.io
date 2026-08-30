@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S11",
+    "bird":  "curios",
+    "code":  "DEMO-S11",
+    "lat":  42.9369,
+    "lng":  0.141,
+    "label":  "Observatoire â€” Pic du Midi",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Pointe ton tÃ©lÃ©phone vers le Nord, puis vers le Sud. De combien de degrÃ©s environ as-tu changÃ© d\u0027orientation ?",
+                                   "reponses":  [
+                                                    "180",
+                                                    "180Â°",
+                                                    "180 degrÃ©s"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Pointe ton tÃ©lÃ©phone vers le Nord, puis vers le Sud. De combien de degrÃ©s environ as-tu changÃ© d\u0027orientation ?",
+                                  "reponses":  [
+                                                   "180",
+                                                   "180Â°",
+                                                   "180 degrÃ©s"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Pointe ton tÃ©lÃ©phone vers le Nord, puis vers le Sud. De combien de degrÃ©s environ as-tu changÃ© d\u0027orientation ?",
+                                      "reponses":  [
+                                                       "180",
+                                                       "180Â°",
+                                                       "180 degrÃ©s"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

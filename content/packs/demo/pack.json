@@ -1,8 +1,8 @@
 {
   "id": "demo",
-  "nom": "Démo Curi>s — Découverte du jeu",
-  "theme": "prise en main & découverte",
-  "description": "Un parcours court de prise en main pour découvrir les 3 types de balises, les quiz de découverte et les notions du guide. Idéal pour tester Curi>s en 15 minutes.",
+  "nom": "Curi🧭s — Le GRAND DEMO PACK",
+  "theme": "grand demo",
+  "description": "Parcours de démonstration destiné à montrer l'étendue de Curi🧭s : scénario, humour, matières scolaires, géolocalisation, POI de France et Outre-mer, observation, médias et expérimentation des capacités d'un smartphone.",
   "version": 1,
-  "ages": [8, 18]
+  "ages": [9, 99]
 }

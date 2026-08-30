@@ -1,0 +1,15 @@
+{
+    "type":  "guide",
+    "version":  1,
+    "id":  "jeu-balises",
+    "nom":  "Le jeu de balises",
+    "description":  "Prologue & fonctionnement : le Professeur Curi🧭s explique que la Machine à Comprendre la France est en panne. Le joueur doit OBSERVER, MESURER, RÉFLÉCHIR et EXPÉRIMENTER pour retrouver les fragments. Le guide détaille balises, niveaux de difficulté, validation et exemples de missions.",
+    "pedagogie":  {
+                      "objectif":  "Comprendre le dÃ©roulement d\u0027une partie de Curi\u003es",
+                      "ages":  [
+                                   8,
+                                   18
+                               ],
+                      "duree_min":  6
+                  }
+}

@@ -1,0 +1,52 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S17",
+    "bird":  "curios",
+    "code":  "DEMO-S17",
+    "lat":  -12.7806,
+    "lng":  45.2278,
+    "label":  "Mamoudzou â€” Mayotte",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Trouve ta position GPS et donne les deux premiÃ¨res dÃ©cimales de ta latitude.",
+                                   "reponses":  [
+                                                    "manuel"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Trouve ta position GPS et donne les deux premiÃ¨res dÃ©cimales de ta latitude.",
+                                  "reponses":  [
+                                                   "manuel"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Trouve ta position GPS et donne les deux premiÃ¨res dÃ©cimales de ta latitude.",
+                                      "reponses":  [
+                                                       "manuel"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

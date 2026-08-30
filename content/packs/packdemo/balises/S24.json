@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S24",
+    "bird":  "curios",
+    "code":  "DEMO-S24",
+    "lat":  44.8378,
+    "lng":  -0.5702,
+    "label":  "Bordeaux â€” miroir d\u0027eau",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "ChronomÃ¨tre 10 secondes sans regarder l\u0027Ã©cran. Ã€ quel point ton estimation est-elle proche ?",
+                                   "reponses":  [
+                                                    "10",
+                                                    "10 secondes"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "ChronomÃ¨tre 10 secondes sans regarder l\u0027Ã©cran. Ã€ quel point ton estimation est-elle proche ?",
+                                  "reponses":  [
+                                                   "10",
+                                                   "10 secondes"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "ChronomÃ¨tre 10 secondes sans regarder l\u0027Ã©cran. Ã€ quel point ton estimation est-elle proche ?",
+                                      "reponses":  [
+                                                       "10",
+                                                       "10 secondes"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

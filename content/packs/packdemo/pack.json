@@ -1,0 +1,11 @@
+{
+    "id":  "packdemo",
+    "nom":  "CuriðŸ§­s â€” Le GRAND DEMO PACK : France, Outre-mer \u0026 Smartphone",
+    "theme":  true,
+    "description":  "Parcours de dÃ©monstration destinÃ© Ã  montrer l\u0027Ã©tendue de CuriðŸ§­s : scÃ©nario, humour, matiÃ¨res scolaires, gÃ©olocalisation, POI de France et Outre-mer, observation, mÃ©dias et expÃ©rimentation des capacitÃ©s d\u0027un smartphone.",
+    "version":  1,
+    "ages":  [
+                 9,
+                 99
+             ]
+}

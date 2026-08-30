@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S12",
+    "bird":  "curios",
+    "code":  "DEMO-S12",
+    "lat":  48.5819,
+    "lng":  7.7508,
+    "label":  "Strasbourg â€” CathÃ©drale",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "TÃ©lÃ©phone posÃ© sur une table : dÃ©clenche une vibration et dÃ©cris ce que tu observes. Quelle Ã©nergie est convertie en mouvement ?",
+                                   "reponses":  [
+                                                    "electrique",
+                                                    "Ã©lectrique"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "TÃ©lÃ©phone posÃ© sur une table : dÃ©clenche une vibration et dÃ©cris ce que tu observes. Quelle Ã©nergie est convertie en mouvement ?",
+                                  "reponses":  [
+                                                   "electrique",
+                                                   "Ã©lectrique"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "TÃ©lÃ©phone posÃ© sur une table : dÃ©clenche une vibration et dÃ©cris ce que tu observes. Quelle Ã©nergie est convertie en mouvement ?",
+                                      "reponses":  [
+                                                       "electrique",
+                                                       "Ã©lectrique"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

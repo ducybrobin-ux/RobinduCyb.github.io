@@ -1,0 +1,58 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S03",
+    "bird":  "curios",
+    "code":  "DEMO-S03",
+    "lat":  48.6361,
+    "lng":  -1.5115,
+    "label":  "Mont-Saint-Michel",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Le Mont-Saint-Michel semble surgir de la mer. Si une marÃ©e monte de 8 m en 6 h, quelle est sa vitesse moyenne en cm/min ?",
+                                   "reponses":  [
+                                                    "2.22",
+                                                    "2,22",
+                                                    "2.2"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Le Mont-Saint-Michel semble surgir de la mer. Si une marÃ©e monte de 8 m en 6 h, quelle est sa vitesse moyenne en cm/min ?",
+                                  "reponses":  [
+                                                   "2.22",
+                                                   "2,22",
+                                                   "2.2"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Le Mont-Saint-Michel semble surgir de la mer. Si une marÃ©e monte de 8 m en 6 h, quelle est sa vitesse moyenne en cm/min ?",
+                                      "reponses":  [
+                                                       "2.22",
+                                                       "2,22",
+                                                       "2.2"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

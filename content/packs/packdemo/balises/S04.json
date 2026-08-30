@@ -1,0 +1,70 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S04",
+    "bird":  "curios",
+    "code":  "DEMO-S04",
+    "lat":  48.8049,
+    "lng":  2.1204,
+    "label":  "Palais de Versailles",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Prends une photo d\u0027un motif symÃ©trique. Combien d\u0027axes de symÃ©trie peux-tu repÃ©rer ?",
+                                   "reponses":  [
+                                                    "2",
+                                                    "3",
+                                                    "4",
+                                                    "un",
+                                                    "deux",
+                                                    "trois",
+                                                    "quatre"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Prends une photo d\u0027un motif symÃ©trique. Combien d\u0027axes de symÃ©trie peux-tu repÃ©rer ?",
+                                  "reponses":  [
+                                                   "2",
+                                                   "3",
+                                                   "4",
+                                                   "un",
+                                                   "deux",
+                                                   "trois",
+                                                   "quatre"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Prends une photo d\u0027un motif symÃ©trique. Combien d\u0027axes de symÃ©trie peux-tu repÃ©rer ?",
+                                      "reponses":  [
+                                                       "2",
+                                                       "3",
+                                                       "4",
+                                                       "un",
+                                                       "deux",
+                                                       "trois",
+                                                       "quatre"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

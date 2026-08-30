@@ -59,6 +59,7 @@
   function coverSrc(p) {
     return p.cover ? "img/covers/" + p.cover + ".png" : null;
   }
+  function icon(name) { return '<svg class="cur-icon" aria-hidden="true"><use xlink:href="img/curios-icons-sprite.svg#' + esc(name) + '"></use></svg>'; }
   function coverMarkup(p, big) {
     var src = coverSrc(p);
     var badge = stateBadge(p);
@@ -78,11 +79,11 @@
   }
   function cardMeta(p) {
     var parts = [];
-    parts.push('<span class="cat-meta-pill">📍 ' + esc(p.location || "Sentier") + '</span>');
-    parts.push('<span class="cat-meta-pill">🗺️ ' + nbBalises(p) + ' balises</span>');
-    parts.push('<span class="cat-meta-pill">⏱️ ~' + p.durationMin + ' min</span>');
+    parts.push('<span class="cat-meta-pill">' + icon('location') + ' ' + esc(p.location || "Sentier") + '</span>');
+    parts.push('<span class="cat-meta-pill">' + icon('map') + ' ' + nbBalises(p) + ' balises</span>');
+    parts.push('<span class="cat-meta-pill">' + icon('timer') + ' ~' + p.durationMin + ' min</span>');
     var age = agesText(p);
-    if (age) parts.push('<span class="cat-meta-pill">🎂 ' + esc(age) + '</span>');
+    if (age) parts.push('<span class="cat-meta-pill">' + icon('badge') + ' ' + esc(age) + '</span>');
     return '<div class="cat-card-meta">' + parts.join("") + '</div>';
   }
   function cardMarkup(p) {
@@ -157,12 +158,12 @@
           '<h2>' + esc(p.nom) + '</h2>' +
           '<div class="cat-hf-tagline">' + esc(p.tagline || "") + '</div>' +
           '<div class="cat-hf-meta">' +
-            '<span class="cat-meta-pill">🗺️ ' + nbBalises(p) + ' balises</span>' +
-            '<span class="cat-meta-pill">⏱️ ~' + p.durationMin + ' min</span>' +
-            (agesText(p) ? '<span class="cat-meta-pill">🎂 ' + esc(agesText(p)) + '</span>' : "") +
+            '<span class="cat-meta-pill">' + icon('map') + ' ' + nbBalises(p) + ' balises</span>' +
+            '<span class="cat-meta-pill">' + icon('timer') + ' ~' + p.durationMin + ' min</span>' +
+            (agesText(p) ? '<span class="cat-meta-pill">' + icon('badge') + ' ' + esc(agesText(p)) + '</span>' : "") +
           '</div>' +
           '<div class="cat-hf-actions">' +
-            '<button class="cur-btn cur-btn--primary" onclick="Catalog.play(' + JSON.stringify(p.id) + ')">▶ Jouer</button>' +
+            '<button class="cur-btn cur-btn--primary" onclick="Catalog.play(' + JSON.stringify(p.id) + ')">' + icon('play') + ' Jouer</button>' +
             '<button class="cur-btn cur-btn--ghost" onclick="Catalog.open(' + JSON.stringify(p.id) + ')">Découvrir</button>' +
           '</div>' +
         '</div>' +
@@ -215,7 +216,7 @@
     if (!p) return;
     state.activeId = id;
     var b = $("#cat-modal-bg");
-    var body = $("#cat-modal-body");
+    var body = $("#cat-modal");
     b.classList.add("is-open");
     document.body.style.overflow = "hidden";
 

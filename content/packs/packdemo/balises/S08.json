@@ -1,0 +1,55 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S08",
+    "bird":  "curios",
+    "code":  "DEMO-S08",
+    "lat":  46.6699,
+    "lng":  0.367,
+    "label":  "Futuroscope â€” Poitiers",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Place ton tÃ©lÃ©phone dans une zone claire puis ombragÃ©e. La valeur du capteur de lumiÃ¨re devrait-elle augmenter ou diminuer ?",
+                                   "reponses":  [
+                                                    "augmenter",
+                                                    "diminuer"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Place ton tÃ©lÃ©phone dans une zone claire puis ombragÃ©e. La valeur du capteur de lumiÃ¨re devrait-elle augmenter ou diminuer ?",
+                                  "reponses":  [
+                                                   "augmenter",
+                                                   "diminuer"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Place ton tÃ©lÃ©phone dans une zone claire puis ombragÃ©e. La valeur du capteur de lumiÃ¨re devrait-elle augmenter ou diminuer ?",
+                                      "reponses":  [
+                                                       "augmenter",
+                                                       "diminuer"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}

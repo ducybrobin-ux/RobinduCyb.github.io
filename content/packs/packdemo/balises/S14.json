@@ -1,0 +1,61 @@
+{
+    "type":  "balise",
+    "version":  1,
+    "id":  "S14",
+    "bird":  "curios",
+    "code":  "DEMO-S14",
+    "lat":  14.6161,
+    "lng":  -61.0588,
+    "label":  "Fort-de-France â€” Martinique",
+    "hintImg":  "",
+    "enigmes":  {
+                    "facile":  {
+                                   "text":  "Cadre un Ã©lÃ©ment rouge, bleu ou blanc. Quelle couleur franÃ§aise manque dans ton cadre ?",
+                                   "reponses":  [
+                                                    "une des deux autres",
+                                                    "rouge",
+                                                    "bleu",
+                                                    "blanc"
+                                                ],
+                                   "indice":  true,
+                                   "saviez":  true,
+                                   "ages":  [
+                                                9,
+                                                11
+                                            ]
+                               },
+                    "moyen":  {
+                                  "text":  "Cadre un Ã©lÃ©ment rouge, bleu ou blanc. Quelle couleur franÃ§aise manque dans ton cadre ?",
+                                  "reponses":  [
+                                                   "une des deux autres",
+                                                   "rouge",
+                                                   "bleu",
+                                                   "blanc"
+                                               ],
+                                  "indice":  true,
+                                  "saviez":  true,
+                                  "ages":  [
+                                               12,
+                                               15
+                                           ]
+                              },
+                    "difficile":  {
+                                      "text":  "Cadre un Ã©lÃ©ment rouge, bleu ou blanc. Quelle couleur franÃ§aise manque dans ton cadre ?",
+                                      "reponses":  [
+                                                       "une des deux autres",
+                                                       "rouge",
+                                                       "bleu",
+                                                       "blanc"
+                                                   ],
+                                      "indice":  true,
+                                      "saviez":  true,
+                                      "ages":  [
+                                                   15,
+                                                   99
+                                               ]
+                                  }
+                },
+    "enigme":  null,
+    "x":  null,
+    "y":  null
+}
